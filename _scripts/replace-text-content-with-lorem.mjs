@@ -163,33 +163,40 @@ async function processMdxFile(filePath) {
       // Skip empty lines
       if (!line.trim()) return line
 
-      // Skip lines that are components, metadata, imports, or special syntax
-      // But allow bold text lines even if they have = or :
-      if (
-        !line.trim().startsWith('**') &&
-        (line.trim().startsWith('<') ||
-          line.trim().startsWith('import ') ||
-          line.trim().startsWith('export ') ||
-          line.trim().startsWith('#') ||
-          line.trim().startsWith('-') ||
-          line.trim().startsWith('[') ||
-          line.includes('{') ||
-          line.includes('}') ||
-          line.includes('=') ||
-          (line.includes(':') && line.includes('//'))) // Skip URLs
-      ) {
+      // PRIORITY 1: Handle lines starting with emoji (may contain <br/> tags or other content)
+      if (/^[\u{1F300}-\u{1F9FF}]/u.test(line.trim())) {
+        // Skip if already lorem ipsum
+        if (line.toLowerCase().includes('lorem')) {
+          return line
+        }
+
+        // Clean the text (remove emojis, HTML tags, and quotes)
+        const cleanText = line
+          .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+          .replace(/<br\s*\/?>/gi, ' ') // Remove <br/> tags
+          .replace(/['"]/g, '')
+          .trim()
+
+        if (cleanText.length > 15) {
+          const wordCount = countWords(cleanText)
+          const newText = generateLoremWords(Math.max(wordCount, 5))
+          modified = true
+          return newText
+        }
         return line
       }
 
-      // Handle bold text lines that start with ** (like **1️⃣** text)
-      // Convert to traditional bullet points
+      // PRIORITY 2: Handle bold text lines that start with ** (like **1️⃣** text or **You don't...** text)
       if (line.trim().startsWith('**')) {
-        // Extract the text (remove the bold markers and emoji prefix)
-        const textMatch = line.match(/^\*\*([^*]+)\*\*\s*(.+)$/)
-        if (textMatch) {
-          const restOfText = textMatch[2]
+        // Skip if already lorem ipsum
+        if (line.toLowerCase().includes('lorem')) {
+          return line
+        }
 
-          // Clean and replace the rest of the text
+        // Check if it's an emoji bullet format: **emoji** text
+        const emojiBulletMatch = line.match(/^\*\*([\u{1F300}-\u{1F9FF}]+)\*\*\s*(.+)$/u)
+        if (emojiBulletMatch) {
+          const restOfText = emojiBulletMatch[2]
           const cleanText = restOfText
             .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
             .replace(/['"]/g, '')
@@ -199,14 +206,50 @@ async function processMdxFile(filePath) {
             const wordCount = countWords(cleanText)
             const newText = generateLoremWords(Math.max(wordCount, 3))
             modified = true
-            // Replace with traditional bullet point
             return `- ${newText}`
+          }
+        }
+
+        // Otherwise, it's regular bold text: **text** - replace the content
+        const boldTextMatch = line.match(/^\*\*([^*]+)\*\*(.*)$/)
+        if (boldTextMatch) {
+          const boldContent = boldTextMatch[1]
+          const afterBold = boldTextMatch[2]
+
+          // Clean and count the bold text
+          const cleanBold = boldContent
+            .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+            .replace(/['"]/g, '')
+            .trim()
+
+          if (cleanBold.length > 5) {
+            const wordCount = countWords(cleanBold)
+            const newText = generateLoremWords(Math.max(wordCount, 3))
+            modified = true
+            // Keep the bold formatting
+            return `**${newText}**${afterBold.replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim() ? '' : ''}`
           }
         }
         return line
       }
 
-      // Check if it's a paragraph (starts with capital letter or common words)
+      // PRIORITY 3: Skip lines that are components, metadata, imports, or special syntax
+      if (
+        line.trim().startsWith('<') ||
+        line.trim().startsWith('import ') ||
+        line.trim().startsWith('export ') ||
+        line.trim().startsWith('#') ||
+        line.trim().startsWith('-') ||
+        line.trim().startsWith('[') ||
+        line.includes('{') ||
+        line.includes('}') ||
+        line.includes('=') ||
+        (line.includes(':') && line.includes('//'))) // Skip URLs
+      {
+        return line
+      }
+
+      // PRIORITY 4: Check if it's a regular paragraph (starts with capital letter or common words)
       if (
         /^[A-Z]/.test(line.trim()) ||
         /^(The|This|That|There|It|We|You|Your|Our|In|On|At|For|With|From|To|And|Or|But)\s/i.test(
