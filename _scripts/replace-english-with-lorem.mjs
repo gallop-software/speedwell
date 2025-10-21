@@ -151,48 +151,74 @@ async function processMdxFile(filePath) {
 
     console.log(`\n📝 Processing ${path.basename(filePath)}`)
 
-    // Replace title
-    content = content.replace(/title:\s*['"]([^'"]+)['"]/g, (match, title) => {
-      const cleanTitle = title.replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim()
-      if (cleanTitle.length > 0) {
-        const wordCount = countWords(cleanTitle)
-        const newTitle = generateLoremWords(Math.max(wordCount, 2))
-        modified = true
-        return `title: '${newTitle}'`
-      }
-      return match
-    })
-
-    // Replace description
+    // Replace title - handle both clean and malformed strings
     content = content.replace(
-      /description:\s*['"]([^'"]+)['"]/g,
-      (match, desc) => {
-        const cleanDesc = desc.trim()
-        if (cleanDesc.length > 0) {
-          const wordCount = countWords(cleanDesc)
-          const newDesc = generateLoremWords(Math.max(wordCount, 10))
+      /title:\s*['"](.+?)['"],[?\s]*$/gm,
+      (match, title) => {
+        // Remove emojis and any problematic characters
+        const cleanTitle = title
+          .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+          .replace(/['"]/g, '')
+          .replace(/[,]/g, '')
+          .trim()
+        if (cleanTitle.length > 0) {
+          const wordCount = countWords(cleanTitle)
+          const newTitle = generateLoremWords(Math.max(wordCount, 2))
           modified = true
-          return `description: '${newDesc}'`
+          return match.endsWith(',')
+            ? `title: '${newTitle}',`
+            : `title: '${newTitle}'`
         }
         return match
       }
     )
 
-    // Replace alt text
-    content = content.replace(/alt:\s*['"]([^'"]+)['"]/g, (match, alt) => {
-      const cleanAlt = alt.trim()
-      if (cleanAlt.length > 0) {
-        const wordCount = countWords(cleanAlt)
-        const newAlt = generateLoremWords(Math.max(wordCount, 3))
-        modified = true
-        return `alt: '${newAlt}'`
-      }
-      return match
-    })
-
-    // Replace authors
+    // Replace description - handle both clean and malformed strings
     content = content.replace(
-      /authors:\s*\[\s*\{\s*name:\s*['"]([^'"]+)['"]\s*\}\s*\]/g,
+      /description:\s*['"](.+?)['"],?\s*$/gm,
+      (match, desc) => {
+        // Remove emojis and any problematic characters
+        const cleanDesc = desc
+          .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+          .replace(/['"]/g, '')
+          .replace(/[,]/g, '')
+          .trim()
+        if (cleanDesc.length > 0) {
+          const wordCount = countWords(cleanDesc)
+          const newDesc = generateLoremWords(Math.max(wordCount, 10))
+          modified = true
+          // Preserve the original line ending structure
+          return match.endsWith(',')
+            ? `description: '${newDesc}',`
+            : `description: '${newDesc}'`
+        }
+        return match
+      }
+    )
+
+    // Replace alt text - handle both clean and malformed strings
+    content = content.replace(
+      /alt:\s*['"](.+?)['"],[?\s]*$/gm,
+      (match, alt) => {
+        // Remove emojis and any problematic characters
+        const cleanAlt = alt
+          .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+          .replace(/['"]/g, '')
+          .replace(/[,]/g, '')
+          .trim()
+        if (cleanAlt.length > 0) {
+          const wordCount = countWords(cleanAlt)
+          const newAlt = generateLoremWords(Math.max(wordCount, 3))
+          modified = true
+          return match.endsWith(',') ? `alt: '${newAlt}',` : `alt: '${newAlt}'`
+        }
+        return match
+      }
+    )
+
+    // Replace authors - simplified pattern
+    content = content.replace(
+      /authors:\s*\[\s*\{\s*name:\s*['"]([^'"]*)['"]\s*\}\s*\]/g,
       (match) => {
         const newAuthor = getNextAuthor()
         modified = true
@@ -219,6 +245,39 @@ async function processMdxFile(filePath) {
       }
     )
 
+    // Replace component inner text (Heading, Paragraph, Accent, Li, Quote, Button, FancyHeading)
+    const componentPatterns = [
+      { name: 'Heading', regex: /(<Heading[^>]*>)([^<]+)(<\/Heading>)/g },
+      { name: 'Paragraph', regex: /(<Paragraph[^>]*>)([^<]+)(<\/Paragraph>)/g },
+      { name: 'Accent', regex: /(<Accent[^>]*>)([^<]+)(<\/Accent>)/g },
+      { name: 'Li', regex: /(<Li[^>]*>)([^<]+)(<\/Li>)/g },
+      { name: 'Quote', regex: /(<Quote[^>]*>)([^<]+)(<\/Quote>)/g },
+      { name: 'Button', regex: /(<Button\s[^>]*>)([^<]+)(<\/Button>)/g },
+      {
+        name: 'FancyHeading',
+        regex: /(<FancyHeading[^>]*>)([^<]+)(<\/FancyHeading>)/g,
+      },
+    ]
+
+    componentPatterns.forEach(({ name, regex }) => {
+      content = content.replace(
+        regex,
+        (match, openTag, innerText, closeTag) => {
+          // Remove emojis first, then trim
+          const cleanText = innerText
+            .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+            .trim()
+          if (cleanText.length > 0) {
+            const wordCount = countWords(cleanText)
+            const newText = generateLoremWords(Math.max(wordCount, 2))
+            modified = true
+            return `${openTag}${newText}${closeTag}`
+          }
+          return match
+        }
+      )
+    })
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`✅ Updated ${path.basename(filePath)}`)
@@ -234,12 +293,17 @@ async function processMdxFile(filePath) {
 async function main() {
   const rootDir = path.join(__dirname, '..')
   const mdxDir = path.join(rootDir, 'src/app/markdown')
+  const templateDir = path.join(rootDir, 'src/app/template')
 
   console.log('🔍 Finding MDX files...\n')
 
-  const files = findMdxFiles(mdxDir)
+  const markdownFiles = findMdxFiles(mdxDir)
+  const templateFiles = findMdxFiles(templateDir)
+  const files = [...markdownFiles, ...templateFiles]
 
-  console.log(`📄 Found ${files.length} MDX files\n`)
+  console.log(`📄 Found ${markdownFiles.length} MDX files in markdown/`)
+  console.log(`📄 Found ${templateFiles.length} MDX files in template/`)
+  console.log(`📄 Total: ${files.length} MDX files\n`)
   console.log('🔄 Processing files...\n')
 
   for (const file of files) {
