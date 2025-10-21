@@ -10,6 +10,7 @@
     "images": "node _scripts/process-images.js",
     "favicon": "node _scripts/generate-favicon.js",
     "search": "./_scripts/generate-search.sh",
+    "lorem": "node _scripts/replace-english-with-lorem.mjs",
     "env": "./push-env-to-vercel.sh",
     "env:prod": "./push-env-to-vercel.sh production",
     "env:prev": "./push-env-to-vercel.sh preview"
