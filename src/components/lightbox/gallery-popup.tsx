@@ -1,0 +1,244 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Lightbox from 'yet-another-react-lightbox'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
+import Counter from 'yet-another-react-lightbox/plugins/counter'
+import Captions from 'yet-another-react-lightbox/plugins/captions'
+import 'yet-another-react-lightbox/styles.css'
+import 'yet-another-react-lightbox/plugins/thumbnails.css'
+import 'yet-another-react-lightbox/plugins/counter.css'
+import 'yet-another-react-lightbox/plugins/captions.css'
+import { NextJsImage, NextJsThumbnail } from './next-js-image'
+import type { SlideImage } from 'yet-another-react-lightbox'
+
+interface Slide extends SlideImage {
+  description?: string
+  thumbnail?: string
+}
+
+export const GalleryPopup = () => {
+  const [galleries, setGalleries] = useState<
+    { slides: Slide[]; open: boolean; index: number; galleryIndex: number }[]
+  >([])
+
+  useEffect(() => {
+    const galleryElements = document.querySelectorAll(`.lightbox-gallery`)
+    const singleImageElements = Array.from(
+      document.querySelectorAll(`.lightbox-single`)
+    )
+      .map((node) => node.parentElement)
+      .filter((node) => node !== null)
+
+    let listeners: { element: HTMLElement; handler: EventListener }[] = []
+
+    const addClickListener = (element: HTMLElement, handler: EventListener) => {
+      element.addEventListener('click', handler)
+      listeners.push({ element, handler })
+    }
+
+    const removeAllListeners = () => {
+      listeners.forEach(({ element, handler }) => {
+        element.removeEventListener('click', handler)
+      })
+      listeners = []
+    }
+
+    const galleryData = Array.from(galleryElements)
+      .map((galleryEl, galleryIndex) => {
+        const images = Array.from(galleryEl.querySelectorAll('a.lightbox-item'))
+          .map((node) => node.parentElement)
+          .filter((node) => node !== null)
+
+        if (images.length === 0) return null
+
+        const slides = images
+          .map((el, index) =>
+            el ? createSlide(el, galleryIndex, index) : null
+          )
+          .filter((slide): slide is Slide => slide !== null)
+
+        if (slides.length === 0) return null
+
+        // Add event listeners for each image in the gallery
+        slides.forEach((_, index) => {
+          const imageElement = images[index]
+          const anchorElement = imageElement?.querySelector('a')
+          if (anchorElement) {
+            const handler = (event: Event) => {
+              event.preventDefault()
+              setGalleries((prevGalleries) =>
+                prevGalleries.map((gallery) =>
+                  gallery.galleryIndex === galleryIndex
+                    ? { ...gallery, open: true, index }
+                    : gallery
+                )
+              )
+            }
+            addClickListener(anchorElement, handler)
+          }
+        })
+
+        return { slides, open: false, index: 0, galleryIndex: galleryIndex }
+      })
+      .filter((gallery) => gallery !== null)
+
+    const singleImageData = singleImageElements
+      .map((el, index) => {
+        const slide = el
+          ? createSlide(el, galleryData.length + index + 1, 0)
+          : null
+        if (!slide) return null
+
+        const anchorElement = el.querySelector('a')
+        if (anchorElement) {
+          const handler = (event: Event) => {
+            event.preventDefault()
+            setGalleries((prevGalleries) =>
+              prevGalleries.map((gallery) =>
+                gallery.galleryIndex === galleryData.length + index + 1
+                  ? { ...gallery, open: true, index: 0 }
+                  : gallery
+              )
+            )
+          }
+          addClickListener(anchorElement, handler)
+        }
+
+        return {
+          slides: [slide],
+          open: false,
+          index: 0,
+          galleryIndex: galleryData.length + index + 1,
+        }
+      })
+      .filter((single) => single !== null)
+
+    setGalleries([...galleryData, ...singleImageData])
+
+    // Cleanup event listeners when unmounting
+    return () => {
+      removeAllListeners()
+    }
+  }, []) // Rerun only when rootClass changes
+
+  const createSlide = (
+    el: Element,
+    galleryIndex: number,
+    imageIndex: number
+  ): Slide | null => {
+    const anchorElement = el.querySelector(':scope > a')
+    const imgElement = el.querySelector('img')
+
+    if (!anchorElement || !imgElement) {
+      return null
+    }
+
+    const src = anchorElement.getAttribute('href') || ''
+    const srcset = imgElement.getAttribute('srcset') || ''
+    const srcSet = srcset
+      ? srcset.split(',').map((entry) => {
+          const [url, size] = entry.trim().split(' ')
+          return {
+            src: url,
+            width: parseInt(size, 10),
+            height: parseInt(size, 10),
+          }
+        })
+      : undefined
+
+    const width = imgElement.getAttribute('width')
+      ? parseInt(imgElement.getAttribute('width') || '', 10)
+      : undefined
+    const height = imgElement.getAttribute('height')
+      ? parseInt(imgElement.getAttribute('height') || '', 10)
+      : undefined
+
+    const figcaption = el.querySelector('figcaption')
+    const description = figcaption ? figcaption.textContent?.trim() || '' : ''
+
+    const thumbnail =
+      srcSet && srcSet.length
+        ? srcSet.reduce((smallest, current) => {
+            return current.width < smallest.width ? current : smallest
+          }).src
+        : src
+
+    return {
+      src,
+      width,
+      height,
+      alt: description,
+      srcSet,
+      imageFit: 'contain',
+      thumbnail,
+      description,
+    }
+  }
+
+  const closeLightbox = (galleryIndex: number) => {
+    setGalleries((prevGalleries) =>
+      prevGalleries.map((gallery, gIndex) =>
+        gIndex === galleryIndex ? { ...gallery, open: false } : gallery
+      )
+    )
+  }
+
+  return (
+    <>
+      {galleries.map((gallery, galleryIndex) => (
+        <Lightbox
+          key={galleryIndex}
+          index={gallery.index}
+          open={gallery.open}
+          close={() => closeLightbox(galleryIndex)}
+          slides={gallery.slides as SlideImage[]}
+          plugins={
+            gallery.slides.length <= 1
+              ? [Captions]
+              : [Captions, Thumbnails, Counter]
+          }
+          thumbnails={{ position: 'bottom', showToggle: true }}
+          captions={{ showToggle: true, descriptionMaxLines: 8 }}
+          controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
+          carousel={{ finite: true }}
+          styles={{
+            root: {
+              '--yarl__slide_description_color':
+                'var(--color--gallery-contrast,#000000)',
+              '--yarl__slide_captions_container_background': 'none',
+              '--yarl__color_button_active':
+                'var(--color--gallery-contrast,#000000)',
+              '--yarl__button_filter': 'none',
+              '--yarl__counter_filter': 'none',
+              '--yarl__color_button': 'var(--color--gallery-contrast,#000000)',
+              '--yarl__thumbnails_thumbnail_background': 'transparent',
+              '--yarl__thumbnails_container_background_color':
+                'var(--color--gallery,rgba(255,255,255,0.7))',
+              '--yarl__container_background_color':
+                'var(--color--gallery,rgba(255,255,255,0.7))',
+              '--yarl__color_backdrop': 'transparent',
+              backdropFilter: 'blur(10px)', // Adjust blur intensity as needed
+              WebkitBackdropFilter: 'blur(10px)', // For Safari support
+              '--yarl__color_button_disabled': 'transparent',
+            },
+            slide: {
+              flexDirection: 'column',
+              alignItems: 'center',
+            },
+            captionsDescriptionContainer: {
+              position: 'relative',
+              paddingBottom: 0,
+            },
+            captionsDescription: {
+              maxWidth: '700px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            },
+          }}
+          render={{ slide: NextJsImage, thumbnail: NextJsThumbnail }}
+        />
+      ))}
+    </>
+  )
+}

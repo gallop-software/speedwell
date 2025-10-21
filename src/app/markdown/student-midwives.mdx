@@ -1,0 +1,254 @@
+export const metadata = {
+  title: 'Student Midwives at Heartbeat',
+  description: 'At Heartbeat Midwifery, we believe that training future midwives is one of the most powerful ways to strengthen the natural birth community. Meet our current and former student midwives.',
+  slug: 'student-midwives',
+  featuredImage: '/images/heartbeat-36.jpg',
+  focusKeyword: 'student midwives',
+  readingTimeMinutes: 8,
+  publishDate: '2025-10-16T00:00:00Z',
+  lastModified: '2025-10-16T00:00:00Z',
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/student-midwives',
+  },
+  openGraph: {
+    title: 'Student Midwives at Heartbeat',
+    description: 'At Heartbeat Midwifery, we believe that training future midwives is one of the most powerful ways to strengthen the natural birth community. Meet our current and former student midwives.',
+    image: {
+      url: '/images/heartbeat-36.jpg',
+      alt: 'Student Midwives at Heartbeat Midwifery',
+    },
+    imageAlt: 'Student Midwives at Heartbeat Midwifery',
+  },
+}
+
+import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Columns, Column, Navbar, Image, Profile1, Grid, IconText } from '@/components'
+
+<Navbar />
+
+<div className="relative">
+  <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
+  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+    <Columns reverseColumns>
+      <Column className="relative -mx-6">
+        <Image
+          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover object-top"
+          src="/images/heartbeat-36.jpg"
+          alt="Student Midwives at Heartbeat Midwifery"
+          rounded="rounded-none"
+          size="large"
+          lazy={false}
+        />
+        <Accent
+          color="text-white"
+          className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
+        >
+          nurturing hearts
+        </Accent>
+      </Column>
+      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+        <Heading
+          as="h1"
+          className="max-w-2xl"
+        >
+          Student Midwives at Heartbeat
+        </Heading>
+        <Paragraph className="max-w-2xl">At Heartbeat Midwifery, we believe that training future midwives is one of the most powerful ways to strengthen the natural birth community. Since opening our doors, we've had the privilege of mentoring dozens of student midwives who have gone on to serve families across Texas and beyond.</Paragraph>
+        <Paragraph className="max-w-2xl">Heartbeat is built on a foundation of client choice and safety. With more than 1,000 deliveries in Lubbock, our record speaks for itself—demonstrating that safe, evidence-based care and client autonomy go hand in hand. This same philosophy shapes how we train our students: combining strong clinical skill with deeper qualities that define truly exceptional care through calm presence, integrity, respect for client choice, and collaboration within a team.</Paragraph>
+      </Column>
+    </Columns>
+  </div>
+</div>
+
+<Section
+  innerAlign="content"
+  className="my-30"
+>
+  <Heading
+    as="h2"
+    textAlign="text-center"
+  >
+    Where Our Graduates Serve
+  </Heading>
+  <Paragraph>Midwives who have trained with Heartbeat now serve families across West Texas and beyond. Our Clinical Director, Carmen Geyman, LM, CPM, also teaches advanced courses in breech birth, twin delivery, and suturing skills—extending Heartbeat's reach and helping midwives worldwide provide safer, more compassionate care.</Paragraph>
+</Section>
+
+<Section className="mb-30">
+  <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/242666111_1223982404780937_3518633754925001140_n.jpg"
+      cite="Sarah Pohlmeyer"
+    >
+      <Heading as="h3" margin="mb-0">Sarah Pohlmeyer</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Held Midwifery</Heading>
+      <Paragraph textAlign="text-center">Providing compassionate midwifery care to families in the South Plains region.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:map-pin">Lubbock, Texas</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/shiane.jpg"
+      cite="Shiane Archer"
+    >
+      <Heading as="h3" margin="mb-0">Shiane Archer</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Malta Midwifery</Heading>
+      <Paragraph textAlign="text-center">Co-founder providing collaborative midwifery care with a team-centered approach.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:map-pin">Lubbock, Texas</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/kaegan-westbrook.jpg"
+      cite="Kaegan Westbrook"
+    >
+      <Heading as="h3" margin="mb-0">Kaegan Westbrook</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Malta Midwifery</Heading>
+      <Paragraph textAlign="text-center">Co-founder bringing comprehensive midwifery services to families.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:map-pin">Lubbock, Texas</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/256879972_392713832591701_7419695545038811004_n.jpg"
+      cite="Aggie Martens"
+    >
+      <Heading as="h3" margin="mb-0">Aggie Martens</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Mother's Haven</Heading>
+      <Paragraph textAlign="text-center">Serving rural families with dedicated midwifery care.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:map-pin">Seminole, Texas</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/257685621_194136822886696_1431590608535684538_n.jpg"
+      cite="Kayla Allen"
+    >
+      <Heading as="h3" margin="mb-0">Kayla Allen</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Pure Peace Midwifery</Heading>
+      <Paragraph textAlign="text-center">Focusing on peaceful, natural birth experiences.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:map-pin">Lubbock, Texas</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/img_0103.jpg"
+      cite="Kelly Dougherty"
+    >
+      <Heading as="h3" margin="mb-0">Kelly Dougherty</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Heartbeat Midwifery</Heading>
+      <Paragraph textAlign="text-center">Licensed Midwife continuing to serve families at Heartbeat.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:map-pin">Lubbock, Texas</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/img_0148.jpg"
+      cite="Ellie Edwards"
+    >
+      <Heading as="h3" margin="mb-0">Ellie Edwards</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Current Student</Heading>
+      <Paragraph textAlign="text-center">Developing skills with a focus on the sacred nature of birth.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:academic-cap">Training</IconText>
+    </Profile1>
+
+    <Profile1
+      aspect="aspect-[4/5]"
+      img="/images/242548411_1614657065543811_6016812470352852145_n.jpg"
+      cite="Emily Lassiter"
+    >
+      <Heading as="h3" margin="mb-0">Emily Lassiter</Heading>
+      <Heading as="h4" fontSize="text-lg" className="text-accent mb-3">Current Student</Heading>
+      <Paragraph textAlign="text-center">Dedicated to learning comprehensive midwifery care.</Paragraph>
+      <IconText className="uppercase" fontWeight="font-semibold" fontSize="text-sm" textAlign="text-center" icon="heroicons:academic-cap">Training</IconText>
+    </Profile1>
+
+  </Grid>
+</Section>
+
+<Cover
+  imageSrc="/images/heartbeat-38.jpg"
+  imageAlt="Get involved with student midwives at Heartbeat"
+  overlayColor="bg-accent5/90"
+  height="h-auto"
+  innerAlign="content"
+  className="py-20 lg:py-30"
+>
+  <Heading
+    as="h2"
+    styleAs="h2"
+    textAlign="text-center"
+    color="text-contrast"
+    className="mb-6"
+  >
+    Ready to Get Involved?
+  </Heading>
+  <Paragraph
+    variant="large"
+    textAlign="text-center"
+    color="text-contrast"
+    className="mb-12"
+  >
+    Join our mission of training exceptional midwives and supporting families. Whether you're ready to begin your midwifery journey or want to bring advanced training to your community, we're here to connect with you.
+  </Paragraph>
+  <Columns
+    gap="gap-16 lg:gap-16"
+    className="mt-12"
+  >
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h4"
+        textAlign="text-center"
+        color="text-contrast"
+        margin="mb-4"
+      >
+        Student Preceptorship
+      </Heading>
+      <Paragraph
+        textAlign="text-center"
+        color="text-contrast-light"
+      >
+        Gain hands-on experience in a supportive learning environment built on safety, teamwork, and excellence.
+      </Paragraph>
+      <div className="flex justify-center">
+        <Button
+          size="medium"
+          variant="outline"
+          href="/job-application"
+          icon="heroicons:arrow-right-16-solid"
+          iconPlacement="after"
+        >
+          Apply Now
+        </Button>
+      </div>
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h4"
+        textAlign="text-center"
+        color="text-contrast"
+        margin="mb-4"
+      >
+        Workshop Training
+      </Heading>
+      <Paragraph
+        textAlign="text-center"
+        color="text-contrast-light"
+      >
+        Book Carmen Geyman for advanced training in breech birth, twin delivery, or suturing skills for midwives worldwide.
+      </Paragraph>
+      <div className="flex justify-center">
+        <Button
+          size="medium"
+          variant="outline"
+          href="/contact"
+          icon="heroicons:arrow-right-16-solid"
+          iconPlacement="after"
+        >
+          Contact Us
+        </Button>
+      </div>
+    </Column>
+  </Columns>
+</Cover>

@@ -1,0 +1,140 @@
+export const metadata = {
+  title: 'Contact Us',
+  description: 'Contact Heartbeat Midwifery in Lubbock for midwifery services, birth center tours, and pregnancy care. Get in touch with our caring team today.',
+  slug: 'contact',
+  featuredImage: '/images/birth-center.jpg',
+  focusKeyword: 'contact midwifery',
+  readingTimeMinutes: 4,
+  publishDate: '2025-09-18T00:00:00Z',
+  lastModified: '2025-09-18T00:00:00Z',
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/contact',
+  },
+  openGraph: {
+    title: 'Contact Us',
+    description: 'Contact Heartbeat Midwifery in Lubbock for midwifery services, birth center tours, and pregnancy care. Get in touch with our caring team today.',
+    image: {
+      url: '/images/birth-center.jpg',
+      alt: 'Heartbeat Midwifery',
+    },
+    imageAlt: 'Contact Heartbeat Midwifery',
+  },
+}
+
+import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Form, FormInput, FormTextArea, FormUpload, FormRadioGroup, FormCheckboxGroup, FormButton, FormName, Navbar, CardContact, Image } from '@/components'
+import { Icon } from '@iconify/react'
+
+<Navbar />
+
+<Section className="py-20 md:py-30 bg-body2 relative">
+  <Columns
+    reverseColumns={false}
+    align="items-start"
+  >
+    <Column className="mb-10">
+      <Heading as="h1">Let's Connect</Heading>
+      <Form>
+        <FormInput
+          name="emailSubject"
+          defaultValue="Contact Form"
+          label="Email Subject"
+          hidden
+        />
+        <FormInput
+          name="email"
+          type="email"
+          placeholder="Email*"
+          label="Email"
+          required
+        />
+        <FormInput
+          name="phone"
+          type="tel"
+          placeholder="Phone*"
+          label="Phone"
+          required
+        />
+        <FormInput
+          name="subject"
+          type="text"
+          placeholder="Subject*"
+          label="Subject"
+          required
+        />
+        <FormTextArea
+          name="message"
+          placeholder="Message*"
+          rows={4}
+          label="Message"
+          required
+        />
+        <FormButton
+          name="submit"
+          label="Send Message"
+        />
+      </Form>
+    </Column>
+    <Column className="aspect-[8/9] relative">
+      <Image
+        src="/images/img_8377-hdr-scaled0.jpg"
+        alt="Beautiful moment captured"
+        className="object-cover absolute inset-0 w-full h-full"
+        size="large"
+        lazy={false}
+      />
+      <Accent
+        className="absolute -top-[5%] lg:-top-[10%] right-[5%] lg:right-[5%] xl:-right-[10%] z-30 -rotate-[10deg]"
+        color="text-white"
+      >
+        loving hands.
+      </Accent>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="py-20 md:py-30 bg-accent4 relative">
+  <Columns
+    gap="gap-10 lg:gap-20"
+    cols="grid-cols-1 lg:grid-cols-[2fr_3fr]"
+    reverseColumns={false}
+    align="items-start"
+  >
+    <Column>
+      <Heading as="h2">Get in Touch</Heading>
+      <Paragraph>We would love to hear from you! Whether you have questions about our midwifery services, want to schedule a birth center tour, or need assistance with your pregnancy care, our caring team is here to help. Please fill out the contact form, and we will get back to you as soon as possible. Your journey to a beautiful birth experience starts with reaching out to us.</Paragraph>
+    </Column>
+    <Column>
+      <Grid
+        cols="grid-cols-1"
+        gap="gap-6"
+      >
+        <CardContact
+          className="group"
+          href="tel:5551234567"
+          heading="Call"
+          text="(555) 123-4567"
+          icon="lucide:phone"
+          iconColor="text-accent bg-accent3 group-hover:bg-accent3-dark"
+        />
+        <CardContact
+          href="https://www.google.com/search?q=webplantmedia+lubbock&sca_esv=fbaa7d3b9c35fdd6&sxsrf=AE3TifPIizRDUI9FeRONIBEaFbM4rTiR2A%3A1761044847022&ei=b2n3aK-WAbigwN4PjsDUqAo&oq=webpla&gs_lp=Egxnd3Mtd2l6LXNlcnAiBndlYnBsYSoCCAAyBBAjGCcyBBAjGCcyEBAAGIAEGLEDGEMYgwEYigUyBxAAGIAEGAoyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAAGIAEMgUQABiABEjVHVD1B1jxC3ADeAGQAQCYAW2gAbMEqgEDMy4zuAEByAEA-AEBmAIJoALcBMICBxAjGLADGCfCAgoQABiwAxjWBBhHwgILEAAYgAQYkQIYigXCAhEQLhiABBixAxjRAxiDARjHAcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMY0QMYxwHCAgoQIxiABBgnGIoFwgIKEAAYgAQYQxiKBcICERAuGIAEGJECGMcBGIoFGK8BwgIQEC4YgAQYQxjHARiKBRivAcICDRAAGIAEGLEDGEMYigXCAhEQABiABBiRAhixAxiDARiKBcICCxAAGIAEGLEDGIMBmAMAiAYBkAYJkgcDNi4zoAe3P7IHAzMuM7gHzgTCBwUwLjUuNMgHHg&sclient=gws-wiz-serp#mpd=~7629446733757655296/customers/reviews"
+          heading="Google Reviews"
+          text="See What Our Customers Are Saying"
+          icon="lucide:star"
+        />
+        <CardContact
+          href="https://maps.app.goo.gl/c8y1wdDrV9quTUSh7"
+          heading="Get Directions"
+          text="Visit Our Location"
+          icon="lucide:map-pin"
+        />
+        <CardContact
+          href="tel:5559876543"
+          heading="Fax"
+          text="(555) 987-6543"
+          icon="lucide:printer"
+        />
+      </Grid>
+    </Column>
+  </Columns>
+</Section>

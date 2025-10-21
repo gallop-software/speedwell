@@ -1,0 +1,272 @@
+export const metadata = {
+  title: 'Labor & Delivery Services in Lubbock',
+  description: 'Heartbeat Midwifery offers private labor & delivery suites, home birth support, and a calm, welcoming space for your birth experience.',
+  keywords: ['umc labor and delivery lubbock tx', 'labor and delivery lubbock', 'birth center lubbock tx', 'alternative to umc labor delivery', 'natural labor delivery lubbock', 'midwife labor delivery lubbock', 'labor delivery near umc lubbock', 'birthing center lubbock texas', 'home birth lubbock tx', 'water birth labor delivery', 'natural birth lubbock', 'labor delivery midwife', 'birth suites lubbock'],
+  slug: 'labor-delivery',
+  featuredImage: '/images/home-page-water-birth-scaled.jpg',
+  focusKeyword: 'umc labor and delivery lubbock tx',
+  readingTimeMinutes: 8,
+  publishDate: '2021-04-22T15:02:27Z',
+  lastModified: '2025-09-29T00:00:00Z',
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/labor-delivery',
+  },
+  authors: [{ name: 'Heartbeat Midwifery' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://heartbeatmidwifery.com/labor-delivery/',
+    siteName: 'Heartbeat Midwifery',
+    title: 'Labor & Delivery Services in Lubbock',
+    description: 'Heartbeat Midwifery offers private labor & delivery suites, home birth support, and a calm, welcoming space for your birth experience.',
+    image: {
+      url: '/images/home-page-water-birth-scaled.jpg',
+      alt: 'Natural Labor & Delivery Alternative to UMC at Heartbeat Midwifery',
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Labor & Delivery Services in Lubbock',
+    description: 'Heartbeat Midwifery offers private labor & delivery suites, home birth support, and a calm, welcoming space for your birth experience.',
+    image: '/images/home-page-water-birth-scaled.jpg',
+  },
+}
+
+import { Paragraph, Heading, Button, ButtonPlay, Buttons, Section, Grid, Card1, Card2, FancyHeading, Columns, Column, Accent, Navbar, Accordion, Cover, Image, Quote } from '@/components'
+import PageFooter from '@/template/page-footer.mdx'
+
+<Navbar />
+
+<div className="relative">
+  <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body-dark z-0"></div>
+  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+    <Columns reverseColumns={false}>
+      <Column className="relative -mx-6">
+        <Image
+          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+          src="/images/home-page-water-birth-scaled.jpg"
+          alt="Labor & Delivery in Lubbock - Heartbeat Midwifery"
+          size="large"
+          rounded="rounded-none"
+          lazy={false}
+        />
+        <Accent
+          className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12"
+          color="text-white"
+        >
+          labor & delivery
+        </Accent>
+      </Column>
+      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+        <Heading
+          as="h1"
+          className="max-w-2xl"
+        >
+          Midwives Experienced in Labor & Delivery in Lubbock
+        </Heading>
+        <Paragraph>Our labor and delivery wing is thoughtfully set apart from the prenatal and reception areas, offering privacy and calm when it matters most. A dedicated entrance ensures a quiet, seamless arrival, while a welcoming family waiting room gives your loved ones a comfortable place to rest. With cozy couches, a mini kitchenette, microwave, fridge, and hot-and-cold water dispenser, it's designed to feel like home while you focus on welcoming your baby. For those choosing home birth, we bring the same calming, personalized support to you—creating a safe and familiar environment wherever you deliver.</Paragraph>
+        <Buttons className="">
+          <Button
+            href="#services"
+            theme="primary"
+            icon="heroicons:arrow-down-16-solid"
+            iconPlacement="after"
+          >
+            Our Labor and Delivery Services
+          </Button>
+        </Buttons>
+      </Column>
+    </Columns>
+  </div>
+</div>
+
+<Section className="bg-body py-30">
+  <Columns gap="gap-10 lg:gap-20">
+    <Column className="aspect-[4/5] relative">
+      <Image
+        src="/images/img_8244-hdr.jpg"
+        alt="Labor Room at Heartbeat Midwifery Lubbock"
+        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+        size="large"
+      />
+      <Image
+        src="/images/heartbeat-5.jpg"
+        alt="Comfortable labor suite"
+        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+        rounded="rounded-b-none rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h2"
+        id="services"
+      >
+        Our Birth Suites Offer Comfortable Labor & Delivery Experience
+      </Heading>
+      <Paragraph>Whether you're planning a birth at home or in our freestanding birth center, we want you to feel safe, supported, and at ease. Our three private birth suites are each uniquely designed to promote comfort and freedom of movement during labor, with features like spacious tubs, queen beds, and cozy lighting. For those choosing a center birth, these suites offer a peaceful, home-like setting with the added reassurance of medical supplies on hand.</Paragraph>
+      <Buttons>
+        <Button
+          variant="primary"
+          href="/birth-center"
+          icon="heroicons:arrow-right-16-solid"
+          iconPlacement="after"
+        >
+          Read More on Our Birth Suites
+        </Button>
+      </Buttons>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
+  <Columns
+    reverseColumns
+    gap="gap-10 lg:gap-20"
+  >
+    <Column className="aspect-[8/7] relative">
+      <Image
+        src="/images/nitrous.jpg"
+        alt="Nitrous oxide equipment for comfort during labor"
+        className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
+        size="large"
+      />
+      <Image
+        src="/images/dsc_8587-copy0.jpg"
+        alt="The Golden Hour after birth"
+        className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
+        rounded="rounded-b-none rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h2"
+      >
+        Nitrous Oxide for Labor & Delivery
+      </Heading>
+      <Quote>Sometimes, a little extra support can make all the difference.</Quote>
+      <Paragraph>At Heartbeat Midwifery, we offer nitrous oxide—a gentle, on-demand option to help ease pain and reduce anxiety during labor. Often called "laughing gas," this natural-leaning option can help you stay grounded, calm, and more in control during intense contractions, without affecting your baby or your ability to move freely.</Paragraph>
+      <Paragraph>You hold the mask, and you're in charge—breathing it in as needed, moment by moment. It's there if you want it, and always offered with thoughtful guidance from your midwife, who will help ensure it supports your comfort while honoring the flow of your birth.</Paragraph>
+      <Paragraph>As always, your preferences lead the way.</Paragraph>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="py-30 bg-body-dark">
+  <Columns
+    reverseColumns={false}
+    gap="gap-10 lg:gap-20"
+  >
+    <Column className="aspect-[4/5] relative">
+      <Image
+        src="/images/dsc_7760.jpg"
+        alt="Water birth at Heartbeat Midwifery"
+        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+        size="large"
+      />
+      <Image
+        src="/images/dsc_4713-2.jpg"
+        alt="Water birth tub at birth center"
+        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+        rounded="rounded-b-none rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h2"
+      >
+        Water Birth
+      </Heading>
+      <Quote>There's something deeply instinctive about giving birth in water—soft, soothing, and supported.</Quote>
+      <Paragraph>We are honored to offer safe, natural water birth options—whether in one of our spacious, spa-inspired tubs at the birth center or in the quiet comfort of your own home. For many families, water brings ease, calm, and a feeling of gentle protection. It helps the body open and the mind rest, allowing labor to unfold with more softness and trust.</Paragraph>
+      <Paragraph>Often called "nature's epidural," water has a way of melting tension, easing the intensity of contractions, and reducing anxiety. The buoyancy lightens your body, supports freedom of movement, and encourages you to follow your instincts—finding the positions and rhythms that feel right in your bones.</Paragraph>
+      <Paragraph>Our midwives are highly trained and experienced in water birth, and we're here to walk with you every step of the way—offering presence, guidance, and unwavering care. Whether you're planning a peaceful center birth or a sacred birth at home, we'll help you create a birth that feels both gentle and powerful.</Paragraph>
+      <Buttons>
+        <Button
+          variant="primary"
+          href="/water-birth"
+          icon="heroicons:arrow-right-16-solid"
+          iconPlacement="after"
+        >
+          Learn More About Water Birth
+        </Button>
+      </Buttons>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="py-30 bg-body">
+  <Columns
+    reverseColumns={true}
+    gap="gap-10 lg:gap-20"
+  >
+    <Column>
+      <Image
+        src="/images/img_0792.jpg"
+        alt="Support for VBAC, Breech, and Twin Births"
+        className="object-cover"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h2"
+      >
+        Support for VBAC, Breech, and Twin Births
+      </Heading>
+      <Paragraph>Some births require an added layer of preparation and care. Our team offers experienced guidance for vaginal birth after cesarean (VBAC), as well as breech and twin deliveries. We take time to understand your goals and develop a thoughtful plan that prioritizes safety, confidence, and informed choice every step of the way.</Paragraph>
+      <Buttons>
+        <Button
+          variant="primary"
+          href="/breech-twin-vbac"
+          icon="heroicons:arrow-right-16-solid"
+          iconPlacement="after"
+        >
+          Read More on Specialized Birth Services
+        </Button>
+      </Buttons>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="py-30 bg-body2">
+  <Columns
+    reverseColumns={false}
+    gap="gap-10 lg:gap-20"
+  >
+    <Column className="aspect-[4/5] relative">
+      <Image
+        src="/images/dsc_2043.jpg"
+        alt="The Golden Hour after birth"
+        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+        size="large"
+      />
+      <Image
+        src="/images/dsc_6104.jpg"
+        alt="Golden hour bonding moment"
+        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+        rounded="rounded-b-none rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h2"
+      >
+        The Golden Hour: A Sacred Pause Between Hearts
+      </Heading>
+      <Paragraph>In the quiet stillness after birth, when the world softens and time seems to slow, you and your baby enter a sacred space—a moment held gently between two beating hearts.</Paragraph>
+      <Paragraph>At Heartbeat Midwifery, we honor this fragile, profound hour with deep reverence. We practice delayed cord clamping, allowing nature's wisdom to flow uninterrupted. We cradle you both in immediate skin-to-skin, where warmth, breath, and heartbeat become a lifeline of connection. And we hold space for uninterrupted breastfeeding, nurturing not just nourishment, but trust and calm in this first dance of motherhood.</Paragraph>
+      <Paragraph>This golden hour is more than minutes on a clock—it's a whispered promise, a tender beginning, a sacred pause where your journey together truly begins.</Paragraph>
+    </Column>
+  </Columns>
+</Section>
+
+<PageFooter />

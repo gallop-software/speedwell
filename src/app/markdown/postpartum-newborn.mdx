@@ -1,0 +1,133 @@
+export const metadata = {
+  title: 'Postpartum Care in Lubbock',
+  description: 'Gentle postpartum care in Lubbock with home visits, expert suturing, newborn screenings, and breastfeeding support from trusted midwives.',
+  keywords: ['breastfeeding consultant', 'lactation consultant', 'breastfeeding consultant lubbock', 'lactation consultant lubbock', 'postpartum care lubbock', 'newborn care lubbock', 'certified lactation specialist', 'breastfeeding support lubbock', 'lactation help near me', 'nursing support midwife', 'postpartum midwife care', 'fourth trimester support', 'breastfeeding specialist lubbock'],
+  slug: 'postpartum-newborn',
+  featuredImage: '/images/dsc_5036.jpg',
+  focusKeyword: 'breastfeeding consultant',
+  readingTimeMinutes: 2,
+  publishDate: '2025-06-23T20:41:03Z',
+  lastModified: '2025-09-29T00:00:00Z',
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/postpartum-newborn',
+  },
+  authors: [{ name: 'Heartbeat Midwifery' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://heartbeatmidwifery.com/postpartum-newborn/',
+    siteName: 'Heartbeat Midwifery',
+    title: 'Postpartum Care in Lubbock',
+    description: 'Gentle postpartum care in Lubbock with home visits, expert suturing, newborn screenings, and breastfeeding support from trusted midwives.',
+    image: {
+      url: '/images/dsc_5036.jpg',
+      alt: 'Breastfeeding Consultant and Postpartum Care at Heartbeat Midwifery',
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Postpartum Care in Lubbock',
+    description: 'Gentle postpartum care in Lubbock with home visits, expert suturing, newborn screenings, and breastfeeding support from trusted midwives.',
+    image: '/images/dsc_5036.jpg',
+  },
+}
+
+import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Swiper, Testimonial1, FancyHeading, Columns, Column, List, Li, Gallery, GalleryItem, Navbar, Image } from '@/components'
+import PageFooter from '@/template/page-footer.mdx'
+
+<Navbar />
+
+<div className="relative">
+  <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body-dark z-0"></div>
+  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+    <Columns reverseColumns>
+      <Column className="relative -mx-6">
+        <Image
+          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+          src="/images/dsc_5036.jpg"
+          alt="Postpartum & Newborn Care in Lubbock - Heartbeat Midwifery"
+          size="large"
+          rounded="rounded-none"
+          lazy={false}
+        />
+        <Accent
+          className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
+          color="text-white"
+        >
+          continued care
+        </Accent>
+      </Column>
+      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+        <Heading
+          as="h1"
+          className="max-w-2xl"
+        >
+          Gentle, Ongoing Support After Birth
+        </Heading>
+        <Paragraph>At Heartbeat Midwifery, postpartum care begins the moment your baby's first breath fills the room. We honor this sacred time by centering rest, healing, and deep connection in the days and weeks that follow. Your first visit unfolds in the quiet comfort of your own home—where your body can settle, your heart can breathe, and your midwife can lovingly check on your healing, answer your questions, and celebrate the rhythms of your new baby.</Paragraph>
+        <Buttons className="">
+          <Button
+            href="#services"
+            icon="heroicons:arrow-down-16-solid"
+            iconPlacement="after"
+          >
+            Learn More About Postpartum Care
+          </Button>
+        </Buttons>
+      </Column>
+    </Columns>
+  </div>
+</div>
+
+<Section
+  className="bg-body py-30"
+  innerAlign="content"
+>
+  <Heading
+    as="h2"
+    id="services"
+    className="text-center"
+  >
+    Here for You, Always
+  </Heading>
+  <Paragraph>Our support doesn't stop there. We stay close, offering continued visits wrapped in kindness and 24/7 access for those moments when you need a steady voice or gentle guidance. From breastfeeding wisdom to emotional check-ins and newborn care tailored uniquely to your little one's rhythms, we walk beside you with tenderness and respect.</Paragraph>
+  <Paragraph>If a tear comes with your birth story, know that our midwives are skilled in the art of gentle repair—dedicated to your comfort and nurturing healing, because we believe that how you are cared for in those moments shapes your whole recovery.</Paragraph>
+  <Paragraph>You'll also receive soft, attentive newborn assessments, thoughtful screening options, and loving education on the quiet language of newborn cues, feeding, and sleep—offered with patience and presence. Whether you've birthed at home or in our birth center, we hold space for you in this tender season of transformation and growth.</Paragraph>
+</Section>
+
+<Cover
+  className="py-30 lg:py-50"
+  imageSrc="/images/img_8371-hdr.jpg"
+  imageAlt="Beautiful moment captured"
+  overlayColor="bg-accent5/90"
+  height="h-auto"
+  innerAlign="content"
+>
+  <Heading
+    as="h3"
+    styleAs="h2"
+    textAlign="text-center"
+  >
+    Compassionate Postpartum Care
+  </Heading>
+  <Paragraph
+    variant="large"
+    textAlign="text-center"
+  >
+    From the first breath to the first weeks, we're here—steady, caring, and present—supporting your family's unfolding story with open hearts and gentle hands.
+  </Paragraph>
+  <Buttons className="mt-8 justify-center">
+    <Button
+      size="medium"
+      variant="outline"
+      href="/contact"
+      theme="primary"
+      icon="heroicons:arrow-right-16-solid"
+      iconPlacement="after"
+    >
+      Contact Us
+    </Button>
+  </Buttons>
+</Cover>
+
+<PageFooter />

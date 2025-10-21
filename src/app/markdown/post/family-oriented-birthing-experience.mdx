@@ -1,0 +1,39 @@
+export const metadata = {
+  title: 'Family Oriented Birthing Experience',
+  description: 'Gallery...',
+  date: '2021-02-27',
+  slug: 'family-oriented-birthing-experience',
+  featuredImage: '/images/img_0795.jpg.jpg',
+  categories: ['Birthing Center Experiences', 'Testimonials'],
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/post/family-oriented-birthing-experience',
+  },
+  authors: [{ name: 'Heartbeat Midwifery' }],
+  openGraph: {
+    title: 'Family Oriented Birthing Experience | Heartbeat Midwifery',
+    description: 'Gallery...',
+    image: {
+      url: '/images/img_0795.jpg.jpg',
+      alt: 'Heartbeat Midwifery',
+    },
+  },
+}
+
+import { Gallery, GalleryItem } from '@/components'
+
+# Family Oriented Birthing Experience
+
+<Gallery columns={1}>
+  <GalleryItem
+    src="/images/img_0795.jpg.jpg"
+    size="large"
+  />
+  <GalleryItem
+    src="/images/img_0501.jpg.jpg"
+    size="large"
+  />
+  <GalleryItem
+    src="/images/img_0792.jpg"
+    size="large"
+  />
+</Gallery>

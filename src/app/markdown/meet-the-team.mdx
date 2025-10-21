@@ -1,0 +1,332 @@
+export const metadata = {
+  title: 'Lorem Ipsum Dolor',
+  description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.',
+  slug: 'meet-the-team',
+  featuredImage: '/images/birth-center.jpg',
+  focusKeyword: 'lorem ipsum dolor',
+  readingTimeMinutes: 6,
+  publishDate: '2025-09-18T00:00:00Z',
+  lastModified: '2025-09-18T00:00:00Z',
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/meet-the-team',
+  },
+  openGraph: {
+    title: 'Lorem Ipsum Dolor',
+    description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.',
+    image: {
+      url: '/images/birth-center.jpg',
+      alt: 'Lorem Ipsum Consectetur',
+    },
+    imageAlt: 'Lorem Ipsum Adipiscing Elit',
+  },
+}
+
+import { Heading, Paragraph, Quote, Buttons, Button, Accent, Gallery, GalleryItem, Columns, Column, Cover, Section, Navbar, Image } from '@/components'
+
+<Navbar />
+
+<Cover
+  imageSrc="/images/img_8371-hdr.jpg"
+  imageAlt="Lorem ipsum dolor sit amet"
+  overlayColor="bg-accent4/90"
+  height="h-[400px] md:h-[500px] lg:h-[600px]"
+>
+  <div className="flex flex-col gap-0 justify-center items-center text-center">
+    <Heading
+      as="h1"
+      color="text-accent"
+      margin="0"
+    >
+      Lorem Ipsum Dolor
+    </Heading>
+    <Accent
+      size="medium"
+      color="text-accent"
+    >
+      Consectetur adipiscing elit sed do eiusmod
+    </Accent>
+  </div>
+</Cover>
+
+<Section className="bg-body py-30">
+  <Columns reverseColumns>
+    <Column className="aspect-[4/5] relative">
+      <Image
+        src="/images/img_0378-scaled0.jpg"
+        alt="Lorem ipsum dolor sit amet"
+        className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover"
+        lazy={false}
+      />
+      <Image
+        src="/images/dsc_4713-2.jpg"
+        alt="Consectetur adipiscing elit"
+        className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column className="py-0 lg:py-10">
+      <Heading
+        id="learn-more"
+        as="h2"
+      >
+        Tempor incididunt ut labore
+      </Heading>
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Paragraph>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="bg-body-light py-30">
+  <Columns>
+    <Column className="aspect-[4/5] relative">
+      <Image
+        src="/images/team-scaled.jpg"
+        alt="Sed do eiusmod tempor incididunt"
+        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+        size="large"
+      />
+      <Image
+        src="/images/701475_c31a167342294f6ab8a5c7a56fb0b65emv2.jpg"
+        alt="Ut labore et dolore magna"
+        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column className="py-0 lg:py-10">
+      <Heading as="h2">Dolore magna aliqua ut enim</Heading>
+      <Paragraph>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</Paragraph>
+      <Paragraph>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</Paragraph>
+    </Column>
+  </Columns>
+</Section>
+
+<Section
+  className="bg-body py-30"
+  id="our-team"
+>
+  <Columns
+    align="items-start"
+    gap="gap-10 lg:gap-20"
+  >
+    <Column>
+      <Image
+        src="/images/img_0166.jpg"
+        alt="Lorem Ipsum Consectetur"
+        className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h3"
+        margin="mb-2"
+        fontSize="text-3xl"
+        color="text-accent5"
+      >
+        Adipiscing Elit, Sed Do Eiusmod, CLS
+      </Heading>
+      <Heading
+        as="h4"
+        styleAs="h2"
+      >
+        Lorem Consectetur
+      </Heading>
+      <Paragraph>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.</Paragraph>
+      <Paragraph>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem.</Paragraph>
+      <Quote>Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est!</Quote>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="bg-body-light py-30">
+  <Columns
+    reverseColumns
+    align="items-start"
+    gap="gap-10 lg:gap-20"
+  >
+    <Column className="relative">
+      <Image
+        src="/images/img_0050.jpg"
+        alt="Dolor Sit Amet"
+        className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h3"
+        margin="mb-2"
+        fontSize="text-3xl"
+        color="text-accent5"
+      >
+        Consectetur Adipiscing & Elit Sed Do
+      </Heading>
+      <Heading
+        as="h4"
+        styleAs="h2"
+      >
+        Dolor Adipiscing
+      </Heading>
+      <Paragraph>Tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim.</Paragraph>
+      <Paragraph>Id est laborum sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</Paragraph>
+      <Quote>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</Quote>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="bg-body2 py-30">
+  <Columns
+    reverseColumns={false}
+    align="items-start"
+    gap="gap-10 lg:gap-20"
+  >
+    <Column>
+      <Image
+        src="/images/img_0103.jpg"
+        alt="Magna Aliqua Enim"
+        className="w-full object-cover max-w-lg mx-auto"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h3"
+        margin="mb-2"
+        fontSize="text-3xl"
+        color="text-accent5"
+      >
+        Tempor Incididunt
+      </Heading>
+      <Heading
+        as="h4"
+        styleAs="h2"
+      >
+        Magna Aliqua
+      </Heading>
+      <Paragraph>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+      <Paragraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas.</Paragraph>
+      <Quote>Sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt.</Quote>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="bg-body py-30">
+  <Columns
+    reverseColumns
+    align="items-start"
+    gap="gap-10 lg:gap-20"
+  >
+    <Column>
+      <Image
+        src="/images/img_0148.jpg"
+        alt="Ut Labore Et Dolore"
+        className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h3"
+        margin="mb-2"
+        fontSize="text-3xl"
+        color="text-accent5"
+      >
+        Veniam Quis Nostrud
+      </Heading>
+      <Heading
+        as="h4"
+        styleAs="h2"
+      >
+        Quis Nostrud
+      </Heading>
+      <Paragraph>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</Paragraph>
+      <Paragraph>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</Paragraph>
+      <Quote>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</Quote>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="bg-body-light py-30">
+  <Columns
+    reverseColumns={false}
+    align="items-start"
+    gap="gap-10 lg:gap-20"
+  >
+    <Column>
+      <Image
+        src="/images/img_6108.jpeg"
+        alt="Exercitationem Ullam Corporis"
+        className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h3"
+        margin="mb-2"
+        fontSize="text-3xl"
+        color="text-accent5"
+      >
+        Suscipit Laboriosam
+      </Heading>
+      <Heading
+        as="h4"
+        styleAs="h2"
+      >
+        Ullam Corporis
+      </Heading>
+      <Paragraph>Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo voluptas nulla pariatur at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</Paragraph>
+      <Paragraph>Et quas molestias excepturi sint occaecati cupiditate non provident similique sunt in culpa qui officia deserunt mollitia animi id est laborum et dolorum fuga et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</Paragraph>
+      <Quote>Id quod maxime placeat facere possimus omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</Quote>
+    </Column>
+  </Columns>
+</Section>
+
+<Section className="bg-body2 py-30">
+  <Columns
+    reverseColumns
+    align="items-start"
+    gap="gap-10 lg:gap-20"
+  >
+    <Column>
+      <Image
+        src="/images/xh16996.jpg"
+        alt="Itaque Earum Rerum"
+        className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+        rounded="rounded-t-full"
+        size="large"
+      />
+    </Column>
+    <Column>
+      <Heading
+        as="h3"
+        styleAs="h3"
+        margin="mb-2"
+        fontSize="text-3xl"
+        color="text-accent5"
+      >
+        Hic Tenetur Sapiente
+      </Heading>
+      <Heading
+        as="h4"
+        styleAs="h2"
+      >
+        Tenetur Sapiente
+      </Heading>
+      <Paragraph>Delectus ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis voluptas assumenda est omnis dolor repellendus.</Paragraph>
+      <Quote>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat!</Quote>
+    </Column>
+  </Columns>
+</Section>

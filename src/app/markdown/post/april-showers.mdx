@@ -1,0 +1,38 @@
+export const metadata = {
+  title: 'April showers…',
+  description: 'See Post on Instagram...',
+  date: '2025-05-06',
+  slug: 'april-showers',
+  featuredImage: '/images/april-babies-at-heartbeat-midwifery.jpg',
+  categories: ['Natural Child Birth'],
+  alternates: {
+    canonical: 'https://heartbeatmidwifery.com/post/april-showers',
+  },
+  authors: [{ name: 'Heartbeat Midwifery' }],
+  openGraph: {
+    title: 'April showers… | Heartbeat Midwifery',
+    description: 'See Post on Instagram...',
+    image: {
+      url: '/images/april-babies-at-heartbeat-midwifery.jpg',
+      alt: 'Heartbeat Midwifery',
+    },
+  },
+}
+
+import { Button, Image } from '@/components'
+
+# April showers…
+
+<Image
+  src="/images/april-babies-at-heartbeat-midwifery.jpg"
+  size="large"
+  wrap={true}
+  alt="April babies at Heartbeat Midwifery"
+/>
+
+<Button
+  href="https://www.instagram.com/p/DJUYoDsNOxX/"
+  wrap={true}
+>
+  See Post on Instagram
+</Button>

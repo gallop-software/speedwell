@@ -1,0 +1,7 @@
+# Ignore all MDX files
+
+# Other files to ignore
+node_modules/
+.next/
+dist/
+build/

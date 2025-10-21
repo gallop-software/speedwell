@@ -1,0 +1,147 @@
+export const metadata = {
+  title: 'Job Application',
+  description: 'Are you looking to be part of a team that genuinely supports one another, works collaboratively, and shares a deep commitment to professionalism and integrity? If so, then Heartbeat might be the right fit for you.',
+  featuredImage: '/images/heartbeat_share_image_txiyaf.png',
+  openGraph: {
+    title: 'Job Application',
+    description: 'Are you looking to be part of a team that genuinely supports one another, works collaboratively, and shares a deep commitment to professionalism and integrity? If so, then Heartbeat might be the right fit for you.',
+  },
+}
+
+import { Navbar, Heading, Accordion, Paragraph, Form, FormInput, FormTextArea, FormUpload, FormRadioGroup, FormCheckboxGroup, FormButton, FormName, Container, Section, Accent, VimeoAutoPlayer, List, Li, Cover } from '@/components'
+
+<Navbar className="bg-body2" />
+
+<Section className="relative py-30">
+  <div
+    className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-left-top bg-[length:700px] bg-[url('/images/adobestock_277309825-1400x809.jpg')]"
+  ></div>
+  <div
+    className="absolute inset-0 bg-gradient-to-r from-white to-transparent [background-image:linear-gradient(to_right,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_100%),linear-gradient(to_bottom,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_100%),linear-gradient(to_top,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_70%)]"
+  ></div>
+  <Accent className="absolute left-[120%] sm:left-full top-30 transform rotate-90 origin-top-left z-0 whitespace-nowrap opacity-5 sm:opacity-10" color="text-accent" fontSize="text-[10rem] lg:text-[12rem]">application</Accent>
+  <div className="relative">
+    <Heading id="learn-more" as="h1" className="max-w-2xl">Join Our Team</Heading>
+    <Paragraph className="max-w-lg">Are you looking to be part of a team that genuinely supports one another, works collaboratively, and shares a deep commitment to professionalism and integrity? If so, then Heartbeat might be the right fit for you. We&apos;re united by a passion for supporting families through the transformative experience of natural birth by offering care that is both evidence-based and deeply compassionate.</Paragraph>
+    <Paragraph className="max-w-lg" margin="pb-0">At Heartbeat, we hold ourselves accountable not just in our work, but in how we show up for each other and the families we serve. If you&apos;re someone who values connection, holistic care, and being part of a community that truly cares, we&apos;d love to meet you.</Paragraph>
+  </div>
+</Section>
+<Section className="relative pb-30">
+  <Heading as="h2">Possible Open Positions</Heading>
+  <Accordion headingText="Student Midwife">
+    <Heading as="h4">What we offer</Heading>
+    <List className="mb-8">
+      <Li>Preceptorship and guidance with education through PEP (usually takes about 3 years)</Li>
+      <Li>Heartbeat will pay for CPR, NRP, HIPPA, and OSHA.</Li>
+      <Li>Access to all labs and supplements at cost.</Li>
+    </List>
+    <Heading as="h4">Requirements</Heading>
+    <List className="mb-8">
+      <Li>Highschool diploma (or equivalent)</Li>
+      <Li>18 years old</Li>
+      <Li>Valid drivers license and your own transportation</Li>
+      <Li>Working phone</Li>
+      <Li>Reliable childcare (24/7) if applicable</Li>
+      <Li>Spinning Babies workshop (completed or be signed up for a workshop)</Li>
+      <Li>Anatomy & Physiology (preferred but may be taken later)</Li>
+      <Li>Student midwife, doula, or other birth work experience (preferred)</Li>
+    </List>
+    <Heading as="h4">Job Overview</Heading>
+    <List className="mb-8">
+      <Li>Excellent teamwork and people skills</Li>
+      <Li>Ability to attend prenatal days and unscheduled births at all hours</Li>
+      <Li>Prioritizing relationships and peace within the birth center</Li>
+      <Li>Completing academics while attending assigned clinicals and births under the guidance of Heartbeat preceptors.</Li>
+    </List>
+  </Accordion>
+  <Accordion headingText="Midwife">
+    <Heading as="h4">What we offer</Heading>
+    <List className="mb-8">
+      <Li>Competitive Salary</Li>
+      <Li>Paid Time Off</Li>
+      <Li>Maternity benefits</Li>
+      <Li>Heartbeat will pay for CPR, NRP, HIPPA, and OSHA.</Li>
+      <Li>Texas midwife licensure costs</Li>
+      <Li>Access to all labs and supplements at cost.</Li>
+      <Li>Annual budget for CEU courses and expenses</Li>
+    </List>
+    <Heading as="h4">Requirements</Heading>
+    <List className="mb-8">
+      <Li>CPM or CNM</Li>
+      <Li>CPR</Li>
+      <Li>NRP</Li>
+      <Li>Preceptor Status with NARM (required when eligible)</Li>
+    </List>
+    <Heading as="h4">Job Overview</Heading>
+    <List className="mb-8">
+      <Li>Excellent teamwork and people skills</Li>
+      <Li>Prioritizing relationships and peace within the birth center</Li>
+      <Li>Supervise and precept student midwives</Li>
+      <Li>Lead prenatal days and provide quality client care throughout pregnancy, labor & delivery, birth, and postpartum</Li>
+      <Li>Take scheduled on-call rotation and phone responsibilities</Li>
+    </List>
+  </Accordion>
+  <Accordion headingText="Receptionist">
+    <Heading as="h4">What we offer</Heading>
+    <List className="mb-8">
+      <Li>Being part of a group practice and team dedicated to teamwork, trust, peace, professionalism, and empowering others.</Li>
+      <Li>Competitive Salary</Li>
+      <Li>Paid Time Off</Li>
+      <Li>Maternity Benefits</Li>
+      <Li>Access to all labs and supplements at cost</Li>
+    </List>
+    <Heading as="h4">Requirements</Heading>
+    <List className="mb-8">
+      <Li>Highschool diploma (or equivalent)</Li>
+      <Li>18 years old</Li>
+      <Li>Valid drivers license and your own transportation</Li>
+      <Li>Working phone</Li>
+      <Li>Reliable childcare (24/7) if applicable</Li>
+    </List>
+    <Heading as="h4">Job Overview</Heading>
+    <List className="mb-8">
+      <Li>Excellent teamwork and people skills</Li>
+      <Li>Ability to attend prenatal days</Li>
+      <Li>Prioritizing relationships and peace within the birth center</Li>
+    </List>
+    <Heading as="h4">Overview</Heading>
+    <List className="mb-8">
+      <Li>Excellent customer service and problem-solving skills as the primary contact for current clients and inquiries during normal business hours</Li>
+      <Li>Ability to work on a small team and in direct support of client care and the Midwives</Li>
+      <Li>Strong demonstration of teamwork and professionalism</Li>
+      <Li>Manage organization and task completion while prioritizing client relationships and peace within the office</Li>
+    </List>
+  </Accordion>
+</Section>
+<Section className="py-20 md:py-30 bg-body2 relative">
+  <Heading as="h2" className='text-center'>Your Details</Heading>
+  <Form classname='max-w-3xl mx-auto'>
+    <FormInput name="emailSubject" defaultValue="Job Application" label="Email Subject" hidden />
+    <FormName name1="firstName" name2="lastName" placeholder1="First name*" placeholder2="Last name*" label1="First Name" label2="Last Name" requiredFirst requiredSecond />
+    <FormInput name="email" type="email" placeholder="Email*" label="Email" required />
+    <FormInput name="phone" type="tel" placeholder="Phone*" label="Phone" required />
+    <FormRadioGroup heading="Do you currently live in Lubbock? Planning on relocating to Lubbock?" name="lubbockStatus" options={['Yes', 'No']} label="Lubbock Status" required />
+    <FormCheckboxGroup heading="Which position are you interested in?*" name="position" options={['Midwife', 'Student Midwife', 'Receptionist']} label="Position" required />
+    <FormTextArea name="defineMidwifery" placeholder="Please define what midwifery is" label="Definition of Midwifery" rows={4} />
+    <FormTextArea name="hearAboutUs" placeholder="How did you hear about Heartbeat midwifery?*" label="How Did You Hear About Us?" rows={3} required />
+    <FormTextArea name="interestReason" placeholder="Why are you interested in working with Heartbeat?" rows={3} label="Reason for Interest" />
+    <FormTextArea name="birthExperience" placeholder="Describe any previous birth work experience in detail:" rows={4} label="Previous Birth Experience" />
+    <FormUpload id="files" name="files" label="Uploaded Files" multiple />
+    <Heading as="h3" margin="mb-0 mt-8">Reference Contact Information</Heading>
+    <Paragraph margin="my-0">Preferably 2 midwives you have worked with and most recent employer.</Paragraph>
+    <Heading as="h4" margin="mb-0">Reference Person 1</Heading>
+    <FormName name1="ref1FirstName" name2="ref1LastName" placeholder1="First name*" placeholder2="Last name*" requiredFirst requiredSecond label1="Reference 1 First Name" label2="Reference 1 Last Name" />
+    <FormInput name="ref1Email" type="email" placeholder="Email*" required label="Reference 1 Email" />
+    <FormInput name="ref1Phone" type="tel" placeholder="Phone*" required label="Reference 1 Phone" />
+    <Heading as="h4" margin="mb-0">Reference Person 2</Heading>
+    <FormName name1="ref2FirstName" name2="ref2LastName" placeholder1="First name" placeholder2="Last name" label1="Reference 2 First Name" label2="Reference 2 Last Name" />
+    <FormInput name="ref2Email" type="email" placeholder="Email" label="Reference 2 Email" />
+    <FormInput name="ref2Phone" type="tel" placeholder="Phone" label="Reference 2 Phone" />
+    <Heading as="h4" margin="mb-0">Reference Person 3</Heading>
+    <FormName name1="ref3FirstName" name2="ref3LastName" placeholder1="First name" placeholder2="Last name" label1="Reference 3 First Name" label2="Reference 3 Last Name" />
+    <FormInput name="ref3Email" type="email" placeholder="Email" label="Reference 3 Email" />
+    <FormInput name="ref3Phone" type="tel" placeholder="Phone" label="Reference 3 Phone" />
+    <FormButton name="submit" label="Submit Application" submitMessage="Application submitted."/>
+
+  </Form>
+</Section>
