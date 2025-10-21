@@ -145,6 +145,17 @@ async function processMdxFile(filePath) {
       }
     )
 
+    // Replace Instagram hashtag links (lines with multiple [#hashtag](...) patterns)
+    content = content.replace(
+      /^.*\[#\w+\]\(https:\/\/www\.instagram\.com\/explore\/tags\/.*$/gm,
+      (match) => {
+        // Generate a lorem paragraph (around 20-30 words)
+        const newParagraph = generateLoremWords(25)
+        modified = true
+        return newParagraph
+      }
+    )
+
     // Replace markdown paragraphs (text not inside components, not headings, not lists)
     // Split by double newlines to find paragraphs
     const lines = content.split('\n')
@@ -153,19 +164,45 @@ async function processMdxFile(filePath) {
       if (!line.trim()) return line
 
       // Skip lines that are components, metadata, imports, or special syntax
+      // But allow bold text lines even if they have = or :
       if (
-        line.trim().startsWith('<') ||
-        line.trim().startsWith('import ') ||
-        line.trim().startsWith('export ') ||
-        line.trim().startsWith('#') ||
-        line.trim().startsWith('-') ||
-        line.trim().startsWith('*') ||
-        line.trim().startsWith('[') ||
-        line.includes('{') ||
-        line.includes('}') ||
-        line.includes('=') ||
-        (line.includes(':') && line.includes('//')) // Skip URLs
+        !line.trim().startsWith('**') &&
+        (line.trim().startsWith('<') ||
+          line.trim().startsWith('import ') ||
+          line.trim().startsWith('export ') ||
+          line.trim().startsWith('#') ||
+          line.trim().startsWith('-') ||
+          line.trim().startsWith('[') ||
+          line.includes('{') ||
+          line.includes('}') ||
+          line.includes('=') ||
+          (line.includes(':') && line.includes('//'))) // Skip URLs
       ) {
+        return line
+      }
+
+      // Handle bold text lines that start with ** (like **1️⃣** text)
+      // Convert to traditional bullet points
+      if (line.trim().startsWith('**')) {
+        // Extract the text (remove the bold markers and emoji prefix)
+        const textMatch = line.match(/^\*\*([^*]+)\*\*\s*(.+)$/)
+        if (textMatch) {
+          const restOfText = textMatch[2]
+
+          // Clean and replace the rest of the text
+          const cleanText = restOfText
+            .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+            .replace(/['"]/g, '')
+            .trim()
+
+          if (cleanText.length > 5) {
+            const wordCount = countWords(cleanText)
+            const newText = generateLoremWords(Math.max(wordCount, 3))
+            modified = true
+            // Replace with traditional bullet point
+            return `- ${newText}`
+          }
+        }
         return line
       }
 
