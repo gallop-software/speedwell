@@ -194,7 +194,9 @@ async function processMdxFile(filePath) {
         }
 
         // Check if it's an emoji bullet format: **emoji** text
-        const emojiBulletMatch = line.match(/^\*\*([\u{1F300}-\u{1F9FF}]+)\*\*\s*(.+)$/u)
+        const emojiBulletMatch = line.match(
+          /^\*\*([\u{1F300}-\u{1F9FF}]+)\*\*\s*(.+)$/u
+        )
         if (emojiBulletMatch) {
           const restOfText = emojiBulletMatch[2]
           const cleanText = restOfText
@@ -244,8 +246,9 @@ async function processMdxFile(filePath) {
         line.includes('{') ||
         line.includes('}') ||
         line.includes('=') ||
-        (line.includes(':') && line.includes('//'))) // Skip URLs
-      {
+        (line.includes(':') && line.includes('//'))
+      ) {
+        // Skip URLs
         return line
       }
 
