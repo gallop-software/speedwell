@@ -20,16 +20,23 @@ const metaOriginalPath = path.join(
 )
 const imageMetaOriginal = JSON.parse(fs.readFileSync(metaOriginalPath, 'utf8'))
 
-// Get all Pexels image keys only
+// Get all Pexels image keys only, excluding specific images
 const allImageKeys = Object.keys(imageMeta).filter(
-  (key) => key.toLowerCase().includes('pexels') && key.startsWith('/images/')
+  (key) =>
+    key.toLowerCase().includes('pexels') &&
+    key.startsWith('/images/') &&
+    !key.toLowerCase().includes('favicon') &&
+    !key.toLowerCase().includes('logo') &&
+    !key.toLowerCase().includes('geometric') &&
+    !key.toLowerCase().includes('flower') &&
+    !key.toLowerCase().includes('bird') &&
+    !key.toLowerCase().includes('adobestock')
 )
 
 console.log(`📸 Found ${allImageKeys.length} Pexels images in metadata`)
 
-// Categorize images by aspect ratio
-const portraitImages = []
-const landscapeImages = []
+// Categorize images as horizontal or square
+const horizontalImages = []
 const squareImages = []
 
 allImageKeys.forEach((key) => {
@@ -39,28 +46,39 @@ allImageKeys.forEach((key) => {
   if (fullSize) {
     const aspectRatio = fullSize.width / fullSize.height
 
-    if (aspectRatio < 0.9) {
-      portraitImages.push(key)
-    } else if (aspectRatio > 1.1) {
-      landscapeImages.push(key)
-    } else {
+    // Square includes portrait and square (aspect ratio <= 1.1)
+    if (aspectRatio <= 1.1) {
       squareImages.push(key)
+    } else {
+      // Horizontal (aspect ratio > 1.1)
+      horizontalImages.push(key)
     }
   }
 })
 
-console.log(`  � ${portraitImages.length} portrait images (aspect ratio < 0.9)`)
 console.log(
-  `  🖼️  ${landscapeImages.length} landscape images (aspect ratio > 1.1)`
+  `  🖼️  ${horizontalImages.length} horizontal images (aspect ratio > 1.1)`
 )
-console.log(`  ⬜ ${squareImages.length} square images (aspect ratio 0.9-1.1)`)
+console.log(
+  `  ⬜ ${squareImages.length} square/portrait images (aspect ratio <= 1.1)`
+)
 
-// Function to get aspect ratio of an existing image
-function getAspectRatio(imageUrl) {
-  // Try original metadata first (for looking up old images)
-  let meta = imageMetaOriginal[imageUrl]
+// Track image usage to spread them evenly
+const imageUsageCount = {}
+allImageKeys.forEach((key) => {
+  imageUsageCount[key] = 0
+})
 
-  // Fallback to current metadata (for new Pexels images)
+// Track images used on current page to avoid duplicates
+let currentPageImages = new Set()
+let currentPagePath = null
+
+// Function to get aspect ratio of an image
+function getAspectRatio(imageUrl, useOriginal = true) {
+  // Try original metadata first if requested
+  let meta = useOriginal ? imageMetaOriginal[imageUrl] : null
+
+  // Fallback to current metadata
   if (!meta) {
     meta = imageMeta[imageUrl]
   }
@@ -73,44 +91,96 @@ function getAspectRatio(imageUrl) {
   return fullSize.width / fullSize.height
 }
 
-// Function to get a random image URL matching aspect ratio
-function getRandomImageUrl(currentUrl = null) {
-  // If no current URL, return random from all
-  if (!currentUrl) {
-    const randomIndex = Math.floor(Math.random() * allImageKeys.length)
-    return allImageKeys[randomIndex]
+// Function to determine if image is horizontal or square based on original dimensions
+function isHorizontal(imageUrl) {
+  const aspectRatio = getAspectRatio(imageUrl, true)
+  if (aspectRatio === null) {
+    // If we can't determine, check current metadata
+    const currentRatio = getAspectRatio(imageUrl, false)
+    return currentRatio !== null && currentRatio > 1.1
+  }
+  return aspectRatio > 1.1
+}
+
+// Function to get the least used image from a category, avoiding current page duplicates
+function getLeastUsedImage(imageArray, isGallery = false) {
+  if (imageArray.length === 0) return null
+
+  // For galleries, allow repeating images
+  if (isGallery) {
+    // Sort by usage count and pick from least used
+    const sorted = [...imageArray].sort(
+      (a, b) => imageUsageCount[a] - imageUsageCount[b]
+    )
+    const leastUsedCount = imageUsageCount[sorted[0]]
+    const leastUsed = sorted.filter(
+      (img) => imageUsageCount[img] === leastUsedCount
+    )
+    const randomIndex = Math.floor(Math.random() * leastUsed.length)
+    return leastUsed[randomIndex]
   }
 
-  const currentAspectRatio = getAspectRatio(currentUrl)
+  // For non-gallery, try to avoid images already on this page
+  const availableImages = imageArray.filter(
+    (img) => !currentPageImages.has(img)
+  )
 
-  // If we can't determine aspect ratio, return random
-  if (currentAspectRatio === null) {
-    const randomIndex = Math.floor(Math.random() * allImageKeys.length)
-    return allImageKeys[randomIndex]
+  if (availableImages.length > 0) {
+    // Sort by usage count
+    const sorted = availableImages.sort(
+      (a, b) => imageUsageCount[a] - imageUsageCount[b]
+    )
+    const leastUsedCount = imageUsageCount[sorted[0]]
+    const leastUsed = sorted.filter(
+      (img) => imageUsageCount[img] === leastUsedCount
+    )
+    const randomIndex = Math.floor(Math.random() * leastUsed.length)
+    return leastUsed[randomIndex]
   }
 
-  // Calculate aspect ratio difference for each image and sort by similarity
-  const imagesWithDiff = allImageKeys.map((imageKey) => {
-    const aspectRatio = getAspectRatio(imageKey)
-    if (aspectRatio === null) {
-      return { imageKey, diff: Infinity }
+  // If all images are used on this page, just pick the least used overall
+  const sorted = [...imageArray].sort(
+    (a, b) => imageUsageCount[a] - imageUsageCount[b]
+  )
+  const leastUsedCount = imageUsageCount[sorted[0]]
+  const leastUsed = sorted.filter(
+    (img) => imageUsageCount[img] === leastUsedCount
+  )
+  const randomIndex = Math.floor(Math.random() * leastUsed.length)
+  return leastUsed[randomIndex]
+}
+
+// Function to get replacement image
+function getReplacementImage(currentUrl, isGallery = false) {
+  const horizontal = isHorizontal(currentUrl)
+  const imageArray = horizontal ? horizontalImages : squareImages
+
+  const newImage = getLeastUsedImage(imageArray, isGallery)
+
+  if (newImage) {
+    imageUsageCount[newImage]++
+    if (!isGallery) {
+      currentPageImages.add(newImage)
     }
+    return newImage
+  }
 
-    // Calculate absolute difference in aspect ratios
-    const diff = Math.abs(aspectRatio - currentAspectRatio)
-    return { imageKey, diff }
-  })
+  // Fallback to any image if category is empty
+  const fallbackArray = horizontal ? squareImages : horizontalImages
+  const fallbackImage = getLeastUsedImage(fallbackArray, isGallery)
+  if (fallbackImage) {
+    imageUsageCount[fallbackImage]++
+    if (!isGallery) {
+      currentPageImages.add(fallbackImage)
+    }
+    return fallbackImage
+  }
 
-  // Sort by aspect ratio difference (most similar first)
-  imagesWithDiff.sort((a, b) => a.diff - b.diff)
+  // Last resort: return current URL
+  return currentUrl
+}
 
-  // Take top 5 most similar images and randomly pick one
-  // This adds variety while maintaining aspect ratio similarity
-  const topMatches = imagesWithDiff.slice(0, Math.min(5, imagesWithDiff.length))
-  const randomIndex = Math.floor(Math.random() * topMatches.length)
-
-  return topMatches[randomIndex].imageKey
-} // Find all MDX files in a directory recursively
+// Find all MDX files in a directory recursively
 function findMdxFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir)
 
@@ -131,16 +201,26 @@ function findMdxFiles(dir, fileList = []) {
 // Process a single MDX file
 async function processMdxFile(filePath) {
   try {
+    // Reset page tracking when starting a new file
+    if (currentPagePath !== filePath) {
+      currentPageImages = new Set()
+      currentPagePath = filePath
+    }
+
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
 
     console.log(`\n📝 Processing ${path.basename(filePath)}`)
 
+    // Check if this is inside a Gallery component to allow duplicate images
+    const hasGallery =
+      content.includes('<Gallery') || content.includes('images: [')
+
     // Pattern 1: Replace featuredImage in metadata
     content = content.replace(
       /featuredImage:\s*['"](\/images\/[^'"]+)['"]/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `featuredImage: '${newImage}'`
       }
@@ -150,7 +230,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /image:\s*\{\s*url:\s*['"](\/images\/[^'"]+)['"]/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `image: {\n      url: '${newImage}'`
       }
@@ -160,7 +240,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /src="(\/images\/[^"]+)"/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `src="${newImage}"`
       }
@@ -170,7 +250,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /src='(\/images\/[^']+)'/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `src='${newImage}'`
       }
@@ -180,7 +260,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /src=\{["'](\/images\/[^"']+)["']\}/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `src="${newImage}"`
       }
@@ -190,7 +270,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /image="(\/images\/[^"]+)"/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `image="${newImage}"`
       }
@@ -200,7 +280,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /image='(\/images\/[^']+)'/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `image='${newImage}'`
       }
@@ -210,7 +290,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /imageUrl="(\/images\/[^"]+)"/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `imageUrl="${newImage}"`
       }
@@ -220,7 +300,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /imageUrl='(\/images\/[^']+)'/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `imageUrl='${newImage}'`
       }
@@ -230,7 +310,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /backgroundImage="(\/images\/[^"]+)"/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `backgroundImage="${newImage}"`
       }
@@ -240,7 +320,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /imageSrc="(\/images\/[^"]+)"/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `imageSrc="${newImage}"`
       }
@@ -250,7 +330,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /imageSrc='(\/images\/[^']+)'/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `imageSrc='${newImage}'`
       }
@@ -260,7 +340,7 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /img="(\/images\/[^"]+)"/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `img="${newImage}"`
       }
@@ -270,23 +350,22 @@ async function processMdxFile(filePath) {
     content = content.replace(
       /img='(\/images\/[^']+)'/g,
       (match, currentUrl) => {
-        const newImage = getRandomImageUrl(currentUrl)
+        const newImage = getReplacementImage(currentUrl, false)
         modified = true
         return `img='${newImage}'`
       }
     )
 
-    // Pattern 15: Replace images: ["/images/...", "/images/..."] arrays
+    // Pattern 15: Replace images: ["/images/...", "/images/..."] arrays (galleries can have duplicates)
     content = content.replace(
       /images:\s*\[([^\]]+)\]/g,
       (match, imageArray) => {
-        // Count how many images are in the array
         const imageMatches = imageArray.match(/["'](\/images\/[^"']+)["']/g)
         if (imageMatches) {
           const newImages = imageMatches
             .map((imgMatch) => {
               const currentUrl = imgMatch.match(/["'](\/images\/[^"']+)["']/)[1]
-              return `'${getRandomImageUrl(currentUrl)}'`
+              return `'${getReplacementImage(currentUrl, true)}'`
             })
             .join(', ')
           modified = true
@@ -329,6 +408,27 @@ async function main() {
   }
 
   console.log('\n✨ Done!')
+  console.log('\n📊 Image usage statistics:')
+
+  // Show usage distribution
+  const usageCounts = Object.values(imageUsageCount)
+  const totalUsage = usageCounts.reduce((a, b) => a + b, 0)
+  const minUsage = Math.min(...usageCounts)
+  const maxUsage = Math.max(...usageCounts)
+  const avgUsage = (totalUsage / allImageKeys.length).toFixed(1)
+
+  console.log(`  Total image placements: ${totalUsage}`)
+  console.log(`  Average uses per image: ${avgUsage}`)
+  console.log(`  Min uses: ${minUsage}, Max uses: ${maxUsage}`)
+
+  // Show most and least used
+  const sorted = Object.entries(imageUsageCount).sort((a, b) => b[1] - a[1])
+  console.log(
+    `\n  Most used: ${path.basename(sorted[0][0])} (${sorted[0][1]} times)`
+  )
+  console.log(
+    `  Least used: ${path.basename(sorted[sorted.length - 1][0])} (${sorted[sorted.length - 1][1]} times)`
+  )
 }
 
 main().catch(console.error)
