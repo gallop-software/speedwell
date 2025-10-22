@@ -213,7 +213,6 @@ function DesktopNav({
                     />
                   </PopoverButton>
                   <PopoverPanel
-                    modal
                     transition
                     className="absolute left-1/2 -translate-x-1/2 xl:left-0 xl:-ml-4 xl:translate-x-0 z-50 mt-5 flex w-screen max-w-max px-4 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
                   >
