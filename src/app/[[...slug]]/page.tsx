@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { readdirSync } from 'fs'
 import path from 'path'
 import React from 'react'
+import Script from 'next/script'
 import {
   baseURL,
   defaultOGImage,
@@ -208,18 +209,19 @@ export default async function Page({ params }: PageProps) {
       `@/app/markdown/${slugPath}.mdx`
     )
 
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@graph': [...defaultStructuredData, ...(metadata?.structuredData || [])],
+    }
+
     return (
       <div className="overflow-hidden">
-        {/* Inject structured data JSON-LD */}
-        <script
+        <Script
+          id="schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              ...defaultStructuredData,
-              ...(metadata?.structuredData || []),
-            ]),
-          }}
-        />
+        >
+          {JSON.stringify(structuredData)}
+        </Script>
         <main className="[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl [&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl [&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40">
           <MDXContent />
           <GalleryPopup />
