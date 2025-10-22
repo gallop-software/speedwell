@@ -1,56 +1,86 @@
-# Radiant
+# Speedwell
 
-Radiant is a [Tailwind Plus](https://tailwindcss.com/plus) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org), with a blog powered by [Sanity](https://www.sanity.io).
+Speedwell is a modern, flexible Next.js theme by [Gallop](https://gallop.software), built with [Tailwind CSS](https://tailwindcss.com) and powered by MDX for content management.
 
-## Push ENV script
+**Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)
 
-![Getting VERCEL_TOKEN](public/image.png) ![Getting VERCEL_ORG_ID](public/image-2.png) ![Geting VERCEL_PROJECT_ID](public/image-3.png)
+## Features
 
-## Getting started.
+- 🚀 Built with Next.js 14+ and React
+- 🎨 Styled with Tailwind CSS
+- 📝 MDX-powered content management
+- 🖼️ Optimized image handling with responsive variants
+- 🔍 Built-in search functionality
+- 📱 Fully responsive design
+- ⚡ Lightning-fast performance
+- 🎭 Customizable components and layouts
 
-To get started with this template, first install the npm dependencies:
+## Getting Started
+
+First, install the npm dependencies:
 
 ```bash
 npm install
 ```
 
-Next, create a new Sanity project to power the blog within this template:
+Generate optimized image metadata:
 
 ```bash
-npm create sanity@latest -- --env=.env.local --create-project "Radiant Blog" --dataset production
+npm run images
 ```
 
-This will prompt you to create a new Sanity account if you don't have one already. When asked "Would you like to add configuration files for a Sanity project in this Next.js folder?", choose "n".
-
-Next, optionally import the demo seed data for the blog:
-
-```bash
-npx sanity@latest dataset import seed.tar.gz
-```
-
-Next, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-To manage your blog content, visit the embedded Sanity Studio at [http://localhost:3000/studio](http://localhost:3000/studio).
+## Project Structure
 
-## Customizing
+```
+├── src/
+│   ├── app/              # Next.js app router pages
+│   │   ├── markdown/     # MDX content files
+│   │   └── api/          # API routes
+│   ├── components/       # React components
+│   ├── styles/          # Global styles
+│   ├── utils/           # Utility functions
+│   └── hooks/           # Custom React hooks
+├── public/
+│   └── images/          # Static images
+├── _data/               # Generated metadata
+└── _scripts/            # Build scripts
+```
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+## Customization
 
-## License
+Edit the MDX files in `/src/app/markdown/` to update your content. The site will auto-update as you edit these files.
 
-This site template is a commercial product and is licensed under the [Tailwind Plus license](https://tailwindcss.com/plus/license).
+Customize components in `/src/components/` to match your brand and design preferences.
 
-## Learn more
+Update site metadata in `/src/app/metadata.tsx` for SEO and social sharing.
 
-To learn more about the technologies used in this site template, see the following resources:
+## Available Scripts
 
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [Sanity](https://www.sanity.io) - the Sanity website
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run images` - Process and optimize images
+- `npm run search` - Generate search index
+
+## Documentation
+
+For more information about Gallop themes and products, visit [gallop.software](https://gallop.software).
+
+## Support
+
+Need help with customization or development? Contact [webplant.media](https://webplant.media) for professional web development services.
+
+## Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [MDX Documentation](https://mdxjs.com)
+- [Gallop Themes](https://gallop.software)
