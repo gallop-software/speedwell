@@ -21,6 +21,28 @@
       "file": "/images/adobestock_1209737132_rk9fh5.jpg"
     }
   },
+  "/images/adobestock_1209743494.jpg": {
+    "small": {
+      "width": 169,
+      "height": 300,
+      "file": "/images/adobestock_1209743494-169x300.jpg"
+    },
+    "medium": {
+      "width": 394,
+      "height": 700,
+      "file": "/images/adobestock_1209743494-394x700.jpg"
+    },
+    "large": {
+      "width": 788,
+      "height": 1400,
+      "file": "/images/adobestock_1209743494-788x1400.jpg"
+    },
+    "full": {
+      "width": 1238,
+      "height": 2200,
+      "file": "/images/adobestock_1209743494.jpg"
+    }
+  },
   "/images/favicon.png": {
     "small": {
       "width": 300,
