@@ -135,7 +135,7 @@ export async function generateMetadata({
         url:
           metadata?.openGraph?.url ||
           `${baseURL}${slug ? `/${slug.join('/')}` : ''}`,
-        siteName: metadata?.openGraph?.siteName || 'Heartbeat Midwifery',
+        siteName: metadata?.openGraph?.siteName || 'Speedwell',
         title: metadata?.openGraph?.title || metadata?.title || 'Page',
         description:
           metadata?.openGraph?.description ||

@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: 'Heartbeat Midwifery | Lubbock Midwives & Birthing Center',
-    template: '%s | Heartbeat Midwifery',
+    default: 'Speedwell | Lubbock Midwives & Birthing Center',
+    template: '%s | Speedwell',
   },
   openGraph: {
-    siteName: 'Heartbeat Midwifery',
+    siteName: 'Speedwell',
     locale: 'en_US',
     type: 'website',
   },

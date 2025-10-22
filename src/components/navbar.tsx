@@ -663,7 +663,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                     prefetch={true}
                     scroll={true}
                     href="/"
-                    title="Heartbeat Midwifery"
+                    title="Speedwell"
                     className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2"
                   >
                     <Logo

@@ -1,6 +1,6 @@
 import { getMetaImage } from '@/utils/image-meta'
 
-export const baseURL = 'https://heartbeatmidwifery2.vercel.app'
+export const baseURL = 'https://speedwell.gallop.software'
 
 const logoImageData = getMetaImage(
   '/images/heartbeat_share_image_txiyaf.png',
@@ -16,8 +16,8 @@ export const defaultOGImage = {
 }
 
 export const defaultSEOConfig = {
-  creator: 'Heartbeat Midwifery',
-  publisher: 'Heartbeat Midwifery',
+  creator: 'Speedwell',
+  publisher: 'Speedwell',
   robots: {
     index: true,
     follow: true,
@@ -36,15 +36,15 @@ export const defaultStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
-    '@id': 'https://heartbeatmidwifery.com#business',
-    name: 'Heartbeat Midwifery',
+    '@id': 'https://speedwell.gallop.software#business',
+    name: 'Speedwell',
     description:
       'Lubbock midwives offering personalized prenatal, birth, and postpartum care at home or in our warm, welcoming birth center.',
-    url: 'https://heartbeatmidwifery.com',
+    url: 'https://speedwell.gallop.software',
     logo: logoImageData?.url || '',
     image: businessImageData?.url || '',
     telephone: '(806) 642-7326',
-    email: 'info@heartbeatmidwifery.com',
+    email: 'info@speedwell.gallop.software',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '419 Raleigh Ave',
@@ -144,7 +144,7 @@ export const defaultStructuredData = [
     '@context': 'https://schema.org',
     '@type': 'Review',
     itemReviewed: {
-      '@id': 'https://heartbeatmidwifery.com#business',
+      '@id': 'https://speedwell.gallop.software#business',
     },
     author: {
       '@type': 'Person',
@@ -162,7 +162,7 @@ export const defaultStructuredData = [
     '@context': 'https://schema.org',
     '@type': 'Review',
     itemReviewed: {
-      '@id': 'https://heartbeatmidwifery.com#business',
+      '@id': 'https://speedwell.gallop.software#business',
     },
     author: {
       '@type': 'Person',
@@ -180,7 +180,7 @@ export const defaultStructuredData = [
     '@context': 'https://schema.org',
     '@type': 'Review',
     itemReviewed: {
-      '@id': 'https://heartbeatmidwifery.com#business',
+      '@id': 'https://speedwell.gallop.software#business',
     },
     author: {
       '@type': 'Person',
@@ -198,7 +198,7 @@ export const defaultStructuredData = [
     '@context': 'https://schema.org',
     '@type': 'Review',
     itemReviewed: {
-      '@id': 'https://heartbeatmidwifery.com#business',
+      '@id': 'https://speedwell.gallop.software#business',
     },
     author: {
       '@type': 'Person',
@@ -210,13 +210,13 @@ export const defaultStructuredData = [
       bestRating: '5',
     },
     reviewBody:
-      "The people at Heartbeat Midwifery are the sweetest ladies ever, so kind and considerate and were there for every question and concern I had. They were so helpful in giving advice on supplements to take and what foods to eat to support my pregnancy and birth and it made a huge difference! At my birth they were so reassuring and knew exactly what they were doing and I have never felt so seen and cared for. My baby was born beautiful and healthy and that is thanks to them. As a first time Mom I couldn't have done this without all of their great support! I would 100% recommend then to anyone!",
+      "The people at Speedwell are the sweetest ladies ever, so kind and considerate and were there for every question and concern I had. They were so helpful in giving advice on supplements to take and what foods to eat to support my pregnancy and birth and it made a huge difference! At my birth they were so reassuring and knew exactly what they were doing and I have never felt so seen and cared for. My baby was born beautiful and healthy and that is thanks to them. As a first time Mom I couldn't have done this without all of their great support! I would 100% recommend then to anyone!",
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Heartbeat Midwifery',
-    url: 'https://heartbeatmidwifery.com',
+    name: 'Speedwell',
+    url: 'https://speedwell.gallop.software',
     logo: logoImageData?.url || '',
     contactPoint: {
       '@type': 'ContactPoint',
@@ -239,14 +239,14 @@ export const defaultStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Heartbeat Midwifery',
+    name: 'Speedwell',
     description:
       'Lubbock midwives offering personalized prenatal, birth, and postpartum care at home or in our warm, welcoming birth center.',
-    url: 'https://heartbeatmidwifery.com',
+    url: 'https://speedwell.gallop.software',
     logo: logoImageData?.url || '',
     image: businessImageData?.url || '',
     telephone: '(806) 642-7326',
-    email: 'info@heartbeatmidwifery.com',
+    email: 'info@speedwell.gallop.software',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '419 Raleigh Ave',
@@ -280,13 +280,13 @@ export const defaultStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Heartbeat Midwifery',
-    url: 'https://heartbeatmidwifery.com',
+    name: 'Speedwell',
+    url: 'https://speedwell.gallop.software',
     description:
       'Lubbock midwives offering personalized prenatal, birth, and postpartum care at home or in our warm, welcoming birth center.',
     publisher: {
       '@type': 'Organization',
-      name: 'Heartbeat Midwifery',
+      name: 'Speedwell',
     },
   },
 ]
