@@ -215,7 +215,7 @@ export function FormClient() {
       <textarea
         id="interestReason"
         name="interestReason"
-        placeholder="Why are you interested in working with Heartbeat?"
+        placeholder="Why are you interested in working with Speedwell?"
         rows={3}
         className="w-full rounded-lg bg-body2 p-4 text-contrast outline outline-2 outline-accent2/25 placeholder:text-contrast/50 focus:outline-accent2/80"
       />

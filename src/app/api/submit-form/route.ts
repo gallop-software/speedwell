@@ -95,7 +95,7 @@ function renderEmailHtml(payload: Record<string, any>) {
     <body>
       <div class="container">
         <div class="content">
-          <img class="logo" src="${baseUrl}/images/heartbeat_midwifery_logo_maroon_rgb_1000px_w_300ppi-700x279.png" alt="Logo" />
+          <img class="logo" src="${baseUrl}/images/logo-700x44.png" alt="Logo" />
           ${rows.join('')}
         </div>
       </div>

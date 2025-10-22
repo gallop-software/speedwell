@@ -154,12 +154,12 @@ const links: NavLink[] = [
 const socialLinks: SocialLink[] = [
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com/heartbeatmidwifery',
+    href: 'https://www.facebook.com/speedwell',
     icon: 'mdi:facebook',
   },
   {
     name: 'Instagram',
-    href: 'http://instagram.com/heartbeatmidwifery',
+    href: 'http://instagram.com/speedwell',
     icon: 'mdi:instagram',
   },
   {
