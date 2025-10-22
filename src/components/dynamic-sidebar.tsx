@@ -13,12 +13,20 @@ import { GalleryPopup } from './lightbox/gallery-popup'
 import { Image } from './image'
 
 const images = [
-  '/images/img_0166.jpg',
-  '/images/img_0050.jpg',
-  '/images/img_0185.jpg',
-  '/images/img_0103.jpg',
-  '/images/img_0148.jpg',
-  '/images/img_0085.jpg',
+  { src: '/images/pexels-helenalopes-1996337.jpg', alt: 'Lorem ipsum dolor' },
+  {
+    src: '/images/pexels-lumierestudiomx-1462355.jpg',
+    alt: 'Sit amet consectetur',
+  },
+  {
+    src: '/images/pexels-jaime-reimer-1376930-9899960.jpg',
+    alt: 'Adipiscing elit sed',
+  },
+  {
+    src: '/images/pexels-mabelamber-141978.jpg',
+    alt: 'Eiusmod tempor incididunt',
+  },
+  { src: '/images/pexels-brett-sayles-1069722.jpg', alt: 'Ut labore dolore' },
 ]
 
 function SidebarHeader({ closeModal }: any) {
@@ -31,9 +39,9 @@ function SidebarHeader({ closeModal }: any) {
               <figure key={`figure-${index}`}>
                 {image && (
                   <Image
-                    src={image}
+                    src={image.src}
                     size="small"
-                    alt="Beautiful moment captured"
+                    alt={image.alt}
                     className="inline-block h-10 w-10 ring-2 ring-white object-cover"
                     rounded="rounded-full"
                   />
