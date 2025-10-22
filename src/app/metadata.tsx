@@ -2,12 +2,12 @@ import { getMetaImage } from '@/utils/image-meta'
 
 export const baseURL = 'https://speedwell.gallop.software'
 
-const logoImageData = getMetaImage(
-  '/images/heartbeat_share_image_txiyaf.png',
+const logoImageData = getMetaImage('/images/pexels-pixabay-247462.jpg', 'large')
+
+const businessImageData = getMetaImage(
+  '/images/pexels-helenalopes-1996337.jpg',
   'large'
 )
-
-const businessImageData = getMetaImage('/images/img_8244-hdr.jpg', 'large')
 
 export const defaultOGImage = {
   url: logoImageData?.url || '',
@@ -39,98 +39,98 @@ export const defaultStructuredData = [
     '@id': 'https://speedwell.gallop.software#business',
     name: 'Speedwell',
     description:
-      'Lubbock midwives offering personalized prenatal, birth, and postpartum care at home or in our warm, welcoming birth center.',
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud.',
     url: 'https://speedwell.gallop.software',
     logo: logoImageData?.url || '',
     image: businessImageData?.url || '',
-    telephone: '(806) 642-7326',
+    telephone: '+1-555-0123',
     email: 'info@speedwell.gallop.software',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '419 Raleigh Ave',
-      addressLocality: 'Lubbock',
-      addressRegion: 'TX',
-      postalCode: '79416',
+      streetAddress: '123 Lorem Ipsum Boulevard',
+      addressLocality: 'Dolor City',
+      addressRegion: 'DC',
+      postalCode: '10001',
       addressCountry: 'US',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '33.5779',
-      longitude: '-101.8552',
+      latitude: '40.7128',
+      longitude: '-74.0060',
     },
     openingHours: ['Mo-Fr 08:00-16:00'],
     priceRange: '$$',
     servesCuisine: [],
     acceptsReservations: true,
-    hasMap: 'https://g.page/heartbeatmidwifery',
+    hasMap: 'https://maps.example.com/lorem-ipsum',
     areaServed: [
       {
         '@type': 'City',
-        name: 'Lubbock',
+        name: 'Dolor City',
         containedInPlace: {
           '@type': 'State',
-          name: 'Texas',
+          name: 'Lorem State',
         },
       },
     ],
-    medicalSpecialty: 'Midwifery',
+    medicalSpecialty: 'Lorem ipsum',
     availableService: [
       {
         '@type': 'MedicalProcedure',
-        name: 'Prenatal Care',
-        description: 'Comprehensive prenatal care throughout pregnancy',
+        name: 'Lorem Ipsum',
+        description: 'Dolor sit amet consectetur adipiscing',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'Birth Center Delivery',
-        description: 'Natural birth in our welcoming birth center',
+        name: 'Adipiscing Elit',
+        description: 'Sed do eiusmod tempor incididunt',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'Home Birth',
-        description: 'Midwife-attended home birth services',
+        name: 'Tempor Incididunt',
+        description: 'Ut labore et dolore magna',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'Water Birth',
-        description: 'Safe water birth options at home or birth center',
+        name: 'Magna Aliqua',
+        description: 'Enim ad minim veniam quis',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'Postpartum Care',
-        description: 'Comprehensive postpartum and newborn care',
+        name: 'Veniam Quis',
+        description: 'Nostrud exercitation ullamco laboris',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'VBAC Support',
-        description: 'Vaginal birth after cesarean support and care',
+        name: 'Ullamco Laboris',
+        description: 'Nisi ut aliquip ex ea',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'Breech Birth',
-        description: 'Specialized care for breech presentations',
+        name: 'Commodo Consequat',
+        description: 'Duis aute irure dolor in',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'Twin Birth',
-        description: 'Expert care for twin pregnancies and births',
+        name: 'Reprehenderit Voluptate',
+        description: 'Velit esse cillum dolore eu',
       },
     ],
     knowsAbout: [
-      'Midwifery',
-      'Water birth',
-      'Childbirth classes',
-      'Birth classes',
-      'Birthing classes',
-      'Birth education',
-      'Breastfeeding',
-      'Lactation',
-      'UMC labor and delivery',
+      'Lorem ipsum',
+      'Dolor sit',
+      'Amet consectetur',
+      'Adipiscing elit',
+      'Sed do eiusmod',
+      'Tempor incididunt',
+      'Ut labore',
+      'Et dolore',
+      'Magna aliqua enim',
     ],
     sameAs: [
-      'https://www.facebook.com/heartbeatmidwifery',
-      'https://www.instagram.com/heartbeatmidwifery',
-      'https://g.page/heartbeatmidwifery',
+      'https://www.facebook.com',
+      'https://www.instagram.com',
+      'https://maps.example.com/lorem-ipsum',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -148,7 +148,7 @@ export const defaultStructuredData = [
     },
     author: {
       '@type': 'Person',
-      name: 'Naomi Massey',
+      name: 'Lorem Ipsum',
     },
     reviewRating: {
       '@type': 'Rating',
@@ -156,7 +156,7 @@ export const defaultStructuredData = [
       bestRating: '5',
     },
     reviewBody:
-      "All 3 of our babies have been born at Heartbeat along with Heartbeat helping us through a loss. Carmen and all the other amazing midwives and students that have seen their way through Heartbeat have been a part of each of our incredible journeys. We are beyond thankful for the relationships made while bringing our babies earth side. We are thankful for the support beyond just pregnancy and birth. We can't recommend Heartbeat enough. I know that had we not had the support from a very knowledgeable and experienced midwife my birthing experiences would've been much different.",
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum.',
   },
   {
     '@context': 'https://schema.org',
@@ -166,7 +166,7 @@ export const defaultStructuredData = [
     },
     author: {
       '@type': 'Person',
-      name: 'Suzanna Rempel',
+      name: 'Dolor Sit',
     },
     reviewRating: {
       '@type': 'Rating',
@@ -174,7 +174,7 @@ export const defaultStructuredData = [
       bestRating: '5',
     },
     reviewBody:
-      'We had both our babies at heartbeat and could not recommend it enough! The midwives took such good care of us and welcomed us with open arms! Sofi always greeted us with a smile and a positive attitude! They made us feel like family! Carmen and Kelly delivered my last baby and it was such a peaceful experience. These ladies really care for their patients! We hope to be back for our next baby!',
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
   },
   {
     '@context': 'https://schema.org',
@@ -184,7 +184,7 @@ export const defaultStructuredData = [
     },
     author: {
       '@type': 'Person',
-      name: 'Amie Geyman',
+      name: 'Amet Consectetur',
     },
     reviewRating: {
       '@type': 'Rating',
@@ -192,7 +192,7 @@ export const defaultStructuredData = [
       bestRating: '5',
     },
     reviewBody:
-      "Carmen is so amazing! She delivered my seventh baby. Baby girl came after a painful traumatic loss. Carmen helped me with both the emotional and physical sides of labor. It was truly a beautiful, empowering birth. I felt heard, encouraged, and valued through the whole labor. I couldn't appreciate her more!",
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure reprehenderit in voluptate velit esse cillum dolore.',
   },
   {
     '@context': 'https://schema.org',
@@ -202,7 +202,7 @@ export const defaultStructuredData = [
     },
     author: {
       '@type': 'Person',
-      name: 'Rebecca Friesen',
+      name: 'Adipiscing Elit',
     },
     reviewRating: {
       '@type': 'Rating',
@@ -210,7 +210,7 @@ export const defaultStructuredData = [
       bestRating: '5',
     },
     reviewBody:
-      "The people at Speedwell are the sweetest ladies ever, so kind and considerate and were there for every question and concern I had. They were so helpful in giving advice on supplements to take and what foods to eat to support my pregnancy and birth and it made a huge difference! At my birth they were so reassuring and knew exactly what they were doing and I have never felt so seen and cared for. My baby was born beautiful and healthy and that is thanks to them. As a first time Mom I couldn't have done this without all of their great support! I would 100% recommend then to anyone!",
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum.',
   },
   {
     '@context': 'https://schema.org',
@@ -220,62 +220,62 @@ export const defaultStructuredData = [
     logo: logoImageData?.url || '',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '(806) 642-7326',
-      contactType: 'customer service',
-      availableLanguage: 'English',
+      telephone: '+1-555-0123',
+      contactType: 'lorem ipsum',
+      availableLanguage: 'Lorem',
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '419 Raleigh Ave',
-      addressLocality: 'Lubbock',
-      addressRegion: 'TX',
-      postalCode: '79416',
+      streetAddress: '123 Lorem Ipsum Boulevard',
+      addressLocality: 'Dolor City',
+      addressRegion: 'DC',
+      postalCode: '10001',
       addressCountry: 'US',
     },
     foundingDate: '2009',
     numberOfEmployees: '8',
-    slogan: 'Personal, respectful care rooted in trust',
+    slogan: 'Lorem ipsum dolor sit amet',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Speedwell',
     description:
-      'Lubbock midwives offering personalized prenatal, birth, and postpartum care at home or in our warm, welcoming birth center.',
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud.',
     url: 'https://speedwell.gallop.software',
     logo: logoImageData?.url || '',
     image: businessImageData?.url || '',
-    telephone: '(806) 642-7326',
+    telephone: '+1-555-0123',
     email: 'info@speedwell.gallop.software',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '419 Raleigh Ave',
-      addressLocality: 'Lubbock',
-      addressRegion: 'TX',
-      postalCode: '79416',
+      streetAddress: '123 Lorem Ipsum Boulevard',
+      addressLocality: 'Dolor City',
+      addressRegion: 'DC',
+      postalCode: '10001',
       addressCountry: 'US',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '33.5779',
-      longitude: '-101.8552',
+      latitude: '40.7128',
+      longitude: '-74.0060',
     },
     openingHours: ['Mo-Fr 08:00-16:00'],
     priceRange: '$$',
     servesCuisine: [],
     acceptsReservations: true,
-    hasMap: 'https://g.page/heartbeatmidwifery',
+    hasMap: 'https://maps.example.com/lorem-ipsum',
     areaServed: [
       {
         '@type': 'City',
-        name: 'Lubbock',
+        name: 'Dolor City',
         containedInPlace: {
           '@type': 'State',
-          name: 'Texas',
+          name: 'Lorem State',
         },
       },
     ],
-    medicalSpecialty: 'Midwifery',
+    medicalSpecialty: 'Lorem ipsum',
   },
   {
     '@context': 'https://schema.org',
@@ -283,7 +283,7 @@ export const defaultStructuredData = [
     name: 'Speedwell',
     url: 'https://speedwell.gallop.software',
     description:
-      'Lubbock midwives offering personalized prenatal, birth, and postpartum care at home or in our warm, welcoming birth center.',
+      'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud.',
     publisher: {
       '@type': 'Organization',
       name: 'Speedwell',
