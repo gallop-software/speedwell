@@ -236,7 +236,47 @@ async function processMdxFile(filePath) {
       }
     )
 
-    // Pattern 11: Replace images: ["/images/...", "/images/..."] arrays
+    // Pattern 11: Replace imageSrc="/images/..." prop (used in Cover, etc.)
+    content = content.replace(
+      /imageSrc="(\/images\/[^"]+)"/g,
+      (match, currentUrl) => {
+        const newImage = getRandomImageUrl(currentUrl)
+        modified = true
+        return `imageSrc="${newImage}"`
+      }
+    )
+
+    // Pattern 12: Replace imageSrc='/images/...' prop (single quotes)
+    content = content.replace(
+      /imageSrc='(\/images\/[^']+)'/g,
+      (match, currentUrl) => {
+        const newImage = getRandomImageUrl(currentUrl)
+        modified = true
+        return `imageSrc='${newImage}'`
+      }
+    )
+
+    // Pattern 13: Replace img="/images/..." prop (used in Testimonial, etc.)
+    content = content.replace(
+      /img="(\/images\/[^"]+)"/g,
+      (match, currentUrl) => {
+        const newImage = getRandomImageUrl(currentUrl)
+        modified = true
+        return `img="${newImage}"`
+      }
+    )
+
+    // Pattern 14: Replace img='/images/...' prop (single quotes)
+    content = content.replace(
+      /img='(\/images\/[^']+)'/g,
+      (match, currentUrl) => {
+        const newImage = getRandomImageUrl(currentUrl)
+        modified = true
+        return `img='${newImage}'`
+      }
+    )
+
+    // Pattern 15: Replace images: ["/images/...", "/images/..."] arrays
     content = content.replace(
       /images:\s*\[([^\]]+)\]/g,
       (match, imageArray) => {
