@@ -9,21 +9,21 @@ const replacements = [
   // URLs and domains
   {
     pattern: /heartbeatmidwifery\.com/g,
-    replacement: 'speedwell.gallop.software'
+    replacement: 'speedwell.gallop.software',
   },
   {
     pattern: /heartbeatmidwifery2\.vercel\.app/g,
-    replacement: 'speedwell.gallop.software'
+    replacement: 'speedwell.gallop.software',
   },
   // Business names
   {
     pattern: /Heartbeat Midwifery/g,
-    replacement: 'Speedwell'
+    replacement: 'Speedwell',
   },
   // Email addresses
   {
     pattern: /info@heartbeatmidwifery\.com/g,
-    replacement: 'info@speedwell.gallop.software'
+    replacement: 'info@speedwell.gallop.software',
   },
 ]
 
@@ -56,7 +56,9 @@ const filesToUpdate = [
 
 // Also update all blog posts
 const postsDir = path.join(__dirname, '../src/app/markdown/post')
-const blogFiles = fs.readdirSync(postsDir).filter((file) => file.endsWith('.mdx'))
+const blogFiles = fs
+  .readdirSync(postsDir)
+  .filter((file) => file.endsWith('.mdx'))
 blogFiles.forEach((file) => {
   filesToUpdate.push(`src/app/markdown/post/${file}`)
 })
@@ -67,22 +69,22 @@ let updatedCount = 0
 
 filesToUpdate.forEach((relativePath) => {
   const filePath = path.join(__dirname, '..', relativePath)
-  
+
   if (!fs.existsSync(filePath)) {
     console.log(`⚠ File not found: ${relativePath}`)
     return
   }
-  
+
   let content = fs.readFileSync(filePath, 'utf8')
   let modified = false
-  
+
   replacements.forEach(({ pattern, replacement }) => {
     if (pattern.test(content)) {
       content = content.replace(pattern, replacement)
       modified = true
     }
   })
-  
+
   if (modified) {
     fs.writeFileSync(filePath, content)
     updatedCount++
