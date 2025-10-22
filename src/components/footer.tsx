@@ -118,7 +118,7 @@ export function Footer() {
             <div className="flex flex-col items-center lg:order-2">
               <Logo
                 className="mb-7"
-                width={350}
+                width={220}
               />
               <Heading
                 as="h4"

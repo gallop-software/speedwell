@@ -10,7 +10,7 @@ export function Logo({ className = '', width, height }: LogoProps) {
   return (
     <Image
       rounded="rounded-none"
-      src="/images/logo-700x44.png"
+      src="/images/logo.png"
       size="medium"
       alt="Logo"
       {...(width && { width })}
@@ -32,7 +32,7 @@ export function Mark({
 }) {
   return (
     <Image
-      src="/images/logo-700x44.png"
+      src="/images/logo.png"
       size="medium"
       alt="Logo Mark"
       {...(width && { width })}

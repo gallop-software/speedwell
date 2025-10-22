@@ -62,8 +62,8 @@ interface NavbarProps {
 const links: NavLink[] = [
   { href: '/lorem-ipsum', label: 'Lorem Ipsum' },
   {
-    href: '/midwife-services',
-    label: 'Consectetur',
+    href: '/enim-ad',
+    label: 'Eiusmod',
     dropdown: {
       items: [
         {
@@ -218,10 +218,10 @@ function DesktopNav({
                     className="absolute left-1/2 -translate-x-1/2 xl:left-0 xl:-ml-4 xl:translate-x-0 z-50 mt-5 flex w-screen max-w-max px-4 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
                   >
                     <div
-                      className={`w-screen ${label === 'Consectetur' ? 'max-w-2xl' : 'max-w-md'} flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
+                      className={`w-screen ${label === 'Eiusmod' ? 'max-w-2xl' : 'max-w-md'} flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
                     >
                       <div
-                        className={`p-4 ${label === 'Consectetur' ? 'grid grid-cols-2 gap-x-4' : ''}`}
+                        className={`p-4 ${label === 'Eiusmod' ? 'grid grid-cols-2 gap-x-4' : ''}`}
                       >
                         {dropdown.items.map((item: DropdownItem) => (
                           <Link
@@ -598,7 +598,7 @@ function StickyNavbar({
                     >
                       <Logo
                         className=""
-                        width={350}
+                        width={220}
                       />
                     </Link>
                   </div>
@@ -668,7 +668,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                   >
                     <Logo
                       className=""
-                      width={350}
+                      width={220}
                     />
                   </Link>
                 </div>

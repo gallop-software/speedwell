@@ -102,16 +102,16 @@
   "/images/logo.png": {
     "small": {
       "width": 300,
-      "height": 19,
-      "file": "/images/logo-300x19.png"
+      "height": 31,
+      "file": "/images/logo-300x31.png"
     },
     "medium": {
       "width": 700,
-      "height": 44,
-      "file": "/images/logo-700x44.png"
+      "height": 73,
+      "file": "/images/logo-700x73.png"
     },
     "full": {
-      "width": 1335,
+      "width": 801,
       "height": 84,
       "file": "/images/logo.png"
     }
