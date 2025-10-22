@@ -60,7 +60,7 @@ interface NavbarProps {
 }
 
 const links: NavLink[] = [
-  { href: '/birth-center', label: 'Lorem Ipsum' },
+  { href: '/lorem-ipsum', label: 'Lorem Ipsum' },
   {
     href: '/midwife-services',
     label: 'Consectetur',
@@ -69,81 +69,81 @@ const links: NavLink[] = [
         {
           name: 'Adipiscing Elit',
           description: 'Sed do eiusmod tempor incididunt ut labore',
-          href: '/prenatal-care',
+          href: '/enim-ad',
           icon: 'lucide:baby',
         },
         {
           name: 'Ut Enim Ad',
           description: 'Minim veniam quis nostrud exercitation',
-          href: '/labor-delivery',
+          href: '/eiusmod-tempor',
           icon: 'lucide:bed-single',
         },
         {
           name: 'Duis Aute Irure',
           description: 'Dolor in reprehenderit in voluptate velit',
-          href: '/breech-twin-vbac',
+          href: '/adipiscing-elit-sed',
           icon: 'lucide:users',
         },
         {
           name: 'Excepteur Sint',
           description: 'Occaecat cupidatat non proident sunt',
-          href: '/water-birth',
+          href: '/laboris-nisi',
           icon: 'lucide:droplet',
         },
         {
           name: 'In Culpa Qui',
           description: 'Officia deserunt mollit anim id est',
-          href: '/postpartum-newborn',
+          href: '/magna-aliqua',
           icon: 'lucide:heart-handshake',
         },
         {
           name: 'Laborum Et Dolorum',
           description: 'Fuga et harum quidem rerum facilis',
-          href: '/birth-education-classes',
+          href: '/sit-amet-consectetur',
           icon: 'lucide:graduation-cap',
         },
         {
           name: 'Nam Libero Tempore',
           description: 'Cum soluta nobis est eligendi optio',
-          href: '/placenta-encapsulation',
+          href: '/labore-dolore',
           icon: 'lucide:pill',
         },
       ],
     },
   },
   {
-    href: '/meet-the-team',
+    href: '/enim-ad-minim',
     label: 'Vestibulum',
     dropdown: {
       items: [
         {
           name: 'Ante Ipsum',
           description: 'Primis in faucibus orci luctus et',
-          href: '/meet-the-team',
+          href: '/enim-ad-minim',
           icon: 'lucide:users-round',
         },
         {
           name: 'Ultrices Posuere',
           description: 'Cubilia curae mauris viverra odio',
-          href: '/student-midwives',
+          href: '/quis-nostrud',
           icon: 'lucide:graduation-cap',
         },
         {
           name: 'Sagittis Lacus',
           description: 'Vel augue laoreet rutrum faucibus',
-          href: '/contact',
+          href: '/sit',
           icon: 'lucide:map-pin',
         },
         {
           name: 'Dolor Auctor',
           description: 'Elit ut aliquam purus sit amet',
-          href: '/testimonials',
+          href: '/incididunt',
           icon: 'lucide:message-circle-heart',
         },
         {
           name: 'Luctus Accumsan',
           description: 'Tortor mauris condimentum nibh ut',
-          href: '/job-application',
+          href: '/sed-do',
           icon: 'lucide:handshake',
         },
       ],
@@ -169,7 +169,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    href: '/contact',
+    href: '/sit',
     icon: 'mdi:email-outline',
   },
 ]

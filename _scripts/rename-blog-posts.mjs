@@ -68,7 +68,9 @@ files.forEach((filename, index) => {
   let content = fs.readFileSync(oldPath, 'utf8')
 
   // Extract the first image src from the content (look for Image, GalleryItem src attributes)
-  const imageMatch = content.match(/src=["']([^"']+\.(?:jpg|jpeg|png|webp))["']/i)
+  const imageMatch = content.match(
+    /src=["']([^"']+\.(?:jpg|jpeg|png|webp))["']/i
+  )
   const firstImageSrc = imageMatch
     ? imageMatch[1]
     : '/images/pexels-pixelcop-3173103.jpg'

@@ -35,27 +35,27 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    href: '/contact',
+    href: '/sit',
     icon: 'mdi:email-outline',
   },
 ]
 
 const leftColumn = [
-  { label: 'Lorem Ipsum', href: '/birth-center' },
-  { label: 'Dolor Sit Amet', href: '/prenatal-care' },
-  { label: 'Consectetur Adipiscing', href: '/labor-delivery' },
-  { label: 'Sed Do Eiusmod', href: '/breech-twin-vbac' },
-  { label: 'Tempor Incididunt', href: '/water-birth' },
-  { label: 'Ut Labore Et', href: '/postpartum-newborn' },
+  { label: 'Lorem Ipsum', href: '/lorem-ipsum' },
+  { label: 'Dolor Sit Amet', href: '/enim-ad' },
+  { label: 'Consectetur Adipiscing', href: '/eiusmod-tempor' },
+  { label: 'Sed Do Eiusmod', href: '/adipiscing-elit-sed' },
+  { label: 'Tempor Incididunt', href: '/laboris-nisi' },
+  { label: 'Ut Labore Et', href: '/magna-aliqua' },
 ]
 
 const rightColumn = [
-  { label: 'Dolore Magna Aliqua', href: '/birth-education-classes' },
-  { label: 'Enim Ad Minim', href: '/placenta-encapsulation' },
-  { label: 'Veniam Quis Nostrud', href: '/meet-the-team' },
-  { label: 'Exercitation Ullamco', href: '/contact' },
-  { label: 'Laboris Nisi Ut', href: '/testimonials' },
-  { label: 'Aliquip Ex Ea', href: '/job-application' },
+  { label: 'Dolore Magna Aliqua', href: '/sit-amet-consectetur' },
+  { label: 'Enim Ad Minim', href: '/labore-dolore' },
+  { label: 'Veniam Quis Nostrud', href: '/enim-ad-minim' },
+  { label: 'Exercitation Ullamco', href: '/sit' },
+  { label: 'Laboris Nisi Ut', href: '/incididunt' },
+  { label: 'Aliquip Ex Ea', href: '/sed-do' },
 ]
 
 function SocialLinks() {
