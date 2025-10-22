@@ -51,21 +51,45 @@ const files = fs.readdirSync(postsDir).filter((file) => file.endsWith('.mdx'))
 
 console.log(`Found ${files.length} blog post files`)
 
-files.forEach((oldFilename, index) => {
-  const oldPath = path.join(postsDir, oldFilename)
+// Use a temp directory to avoid naming conflicts
+const tempDir = path.join(postsDir, '_temp')
+if (!fs.existsSync(tempDir)) {
+  fs.mkdirSync(tempDir)
+}
+
+files.forEach((filename, index) => {
+  const oldPath = path.join(postsDir, filename)
   const title = loremTitles[index]
   const slug = title.toLowerCase().replace(/\s+/g, '-')
   const newFilename = `${slug}.mdx`
-  const newPath = path.join(postsDir, newFilename)
+  const tempPath = path.join(tempDir, newFilename)
 
   // Read the file content
   let content = fs.readFileSync(oldPath, 'utf8')
+
+  // Extract the first image src from the content (look for Image, GalleryItem src attributes)
+  const imageMatch = content.match(/src=["']([^"']+\.(?:jpg|jpeg|png|webp))["']/i)
+  const firstImageSrc = imageMatch
+    ? imageMatch[1]
+    : '/images/pexels-pixelcop-3173103.jpg'
 
   // Update metadata title
   content = content.replace(/title:\s*'[^']*'/g, `title: '${title}'`)
 
   // Update metadata slug
   content = content.replace(/slug:\s*'[^']*'/g, `slug: '${slug}'`)
+
+  // Update featuredImage to match first image
+  content = content.replace(
+    /featuredImage:\s*'[^']*'/g,
+    `featuredImage: '${firstImageSrc}'`
+  )
+
+  // Update openGraph image url to match first image
+  content = content.replace(
+    /(openGraph:\s*\{[^}]*image:\s*\{[^}]*url:\s*)'[^']*'/s,
+    `$1'${firstImageSrc}'`
+  )
 
   // Update canonical URL slug
   content = content.replace(
@@ -76,15 +100,24 @@ files.forEach((oldFilename, index) => {
   // Update the first H1 in the body to match the title
   content = content.replace(/^#\s+.+$/m, `# ${title}`)
 
-  // Write to new file
-  fs.writeFileSync(newPath, content)
+  // Write to temp directory
+  fs.writeFileSync(tempPath, content)
 
-  // Delete old file if different from new file
-  if (oldPath !== newPath) {
-    fs.unlinkSync(oldPath)
-  }
-
-  console.log(`✓ ${oldFilename} → ${newFilename}`)
+  console.log(`✓ ${filename} → ${newFilename}`)
 })
+
+// Remove old files
+files.forEach((filename) => {
+  fs.unlinkSync(path.join(postsDir, filename))
+})
+
+// Move files from temp to main directory
+const tempFiles = fs.readdirSync(tempDir)
+tempFiles.forEach((filename) => {
+  fs.renameSync(path.join(tempDir, filename), path.join(postsDir, filename))
+})
+
+// Remove temp directory
+fs.rmdirSync(tempDir)
 
 console.log('\nBlog post renaming complete!')
