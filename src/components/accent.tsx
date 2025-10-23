@@ -14,6 +14,8 @@ interface AccentProps {
   fontFamily?: string
   /** Margin override */
   margin?: string
+  /** Overflow fix padding/margin to prevent Safari text clipping */
+  overflowFix?: string
   /** Text alignment (Tailwind CSS classes) */
   textAlign?: string
 }
@@ -26,6 +28,7 @@ export function Accent({
   color = '',
   fontFamily = '',
   margin = '',
+  overflowFix = '',
   textAlign = '',
 }: AccentProps) {
   // Define font size presets
@@ -40,6 +43,7 @@ export function Accent({
   const finalColor = color || 'text-accent5'
   const finalFontFamily = fontFamily || 'font-accent'
   const finalMargin = margin || 'mb-0'
+  const finalOverflowFix = overflowFix || 'px-2 -ml-2'
 
   // Add subtle drop shadow for white text to improve readability
   const textShadow =
@@ -49,13 +53,12 @@ export function Accent({
     <span
       className={clsx(
         'inline-block font-normal',
-        // fixes issue with safari cutting off text
-        'px-2 -ml-2',
         // Apply final styles (user-defined or defaults)
         finalFontSize,
         finalColor,
         finalFontFamily,
         finalMargin,
+        finalOverflowFix,
         textAlign,
         textShadow,
         // Custom className can override or extend default styles
