@@ -14,7 +14,8 @@
     "env": "./push-env-to-vercel.sh",
     "env:prod": "./push-env-to-vercel.sh production",
     "env:prev": "./push-env-to-vercel.sh preview",
-    "fonts": "node src/styles/fonts/compressFonts.js"
+    "fonts": "node src/styles/fonts/compressFonts.js",
+    "fonts:use": "node src/styles/fonts/useFonts.js"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",
