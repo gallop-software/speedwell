@@ -1,6 +1,7 @@
 import { getMetaImage } from '@/utils/image-meta'
 
-export const baseURL = 'https://speedwell.gallop.software'
+export const baseURL =
+  process.env.NEXT_PUBLIC_PRODUCTION_URL || 'http://localhost:3000'
 
 const logoImageData = getMetaImage('/images/pexels-pixabay-247462.jpg', 'large')
 
