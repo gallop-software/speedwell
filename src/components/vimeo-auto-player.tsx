@@ -14,6 +14,8 @@ type VimeoAutoPlayerProps = {
   width?: number
   height?: number
   autoplay?: boolean // Control autoplay behavior
+  muted?: boolean // Control whether video is muted
+  controls?: boolean // Show/hide player controls (default: true)
 }
 
 export default function VimeoAutoPlayer({
@@ -24,16 +26,18 @@ export default function VimeoAutoPlayer({
   width,
   height,
   autoplay = true,
+  muted: mutedProp,
+  controls = true,
 }: VimeoAutoPlayerProps) {
   const snap = useSnapshot(state)
-  const muted = !snap.playVideo // Video is muted when playVideo is false
+  const muted = mutedProp === true ? true : !snap.playVideo // If mutedProp is true, always mute, otherwise use state
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.85 })
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const playerRef = useRef<Player | null>(null)
   const [mounted, setMounted] = useState(false)
 
   // Always start with muted=0 in URL, control volume via API
-  const src = `https://player.vimeo.com/video/${videoId}?muted=0&loop=1&byline=0&title=0&controls=1&autoplay=1`
+  const src = `https://player.vimeo.com/video/${videoId}?muted=0&loop=1&byline=0&title=0&controls=${controls ? 1 : 0}&autoplay=1`
 
   useEffect(() => {
     setMounted(true)
