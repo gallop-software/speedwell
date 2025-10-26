@@ -1,4 +1,5 @@
 export { Heading } from './heading'
+export { Subheading } from './subheading'
 export { FancyHeading } from './fancy-heading'
 export { Testimonial1 } from './testimonial-1'
 export { Paragraph } from './paragraph'
