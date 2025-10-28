@@ -69,6 +69,35 @@ Update site metadata in `/src/app/metadata.tsx` for SEO and social sharing.
 - `npm run start` - Start production server
 - `npm run images` - Process and optimize images
 - `npm run search` - Generate search index
+- `npm run fonts <folder> [fontTypes...]` - Compress TTF fonts to WOFF2 and update font files
+
+### Font Compression
+
+The `fonts` script helps you convert TTF fonts to optimized WOFF2 format and automatically update your font configuration files.
+
+**Basic usage** (compress only):
+
+```bash
+npm run fonts Switzer
+```
+
+**Update font files** (compress and update configuration):
+
+```bash
+npm run fonts Switzer heading heading2 heading3
+```
+
+This will:
+
+1. Convert all `.ttf` files in `src/styles/fonts/Switzer/` to `.woff2` format
+2. Update `_data/_fonts/_heading.tsx`, `_data/_fonts/_heading2.tsx`, and `_data/_fonts/_heading3.tsx` with the new font paths
+3. Automatically detect font weights (thin, light, regular, medium, semibold, bold, extrabold) and styles (italic) from filenames
+
+**Requirements:**
+
+- Place your TTF font files in `src/styles/fonts/<FolderName>/`
+- Font filenames should include weight indicators (e.g., `Switzer-Bold.ttf`, `Switzer-Italic.ttf`)
+- Font configuration files must exist in `_data/_fonts/` (e.g., `_heading.tsx`)
 
 ## Documentation
 
