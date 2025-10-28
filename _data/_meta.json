@@ -1,26 +1,4 @@
 {
-  "/images/adobestock_1209737132_rk9fh5.jpg": {
-    "small": {
-      "width": 169,
-      "height": 300,
-      "file": "/images/adobestock_1209737132_rk9fh5-169x300.jpg"
-    },
-    "medium": {
-      "width": 394,
-      "height": 700,
-      "file": "/images/adobestock_1209737132_rk9fh5-394x700.jpg"
-    },
-    "large": {
-      "width": 788,
-      "height": 1400,
-      "file": "/images/adobestock_1209737132_rk9fh5-788x1400.jpg"
-    },
-    "full": {
-      "width": 1238,
-      "height": 2200,
-      "file": "/images/adobestock_1209737132_rk9fh5.jpg"
-    }
-  },
   "/images/favicon.png": {
     "small": {
       "width": 300,
@@ -97,6 +75,28 @@
       "width": 1238,
       "height": 2200,
       "file": "/images/leaf1.jpg"
+    }
+  },
+  "/images/leaf2.jpg": {
+    "small": {
+      "width": 169,
+      "height": 300,
+      "file": "/images/leaf2-169x300.jpg"
+    },
+    "medium": {
+      "width": 394,
+      "height": 700,
+      "file": "/images/leaf2-394x700.jpg"
+    },
+    "large": {
+      "width": 788,
+      "height": 1400,
+      "file": "/images/leaf2-788x1400.jpg"
+    },
+    "full": {
+      "width": 1238,
+      "height": 2200,
+      "file": "/images/leaf2.jpg"
     }
   },
   "/images/logo.png": {
