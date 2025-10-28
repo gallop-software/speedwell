@@ -13,7 +13,8 @@
     "lorem": "node _scripts/replace-english-with-lorem.mjs",
     "env": "./push-env-to-vercel.sh",
     "env:prod": "./push-env-to-vercel.sh production",
-    "env:prev": "./push-env-to-vercel.sh preview"
+    "env:prev": "./push-env-to-vercel.sh preview",
+    "fonts": "node src/styles/fonts/compressFonts.js"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",
@@ -70,6 +71,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sharp": "^0.34.4",
     "tailwindcss": "^4.1.5",
+    "ttf2woff2": "^8.0.0",
     "typescript": "^5",
     "xml2js": "^0.6.2"
   }
