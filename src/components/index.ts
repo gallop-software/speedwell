@@ -46,3 +46,4 @@ export {
 export { Testimonial2 } from './testimonial-2'
 export { Profile1 } from './profile-1'
 export { Masonry } from './masonry'
+export { ColorAnimation } from './color-animation'
