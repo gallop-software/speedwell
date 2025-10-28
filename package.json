@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "images": "node _scripts/process-images.js",
+    "images:reset": "rm -rf public/images && npm run images",
     "favicon": "node _scripts/generate-favicon.js",
     "search": "./_scripts/generate-search.sh",
     "lorem": "node _scripts/replace-english-with-lorem.mjs",
