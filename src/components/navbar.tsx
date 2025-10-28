@@ -593,7 +593,7 @@ function StickyNavbar({
                       scroll={true}
                       href="/"
                       title="Logo"
-                      className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2"
+                      className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                     >
                       <Logo
                         className=""
@@ -663,7 +663,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                     scroll={true}
                     href="/"
                     title="Speedwell"
-                    className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2"
+                    className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                   >
                     <Logo
                       className=""
