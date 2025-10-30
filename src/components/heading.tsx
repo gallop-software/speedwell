@@ -20,6 +20,8 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   fontWeight?: string
   /** Letter spacing override */
   letterSpacing?: string
+  /** Line height override */
+  lineHeight?: string
   /** Text wrap behavior */
   textWrap?: string
   /** Font family override */
@@ -41,6 +43,7 @@ export function Heading({
   fontSize = '',
   fontWeight = '',
   letterSpacing = '',
+  lineHeight = '',
   textWrap = '',
   fontFamily = '',
   color = '',
@@ -56,6 +59,7 @@ export function Heading({
           fontSize: 'text-5xl/[1.2] sm:text-5xl/[1.2] md:text-7xl/[1.2]',
           fontWeight: 'font-medium',
           letterSpacing: 'tracking-tight',
+          lineHeight: 'leading-[1.2]',
           textWrap: 'text-balance',
           fontFamily: 'font-heading',
           color: 'text-accent',
@@ -66,7 +70,8 @@ export function Heading({
           fontSize: 'text-4xl sm:text-5xl md:text-6xl',
           fontWeight: 'font-bold',
           letterSpacing: 'tracking-tight',
-          textWrap: 'leading-tight sm:leading-tight md:leading-tight',
+          lineHeight: 'leading-tight sm:leading-tight md:leading-tight',
+          textWrap: '',
           fontFamily: 'font-heading',
           color: 'text-gray-900',
           margin: 'mb-8',
@@ -76,7 +81,8 @@ export function Heading({
           fontSize: 'text-3xl sm:text-4xl',
           fontWeight: 'font-semibold',
           letterSpacing: 'tracking-tight',
-          textWrap: 'leading-normal',
+          lineHeight: 'leading-normal',
+          textWrap: '',
           fontFamily: 'font-heading',
           color: 'text-gray-900',
           margin: 'mb-8',
@@ -86,7 +92,8 @@ export function Heading({
           fontSize: 'text-xl md:text-xl',
           fontWeight: 'font-bold',
           letterSpacing: 'tracking-normal',
-          textWrap: 'leading-tight',
+          lineHeight: 'leading-tight',
+          textWrap: '',
           fontFamily: 'font-heading',
           color: 'text-accent',
           margin: 'mb-8',
@@ -96,7 +103,8 @@ export function Heading({
           fontSize: 'text-xl sm:text-2xl',
           fontWeight: 'font-semibold',
           letterSpacing: 'tracking-tight',
-          textWrap: 'leading-tight',
+          lineHeight: 'leading-tight',
+          textWrap: '',
           fontFamily: 'font-heading',
           color: 'text-gray-900',
           margin: 'mb-8',
@@ -106,7 +114,8 @@ export function Heading({
           fontSize: 'text-lg sm:text-xl',
           fontWeight: 'font-semibold',
           letterSpacing: 'tracking-tight',
-          textWrap: 'leading-tight',
+          lineHeight: 'leading-tight',
+          textWrap: '',
           fontFamily: 'font-heading',
           color: 'text-gray-900',
           margin: 'mb-8',
@@ -116,7 +125,8 @@ export function Heading({
           fontSize: 'text-4xl sm:text-5xl md:text-6xl',
           fontWeight: 'font-bold',
           letterSpacing: 'tracking-tight',
-          textWrap: 'leading-tight sm:leading-tight md:leading-tight',
+          lineHeight: 'leading-tight sm:leading-tight md:leading-tight',
+          textWrap: '',
           fontFamily: 'font-heading',
           color: 'text-gray-900',
           margin: 'mb-8',
@@ -132,6 +142,7 @@ export function Heading({
   const finalFontSize = fontSize || defaults.fontSize
   const finalFontWeight = fontWeight || defaults.fontWeight
   const finalLetterSpacing = letterSpacing || defaults.letterSpacing
+  const finalLineHeight = lineHeight || defaults.lineHeight
   const finalTextWrap = textWrap || defaults.textWrap
   const finalFontFamily = fontFamily || defaults.fontFamily
   const finalColor = color || defaults.color
@@ -150,6 +161,7 @@ export function Heading({
         finalFontSize,
         finalFontWeight,
         finalLetterSpacing,
+        finalLineHeight,
         finalTextWrap,
         finalFontFamily,
         finalColor,
