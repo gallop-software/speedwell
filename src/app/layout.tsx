@@ -60,21 +60,21 @@ export default function RootLayout({
       <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
         {children}
         <SmoothScroll />
-        {process.env.NODE_ENV === 'production' &&
-          process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
-            <GoogleAnalytics
-              gaId={String(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)}
-            />
-          )}
-        {process.env.NODE_ENV === 'production' &&
-          process.env.NEXT_PUBLIC_GOOGLE_ADS_ID && (
-            <GoogleAds
-              adId={String(process.env.NEXT_PUBLIC_GOOGLE_ADS_ID)}
-              loadGtagJs={false}
-            />
-          )}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
+      {process.env.NODE_ENV === 'production' &&
+        process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+          <GoogleAnalytics
+            gaId={String(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)}
+          />
+        )}
+      {process.env.NODE_ENV === 'production' &&
+        process.env.NEXT_PUBLIC_GOOGLE_ADS_ID && (
+          <GoogleAds
+            adId={String(process.env.NEXT_PUBLIC_GOOGLE_ADS_ID)}
+            loadGtagJs={false}
+          />
+        )}
     </html>
   )
 }
