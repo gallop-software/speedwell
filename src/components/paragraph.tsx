@@ -58,6 +58,7 @@ export function Paragraph({
     <p
       className={clsx(
         'content-wrapper',
+        '[&_a]:underline',
         finalFontSize,
         finalColor,
         finalFontFamily,

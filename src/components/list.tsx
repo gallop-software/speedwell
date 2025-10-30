@@ -81,6 +81,7 @@ export function List({
     <Component
       className={clsx(
         'content-wrapper [&>li]:mb-0 grid',
+        '[&_a]:underline',
         ordered ? 'list-decimal' : variantClasses[variant],
         spacingClasses[spacing],
         variant !== 'unstyled' && '[&>li]:ml-6',
