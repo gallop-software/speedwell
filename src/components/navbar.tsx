@@ -335,11 +335,13 @@ function MobileNavButton({ open }: { open: boolean }): ReactElement {
     <DisclosureButton
       className="flex size-12 items-center justify-center self-center rounded-lg focus:outline-none focus:ring-0 lg:hidden cursor-pointer -mr-2"
       aria-label="Open main menu"
+      suppressHydrationWarning
     >
       <motion.div
         animate={{ rotate: open ? 90 : 0 }}
         transition={{ duration: 0.2 }}
         className="relative"
+        suppressHydrationWarning
       >
         {open ? (
           <XMarkIcon className="size-6" />
