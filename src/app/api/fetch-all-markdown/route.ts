@@ -56,7 +56,7 @@ export const dynamic = 'force-dynamic'
 
 async function importMDXPost(slug: string): Promise<MDXPost | null> {
   try {
-    const filePath = path.join(process.cwd(), 'src/app/markdown', `${slug}.mdx`)
+    const filePath = path.join(process.cwd(), 'src/markdown', `${slug}.mdx`)
     const fileContent = fs.readFileSync(filePath, 'utf8')
 
     const metadataMatch = fileContent.match(
@@ -122,7 +122,7 @@ function getSlugPaths(
 
 export async function GET() {
   try {
-    const contentDir = path.join(process.cwd(), 'src/app/markdown')
+    const contentDir = path.join(process.cwd(), 'src/markdown')
     const entries = getSlugPaths(contentDir)
 
     const results: any[] = await Promise.all(

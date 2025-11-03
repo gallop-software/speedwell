@@ -8,7 +8,7 @@ type PostSlugItem = {
 }
 
 export async function getPostSlugs(): Promise<{ postSlugs: PostSlugItem[] }> {
-  const postsDir = path.join(process.cwd(), 'src/app/markdown/post')
+  const postsDir = path.join(process.cwd(), 'src/markdown/post')
 
   function walk(dir: string, basePath = ''): PostSlugItem[] {
     const entries = readdirSync(dir, { withFileTypes: true })

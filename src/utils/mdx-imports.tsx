@@ -66,7 +66,7 @@ export async function importMDXPost(slug: string): Promise<MDXPost | null> {
     // Read the MDX file content (server-side only)
     const filePath = path.join(
       process.cwd(),
-      'src/app/markdown/post',
+      'src/markdown/post',
       `${slug}.mdx`
     )
     const fileContent = fs.readFileSync(filePath, 'utf8')
@@ -102,7 +102,7 @@ export async function importMDXPost(slug: string): Promise<MDXPost | null> {
 // Function to get all blog posts by importing them
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   // Read the posts directory to get all MDX files
-  const postsDirectory = path.join(process.cwd(), 'src/app/markdown/post')
+  const postsDirectory = path.join(process.cwd(), 'src/markdown/post')
 
   let filenames: string[] = []
   try {

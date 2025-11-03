@@ -10,7 +10,7 @@ type CategorySlug = {
 export async function getCategorySlugs(): Promise<{
   categorySlugs: CategorySlug[]
 }> {
-  const postsDir = path.join(process.cwd(), 'src/app/markdown/post')
+  const postsDir = path.join(process.cwd(), 'src/markdown/post')
   const files = readdirSync(postsDir).filter((file) => file.endsWith('.mdx'))
   const categorySet = new Set<string>()
 
@@ -18,7 +18,7 @@ export async function getCategorySlugs(): Promise<{
     const slugPath = `post/${file.replace(/\.mdx$/, '')}`
 
     try {
-      const { metadata } = await import(`@/app/markdown/${slugPath}.mdx`)
+      const { metadata } = await import(`@/markdown/${slugPath}.mdx`)
 
       if (Array.isArray(metadata.categories)) {
         for (const category of metadata.categories) {

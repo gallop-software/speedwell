@@ -8,7 +8,7 @@ type PageSlugItem = {
 }
 
 export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
-  const rootDir = path.join(process.cwd(), 'src/app/markdown')
+  const rootDir = path.join(process.cwd(), 'src/markdown')
 
   function walk(dir: string, basePath = ''): PageSlugItem[] {
     const entries = readdirSync(dir, { withFileTypes: true })

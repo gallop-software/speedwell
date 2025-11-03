@@ -37,7 +37,7 @@ function getSlugPath(slug?: string[]): string {
 
 // Generate static params for all MDX files to prerender them
 export async function generateStaticParams() {
-  const contentDir = path.join(process.cwd(), 'src/app/markdown')
+  const contentDir = path.join(process.cwd(), 'src/markdown')
 
   function getAllMdxFiles(dir: string, basePath: string = ''): string[][] {
     const files = readdirSync(dir, { withFileTypes: true })
@@ -82,7 +82,7 @@ export async function generateMetadata({
   const slugPath = getSlugPath(slug)
 
   try {
-    const { metadata } = await import(`@/app/markdown/${slugPath}.mdx`)
+    const { metadata } = await import(`@/markdown/${slugPath}.mdx`)
 
     // Define image data variables
     const openGraphImageData = metadata?.openGraph?.image
@@ -206,7 +206,7 @@ export default async function Page({ params }: PageProps) {
 
   try {
     const { default: MDXContent, metadata } = await import(
-      `@/app/markdown/${slugPath}.mdx`
+      `@/markdown/${slugPath}.mdx`
     )
 
     const structuredData = {

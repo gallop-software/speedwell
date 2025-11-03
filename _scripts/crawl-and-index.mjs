@@ -118,7 +118,7 @@ function extractSectionsFromHtml(html, url) {
 async function crawlAndGenerateIndex() {
   console.log('🔍 Crawling local site to generate search index...\n')
 
-  const baseDir = path.resolve(__dirname, '../src/app/markdown')
+  const baseDir = path.resolve(__dirname, '../src/markdown')
   const slugPaths = getSlugPaths(baseDir)
   const baseUrl = 'http://localhost:3000'
 

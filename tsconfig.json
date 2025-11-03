@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/template/*": ["./src/app/template/*"],
+      "@/markdown/*": ["./src/markdown/*"],
+      "@/template/*": ["./src/template/*"],
       "@/data/*": ["./_data/*"],
       "@/state": ["./src/state.ts"],
       "@/hooks": ["./src/hooks/*"]
