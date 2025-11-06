@@ -77,8 +77,9 @@ export default async function Page({ params }: PageProps) {
   }
 
   // Slugs that should have py-30 class
-  const slugsWithPadding = ['section-1']
-  const shouldAddPadding = slugsWithPadding.includes(slugPath)
+  // const slugsWithPadding = ['section-1']
+  // const shouldAddPadding = slugsWithPadding.includes(slugPath)
+  const shouldAddPadding = true
 
   try {
     const { default: MDXContent, metadata } = await import(
