@@ -77,7 +77,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   // Slugs that should have py-30 class
-  const slugsWithPadding = ['section-1']
+  const slugsWithPadding = ['section-1', 'hero-2', 'hero-3']
   const shouldAddPadding = slugsWithPadding.includes(slugPath)
 
   try {
