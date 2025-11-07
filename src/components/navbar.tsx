@@ -599,7 +599,7 @@ function StickyNavbar({
                     >
                       <Logo
                         className=""
-                        width={220}
+                        width={120}
                       />
                     </Link>
                   </div>
@@ -669,7 +669,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                   >
                     <Logo
                       className=""
-                      width={220}
+                      width={270}
                     />
                   </Link>
                 </div>
