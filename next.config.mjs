@@ -16,8 +16,6 @@ const nextConfig = {
   async redirects() {
     return []
   },
-  assetPrefix: 'https://speedwell.gallop.software',
-
 }
 
 const withMDX = createMDX({
