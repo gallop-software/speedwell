@@ -4,8 +4,6 @@ import withMarkdoc from '@markdoc/next.js'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: '/demo/speedwell',
-  basePath: '/demo/speedwell',
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // Optionally, add any other Next.js config below
