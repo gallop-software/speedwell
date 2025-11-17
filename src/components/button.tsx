@@ -126,7 +126,7 @@ export function Button({
       <Link
         {...props}
         target={target}
-        className={clsx('cursor-pointer', className)}
+        className={clsx('cursor-pointer no-underline!', className)}
       >
         {content}
       </Link>
