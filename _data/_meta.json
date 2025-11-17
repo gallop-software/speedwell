@@ -102,22 +102,17 @@
   "/images/logo.png": {
     "small": {
       "width": 300,
-      "height": 154,
-      "file": "/images/logo-300x154.png"
+      "height": 177,
+      "file": "/images/logo-300x177.png"
     },
     "medium": {
       "width": 700,
-      "height": 358,
-      "file": "/images/logo-700x358.png"
-    },
-    "large": {
-      "width": 1400,
-      "height": 717,
-      "file": "/images/logo-1400x717.png"
+      "height": 414,
+      "file": "/images/logo-700x414.png"
     },
     "full": {
-      "width": 1414,
-      "height": 724,
+      "width": 704,
+      "height": 416,
       "file": "/images/logo.png"
     }
   },
