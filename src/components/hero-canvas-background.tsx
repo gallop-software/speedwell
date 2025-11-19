@@ -25,8 +25,19 @@ export function HeroCanvasBackground({
     let animationFrameId: number
     let time = 0
 
-    // Warm, elegant interior design color palette (more visible)
-    const colors = ['#C4B5A9', '#A8988A', '#7B6345', '#B9A898', '#988975']
+    // Earth tone color palette for geometric shapes
+    const colors = [
+      '#8B7355', // Warm brown
+      '#A0826D', // Tan
+      '#6B5D4F', // Dark taupe
+      '#C19A6B', // Camel
+      '#987554', // Wood brown
+      '#8C7853', // Khaki
+      '#B5A642', // Olive
+      '#7D6E5D', // Stone gray
+      '#96836E', // Mushroom
+      '#9C8F7F', // Greige
+    ]
 
     const resize = () => {
       canvas.width = canvas.offsetWidth * window.devicePixelRatio
@@ -37,37 +48,56 @@ export function HeroCanvasBackground({
     resize()
     window.addEventListener('resize', resize)
 
-    // Floating particles - like dust in elegant lighting
-    interface Particle {
+    // Geometric shapes floating towards top left
+    interface GeometricShape {
       x: number
       y: number
       size: number
+      baseSize: number
+      sizePhase: number
       speedX: number
       speedY: number
+      rotation: number
+      rotationSpeed: number
       opacity: number
       color: string
+      type: 'square' | 'circle' | 'triangle' | 'hexagon' | 'diamond'
     }
 
-    const particles: Particle[] = []
-    const particleCount = 40
+    const shapes: GeometricShape[] = []
+    const shapeCount = 25
 
-    const initParticles = () => {
+    const initShapes = () => {
       const width = canvas.offsetWidth
       const height = canvas.offsetHeight
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
+      const types: GeometricShape['type'][] = [
+        'square',
+        'circle',
+        'triangle',
+        'hexagon',
+        'diamond',
+      ]
+
+      for (let i = 0; i < shapeCount; i++) {
+        const baseSize = Math.random() * 40 + 20
+        shapes.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          size: Math.random() * 3 + 1,
-          speedX: (Math.random() - 0.5) * 0.3,
-          speedY: (Math.random() - 0.5) * 0.3,
-          opacity: Math.random() * 0.6 + 0.3,
+          size: baseSize,
+          baseSize: baseSize,
+          sizePhase: Math.random() * Math.PI * 2,
+          speedX: -(Math.random() * 0.2 + 0.1), // Slower left movement
+          speedY: -(Math.random() * 0.2 + 0.1), // Slower upward movement
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.01,
+          opacity: Math.random() * 0.4 + 0.2,
           color: colors[Math.floor(Math.random() * colors.length)],
+          type: types[Math.floor(Math.random() * types.length)],
         })
       }
     }
 
-    initParticles()
+    initShapes()
 
     // Draw architectural grid lines (like blueprint overlay)
     const drawArchitecturalGrid = () => {
@@ -182,32 +212,76 @@ export function HeroCanvasBackground({
       }
     }
 
-    // Draw floating particles
-    const drawParticles = () => {
+    // Draw and animate geometric shapes
+    const drawGeometricShapes = () => {
       const width = canvas.offsetWidth
       const height = canvas.offsetHeight
 
-      particles.forEach((particle) => {
-        // Update position with gentle floating motion
-        particle.x += particle.speedX + Math.sin(time * 0.001) * 0.2
-        particle.y += particle.speedY + Math.cos(time * 0.0008) * 0.2
+      shapes.forEach((shape) => {
+        // Update position - moving towards top left
+        shape.x += shape.speedX
+        shape.y += shape.speedY
 
-        // Wrap around edges
-        if (particle.x < 0) particle.x = width
-        if (particle.x > width) particle.x = 0
-        if (particle.y < 0) particle.y = height
-        if (particle.y > height) particle.y = 0
+        // Update size (breathing animation) - slower
+        shape.sizePhase += 0.008
+        shape.size =
+          shape.baseSize + Math.sin(shape.sizePhase) * (shape.baseSize * 0.3)
 
-        // Draw particle with soft glow
+        // Update rotation
+        shape.rotation += shape.rotationSpeed
+
+        // Wrap around edges - reappear from bottom right when going off top left
+        if (shape.x < -100) shape.x = width + 100
+        if (shape.y < -100) shape.y = height + 100
+
+        ctx.save()
+        ctx.translate(shape.x, shape.y)
+        ctx.rotate(shape.rotation)
+        ctx.globalAlpha = shape.opacity
+        ctx.fillStyle = shape.color
+        ctx.strokeStyle = shape.color
+        ctx.lineWidth = 2
+
+        // Draw different geometric shapes
         ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = particle.color
-        ctx.globalAlpha = particle.opacity
-        ctx.shadowBlur = 4
-        ctx.shadowColor = particle.color
+        switch (shape.type) {
+          case 'square':
+            ctx.rect(-shape.size / 2, -shape.size / 2, shape.size, shape.size)
+            break
+          case 'circle':
+            ctx.arc(0, 0, shape.size / 2, 0, Math.PI * 2)
+            break
+          case 'triangle':
+            ctx.moveTo(0, -shape.size / 2)
+            ctx.lineTo(shape.size / 2, shape.size / 2)
+            ctx.lineTo(-shape.size / 2, shape.size / 2)
+            ctx.closePath()
+            break
+          case 'hexagon':
+            for (let i = 0; i < 6; i++) {
+              const angle = (i / 6) * Math.PI * 2
+              const x = (Math.cos(angle) * shape.size) / 2
+              const y = (Math.sin(angle) * shape.size) / 2
+              if (i === 0) ctx.moveTo(x, y)
+              else ctx.lineTo(x, y)
+            }
+            ctx.closePath()
+            break
+          case 'diamond':
+            ctx.moveTo(0, -shape.size / 2)
+            ctx.lineTo(shape.size / 3, 0)
+            ctx.lineTo(0, shape.size / 2)
+            ctx.lineTo(-shape.size / 3, 0)
+            ctx.closePath()
+            break
+        }
+
+        // Draw with subtle fill and stroke
         ctx.fill()
-        ctx.shadowBlur = 0
-        ctx.globalAlpha = 1
+        ctx.globalAlpha = shape.opacity * 0.6
+        ctx.stroke()
+
+        ctx.restore()
       })
     }
 
@@ -231,7 +305,7 @@ export function HeroCanvasBackground({
       drawArchitecturalGrid()
       drawFlowingArches()
       drawGeometricPatterns()
-      drawParticles()
+      drawGeometricShapes()
 
       time += 1
       animationFrameId = requestAnimationFrame(animate)
