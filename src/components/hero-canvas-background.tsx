@@ -104,12 +104,12 @@ export function HeroCanvasBackground({
       const width = canvas.offsetWidth
       const height = canvas.offsetHeight
 
-      ctx.strokeStyle = 'rgba(139, 115, 85, 0.25)'
+      ctx.strokeStyle = 'rgba(139, 115, 85, 0.4)'
       ctx.lineWidth = 1.5
 
-      // Vertical lines with subtle animation
+      // Vertical lines with subtle animation - start from gridSpacing to avoid edge line
       const gridSpacing = 60
-      for (let x = 0; x < width; x += gridSpacing) {
+      for (let x = gridSpacing; x < width; x += gridSpacing) {
         const offset = Math.sin(time * 0.0005 + x * 0.01) * 3
         ctx.beginPath()
         ctx.moveTo(x + offset, 0)
@@ -117,8 +117,8 @@ export function HeroCanvasBackground({
         ctx.stroke()
       }
 
-      // Horizontal lines
-      for (let y = 0; y < height; y += gridSpacing) {
+      // Horizontal lines - start from gridSpacing to avoid edge line
+      for (let y = gridSpacing; y < height; y += gridSpacing) {
         const offset = Math.cos(time * 0.0005 + y * 0.01) * 3
         ctx.beginPath()
         ctx.moveTo(0, y + offset)
