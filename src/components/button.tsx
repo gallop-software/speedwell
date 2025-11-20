@@ -1,7 +1,6 @@
 import { Paragraph } from './paragraph'
 import { Button as HeadlessButton } from '@headlessui/react'
 import { clsx } from 'clsx'
-import { Icon } from '@iconify/react'
 import { Link } from './link'
 
 const variants = {
@@ -10,43 +9,49 @@ const variants = {
       'inline-flex items-center justify-center',
       'rounded-full border border-transparent bg-gray-950 shadow-md',
       'text-white',
-      'disabled:bg-gray-950 disabled:opacity-40 hover:bg-gray-800'
+      'disabled:bg-gray-950 disabled:opacity-40 hover:bg-gray-800',
+      'transition-colors duration-200'
     ),
     dark: clsx(
       'inline-flex items-center justify-center',
       'rounded-full border border-transparent bg-white shadow-md',
       'text-gray-950',
-      'disabled:bg-white disabled:opacity-40 hover:bg-gray-100'
+      'disabled:bg-white disabled:opacity-40 hover:bg-gray-100',
+      'transition-colors duration-200'
     ),
   },
   secondary: {
     light: clsx(
       'relative inline-flex items-center justify-center',
-      'rounded-full border border-transparent bg-white/15 shadow-md ring-1 ring-[#D15052]/15',
+      'rounded-full border border-transparent bg-white/35 shadow-md ring-1 ring-[#D15052]/15',
       'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]',
       'text-gray-950',
-      'disabled:bg-white/15 disabled:opacity-40 hover:bg-white/20'
+      'disabled:bg-white/25 disabled:opacity-40 hover:bg-white/25',
+      'transition-colors duration-200'
     ),
     dark: clsx(
       'relative inline-flex items-center justify-center',
       'rounded-full border border-transparent bg-gray-950/15 shadow-md ring-1 ring-white/15',
       'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#00000040]',
       'text-white',
-      'disabled:bg-gray-950/15 disabled:opacity-40 hover:bg-gray-950/20'
+      'disabled:bg-gray-950/15 disabled:opacity-40 hover:bg-gray-950/20',
+      'transition-colors duration-200'
     ),
   },
   outline: {
     light: clsx(
       'inline-flex items-center justify-center',
-      'rounded-full border border-transparent shadow-sm ring-2 ring-gray-950',
+      'rounded-full border border-transparent shadow-sm ring-2 ring-inset ring-gray-950',
       'text-gray-950',
-      'disabled:bg-transparent disabled:opacity-40 hover:bg-gray-950/5'
+      'disabled:bg-transparent disabled:opacity-40 hover:bg-gray-950/5',
+      'transition-colors duration-200'
     ),
     dark: clsx(
       'inline-flex items-center justify-center',
-      'rounded-full border border-transparent shadow-sm ring-2 ring-white',
+      'rounded-full border border-transparent shadow-sm ring-2 ring-inset ring-white',
       'text-white',
-      'disabled:bg-transparent disabled:opacity-40 hover:bg-white/5'
+      'disabled:bg-transparent disabled:opacity-40 hover:bg-white/5',
+      'transition-colors duration-200'
     ),
   },
 }
@@ -66,7 +71,7 @@ const sizes = {
 type ButtonProps = {
   variant?: keyof typeof variants
   size?: keyof typeof sizes
-  icon?: string
+  icon?: React.ComponentType<{ className?: string }>
   iconPlacement?: 'before' | 'after'
   iconSize?: string
   wrap?: boolean
@@ -95,9 +100,9 @@ export function Button({
   const variantClass = dark ? variants[variant].dark : variants[variant].light
   className = clsx(className, variantClass, sizes[size])
 
-  const iconElement = icon ? (
-    <Icon
-      icon={icon}
+  const IconComponent = icon
+  const iconElement = IconComponent ? (
+    <IconComponent
       className={clsx(
         iconSize,
         iconPlacement === 'before' && children ? 'mr-2' : '',
@@ -126,7 +131,7 @@ export function Button({
       <Link
         {...props}
         target={target}
-        className={clsx('cursor-pointer no-underline!', className)}
+        className={clsx('cursor-pointer', className)}
       >
         {content}
       </Link>
