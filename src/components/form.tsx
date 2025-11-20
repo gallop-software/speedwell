@@ -602,7 +602,8 @@ const FormButton: React.FC<FormButtonProps> = ({
     >
       <span>{label}</span>
       {isLoading && (
-        <ArrowPathIcon
+        <Icon
+          icon={arrowPathIcon}
           className="ml-2 h-5 w-5 animate-spin text-body"
           aria-hidden="true"
         />

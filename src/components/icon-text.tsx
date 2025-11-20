@@ -20,8 +20,8 @@ export interface IconTextProps extends React.ComponentPropsWithoutRef<'p'> {
   textAlign?: string
   /** Margin override */
   margin?: string
-  /** Icon to display */
-  icon?: { body: string; width?: number; height?: number } | string
+  /** Icon object to display */
+  icon?: { body: string; width?: number; height?: number }
   /** Icon placement - before or after text */
   iconPlacement?: 'before' | 'after'
   /** Icon size classes */

@@ -5,7 +5,7 @@ import { clsx } from 'clsx'
 
 type LinkWithIconProps = LinkProps &
   React.ComponentPropsWithoutRef<'a'> & {
-    icon?: { body: string; width?: number; height?: number } | string
+    icon?: { body: string; width?: number; height?: number }
     iconPlacement?: 'before' | 'after'
     iconSize?: string
   }
