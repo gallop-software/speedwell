@@ -1,6 +1,6 @@
 import React from 'react'
 import { clsx } from 'clsx'
-import { Icon } from '@iconify/react'
+import { Icon } from './icon'
 import { Heading } from './heading'
 import { Paragraph } from './paragraph'
 
@@ -15,8 +15,8 @@ interface CardContactProps {
   heading: string
   /** Description text */
   text: string
-  /** Icon name (Lucide icon) */
-  icon: string
+  /** Icon name (Lucide icon) or icon object */
+  icon: { body: string; width?: number; height?: number } | string
   /** Icon color override */
   iconColor?: string
 }

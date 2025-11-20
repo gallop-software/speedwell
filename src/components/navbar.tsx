@@ -12,13 +12,11 @@ import {
   DialogPanel,
   DialogTitle,
 } from '@headlessui/react'
-import {
-  Bars2Icon,
-  ChevronDownIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import { Icon } from './icon'
+import bars2Icon from '@iconify/icons-heroicons/bars-2-20-solid'
+import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
+import xMarkIcon from '@iconify/icons-heroicons/x-mark-20-solid'
 import facebookIcon from '@iconify/icons-mdi/facebook'
 import instagramIcon from '@iconify/icons-mdi/instagram'
 import phoneIcon from '@iconify/icons-mdi/phone'
@@ -223,7 +221,8 @@ function DesktopNav({
                 <>
                   <PopoverButton className="flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium text-contrast bg-blend-multiply focus:outline-none data-hover:bg-black/[2.5%] rounded-lg">
                     {label}
-                    <ChevronDownIcon
+                    <Icon
+                      icon={chevronDownIcon}
                       className={`ml-1 h-4 w-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
                       aria-hidden="true"
                     />
@@ -357,9 +356,15 @@ function MobileNavButton({ open }: { open: boolean }): ReactElement {
         suppressHydrationWarning
       >
         {open ? (
-          <XMarkIcon className="size-6" />
+          <Icon
+            icon={xMarkIcon}
+            className="size-6"
+          />
         ) : (
-          <Bars2Icon className="size-6" />
+          <Icon
+            icon={bars2Icon}
+            className="size-6"
+          />
         )}
       </motion.div>
     </DisclosureButton>
@@ -395,7 +400,8 @@ function MobileNav(): ReactElement {
                   >
                     <DisclosureButton className="flex w-full items-center justify-between text-lg font-body font-medium text-contrast focus:outline-none py-2 cursor-pointer pr-2">
                       {label}
-                      <ChevronDownIcon
+                      <Icon
+                        icon={chevronDownIcon}
                         className={`h-6 w-6 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
                         aria-hidden="true"
                       />
@@ -513,7 +519,10 @@ function StickyMobileNavButton(): ReactElement {
         className="lg:hidden text-accent hover:text-accent-dark rounded-lg transition-colors duration-200 p-2 cursor-pointer -mr-2 focus:outline-none focus:ring-0"
         aria-label="Open mobile menu"
       >
-        <Bars2Icon className="h-7 w-7" />
+        <Icon
+          icon={bars2Icon}
+          className="h-7 w-7"
+        />
       </button>
 
       <Dialog
@@ -544,7 +553,8 @@ function StickyMobileNavButton(): ReactElement {
                     className="rounded-full focus:outline-none focus:ring-0 p-1.5 cursor-pointer -mr-2"
                     onClick={closeModal}
                   >
-                    <XMarkIcon
+                    <Icon
+                      icon={xMarkIcon}
                       className="h-6 w-6"
                       aria-hidden="true"
                     />

@@ -7,7 +7,8 @@ import {
   DialogPanel,
   DialogTitle,
 } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import xMarkIcon from '@iconify/icons-heroicons/x-mark'
+import { Icon } from './icon'
 import type { ReactNode } from 'react'
 import { GalleryPopup } from './lightbox/gallery-popup'
 import { Image } from './image'
@@ -58,7 +59,8 @@ function SidebarHeader({ closeModal }: any) {
         }
         onClick={closeModal}
       >
-        <XMarkIcon
+        <Icon
+          icon={xMarkIcon}
           className="h-6 w-6"
           aria-hidden="true"
         />

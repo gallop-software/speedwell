@@ -2,7 +2,11 @@ import { Container } from './container'
 import { Gradient } from './gradient'
 import { Logo } from './logo'
 import Link from 'next/link'
-import { Icon } from '@iconify/react'
+import facebookIcon from '@iconify/icons-mdi/facebook'
+import instagramIcon from '@iconify/icons-mdi/instagram'
+import phoneIcon from '@iconify/icons-mdi/phone'
+import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
+import { Icon } from './icon'
 import { Paragraph } from './paragraph'
 import { Heading } from './heading'
 
@@ -14,29 +18,29 @@ interface FooterLink {
 interface SocialLink {
   name: string
   href: string
-  icon: string
+  icon: { body: string; width?: number; height?: number }
 }
 
 const socialLinks: SocialLink[] = [
   {
     name: 'Facebook',
     href: 'https://www.facebook.com',
-    icon: 'mdi:facebook',
+    icon: facebookIcon,
   },
   {
     name: 'Instagram',
     href: 'http://instagram.com',
-    icon: 'mdi:instagram',
+    icon: instagramIcon,
   },
   {
     name: 'Phone',
     href: 'tel:5551234567',
-    icon: 'mdi:phone',
+    icon: phoneIcon,
   },
   {
     name: 'Email',
     href: '/sit',
-    icon: 'mdi:email-outline',
+    icon: emailOutlineIcon,
   },
 ]
 

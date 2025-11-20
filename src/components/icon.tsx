@@ -1,20 +1,9 @@
 interface IconProps {
-  icon: { body: string; width?: number; height?: number } | string
+  icon: { body: string; width?: number; height?: number }
   className?: string
 }
 
 export function Icon({ icon, className = 'h-7 w-7' }: IconProps) {
-  // Handle string-based iconify icons (for backward compatibility)
-  if (typeof icon === 'string') {
-    const IconifyIcon = require('@iconify/react').Icon
-    return (
-      <IconifyIcon
-        icon={icon}
-        className={className}
-      />
-    )
-  }
-
   if (!icon || !icon.body) {
     console.error('Icon: Invalid icon data', icon)
     return null
