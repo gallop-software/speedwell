@@ -2,6 +2,7 @@ import { Paragraph } from './paragraph'
 import { Button as HeadlessButton } from '@headlessui/react'
 import { clsx } from 'clsx'
 import { Link } from './link'
+import { Icon } from './icon'
 
 const variants = {
   primary: {
@@ -71,7 +72,7 @@ const sizes = {
 type ButtonProps = {
   variant?: keyof typeof variants
   size?: keyof typeof sizes
-  icon?: React.ComponentType<{ className?: string }>
+  icon?: { body: string; width?: number; height?: number }
   iconPlacement?: 'before' | 'after'
   iconSize?: string
   wrap?: boolean
@@ -100,9 +101,9 @@ export function Button({
   const variantClass = dark ? variants[variant].dark : variants[variant].light
   className = clsx(className, variantClass, sizes[size])
 
-  const IconComponent = icon
-  const iconElement = IconComponent ? (
-    <IconComponent
+  const iconElement = icon ? (
+    <Icon
+      icon={icon}
       className={clsx(
         iconSize,
         iconPlacement === 'before' && children ? 'mr-2' : '',

@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Button } from './button'
 import { Paragraph } from './paragraph'
 import clsx from 'clsx'
-import { ArrowPathIcon } from '@heroicons/react/24/outline'
+import arrowPathIcon from '@iconify/icons-heroicons/arrow-path'
+import { Icon } from './icon'
 import React, { Children, isValidElement } from 'react'
 
 function Form({

@@ -8,6 +8,7 @@ import DynamicSidebar from '../dynamic-sidebar'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'
+import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 
 const POSTS_PER_LOAD = 9
 
@@ -290,7 +291,7 @@ export function BlogClient({
         <div className="mt-10 flex justify-center">
           <Button
             onClick={showMore}
-            icon="heroicons:chevron-down"
+            icon={chevronDownIcon}
             iconPlacement="after"
             className="cursor-pointer"
           >

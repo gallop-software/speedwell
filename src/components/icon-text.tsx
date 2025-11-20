@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Icon } from '@iconify/react'
+import { Icon } from './icon'
 
 export interface IconTextProps extends React.ComponentPropsWithoutRef<'p'> {
   /** Variant of the paragraph - controls default styling */
@@ -21,7 +21,7 @@ export interface IconTextProps extends React.ComponentPropsWithoutRef<'p'> {
   /** Margin override */
   margin?: string
   /** Icon to display */
-  icon?: string
+  icon?: { body: string; width?: number; height?: number } | string
   /** Icon placement - before or after text */
   iconPlacement?: 'before' | 'after'
   /** Icon size classes */

@@ -1,11 +1,11 @@
 import NextLink, { type LinkProps } from 'next/link'
 import { forwardRef } from 'react'
-import { Icon } from '@iconify/react'
+import { Icon } from './icon'
 import { clsx } from 'clsx'
 
 type LinkWithIconProps = LinkProps &
   React.ComponentPropsWithoutRef<'a'> & {
-    icon?: string
+    icon?: { body: string; width?: number; height?: number } | string
     iconPlacement?: 'before' | 'after'
     iconSize?: string
   }

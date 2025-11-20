@@ -3,13 +3,13 @@
 import React, { type ReactNode } from 'react'
 import { clsx } from 'clsx'
 import { Heading } from './heading'
-import { Icon } from '@iconify/react'
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
+import { Icon } from './icon'
 import { motion } from 'framer-motion'
 
 interface AccordionProps {
@@ -39,7 +39,10 @@ export function Accordion({ headingText, children }: AccordionProps) {
                 transition={{ duration: 0.2 }}
                 className="relative"
               >
-                <ChevronDownIcon className="size-6 text-gray-900" />
+                <Icon
+                  icon={chevronDownIcon}
+                  className="size-6 text-gray-900"
+                />
               </motion.div>
             </DisclosureButton>
 
