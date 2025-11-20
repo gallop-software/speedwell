@@ -74,7 +74,7 @@ interface NavbarProps {
 }
 
 const links: NavLink[] = [
-  { href: '/', label: 'Home' },
+  { href: '/portfolio', label: 'Portfolio' },
   {
     href: '/services',
     label: 'Services',
@@ -126,19 +126,19 @@ const links: NavLink[] = [
     },
   },
   {
-    href: '/portfolio',
-    label: 'Portfolio',
+    href: '/contact',
+    label: 'About',
     dropdown: {
       items: [
         {
-          name: 'Residential Projects',
-          description: "Beautiful homes we've brought to life",
+          name: 'Our Story',
+          description: 'Learn about our design philosophy and passion',
           href: '/residential',
           icon: usersRoundIcon,
         },
         {
-          name: 'Commercial Projects',
-          description: 'Inspiring spaces for modern businesses',
+          name: 'Meet the Team',
+          description: 'Get to know our talented designers',
           href: '/commercial',
           icon: graduationCapIcon,
         },
@@ -147,6 +147,12 @@ const links: NavLink[] = [
           description: 'Stories from our satisfied clients',
           href: '/testimonials',
           icon: mapPinIcon,
+        },
+        {
+          name: 'Before & After',
+          description: 'See the transformation process',
+          href: '/before-after',
+          icon: dropletIcon,
         },
         {
           name: 'Contact',
