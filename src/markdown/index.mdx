@@ -1,4 +1,7 @@
 import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Gradient, Navbar, Container, Image, HeroCanvasBackground, HeroCanvasBackground2 } from '@/components'
+import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
+import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
+import playCircleIcon from '@iconify/icons-lucide/play-circle'
 
 <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">
   <Navbar className="-mt-2" />
@@ -35,7 +38,7 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
         <Buttons className="lg:-ml-40">
           <Button
             href="#learn-more"
-            icon="heroicons:arrow-down-16-solid"
+            icon={arrowDownIcon}
             iconPlacement="after"
           >
             Explore Our Design Philosophy
@@ -43,7 +46,7 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
           <ButtonPlay
             variant="secondary"
             href="#video"
-            icon="lucide:play-circle"
+            icon={playCircleIcon}
             iconPlacement="after"
           >
             See Our Last Project
@@ -114,7 +117,7 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
         <Button
           variant="primary"
           href="/sit"
-          icon="heroicons:arrow-right-16-solid"
+          icon={arrowRightIcon}
           iconPlacement="after"
         >
           Nisi labore
