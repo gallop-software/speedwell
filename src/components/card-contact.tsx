@@ -15,8 +15,8 @@ interface CardContactProps {
   heading: string
   /** Description text */
   text: string
-  /** Icon name (Lucide icon) or icon object */
-  icon: { body: string; width?: number; height?: number } | string
+  /** Icon object */
+  icon: { body: string; width?: number; height?: number }
   /** Icon color override */
   iconColor?: string
 }

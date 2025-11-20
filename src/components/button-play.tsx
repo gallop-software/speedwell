@@ -6,7 +6,7 @@ import { clsx } from 'clsx'
 
 interface ButtonPlayProps {
   href?: string
-  icon?: { body: string; width?: number; height?: number } | string
+  icon?: { body: string; width?: number; height?: number }
   iconPlacement?: 'before' | 'after'
   variant?: 'primary' | 'secondary'
   className?: string
