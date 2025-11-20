@@ -23,6 +23,18 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import instagramIcon from '@iconify/icons-mdi/instagram'
 import phoneIcon from '@iconify/icons-mdi/phone'
 import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
+import babyIcon from '@iconify/icons-lucide/baby'
+import bedSingleIcon from '@iconify/icons-lucide/bed-single'
+import usersIcon from '@iconify/icons-lucide/users'
+import dropletIcon from '@iconify/icons-lucide/droplet'
+import heartHandshakeIcon from '@iconify/icons-lucide/heart-handshake'
+import graduationCapIcon from '@iconify/icons-lucide/graduation-cap'
+import pillIcon from '@iconify/icons-lucide/pill'
+import usersRoundIcon from '@iconify/icons-lucide/users'
+import mapPinIcon from '@iconify/icons-lucide/map-pin'
+import messageCircleHeartIcon from '@iconify/icons-lucide/message-circle'
+import handshakeIcon from '@iconify/icons-lucide/heart-handshake'
+import searchIcon from '@iconify/icons-lucide/search'
 import { useState, useEffect, type ReactElement } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
@@ -36,7 +48,7 @@ interface DropdownItem {
   name: string
   description: string
   href: string
-  icon: string
+  icon: { body: string; width?: number; height?: number }
 }
 
 interface NavLink {
@@ -74,43 +86,43 @@ const links: NavLink[] = [
           name: 'Adipiscing Elit',
           description: 'Sed do eiusmod tempor incididunt ut labore',
           href: '/enim-ad',
-          icon: 'lucide:baby',
+          icon: babyIcon,
         },
         {
           name: 'Ut Enim Ad',
           description: 'Minim veniam quis nostrud exercitation',
           href: '/eiusmod-tempor',
-          icon: 'lucide:bed-single',
+          icon: bedSingleIcon,
         },
         {
           name: 'Duis Aute Irure',
           description: 'Dolor in reprehenderit in voluptate velit',
           href: '/adipiscing-elit-sed',
-          icon: 'lucide:users',
+          icon: usersIcon,
         },
         {
           name: 'Excepteur Sint',
           description: 'Occaecat cupidatat non proident sunt',
           href: '/laboris-nisi',
-          icon: 'lucide:droplet',
+          icon: dropletIcon,
         },
         {
           name: 'In Culpa Qui',
           description: 'Officia deserunt mollit anim id est',
           href: '/magna-aliqua',
-          icon: 'lucide:heart-handshake',
+          icon: heartHandshakeIcon,
         },
         {
           name: 'Laborum Et Dolorum',
           description: 'Fuga et harum quidem rerum facilis',
           href: '/sit-amet-consectetur',
-          icon: 'lucide:graduation-cap',
+          icon: graduationCapIcon,
         },
         {
           name: 'Nam Libero Tempore',
           description: 'Cum soluta nobis est eligendi optio',
           href: '/labore-dolore',
-          icon: 'lucide:pill',
+          icon: pillIcon,
         },
       ],
     },
@@ -124,31 +136,31 @@ const links: NavLink[] = [
           name: 'Ante Ipsum',
           description: 'Primis in faucibus orci luctus et',
           href: '/enim-ad-minim',
-          icon: 'lucide:users-round',
+          icon: usersRoundIcon,
         },
         {
           name: 'Ultrices Posuere',
           description: 'Cubilia curae mauris viverra odio',
           href: '/quis-nostrud',
-          icon: 'lucide:graduation-cap',
+          icon: graduationCapIcon,
         },
         {
           name: 'Sagittis Lacus',
           description: 'Vel augue laoreet rutrum faucibus',
           href: '/sit',
-          icon: 'lucide:map-pin',
+          icon: mapPinIcon,
         },
         {
           name: 'Dolor Auctor',
           description: 'Elit ut aliquam purus sit amet',
           href: '/incididunt',
-          icon: 'lucide:message-circle-heart',
+          icon: messageCircleHeartIcon,
         },
         {
           name: 'Luctus Accumsan',
           description: 'Tortor mauris condimentum nibh ut',
           href: '/sed-do',
-          icon: 'lucide:handshake',
+          icon: handshakeIcon,
         },
       ],
     },
@@ -289,7 +301,7 @@ function SearchButton(): ReactElement {
         onClick={() => setIsSearching((prev) => !prev)}
       >
         <Icon
-          icon="lucide:search"
+          icon={searchIcon}
           className="h-7 w-7"
         />
       </button>
@@ -449,7 +461,7 @@ function MobileNav(): ReactElement {
           onClick={() => setIsSearching(true)}
         >
           <Icon
-            icon="lucide:search"
+            icon={searchIcon}
             className="h-5 w-5 flex-none text-contrast hover:text-contrast"
           />
           <span className="ml-2 text-contrast">Search...</span>
