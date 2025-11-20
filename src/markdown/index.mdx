@@ -1,16 +1,13 @@
-import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Gradient, Navbar, Container, Image } from '@/components'
+import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Gradient, Navbar, Container, Image, HeroCanvasBackground, HeroCanvasBackground2 } from '@/components'
+import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
+import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
+import playCircleIcon from '@iconify/icons-lucide/play-circle'
 
 <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">
   <Navbar className="-mt-2" />
   <div className="mx-auto max-w-[1600px] relative">
-    <div
-      className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-[100%] z-0 opacity-30 bg-cover bg-no-repeat bg-left-top bg-[url('/images/leaf2.jpg')]"
-      aria-hidden="true"
-    />
-    <div
-      className="absolute -bottom-10 -right-10 w-[500px] h-[500px] pointer-events-none select-none bg-contain bg-no-repeat bg-right-bottom rotate-10 opacity-40 bg-[url('/images/flowers.png')]"
-      aria-hidden="true"
-    />
+    <HeroCanvasBackground className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-[100%] z-0 opacity-30" />
+    <HeroCanvasBackground2 className="absolute -bottom-10 -right-10 w-[500px] h-[500px] z-0" />
     <Columns
       cols="grid-cols-1 lg:grid-cols-[3fr_2fr]"
       gap="gap-8 lg:gap-8 xl:gap-16"
@@ -19,7 +16,7 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
       <Column className="pt-10">
         <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
           <video
-            src="/videos/gallop-op.mp4"
+            src="/videos/hero-op.mp4"
             autoPlay
             loop
             muted
@@ -30,29 +27,29 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
         </div>
       </Column>
       <Column className="py-16 md:py-20">
-        <Accent className="transform -rotate-12 lg:-ml-64 -top-14 relative">lorem ipsum</Accent>
-        <Heading as="h1">Reprehenderit eiusmod sunt laboris anim</Heading>
+        <Accent className="transform -rotate-12 lg:-ml-64 -top-14 relative">inspiration</Accent>
+        <Heading as="h1">Where Elegance Meets Function</Heading>
         <Paragraph
           className="max-w-lg"
           color="text-contrast"
         >
-          Consequat sit lorem aliqua aute pariatur ea ea excepteur amet culpa anim proident adipiscing exercitation id commodo consectetur irure irure ullamco incididunt officia amet velit ut elit
+          Discover the art of refined living through timeless design and meticulous attention to detail. We create bespoke interiors that reflect your unique style while elevating every moment of your daily life.
         </Paragraph>
         <Buttons className="lg:-ml-40">
           <Button
             href="#learn-more"
-            icon="heroicons:arrow-down-16-solid"
+            icon={arrowDownIcon}
             iconPlacement="after"
           >
-            Officia velit deserunt minim eiusmod
+            Explore Our Design Philosophy
           </Button>
           <ButtonPlay
             variant="secondary"
             href="#video"
-            icon="lucide:play-circle"
+            icon={playCircleIcon}
             iconPlacement="after"
           >
-            Ludere Video
+            See Our Last Project
           </ButtonPlay>
         </Buttons>
       </Column>
@@ -82,7 +79,7 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
     <Paragraph className="max-w-lg">Amet in ipsum lorem fugiat aliqua tempor sit laborum cupidatat anim magna occaecat pariatur elit consequat ut sit veniam voluptate incididunt labore labore veniam pariatur et elit et aute exercitation sunt consequat</Paragraph>
     <Paragraph className="max-w-lg">Dolor do tempor officia adipiscing aliqua incididunt nisi cupidatat cillum culpa incididunt exercitation pariatur esse occaecat enim id officia ex elit anim nostrud incididunt irure irure excepteur incididunt nisi ea do occaecat anim magna cillum officia labore</Paragraph>
     <VimeoAutoPlayer
-      videoId="1129134273"
+      videoId="1134529903"
       id="video"
       className="mt-16 w-full max-w-5xl"
     />
@@ -120,7 +117,7 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
         <Button
           variant="primary"
           href="/sit"
-          icon="heroicons:arrow-right-16-solid"
+          icon={arrowRightIcon}
           iconPlacement="after"
         >
           Nisi labore

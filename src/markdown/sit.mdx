@@ -1,5 +1,8 @@
 import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Form, FormInput, FormTextArea, FormUpload, FormRadioGroup, FormCheckboxGroup, FormButton, FormName, Navbar, CardContact, Image } from '@/components'
-import { Icon } from '@iconify/react'
+import phoneIcon from '@iconify/icons-lucide/phone'
+import starIcon from '@iconify/icons-lucide/star'
+import mapPinIcon from '@iconify/icons-lucide/map-pin'
+import printerIcon from '@iconify/icons-lucide/printer'
 
 <Navbar />
 
@@ -90,26 +93,26 @@ import { Icon } from '@iconify/react'
           href="tel:5551234567"
           heading="Call"
           text="(555) 123-4567"
-          icon="lucide:phone"
+          icon={phoneIcon}
           iconColor="text-accent bg-accent3 group-hover:bg-accent3-dark"
         />
         <CardContact
           href="https://www.google.com/search?q=webplantmedia+lubbock&sca_esv=fbaa7d3b9c35fdd6&sxsrf=AE3TifPIizRDUI9FeRONIBEaFbM4rTiR2A%3A1761044847022&ei=b2n3aK-WAbigwN4PjsDUqAo&oq=webpla&gs_lp=Egxnd3Mtd2l6LXNlcnAiBndlYnBsYSoCCAAyBBAjGCcyBBAjGCcyEBAAGIAEGLEDGEMYgwEYigUyBxAAGIAEGAoyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAAGIAEMgUQABiABEjVHVD1B1jxC3ADeAGQAQCYAW2gAbMEqgEDMy4zuAEByAEA-AEBmAIJoALcBMICBxAjGLADGCfCAgoQABiwAxjWBBhHwgILEAAYgAQYkQIYigXCAhEQLhiABBixAxjRAxiDARjHAcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMY0QMYxwHCAgoQIxiABBgnGIoFwgIKEAAYgAQYQxiKBcICERAuGIAEGJECGMcBGIoFGK8BwgIQEC4YgAQYQxjHARiKBRivAcICDRAAGIAEGLEDGEMYigXCAhEQABiABBiRAhixAxiDARiKBcICCxAAGIAEGLEDGIMBmAMAiAYBkAYJkgcDNi4zoAe3P7IHAzMuM7gHzgTCBwUwLjUuNMgHHg&sclient=gws-wiz-serp#mpd=~7629446733757655296/customers/reviews"
           heading="Google Reviews"
           text="See What Our Customers Are Saying"
-          icon="lucide:star"
+          icon={starIcon}
         />
         <CardContact
           href="https://maps.app.goo.gl/c8y1wdDrV9quTUSh7"
           heading="Get Directions"
           text="Visit Our Location"
-          icon="lucide:map-pin"
+          icon={mapPinIcon}
         />
         <CardContact
           href="tel:5559876543"
           heading="Fax"
           text="(555) 987-6543"
-          icon="lucide:printer"
+          icon={printerIcon}
         />
       </Grid>
     </Column>
