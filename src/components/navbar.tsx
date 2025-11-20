@@ -132,7 +132,7 @@ const links: NavLink[] = [
       items: [
         {
           name: 'Residential Projects',
-          description: 'Beautiful homes we\'ve brought to life',
+          description: "Beautiful homes we've brought to life",
           href: '/portfolio/residential',
           icon: usersRoundIcon,
         },
