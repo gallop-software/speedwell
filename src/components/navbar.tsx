@@ -21,17 +21,19 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import instagramIcon from '@iconify/icons-mdi/instagram'
 import phoneIcon from '@iconify/icons-mdi/phone'
 import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
-import babyIcon from '@iconify/icons-lucide/baby'
-import bedSingleIcon from '@iconify/icons-lucide/bed-single'
-import usersIcon from '@iconify/icons-lucide/users'
-import dropletIcon from '@iconify/icons-lucide/droplet'
-import heartHandshakeIcon from '@iconify/icons-lucide/heart-handshake'
-import graduationCapIcon from '@iconify/icons-lucide/graduation-cap'
-import pillIcon from '@iconify/icons-lucide/pill'
-import usersRoundIcon from '@iconify/icons-lucide/users'
-import mapPinIcon from '@iconify/icons-lucide/map-pin'
-import messageCircleHeartIcon from '@iconify/icons-lucide/message-circle'
-import handshakeIcon from '@iconify/icons-lucide/heart-handshake'
+import homeIcon from '@iconify/icons-mdi/home-outline'
+import officeIcon from '@iconify/icons-mdi/office-building-outline'
+import bathtubIcon from '@iconify/icons-mdi/bathtub-outline'
+import floorPlanIcon from '@iconify/icons-mdi/floor-plan'
+import paletteIcon from '@iconify/icons-mdi/palette-outline'
+import sofaIcon from '@iconify/icons-mdi/sofa-outline'
+import clipboardCheckIcon from '@iconify/icons-mdi/clipboard-check-outline'
+import bookOpenIcon from '@iconify/icons-mdi/book-open-page-variant-outline'
+import accountGroupIcon from '@iconify/icons-mdi/account-group-outline'
+import starIcon from '@iconify/icons-mdi/star-outline'
+import compareIcon from '@iconify/icons-mdi/compare-horizontal'
+import emailIcon from '@iconify/icons-mdi/email-outline'
+import handshakeIcon from '@iconify/icons-mdi/handshake-outline'
 import searchIcon from '@iconify/icons-lucide/search'
 import { useState, useEffect, type ReactElement } from 'react'
 import clsx from 'clsx'
@@ -84,43 +86,43 @@ const links: NavLink[] = [
           name: 'Residential Design',
           description: 'Transform your home into a personal sanctuary',
           href: '/residential',
-          icon: bedSingleIcon,
+          icon: homeIcon,
         },
         {
           name: 'Commercial Design',
           description: 'Create inspiring workspaces that drive success',
           href: '/commercial',
-          icon: usersIcon,
+          icon: officeIcon,
         },
         {
           name: 'Kitchen & Bath',
           description: 'Luxury and functionality for your daily rituals',
           href: '/kitchen-bath',
-          icon: dropletIcon,
+          icon: bathtubIcon,
         },
         {
           name: 'Space Planning',
           description: 'Optimize your layout for comfort and flow',
           href: '/space-planning',
-          icon: heartHandshakeIcon,
+          icon: floorPlanIcon,
         },
         {
           name: 'Color Consultation',
           description: 'Expert guidance for the perfect palette',
           href: '/color-consultation',
-          icon: graduationCapIcon,
+          icon: paletteIcon,
         },
         {
           name: 'Furniture Selection',
           description: 'Curated pieces that reflect your style',
           href: '/furniture',
-          icon: pillIcon,
+          icon: sofaIcon,
         },
         {
           name: 'Project Management',
           description: 'Seamless execution from concept to completion',
           href: '/project-management',
-          icon: babyIcon,
+          icon: clipboardCheckIcon,
         },
       ],
     },
@@ -134,31 +136,31 @@ const links: NavLink[] = [
           name: 'Our Story',
           description: 'Learn about our design philosophy and passion',
           href: '/residential',
-          icon: usersRoundIcon,
+          icon: bookOpenIcon,
         },
         {
           name: 'Meet the Team',
           description: 'Get to know our talented designers',
           href: '/commercial',
-          icon: graduationCapIcon,
+          icon: accountGroupIcon,
         },
         {
           name: 'Client Testimonials',
           description: 'Stories from our satisfied clients',
           href: '/testimonials',
-          icon: mapPinIcon,
+          icon: starIcon,
         },
         {
           name: 'Before & After',
           description: 'See the transformation process',
           href: '/before-after',
-          icon: dropletIcon,
+          icon: compareIcon,
         },
         {
           name: 'Contact',
           description: 'Get in touch with our design team',
           href: '/contact',
-          icon: messageCircleHeartIcon,
+          icon: emailIcon,
         },
         {
           name: 'Join Our Team',
