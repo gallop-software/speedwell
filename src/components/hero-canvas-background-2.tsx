@@ -56,7 +56,7 @@ export function HeroCanvasBackground2({
       for (let i = 0; i < ballCount; i++) {
         const startY = Math.random() * height
         const baseSize = Math.random() * 8 + 4 // Smaller balls (4-12px)
-        
+
         balls.push({
           x: Math.random() * (width * 0.3), // Start from left side (30% of width)
           y: startY,
@@ -84,7 +84,8 @@ export function HeroCanvasBackground2({
 
         // Update size (pulsating animation) - slower
         ball.sizePhase += 0.003
-        ball.size = ball.baseSize + Math.sin(ball.sizePhase) * (ball.baseSize * 0.4)
+        ball.size =
+          ball.baseSize + Math.sin(ball.sizePhase) * (ball.baseSize * 0.4)
 
         // Calculate funnel spread: balls spread apart as they move up
         // The higher they go (lower y value), the more they spread horizontally
@@ -95,7 +96,7 @@ export function HeroCanvasBackground2({
         // Calculate fade out before reaching edges
         const fadeZone = 100 // Start fading 100px before edges
         let fadeOpacity = ball.opacity
-        
+
         // Fade when approaching right edge
         if (ball.x > width - fadeZone) {
           fadeOpacity *= Math.max(0, (width - ball.x) / fadeZone)
@@ -117,14 +118,14 @@ export function HeroCanvasBackground2({
           // Draw ball with soft glow
           ctx.beginPath()
           ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2)
-          
+
           // White fill with fading opacity
           ctx.fillStyle = `rgba(255, 255, 255, ${fadeOpacity})`
           ctx.globalAlpha = fadeOpacity
           ctx.shadowBlur = 10
           ctx.shadowColor = 'rgba(255, 255, 255, 0.6)'
           ctx.fill()
-          
+
           ctx.shadowBlur = 0
           ctx.globalAlpha = 1
         }
