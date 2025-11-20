@@ -288,8 +288,31 @@ function DesktopNav({
  * Manages its own state internally
  * @returns {ReactElement} Search button with dropdown
  */
-function SearchButton(): ReactElement {
+function SearchButton({
+  enableShortcut = false,
+}: {
+  enableShortcut?: boolean
+}): ReactElement {
   const [isSearching, setIsSearching] = useState(false)
+
+  useEffect(() => {
+    if (isSearching || !enableShortcut) {
+      return
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        event.preventDefault()
+        setIsSearching(true)
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [isSearching, enableShortcut])
 
   return (
     <div className="hidden lg:block">
@@ -637,7 +660,7 @@ function StickyNavbar({
 
                   {/* Right Side - Social Media Icons and Mobile Button */}
                   <div className="flex items-center ml-auto space-x-0 md:space-x-1">
-                    <SearchButton />
+                    <SearchButton enableShortcut={false} />
                     <SocialMediaNav />
                     <StickyMobileNavButton />
                   </div>
@@ -704,7 +727,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
 
                 {/* Right Side - Social Media Icons and Mobile Button */}
                 <div className="flex items-center ml-auto space-x-0 md:space-x-1">
-                  <SearchButton />
+                  <SearchButton enableShortcut={true} />
                   <SocialMediaNav />
                   <MobileNavButton open={open} />
                 </div>

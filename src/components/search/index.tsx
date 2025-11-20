@@ -62,25 +62,6 @@ export function Search({
     onClose: close,
   })
 
-  useEffect(() => {
-    if (isOpen) {
-      return
-    }
-
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
-        event.preventDefault()
-        setIsOpen(true)
-      }
-    }
-
-    window.addEventListener('keydown', onKeyDown)
-
-    return () => {
-      window.removeEventListener('keydown', onKeyDown)
-    }
-  }, [isOpen, setIsOpen])
-
   return (
     <>
       <Suspense fallback={null}>
