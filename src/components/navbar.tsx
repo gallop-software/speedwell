@@ -74,90 +74,90 @@ interface NavbarProps {
 }
 
 const links: NavLink[] = [
-  { href: '/lorem-ipsum', label: 'Lorem Ipsum' },
+  { href: '/', label: 'Home' },
   {
-    href: '/enim-ad',
-    label: 'Eiusmod',
+    href: '/services',
+    label: 'Services',
     dropdown: {
       items: [
         {
-          name: 'Adipiscing Elit',
-          description: 'Sed do eiusmod tempor incididunt ut labore',
-          href: '/enim-ad',
-          icon: babyIcon,
-        },
-        {
-          name: 'Ut Enim Ad',
-          description: 'Minim veniam quis nostrud exercitation',
-          href: '/eiusmod-tempor',
+          name: 'Residential Design',
+          description: 'Transform your home into a personal sanctuary',
+          href: '/services/residential',
           icon: bedSingleIcon,
         },
         {
-          name: 'Duis Aute Irure',
-          description: 'Dolor in reprehenderit in voluptate velit',
-          href: '/adipiscing-elit-sed',
+          name: 'Commercial Design',
+          description: 'Create inspiring workspaces that drive success',
+          href: '/services/commercial',
           icon: usersIcon,
         },
         {
-          name: 'Excepteur Sint',
-          description: 'Occaecat cupidatat non proident sunt',
-          href: '/laboris-nisi',
+          name: 'Kitchen & Bath',
+          description: 'Luxury and functionality for your daily rituals',
+          href: '/services/kitchen-bath',
           icon: dropletIcon,
         },
         {
-          name: 'In Culpa Qui',
-          description: 'Officia deserunt mollit anim id est',
-          href: '/magna-aliqua',
+          name: 'Space Planning',
+          description: 'Optimize your layout for comfort and flow',
+          href: '/services/space-planning',
           icon: heartHandshakeIcon,
         },
         {
-          name: 'Laborum Et Dolorum',
-          description: 'Fuga et harum quidem rerum facilis',
-          href: '/sit-amet-consectetur',
+          name: 'Color Consultation',
+          description: 'Expert guidance for the perfect palette',
+          href: '/services/color-consultation',
           icon: graduationCapIcon,
         },
         {
-          name: 'Nam Libero Tempore',
-          description: 'Cum soluta nobis est eligendi optio',
-          href: '/labore-dolore',
+          name: 'Furniture Selection',
+          description: 'Curated pieces that reflect your style',
+          href: '/services/furniture',
           icon: pillIcon,
+        },
+        {
+          name: 'Project Management',
+          description: 'Seamless execution from concept to completion',
+          href: '/services/project-management',
+          icon: babyIcon,
         },
       ],
     },
   },
   {
-    href: '/enim-ad-minim',
-    label: 'Vestibulum',
+    href: '/portfolio',
+    label: 'Portfolio',
     dropdown: {
       items: [
         {
-          name: 'Ante Ipsum',
-          description: 'Primis in faucibus orci luctus et',
-          href: '/enim-ad-minim',
+          name: 'Residential Projects',
+          description: 'Beautiful homes we\'ve brought to life',
+          href: '/portfolio/residential',
           icon: usersRoundIcon,
         },
         {
-          name: 'Ultrices Posuere',
-          description: 'Cubilia curae mauris viverra odio',
-          href: '/quis-nostrud',
+          name: 'Commercial Projects',
+          description: 'Inspiring spaces for modern businesses',
+          href: '/portfolio/commercial',
           icon: graduationCapIcon,
         },
         {
-          name: 'Sagittis Lacus',
-          description: 'Vel augue laoreet rutrum faucibus',
-          href: '/sit',
+          name: 'Before & After',
+          description: 'See the transformation process',
+          href: '/portfolio/before-after',
           icon: mapPinIcon,
         },
         {
-          name: 'Dolor Auctor',
-          description: 'Elit ut aliquam purus sit amet',
-          href: '/incididunt',
+          name: 'Case Studies',
+          description: 'In-depth looks at our design process',
+          href: '/portfolio/case-studies',
           icon: messageCircleHeartIcon,
         },
         {
-          name: 'Luctus Accumsan',
-          description: 'Tortor mauris condimentum nibh ut',
-          href: '/sed-do',
+          name: 'Client Testimonials',
+          description: 'Stories from our satisfied clients',
+          href: '/testimonials',
           icon: handshakeIcon,
         },
       ],
@@ -232,10 +232,10 @@ function DesktopNav({
                     className="absolute left-1/2 -translate-x-1/2 xl:left-0 xl:-ml-4 xl:translate-x-0 z-50 mt-5 flex w-screen max-w-max px-4 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
                   >
                     <div
-                      className={`w-screen ${label === 'Eiusmod' ? 'max-w-2xl' : 'max-w-md'} flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
+                      className={`w-screen ${label === 'Services' ? 'max-w-2xl' : 'max-w-md'} flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
                     >
                       <div
-                        className={`p-4 ${label === 'Eiusmod' ? 'grid grid-cols-2 gap-x-4' : ''}`}
+                        className={`p-4 ${label === 'Services' ? 'grid grid-cols-2 gap-x-4' : ''}`}
                       >
                         {dropdown.items.map((item: DropdownItem) => (
                           <Link
