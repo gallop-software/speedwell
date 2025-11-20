@@ -3,9 +3,10 @@ import {
   type AutocompleteApi,
   type AutocompleteState,
 } from '@algolia/autocomplete-core'
-import { Icon } from '@iconify/react'
+import searchIcon from '@iconify/icons-lucide/search'
 import clsx from 'clsx'
 
+import { Icon } from '../icon'
 import { LoadingIcon } from './loading-icon'
 import { type Result } from './search-client'
 
@@ -30,7 +31,7 @@ export const SearchInput = forwardRef<
   return (
     <div className="group relative flex h-18">
       <Icon
-        icon="lucide:search"
+        icon={searchIcon}
         className="pointer-events-none absolute top-0 left-4 h-full w-5 text-contrast"
       />
       <input
