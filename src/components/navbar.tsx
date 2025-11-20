@@ -18,7 +18,11 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from './icon'
+import facebookIcon from '@iconify/icons-mdi/facebook'
+import instagramIcon from '@iconify/icons-mdi/instagram'
+import phoneIcon from '@iconify/icons-mdi/phone'
+import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
 import { useState, useEffect, type ReactElement } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
@@ -52,7 +56,7 @@ interface CallToAction {
 interface SocialLink {
   name: string
   href: string
-  icon: string
+  icon: { body: string; width?: number; height?: number }
 }
 
 interface NavbarProps {
@@ -155,22 +159,22 @@ const socialLinks: SocialLink[] = [
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/speedwell',
-    icon: 'mdi:facebook',
+    icon: facebookIcon,
   },
   {
     name: 'Instagram',
     href: 'http://instagram.com/speedwell',
-    icon: 'mdi:instagram',
+    icon: instagramIcon,
   },
   {
     name: 'Phone',
     href: 'tel:5551234567',
-    icon: 'mdi:phone',
+    icon: phoneIcon,
   },
   {
     name: 'Email',
     href: '/sit',
-    icon: 'mdi:email-outline',
+    icon: emailOutlineIcon,
   },
 ]
 
@@ -314,10 +318,7 @@ function SocialMediaNav(): ReactElement {
           className="text-accent hover:text-accent-dark hover:bg-black/[2.5%] rounded-lg transition-colors duration-200 p-2"
           aria-label={item.name}
         >
-          <Icon
-            icon={item.icon}
-            className="h-7 w-7"
-          />
+          <Icon icon={item.icon} />
         </a>
       ))}
     </div>
