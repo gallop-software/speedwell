@@ -79,17 +79,53 @@ function extractSectionsFromHtml(html, url) {
     document.querySelector('title')?.textContent.trim() ||
     url.split('/').pop().replace(/-/g, ' ')
 
+  // If there's only one heading (typical for blog posts), extract all main content
+  if (headings.length === 1) {
+    const heading = headings[0]
+    const id = heading.id || ''
+    const title = heading.textContent.trim()
+    const headingUrl = `${url}${id ? `#${id}` : ''}`
+
+    // Get all text content from main
+    const mainContent = getTextContent(main)
+
+    // Remove the heading from the beginning of the content if it exists
+    let content = mainContent
+    if (mainContent.startsWith(title)) {
+      content = mainContent.slice(title.length).trim()
+    }
+
+    // Only add if there's actual content
+    if (content.trim()) {
+      sections.push({
+        url: headingUrl,
+        title: title,
+        content: content,
+        pageTitle: undefined,
+      })
+    }
+
+    return sections
+  }
+
+  // For pages with multiple headings, parse by sections
   headings.forEach((heading, index) => {
     const id = heading.id || ''
     const title = heading.textContent.trim()
     const headingUrl = `${url}${id ? `#${id}` : ''}`
 
     // Collect content between this heading and the next
-    let content = []
+    let content = [] // Don't include the heading text in content
     let currentElement = heading.nextElementSibling
     const nextHeading = headings[index + 1]
 
-    while (currentElement && currentElement !== nextHeading) {
+    // Helper function to check if an element contains the next heading
+    function containsNextHeading(element) {
+      if (!nextHeading) return false
+      return element === nextHeading || element.contains(nextHeading)
+    }
+
+    while (currentElement && !containsNextHeading(currentElement)) {
       // Skip nav, header, footer, aside, script, style
       if (
         !['NAV', 'HEADER', 'FOOTER', 'ASIDE', 'SCRIPT', 'STYLE'].includes(
@@ -104,12 +140,16 @@ function extractSectionsFromHtml(html, url) {
       currentElement = currentElement.nextElementSibling
     }
 
-    sections.push({
-      url: headingUrl,
-      title: title,
-      content: content.join('\n'),
-      pageTitle: id ? pageTitle : undefined,
-    })
+    const contentText = content.join(' ')
+    // Only add if there's actual content
+    if (contentText.trim()) {
+      sections.push({
+        url: headingUrl,
+        title: title,
+        content: contentText,
+        pageTitle: id ? pageTitle : undefined,
+      })
+    }
   })
 
   return sections
