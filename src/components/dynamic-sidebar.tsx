@@ -14,20 +14,26 @@ import { GalleryPopup } from './lightbox/gallery-popup'
 import { Image } from './image'
 
 const images = [
-  { src: '/images/pexels-helenalopes-1996337.jpg', alt: 'Lorem ipsum dolor' },
   {
-    src: '/images/pexels-lumierestudiomx-1462355.jpg',
-    alt: 'Sit amet consectetur',
+    src: '/images/profiles/pexels-anna-nekrashevich-6801642-200x300.jpg',
+    alt: 'Team member',
   },
   {
-    src: '/images/pexels-jaime-reimer-1376930-9899960.jpg',
-    alt: 'Adipiscing elit sed',
+    src: '/images/profiles/pexels-dxaxoxfz-17555273-200x300.jpg',
+    alt: 'Team member',
   },
   {
-    src: '/images/pexels-mabelamber-141978.jpg',
-    alt: 'Eiusmod tempor incididunt',
+    src: '/images/profiles/pexels-ekaterina-bolovtsova-5393594-200x300.jpg',
+    alt: 'Team member',
   },
-  { src: '/images/pexels-brett-sayles-1069722.jpg', alt: 'Ut labore dolore' },
+  {
+    src: '/images/profiles/pexels-linkedin-2182970-200x300.jpg',
+    alt: 'Team member',
+  },
+  {
+    src: '/images/profiles/pexels-nkhajotia-1516680-200x300.jpg',
+    alt: 'Team member',
+  },
 ]
 
 function SidebarHeader({ closeModal }: any) {
