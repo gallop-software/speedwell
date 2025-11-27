@@ -2,6 +2,9 @@ import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Swi
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
+export default function Content() {
+  return (
+    <>
 <Navbar />
 
 <div className="relative">
@@ -492,6 +495,9 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
     </Testimonial1>
   </Swiper>
 </Section>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Est cupidatat aliquip excepteur exercitation',

@@ -1,5 +1,8 @@
 import { Button, Image, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Coastal Home Renovation</PageHeader>
 
 <Image
@@ -18,6 +21,9 @@ import { Button, Image, PageHeader , P } from '@/components'
 >
   View Full Project
 </Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Coastal Home Renovation | Beach House Interior Design',

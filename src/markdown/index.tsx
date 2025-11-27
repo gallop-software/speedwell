@@ -3,6 +3,9 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
 
+export default function Content() {
+  return (
+    <>
 <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">
   <Navbar className="-mt-2" />
   <div className="mx-auto max-w-[1600px] relative">
@@ -242,6 +245,9 @@ import playCircleIcon from '@iconify/icons-lucide/play-circle'
   />
   <Blog />
 </Section>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Award-Winning Interior Design Services | Residential & Commercial',

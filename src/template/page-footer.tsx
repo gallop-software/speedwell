@@ -1,5 +1,8 @@
 import { Cover, Accent, Section, FancyHeading, Swiper, Testimonial1, Quote } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <Cover
   imageSrc="/images/portfolio/pexels-clickerhappy-584399.jpg"
   imageAlt="Beautiful interior design space"
@@ -46,3 +49,6 @@ import { Cover, Accent, Section, FancyHeading, Swiper, Testimonial1, Quote } fro
     </Testimonial1>
   </Swiper>
 </Section>
+    </>
+  )
+}

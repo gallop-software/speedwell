@@ -1,8 +1,11 @@
 import { Paragraph, Heading, Button, ButtonPlay, Buttons, Section, Grid, Card1, Card2, FancyHeading, Columns, Column, Accent, Navbar, Accordion, Cover, Image, Quote } from '@/components'
-import PageFooter from '@/template/page-footer.mdx'
+import PageFooter from '@/template/page-footer'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
+export default function Content() {
+  return (
+    <>
 <Navbar />
 
 <div className="relative">
@@ -36,7 +39,7 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
         <Buttons className="">
           <Button
             href="#services"
-            theme="primary"
+            variant="primary"
             icon={arrowDownIcon}
             iconPlacement="after"
           >
@@ -238,6 +241,9 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 </Section>
 
 <PageFooter />
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Est enim do veniam deserunt id lorem',
