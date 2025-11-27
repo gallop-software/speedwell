@@ -43,13 +43,16 @@ function SidebarHeader({ closeModal }: any) {
         <div className="flex -space-x-2">
           {images.map((image, index) => {
             return (
-              <figure key={`figure-${index}`}>
+              <figure
+                key={`figure-${index}`}
+                className="h-10 w-10"
+              >
                 {image && (
                   <Image
                     src={image.src}
                     size="small"
                     alt={image.alt}
-                    className="inline-block h-10 w-10 ring-2 ring-white object-cover"
+                    className="inline-block h-10 w-10 ring-2 ring-white object-cover aspect-square"
                     rounded="rounded-full"
                   />
                 )}
