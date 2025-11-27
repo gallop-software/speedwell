@@ -1,36 +1,54 @@
-import { Button, Image, PageHeader , P } from '@/components'
+import { Button, Image, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Bohemian Bedroom Design</PageHeader>
+      <PageHeader>Bohemian Bedroom Design</PageHeader>
 
-<Image
-  src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-  size="large"
-  wrap={true}
-/>
+      <Image
+        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+        size="large"
+        wrap={true}
+      />
 
-<P>This bedroom transformation embraces bohemian style with layers of global textiles, vintage finds, and an eclectic mix of patterns and textures. A low-profile platform bed dressed in handwoven textiles serves as the centerpiece, surrounded by Moroccan rugs, macramé wall hangings, and collected art from travels. The rich color palette includes terracotta, mustard, and deep teal against a warm white backdrop.</P>
+      <P>
+        This bedroom transformation embraces bohemian style with layers of
+        global textiles, vintage finds, and an eclectic mix of patterns and
+        textures. A low-profile platform bed dressed in handwoven textiles
+        serves as the centerpiece, surrounded by Moroccan rugs, macramé wall
+        hangings, and collected art from travels. The rich color palette
+        includes terracotta, mustard, and deep teal against a warm white
+        backdrop.
+      </P>
 
-<P>Rattan furniture pieces, floor cushions, and poufs create flexible seating areas perfect for reading or meditation. We incorporated abundant plants in hanging planters and vintage ceramic pots to bring life and organic form. String lights and lanterns provide ambient lighting, while layered window treatments filter natural light beautifully. The space celebrates personal expression and cultural appreciation through thoughtfully curated objects that tell a story.</P>
+      <P>
+        Rattan furniture pieces, floor cushions, and poufs create flexible
+        seating areas perfect for reading or meditation. We incorporated
+        abundant plants in hanging planters and vintage ceramic pots to bring
+        life and organic form. String lights and lanterns provide ambient
+        lighting, while layered window treatments filter natural light
+        beautifully. The space celebrates personal expression and cultural
+        appreciation through thoughtfully curated objects that tell a story.
+      </P>
 
-<Button
-  href="/post/bohemian-bedroom-design"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/bohemian-bedroom-design"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Bohemian Bedroom Design | Eclectic Global Style Interior',
-  description: 'Layered bohemian bedroom featuring global textiles, vintage finds, abundant plants, and eclectic mix of patterns and cultural elements.',
+  description:
+    'Layered bohemian bedroom featuring global textiles, vintage finds, abundant plants, and eclectic mix of patterns and cultural elements.',
   date: '2024-09-07',
   slug: 'bohemian-bedroom-design',
-  featuredImage: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
+  featuredImage:
+    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
   categories: ['Bedroom Design', 'Bohemian', 'Eclectic'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/bohemian-bedroom-design',
@@ -38,7 +56,8 @@ export const metadata = {
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Bohemian Bedroom Design | Eclectic Global Style Interior',
-    description: 'Bohemian bedroom with global textiles and eclectic vintage finds',
+    description:
+      'Bohemian bedroom with global textiles and eclectic vintage finds',
     image: {
       url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
       alt: 'Bohemian bedroom with layered textiles and plants',

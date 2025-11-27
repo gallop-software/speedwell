@@ -1,36 +1,54 @@
-import { Button, Image, PageHeader , P } from '@/components'
+import { Button, Image, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Boutique Hotel Design</PageHeader>
+      <PageHeader>Boutique Hotel Design</PageHeader>
 
-<Image
-  src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
-  size="large"
-  wrap={true}
-/>
+      <Image
+        src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+        size="large"
+        wrap={true}
+      />
 
-<P>This intimate boutique hotel design creates a memorable guest experience through carefully curated interiors that blend local character with sophisticated comfort. Each of the twelve guest rooms features unique layouts and custom furnishings that reflect the building's historic architecture while providing modern luxury. Rich textiles, statement lighting, and original artwork create distinct personalities for each space.</P>
+      <P>
+        This intimate boutique hotel design creates a memorable guest experience
+        through carefully curated interiors that blend local character with
+        sophisticated comfort. Each of the twelve guest rooms features unique
+        layouts and custom furnishings that reflect the building's historic
+        architecture while providing modern luxury. Rich textiles, statement
+        lighting, and original artwork create distinct personalities for each
+        space.
+      </P>
 
-<P>Public areas include a cozy lobby lounge with a curated library, an intimate cocktail bar with custom millwork, and a breakfast room that opens to a private courtyard garden. We selected durable, high-quality materials that will age gracefully while maintaining a residential feel. Attention to acoustics, lighting controls, and thoughtful amenities ensure guest comfort. The design celebrates the property's heritage while establishing a contemporary boutique hotel identity.</P>
+      <P>
+        Public areas include a cozy lobby lounge with a curated library, an
+        intimate cocktail bar with custom millwork, and a breakfast room that
+        opens to a private courtyard garden. We selected durable, high-quality
+        materials that will age gracefully while maintaining a residential feel.
+        Attention to acoustics, lighting controls, and thoughtful amenities
+        ensure guest comfort. The design celebrates the property's heritage
+        while establishing a contemporary boutique hotel identity.
+      </P>
 
-<Button
-  href="/post/boutique-hotel-design"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/boutique-hotel-design"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Boutique Hotel Design | Luxury Hospitality Interior Design',
-  description: 'Intimate boutique hotel featuring unique guest rooms, curated public spaces, and sophisticated design blending historic charm with modern luxury.',
+  description:
+    'Intimate boutique hotel featuring unique guest rooms, curated public spaces, and sophisticated design blending historic charm with modern luxury.',
   date: '2025-01-08',
   slug: 'boutique-hotel-design',
-  featuredImage: '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
+  featuredImage:
+    '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
   categories: ['Commercial', 'Hospitality', 'Luxury'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/boutique-hotel-design',
@@ -38,7 +56,8 @@ export const metadata = {
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Boutique Hotel Design | Luxury Hospitality Interior Design',
-    description: 'Sophisticated boutique hotel with unique rooms and curated public spaces',
+    description:
+      'Sophisticated boutique hotel with unique rooms and curated public spaces',
     image: {
       url: '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
       alt: 'Boutique hotel lobby with sophisticated furnishings',

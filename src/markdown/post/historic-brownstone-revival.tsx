@@ -1,45 +1,64 @@
-import { Button, Image, PageHeader , P } from '@/components'
+import { Button, Image, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Historic Brownstone Revival</PageHeader>
+      <PageHeader>Historic Brownstone Revival</PageHeader>
 
-<Image
-  src="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
-  size="large"
-  wrap={true}
-  alt="Historic brownstone interior with restored architectural details"
-/>
+      <Image
+        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
+        size="large"
+        wrap={true}
+        alt="Historic brownstone interior with restored architectural details"
+      />
 
-<P>This 19th-century brownstone required a delicate balance of historic preservation and modern functionality. We meticulously restored original architectural details including crown molding, hardwood floors, and ornate fireplace mantels while updating the space for contemporary living. The design honors the home's Victorian heritage through rich jewel tones, vintage-inspired lighting, and carefully selected antique pieces, while modern amenities and open sightlines ensure comfort and livability. Custom millwork blends seamlessly with original features, and a sophisticated color palette highlights the home's architectural beauty.</P>
+      <P>
+        This 19th-century brownstone required a delicate balance of historic
+        preservation and modern functionality. We meticulously restored original
+        architectural details including crown molding, hardwood floors, and
+        ornate fireplace mantels while updating the space for contemporary
+        living. The design honors the home's Victorian heritage through rich
+        jewel tones, vintage-inspired lighting, and carefully selected antique
+        pieces, while modern amenities and open sightlines ensure comfort and
+        livability. Custom millwork blends seamlessly with original features,
+        and a sophisticated color palette highlights the home's architectural
+        beauty.
+      </P>
 
-<P>Every room tells a story of thoughtful restoration, from the grand entrance foyer with its restored staircase to the chef's kitchen that respects the home's character while providing state-of-the-art functionality.</P>
+      <P>
+        Every room tells a story of thoughtful restoration, from the grand
+        entrance foyer with its restored staircase to the chef's kitchen that
+        respects the home's character while providing state-of-the-art
+        functionality.
+      </P>
 
-<Button
-  href="/post/historic-brownstone-revival"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/historic-brownstone-revival"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Historic Brownstone Revival | Victorian Home Restoration',
-  description: 'Meticulous restoration of a 19th-century brownstone blending original architectural details with modern amenities and contemporary design sensibilities.',
+  description:
+    'Meticulous restoration of a 19th-century brownstone blending original architectural details with modern amenities and contemporary design sensibilities.',
   date: '2024-11-05',
   slug: 'historic-brownstone-revival',
   featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
   categories: ['Residential', 'Historic Restoration', 'Victorian'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/historic-brownstone-revival',
+    canonical:
+      'https://speedwell.gallop.software/post/historic-brownstone-revival',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Historic Brownstone Revival | Victorian Home Restoration',
-    description: '19th-century brownstone restoration honoring original details while incorporating modern comfort',
+    description:
+      '19th-century brownstone restoration honoring original details while incorporating modern comfort',
     image: {
       url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
       alt: 'Restored historic brownstone interior with Victorian details',

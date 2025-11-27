@@ -1,38 +1,54 @@
-import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
+import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Open Concept Living</PageHeader>
+      <PageHeader>Open Concept Living</PageHeader>
 
-<Gallery>
-  <GalleryItem
-    src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
-    size="large"
-  />
-</Gallery>
+      <Gallery>
+        <GalleryItem
+          src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          size="large"
+        />
+      </Gallery>
 
-<P>This whole-home renovation centered on removing walls to create a flowing open-concept layout perfect for modern family living. The kitchen, dining, and living areas now form one cohesive space with distinct zones defined by furniture placement, lighting, and material changes. A large kitchen island serves as the central hub, providing seating, storage, and workspace while maintaining visual connection throughout.</P>
+      <P>
+        This whole-home renovation centered on removing walls to create a
+        flowing open-concept layout perfect for modern family living. The
+        kitchen, dining, and living areas now form one cohesive space with
+        distinct zones defined by furniture placement, lighting, and material
+        changes. A large kitchen island serves as the central hub, providing
+        seating, storage, and workspace while maintaining visual connection
+        throughout.
+      </P>
 
-<P>We maintained spatial definition through a consistent design language while varying textures and ceiling treatments. The result is an airy, light-filled space that feels generous yet intimate. Floor-to-ceiling windows and glass doors were added to enhance the indoor-outdoor connection. Strategic built-in storage and concealed utility areas keep the open space organized and clutter-free.</P>
+      <P>
+        We maintained spatial definition through a consistent design language
+        while varying textures and ceiling treatments. The result is an airy,
+        light-filled space that feels generous yet intimate. Floor-to-ceiling
+        windows and glass doors were added to enhance the indoor-outdoor
+        connection. Strategic built-in storage and concealed utility areas keep
+        the open space organized and clutter-free.
+      </P>
 
-<Button
-  href="/post/open-concept-living"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/open-concept-living"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Open Concept Living | Modern Home Renovation Design',
-  description: 'Whole-home renovation creating flowing open-concept space with defined zones for kitchen, dining, and living areas with indoor-outdoor connection.',
+  description:
+    'Whole-home renovation creating flowing open-concept space with defined zones for kitchen, dining, and living areas with indoor-outdoor connection.',
   date: '2024-04-16',
   slug: 'open-concept-living',
   featuredImage: '/images/portfolio/houzlook/pexels-houzlook-3356416.jpg',

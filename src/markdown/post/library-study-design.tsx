@@ -1,33 +1,50 @@
-import { Button, Image, PageHeader , P } from '@/components'
+import { Button, Image, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Library Study Design</PageHeader>
+      <PageHeader>Library Study Design</PageHeader>
 
-<Image
-  src="/images/portfolio/pexels-pixabay-276724.jpg"
-  size="large"
-  wrap={true}
-/>
+      <Image
+        src="/images/portfolio/pexels-pixabay-276724.jpg"
+        size="large"
+        wrap={true}
+      />
 
-<P>This traditional library study creates an intimate sanctuary for reading and contemplation. Floor-to-ceiling custom bookcases in rich walnut display an extensive book collection while providing concealed storage for office supplies. A rolling library ladder adds both function and classic elegance. The room centers around a leather Chesterfield sofa positioned before a marble fireplace, creating the quintessential reading nook.</P>
+      <P>
+        This traditional library study creates an intimate sanctuary for reading
+        and contemplation. Floor-to-ceiling custom bookcases in rich walnut
+        display an extensive book collection while providing concealed storage
+        for office supplies. A rolling library ladder adds both function and
+        classic elegance. The room centers around a leather Chesterfield sofa
+        positioned before a marble fireplace, creating the quintessential
+        reading nook.
+      </P>
 
-<P>Layered lighting includes table lamps, wall sconces, and discreet LED strips that illuminate bookshelves without glare. A substantial desk with green banker's lamp provides a dedicated workspace. The color palette of deep greens, burgundy, and warm wood tones creates a cocoon-like atmosphere that encourages hours of lost-in-a-book contentment. Persian rugs, leather-bound volumes, and carefully selected accessories complete this timeless, scholarly retreat.</P>
+      <P>
+        Layered lighting includes table lamps, wall sconces, and discreet LED
+        strips that illuminate bookshelves without glare. A substantial desk
+        with green banker's lamp provides a dedicated workspace. The color
+        palette of deep greens, burgundy, and warm wood tones creates a
+        cocoon-like atmosphere that encourages hours of lost-in-a-book
+        contentment. Persian rugs, leather-bound volumes, and carefully selected
+        accessories complete this timeless, scholarly retreat.
+      </P>
 
-<Button
-  href="/post/library-study-design"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/library-study-design"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Library Study Design | Traditional Home Library Interior',
-  description: 'Classic library study featuring floor-to-ceiling bookcases, leather furnishings, and sophisticated traditional design for reading and contemplation.',
+  description:
+    'Classic library study featuring floor-to-ceiling bookcases, leather furnishings, and sophisticated traditional design for reading and contemplation.',
   date: '2025-03-12',
   slug: 'library-study-design',
   featuredImage: '/images/portfolio/pexels-pixabay-276724.jpg',
@@ -38,7 +55,8 @@ export const metadata = {
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Library Study Design | Traditional Home Library Interior',
-    description: 'Traditional library with custom bookcases and leather furnishings',
+    description:
+      'Traditional library with custom bookcases and leather furnishings',
     image: {
       url: '/images/portfolio/pexels-pixabay-276724.jpg',
       alt: 'Library study with floor-to-ceiling bookshelves and reading nook',

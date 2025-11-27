@@ -1,38 +1,54 @@
-import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
+import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Rooftop Terrace Design</PageHeader>
+      <PageHeader>Rooftop Terrace Design</PageHeader>
 
-<Gallery>
-  <GalleryItem
-    src="/images/portfolio/pexels-dropshado-2251247.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-    size="large"
-  />
-</Gallery>
+      <Gallery>
+        <GalleryItem
+          src="/images/portfolio/pexels-dropshado-2251247.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          size="large"
+        />
+      </Gallery>
 
-<P>This urban rooftop transformation created an outdoor oasis with panoramic city views. We designed multiple zones including a dining area with pergola for shade, a lounge space with weather-resistant sectional seating, and a compact kitchenette for outdoor entertaining. Composite decking provides a low-maintenance surface that withstands the elements while maintaining a natural wood appearance.</P>
+      <P>
+        This urban rooftop transformation created an outdoor oasis with
+        panoramic city views. We designed multiple zones including a dining area
+        with pergola for shade, a lounge space with weather-resistant sectional
+        seating, and a compact kitchenette for outdoor entertaining. Composite
+        decking provides a low-maintenance surface that withstands the elements
+        while maintaining a natural wood appearance.
+      </P>
 
-<P>Container gardens with native plants add greenery and privacy screening without requiring extensive infrastructure. String lights and lanterns create magical evening ambiance, while a portable fire feature extends the usable season. Weatherproof storage benches conceal cushions and accessories when not in use. The design maximizes every square foot of this premium outdoor space while addressing wind, sun exposure, and building regulations.</P>
+      <P>
+        Container gardens with native plants add greenery and privacy screening
+        without requiring extensive infrastructure. String lights and lanterns
+        create magical evening ambiance, while a portable fire feature extends
+        the usable season. Weatherproof storage benches conceal cushions and
+        accessories when not in use. The design maximizes every square foot of
+        this premium outdoor space while addressing wind, sun exposure, and
+        building regulations.
+      </P>
 
-<Button
-  href="/post/rooftop-terrace-design"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/rooftop-terrace-design"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Rooftop Terrace Design | Urban Outdoor Living Space',
-  description: 'Urban rooftop terrace featuring multiple zones, container gardens, and weather-resistant design for year-round outdoor entertaining.',
+  description:
+    'Urban rooftop terrace featuring multiple zones, container gardens, and weather-resistant design for year-round outdoor entertaining.',
   date: '2024-06-25',
   slug: 'rooftop-terrace-design',
   featuredImage: '/images/portfolio/pexels-dropshado-2251247.jpg',
@@ -43,7 +59,8 @@ export const metadata = {
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Rooftop Terrace Design | Urban Outdoor Living Space',
-    description: 'Urban rooftop oasis with dining, lounge areas, and city views',
+    description:
+      'Urban rooftop oasis with dining, lounge areas, and city views',
     image: {
       url: '/images/portfolio/pexels-dropshado-2251247.jpg',
       alt: 'Rooftop terrace with outdoor furniture and city views',
