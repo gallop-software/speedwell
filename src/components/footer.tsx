@@ -24,12 +24,12 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com',
+    href: 'https://www.facebook.com/speedwell',
     icon: facebookIcon,
   },
   {
     name: 'Instagram',
-    href: 'http://instagram.com',
+    href: 'http://instagram.com/speedwell',
     icon: instagramIcon,
   },
   {
@@ -39,27 +39,29 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    href: '/sit',
+    href: 'mailto:me@your-company.com',
     icon: emailOutlineIcon,
   },
 ]
 
 const leftColumn = [
-  { label: 'Lorem Ipsum', href: '/lorem-ipsum' },
-  { label: 'Dolor Sit Amet', href: '/enim-ad' },
-  { label: 'Consectetur Adipiscing', href: '/eiusmod-tempor' },
-  { label: 'Sed Do Eiusmod', href: '/adipiscing-elit-sed' },
-  { label: 'Tempor Incididunt', href: '/laboris-nisi' },
-  { label: 'Ut Labore Et', href: '/magna-aliqua' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Residential Design', href: '/residential' },
+  { label: 'Commercial Design', href: '/commercial' },
+  { label: 'Kitchen & Bath', href: '/kitchen-bath' },
+  { label: 'Space Planning', href: '/space-planning' },
+  { label: 'Color Consultation', href: '/color-consultation' },
+  { label: 'Furniture Selection', href: '/furniture' },
 ]
 
 const rightColumn = [
-  { label: 'Dolore Magna Aliqua', href: '/sit-amet-consectetur' },
-  { label: 'Enim Ad Minim', href: '/labore-dolore' },
-  { label: 'Veniam Quis Nostrud', href: '/enim-ad-minim' },
-  { label: 'Exercitation Ullamco', href: '/sit' },
-  { label: 'Laboris Nisi Ut', href: '/incididunt' },
-  { label: 'Aliquip Ex Ea', href: '/sed-do' },
+  { label: 'Our Story', href: '/residential' },
+  { label: 'Meet the Team', href: '/commercial' },
+  { label: 'Client Testimonials', href: '/testimonials' },
+  { label: 'Before & After', href: '/before-after' },
+  { label: 'Project Management', href: '/project-management' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Join Our Team', href: '/join-our-team' },
 ]
 
 function SocialLinks() {
@@ -106,7 +108,7 @@ function Copyright() {
       fontSize="text-sm"
       margin="mb-0"
     >
-      &copy; {new Date().getFullYear()} Lorem Ipsum Company
+      &copy; {new Date().getFullYear()} Timmerman Interior Designer
     </Paragraph>
   )
 }
@@ -130,10 +132,11 @@ export function Footer() {
                 fontSize="text-xl"
                 className="text-center italic"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Situated in the heart of the Design District on Main Street, our
+                studio is steps away from premier showrooms and artisan
+                workshops. Nestled within a beautifully restored historic
+                building, our inspiring space is perfect for bringing your
+                design vision to life.
               </Heading>
               <SocialLinks />
             </div>
