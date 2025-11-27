@@ -191,7 +191,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    href: '/sit',
+    href: 'mailto:me@your-company.com',
     icon: emailOutlineIcon,
   },
 ]
