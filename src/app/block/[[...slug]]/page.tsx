@@ -40,8 +40,8 @@ export async function generateStaticParams() {
       if (file.isDirectory()) {
         // Recursively get files from subdirectories
         mdxFiles.push(...getAllMdxFiles(fullPath, relativePath))
-      } else if (file.name.endsWith('.mdx')) {
-        const slugPath = relativePath.replace(/\.mdx$/, '')
+      } else if (file.name.endsWith('.tsx')) {
+        const slugPath = relativePath.replace(/\.tsx$/, '')
         const segments = slugPath.split('/').map((seg) => {
           try {
             return decodeURIComponent(seg)
@@ -82,7 +82,7 @@ export default async function Page({ params }: PageProps) {
 
   try {
     const { default: MDXContent, metadata } = await import(
-      `@/blocks/${slugPath}.mdx`
+      `@/blocks/${slugPath}.tsx`
     )
 
     return (
