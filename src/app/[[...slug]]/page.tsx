@@ -50,8 +50,8 @@ export async function generateStaticParams() {
       if (file.isDirectory()) {
         // Recursively get files from subdirectories
         mdxFiles.push(...getAllMdxFiles(fullPath, relativePath))
-      } else if (file.name.endsWith('.mdx')) {
-        const slugPath = relativePath.replace(/\.mdx$/, '')
+      } else if (file.name.endsWith('.tsx')) {
+        const slugPath = relativePath.replace(/\.tsx$/, '')
         const segments = slugPath.split('/').map((seg) => {
           try {
             return decodeURIComponent(seg)
@@ -82,7 +82,7 @@ export async function generateMetadata({
   const slugPath = getSlugPath(slug)
 
   try {
-    const { metadata } = await import(`@/markdown/${slugPath}.mdx`)
+    const { metadata } = await import(`@/markdown/${slugPath}.tsx`)
 
     // Define image data variables
     const openGraphImageData = metadata?.openGraph?.image
@@ -206,7 +206,7 @@ export default async function Page({ params }: PageProps) {
 
   try {
     const { default: MDXContent, metadata } = await import(
-      `@/markdown/${slugPath}.mdx`
+      `@/markdown/${slugPath}.tsx`
     )
 
     const structuredData = {

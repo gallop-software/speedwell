@@ -56,14 +56,14 @@ export const dynamic = 'force-dynamic'
 
 async function importMDXPost(slug: string): Promise<MDXPost | null> {
   try {
-    const filePath = path.join(process.cwd(), 'src/markdown', `${slug}.mdx`)
+    const filePath = path.join(process.cwd(), 'src/markdown', `${slug}.tsx`)
     const fileContent = fs.readFileSync(filePath, 'utf8')
 
     const metadataMatch = fileContent.match(
       /export\s+const\s+metadata\s*=\s*({[\s\S]*?\n})\s*;?/
     )
     if (!metadataMatch) {
-      console.warn(`No metadata found in ${slug}.mdx`)
+      console.warn(`No metadata found in ${slug}.tsx`)
       return null
     }
 
@@ -79,7 +79,7 @@ async function importMDXPost(slug: string): Promise<MDXPost | null> {
       content,
     }
   } catch (error) {
-    console.error(`Failed to import ${slug}.mdx:`, error)
+    console.error(`Failed to import ${slug}.tsx:`, error)
     return null
   }
 }
@@ -100,9 +100,9 @@ function getSlugPaths(
       continue
     }
 
-    if (!entry.name.endsWith('.mdx')) continue
+    if (!entry.name.endsWith('.tsx')) continue
 
-    const slugPathNoExt = relative.replace(/\.mdx$/, '')
+    const slugPathNoExt = relative.replace(/\.tsx$/, '')
     const segs = slugPathNoExt.split('/').map((seg) => {
       try {
         return encodeURIComponent(decodeURIComponent(seg))
