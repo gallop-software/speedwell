@@ -1,49 +1,65 @@
-import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
+import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Guest Suite Makeover</PageHeader>
+      <PageHeader>Guest Suite Makeover</PageHeader>
 
-<Gallery>
-  <GalleryItem
-    src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-    size="large"
-  />
-</Gallery>
+      <Gallery>
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          size="large"
+        />
+      </Gallery>
 
-<P>This guest suite renovation transformed an underutilized spare room into a welcoming retreat that rivals any boutique hotel. We created a calming sanctuary with a plush upholstered bed dressed in hotel-quality linens, bedside tables with reading lamps, and blackout curtains for quality sleep. A cozy seating area by the window provides a spot for morning coffee or quiet reading.</P>
+      <P>
+        This guest suite renovation transformed an underutilized spare room into
+        a welcoming retreat that rivals any boutique hotel. We created a calming
+        sanctuary with a plush upholstered bed dressed in hotel-quality linens,
+        bedside tables with reading lamps, and blackout curtains for quality
+        sleep. A cozy seating area by the window provides a spot for morning
+        coffee or quiet reading.
+      </P>
 
-<P>Thoughtful hospitality details include a luggage rack, full-length mirror, empty drawer and closet space, and a beverage station with kettle and refreshments. The ensuite bathroom received fresh paint, new fixtures, fluffy towels, and quality toiletries. The neutral palette with soft blue accents creates a serene atmosphere that makes guests feel truly pampered and welcome.</P>
+      <P>
+        Thoughtful hospitality details include a luggage rack, full-length
+        mirror, empty drawer and closet space, and a beverage station with
+        kettle and refreshments. The ensuite bathroom received fresh paint, new
+        fixtures, fluffy towels, and quality toiletries. The neutral palette
+        with soft blue accents creates a serene atmosphere that makes guests
+        feel truly pampered and welcome.
+      </P>
 
-<Button
-  href="/post/guest-suite-makeover"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/guest-suite-makeover"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Guest Suite Makeover | Boutique Hotel Style Guest Room',
-  description: 'Welcoming guest suite featuring hotel-quality amenities, comfortable furnishings, and thoughtful details for the ultimate guest experience.',
+  description:
+    'Welcoming guest suite featuring hotel-quality amenities, comfortable furnishings, and thoughtful details for the ultimate guest experience.',
   date: '2024-09-22',
   slug: 'guest-suite-makeover',
-  featuredImage: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
+  featuredImage:
+    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
   categories: ['Guest Room', 'Residential', 'Bedroom Design'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/guest-suite-makeover',
@@ -51,7 +67,8 @@ export const metadata = {
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Guest Suite Makeover | Boutique Hotel Style Guest Room',
-    description: 'Hotel-style guest suite with thoughtful amenities and welcoming design',
+    description:
+      'Hotel-style guest suite with thoughtful amenities and welcoming design',
     image: {
       url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
       alt: 'Guest suite with comfortable bed and hotel-quality amenities',

@@ -1,49 +1,75 @@
-import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Gradient, Navbar, Container, Image } from '@/components'
+import {
+  Paragraph,
+  Heading,
+  Button,
+  ButtonPlay,
+  Buttons,
+  Blog,
+  Section,
+  Grid,
+  Card1,
+  Card2,
+  FancyHeading,
+  VimeoAutoPlayer,
+  Columns,
+  Column,
+  Accent,
+  Gradient,
+  Navbar,
+  Container,
+  Image,
+} from '@/components'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content() {
   return (
     <>
-<Section className="py-20 md:py-30 lg:pb-0 bg-body2 relative">
-  <div className="absolute w-[44%] border-r border-b border-black left-0 -top-30 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>
-  <Columns reverseColumns={false}>
-    <Column className="aspect-[8/9] relative lg:-mb-20">
-      <Image
-        src="/images/pexels-quill-j-154796843-33425453.jpg"
-        alt="Lorem anim pariatur laborum eiusmod labore"
-        className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-        size="large"
-      />
-      <Image
-        src="/images/pexels-jaime-reimer-1376930-9899960.jpg"
-        alt="Duis tempor duis labore duis"
-        className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-        rounded="rounded-b-none rounded-t-full"
-        size="large"
-      />
-      <Accent
-        className="absolute bottom-[35%] left-4 z-30"
-        color="text-white"
-      >
-        magna ut
-      </Accent>
-    </Column>
-    <Column className="mb-10">
-      <Heading as="h2">Nisi amet esse occaecat</Heading>
-      <Paragraph>Reprehenderit fugiat enim anim sint ea nulla dolor eiusmod ea laborum sed mollit magna ad irure irure nulla occaecat fugiat lorem id laboris elit sed deserunt incididunt sint laboris lorem officia irure esse sit qui lorem cupidatat irure labore tempor sint proident quis aliquip occaecat</Paragraph>
-      <Buttons>
-        <Button
-          variant="primary"
-          href="/sit"
-          icon={arrowRightIcon}
-          iconPlacement="after"
-        >
-          Nisi labore
-        </Button>
-      </Buttons>
-    </Column>
-  </Columns>
-</Section>
+      <Section className="py-20 md:py-30 lg:pb-0 bg-body2 relative">
+        <div className="absolute w-[44%] border-r border-b border-black left-0 -top-30 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>
+        <Columns reverseColumns={false}>
+          <Column className="aspect-[8/9] relative lg:-mb-20">
+            <Image
+              src="/images/pexels-quill-j-154796843-33425453.jpg"
+              alt="Lorem anim pariatur laborum eiusmod labore"
+              className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
+              size="large"
+            />
+            <Image
+              src="/images/pexels-jaime-reimer-1376930-9899960.jpg"
+              alt="Duis tempor duis labore duis"
+              className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
+              rounded="rounded-b-none rounded-t-full"
+              size="large"
+            />
+            <Accent
+              className="absolute bottom-[35%] left-4 z-30"
+              color="text-white"
+            >
+              magna ut
+            </Accent>
+          </Column>
+          <Column className="mb-10">
+            <Heading as="h2">Nisi amet esse occaecat</Heading>
+            <Paragraph>
+              Reprehenderit fugiat enim anim sint ea nulla dolor eiusmod ea
+              laborum sed mollit magna ad irure irure nulla occaecat fugiat
+              lorem id laboris elit sed deserunt incididunt sint laboris lorem
+              officia irure esse sit qui lorem cupidatat irure labore tempor
+              sint proident quis aliquip occaecat
+            </Paragraph>
+            <Buttons>
+              <Button
+                variant="primary"
+                href="/sit"
+                icon={arrowRightIcon}
+                iconPlacement="after"
+              >
+                Nisi labore
+              </Button>
+            </Buttons>
+          </Column>
+        </Columns>
+      </Section>
     </>
   )
 }

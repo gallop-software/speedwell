@@ -1,4 +1,24 @@
-import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Swiper, Testimonial1, FancyHeading, Columns, Column, List, Li, Gallery, GalleryItem, Navbar, Image } from '@/components'
+import {
+  Cover,
+  Section,
+  Heading,
+  Paragraph,
+  Quote,
+  Buttons,
+  Button,
+  Accent,
+  Swiper,
+  Testimonial1,
+  FancyHeading,
+  Columns,
+  Column,
+  List,
+  Li,
+  Gallery,
+  GalleryItem,
+  Navbar,
+  Image,
+} from '@/components'
 import PageFooter from '@/template/page-footer'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
@@ -6,322 +26,436 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 export default function Content() {
   return (
     <>
-<Navbar />
+      <Navbar />
 
-<div className="relative">
-  <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
-  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
-    <Columns reverseColumns>
-      <Column className="relative -mx-6">
-        <Image
-          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-          alt="Qui occaecat est reprehenderit tempor cillum commodo labore"
-          rounded="rounded-none"
-          size="large"
-          lazy={false}
-        />
-        <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">amet sed</Accent>
-      </Column>
-      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
-        <Heading
-          as="h1"
-          className="max-w-2xl"
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
+        <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+          <Columns reverseColumns>
+            <Column className="relative -mx-6">
+              <Image
+                className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+                alt="Qui occaecat est reprehenderit tempor cillum commodo labore"
+                rounded="rounded-none"
+                size="large"
+                lazy={false}
+              />
+              <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
+                amet sed
+              </Accent>
+            </Column>
+            <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+              <Heading
+                as="h1"
+                className="max-w-2xl"
+              >
+                Eiusmod aliquip ullamco ea
+              </Heading>
+              <Paragraph>
+                Sit commodo adipiscing cupidatat in sunt cupidatat voluptate
+                adipiscing commodo ea consectetur anim do sit aute incididunt
+                ullamco ipsum aliqua aute quis ex commodo aute nulla pariatur
+                anim occaecat lorem nostrud adipiscing et consectetur ut sed est
+                sed
+              </Paragraph>
+              <Paragraph>
+                Id pariatur magna laborum nulla laboris id culpa est cillum
+                dolor esse culpa ullamco exercitation proident nulla veniam duis
+                nisi dolor enim sint velit ipsum eiusmod eiusmod
+              </Paragraph>
+              <Buttons className="">
+                <Button
+                  href="#services"
+                  icon={arrowDownIcon}
+                  iconPlacement="after"
+                >
+                  In quis ea esse
+                </Button>
+              </Buttons>
+            </Column>
+          </Columns>
+        </div>
+      </div>
+
+      <Section className="bg-body py-30">
+        <Columns gap="gap-10 lg:gap-20">
+          <Column className="aspect-[4/5] relative">
+            <Image
+              src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
+              alt="Qui do cupidatat non aute nulla"
+              className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+              size="large"
+            />
+            <Image
+              src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+              alt="Pariatur elit tempor"
+              className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+              rounded="rounded-b-none rounded-t-full"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h2"
+              id="services"
+            >
+              Sed reprehenderit pariatur
+            </Heading>
+            <Paragraph>
+              Ut ex amet ea minim sint anim anim ipsum dolor aute adipiscing
+              deserunt ea aliquip anim ut qui sit ea fugiat pariatur commodo ut
+              cillum id consequat deserunt cillum consectetur nulla non ea
+              laborum et consequat ullamco enim sed deserunt occaecat qui
+              reprehenderit cillum mollit aliquip magna qui enim est culpa elit
+              sunt irure et ut sint enim aliqua qui voluptate et
+            </Paragraph>
+          </Column>
+        </Columns>
+        <Gallery
+          columns={5}
+          align="none"
+          className="mt-10 lg:mt-20"
         >
-          Eiusmod aliquip ullamco ea
-        </Heading>
-        <Paragraph>Sit commodo adipiscing cupidatat in sunt cupidatat voluptate adipiscing commodo ea consectetur anim do sit aute incididunt ullamco ipsum aliqua aute quis ex commodo aute nulla pariatur anim occaecat lorem nostrud adipiscing et consectetur ut sed est sed</Paragraph>
-        <Paragraph>Id pariatur magna laborum nulla laboris id culpa est cillum dolor esse culpa ullamco exercitation proident nulla veniam duis nisi dolor enim sint velit ipsum eiusmod eiusmod</Paragraph>
-        <Buttons className="">
-          <Button
-            href="#services"
-            icon={arrowDownIcon}
-            iconPlacement="after"
-          >
-            In quis ea esse
-          </Button>
-        </Buttons>
-      </Column>
-    </Columns>
-  </div>
-</div>
+          <GalleryItem
+            src="/images/portfolio/pexels-pixabay-269252.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/pexels-dropshado-2251247.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
+            size="large"
+          />
+        </Gallery>
+      </Section>
 
-<Section className="bg-body py-30">
-  <Columns gap="gap-10 lg:gap-20">
-    <Column className="aspect-[4/5] relative">
-      <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
-        alt="Qui do cupidatat non aute nulla"
-        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-        size="large"
-      />
-      <Image
-        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-        alt="Pariatur elit tempor"
-        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-        rounded="rounded-b-none rounded-t-full"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h2"
-        id="services"
-      >
-        Sed reprehenderit pariatur
-      </Heading>
-      <Paragraph>Ut ex amet ea minim sint anim anim ipsum dolor aute adipiscing deserunt ea aliquip anim ut qui sit ea fugiat pariatur commodo ut cillum id consequat deserunt cillum consectetur nulla non ea laborum et consequat ullamco enim sed deserunt occaecat qui reprehenderit cillum mollit aliquip magna qui enim est culpa elit sunt irure et ut sint enim aliqua qui voluptate et</Paragraph>
-    </Column>
-  </Columns>
-  <Gallery
-    columns={5}
-    align="none"
-    className="mt-10 lg:mt-20"
-  >
-    <GalleryItem
-      src="/images/portfolio/pexels-pixabay-269252.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/pexels-dropshado-2251247.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-      size="large"
-    />
-    <GalleryItem
-      src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
-      size="large"
-    />
-  </Gallery>
-</Section>
-
-<Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
-  <Columns
-    reverseColumns
-    gap="gap-10 lg:gap-20"
-  >
-    <Column className="aspect-[5/5] relative">
-      <Image
-        src="/images/portfolio/pexels-jworks1124-342800.jpg"
-        alt="Id consectetur consectetur proident dolor ad"
-        className="absolute top-0 left-0 z-10 w-[75%] object-cover"
-        rounded="rounded-t-full"
-        size="large"
-      />
-      <Image
-        src="/images/portfolio/pexels-pixabay-259962.jpg"
-        alt="Sed commodo enim nisi excepteur incididunt"
-        className="absolute bottom-0 right-0 z-0 w-[75%] object-cover shadow-2xl"
-        rounded="rounded-t-none"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h3"
-        styleAs="h2"
-      >
-        Id veniam consequat consequat proident cupidatat duis sunt dolor
-      </Heading>
-      <Paragraph>Nostrud ex consectetur et est minim qui eiusmod consectetur non non excepteur consectetur dolor ut commodo amet sint in et nisi cillum fugiat aliqua irure qui consequat do fugiat dolor duis deserunt ipsum proident sed laboris do qui</Paragraph>
-      <Paragraph>Qui est excepteur excepteur laborum cupidatat velit dolore sunt proident deserunt dolor officia deserunt consectetur amet sint est adipiscing irure enim minim elit anim excepteur veniam aliquip consectetur ipsum ipsum sit sunt officia cupidatat culpa officia enim ullamco quis veniam deserunt aliquip dolore non</Paragraph>
-      <Paragraph>Sint sit lorem sit excepteur exercitation laboris dolore proident in consequat in incididunt dolor irure anim reprehenderit consectetur fugiat id ea sunt consequat culpa culpa nostrud esse laborum anim ut sed sit culpa incididunt commodo nulla laboris cupidatat laboris consequat deserunt nostrud cupidatat anim excepteur sed ex commodo</Paragraph>
-    </Column>
-  </Columns>
-</Section>
-
-<Section className="py-30 bg-body">
-  <Columns
-    reverseColumns={false}
-    gap="gap-10 lg:gap-20"
-  >
-    <Column className="aspect-[12/11] relative">
-      <Image
-        src="/images/portfolio/pexels-pixabay-276724.jpg"
-        alt="Incididunt est aliqua velit"
-        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-        size="large"
-      />
-      <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-        alt="Sed ut elit ut ea"
-        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-        rounded="rounded-b-none rounded-t-full"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h3"
-        styleAs="h2"
-      >
-        Commodo adipiscing nisi incididunt
-      </Heading>
-      <Paragraph>Ut elit aute et id reprehenderit laboris esse sit tempor voluptate commodo ut nisi ipsum minim laborum aliqua consectetur veniam culpa laboris anim ullamco voluptate nostrud tempor nostrud proident cupidatat laborum elit esse qui id excepteur et velit nisi incididunt non quis duis laborum commodo ipsum veniam</Paragraph>
-    </Column>
-  </Columns>
-</Section>
-
-<Section className="py-30 bg-body-dark">
-  <Columns
-    reverseColumns={false}
-    gap="gap-10 lg:gap-20"
-  >
-    <Column>
-      <Image
-        src="/images/portfolio/pexels-pixabay-269218.jpg"
-        alt="24/7 midwife access for prenatal care"
-        className="object-cover"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h3"
-        styleAs="h2"
-      >
-        Nulla ipsum sunt dolore amet
-      </Heading>
-      <Paragraph>Velit exercitation reprehenderit lorem laboris est veniam esse do magna irure quis dolore nostrud ullamco non culpa cupidatat eiusmod dolor magna aliqua qui enim incididunt incididunt elit labore do ex consequat ut</Paragraph>
-      <Paragraph>Aute aute tempor quis enim ad labore ea adipiscing velit laborum qui eiusmod in ipsum velit aute ipsum est ea officia esse labore ea cillum ex reprehenderit fugiat ut ullamco non aliquip in mollit cillum excepteur sunt aliquip labore qui ea dolor aute cillum cupidatat</Paragraph>
-      <Paragraph>Pariatur culpa cupidatat est pariatur exercitation adipiscing adipiscing incididunt id enim ullamco labore officia amet cillum veniam tempor mollit quis</Paragraph>
-    </Column>
-  </Columns>
-</Section>
-
-<Section className="py-30 bg-body2">
-  <Columns
-    reverseColumns={true}
-    gap="gap-10 lg:gap-20"
-  >
-    <Column className="aspect-[4/5] relative">
-      <Image
-        src="/images/portfolio/pexels-pixabay-161758.jpg"
-        alt="Adipiscing deserunt ea aliquip ut sint"
-        className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-        size="large"
-      />
-      <Image
-        src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-        alt="Ad eiusmod elit aliquip"
-        className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-        rounded="rounded-b-none rounded-t-full"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h3"
-        styleAs="h2"
-      >
-        Ad ut anim id pariatur
-      </Heading>
-      <Paragraph>Cillum cupidatat officia mollit dolor laboris voluptate occaecat elit veniam dolore nisi in id nulla sit aliquip minim consequat mollit incididunt sed ea</Paragraph>
-      <Paragraph>Incididunt esse duis laborum nulla labore labore sed do aliqua in in cillum dolor laborum anim duis ipsum tempor magna pariatur ad cupidatat sed fugiat tempor dolore laboris excepteur duis fugiat aliqua minim exercitation amet sint ut incididunt fugiat nulla velit duis fugiat amet incididunt pariatur qui officia in id</Paragraph>
-      <Paragraph>Laboris nisi incididunt nostrud mollit fugiat enim fugiat ex laboris do velit aliqua nulla laboris est magna ipsum ut non sint nisi reprehenderit culpa consectetur excepteur aliqua est aliqua anim nisi amet in adipiscing exercitation ut pariatur ex ad sunt ad irure sunt exercitation cupidatat</Paragraph>
-      <Buttons>
-        <Button
-          variant="primary"
-          href="https://spinningbabies.com"
-          icon={arrowRightIcon}
-          iconPlacement="after"
+      <Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
+        <Columns
+          reverseColumns
+          gap="gap-10 lg:gap-20"
         >
-          Ipsum fugiat nisi laboris
-        </Button>
-      </Buttons>
-    </Column>
-  </Columns>
-</Section>
+          <Column className="aspect-[5/5] relative">
+            <Image
+              src="/images/portfolio/pexels-jworks1124-342800.jpg"
+              alt="Id consectetur consectetur proident dolor ad"
+              className="absolute top-0 left-0 z-10 w-[75%] object-cover"
+              rounded="rounded-t-full"
+              size="large"
+            />
+            <Image
+              src="/images/portfolio/pexels-pixabay-259962.jpg"
+              alt="Sed commodo enim nisi excepteur incididunt"
+              className="absolute bottom-0 right-0 z-0 w-[75%] object-cover shadow-2xl"
+              rounded="rounded-t-none"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h3"
+              styleAs="h2"
+            >
+              Id veniam consequat consequat proident cupidatat duis sunt dolor
+            </Heading>
+            <Paragraph>
+              Nostrud ex consectetur et est minim qui eiusmod consectetur non
+              non excepteur consectetur dolor ut commodo amet sint in et nisi
+              cillum fugiat aliqua irure qui consequat do fugiat dolor duis
+              deserunt ipsum proident sed laboris do qui
+            </Paragraph>
+            <Paragraph>
+              Qui est excepteur excepteur laborum cupidatat velit dolore sunt
+              proident deserunt dolor officia deserunt consectetur amet sint est
+              adipiscing irure enim minim elit anim excepteur veniam aliquip
+              consectetur ipsum ipsum sit sunt officia cupidatat culpa officia
+              enim ullamco quis veniam deserunt aliquip dolore non
+            </Paragraph>
+            <Paragraph>
+              Sint sit lorem sit excepteur exercitation laboris dolore proident
+              in consequat in incididunt dolor irure anim reprehenderit
+              consectetur fugiat id ea sunt consequat culpa culpa nostrud esse
+              laborum anim ut sed sit culpa incididunt commodo nulla laboris
+              cupidatat laboris consequat deserunt nostrud cupidatat anim
+              excepteur sed ex commodo
+            </Paragraph>
+          </Column>
+        </Columns>
+      </Section>
 
-<Section className="py-30 bg-body-dark">
-  <Columns
-    reverseColumns={false}
-    gap="gap-10 lg:gap-20"
-  >
-    <Column className="aspect-[4/5] relative">
-      <Image
-        src="/images/portfolio/pexels-burst-545012.jpg"
-        alt="Occaecat elit in dolor ex elit"
-        className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-        size="large"
-      />
-      <Image
-        src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-        alt="Cupidatat dolore et"
-        className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-        rounded="rounded-b-none rounded-t-full"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h3"
-        styleAs="h2"
-      >
-        Reprehenderit dolore fugiat aliqua id incididunt ullamco nisi ullamco
-      </Heading>
-      <Paragraph>Ea tempor nulla dolore enim consectetur ad eiusmod deserunt elit officia anim commodo cillum duis amet laborum elit anim officia minim ad aliquip ea amet mollit laborum velit</Paragraph>
-      <Paragraph>Eiusmod culpa ipsum sunt nulla culpa laboris in id velit consequat magna in enim occaecat enim anim id cillum labore consequat aliqua in aliquip sint ipsum consectetur veniam cupidatat eiusmod et sunt ad ullamco aliqua quis velit fugiat ut reprehenderit non quis est mollit sit sunt non lorem</Paragraph>
-    </Column>
-  </Columns>
-</Section>
+      <Section className="py-30 bg-body">
+        <Columns
+          reverseColumns={false}
+          gap="gap-10 lg:gap-20"
+        >
+          <Column className="aspect-[12/11] relative">
+            <Image
+              src="/images/portfolio/pexels-pixabay-276724.jpg"
+              alt="Incididunt est aliqua velit"
+              className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+              size="large"
+            />
+            <Image
+              src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+              alt="Sed ut elit ut ea"
+              className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+              rounded="rounded-b-none rounded-t-full"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h3"
+              styleAs="h2"
+            >
+              Commodo adipiscing nisi incididunt
+            </Heading>
+            <Paragraph>
+              Ut elit aute et id reprehenderit laboris esse sit tempor voluptate
+              commodo ut nisi ipsum minim laborum aliqua consectetur veniam
+              culpa laboris anim ullamco voluptate nostrud tempor nostrud
+              proident cupidatat laborum elit esse qui id excepteur et velit
+              nisi incididunt non quis duis laborum commodo ipsum veniam
+            </Paragraph>
+          </Column>
+        </Columns>
+      </Section>
 
-<Section className="py-30 bg-body2">
-  <Columns
-    reverseColumns={false}
-    gap="gap-10 lg:gap-20"
-  >
-    <Column>
-      <Image
-        src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
-        alt="Id id magna officia in sint cillum"
-        className="object-cover"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h3"
-        styleAs="h2"
-      >
-        Nisi esse reprehenderit eiusmod
-      </Heading>
-      <Paragraph>Pariatur minim duis proident nostrud velit esse qui occaecat voluptate irure sit et enim qui nulla velit dolor officia amet qui fugiat officia deserunt consequat exercitation nostrud dolor pariatur</Paragraph>
-      <Paragraph>Anim sint amet cupidatat aute magna in nostrud deserunt fugiat nisi dolore laborum excepteur proident proident ex tempor enim labore proident velit commodo proident non magna aute dolore enim dolore consectetur ipsum ad velit</Paragraph>
-      <Paragraph>Incididunt in aliqua et dolor cillum officia ipsum dolore ad nostrud pariatur cupidatat ea officia ex qui pariatur</Paragraph>
-    </Column>
-  </Columns>
-</Section>
+      <Section className="py-30 bg-body-dark">
+        <Columns
+          reverseColumns={false}
+          gap="gap-10 lg:gap-20"
+        >
+          <Column>
+            <Image
+              src="/images/portfolio/pexels-pixabay-269218.jpg"
+              alt="24/7 midwife access for prenatal care"
+              className="object-cover"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h3"
+              styleAs="h2"
+            >
+              Nulla ipsum sunt dolore amet
+            </Heading>
+            <Paragraph>
+              Velit exercitation reprehenderit lorem laboris est veniam esse do
+              magna irure quis dolore nostrud ullamco non culpa cupidatat
+              eiusmod dolor magna aliqua qui enim incididunt incididunt elit
+              labore do ex consequat ut
+            </Paragraph>
+            <Paragraph>
+              Aute aute tempor quis enim ad labore ea adipiscing velit laborum
+              qui eiusmod in ipsum velit aute ipsum est ea officia esse labore
+              ea cillum ex reprehenderit fugiat ut ullamco non aliquip in mollit
+              cillum excepteur sunt aliquip labore qui ea dolor aute cillum
+              cupidatat
+            </Paragraph>
+            <Paragraph>
+              Pariatur culpa cupidatat est pariatur exercitation adipiscing
+              adipiscing incididunt id enim ullamco labore officia amet cillum
+              veniam tempor mollit quis
+            </Paragraph>
+          </Column>
+        </Columns>
+      </Section>
 
-<PageFooter />
+      <Section className="py-30 bg-body2">
+        <Columns
+          reverseColumns={true}
+          gap="gap-10 lg:gap-20"
+        >
+          <Column className="aspect-[4/5] relative">
+            <Image
+              src="/images/portfolio/pexels-pixabay-161758.jpg"
+              alt="Adipiscing deserunt ea aliquip ut sint"
+              className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
+              size="large"
+            />
+            <Image
+              src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+              alt="Ad eiusmod elit aliquip"
+              className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
+              rounded="rounded-b-none rounded-t-full"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h3"
+              styleAs="h2"
+            >
+              Ad ut anim id pariatur
+            </Heading>
+            <Paragraph>
+              Cillum cupidatat officia mollit dolor laboris voluptate occaecat
+              elit veniam dolore nisi in id nulla sit aliquip minim consequat
+              mollit incididunt sed ea
+            </Paragraph>
+            <Paragraph>
+              Incididunt esse duis laborum nulla labore labore sed do aliqua in
+              in cillum dolor laborum anim duis ipsum tempor magna pariatur ad
+              cupidatat sed fugiat tempor dolore laboris excepteur duis fugiat
+              aliqua minim exercitation amet sint ut incididunt fugiat nulla
+              velit duis fugiat amet incididunt pariatur qui officia in id
+            </Paragraph>
+            <Paragraph>
+              Laboris nisi incididunt nostrud mollit fugiat enim fugiat ex
+              laboris do velit aliqua nulla laboris est magna ipsum ut non sint
+              nisi reprehenderit culpa consectetur excepteur aliqua est aliqua
+              anim nisi amet in adipiscing exercitation ut pariatur ex ad sunt
+              ad irure sunt exercitation cupidatat
+            </Paragraph>
+            <Buttons>
+              <Button
+                variant="primary"
+                href="https://spinningbabies.com"
+                icon={arrowRightIcon}
+                iconPlacement="after"
+              >
+                Ipsum fugiat nisi laboris
+              </Button>
+            </Buttons>
+          </Column>
+        </Columns>
+      </Section>
+
+      <Section className="py-30 bg-body-dark">
+        <Columns
+          reverseColumns={false}
+          gap="gap-10 lg:gap-20"
+        >
+          <Column className="aspect-[4/5] relative">
+            <Image
+              src="/images/portfolio/pexels-burst-545012.jpg"
+              alt="Occaecat elit in dolor ex elit"
+              className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+              size="large"
+            />
+            <Image
+              src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+              alt="Cupidatat dolore et"
+              className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+              rounded="rounded-b-none rounded-t-full"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h3"
+              styleAs="h2"
+            >
+              Reprehenderit dolore fugiat aliqua id incididunt ullamco nisi
+              ullamco
+            </Heading>
+            <Paragraph>
+              Ea tempor nulla dolore enim consectetur ad eiusmod deserunt elit
+              officia anim commodo cillum duis amet laborum elit anim officia
+              minim ad aliquip ea amet mollit laborum velit
+            </Paragraph>
+            <Paragraph>
+              Eiusmod culpa ipsum sunt nulla culpa laboris in id velit consequat
+              magna in enim occaecat enim anim id cillum labore consequat aliqua
+              in aliquip sint ipsum consectetur veniam cupidatat eiusmod et sunt
+              ad ullamco aliqua quis velit fugiat ut reprehenderit non quis est
+              mollit sit sunt non lorem
+            </Paragraph>
+          </Column>
+        </Columns>
+      </Section>
+
+      <Section className="py-30 bg-body2">
+        <Columns
+          reverseColumns={false}
+          gap="gap-10 lg:gap-20"
+        >
+          <Column>
+            <Image
+              src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+              alt="Id id magna officia in sint cillum"
+              className="object-cover"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h3"
+              styleAs="h2"
+            >
+              Nisi esse reprehenderit eiusmod
+            </Heading>
+            <Paragraph>
+              Pariatur minim duis proident nostrud velit esse qui occaecat
+              voluptate irure sit et enim qui nulla velit dolor officia amet qui
+              fugiat officia deserunt consequat exercitation nostrud dolor
+              pariatur
+            </Paragraph>
+            <Paragraph>
+              Anim sint amet cupidatat aute magna in nostrud deserunt fugiat
+              nisi dolore laborum excepteur proident proident ex tempor enim
+              labore proident velit commodo proident non magna aute dolore enim
+              dolore consectetur ipsum ad velit
+            </Paragraph>
+            <Paragraph>
+              Incididunt in aliqua et dolor cillum officia ipsum dolore ad
+              nostrud pariatur cupidatat ea officia ex qui pariatur
+            </Paragraph>
+          </Column>
+        </Columns>
+      </Section>
+
+      <PageFooter />
     </>
   )
 }
 
 export const metadata = {
   title: 'Nisi duis enim id ea do aliquip ex',
-  description: 'Exercitation anim id ipsum amet minim fugiat culpa nisi officia proident excepteur ut officia do pariatur labore sit dolor',
-  keywords: ['mauris blandit aliquet', 'elit eget tincidunt', 'nibh pulvinar ultricies', 'augue ligula blandit', 'turpis cursus habitasse', 'platea dictumst vestibulum', 'rhoncus est pellentesque', 'habitant morbi tristique', 'senectus et netus', 'malesuada fames turpis', 'egestas integer eget', 'aliquet nibh praesent', 'tristique magna sit'],
+  description:
+    'Exercitation anim id ipsum amet minim fugiat culpa nisi officia proident excepteur ut officia do pariatur labore sit dolor',
+  keywords: [
+    'mauris blandit aliquet',
+    'elit eget tincidunt',
+    'nibh pulvinar ultricies',
+    'augue ligula blandit',
+    'turpis cursus habitasse',
+    'platea dictumst vestibulum',
+    'rhoncus est pellentesque',
+    'habitant morbi tristique',
+    'senectus et netus',
+    'malesuada fames turpis',
+    'egestas integer eget',
+    'aliquet nibh praesent',
+    'tristique magna sit',
+  ],
   slug: 'enim-ad',
-  featuredImage: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
+  featuredImage:
+    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
   focusKeyword: 'mauris blandit aliquet',
   readingTimeMinutes: 7,
   publishDate: '2021-04-22T15:02:27Z',
@@ -336,7 +470,8 @@ export const metadata = {
     url: 'https://speedwell.gallop.software/prenatal-care/',
     siteName: 'Mauris Blandit Aliquet',
     title: 'Esse reprehenderit id ut sit ad incididunt fugiat',
-    description: 'Adipiscing adipiscing fugiat mollit ut tempor reprehenderit dolore duis culpa do non mollit nulla ex laboris cillum sed dolor',
+    description:
+      'Adipiscing adipiscing fugiat mollit ut tempor reprehenderit dolore duis culpa do non mollit nulla ex laboris cillum sed dolor',
     image: {
       url: '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
       alt: 'Aliquip aliqua id consectetur nulla veniam adipiscing proident commodo esse',
@@ -345,7 +480,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Enim commodo ipsum deserunt esse consequat amet adipiscing',
-    description: 'Est non esse elit est voluptate do minim proident laborum aute excepteur voluptate duis sunt fugiat in veniam et',
+    description:
+      'Est non esse elit est voluptate do minim proident laborum aute excepteur voluptate duis sunt fugiat in veniam et',
     image: '/images/701475_c31a167342294f6ab8a5c7a56fb0b65emv2.jpg',
   },
 }

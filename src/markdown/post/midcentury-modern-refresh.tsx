@@ -1,44 +1,62 @@
-import { Button, Image, PageHeader , P } from '@/components'
+import { Button, Image, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Midcentury Modern Refresh</PageHeader>
+      <PageHeader>Midcentury Modern Refresh</PageHeader>
 
-<Image
-  src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
-  size="large"
-  wrap={true}
-/>
+      <Image
+        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
+        size="large"
+        wrap={true}
+      />
 
-<P>This 1960s home received a thoughtful refresh that honors its midcentury modern architecture while updating finishes and functionality for contemporary living. We restored original features including terrazzo floors, picture windows, and the dramatic floating staircase, complementing them with period-appropriate furnishings and lighting fixtures. The color palette of warm woods, burnt orange, and avocado green pays homage to the era.</P>
+      <P>
+        This 1960s home received a thoughtful refresh that honors its midcentury
+        modern architecture while updating finishes and functionality for
+        contemporary living. We restored original features including terrazzo
+        floors, picture windows, and the dramatic floating staircase,
+        complementing them with period-appropriate furnishings and lighting
+        fixtures. The color palette of warm woods, burnt orange, and avocado
+        green pays homage to the era.
+      </P>
 
-<P>We updated the kitchen and bathrooms with modern fixtures that respect the home's aesthetic, including walnut cabinetry and geometric tile patterns. The open floor plan was enhanced with new built-in storage and a reconstructed fireplace feature wall. Iconic furniture pieces from Eames, Saarinen, and Wegner complete the authentic midcentury feel while providing comfortable, functional living spaces.</P>
+      <P>
+        We updated the kitchen and bathrooms with modern fixtures that respect
+        the home's aesthetic, including walnut cabinetry and geometric tile
+        patterns. The open floor plan was enhanced with new built-in storage and
+        a reconstructed fireplace feature wall. Iconic furniture pieces from
+        Eames, Saarinen, and Wegner complete the authentic midcentury feel while
+        providing comfortable, functional living spaces.
+      </P>
 
-<Button
-  href="/post/midcentury-modern-refresh"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/midcentury-modern-refresh"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Midcentury Modern Refresh | 1960s Home Renovation',
-  description: 'Authentic midcentury modern home renovation preserving original architecture with updated finishes and period-appropriate furnishings.',
+  description:
+    'Authentic midcentury modern home renovation preserving original architecture with updated finishes and period-appropriate furnishings.',
   date: '2024-10-03',
   slug: 'midcentury-modern-refresh',
   featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
   categories: ['Residential', 'Midcentury Modern', 'Renovation'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/midcentury-modern-refresh',
+    canonical:
+      'https://speedwell.gallop.software/post/midcentury-modern-refresh',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Midcentury Modern Refresh | 1960s Home Renovation',
-    description: '1960s home renovation with authentic midcentury modern design and furnishings',
+    description:
+      '1960s home renovation with authentic midcentury modern design and furnishings',
     image: {
       url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
       alt: 'Midcentury modern living room with period furnishings',

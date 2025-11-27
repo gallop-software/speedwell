@@ -1,47 +1,68 @@
-import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
+import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Mountain Chalet Interior</PageHeader>
+      <PageHeader>Mountain Chalet Interior</PageHeader>
 
-<Gallery>
-  <GalleryItem
-    src="/images/portfolio/pexels-jworks1124-342800.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
-    size="large"
-  />
-</Gallery>
+      <Gallery>
+        <GalleryItem
+          src="/images/portfolio/pexels-jworks1124-342800.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+          size="large"
+        />
+      </Gallery>
 
-<P>This alpine retreat interior captures the warmth and coziness of traditional mountain architecture while providing modern luxury. Reclaimed barn wood walls, exposed timber beams, and a grand stone fireplace create authentic mountain character. Floor-to-ceiling windows frame spectacular peak views while filling spaces with natural light. Rich leather furniture, plush textiles, and layered rugs invite relaxation after a day on the slopes.</P>
+      <P>
+        This alpine retreat interior captures the warmth and coziness of
+        traditional mountain architecture while providing modern luxury.
+        Reclaimed barn wood walls, exposed timber beams, and a grand stone
+        fireplace create authentic mountain character. Floor-to-ceiling windows
+        frame spectacular peak views while filling spaces with natural light.
+        Rich leather furniture, plush textiles, and layered rugs invite
+        relaxation after a day on the slopes.
+      </P>
 
-<P>The great room's vaulted ceiling adds drama, while intimate nooks with built-in seating create cozy reading spots. We incorporated rustic elements like antler chandeliers and wrought iron details alongside modern conveniences including radiant floor heating and a state-of-the-art entertainment system. The warm color palette of deep reds, forest greens, and natural wood tones complements the spectacular mountain setting.</P>
+      <P>
+        The great room's vaulted ceiling adds drama, while intimate nooks with
+        built-in seating create cozy reading spots. We incorporated rustic
+        elements like antler chandeliers and wrought iron details alongside
+        modern conveniences including radiant floor heating and a
+        state-of-the-art entertainment system. The warm color palette of deep
+        reds, forest greens, and natural wood tones complements the spectacular
+        mountain setting.
+      </P>
 
-<Button
-  href="/post/mountain-chalet-interior"
-  wrap={true}
->View Full Project</Button>
+      <Button
+        href="/post/mountain-chalet-interior"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Mountain Chalet Interior | Alpine Luxury Home Design',
-  description: 'Warm mountain chalet featuring reclaimed wood, stone fireplace, and rustic luxury design with spectacular alpine views and modern amenities.',
+  description:
+    'Warm mountain chalet featuring reclaimed wood, stone fireplace, and rustic luxury design with spectacular alpine views and modern amenities.',
   date: '2024-01-15',
   slug: 'mountain-chalet-interior',
   featuredImage: '/images/portfolio/pexels-jworks1124-342800.jpg',
   categories: ['Residential', 'Mountain', 'Luxury'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/mountain-chalet-interior',
+    canonical:
+      'https://speedwell.gallop.software/post/mountain-chalet-interior',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Mountain Chalet Interior | Alpine Luxury Home Design',
-    description: 'Cozy mountain chalet with rustic luxury and spectacular views',
+    description:
+      'Cozy mountain chalet with rustic luxury and spectacular views',
     image: {
       url: '/images/portfolio/pexels-jworks1124-342800.jpg',
       alt: 'Mountain chalet interior with exposed beams and stone fireplace',

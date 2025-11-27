@@ -1,36 +1,53 @@
-import { Button, Image, PageHeader , P } from '@/components'
+import { Button, Image, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Chef Kitchen Upgrade</PageHeader>
+      <PageHeader>Chef Kitchen Upgrade</PageHeader>
 
-<Image
-  src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
-  size="large"
-  wrap={true}
-/>
+      <Image
+        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+        size="large"
+        wrap={true}
+      />
 
-<P>This serious cook's kitchen upgrade focuses on professional-grade performance and efficiency. We installed a 48-inch dual-fuel range with six burners and griddle, paired with a powerful ventilation system. The expansive island includes prep sink, abundant workspace, and elevated seating for guests to keep the chef company. A butler's pantry houses small appliances and provides additional prep space.</P>
+      <P>
+        This serious cook's kitchen upgrade focuses on professional-grade
+        performance and efficiency. We installed a 48-inch dual-fuel range with
+        six burners and griddle, paired with a powerful ventilation system. The
+        expansive island includes prep sink, abundant workspace, and elevated
+        seating for guests to keep the chef company. A butler's pantry houses
+        small appliances and provides additional prep space.
+      </P>
 
-<P>Professional-grade refrigeration, a pot-filler faucet at the range, and a dedicated spice drawer near the cooktop enhance workflow. Open shelving displays copper pots and frequently-used items, while deep drawers accommodate large cookware. Durable quartz countertops and commercial-style faucets withstand heavy use. The design balances restaurant functionality with residential comfort, creating a kitchen that inspires culinary creativity.</P>
+      <P>
+        Professional-grade refrigeration, a pot-filler faucet at the range, and
+        a dedicated spice drawer near the cooktop enhance workflow. Open
+        shelving displays copper pots and frequently-used items, while deep
+        drawers accommodate large cookware. Durable quartz countertops and
+        commercial-style faucets withstand heavy use. The design balances
+        restaurant functionality with residential comfort, creating a kitchen
+        that inspires culinary creativity.
+      </P>
 
-<Button
-  href="/post/chef-kitchen-upgrade"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/chef-kitchen-upgrade"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Chef Kitchen Upgrade | Professional Home Kitchen Design',
-  description: "Serious cook's kitchen featuring professional-grade appliances, abundant prep space, and restaurant-quality functionality for home.",
+  description:
+    "Serious cook's kitchen featuring professional-grade appliances, abundant prep space, and restaurant-quality functionality for home.",
   date: '2025-04-05',
   slug: 'chef-kitchen-upgrade',
-  featuredImage: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
+  featuredImage:
+    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
   categories: ['Kitchen Design', 'Professional', 'Gourmet'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/chef-kitchen-upgrade',
@@ -38,7 +55,8 @@ export const metadata = {
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
     title: 'Chef Kitchen Upgrade | Professional Home Kitchen Design',
-    description: 'Professional chef kitchen with restaurant-grade appliances and functionality',
+    description:
+      'Professional chef kitchen with restaurant-grade appliances and functionality',
     image: {
       url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
       alt: 'Chef kitchen with professional appliances and large island',

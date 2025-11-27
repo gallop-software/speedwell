@@ -1,42 +1,58 @@
-import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
+import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
 
 export default function Content() {
   return (
     <>
-<PageHeader>Mudroom Organization</PageHeader>
+      <PageHeader>Mudroom Organization</PageHeader>
 
-<Gallery>
-  <GalleryItem
-    src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-    size="large"
-  />
-  <GalleryItem
-    src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-    size="large"
-  />
-</Gallery>
+      <Gallery>
+        <GalleryItem
+          src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          size="large"
+        />
+      </Gallery>
 
-<P>This hardworking mudroom transformation maximizes organization for an active family of five. Custom built-in cubbies provide dedicated space for each family member with hooks for coats, bench seating for shoe removal, and open bins for sports gear and backpacks. Durable materials including tile flooring, beadboard walls, and painted wood cabinetry withstand daily wear while remaining easy to clean.</P>
+      <P>
+        This hardworking mudroom transformation maximizes organization for an
+        active family of five. Custom built-in cubbies provide dedicated space
+        for each family member with hooks for coats, bench seating for shoe
+        removal, and open bins for sports gear and backpacks. Durable materials
+        including tile flooring, beadboard walls, and painted wood cabinetry
+        withstand daily wear while remaining easy to clean.
+      </P>
 
-<P>A compact wash sink facilitates cleanup of muddy paws and dirty hands before entering the main house. Closed cabinets conceal cleaning supplies and seasonal items, while a magnetic chalkboard panel tracks schedules and messages. The cheerful design with navy blue lockers and brass hooks proves that functional spaces can be stylish. This organized entry system has eliminated morning chaos and created a smooth transition between outdoors and home.</P>
+      <P>
+        A compact wash sink facilitates cleanup of muddy paws and dirty hands
+        before entering the main house. Closed cabinets conceal cleaning
+        supplies and seasonal items, while a magnetic chalkboard panel tracks
+        schedules and messages. The cheerful design with navy blue lockers and
+        brass hooks proves that functional spaces can be stylish. This organized
+        entry system has eliminated morning chaos and created a smooth
+        transition between outdoors and home.
+      </P>
 
-<Button
-  href="/post/mudroom-organization"
-  wrap={true}
->
-  View Full Project
-</Button>
+      <Button
+        href="/post/mudroom-organization"
+        wrap={true}
+      >
+        View Full Project
+      </Button>
     </>
   )
 }
 
 export const metadata = {
   title: 'Mudroom Organization | Family Entry Storage Design',
-  description: 'Functional family mudroom featuring custom cubbies, durable materials, and smart organization for coats, shoes, and sports gear.',
+  description:
+    'Functional family mudroom featuring custom cubbies, durable materials, and smart organization for coats, shoes, and sports gear.',
   date: '2024-10-18',
   slug: 'mudroom-organization',
   featuredImage: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
