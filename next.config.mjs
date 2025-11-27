@@ -1,11 +1,7 @@
-import createMDX from '@next/mdx'
-import { remarkCompressJsx } from './_scripts/remark-compress-jsx.mjs'
-import withMarkdoc from '@markdoc/next.js'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  // Configure `pageExtensions` to include TSX files
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   // Optionally, add any other Next.js config below
   images: {
     // Image optimization for local images
@@ -18,12 +14,4 @@ const nextConfig = {
   },
 }
 
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-  options: {
-    remarkPlugins: [remarkCompressJsx],
-    rehypePlugins: [],
-  },
-})
-
-export default withMDX(nextConfig)
+export default nextConfig
