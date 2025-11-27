@@ -1,99 +1,183 @@
-import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Swiper, Testimonial1, FancyHeading, Columns, Column, List, Li, Gallery, GalleryItem, Navbar, Image } from '@/components'
-import PageFooter from '@/template/page-footer.mdx'
+import {
+  Cover,
+  Section,
+  Heading,
+  Paragraph,
+  Quote,
+  Buttons,
+  Button,
+  Accent,
+  Swiper,
+  Testimonial1,
+  FancyHeading,
+  Columns,
+  Column,
+  List,
+  Li,
+  Gallery,
+  GalleryItem,
+  Navbar,
+  Image,
+} from '@/components'
+import PageFooter from '@/template/page-footer'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
-<Navbar />
+export default function Content() {
+  return (
+    <>
+      <Navbar />
 
-<div className="relative">
-  <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body2 z-0"></div>
-  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
-    <Columns reverseColumns={false}>
-      <Column className="relative -mx-6">
-        <Image
-          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-          alt="Irure veniam et esse ex lorem reprehenderit elit dolor ad"
-          size="large"
-          rounded="rounded-none"
-          lazy={false}
-        />
-        <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12">ut esse</Accent>
-      </Column>
-      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+      <div className="relative">
+        <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body2 z-0"></div>
+        <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+          <Columns reverseColumns={false}>
+            <Column className="relative -mx-6">
+              <Image
+                className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+                src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+                alt="Irure veniam et esse ex lorem reprehenderit elit dolor ad"
+                size="large"
+                rounded="rounded-none"
+                lazy={false}
+              />
+              <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12">
+                ut esse
+              </Accent>
+            </Column>
+            <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+              <Heading
+                as="h1"
+                className="max-w-2xl"
+              >
+                Elit aute ex excepteur adipiscing enim commodo
+              </Heading>
+              <Paragraph>
+                Nostrud est voluptate in proident mollit sed commodo sed do quis
+                quis anim anim cillum et magna do laboris qui fugiat laborum
+                esse excepteur laboris sed consectetur incididunt dolor cillum
+                ut officia mollit in mollit incididunt dolor eiusmod anim tempor
+                nostrud anim sunt id excepteur sunt do qui laborum voluptate
+                tempor et exercitation officia excepteur adipiscing eiusmod
+                incididunt do eiusmod consectetur mollit deserunt voluptate
+                deserunt laborum amet voluptate
+              </Paragraph>
+              <Buttons className="">
+                <Button
+                  href="#services"
+                  icon={arrowDownIcon}
+                  iconPlacement="after"
+                >
+                  Tempor consequat consequat consectetur deserunt cillum
+                </Button>
+              </Buttons>
+            </Column>
+          </Columns>
+        </div>
+      </div>
+
+      <Section
+        className="bg-body py-30"
+        innerAlign="content"
+      >
         <Heading
-          as="h1"
-          className="max-w-2xl"
+          as="h2"
+          id="services"
+          className="text-center"
         >
-          Elit aute ex excepteur adipiscing enim commodo
+          Et sunt quis voluptate cupidatat ipsum
         </Heading>
-        <Paragraph>Nostrud est voluptate in proident mollit sed commodo sed do quis quis anim anim cillum et magna do laboris qui fugiat laborum esse excepteur laboris sed consectetur incididunt dolor cillum ut officia mollit in mollit incididunt dolor eiusmod anim tempor nostrud anim sunt id excepteur sunt do qui laborum voluptate tempor et exercitation officia excepteur adipiscing eiusmod incididunt do eiusmod consectetur mollit deserunt voluptate deserunt laborum amet voluptate</Paragraph>
-        <Buttons className="">
+        <Paragraph>
+          Nisi aliqua tempor duis ad sunt enim laboris duis nostrud occaecat
+          elit cillum fugiat ipsum adipiscing ullamco excepteur ullamco aute ut
+          sit magna amet adipiscing eiusmod labore laborum labore adipiscing
+          dolor qui qui reprehenderit incididunt voluptate ullamco quis elit
+          minim aliqua pariatur veniam fugiat velit reprehenderit lorem irure
+          voluptate
+        </Paragraph>
+        <Paragraph>
+          Duis non sit nostrud laboris tempor veniam anim ipsum minim irure
+          aliqua ex ea adipiscing sed amet ullamco eiusmod aute mollit velit
+          quis irure esse nostrud id minim fugiat velit laborum cillum do minim
+          dolore et et qui id qui et irure ea veniam nostrud ullamco aute magna
+        </Paragraph>
+
+        <Heading as="h3">Cupidatat ea esse nisi</Heading>
+        <Paragraph>
+          Dolor do qui proident cupidatat consectetur ex cillum velit irure amet
+          do reprehenderit aliquip in duis ad dolor reprehenderit anim sed elit
+          cupidatat in consectetur deserunt ipsum deserunt nostrud sit ea
+          exercitation lorem velit ea velit dolor proident
+        </Paragraph>
+        <Paragraph>
+          Ea id excepteur non et exercitation duis consequat ipsum commodo amet
+          adipiscing ea ullamco non aute qui pariatur voluptate dolore irure
+          aliquip commodo sunt ad amet minim sit veniam culpa consequat elit
+          sint ipsum excepteur id incididunt tempor eiusmod ut
+        </Paragraph>
+      </Section>
+
+      <Cover
+        className="py-30 lg:py-50"
+        imageSrc="/images/portfolio/pexels-clickerhappy-584399.jpg"
+        imageAlt="Culpa nulla minim"
+        overlayColor="bg-accent5/90"
+        height="h-auto"
+        innerAlign="content"
+      >
+        <Heading
+          as="h3"
+          styleAs="h2"
+          textAlign="text-center"
+        >
+          Quis commodo sed tempor
+        </Heading>
+        <Paragraph
+          variant="large"
+          textAlign="text-center"
+        >
+          Quis consequat officia nisi ex sint laborum fugiat veniam eiusmod
+          nostrud aute nostrud ex eiusmod nulla aliquip officia veniam
+          exercitation incididunt est consequat pariatur id sed dolor dolor
+          dolor
+        </Paragraph>
+        <Buttons className="mt-8 justify-center">
           <Button
-            href="#services"
-            icon={arrowDownIcon}
+            size="medium"
+            href="/sit"
+            variant="primary"
+            icon={arrowRightIcon}
             iconPlacement="after"
           >
-            Tempor consequat consequat consectetur deserunt cillum
+            Exercitation elit
           </Button>
         </Buttons>
-      </Column>
-    </Columns>
-  </div>
-</div>
+      </Cover>
 
-<Section className="bg-body py-30" innerAlign="content">
-    <Heading as="h2" id="services" className="text-center">Et sunt quis voluptate cupidatat ipsum</Heading>
-    <Paragraph>Nisi aliqua tempor duis ad sunt enim laboris duis nostrud occaecat elit cillum fugiat ipsum adipiscing ullamco excepteur ullamco aute ut sit magna amet adipiscing eiusmod labore laborum labore adipiscing dolor qui qui reprehenderit incididunt voluptate ullamco quis elit minim aliqua pariatur veniam fugiat velit reprehenderit lorem irure voluptate</Paragraph>
-    <Paragraph>Duis non sit nostrud laboris tempor veniam anim ipsum minim irure aliqua ex ea adipiscing sed amet ullamco eiusmod aute mollit velit quis irure esse nostrud id minim fugiat velit laborum cillum do minim dolore et et qui id qui et irure ea veniam nostrud ullamco aute magna</Paragraph>
-
-    <Heading as="h3">Cupidatat ea esse nisi</Heading>
-    <Paragraph>Dolor do qui proident cupidatat consectetur ex cillum velit irure amet do reprehenderit aliquip in duis ad dolor reprehenderit anim sed elit cupidatat in consectetur deserunt ipsum deserunt nostrud sit ea exercitation lorem velit ea velit dolor proident</Paragraph>
-    <Paragraph>Ea id excepteur non et exercitation duis consequat ipsum commodo amet adipiscing ea ullamco non aute qui pariatur voluptate dolore irure aliquip commodo sunt ad amet minim sit veniam culpa consequat elit sint ipsum excepteur id incididunt tempor eiusmod ut</Paragraph>
-
-</Section>
-
-<Cover
-  className="py-30 lg:py-50"
-  imageSrc="/images/portfolio/pexels-clickerhappy-584399.jpg"
-  imageAlt="Culpa nulla minim"
-  overlayColor="bg-accent5/90"
-  height="h-auto"
-  innerAlign="content"
->
-  <Heading
-    as="h3"
-    styleAs="h2"
-    textAlign="text-center"
-  >
-    Quis commodo sed tempor
-  </Heading>
-  <Paragraph
-    variant="large"
-    textAlign="text-center"
-  >
-    Quis consequat officia nisi ex sint laborum fugiat veniam eiusmod nostrud aute nostrud ex eiusmod nulla aliquip officia veniam exercitation incididunt est consequat pariatur id sed dolor dolor dolor
-  </Paragraph>
-  <Buttons className="mt-8 justify-center">
-    <Button
-      size="medium"
-      variant="outline"
-      href="/sit"
-      theme="primary"
-      icon={arrowRightIcon}
-      iconPlacement="after"
-    >
-      Exercitation elit
-    </Button>
-  </Buttons>
-</Cover>
-
-<PageFooter />
+      <PageFooter />
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Adipiscing labore duis aute consectetur proident dolor',
-  description: 'Cupidatat ex occaecat sit anim laborum ex irure dolor consectetur eiusmod veniam culpa laborum consectetur fugiat incididunt proident velit',
-  keywords: ['proin eget encapsulatio', 'tortor encapsulatio lacinia', 'risus encapsulatio near', 'tortor proin eget capsules', 'lacinia pills risus', 'eget encapsulatio tortor', 'risus hormone lacinia', 'proin capsules tortor', 'eget specialist lacinia', 'natural risus support', 'tortor encapsulatio proin', 'lacinia energia support', 'eget encapsulatio servitia'],
+  description:
+    'Cupidatat ex occaecat sit anim laborum ex irure dolor consectetur eiusmod veniam culpa laborum consectetur fugiat incididunt proident velit',
+  keywords: [
+    'proin eget encapsulatio',
+    'tortor encapsulatio lacinia',
+    'risus encapsulatio near',
+    'tortor proin eget capsules',
+    'lacinia pills risus',
+    'eget encapsulatio tortor',
+    'risus hormone lacinia',
+    'proin capsules tortor',
+    'eget specialist lacinia',
+    'natural risus support',
+    'tortor encapsulatio proin',
+    'lacinia energia support',
+    'eget encapsulatio servitia',
+  ],
   slug: 'labore-dolore',
   featuredImage: '/images/portfolio/jvdm/pexels-jvdm-1454804.jpg',
   focusKeyword: 'proin eget encapsulatio',
@@ -110,7 +194,8 @@ export const metadata = {
     url: 'https://speedwell.gallop.software/placenta-encapsulation/',
     siteName: 'Proin Eget Tortor',
     title: 'Ut irure ad officia non duis tempor',
-    description: 'Labore nisi laboris minim veniam id ad anim labore ipsum magna ex nulla anim consequat enim anim adipiscing aliquip',
+    description:
+      'Labore nisi laboris minim veniam id ad anim labore ipsum magna ex nulla anim consequat enim anim adipiscing aliquip',
     image: {
       url: '/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
       alt: 'Aliqua aliqua consequat nostrud sit tempor anim nulla dolore occaecat',
@@ -119,7 +204,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Culpa fugiat do nulla sit minim eiusmod',
-    description: 'Mollit est aliqua lorem exercitation tempor nisi elit ea enim minim in proident qui ipsum pariatur reprehenderit nisi anim',
+    description:
+      'Mollit est aliqua lorem exercitation tempor nisi elit ea enim minim in proident qui ipsum pariatur reprehenderit nisi anim',
     image: '/images/dsc_8239.jpg',
   },
 }

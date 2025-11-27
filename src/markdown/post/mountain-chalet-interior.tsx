@@ -1,5 +1,8 @@
 import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Mountain Chalet Interior</PageHeader>
 
 <Gallery>
@@ -21,6 +24,9 @@ import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
   href="/post/mountain-chalet-interior"
   wrap={true}
 >View Full Project</Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Mountain Chalet Interior | Alpine Luxury Home Design',

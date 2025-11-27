@@ -1,122 +1,217 @@
-import { Paragraph, Heading, Button, ButtonPlay, Buttons, Section, Grid, Card1, Card2, FancyHeading, Columns, Column, Accent, Navbar, Accordion, Cover, Image } from '@/components'
-import PageFooter from '@/template/page-footer.mdx'
+import {
+  Paragraph,
+  Heading,
+  Button,
+  ButtonPlay,
+  Buttons,
+  Section,
+  Grid,
+  Card1,
+  Card2,
+  FancyHeading,
+  Columns,
+  Column,
+  Accent,
+  Navbar,
+  Accordion,
+  Cover,
+  Image,
+} from '@/components'
+import PageFooter from '@/template/page-footer'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
-<Navbar />
+export default function Content() {
+  return (
+    <>
+      <Navbar />
 
-<div className="relative">
-  <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
-  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
-    <Columns reverseColumns>
-      <Column className="relative -mx-6">
-        <Image
-          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
-          alt="Esse velit reprehenderit duis non nostrud cupidatat occaecat lorem"
-          size="large"
-          rounded="rounded-none"
-          lazy={false}
-        />
-        <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">ex enim</Accent>
-      </Column>
-      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
+        <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+          <Columns reverseColumns>
+            <Column className="relative -mx-6">
+              <Image
+                className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+                alt="Esse velit reprehenderit duis non nostrud cupidatat occaecat lorem"
+                size="large"
+                rounded="rounded-none"
+                lazy={false}
+              />
+              <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
+                ex enim
+              </Accent>
+            </Column>
+            <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+              <Heading
+                as="h1"
+                className="max-w-2xl"
+              >
+                Nisi reprehenderit ea pariatur esse sed commodo
+              </Heading>
+              <Paragraph>
+                Culpa lorem cupidatat ipsum minim adipiscing aute mollit aliquip
+                laborum dolor dolore non pariatur lorem officia occaecat labore
+                qui sint sed eiusmod pariatur ipsum aliqua reprehenderit cillum
+                nisi non do sit do in do est occaecat id incididunt anim ex
+                nulla amet officia ut minim elit ullamco ad dolor exercitation
+                tempor ut qui incididunt culpa culpa aliqua eiusmod fugiat do
+                sint do ex aliquip proident tempor minim
+              </Paragraph>
+              <Buttons className="">
+                <Button
+                  href="#learn-more"
+                  icon={arrowDownIcon}
+                  iconPlacement="after"
+                >
+                  Ullamco duis non elit laboris occaecat
+                </Button>
+              </Buttons>
+            </Column>
+          </Columns>
+        </div>
+      </div>
+
+      <Section
+        className="bg-body py-30"
+        innerAlign="content"
+      >
         <Heading
-          as="h1"
-          className="max-w-2xl"
+          as="h2"
+          id="learn-more"
+          className="text-center"
         >
-          Nisi reprehenderit ea pariatur esse sed commodo
+          Laboris et laborum velit officia
         </Heading>
-        <Paragraph>Culpa lorem cupidatat ipsum minim adipiscing aute mollit aliquip laborum dolor dolore non pariatur lorem officia occaecat labore qui sint sed eiusmod pariatur ipsum aliqua reprehenderit cillum nisi non do sit do in do est occaecat id incididunt anim ex nulla amet officia ut minim elit ullamco ad dolor exercitation tempor ut qui incididunt culpa culpa aliqua eiusmod fugiat do sint do ex aliquip proident tempor minim</Paragraph>
-        <Buttons className="">
+        <Paragraph>
+          Do id lorem aliqua sint proident ad minim labore enim proident amet
+          enim ad laboris mollit est labore esse eiusmod fugiat laboris quis ea
+          et velit pariatur commodo aliquip ad consequat do adipiscing velit
+          adipiscing ut qui consectetur pariatur adipiscing fugiat et sed magna
+          ipsum consectetur lorem tempor id sunt nulla dolor magna pariatur
+          cillum incididunt adipiscing magna ipsum exercitation officia
+        </Paragraph>
+        <Heading as="h3">Aliqua commodo lorem consectetur aliquip</Heading>
+        <Paragraph>
+          Sed veniam esse ex labore irure reprehenderit ea nulla deserunt elit
+          ea incididunt duis sunt eiusmod sit veniam aliqua non excepteur velit
+          laboris ut amet nostrud adipiscing proident consequat sunt quis
+          laboris nulla in nisi voluptate nisi nostrud lorem nostrud dolor
+          consequat ad est sunt labore occaecat pariatur culpa labore culpa ut
+          occaecat irure adipiscing
+        </Paragraph>
+        <Heading as="h3">Ut ex magna nulla irure esse sed dolore</Heading>
+        <Paragraph>
+          Ea ad pariatur ad ex quis amet in id mollit magna ipsum dolor
+          adipiscing consequat commodo reprehenderit aliquip cillum ea fugiat
+          sunt cillum consectetur culpa fugiat esse pariatur occaecat voluptate
+          pariatur esse occaecat amet est velit enim esse labore amet nisi
+          occaecat aliqua commodo mollit adipiscing voluptate reprehenderit
+        </Paragraph>
+        <Heading
+          as="h2"
+          className="mt-30"
+        >
+          Magna elit sunt
+        </Heading>
+        <Accordion headingText="Is water birth safe?">
+          <Paragraph>
+            Sit lorem et et anim dolore eiusmod veniam aliqua sint reprehenderit
+            ipsum magna laborum lorem do nostrud consequat consequat mollit
+            laboris dolore irure nulla minim ea et cillum dolor veniam in
+            incididunt ullamco sint amet cillum irure deserunt magna ea deserunt
+            pariatur ex
+          </Paragraph>
+        </Accordion>
+        <Accordion headingText="What are the advantages of water birth?">
+          <Paragraph>
+            Tempor ullamco nulla est sunt exercitation nostrud commodo qui esse
+            labore est labore esse velit culpa quis laborum exercitation amet
+            officia consectetur occaecat laborum aliqua aliqua culpa do magna
+            consectetur enim duis ullamco velit cupidatat
+          </Paragraph>
+        </Accordion>
+        <Accordion headingText="Who is a good candidate?">
+          <Paragraph>
+            Sunt aliqua consequat non amet voluptate nostrud ut cillum culpa
+            amet elit consectetur do duis elit labore mollit non sed ea sint
+            tempor ullamco non aute sed adipiscing deserunt aute ad excepteur
+            anim aute nostrud excepteur esse aliquip cillum aute sint est
+            excepteur cillum
+          </Paragraph>
+        </Accordion>
+        <Paragraph className="text-sm mt-10">
+          Veniam irure minim ipsum dolore nostrud irure minim velit nisi aute
+          officia quis proident ad minim amet nisi non aliquip aliqua aliquip
+          mollit magna magna pariatur sunt veniam ex adipiscing duis esse
+          deserunt ex duis id veniam
+        </Paragraph>
+      </Section>
+
+      <Cover
+        className="py-30 lg:py-50"
+        imageSrc="/images/portfolio/pexels-burst-545012.jpg"
+        imageAlt="Irure nostrud minim"
+        overlayColor="bg-accent5/90"
+        height="h-auto"
+        innerAlign="content"
+      >
+        <Heading
+          as="h3"
+          styleAs="h2"
+          textAlign="text-center"
+        >
+          Magna incididunt laboris mollit quis et anim occaecat culpa cupidatat
+          excepteur
+        </Heading>
+        <Paragraph
+          variant="large"
+          textAlign="text-center"
+        >
+          Ad occaecat sunt nulla minim sunt culpa anim lorem mollit do anim
+          ipsum magna magna fugiat non sed exercitation deserunt magna ad labore
+          velit adipiscing sint ipsum veniam est ea aliqua magna non voluptate
+          culpa dolor labore incididunt fugiat lorem quis duis nostrud sint id
+          ullamco cillum est aliqua ea labore reprehenderit
+        </Paragraph>
+        <Buttons className="mt-8 justify-center">
           <Button
-            href="#learn-more"
-            icon={arrowDownIcon}
+            size="medium"
+            href="/sit"
+            variant="primary"
+            icon={arrowRightIcon}
             iconPlacement="after"
           >
-            Ullamco duis non elit laboris occaecat
+            Veniam non
           </Button>
         </Buttons>
-      </Column>
-    </Columns>
-  </div>
-</div>
+      </Cover>
 
-<Section
-  className="bg-body py-30"
-  innerAlign="content"
->
-  <Heading
-    as="h2"
-    id="learn-more"
-    className="text-center"
-  >
-    Laboris et laborum velit officia
-  </Heading>
-  <Paragraph>Do id lorem aliqua sint proident ad minim labore enim proident amet enim ad laboris mollit est labore esse eiusmod fugiat laboris quis ea et velit pariatur commodo aliquip ad consequat do adipiscing velit adipiscing ut qui consectetur pariatur adipiscing fugiat et sed magna ipsum consectetur lorem tempor id sunt nulla dolor magna pariatur cillum incididunt adipiscing magna ipsum exercitation officia</Paragraph>
-  <Heading as="h3">Aliqua commodo lorem consectetur aliquip</Heading>
-  <Paragraph>Sed veniam esse ex labore irure reprehenderit ea nulla deserunt elit ea incididunt duis sunt eiusmod sit veniam aliqua non excepteur velit laboris ut amet nostrud adipiscing proident consequat sunt quis laboris nulla in nisi voluptate nisi nostrud lorem nostrud dolor consequat ad est sunt labore occaecat pariatur culpa labore culpa ut occaecat irure adipiscing</Paragraph>
-  <Heading as="h3">Ut ex magna nulla irure esse sed dolore</Heading>
-  <Paragraph>Ea ad pariatur ad ex quis amet in id mollit magna ipsum dolor adipiscing consequat commodo reprehenderit aliquip cillum ea fugiat sunt cillum consectetur culpa fugiat esse pariatur occaecat voluptate pariatur esse occaecat amet est velit enim esse labore amet nisi occaecat aliqua commodo mollit adipiscing voluptate reprehenderit</Paragraph>
-  <Heading
-    as="h2"
-    className="mt-30"
-  >
-    Magna elit sunt
-  </Heading>
-  <Accordion headingText="Is water birth safe?">
-    <Paragraph>Sit lorem et et anim dolore eiusmod veniam aliqua sint reprehenderit ipsum magna laborum lorem do nostrud consequat consequat mollit laboris dolore irure nulla minim ea et cillum dolor veniam in incididunt ullamco sint amet cillum irure deserunt magna ea deserunt pariatur ex</Paragraph>
-  </Accordion>
-  <Accordion headingText="What are the advantages of water birth?">
-    <Paragraph>Tempor ullamco nulla est sunt exercitation nostrud commodo qui esse labore est labore esse velit culpa quis laborum exercitation amet officia consectetur occaecat laborum aliqua aliqua culpa do magna consectetur enim duis ullamco velit cupidatat</Paragraph>
-  </Accordion>
-  <Accordion headingText="Who is a good candidate?">
-    <Paragraph>Sunt aliqua consequat non amet voluptate nostrud ut cillum culpa amet elit consectetur do duis elit labore mollit non sed ea sint tempor ullamco non aute sed adipiscing deserunt aute ad excepteur anim aute nostrud excepteur esse aliquip cillum aute sint est excepteur cillum</Paragraph>
-  </Accordion>
-  <Paragraph className="text-sm mt-10">Veniam irure minim ipsum dolore nostrud irure minim velit nisi aute officia quis proident ad minim amet nisi non aliquip aliqua aliquip mollit magna magna pariatur sunt veniam ex adipiscing duis esse deserunt ex duis id veniam</Paragraph>
-</Section>
-
-<Cover
-  className="py-30 lg:py-50"
-  imageSrc="/images/portfolio/pexels-burst-545012.jpg"
-  imageAlt="Irure nostrud minim"
-  overlayColor="bg-accent5/90"
-  height="h-auto"
-  innerAlign="content"
->
-  <Heading
-    as="h3"
-    styleAs="h2"
-    textAlign="text-center"
-  >
-    Magna incididunt laboris mollit quis et anim occaecat culpa cupidatat excepteur
-  </Heading>
-  <Paragraph
-    variant="large"
-    textAlign="text-center"
-  >
-    Ad occaecat sunt nulla minim sunt culpa anim lorem mollit do anim ipsum magna magna fugiat non sed exercitation deserunt magna ad labore velit adipiscing sint ipsum veniam est ea aliqua magna non voluptate culpa dolor labore incididunt fugiat lorem quis duis nostrud sint id ullamco cillum est aliqua ea labore reprehenderit
-  </Paragraph>
-  <Buttons className="mt-8 justify-center">
-    <Button
-      size="medium"
-      variant="outline"
-      href="/sit"
-      theme="primary"
-      icon={arrowRightIcon}
-      iconPlacement="after"
-    >
-      Veniam non
-    </Button>
-  </Buttons>
-</Cover>
-
-<PageFooter />
+      <PageFooter />
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Et culpa sint consequat officia ad',
-  description: 'Nulla consequat minim exercitation deserunt nulla sed qui ut non sit esse labore velit eiusmod ullamco ut esse veniam consectetur',
-  keywords: ['cras ultricies ligula', 'magna dictum cras', 'dictum cras ultricies', 'ligula centrum magna', 'dictum ultricies cras', 'hydrotherapy ligula magna', 'natural cras ultricies', 'magna ligula tub', 'ultricies dictum center', 'ligula cras magna', 'cras delivery magna', 'mitis dictum ligula', 'ultricies ligula near'],
+  description:
+    'Nulla consequat minim exercitation deserunt nulla sed qui ut non sit esse labore velit eiusmod ullamco ut esse veniam consectetur',
+  keywords: [
+    'cras ultricies ligula',
+    'magna dictum cras',
+    'dictum cras ultricies',
+    'ligula centrum magna',
+    'dictum ultricies cras',
+    'hydrotherapy ligula magna',
+    'natural cras ultricies',
+    'magna ligula tub',
+    'ultricies dictum center',
+    'ligula cras magna',
+    'cras delivery magna',
+    'mitis dictum ligula',
+    'ultricies ligula near',
+  ],
   slug: 'laboris-nisi',
   featuredImage: '/images/portfolio/pexels-pixabay-161758.jpg',
   focusKeyword: 'cras ultricies ligula magna',
@@ -133,7 +228,8 @@ export const metadata = {
     url: 'https://speedwell.gallop.software/water-birth/',
     siteName: 'Cras Ultricies Ligula',
     title: 'Aliqua est ea incididunt tempor minim',
-    description: 'Ad do tempor laborum magna ex adipiscing nulla id enim sed nisi sit ipsum laboris fugiat veniam nisi et cillum',
+    description:
+      'Ad do tempor laborum magna ex adipiscing nulla id enim sed nisi sit ipsum laboris fugiat veniam nisi et cillum',
     image: {
       url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
       alt: 'Reprehenderit est occaecat ad adipiscing nisi culpa amet voluptate',
@@ -142,7 +238,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ad veniam sit reprehenderit exercitation duis',
-    description: 'Culpa nulla ea ad enim est ea deserunt voluptate sit nulla anim excepteur officia sint aute magna sunt magna do',
+    description:
+      'Culpa nulla ea ad enim est ea deserunt voluptate sit nulla anim excepteur officia sint aute magna sunt magna do',
     image: '/images/img_0785-scaled0.jpg',
   },
 }

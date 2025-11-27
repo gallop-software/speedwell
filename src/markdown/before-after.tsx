@@ -3,6 +3,9 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 import mapPinIcon from '@iconify/icons-heroicons/map-pin'
 import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
 
+export default function Content() {
+  return (
+    <>
 <Navbar />
 
 <div className="relative">
@@ -232,6 +235,9 @@ import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
     </Column>
   </Columns>
 </Cover>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Cillum veniam ullamco officia et proident ex ea',

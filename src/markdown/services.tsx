@@ -1,8 +1,11 @@
 import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Swiper, Testimonial1, FancyHeading, Columns, Column, List, Li, Gallery, GalleryItem, Navbar, Image } from '@/components'
-import PageFooter from '@/template/page-footer.mdx'
+import PageFooter from '@/template/page-footer'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
+export default function Content() {
+  return (
+    <>
 <Navbar />
 
 <div className="relative">
@@ -309,6 +312,9 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 </Section>
 
 <PageFooter />
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Nisi duis enim id ea do aliquip ex',

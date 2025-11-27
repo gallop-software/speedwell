@@ -1,5 +1,8 @@
 import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Mudroom Organization</PageHeader>
 
 <Gallery>
@@ -27,6 +30,9 @@ import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 >
   View Full Project
 </Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Mudroom Organization | Family Entry Storage Design',

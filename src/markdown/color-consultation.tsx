@@ -1,172 +1,260 @@
-import { Cover, Section, Heading, Paragraph, Quote, Buttons, Button, Accent, Swiper, Testimonial1, FancyHeading, Columns, Column, List, Li, Gallery, GalleryItem, Navbar, Image } from '@/components'
-import PageFooter from '@/template/page-footer.mdx'
+import {
+  Cover,
+  Section,
+  Heading,
+  Paragraph,
+  Quote,
+  Buttons,
+  Button,
+  Accent,
+  Swiper,
+  Testimonial1,
+  FancyHeading,
+  Columns,
+  Column,
+  List,
+  Li,
+  Gallery,
+  GalleryItem,
+  Navbar,
+  Image,
+} from '@/components'
+import PageFooter from '@/template/page-footer'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
-<Navbar />
+export default function Content() {
+  return (
+    <>
+      <Navbar />
 
-<div className="relative">
-  <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-accent3 z-0"></div>
-  <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
-    <Columns reverseColumns>
-      <Column className="relative -mx-6">
-        <Image
-          className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-          alt="Laborum id dolor deserunt sint culpa cillum eiusmod proident ut"
-          size="large"
-          rounded="rounded-none"
-          lazy={false}
-        />
-        <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">qui est</Accent>
-      </Column>
-      <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-accent3 z-0"></div>
+        <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+          <Columns reverseColumns>
+            <Column className="relative -mx-6">
+              <Image
+                className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+                src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+                alt="Laborum id dolor deserunt sint culpa cillum eiusmod proident ut"
+                size="large"
+                rounded="rounded-none"
+                lazy={false}
+              />
+              <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
+                qui est
+              </Accent>
+            </Column>
+            <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+              <Heading
+                as="h1"
+                className="max-w-2xl"
+              >
+                Tempor elit labore ad
+              </Heading>
+              <Quote>
+                Nulla sunt laboris nisi eiusmod aliqua reprehenderit id anim
+                ullamco enim id ea commodo
+              </Quote>
+              <Paragraph>
+                Sed sint laboris officia lorem ipsum proident reprehenderit
+                nostrud dolore proident sunt labore culpa sint est deserunt
+                eiusmod est id commodo adipiscing excepteur sunt elit irure enim
+                nostrud incididunt ea ut esse aliquip amet non occaecat
+                consectetur pariatur nostrud ipsum minim proident ex sunt
+                adipiscing dolore deserunt minim enim elit voluptate commodo non
+                dolore
+              </Paragraph>
+              <Paragraph>
+                Et nisi ex labore exercitation et pariatur proident amet amet id
+                duis anim qui velit ut aliquip nulla magna sed amet deserunt
+                minim magna ex laboris qui nulla amet do dolor dolore enim
+                cillum veniam ea nulla id reprehenderit incididunt occaecat
+                ullamco enim consectetur do
+              </Paragraph>
+              <Paragraph>
+                Non ex ipsum voluptate officia minim do consequat enim
+                adipiscing id ea duis minim excepteur esse ad cupidatat enim
+                pariatur veniam qui dolore aliqua ex ea aliquip laborum anim
+                esse consequat esse proident commodo occaecat non laboris
+                exercitation commodo ut
+              </Paragraph>
+              <Buttons className="">
+                <Button
+                  href="#services"
+                  variant="primary"
+                  icon={arrowDownIcon}
+                  iconPlacement="after"
+                >
+                  Elit irure tempor dolor sint in commodo
+                </Button>
+              </Buttons>
+            </Column>
+          </Columns>
+        </div>
+      </div>
+
+      <Section className="bg-body py-30">
+        <Columns gap="gap-10 lg:gap-20">
+          <Column>
+            <Image
+              src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+              alt="Eiusmod enim adipiscing anim tempor sunt"
+              className="w-full object-cover"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading
+              as="h2"
+              id="services"
+            >
+              Ad commodo sint
+            </Heading>
+            <Quote>
+              Incididunt eiusmod adipiscing sint tempor aliquip ad eiusmod
+              laboris nulla
+            </Quote>
+            <Paragraph>Commodo aliquip excepteur anim cillum non</Paragraph>
+            <List>
+              <Li>Ex consectetur anim</Li>
+              <Li>Est duis sit est lorem</Li>
+              <Li>Consectetur id non deserunt</Li>
+              <Li>Non ipsum</Li>
+              <Li>Voluptate minim consectetur laboris mollit</Li>
+            </List>
+          </Column>
+        </Columns>
+      </Section>
+
+      <Section className="bg-body2 py-30">
+        <Columns gap="gap-10 lg:gap-20">
+          <Column>
+            <Heading as="h2">Sed nulla eiusmod irure ex dolor</Heading>
+            <Quote>
+              Lorem sint aute minim commodo officia et incididunt do
+            </Quote>
+            <Paragraph>Ex dolore</Paragraph>
+            <List>
+              <Li>Cupidatat fugiat laborum cupidatat</Li>
+              <Li>In ipsum ad nulla</Li>
+              <Li>Aliqua amet et dolore</Li>
+              <Li>Lorem enim eiusmod minim sit sunt</Li>
+            </List>
+            <Paragraph className="mt-6">
+              Ad fugiat cillum ex mollit est non proident exercitation nulla
+              veniam id velit ullamco enim id et velit ex sit ullamco sit
+              laboris exercitation magna pariatur do voluptate mollit mollit
+              quis sint adipiscing eiusmod
+            </Paragraph>
+          </Column>
+          <Column>
+            <Image
+              src="/images/portfolio/pexels-pixabay-279719.jpg"
+              alt="Consectetur proident eiusmod labore officia velit irure"
+              className="w-full object-cover"
+              rounded="rounded-t-full"
+              size="large"
+            />
+          </Column>
+        </Columns>
+      </Section>
+
+      <Section className="bg-body py-30">
+        <Columns gap="gap-10 lg:gap-20">
+          <Column>
+            <Image
+              src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+              alt="Esse commodo enim nostrud"
+              className="w-full object-cover"
+              size="large"
+            />
+          </Column>
+          <Column>
+            <Heading as="h2">Consectetur ullamco do</Heading>
+            <Paragraph>
+              Aliqua sit irure ad deserunt sit eiusmod nisi adipiscing
+            </Paragraph>
+            <List>
+              <Li>Velit velit consequat mollit fugiat cillum elit</Li>
+              <Li>Duis lorem aliqua ullamco proident eiusmod veniam</Li>
+              <Li>
+                Ipsum nostrud aliqua incididunt qui ullamco aliquip
+                reprehenderit
+              </Li>
+              <Li>Laboris esse ea minim ut ipsum aliqua</Li>
+            </List>
+            <Paragraph className="mt-6">
+              Excepteur enim velit consectetur fugiat dolore aliqua
+              reprehenderit deserunt sed consequat mollit veniam laborum nostrud
+              ex
+            </Paragraph>
+          </Column>
+        </Columns>
+      </Section>
+
+      <Cover
+        className="py-30 lg:py-50"
+        imageSrc="/images/portfolio/pexels-pixabay-276724.jpg"
+        imageAlt="Proident non esse"
+        overlayColor="bg-accent5/90"
+        height="h-auto"
+        innerAlign="content"
+      >
         <Heading
-          as="h1"
-          className="max-w-2xl"
+          as="h3"
+          styleAs="h2"
+          textAlign="text-center"
         >
-          Tempor elit labore ad
+          Mollit quis cillum laborum ex ut incididunt qui
         </Heading>
-        <Quote>Nulla sunt laboris nisi eiusmod aliqua reprehenderit id anim ullamco enim id ea commodo</Quote>
-        <Paragraph>Sed sint laboris officia lorem ipsum proident reprehenderit nostrud dolore proident sunt labore culpa sint est deserunt eiusmod est id commodo adipiscing excepteur sunt elit irure enim nostrud incididunt ea ut esse aliquip amet non occaecat consectetur pariatur nostrud ipsum minim proident ex sunt adipiscing dolore deserunt minim enim elit voluptate commodo non dolore</Paragraph>
-        <Paragraph>Et nisi ex labore exercitation et pariatur proident amet amet id duis anim qui velit ut aliquip nulla magna sed amet deserunt minim magna ex laboris qui nulla amet do dolor dolore enim cillum veniam ea nulla id reprehenderit incididunt occaecat ullamco enim consectetur do</Paragraph>
-        <Paragraph>Non ex ipsum voluptate officia minim do consequat enim adipiscing id ea duis minim excepteur esse ad cupidatat enim pariatur veniam qui dolore aliqua ex ea aliquip laborum anim esse consequat esse proident commodo occaecat non laboris exercitation commodo ut</Paragraph>
-        <Buttons className="">
+        <Paragraph
+          variant="large"
+          textAlign="text-center"
+        >
+          Cillum sed sed minim adipiscing consectetur esse eiusmod laboris
+          officia ut et dolore fugiat sit reprehenderit duis ut aliquip ullamco
+          ut esse incididunt labore reprehenderit deserunt ut ullamco do laboris
+          dolor exercitation mollit quis aute laboris amet magna dolor esse
+          deserunt magna aute exercitation dolor
+        </Paragraph>
+        <Buttons className="mt-8 justify-center">
           <Button
-            href="#services"
-            theme="primary"
-            icon={arrowDownIcon}
+            size="medium"
+            href="/sit"
+            variant="primary"
+            icon={arrowRightIcon}
             iconPlacement="after"
           >
-            Elit irure tempor dolor sint in commodo
+            Proident pariatur
           </Button>
         </Buttons>
-      </Column>
-    </Columns>
-  </div>
-</div>
+      </Cover>
 
-<Section className="bg-body py-30">
-  <Columns gap="gap-10 lg:gap-20">
-    <Column>
-      <Image
-        src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
-        alt="Eiusmod enim adipiscing anim tempor sunt"
-        className="w-full object-cover"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading
-        as="h2"
-        id="services"
-      >
-        Ad commodo sint
-      </Heading>
-      <Quote>Incididunt eiusmod adipiscing sint tempor aliquip ad eiusmod laboris nulla</Quote>
-      <Paragraph>Commodo aliquip excepteur anim cillum non</Paragraph>
-      <List>
-        <Li>Ex consectetur anim</Li>
-        <Li>Est duis sit est lorem</Li>
-        <Li>Consectetur id non deserunt</Li>
-        <Li>Non ipsum</Li>
-        <Li>Voluptate minim consectetur laboris mollit</Li>
-      </List>
-    </Column>
-  </Columns>
-</Section>
-
-<Section className="bg-body2 py-30">
-  <Columns gap="gap-10 lg:gap-20">
-    <Column>
-      <Heading as="h2">Sed nulla eiusmod irure ex dolor</Heading>
-      <Quote>Lorem sint aute minim commodo officia et incididunt do</Quote>
-      <Paragraph>Ex dolore</Paragraph>
-      <List>
-        <Li>Cupidatat fugiat laborum cupidatat</Li>
-        <Li>In ipsum ad nulla</Li>
-        <Li>Aliqua amet et dolore</Li>
-        <Li>Lorem enim eiusmod minim sit sunt</Li>
-      </List>
-      <Paragraph className="mt-6">Ad fugiat cillum ex mollit est non proident exercitation nulla veniam id velit ullamco enim id et velit ex sit ullamco sit laboris exercitation magna pariatur do voluptate mollit mollit quis sint adipiscing eiusmod</Paragraph>
-    </Column>
-    <Column>
-      <Image
-        src="/images/portfolio/pexels-pixabay-279719.jpg"
-        alt="Consectetur proident eiusmod labore officia velit irure"
-        className="w-full object-cover"
-        rounded="rounded-t-full"
-        size="large"
-      />
-    </Column>
-  </Columns>
-</Section>
-
-<Section className="bg-body py-30">
-  <Columns gap="gap-10 lg:gap-20">
-    <Column>
-      <Image
-        src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-        alt="Esse commodo enim nostrud"
-        className="w-full object-cover"
-        size="large"
-      />
-    </Column>
-    <Column>
-      <Heading as="h2">Consectetur ullamco do</Heading>
-      <Paragraph>Aliqua sit irure ad deserunt sit eiusmod nisi adipiscing</Paragraph>
-      <List>
-        <Li>Velit velit consequat mollit fugiat cillum elit</Li>
-        <Li>Duis lorem aliqua ullamco proident eiusmod veniam</Li>
-        <Li>Ipsum nostrud aliqua incididunt qui ullamco aliquip reprehenderit</Li>
-        <Li>Laboris esse ea minim ut ipsum aliqua</Li>
-      </List>
-      <Paragraph className="mt-6">Excepteur enim velit consectetur fugiat dolore aliqua reprehenderit deserunt sed consequat mollit veniam laborum nostrud ex</Paragraph>
-    </Column>
-  </Columns>
-</Section>
-
-<Cover
-  className="py-30 lg:py-50"
-  imageSrc="/images/portfolio/pexels-pixabay-276724.jpg"
-  imageAlt="Proident non esse"
-  overlayColor="bg-accent5/90"
-  height="h-auto"
-  innerAlign="content"
->
-  <Heading
-    as="h3"
-    styleAs="h2"
-    textAlign="text-center"
-  >
-    Mollit quis cillum laborum ex ut incididunt qui
-  </Heading>
-  <Paragraph
-    variant="large"
-    textAlign="text-center"
-  >
-    Cillum sed sed minim adipiscing consectetur esse eiusmod laboris officia ut et dolore fugiat sit reprehenderit duis ut aliquip ullamco ut esse incididunt labore reprehenderit deserunt ut ullamco do laboris dolor exercitation mollit quis aute laboris amet magna dolor esse deserunt magna aute exercitation dolor
-  </Paragraph>
-  <Buttons className="mt-8 justify-center">
-    <Button
-      size="medium"
-      variant="outline"
-      href="/sit"
-      theme="primary"
-      icon={arrowRightIcon}
-      iconPlacement="after"
-    >
-      Proident pariatur
-    </Button>
-  </Buttons>
-</Cover>
-
-<PageFooter />
+      <PageFooter />
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Consectetur quis ex id eiusmod ad',
-  description: 'Cupidatat ex ex amet elit ea ea commodo incididunt aliqua incididunt commodo consectetur sed ex sunt duis deserunt mollit cupidatat ipsum',
-  keywords: ['suspendisse classes', 'potenti lacinia classes', 'suspendisse eget classes', 'potenti classes lacinia', 'lacinia eget classes', 'suspendisse potenti lacinia', 'eget potenti educatio', 'lacinia preparation classes', 'suspendisse classes eget', 'potenti classes lacinia', 'eget education classes', 'natural suspendisse classes', 'potenti lacinia classes'],
+  description:
+    'Cupidatat ex ex amet elit ea ea commodo incididunt aliqua incididunt commodo consectetur sed ex sunt duis deserunt mollit cupidatat ipsum',
+  keywords: [
+    'suspendisse classes',
+    'potenti lacinia classes',
+    'suspendisse eget classes',
+    'potenti classes lacinia',
+    'lacinia eget classes',
+    'suspendisse potenti lacinia',
+    'eget potenti educatio',
+    'lacinia preparation classes',
+    'suspendisse classes eget',
+    'potenti classes lacinia',
+    'eget education classes',
+    'natural suspendisse classes',
+    'potenti lacinia classes',
+  ],
   slug: 'sit-amet-consectetur',
   featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
   focusKeyword: 'suspendisse classes',
@@ -183,7 +271,8 @@ export const metadata = {
     url: 'https://speedwell.gallop.software/birth-education-classes/',
     siteName: 'Suspendisse Potenti Lacinia',
     title: 'Magna adipiscing pariatur enim minim nulla',
-    description: 'Amet ullamco aute nostrud ex laboris cillum anim nisi reprehenderit labore sunt commodo duis dolor pariatur do sunt in commodo adipiscing',
+    description:
+      'Amet ullamco aute nostrud ex laboris cillum anim nisi reprehenderit labore sunt commodo duis dolor pariatur do sunt in commodo adipiscing',
     image: {
       url: '/images/portfolio/pexels-dropshado-2251247.jpg',
       alt: 'Eiusmod fugiat qui lorem proident eiusmod consectetur dolore sed',
@@ -192,7 +281,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'In nisi nisi anim velit commodo',
-    description: 'Mollit est incididunt tempor ea excepteur voluptate reprehenderit tempor et ex consequat ex cupidatat incididunt do laboris laboris qui ut cupidatat',
+    description:
+      'Mollit est incididunt tempor ea excepteur voluptate reprehenderit tempor et ex consequat ex cupidatat incididunt do laboris laboris qui ut cupidatat',
     image: '/images/701475_df76b231aa2b43658b862eaf621fd5d9mv2.jpg',
   },
 }

@@ -1,6 +1,9 @@
 import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Gradient, Navbar, Container, Image } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
+export default function Content() {
+  return (
+    <>
 <div className="relative">
   <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body2 z-0"></div>
   <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -37,3 +40,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
     </Columns>
   </div>
 </div>
+    </>
+  )
+}

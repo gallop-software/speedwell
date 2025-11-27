@@ -1,5 +1,8 @@
 import { Button, Image, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Luxury Master Suite</PageHeader>
 
 <Image
@@ -18,6 +21,9 @@ import { Button, Image, PageHeader , P } from '@/components'
 >
   View Full Project
 </Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Luxury Master Suite | High-End Bedroom Interior Design',

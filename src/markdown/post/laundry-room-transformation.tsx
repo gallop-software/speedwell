@@ -1,5 +1,8 @@
 import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Laundry Room Transformation</PageHeader>
 
 <Gallery>
@@ -23,6 +26,9 @@ import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 >
   View Full Project
 </Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Laundry Room Transformation | Functional Utility Room Design',

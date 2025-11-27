@@ -1,5 +1,8 @@
 import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, Card1, Card2, FancyHeading, VimeoAutoPlayer, Columns, Column, Accent, Gradient, Navbar, Container, Image, Gallery, GalleryItem } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <Section className="bg-body py-30">
   <Columns gap="gap-10 lg:gap-20">
     <Column className="aspect-[4/5] relative">
@@ -66,3 +69,6 @@ import { Paragraph, Heading, Button, ButtonPlay, Buttons, Blog, Section, Grid, C
     />
   </Gallery>
 </Section>
+    </>
+  )
+}

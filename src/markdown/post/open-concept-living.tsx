@@ -1,5 +1,8 @@
 import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Open Concept Living</PageHeader>
 
 <Gallery>
@@ -23,6 +26,9 @@ import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 >
   View Full Project
 </Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Open Concept Living | Modern Home Renovation Design',

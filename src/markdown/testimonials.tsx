@@ -1,6 +1,9 @@
 import { Cover, Paragraph, Heading, Button, ButtonPlay, Buttons, Section, Grid, Card1, Card2, FancyHeading, Columns, Column, Accent, Navbar, Quote, Testimonial1, Testimonial2, Swiper, Masonry, Image } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
+export default function Content() {
+  return (
+    <>
 <Navbar />
 
 <Section className="bg-accent3 pt-10">
@@ -181,6 +184,9 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
     </Testimonial2>
   </Masonry>
 </Section>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Laboris eiusmod dolore qui',

@@ -1,5 +1,8 @@
 import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 
+export default function Content() {
+  return (
+    <>
 <PageHeader>Art Deco Restoration</PageHeader>
 
 <Gallery>
@@ -27,6 +30,9 @@ import { Button, Gallery, GalleryItem, PageHeader , P } from '@/components'
 >
   View Full Project
 </Button>
+    </>
+  )
+}
 
 export const metadata = {
   title: 'Art Deco Restoration | Historic 1920s Interior Design',
