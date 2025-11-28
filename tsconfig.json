@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/markdown/*": ["./src/markdown/*"],
+      "@/content/*": ["./src/content/*"],
       "@/template/*": ["./src/template/*"],
       "@/data/*": ["./_data/*"],
       "@/state": ["./src/state.ts"],
