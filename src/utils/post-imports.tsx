@@ -47,7 +47,7 @@ export type Metadata = {
   }
 }
 
-export interface MDXPost {
+export interface Post {
   metadata: Metadata
   markdown: React.ReactNode
 }
@@ -60,7 +60,7 @@ export interface BlogPost {
 }
 
 // Function to dynamically import a post file
-export async function importMDXPost(slug: string): Promise<MDXPost | null> {
+export async function importPost(slug: string): Promise<Post | null> {
   try {
     // Import the TSX file (server-side only)
     const postModule = await import(`@/markdown/post/${slug}.tsx`)
@@ -103,7 +103,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     .map((filename) => filename.replace('.tsx', ''))
 
   // Import all posts in parallel
-  const postPromises = slugs.map((slug) => importMDXPost(slug))
+  const postPromises = slugs.map((slug) => importPost(slug))
   const results = await Promise.all(postPromises)
 
   const posts: BlogPost[] = []
@@ -131,7 +131,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
 // Alternative: Function to get a single blog post
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  const post = await importMDXPost(slug)
+  const post = await importPost(slug)
 
   if (!post) {
     return null

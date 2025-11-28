@@ -24,8 +24,8 @@ export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
         continue
       }
 
-      if (entry.isFile() && entry.name.endsWith('.mdx')) {
-        const isIndex = entry.name.toLowerCase() === 'index.mdx'
+      if (entry.isFile() && entry.name.endsWith('.tsx')) {
+        const isIndex = entry.name.toLowerCase() === 'index.tsx'
 
         const rawPath = isIndex
           ? basePath
