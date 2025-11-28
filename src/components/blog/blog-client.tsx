@@ -34,11 +34,13 @@ export function BlogClient({
   totalPages = 1,
   currentPage = 1,
   initialPosts = [],
+  category,
   className,
 }: {
   totalPages?: number
   currentPage?: number
   initialPosts?: BlogPost[]
+  category?: string
   className?: string
 }) {
   const [displayedPosts, setDisplayedPosts] = useState<BlogPost[]>(initialPosts)
@@ -60,7 +62,8 @@ export function BlogClient({
       // Only fetch buffer if we have more pages
       if (totalPages > 1) {
         try {
-          const bufferResponse = await fetch('/api/posts?page=2&perPage=9')
+          const categoryParam = category ? `&category=${encodeURIComponent(category)}` : ''
+          const bufferResponse = await fetch(`/api/posts?page=2&perPage=9${categoryParam}`)
           if (bufferResponse.ok) {
             const bufferData = await bufferResponse.json()
             setBufferedPosts(bufferData.posts)
@@ -194,7 +197,8 @@ export function BlogClient({
     if (newPage < totalPages) {
       setIsLoading(true)
       try {
-        const response = await fetch(`/api/posts?page=${newPage + 1}&perPage=9`)
+        const categoryParam = category ? `&category=${encodeURIComponent(category)}` : ''
+        const response = await fetch(`/api/posts?page=${newPage + 1}&perPage=9${categoryParam}`)
         if (response.ok) {
           const data = await response.json()
           setBufferedPosts(data.posts)

@@ -1,10 +1,11 @@
 import React from 'react'
 import { BlogClient } from '@/components/blog/blog-client'
-import { getAllBlogPosts } from '@/utils/post-imports'
 import { GalleryPopup } from '@/components/lightbox/gallery-popup'
 import { FancyHeading, Footer, Navbar, Section } from '@/components'
 import { getSlug } from '@/tools/get-slug'
 import { getTitle } from '@/tools/get-title'
+import fs from 'fs'
+import path from 'path'
 
 interface PageProps {
   params: Promise<{
@@ -24,26 +25,33 @@ function toCategoryArray(value?: string | string[]) {
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
   const category = slug ? decodeURIComponent(slug) : ''
-  const posts = await getAllBlogPosts()
 
-  const filtered = category
-    ? posts.filter((p) =>
-        toCategoryArray(p.metadata.categories)
-          .map(getSlug)
-          .includes(getSlug(category))
-      )
-    : posts
+  // Load posts from static JSON file
+  let filteredPosts: any[] = []
+  let totalPages = 1
+  try {
+    const metadataPath = path.join(process.cwd(), '_data/_blog.json')
+    if (fs.existsSync(metadataPath)) {
+      const fileContent = fs.readFileSync(metadataPath, 'utf8')
+      const allPosts = JSON.parse(fileContent)
 
-  const clientPosts = filtered.map((post) => ({
-    slug: post.slug,
-    metadata: {
-      title: post.metadata.title,
-      date: post.metadata.date,
-      categories: post.metadata.categories,
-      featuredImage: post.metadata.featuredImage,
-    },
-    Component: post.Component,
-  }))
+      // Filter by category
+      filteredPosts = category
+        ? allPosts.filter((post: any) =>
+            toCategoryArray(post.metadata.categories)
+              .map(getSlug)
+              .includes(getSlug(category))
+          )
+        : allPosts
+
+      totalPages = Math.ceil(filteredPosts.length / 9)
+    }
+  } catch (error) {
+    console.error('Failed to read blog metadata:', error)
+  }
+
+  // Get initial 9 posts for server-side rendering
+  const initialPosts = filteredPosts.slice(0, 9)
 
   return (
     <div className="overflow-hidden">
@@ -55,7 +63,12 @@ export default async function Page({ params }: PageProps) {
             text="Our Journal"
             accent={getTitle(category)}
           />
-          <BlogClient posts={clientPosts} />
+          <BlogClient
+            totalPages={totalPages}
+            currentPage={1}
+            initialPosts={initialPosts}
+            category={category}
+          />
         </Section>
         <GalleryPopup />
       </main>
