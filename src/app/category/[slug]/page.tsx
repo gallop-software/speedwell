@@ -26,32 +26,33 @@ export default async function Page({ params }: PageProps) {
   const { slug } = await params
   const category = slug ? decodeURIComponent(slug) : ''
 
-  // Load posts from static JSON file
-  let filteredPosts: any[] = []
-  let totalPages = 1
+  // Load and filter posts from static JSON file
+  let allPosts: any[] = []
   try {
     const metadataPath = path.join(process.cwd(), '_data/_blog.json')
     if (fs.existsSync(metadataPath)) {
       const fileContent = fs.readFileSync(metadataPath, 'utf8')
-      const allPosts = JSON.parse(fileContent)
+      const posts = JSON.parse(fileContent)
 
-      // Filter by category
-      filteredPosts = category
-        ? allPosts.filter((post: any) =>
+      // Filter by category on server
+      allPosts = category
+        ? posts.filter((post: any) =>
             toCategoryArray(post.metadata.categories)
               .map(getSlug)
               .includes(getSlug(category))
           )
-        : allPosts
+        : posts
 
-      totalPages = Math.ceil(filteredPosts.length / 9)
+      // Sort by date desc (newest first)
+      allPosts.sort(
+        (a: any, b: any) =>
+          new Date(b.metadata.date || '').getTime() -
+          new Date(a.metadata.date || '').getTime()
+      )
     }
   } catch (error) {
     console.error('Failed to read blog metadata:', error)
   }
-
-  // Get initial 9 posts for server-side rendering
-  const initialPosts = filteredPosts.slice(0, 9)
 
   return (
     <div className="overflow-hidden">
@@ -64,10 +65,8 @@ export default async function Page({ params }: PageProps) {
             accent={getTitle(category)}
           />
           <BlogClient
-            totalPages={totalPages}
-            currentPage={1}
-            initialPosts={initialPosts}
-            category={category}
+            allPosts={allPosts}
+            perPage={9}
           />
         </Section>
         <GalleryPopup />

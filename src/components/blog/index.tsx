@@ -7,22 +7,25 @@ import path from 'path'
 
 export async function Blog({
   className,
-  page = 1,
+  perPage = 9,
 }: {
   className?: string
-  page?: number
+  perPage?: number
 }) {
-  // Get initial posts and total pages from static metadata file
-  let totalPages = 1
-  let initialPosts = []
+  // Get all posts from static metadata file and sort by date (newest first)
+  let allPosts = []
   try {
     const metadataPath = path.join(process.cwd(), '_data/_blog.json')
     if (fs.existsSync(metadataPath)) {
       const fileContent = fs.readFileSync(metadataPath, 'utf8')
-      const allPosts = JSON.parse(fileContent)
-      totalPages = Math.ceil(allPosts.length / 9)
-      // Get first 9 posts for server-side rendering
-      initialPosts = allPosts.slice(0, 9)
+      allPosts = JSON.parse(fileContent)
+
+      // Sort by date, newest first
+      allPosts.sort(
+        (a: any, b: any) =>
+          new Date(b.metadata.date || '').getTime() -
+          new Date(a.metadata.date || '').getTime()
+      )
     }
   } catch (error) {
     console.error('Failed to read blog metadata:', error)
@@ -30,9 +33,8 @@ export async function Blog({
 
   return (
     <BlogClient
-      totalPages={totalPages}
-      currentPage={1}
-      initialPosts={initialPosts}
+      allPosts={allPosts}
+      perPage={perPage}
       className={className}
     />
   )
