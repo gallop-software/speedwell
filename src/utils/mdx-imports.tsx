@@ -71,7 +71,8 @@ export async function importMDXPost(slug: string): Promise<MDXPost | null> {
       return null
     }
 
-    const Component = postModule.default
+    // Prefer BlogContent export for sidebar, fall back to default for pages
+    const Component = postModule.BlogContent || postModule.default
     const metadata = postModule.metadata as Metadata
 
     return {
