@@ -1,6 +1,6 @@
 # Speedwell
 
-Speedwell is a modern, flexible Next.js theme by [Gallop](https://gallop.software), built with [Tailwind CSS](https://tailwindcss.com) and powered by MDX for content management. Gallop templates are designed with TailwindCSS allowing rapid development and pixel perfect design control without ever leaving your MDX or component file.
+Speedwell is a modern, flexible Next.js theme by [Gallop](https://gallop.software), built with [Tailwind CSS](https://tailwindcss.com) and powered by TSX for content management. Gallop templates are designed with TailwindCSS allowing rapid development and pixel perfect design control without ever leaving your TSX or component file.
 
 **Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)
 
@@ -8,7 +8,7 @@ Speedwell is a modern, flexible Next.js theme by [Gallop](https://gallop.softwar
 
 - 🚀 Built with Next.js 14+ and React
 - 🎨 Styled with Tailwind CSS
-- 📝 MDX-powered content management
+- 📝 TSX-powered content management
 - 🖼️ Optimized image handling with responsive variants
 - 🔍 Built-in search functionality
 - 📱 Fully responsive design
@@ -42,8 +42,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ```
 ├── src/
 │   ├── app/              # Next.js app router pages
-│   │   ├── markdown/     # MDX content files
 │   │   └── api/          # API routes
+│   ├── content/         # TSX content files
 │   ├── components/       # React components
 │   ├── styles/          # Global styles
 │   ├── utils/           # Utility functions
@@ -56,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## Customization
 
-Edit the MDX files in `/src/app/markdown/` to update your content. The site will auto-update as you edit these files.
+Edit the TSX files in `/src/content/` to update your content. The site will auto-update as you edit these files.
 
 Customize components in `/src/components/` to match your brand and design preferences.
 
@@ -111,5 +111,4 @@ Need help with customization or development? Contact [webplant.media](https://we
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [MDX Documentation](https://mdxjs.com)
 - [Gallop Themes](https://gallop.software)
