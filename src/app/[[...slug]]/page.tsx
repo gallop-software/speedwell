@@ -37,7 +37,7 @@ function getSlugPath(slug?: string[]): string {
 
 // Generate static params for all MDX files to prerender them
 export async function generateStaticParams() {
-  const contentDir = path.join(process.cwd(), 'src/markdown')
+  const contentDir = path.join(process.cwd(), 'src/content')
 
   function getAllMdxFiles(dir: string, basePath: string = ''): string[][] {
     const files = readdirSync(dir, { withFileTypes: true })

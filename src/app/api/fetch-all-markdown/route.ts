@@ -56,8 +56,8 @@ export const dynamic = 'force-dynamic'
 
 async function importMDXPost(slug: string): Promise<MDXPost | null> {
   try {
-    const filePath = path.join(process.cwd(), 'src/markdown', `${slug}.tsx`)
-    const fileContent = fs.readFileSync(filePath, 'utf8')
+    const filePath = path.join(process.cwd(), 'src/content', `${slug}.tsx`)
+    const fileContents = fs.readFileSync(filePath, 'utf8')
 
     const metadataMatch = fileContent.match(
       /export\s+const\s+metadata\s*=\s*({[\s\S]*?\n})\s*;?/

@@ -63,7 +63,7 @@ export interface BlogPost {
 export async function importPost(slug: string): Promise<Post | null> {
   try {
     // Import the TSX file (server-side only)
-    const postModule = await import(`@/markdown/post/${slug}.tsx`)
+    const postModule = await import(`@/content/post/${slug}.tsx`)
 
     if (!postModule.default || !postModule.metadata) {
       console.warn(`No default export or metadata found in ${slug}.tsx`)
@@ -87,7 +87,7 @@ export async function importPost(slug: string): Promise<Post | null> {
 // Function to get all blog posts by importing them
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   // Read the posts directory to get all TSX files
-  const postsDirectory = path.join(process.cwd(), 'src/markdown/post')
+  const postsDirectory = path.join(process.cwd(), 'src/content/post')
 
   let filenames: string[] = []
   try {
