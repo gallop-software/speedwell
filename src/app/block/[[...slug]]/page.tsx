@@ -81,7 +81,7 @@ export default async function Page({ params }: PageProps) {
   const shouldAddPadding = slugsWithPadding.includes(slugPath)
 
   try {
-    const { default: MDXContent, metadata } = await import(
+    const { default: Content, metadata } = await import(
       `@/blocks/${slugPath}.tsx`
     )
 
@@ -90,7 +90,7 @@ export default async function Page({ params }: PageProps) {
         <main
           className={`[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl [&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl [&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40 ${shouldAddPadding ? 'py-30' : ''}`}
         >
-          <MDXContent />
+          <Content />
           <GalleryPopup />
         </main>
       </div>

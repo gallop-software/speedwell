@@ -82,7 +82,7 @@ export async function generateMetadata({
   const slugPath = getSlugPath(slug)
 
   try {
-    const { metadata } = await import(`@/markdown/${slugPath}.tsx`)
+    const { metadata } = await import(`@/content/${slugPath}.tsx`)
 
     // Define image data variables
     const openGraphImageData = metadata?.openGraph?.image
@@ -205,8 +205,8 @@ export default async function Page({ params }: PageProps) {
   const slugPath = getSlugPath(slug)
 
   try {
-    const { default: MDXContent, metadata } = await import(
-      `@/markdown/${slugPath}.tsx`
+    const { default: Content, metadata } = await import(
+      `@/content/${slugPath}.tsx`
     )
 
     const structuredData = {
@@ -223,7 +223,7 @@ export default async function Page({ params }: PageProps) {
           {JSON.stringify(structuredData)}
         </Script>
         <main className="[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl [&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl [&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40">
-          <MDXContent />
+          <Content />
           <GalleryPopup />
         </main>
         <Footer />
