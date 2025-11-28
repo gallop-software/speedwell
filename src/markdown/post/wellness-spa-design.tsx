@@ -1,10 +1,17 @@
-import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
+import {
+  Button,
+  Gallery,
+  GalleryItem,
+  PageHeader,
+  P,
+  Heading,
+} from '@/components'
 
-export default function Content() {
+const TITLE = 'Wellness Spa Design'
+
+function Details() {
   return (
     <>
-      <PageHeader>Wellness Spa Design</PageHeader>
-
       <Gallery>
         <GalleryItem
           src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
@@ -43,6 +50,24 @@ export default function Content() {
       >
         View Full Project
       </Button>
+    </>
+  )
+}
+
+export default function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
     </>
   )
 }

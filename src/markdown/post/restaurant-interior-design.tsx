@@ -1,10 +1,10 @@
-import { Button, Image, PageHeader, P } from '@/components'
+import { Button, Image, PageHeader, P, Heading } from '@/components'
 
-export default function Content() {
+const TITLE = 'Restaurant Interior Design'
+
+function Details() {
   return (
     <>
-      <PageHeader>Restaurant Interior Design</PageHeader>
-
       <Image
         src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
         size="large"
@@ -37,6 +37,24 @@ export default function Content() {
       >
         View Full Project
       </Button>
+    </>
+  )
+}
+
+export default function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
     </>
   )
 }

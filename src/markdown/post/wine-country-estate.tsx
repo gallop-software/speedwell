@@ -1,10 +1,17 @@
-import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
+import {
+  Button,
+  Gallery,
+  GalleryItem,
+  PageHeader,
+  P,
+  Heading,
+} from '@/components'
 
-export default function Content() {
+const TITLE = 'Wine Country Estate'
+
+function Details() {
   return (
     <>
-      <PageHeader>Wine Country Estate</PageHeader>
-
       <Gallery>
         <GalleryItem
           src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
@@ -45,6 +52,24 @@ export default function Content() {
       >
         View Full Project
       </Button>
+    </>
+  )
+}
+
+export default function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
     </>
   )
 }

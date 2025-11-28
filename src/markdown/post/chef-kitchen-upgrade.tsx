@@ -1,10 +1,10 @@
-import { Button, Image, PageHeader, P } from '@/components'
+import { Button, Image, PageHeader, P, Heading } from '@/components'
 
-export default function Content() {
+const TITLE = 'Chef Kitchen Upgrade'
+
+function Details() {
   return (
     <>
-      <PageHeader>Chef Kitchen Upgrade</PageHeader>
-
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
         size="large"
@@ -36,6 +36,24 @@ export default function Content() {
       >
         View Full Project
       </Button>
+    </>
+  )
+}
+
+export default function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
     </>
   )
 }

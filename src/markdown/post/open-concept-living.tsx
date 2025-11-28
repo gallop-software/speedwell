@@ -1,10 +1,17 @@
-import { Button, Gallery, GalleryItem, PageHeader, P } from '@/components'
+import {
+  Button,
+  Gallery,
+  GalleryItem,
+  PageHeader,
+  P,
+  Heading,
+} from '@/components'
 
-export default function Content() {
+const TITLE = 'Open Concept Living'
+
+function Details() {
   return (
     <>
-      <PageHeader>Open Concept Living</PageHeader>
-
       <Gallery>
         <GalleryItem
           src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
@@ -41,6 +48,24 @@ export default function Content() {
       >
         View Full Project
       </Button>
+    </>
+  )
+}
+
+export default function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
     </>
   )
 }

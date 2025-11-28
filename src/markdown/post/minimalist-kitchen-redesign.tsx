@@ -1,10 +1,10 @@
-import { Button, Image, PageHeader, P } from '@/components'
+import { Button, Image, PageHeader, P, Heading } from '@/components'
 
-export default function Content() {
+const TITLE = 'Minimalist Kitchen Redesign'
+
+function Details() {
   return (
     <>
-      <PageHeader>Minimalist Kitchen Redesign</PageHeader>
-
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
         size="large"
@@ -35,6 +35,24 @@ export default function Content() {
       >
         View Full Project
       </Button>
+    </>
+  )
+}
+
+export default function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
     </>
   )
 }
