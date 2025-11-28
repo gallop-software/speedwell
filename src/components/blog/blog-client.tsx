@@ -1,6 +1,13 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback, type ReactNode } from 'react'
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+  type ReactNode,
+} from 'react'
 import { Button } from '../button'
 import { Heading } from '../heading'
 import { Image } from '../image'
@@ -31,22 +38,15 @@ interface BlogPost {
 }
 
 export function BlogClient({
-  totalPages = 1,
-  currentPage = 1,
-  initialPosts = [],
-  category,
+  allPosts = [],
+  perPage = 9,
   className,
 }: {
-  totalPages?: number
-  currentPage?: number
-  initialPosts?: BlogPost[]
-  category?: string
+  allPosts?: BlogPost[]
+  perPage?: number
   className?: string
 }) {
-  const [displayedPosts, setDisplayedPosts] = useState<BlogPost[]>(initialPosts)
-  const [bufferedPosts, setBufferedPosts] = useState<BlogPost[]>([])
-  const [page, setPage] = useState(currentPage)
-  const [isLoading, setIsLoading] = useState(false)
+  const [displayedCount, setDisplayedCount] = useState(perPage)
   const containerRef = useRef<HTMLDivElement>(null)
   const itemRefs = useRef<(HTMLDivElement | null)[]>([])
   const [columns, setColumns] = useState(3)
@@ -56,26 +56,9 @@ export function BlogClient({
   const [isOpen, setIsOpen] = useState(false)
   const [content, setContent] = useState<ReactNode>(<></>)
 
-  // Load buffer on mount (initial posts already server-rendered)
-  useEffect(() => {
-    const loadBuffer = async () => {
-      // Only fetch buffer if we have more pages
-      if (totalPages > 1) {
-        try {
-          const categoryParam = category ? `&category=${encodeURIComponent(category)}` : ''
-          const bufferResponse = await fetch(`/api/posts?page=2&perPage=9${categoryParam}`)
-          if (bufferResponse.ok) {
-            const bufferData = await bufferResponse.json()
-            setBufferedPosts(bufferData.posts)
-          }
-        } catch (error) {
-          console.error('Failed to load buffer:', error)
-        }
-      }
-    }
-
-    loadBuffer()
-  }, [])
+  // Posts are already filtered and sorted on server, just slice for pagination
+  const currentPosts = allPosts.slice(0, displayedCount)
+  const hasMore = displayedCount < allPosts.length
 
   // Calculate number of columns based on screen width
   useEffect(() => {
@@ -183,46 +166,13 @@ export function BlogClient({
     }, 100) // Small delay to ensure images are loaded
 
     return () => clearTimeout(timer)
-  }, [displayedPosts, calculateLayout, columns, layoutKey, isMasonryEnabled])
+  }, [currentPosts, calculateLayout, columns, layoutKey, isMasonryEnabled])
 
-  const showMore = async () => {
-    if (bufferedPosts.length === 0 || isLoading) return
-
-    // Add buffered posts to displayed posts
-    setDisplayedPosts([...displayedPosts, ...bufferedPosts])
-    const newPage = page + 1
-    setPage(newPage)
-
-    // If we're not at the end, fetch the next batch for buffer
-    if (newPage < totalPages) {
-      setIsLoading(true)
-      try {
-        const categoryParam = category ? `&category=${encodeURIComponent(category)}` : ''
-        const response = await fetch(`/api/posts?page=${newPage + 1}&perPage=9${categoryParam}`)
-        if (response.ok) {
-          const data = await response.json()
-          setBufferedPosts(data.posts)
-        } else {
-          setBufferedPosts([])
-        }
-      } catch (error) {
-        console.error('Failed to fetch next posts:', error)
-        setBufferedPosts([])
-      } finally {
-        setIsLoading(false)
-      }
-    } else {
-      setBufferedPosts([])
-    }
+  const showMore = () => {
+    setDisplayedCount((prev) => prev + perPage)
   }
 
-  const currentPosts = displayedPosts
-  const hasMore = page < totalPages
-
   const openSidebar = async (slug: string) => {
-    const post = displayedPosts.find((post) => post.slug === slug)
-    if (!post) return
-
     // Dynamically import the post component
     try {
       const module = await import(`@/content/post/${slug}.tsx`)
