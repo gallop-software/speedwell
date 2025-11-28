@@ -32,14 +32,16 @@ interface BlogPost {
 
 export function BlogClient({
   totalPages = 1,
-  currentPage = 0,
+  currentPage = 1,
+  initialPosts = [],
   className,
 }: {
   totalPages?: number
   currentPage?: number
+  initialPosts?: BlogPost[]
   className?: string
 }) {
-  const [displayedPosts, setDisplayedPosts] = useState<BlogPost[]>([])
+  const [displayedPosts, setDisplayedPosts] = useState<BlogPost[]>(initialPosts)
   const [bufferedPosts, setBufferedPosts] = useState<BlogPost[]>([])
   const [page, setPage] = useState(currentPage)
   const [isLoading, setIsLoading] = useState(false)
@@ -52,32 +54,24 @@ export function BlogClient({
   const [isOpen, setIsOpen] = useState(false)
   const [content, setContent] = useState<ReactNode>(<></>)
 
-  // Load initial posts on mount
+  // Load buffer on mount (initial posts already server-rendered)
   useEffect(() => {
-    const loadInitialPosts = async () => {
-      setIsLoading(true)
-      try {
-        const response = await fetch('/api/posts?page=1&perPage=9')
-        if (response.ok) {
-          const data = await response.json()
-          setDisplayedPosts(data.posts)
-
-          // Fetch buffer immediately
+    const loadBuffer = async () => {
+      // Only fetch buffer if we have more pages
+      if (totalPages > 1) {
+        try {
           const bufferResponse = await fetch('/api/posts?page=2&perPage=9')
           if (bufferResponse.ok) {
             const bufferData = await bufferResponse.json()
             setBufferedPosts(bufferData.posts)
           }
-          setPage(1)
+        } catch (error) {
+          console.error('Failed to load buffer:', error)
         }
-      } catch (error) {
-        console.error('Failed to load initial posts:', error)
-      } finally {
-        setIsLoading(false)
       }
     }
 
-    loadInitialPosts()
+    loadBuffer()
   }, [])
 
   // Calculate number of columns based on screen width
