@@ -1,6 +1,6 @@
 import React from 'react'
 import { BlogClient } from '@/components/blog/blog-client'
-import { getAllBlogPosts } from '@/utils/mdx-imports'
+import { getAllBlogPosts } from '@/utils/post-imports'
 import { GalleryPopup } from '@/components/lightbox/gallery-popup'
 import { FancyHeading, Footer, Navbar, Section } from '@/components'
 import { getSlug } from '@/tools/get-slug'

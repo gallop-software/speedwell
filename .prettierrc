@@ -16,14 +16,5 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "vueIndentScriptAndStyle": false,
-  "overrides": [
-    {
-      "files": "*.mdx",
-      "options": {
-        "printWidth": 9999,
-        "singleAttributePerLine": true
-      }
-    }
-  ]
+  "vueIndentScriptAndStyle": false
 }

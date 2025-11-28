@@ -23,7 +23,7 @@ export async function getPostSlugs(): Promise<{ postSlugs: PostSlugItem[] }> {
         continue
       }
 
-      if (entry.isFile() && entry.name.endsWith('.mdx')) {
+      if (entry.isFile() && entry.name.endsWith('.tsx')) {
         const withoutExt = relPath.slice(0, -4)
         const segments = withoutExt.split('/').map((seg) => {
           const decoded = decodeURIComponent(seg)

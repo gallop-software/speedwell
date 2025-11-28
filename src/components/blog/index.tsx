@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { BlogClient } from './blog-client'
-import { getAllBlogPosts } from '@/utils/mdx-imports'
+import { getAllBlogPosts } from '@/utils/post-imports'
 
 export async function Blog({ className }: { className?: string }) {
   const posts = await getAllBlogPosts()

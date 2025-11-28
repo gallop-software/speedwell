@@ -68,7 +68,7 @@ export function useAutocomplete({
       getSources({ query }) {
         return Promise.resolve([
           {
-            sourceId: 'mdx',
+            sourceId: 'content',
             getItems() {
               if (!query) return []
               return search(query, { limit: 20 })
