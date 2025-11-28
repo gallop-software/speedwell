@@ -10,8 +10,6 @@ import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 
-const POSTS_PER_LOAD = 9
-
 // Helper function to decode HTML entities
 const decodeHtmlEntities = (str: string): string => {
   return str
@@ -30,17 +28,21 @@ interface BlogPost {
     categories?: string[]
     featuredImage?: string
   }
-  Component: ReactNode
 }
 
 export function BlogClient({
-  posts,
+  totalPages = 1,
+  currentPage = 0,
   className,
 }: {
-  posts: BlogPost[]
+  totalPages?: number
+  currentPage?: number
   className?: string
 }) {
-  const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_LOAD)
+  const [displayedPosts, setDisplayedPosts] = useState<BlogPost[]>([])
+  const [bufferedPosts, setBufferedPosts] = useState<BlogPost[]>([])
+  const [page, setPage] = useState(currentPage)
+  const [isLoading, setIsLoading] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const itemRefs = useRef<(HTMLDivElement | null)[]>([])
   const [columns, setColumns] = useState(3)
@@ -49,6 +51,34 @@ export function BlogClient({
   const [layoutKey, setLayoutKey] = useState(0) // Force layout recalculation
   const [isOpen, setIsOpen] = useState(false)
   const [content, setContent] = useState<ReactNode>(<></>)
+
+  // Load initial posts on mount
+  useEffect(() => {
+    const loadInitialPosts = async () => {
+      setIsLoading(true)
+      try {
+        const response = await fetch('/api/posts?page=1&perPage=9')
+        if (response.ok) {
+          const data = await response.json()
+          setDisplayedPosts(data.posts)
+
+          // Fetch buffer immediately
+          const bufferResponse = await fetch('/api/posts?page=2&perPage=9')
+          if (bufferResponse.ok) {
+            const bufferData = await bufferResponse.json()
+            setBufferedPosts(bufferData.posts)
+          }
+          setPage(1)
+        }
+      } catch (error) {
+        console.error('Failed to load initial posts:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    loadInitialPosts()
+  }, [])
 
   // Calculate number of columns based on screen width
   useEffect(() => {
@@ -156,18 +186,54 @@ export function BlogClient({
     }, 100) // Small delay to ensure images are loaded
 
     return () => clearTimeout(timer)
-  }, [visiblePosts, calculateLayout, columns, layoutKey, isMasonryEnabled])
+  }, [displayedPosts, calculateLayout, columns, layoutKey, isMasonryEnabled])
 
-  const showMore = () => {
-    setVisiblePosts((prev) => prev + POSTS_PER_LOAD)
+  const showMore = async () => {
+    if (bufferedPosts.length === 0 || isLoading) return
+
+    // Add buffered posts to displayed posts
+    setDisplayedPosts([...displayedPosts, ...bufferedPosts])
+    const newPage = page + 1
+    setPage(newPage)
+
+    // If we're not at the end, fetch the next batch for buffer
+    if (newPage < totalPages) {
+      setIsLoading(true)
+      try {
+        const response = await fetch(`/api/posts?page=${newPage + 1}&perPage=9`)
+        if (response.ok) {
+          const data = await response.json()
+          setBufferedPosts(data.posts)
+        } else {
+          setBufferedPosts([])
+        }
+      } catch (error) {
+        console.error('Failed to fetch next posts:', error)
+        setBufferedPosts([])
+      } finally {
+        setIsLoading(false)
+      }
+    } else {
+      setBufferedPosts([])
+    }
   }
 
-  const currentPosts = posts.slice(0, visiblePosts)
-  const hasMore = visiblePosts < posts.length
+  const currentPosts = displayedPosts
+  const hasMore = page < totalPages
 
-  const openSidebar = (slug: String) => {
-    setContent(currentPosts.filter((post) => post.slug === slug)[0].Component)
-    setIsOpen(true)
+  const openSidebar = async (slug: string) => {
+    const post = displayedPosts.find((post) => post.slug === slug)
+    if (!post) return
+
+    // Dynamically import the post component
+    try {
+      const module = await import(`@/content/post/${slug}.tsx`)
+      const Component = module.BlogContent || module.default
+      setContent(<Component />)
+      setIsOpen(true)
+    } catch (error) {
+      console.error(`Failed to load post ${slug}:`, error)
+    }
   }
 
   return (
