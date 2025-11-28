@@ -122,7 +122,7 @@ function getSlugPaths(
 
 export async function GET() {
   try {
-    const contentDir = path.join(process.cwd(), 'src/markdown')
+    const contentDir = path.join(process.cwd(), 'src/content')
     const entries = getSlugPaths(contentDir)
 
     const results: any[] = await Promise.all(
@@ -139,9 +139,9 @@ export async function GET() {
 
     return NextResponse.json(results)
   } catch (err) {
-    console.error('Error reading markdown:', err)
+    console.error('Error reading content:', err)
     return NextResponse.json(
-      { error: 'Failed to load markdown' },
+      { error: 'Failed to load content' },
       { status: 500 }
     )
   }

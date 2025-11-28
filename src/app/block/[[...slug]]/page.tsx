@@ -25,7 +25,7 @@ function getSlugPath(slug?: string[]): string | null {
   return normalizedSlug.join('/')
 }
 
-// Generate static params for all MDX files to prerender them
+// Generate static params for all TSX block files to prerender them
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'src/blocks')
 

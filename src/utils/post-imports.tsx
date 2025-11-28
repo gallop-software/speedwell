@@ -49,7 +49,7 @@ export type Metadata = {
 
 export interface Post {
   metadata: Metadata
-  markdown: React.ReactNode
+  content: React.ReactNode
 }
 
 export interface BlogPost {
@@ -76,7 +76,7 @@ export async function importPost(slug: string): Promise<Post | null> {
 
     return {
       metadata,
-      markdown: <Component />,
+      content: <Component />,
     }
   } catch (error) {
     console.error(`Failed to import ${slug}.tsx:`, error)
@@ -113,7 +113,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       posts.push({
         slug: slugs[i],
         metadata: post.metadata,
-        Component: post.markdown,
+        Component: post.content,
         exists: true,
       })
     }
@@ -140,7 +140,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   return {
     slug,
     metadata: post.metadata,
-    Component: post.markdown,
+    Component: post.content,
     exists: true,
   }
 }

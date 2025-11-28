@@ -48,7 +48,7 @@ export function BlogClient({
   const [containerHeight, setContainerHeight] = useState(0)
   const [layoutKey, setLayoutKey] = useState(0) // Force layout recalculation
   const [isOpen, setIsOpen] = useState(false)
-  const [markdown, setMarkdown] = useState<ReactNode>(<></>)
+  const [content, setContent] = useState<ReactNode>(<></>)
 
   // Calculate number of columns based on screen width
   useEffect(() => {
@@ -166,7 +166,7 @@ export function BlogClient({
   const hasMore = visiblePosts < posts.length
 
   const openSidebar = (slug: String) => {
-    setMarkdown(currentPosts.filter((post) => post.slug === slug)[0].Component)
+    setContent(currentPosts.filter((post) => post.slug === slug)[0].Component)
     setIsOpen(true)
   }
 
@@ -303,7 +303,7 @@ export function BlogClient({
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       >
-        {markdown}
+        {content}
       </DynamicSidebar>
     </>
   )
