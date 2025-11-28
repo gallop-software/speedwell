@@ -2,7 +2,6 @@ import type { ComponentType } from 'react'
 import React from 'react'
 import fs from 'fs'
 import path from 'path'
-import { Markdown } from '../components/markdown'
 
 export type Metadata = {
   title: string
