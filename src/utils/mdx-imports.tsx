@@ -59,7 +59,7 @@ export interface BlogPost {
   exists: boolean
 }
 
-// Function to dynamically import an MDX file using next-mdx-remote/rsc (server-side)
+// Function to dynamically import a post file
 export async function importMDXPost(slug: string): Promise<MDXPost | null> {
   try {
     // Import the TSX file (server-side only)
@@ -86,7 +86,7 @@ export async function importMDXPost(slug: string): Promise<MDXPost | null> {
 
 // Function to get all blog posts by importing them
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  // Read the posts directory to get all MDX files
+  // Read the posts directory to get all TSX files
   const postsDirectory = path.join(process.cwd(), 'src/markdown/post')
 
   let filenames: string[] = []
@@ -102,22 +102,20 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     .filter((filename) => filename.endsWith('.tsx'))
     .map((filename) => filename.replace('.tsx', ''))
 
-  const posts: BlogPost[] = []
-  let successCount = 0
-  let errorCount = 0
+  // Import all posts in parallel
+  const postPromises = slugs.map((slug) => importMDXPost(slug))
+  const results = await Promise.all(postPromises)
 
-  for (const slug of slugs) {
-    const post = await importMDXPost(slug)
+  const posts: BlogPost[] = []
+  for (let i = 0; i < results.length; i++) {
+    const post = results[i]
     if (post) {
       posts.push({
-        slug,
+        slug: slugs[i],
         metadata: post.metadata,
         Component: post.markdown,
         exists: true,
       })
-      successCount++
-    } else {
-      errorCount++
     }
   }
 
