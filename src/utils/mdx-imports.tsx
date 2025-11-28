@@ -63,38 +63,23 @@ export interface BlogPost {
 // Function to dynamically import an MDX file using next-mdx-remote/rsc (server-side)
 export async function importMDXPost(slug: string): Promise<MDXPost | null> {
   try {
-    // Read the MDX file content (server-side only)
-    const filePath = path.join(
-      process.cwd(),
-      'src/markdown/post',
-      `${slug}.mdx`
-    )
-    const fileContent = fs.readFileSync(filePath, 'utf8')
+    // Import the TSX file (server-side only)
+    const postModule = await import(`@/markdown/post/${slug}.tsx`)
 
-    // Extract metadata from the export const metadata format
-    const metadataMatch = fileContent.match(
-      /export\s+const\s+metadata\s*=\s*({[\s\S]*?\n})\s*;?/
-    )
-    if (!metadataMatch) {
-      console.warn(`No metadata found in ${slug}.mdx`)
+    if (!postModule.default || !postModule.metadata) {
+      console.warn(`No default export or metadata found in ${slug}.tsx`)
       return null
     }
 
-    // Parse metadata (eval is safe here since we control the content)
-    const metadata = eval(`(${metadataMatch[1]})`) as Metadata
-
-    // Remove metadata export and imports from content for MDX processing
-    const content = fileContent
-      .replace(/export\s+const\s+metadata\s*=\s*{[\s\S]*?\n}\s*;?/, '')
-      .replace(/import\s+{[^}]*}\s+from\s+['"][^'"]*['"]/g, '')
-      .trim()
+    const Component = postModule.default
+    const metadata = postModule.metadata as Metadata
 
     return {
       metadata,
-      markdown: <Markdown content={content} />,
+      markdown: <Component />,
     }
   } catch (error) {
-    console.error(`Failed to import ${slug}.mdx:`, error)
+    console.error(`Failed to import ${slug}.tsx:`, error)
     return null
   }
 }
@@ -112,10 +97,10 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     return []
   }
 
-  // Filter to only .mdx files and extract slugs
+  // Filter to only .tsx files and extract slugs
   const slugs = filenames
-    .filter((filename) => filename.endsWith('.mdx'))
-    .map((filename) => filename.replace('.mdx', ''))
+    .filter((filename) => filename.endsWith('.tsx'))
+    .map((filename) => filename.replace('.tsx', ''))
 
   const posts: BlogPost[] = []
   let successCount = 0
