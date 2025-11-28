@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 import React from 'react'
 import fs from 'fs'
 import path from 'path'
+import { getPostSlugs } from '@/tools/api/get-post-slugs'
 
 export type Metadata = {
   title: string
@@ -127,6 +128,94 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
   })
 
   return posts
+}
+
+// Get paginated posts with prefetch buffer
+export async function getPaginatedPosts(
+  page: number = 1,
+  postsPerPage: number = 9
+): Promise<{
+  posts: BlogPost[]
+  prefetchPosts: BlogPost[]
+  totalPages: number
+  currentPage: number
+}> {
+  const { postSlugs } = await getPostSlugs()
+  const slugs = postSlugs.map((item) => item.slug)
+
+  // Get all metadata first (lightweight - no component imports)
+  const metadataPromises = slugs.map(async (slug) => {
+    try {
+      const postModule = await import(`@/content/post/${slug}.tsx`)
+      return {
+        slug,
+        metadata: postModule.metadata as Metadata,
+      }
+    } catch (error) {
+      console.error(`Failed to load metadata for ${slug}:`, error)
+      return null
+    }
+  })
+
+  const allMetadata = (await Promise.all(metadataPromises)).filter(
+    Boolean
+  ) as Array<{
+    slug: string
+    metadata: Metadata
+  }>
+
+  // Sort by date (newest first)
+  allMetadata.sort(
+    (a, b) =>
+      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+  )
+
+  // Calculate pagination
+  const totalPages = Math.ceil(allMetadata.length / postsPerPage)
+  const start = (page - 1) * postsPerPage
+  const end = start + postsPerPage
+  const prefetchEnd = end + postsPerPage // Get next 9 posts for prefetch
+
+  // Current page posts
+  const currentPageMetadata = allMetadata.slice(start, end)
+
+  // Next page posts for prefetch
+  const prefetchMetadata = allMetadata.slice(end, prefetchEnd)
+
+  // Import full content for current page
+  const currentPagePosts = await Promise.all(
+    currentPageMetadata.map(async ({ slug, metadata }) => {
+      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const Component = postModule.BlogContent || postModule.default
+      return {
+        slug,
+        metadata,
+        Component: <Component />,
+        exists: true,
+      }
+    })
+  )
+
+  // Import full content for prefetch (next page)
+  const prefetchPosts = await Promise.all(
+    prefetchMetadata.map(async ({ slug, metadata }) => {
+      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const Component = postModule.BlogContent || postModule.default
+      return {
+        slug,
+        metadata,
+        Component: <Component />,
+        exists: true,
+      }
+    })
+  )
+
+  return {
+    posts: currentPagePosts,
+    prefetchPosts,
+    totalPages,
+    currentPage: page,
+  }
 }
 
 // Alternative: Function to get a single blog post
