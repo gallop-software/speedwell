@@ -25,7 +25,7 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 export default function Content() {
   return (
     <>
-      {/* Hero 2 */}
+      {/* Hero */}
       <div>
         <Navbar />
         <div className="relative">
@@ -78,7 +78,7 @@ export default function Content() {
         </div>
       </div>
 
-      {/* Showcase 1 */}
+      {/* Showcase */}
       <Section className="bg-body py-30">
         <Columns>
           <Column>
@@ -177,7 +177,7 @@ export default function Content() {
         </Columns>
       </Section>
 
-      {/* Showcase 2 */}
+      {/* Showcase */}
       <Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
         <Columns reverseColumns>
           <Column className="aspect-[4/5] relative">
@@ -255,7 +255,7 @@ export default function Content() {
         </Gallery>
       </Section>
 
-      {/* Showcase 3 */}
+      {/* Showcase */}
       <Section className="py-30 bg-body-dark">
         <Columns reverseColumns={false}>
           <Column className="aspect-auto relative">
@@ -328,7 +328,7 @@ export default function Content() {
         </Gallery>
       </Section>
 
-      {/* Showcase 4 */}
+      {/* Showcase */}
       <Section className="py-30 bg-body2">
         <Columns reverseColumns={true}>
           <Column className="aspect-auto relative">
@@ -403,7 +403,7 @@ export default function Content() {
         </Gallery>
       </Section>
 
-      {/* Showcase 5 */}
+      {/* Showcase */}
       <Section className="py-30 bg-body">
         <Columns reverseColumns={true}>
           <Column className="aspect-[6/8] relative">
@@ -499,7 +499,7 @@ export default function Content() {
         </Gallery>
       </Section>
 
-      {/* Section 4 */}
+      {/* Section */}
       <Section className="py-30 bg-body-light">
         <Columns reverseColumns>
           <Column className="aspect-[4/5] relative">
@@ -543,7 +543,7 @@ export default function Content() {
         </Columns>
       </Section>
 
-      {/* Cover 1 */}
+      {/* Cover */}
       <Cover
         imageSrc="/images/portfolio/pexels-jworks1124-342800.jpg"
         imageAlt="Nulla est cillum"
@@ -558,7 +558,7 @@ export default function Content() {
         </Accent>
       </Cover>
 
-      {/* Testimonial 1 */}
+      {/* Testimonial */}
       <Section className="bg-body2 py-20">
         <FancyHeading
           text="Dolore ex"
