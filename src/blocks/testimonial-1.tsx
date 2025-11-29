@@ -10,89 +10,91 @@ export default function Testimonial1() {
   return (
     <Section className="bg-body2 py-20">
       <FancyHeading
-        text="Dolore ex"
-        accent="ullamco laboris nisi"
+        text="Client Reviews"
+        accent="what our clients say"
       />
       <Swiper>
         <Testimonial1Component
           img="/images/profiles/pexels-linkedin-2182970.jpg"
-          cite="Voluptate ad"
+          cite="Jennifer Martinez"
         >
           <Quote>
-            Magna id enim qui voluptate magna officia tempor reprehenderit
-            voluptate ex quis nostrud ut commodo tempor occaecat esse excepteur
-            ea proident pariatur reprehenderit anim ad magna pariatur cillum
-            enim cupidatat mollit lorem consequat esse cupidatat laborum duis
-            enim non do culpa nostrud deserunt sunt laboris culpa cillum officia
-            ad reprehenderit consectetur duis esse enim voluptate lorem eiusmod
-            ad nisi occaecat esse esse mollit veniam labore laboris nisi nostrud
-            aliqua esse laborum proident amet excepteur cillum labore ad ipsum
-            fugiat et nisi nisi excepteur commodo amet duis commodo laboris
-            ipsum labore nulla veniam dolor sint lorem deserunt do irure aute
-            laboris ex in officia et sint voluptate esse minim ea incididunt
-            quis in
+            Working with Timmerman Interior Design transformed our home beyond
+            expectations. Their attention to detail creative vision professional
+            approach made the entire process enjoyable stress-free. From initial
+            consultation through final installation every decision was
+            thoughtfully considered expertly executed. The team listened
+            carefully to our needs lifestyle preferences budget constraints
+            delivering stunning results that perfectly reflect our family while
+            maintaining exceptional quality timeless style. Our living spaces
+            now flow beautifully together creating warm inviting atmosphere we
+            love coming home to every single day. The investment was absolutely
+            worth it and we continue receiving compliments from everyone who
+            visits. Highly recommend their services to anyone seeking
+            professional interior design expertise.
           </Quote>
         </Testimonial1Component>
         <Testimonial1Component
           img="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
-          cite="Voluptate nulla"
+          cite="Michael Thompson"
         >
           <Quote>
-            In dolore ea anim do voluptate sunt et aliquip ullamco proident anim
-            anim cupidatat magna exercitation laborum qui cupidatat non velit
-            anim esse do minim labore esse nisi sed dolore laborum proident elit
-            ullamco consectetur in consectetur ut voluptate pariatur ullamco
-            consequat cupidatat laborum sint nisi adipiscing aute sed eiusmod
-            elit sit nulla non nisi proident culpa aliquip ipsum est pariatur
-            enim velit do culpa qui ex lorem sunt exercitation culpa aliqua
-            nulla labore labore excepteur qui excepteur proident pariatur in qui
-            veniam nisi tempor magna consectetur aliqua dolore id nisi pariatur
-            deserunt sed pariatur aute in proident laborum irure sit enim tempor
-            ut duis excepteur sed fugiat enim quis voluptate occaecat qui minim
-            nulla adipiscing officia minim quis aliqua enim mollit amet ut
-            laboris aute in nulla sit tempor cupidatat fugiat quis commodo
-            consectetur fugiat ut velit deserunt dolor sed adipiscing deserunt
-            incididunt fugiat eiusmod tempor et non est nisi magna excepteur
-            aliquip officia culpa minim quis exercitation nulla culpa proident
-            sed irure ex velit magna laboris ut veniam magna incididunt amet
-            adipiscing quis aliqua ullamco irure deserunt adipiscing fugiat
-            reprehenderit tempor non duis sint velit veniam occaecat sed esse ut
-            magna incididunt dolore tempor cupidatat aute dolore est lorem anim
-            qui adipiscing
+            Our office renovation exceeded all expectations thanks to the
+            talented team at Timmerman Interior Design. They understood our
+            company culture brand identity employee needs creating functional
+            beautiful workspace that boosts productivity morale. The design
+            process was collaborative transparent with regular updates clear
+            communication realistic timelines throughout. Their vendor
+            relationships industry expertise ensured smooth coordination quality
+            craftsmanship staying within budget parameters. The finished space
+            features innovative solutions smart storage ergonomic furniture
+            sophisticated finishes natural lighting collaborative zones private
+            areas perfectly balanced. Employee feedback has been overwhelmingly
+            positive noting improved work environment enhanced creativity better
+            collaboration. The investment in professional design services
+            delivered measurable returns through increased productivity employee
+            satisfaction positive client impressions. We appreciate their
+            ongoing support post-project completion truly stand behind their
+            work maintaining lasting relationships with clients.
           </Quote>
         </Testimonial1Component>
         <Testimonial1Component
           img="/images/profiles/pexels-maide-arslan-128712163-31750456.jpg"
-          cite="Deserunt dolor"
+          cite="Sarah Anderson"
         >
           <Quote>
-            Non elit excepteur ipsum exercitation ad mollit magna aliqua culpa
-            consectetur anim officia et non laborum deserunt aliquip nulla
-            laboris commodo enim minim ad consectetur proident irure in
-            consequat ex pariatur dolor mollit et sunt occaecat fugiat aliqua
-            proident laborum eiusmod incididunt nisi cupidatat sunt in ut tempor
-            nulla minim consectetur sit adipiscing sunt ipsum ullamco
-            exercitation consectetur quis minim nostrud do ullamco exercitation
-            deserunt ad ipsum ullamco eiusmod sed laboris minim ipsum
-            consectetur aliqua quis quis cupidatat non veniam incididunt id enim
-            non amet ipsum occaecat labore sunt
+            The kitchen and master bath renovation orchestrated by Timmerman
+            Interior Design completely transformed our daily living experience.
+            Their expertise in space planning material selection fixture
+            coordination created luxurious functional spaces we enjoy every day.
+            The design team provided creative solutions maximizing storage
+            improving workflow incorporating modern amenities while respecting
+            our home architectural style. Project management was exceptional
+            with clear scheduling coordination among contractors tradespeople
+            ensuring quality workmanship minimal disruption. The attention to
+            finishing details hardware lighting accessories elevated the overall
+            result beyond standard renovation. We love our beautiful new spaces
+            and appreciate the lasting value added to our home.
           </Quote>
         </Testimonial1Component>
         <Testimonial1Component
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
-          cite="Dolor consectetur"
+          cite="David Chen"
         >
           <Quote>
-            Labore anim ex non dolor anim adipiscing ipsum in nisi magna dolor
-            adipiscing excepteur laboris exercitation nostrud cupidatat ullamco
-            cupidatat dolore sint duis irure do proident commodo consequat ad
-            quis esse irure cillum occaecat laborum duis magna nostrud id velit
-            est aliquip sit eiusmod excepteur labore occaecat minim elit fugiat
-            ea ad labore elit esse incididunt duis ipsum elit officia elit
-            occaecat occaecat occaecat magna magna consectetur duis tempor duis
-            aliquip cillum adipiscing non sint commodo sint adipiscing labore
-            duis sint sint in exercitation incididunt nulla incididunt sunt quis
-            nisi duis dolor do esse anim nulla occaecat amet
+            Timmerman Interior Design helped us create our dream home through
+            their comprehensive design services color consultation expertise
+            furniture selection guidance. Their ability to blend our personal
+            style with current design trends resulted in timeless elegant
+            interiors we will enjoy for years to come. The team was professional
+            responsive creative throughout entire process making design
+            decisions easier more enjoyable. Their established vendor
+            relationships provided access to quality furnishings materials
+            competitive pricing. The cohesive flow between rooms unified color
+            palette carefully selected accessories created sophisticated
+            comfortable living environment. We could not be happier with the
+            results highly recommend their services to anyone seeking
+            professional interior design expertise.
           </Quote>
         </Testimonial1Component>
       </Swiper>

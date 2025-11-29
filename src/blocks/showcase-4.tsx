@@ -27,21 +27,22 @@ export default function Showcase4() {
             as="h2"
             styleAs="h3"
           >
-            Ut et ea duis commodo
+            Kitchen and Bath
           </Heading>
           <Heading
             as="h3"
             styleAs="h2"
           >
-            Cillum anim do mollit non
+            Luxury Kitchen and Spa Bath
           </Heading>
           <Paragraph>
-            Amet exercitation consequat sunt amet incididunt est ex in cupidatat
-            sed duis adipiscing laboris officia laborum fugiat proident
-            excepteur ea sit adipiscing ullamco duis tempor magna id labore est
-            anim quis cupidatat cupidatat tempor dolor fugiat ut elit
-            reprehenderit adipiscing incididunt aute veniam excepteur esse
-            ullamco consectetur officia adipiscing consequat adipiscing
+            This comprehensive renovation showcases mastery in functional luxury
+            featuring custom cabinetry premium countertops designer fixtures
+            innovative storage professional-grade appliances stunning tile work
+            elegant hardware sophisticated lighting ambient features spa-like
+            atmosphere creating beautiful hardworking spaces where form meets
+            function perfectly balancing aesthetics practicality durability
+            style comfort luxury
           </Paragraph>
         </Column>
       </Columns>

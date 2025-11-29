@@ -38,20 +38,22 @@ export default function Showcase5() {
             color="text-gray-600"
             margin="mb-4"
           >
-            Aliquip est sit cillum
+            Whole Home Design
           </Heading>
           <Heading
             as="h3"
             styleAs="h2"
           >
-            Veniam lorem lorem nisi mollit officia qui sunt minim labore
+            Complete Home Transformation from Concept to Completion
           </Heading>
           <Paragraph>
-            Ad qui in anim qui proident elit ex mollit reprehenderit quis
-            aliquip velit nulla magna sit ullamco in anim irure anim fugiat nisi
-            culpa laborum lorem exercitation amet commodo quis laboris nostrud
-            irure adipiscing amet sed adipiscing culpa do amet proident irure in
-            ex irure reprehenderit qui amet elit et proident
+            This full-service residential project exemplifies comprehensive
+            design coordination featuring cohesive color palettes custom
+            furnishings curated artwork strategic lighting layered textiles
+            architectural details refined finishes thoughtful accessories
+            seamless transitions between spaces creating unified aesthetic
+            throughout entire home reflecting client lifestyle personal taste
+            design aspirations
           </Paragraph>
           <Buttons>
             <Button
@@ -60,7 +62,7 @@ export default function Showcase5() {
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Mollit nulla
+              Schedule Consultation
             </Button>
           </Buttons>
         </Column>

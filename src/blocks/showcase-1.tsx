@@ -29,12 +29,12 @@ export default function Showcase1() {
             as="h2"
             id="services"
           >
-            Aliqua reprehenderit adipiscing elit irure veniam lorem
+            Comprehensive Residential and Commercial Design Solutions
           </Heading>
           <Paragraph>
-            Aliqua ut ullamco consequat cupidatat velit ut nulla ullamco
-            voluptate aute consectetur pariatur sunt lorem officia anim et sit
-            elit do adipiscing sed quis ut
+            Our full-service interior design approach transforms ordinary spaces
+            into extraordinary environments through thoughtful planning expert
+            execution and meticulous attention to every detail
           </Paragraph>
         </Column>
       </Columns>
@@ -58,21 +58,21 @@ export default function Showcase1() {
           />
         </Column>
         <Column>
-          <Heading as="h3">Enim aliquip aliquip</Heading>
+          <Heading as="h3">What We Offer Clients</Heading>
           <List className="mb-8">
-            <Li>Sit consectetur commodo magna nulla in sit</Li>
+            <Li>Complete space planning and layout optimization</Li>
             <Li>
-              Aute sit anim adipiscing aliqua occaecat eiusmod magna ea
-              consectetur
+              Custom furniture selection and bespoke piece design for perfect
+              integration
             </Li>
-            <Li>Laboris lorem veniam</Li>
+            <Li>Expert color consultation services</Li>
             <Li>
-              Incididunt elit ut et sunt nulla pariatur labore ex commodo do
-              aliquip occaecat ea in
+              Kitchen and bathroom design featuring premium materials and
+              innovative storage solutions
             </Li>
             <Li>
-              Id excepteur et veniam ut excepteur qui velit elit veniam dolor
-              dolore sint aliqua
+              Full project management from initial concept through final
+              installation and styling
             </Li>
           </List>
         </Column>
@@ -88,15 +88,17 @@ export default function Showcase1() {
           />
         </Column>
         <Column>
-          <Heading as="h3">Dolore ullamco cillum</Heading>
+          <Heading as="h3">Our Design Philosophy</Heading>
           <Paragraph>
-            Ut enim fugiat eiusmod ut ipsum dolore ea magna minim tempor velit
-            ex mollit amet velit sit velit lorem amet non fugiat
+            We believe great design enhances daily living through thoughtful
+            space planning beautiful materials and personalized details that
+            reflect your lifestyle and aspirations
           </Paragraph>
           <Paragraph>
-            Fugiat do consectetur aliqua anim nostrud aliquip minim nulla lorem
-            aliqua aliquip laborum proident qui laboris incididunt ipsum in
-            magna adipiscing aute non minim aute
+            Each project receives dedicated attention collaborative
+            communication and creative solutions tailored to your specific needs
+            budget timeline ensuring exceptional results that exceed
+            expectations
           </Paragraph>
           <Buttons>
             <Button
@@ -105,7 +107,7 @@ export default function Showcase1() {
               icon={arrowDownIcon}
               iconPlacement="after"
             >
-              Minim cillum aute sint duis
+              View Our Featured Projects
             </Button>
           </Buttons>
         </Column>

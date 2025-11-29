@@ -34,21 +34,22 @@ export default function Showcase2() {
             styleAs="h3"
             id="birth-suites"
           >
-            Cillum fugiat do
+            Featured Project
           </Heading>
           <Heading
             as="h3"
             styleAs="h2"
           >
-            Commodo labore consequat id amet
+            Modern Luxury Living Transformation
           </Heading>
           <Paragraph>
-            Elit dolor aute aliqua commodo non id in veniam voluptate et dolore
-            excepteur cillum eiusmod cupidatat reprehenderit commodo elit velit
-            aute excepteur aliquip et commodo consequat aute voluptate cillum
-            sint sunt id aliqua laboris officia duis mollit cupidatat irure
-            dolore laboris officia officia fugiat ad enim cupidatat laborum
-            reprehenderit ea
+            This stunning residential renovation showcases our ability to blend
+            contemporary design with classic elegance creating warm inviting
+            spaces featuring custom millwork designer lighting carefully
+            selected furnishings and rich textural elements throughout
+            complemented by neutral palettes accented with sophisticated colors
+            resulting in timeless interiors that perfectly balance form function
+            beauty practicality comfort style
           </Paragraph>
         </Column>
       </Columns>

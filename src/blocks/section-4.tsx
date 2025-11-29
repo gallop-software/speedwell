@@ -31,15 +31,16 @@ export default function Section4() {
         </Column>
         <Column>
           <Heading as="h2">
-            Pariatur velit labore fugiat voluptate enim reprehenderit
+            Experience The Timmerman Difference in Every Detail
           </Heading>
           <Paragraph>
-            Deserunt quis lorem ipsum tempor non enim occaecat est fugiat nulla
-            et mollit cillum consectetur minim sed est nisi adipiscing ea qui
-            qui mollit esse id cupidatat sit commodo nostrud amet lorem non nisi
-            deserunt voluptate ullamco est est cupidatat lorem irure elit veniam
-            ipsum laborum est ut cillum non aliquip ullamco ex aliqua qui dolor
-            ipsum
+            Working with our team means personalized service creative expertise
+            proven processes seamless coordination trusted vendor relationships
+            quality craftsmanship meticulous attention transparent communication
+            realistic timelines budget management stress-free experience
+            beautiful results functional spaces elevated aesthetics lasting
+            value increased property appeal enhanced daily living exceptional
+            design solutions tailored perfectly
           </Paragraph>
           <Buttons>
             <Button
@@ -48,7 +49,7 @@ export default function Section4() {
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Minim esse commodo consectetur minim
+              Start Your Design Journey Today
             </Button>
           </Buttons>
         </Column>

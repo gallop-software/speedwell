@@ -12,7 +12,7 @@ export default function Cover1() {
         size="medium"
         color="text-white"
       >
-        aliquip commodo
+        timeless elegance
       </Accent>
     </Cover>
   )
