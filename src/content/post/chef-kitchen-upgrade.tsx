@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+        alt="Professional chef's kitchen with high-end appliances"
         size="large"
         wrap={true}
       />

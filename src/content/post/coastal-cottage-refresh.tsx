@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/pexels-pixabay-259962.jpg"
+        alt="Coastal cottage interior with bright, airy design"
         size="large"
         wrap={true}
       />

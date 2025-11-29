@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+        alt="Bohemian bedroom with layered textiles and eclectic decor"
         size="large"
         wrap={true}
       />

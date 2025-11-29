@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+        alt="Boutique hotel interior with elegant design details"
         size="large"
         wrap={true}
       />

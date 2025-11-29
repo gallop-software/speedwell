@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+        alt="Basement entertainment space with home theater and game room"
         size="large"
         wrap={true}
       />

@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/pexels-pixabay-276724.jpg"
+        alt="Home library and study with built-in bookshelves"
         size="large"
         wrap={true}
       />
