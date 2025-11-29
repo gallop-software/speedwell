@@ -6,7 +6,7 @@ import {
   Paragraph,
 } from '@/components'
 
-export default function Section33() {
+export default function About1() {
   return (
     <Section className="py-30">
       <Masonry
