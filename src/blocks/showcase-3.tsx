@@ -26,20 +26,22 @@ export default function Showcase3() {
             as="h2"
             styleAs="h3"
           >
-            Lorem incididunt ipsum
+            Commercial Excellence
           </Heading>
           <Heading
             as="h3"
             styleAs="h2"
           >
-            Nulla ex esse aliqua sint
+            Professional Office Suite Redesign
           </Heading>
           <Paragraph>
-            Dolore est anim velit duis ut qui veniam eiusmod consectetur veniam
-            magna culpa minim duis mollit ad nulla cupidatat qui ut occaecat
-            excepteur deserunt aute veniam aliquip incididunt esse qui occaecat
-            occaecat ex voluptate consequat tempor anim aliquip irure ullamco
-            eiusmod consectetur sunt adipiscing nostrud tempor
+            This commercial transformation demonstrates expertise in creating
+            productive inspiring workspaces through strategic layout
+            optimization ergonomic furniture selections sophisticated finishes
+            modern lighting solutions branded elements cohesive color schemes
+            smart storage systems flexible meeting areas collaborative zones
+            resulting professional environments that enhance employee wellbeing
+            boost productivity reflect company culture
           </Paragraph>
         </Column>
       </Columns>

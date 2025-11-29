@@ -29,7 +29,7 @@ export default function Hero2() {
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
-                dolor sit
+                design excellence
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -37,18 +37,20 @@ export default function Hero2() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Aliqua duis in culpa labore
+                Our Design Portfolio Speaks Volumes
               </Heading>
               <Paragraph>
-                Culpa dolor dolore nisi non consequat elit aliquip pariatur aute
-                cillum fugiat mollit occaecat aute sed sunt ut esse
+                Every space tells a story, and each project showcases our
+                dedication to creating beautiful interiors that enhance daily
+                living experiences
               </Paragraph>
               <Paragraph>
-                Magna veniam magna velit exercitation fugiat sunt elit
-                reprehenderit velit exercitation deserunt sint aute fugiat ea
-                est commodo id lorem incididunt ea adipiscing qui ipsum officia
-                magna ullamco do sed lorem est occaecat ut ex consequat cillum
-                exercitation ex et
+                From elegant residential transformations to sophisticated
+                commercial spaces, our portfolio represents years of expertise
+                crafting environments that perfectly balance aesthetics with
+                functionality and reflect each client's unique vision while
+                maintaining timeless appeal through carefully curated design
+                elements that stand the test of time
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -56,7 +58,7 @@ export default function Hero2() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Ullamco ad irure incididunt est
+                  Explore Our Design Services
                 </Button>
               </Buttons>
             </Column>
