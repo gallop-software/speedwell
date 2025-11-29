@@ -173,14 +173,32 @@ export function BlogClient({
   }
 
   const openSidebar = async (slug: string) => {
-    // Dynamically import the post component
+    // Open sidebar immediately with loading state
+    setIsOpen(true)
+    setContent(
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-accent mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    )
+
+    // Then load the post content
     try {
       const postModule = await import(`@/content/post/${slug}.tsx`)
       const Component = postModule.BlogContent || postModule.default
       setContent(<Component />)
-      setIsOpen(true)
     } catch (error) {
       console.error(`Failed to load post ${slug}:`, error)
+      setContent(
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center text-red-500">
+            <p className="text-lg font-semibold mb-2">Failed to load post</p>
+            <p className="text-sm">Please try again later</p>
+          </div>
+        </div>
+      )
     }
   }
 
