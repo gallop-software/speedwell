@@ -1,6 +1,6 @@
 import { Section, Heading, Grid, Card2 } from '@/components'
 
-export function Section3() {
+export default function Section3() {
   return (
     <Section className="py-16 md:py-24 bg-gradient-to-b from-body to-body-light">
       <Heading

@@ -17,7 +17,7 @@ import {
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
 
-export function Hero1() {
+export default function Hero1() {
   return (
     <>
       <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">

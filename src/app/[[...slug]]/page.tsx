@@ -39,9 +39,9 @@ function getSlugPath(slug?: string[]): string {
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'src/content')
 
-  function getAllMdxFiles(dir: string, basePath: string = ''): string[][] {
+  function getAllContentFiles(dir: string, basePath: string = ''): string[][] {
     const files = readdirSync(dir, { withFileTypes: true })
-    const mdxFiles: string[][] = []
+    const contentFiles: string[][] = []
 
     for (const file of files) {
       const fullPath = path.join(dir, file.name)
@@ -49,7 +49,7 @@ export async function generateStaticParams() {
 
       if (file.isDirectory()) {
         // Recursively get files from subdirectories
-        mdxFiles.push(...getAllMdxFiles(fullPath, relativePath))
+        contentFiles.push(...getAllContentFiles(fullPath, relativePath))
       } else if (file.name.endsWith('.tsx')) {
         const slugPath = relativePath.replace(/\.tsx$/, '')
         const segments = slugPath.split('/').map((seg) => {
@@ -59,16 +59,16 @@ export async function generateStaticParams() {
             return seg
           }
         })
-        mdxFiles.push(
+        contentFiles.push(
           segments.length === 1 && segments[0] === 'index' ? [] : segments
         )
       }
     }
 
-    return mdxFiles
+    return contentFiles
   }
 
-  const allFiles = getAllMdxFiles(contentDir)
+  const allFiles = getAllContentFiles(contentDir)
 
   return allFiles.map((slugArray) => ({
     slug: slugArray,
