@@ -12,6 +12,7 @@ import { Button } from '../button'
 import { Heading } from '../heading'
 import { Image } from '../image'
 import DynamicSidebar from '../dynamic-sidebar'
+import { GalleryPopup } from '../lightbox/gallery-popup'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'
@@ -55,6 +56,8 @@ export function BlogClient({
   const [layoutKey, setLayoutKey] = useState(0) // Force layout recalculation
   const [isOpen, setIsOpen] = useState(false)
   const [content, setContent] = useState<ReactNode>(<></>)
+  const [isLoading, setIsLoading] = useState(false)
+  const sidebarContentRef = useRef<HTMLDivElement>(null)
 
   // Posts are already filtered and sorted on server, just slice for pagination
   const currentPosts = allPosts.slice(0, displayedCount)
@@ -173,14 +176,20 @@ export function BlogClient({
   }
 
   const openSidebar = async (slug: string) => {
+    // Open sidebar immediately with loading state
+    setIsOpen(true)
+    setIsLoading(true)
+    setContent(<></>)
+
     // Dynamically import the post component
     try {
       const postModule = await import(`@/content/post/${slug}.tsx`)
       const Component = postModule.BlogContent || postModule.default
       setContent(<Component />)
-      setIsOpen(true)
+      setIsLoading(false)
     } catch (error) {
       console.error(`Failed to load post ${slug}:`, error)
+      setIsLoading(false)
     }
   }
 
@@ -317,7 +326,16 @@ export function BlogClient({
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       >
-        {content}
+        {isLoading ? (
+          <div className="flex items-center justify-center min-h-[400px]">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
+          </div>
+        ) : (
+          <div ref={sidebarContentRef}>
+            {content}
+            <GalleryPopup containerRef={sidebarContentRef} />
+          </div>
+        )}
       </DynamicSidebar>
     </>
   )
