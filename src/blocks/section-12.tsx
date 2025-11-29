@@ -1,4 +1,11 @@
-import { Section, Columns, Column, Heading, Paragraph, Card3 } from '@/components'
+import {
+  Section,
+  Columns,
+  Column,
+  Heading,
+  Paragraph,
+  Card3,
+} from '@/components'
 
 export default function Section12() {
   return (
