@@ -175,8 +175,8 @@ export function BlogClient({
   const openSidebar = async (slug: string) => {
     // Dynamically import the post component
     try {
-      const module = await import(`@/content/post/${slug}.tsx`)
-      const Component = module.BlogContent || module.default
+      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const Component = postModule.BlogContent || postModule.default
       setContent(<Component />)
       setIsOpen(true)
     } catch (error) {
