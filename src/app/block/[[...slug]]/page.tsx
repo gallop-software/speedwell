@@ -3,6 +3,7 @@ import { readdirSync } from 'fs'
 import path from 'path'
 import { notFound } from 'next/navigation'
 import { GalleryPopup } from '@/components/lightbox/gallery-popup'
+import clsx from 'clsx'
 
 interface PageProps {
   params: Promise<{
@@ -76,8 +77,8 @@ export default async function Page({ params }: PageProps) {
   }
 
   // Slugs that should have py-30 class
-  const slugsWithPadding = ['section-1', 'hero-2', 'hero-3']
-  const shouldAddPadding = slugsWithPadding.includes(slugPath)
+  // const slugsWithPadding = ['section-1', 'hero-2', 'hero-3']
+  // const shouldAddPadding = slugsWithPadding.includes(slugPath)
 
   try {
     const { default: Content, metadata } = await import(
@@ -87,7 +88,12 @@ export default async function Page({ params }: PageProps) {
     return (
       <div className="overflow-hidden">
         <main
-          className={`[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl [&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl [&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40 ${shouldAddPadding ? 'py-30' : ''}`}
+          className={clsx(
+            '[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl',
+            '[&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl',
+            '[&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40'
+            // shouldAddPadding && 'py-30'
+          )}
         >
           <Content />
           <GalleryPopup />
