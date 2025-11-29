@@ -2,7 +2,7 @@ import Hero1 from '@/blocks/hero-1'
 import Section1 from '@/blocks/section-1'
 import Section2 from '@/blocks/section-2'
 import Section3 from '@/blocks/section-3'
-import SectionBlog from '@/blocks/section-blog'
+import Blog1 from '@/blocks/blog-1'
 
 export default function Content() {
   return (
@@ -11,7 +11,7 @@ export default function Content() {
       <Section1 />
       <Section2 />
       <Section3 />
-      <SectionBlog />
+      <Blog1 />
     </>
   )
 }
