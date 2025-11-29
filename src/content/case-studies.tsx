@@ -20,8 +20,8 @@ import {
 export default function Content() {
   return (
     <>
+      {/* Hero */}
       <Navbar className="bg-body2" />
-
       <Section className="relative py-30">
         <div className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-left-top bg-[length:700px] bg-[url('/images/adobestock_277309825-1400x809.jpg')]"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent [background-image:linear-gradient(to_right,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_100%),linear-gradient(to_bottom,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_100%),linear-gradient(to_top,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_70%)]"></div>
@@ -49,6 +49,7 @@ export default function Content() {
         </div>
       </Section>
 
+      {/* Hero */}
       <Section className="pb-30">
         <Columns reverseColumns={false}>
           <Column>
@@ -73,6 +74,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Partners */}
       <Section className="relative pb-30">
         <Heading as="h2">Non deserunt</Heading>
         <Grid

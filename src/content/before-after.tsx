@@ -22,8 +22,8 @@ import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
 export default function Content() {
   return (
     <>
+      {/* Hero */}
       <Navbar />
-
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -72,6 +72,7 @@ export default function Content() {
         </div>
       </div>
 
+      {/* Content */}
       <Section
         innerAlign="content"
         className="my-30"
@@ -91,6 +92,7 @@ export default function Content() {
         </Paragraph>
       </Section>
 
+      {/* About */}
       <Section className="mb-30">
         <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
           <Profile1
@@ -351,6 +353,7 @@ export default function Content() {
         </Grid>
       </Section>
 
+      {/* Call To Action */}
       <Cover
         imageSrc="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
         imageAlt="Anim laboris fugiat sit magna non sit minim"

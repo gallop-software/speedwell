@@ -26,8 +26,8 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 export default function Content() {
   return (
     <>
+      {/* Hero */}
       <Navbar />
-
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -78,6 +78,7 @@ export default function Content() {
         </div>
       </div>
 
+      {/* Showcase */}
       <Section className="bg-body py-30">
         <Columns gap="gap-10 lg:gap-20">
           <Column className="aspect-[4/5] relative">
@@ -152,6 +153,7 @@ export default function Content() {
         </Gallery>
       </Section>
 
+      {/* Section */}
       <Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
         <Columns
           reverseColumns
@@ -205,6 +207,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="py-30 bg-body">
         <Columns
           reverseColumns={false}
@@ -243,6 +246,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="py-30 bg-body-dark">
         <Columns
           reverseColumns={false}
@@ -285,6 +289,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="py-30 bg-body2">
         <Columns
           reverseColumns={true}
@@ -345,6 +350,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="py-30 bg-body-dark">
         <Columns
           reverseColumns={false}
@@ -389,6 +395,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="py-30 bg-body2">
         <Columns
           reverseColumns={false}
