@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+        alt="Modern nursery with soft colors and thoughtful design"
         size="large"
         wrap={true}
       />

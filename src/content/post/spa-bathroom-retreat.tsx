@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/pexels-pixabay-269218.jpg"
+        alt="Spa-like bathroom retreat with luxurious fixtures and calming design"
         size="large"
         wrap={true}
       />

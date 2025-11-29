@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+        alt="Luxury master suite with elegant furnishings and spa-like atmosphere"
         size="large"
         wrap={true}
       />

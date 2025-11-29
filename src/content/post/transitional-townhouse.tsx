@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+        alt="Transitional townhouse blending traditional and contemporary design"
         size="large"
         wrap={true}
       />

@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+        alt="Contemporary family home with modern, functional design"
         size="large"
         wrap={true}
       />

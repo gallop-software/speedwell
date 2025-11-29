@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
+        alt="Midcentury modern home with clean lines and retro furnishings"
         size="large"
         wrap={true}
       />

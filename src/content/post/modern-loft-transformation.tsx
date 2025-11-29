@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/pexels-pixabay-161758.jpg"
+        alt="Modern loft transformation with open floor plan and industrial touches"
         size="large"
         wrap={true}
       />

@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/pexels-burst-545012.jpg"
+        alt="Renovated coastal home with ocean-inspired design"
         size="large"
         wrap={true}
       />

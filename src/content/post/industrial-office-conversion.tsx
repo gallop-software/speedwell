@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+        alt="Industrial office space with exposed brick and modern furnishings"
         size="large"
         wrap={true}
       />

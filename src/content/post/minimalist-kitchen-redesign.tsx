@@ -7,6 +7,7 @@ function Details() {
     <>
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+        alt="Minimalist kitchen with sleek cabinets and clean design"
         size="large"
         wrap={true}
       />
