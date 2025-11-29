@@ -21,6 +21,8 @@ Guide for converting large content pages into modular block components.
 ### 1. Identify Sections
 
 Review the content file and note all comment markers:
+
+<!-- prettier-ignore-start -->
 ```tsx
 {/* Hero */}
 <Section>...</Section>
@@ -31,18 +33,21 @@ Review the content file and note all comment markers:
 {/* Testimonial */}
 <Testimonial1>...</Testimonial1>
 ```
+<!-- prettier-ignore-end -->
 
 ### 2. Create Block Files
 
 For each commented section:
 
 **Naming Convention:**
+
 - Use kebab-case: `{type}-{number}.tsx`
 - Always start with `-1` (e.g., `hero-1.tsx`, `showcase-1.tsx`)
 - If file exists, increment number (e.g., `showcase-2.tsx`, `showcase-3.tsx`)
 - Never overwrite existing blocks
 
 **File Template:**
+
 ```tsx
 // filepath: src/blocks/{type}-{n}.tsx
 import Component1 from '@/components/component-1'
@@ -60,6 +65,7 @@ export default function {Type}{N}() {
 ```
 
 **Example:**
+
 ```tsx
 // filepath: src/blocks/hero-2.tsx
 import {
@@ -104,15 +110,15 @@ export default function Hero2() {
                 Aliqua duis in culpa labore
               </Heading>
               <Paragraph>
-                Culpa dolor dolore nisi non consequat elit aliquip pariatur
-                aute cillum fugiat mollit occaecat aute sed sunt ut esse
+                Culpa dolor dolore nisi non consequat elit aliquip pariatur aute
+                cillum fugiat mollit occaecat aute sed sunt ut esse
               </Paragraph>
               <Paragraph>
                 Magna veniam magna velit exercitation fugiat sunt elit
                 reprehenderit velit exercitation deserunt sint aute fugiat ea
-                est commodo id lorem incididunt ea adipiscing qui ipsum
-                officia magna ullamco do sed lorem est occaecat ut ex
-                consequat cillum exercitation ex et
+                est commodo id lorem incididunt ea adipiscing qui ipsum officia
+                magna ullamco do sed lorem est occaecat ut ex consequat cillum
+                exercitation ex et
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -135,11 +141,13 @@ export default function Hero2() {
 ### 3. Collect Required Imports
 
 For each section, identify all components used:
+
 - Look for JSX tags: `<Navbar />`, `<Hero>`, `<Section>`, etc.
 - Check for icon imports if using `icon={arrowDownIcon}`
 - Note any utility imports
 
 Common components to check:
+
 ```tsx
 import {
   Cover,
@@ -169,6 +177,7 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 ### 4. Update Content File
 
 **Add Block Imports** (at top, after existing imports):
+
 ```tsx
 import Hero2 from '@/blocks/hero-2'
 import Showcase1 from '@/blocks/showcase-1'
@@ -177,6 +186,8 @@ import Showcase2 from '@/blocks/showcase-2'
 ```
 
 **Replace Sections with Components:**
+
+<!-- prettier-ignore-start -->
 ```tsx
 export default function Content() {
   return (
@@ -189,14 +200,18 @@ export default function Content() {
   )
 }
 ```
+<!-- prettier-ignore-end -->
 
 **Keep Metadata Intact:**
+
 - Do not modify the `export const metadata = { ... }` object
 - All SEO data stays in the content file
 
 ### 5. Verify Structure
 
 Final content file should look like:
+
+<!-- prettier-ignore-start -->
 ```tsx
 // filepath: src/content/{page}.tsx
 import Block1 from '@/blocks/block-1'
@@ -217,20 +232,22 @@ export const metadata = {
   // ... unchanged metadata
 }
 ```
+<!-- prettier-ignore-end -->
 
 ## Block Naming Reference
 
-| Comment | Block File | Component Name |
-|---------|-----------|---------------|
-| `{/* Hero */}` | `hero-1.tsx` | `Hero1` |
-| `{/* Hero */}` (2nd) | `hero-2.tsx` | `Hero2` |
-| `{/* Showcase */}` | `showcase-1.tsx` | `Showcase1` |
-| `{/* Showcase */}` (2nd) | `showcase-2.tsx` | `Showcase2` |
-| `{/* Section */}` | `section-4.tsx` | `Section4` |
-| `{/* Cover */}` | `cover-1.tsx` | `Cover1` |
-| `{/* Testimonial */}` | `testimonial-1.tsx` | `Testimonial1` |
+| Comment                  | Block File          | Component Name |
+| ------------------------ | ------------------- | -------------- |
+| `{/* Hero */}`           | `hero-1.tsx`        | `Hero1`        |
+| `{/* Hero */}` (2nd)     | `hero-2.tsx`        | `Hero2`        |
+| `{/* Showcase */}`       | `showcase-1.tsx`    | `Showcase1`    |
+| `{/* Showcase */}` (2nd) | `showcase-2.tsx`    | `Showcase2`    |
+| `{/* Section */}`        | `section-4.tsx`     | `Section4`     |
+| `{/* Cover */}`          | `cover-1.tsx`       | `Cover1`       |
+| `{/* Testimonial */}`    | `testimonial-1.tsx` | `Testimonial1` |
 
 **Increment Rules:**
+
 - First occurrence of type: use `-1`
 - If `hero-1.tsx` exists and you create another Hero: use `hero-2.tsx`
 - If `showcase-1.tsx` through `showcase-5.tsx` exist: next is `showcase-6.tsx`
@@ -239,6 +256,7 @@ export const metadata = {
 ## Common Pitfalls
 
 ❌ **Don't:**
+
 - Overwrite existing block files
 - Forget to import components used in the block
 - Remove or modify the metadata object
@@ -246,6 +264,7 @@ export const metadata = {
 - Mix up component names between `@/components` imports and block names
 
 ✅ **Do:**
+
 - Always check for existing block numbers before creating
 - Include all necessary imports in each block file
 - Keep Content() component clean and simple
@@ -256,6 +275,8 @@ export const metadata = {
 ## Example: Complete Extraction
 
 **Before** (`src/content/portfolio.tsx` - 800 lines):
+
+<!-- prettier-ignore-start -->
 ```tsx
 import { ... 20+ component imports }
 
@@ -284,8 +305,11 @@ export default function Content() {
 
 export const metadata = { ... }
 ```
+<!-- prettier-ignore-end -->
 
 **After** (`src/content/portfolio.tsx` - 80 lines):
+
+<!-- prettier-ignore-start -->
 ```tsx
 import Hero2 from '@/blocks/hero-2'
 import Showcase1 from '@/blocks/showcase-1'
@@ -315,6 +339,7 @@ export default function Content() {
 
 export const metadata = { ... }
 ```
+<!-- prettier-ignore-end -->
 
 ## Benefits
 
@@ -323,33 +348,39 @@ export const metadata = { ... }
 ✅ **SEO Auditing**: Easy to scan headings and keywords per block  
 ✅ **Testing**: Isolated components are easier to unit test  
 ✅ **Collaboration**: Smaller files = cleaner git diffs  
-✅ **Performance**: Potential for lazy loading blocks later  
+✅ **Performance**: Potential for lazy loading blocks later
 
 ## Troubleshooting
 
 ### Issue: Component not found
+
 **Error:** `Module not found: Can't resolve '@/components/Component'`
 
 **Solution:** Check that all components used in the block are imported. Look at the original content file to see what was imported before extraction.
 
 ### Issue: Wrong block number
+
 **Error:** Block `showcase-1.tsx` already exists
 
 **Solution:** Check `src/blocks/` directory for existing files. Use the next available number (e.g., `showcase-6.tsx` if 1-5 exist).
 
 ### Issue: Page renders blank
+
 **Error:** No visible error but page is blank
 
-**Solution:** 
+**Solution:**
+
 1. Check that all block imports in the content file are correct
 2. Verify each block file has a default export
 3. Check browser console for React errors
 4. Ensure all block files are saved
 
 ### Issue: Duplicate component names
+
 **Error:** `Testimonial1` conflicts between `@/components` and block name
 
 **Solution:** Rename the block component (e.g., `Testimonial1Block`) or use an alias in the import:
+
 ```tsx
 import { Testimonial1 as Testimonial1Component } from '@/components'
 ```
@@ -357,6 +388,7 @@ import { Testimonial1 as Testimonial1Component } from '@/components'
 ## Next Steps
 
 After extraction:
+
 1. Run `npm run dev` to test the page renders correctly
 2. Run `npm run lint` to catch any import issues
 3. Test the page in development to ensure all blocks render
@@ -369,14 +401,17 @@ After extraction:
 The content file is automatically rendered by Next.js dynamic routing:
 
 1. **Start dev server:**
+
    ```bash
    npm run dev
    ```
 
 2. **Visit the page:**
+
    ```
    http://localhost:3000/{slug-from-metadata}
    ```
+
    Example: If `metadata.slug: 'lorem-ipsum'`, visit `http://localhost:3000/lorem-ipsum`
 
 3. **Build for production:**
@@ -387,4 +422,4 @@ The content file is automatically rendered by Next.js dynamic routing:
 
 ---
 
-*This workflow was created for the Speedwell project and can be reused for any Next.js/React content pages.*
+_This workflow was created for the Speedwell project and can be reused for any Next.js/React content pages._
