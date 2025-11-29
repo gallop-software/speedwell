@@ -17,15 +17,20 @@ interface Slide extends SlideImage {
   thumbnail?: string
 }
 
-export const GalleryPopup = () => {
+interface GalleryPopupProps {
+  containerRef?: React.RefObject<HTMLElement | null>
+}
+
+export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => {
   const [galleries, setGalleries] = useState<
     { slides: Slide[]; open: boolean; index: number; galleryIndex: number }[]
   >([])
 
   useEffect(() => {
-    const galleryElements = document.querySelectorAll(`.lightbox-gallery`)
+    const container = containerRef?.current || document
+    const galleryElements = container.querySelectorAll(`.lightbox-gallery`)
     const singleImageElements = Array.from(
-      document.querySelectorAll(`.lightbox-single`)
+      container.querySelectorAll(`.lightbox-single`)
     )
       .map((node) => node.parentElement)
       .filter((node) => node !== null)

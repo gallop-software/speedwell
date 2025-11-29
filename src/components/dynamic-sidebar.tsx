@@ -10,7 +10,6 @@ import {
 import xMarkIcon from '@iconify/icons-heroicons/x-mark'
 import { Icon } from './icon'
 import type { ReactNode } from 'react'
-import { GalleryPopup } from './lightbox/gallery-popup'
 import { Image } from './image'
 
 const images = [
@@ -118,7 +117,6 @@ export default function DynamicSidebar({ isOpen, setIsOpen, children }: Props) {
                 {children}
               </div>
             </div>
-            <GalleryPopup />
           </DialogPanel>
         </div>
       </div>
