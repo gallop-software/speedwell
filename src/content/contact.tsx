@@ -1,9 +1,11 @@
+import { Navbar } from '@/components'
 import Contact1 from '@/blocks/contact-1'
 import Contact2 from '@/blocks/contact-2'
 
 export default function Content() {
   return (
     <>
+      <Navbar />
       <Contact1 />
       <Contact2 />
     </>
