@@ -6,7 +6,7 @@ import {
   Quote,
 } from '@/components'
 
-export default function Section31() {
+export default function Testimonial3() {
   return (
     <Section
       imageSrc="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
