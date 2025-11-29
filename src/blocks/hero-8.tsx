@@ -1,0 +1,67 @@
+import {
+  Navbar,
+  Columns,
+  Column,
+  Image,
+  Accent,
+  Heading,
+  Paragraph,
+  Buttons,
+  Button,
+} from '@/components'
+import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
+
+export default function Hero8() {
+  return (
+    <>
+      <Navbar />
+      <div className="relative">
+        <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body2 z-0"></div>
+        <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
+          <Columns reverseColumns={false}>
+            <Column className="relative -mx-6">
+              <Image
+                className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
+                src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+                alt="Irure veniam et esse ex lorem reprehenderit elit dolor ad"
+                size="large"
+                rounded="rounded-none"
+                lazy={false}
+              />
+              <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12">
+                ut esse
+              </Accent>
+            </Column>
+            <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+              <Heading
+                as="h1"
+                className="max-w-2xl"
+              >
+                Elit aute ex excepteur adipiscing enim commodo
+              </Heading>
+              <Paragraph>
+                Nostrud est voluptate in proident mollit sed commodo sed do quis
+                quis anim anim cillum et magna do laboris qui fugiat laborum
+                esse excepteur laboris sed consectetur incididunt dolor cillum
+                ut officia mollit in mollit incididunt dolor eiusmod anim tempor
+                nostrud anim sunt id excepteur sunt do qui laborum voluptate
+                tempor et exercitation officia excepteur adipiscing eiusmod
+                incididunt do eiusmod consectetur mollit deserunt voluptate
+                deserunt laborum amet voluptate
+              </Paragraph>
+              <Buttons className="">
+                <Button
+                  href="#services"
+                  icon={arrowDownIcon}
+                  iconPlacement="after"
+                >
+                  Tempor consequat consequat consectetur deserunt cillum
+                </Button>
+              </Buttons>
+            </Column>
+          </Columns>
+        </div>
+      </div>
+    </>
+  )
+}
