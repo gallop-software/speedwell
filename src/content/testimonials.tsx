@@ -26,9 +26,9 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Content() {
   return (
     <>
+      {/* Hero */}
       <Navbar />
-
-      <Section className="bg-accent3 pt-10">
+      <div className="bg-accent3 pt-10 ">
         <div className="mx-auto max-w-[1600px] relative">
           <div
             className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-[100%] z-0 opacity-30 bg-cover bg-no-repeat bg-left-top bg-[url('/images/leaf1.jpg')]"
@@ -46,6 +46,7 @@ export default function Content() {
             <Column className="pt-10">
               <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
                 <Image
+                  rounded="rounded-none"
                   src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
                   alt="Fugiat cillum sit in adipiscing eiusmod"
                   className="w-full h-full object-cover"
@@ -79,8 +80,9 @@ export default function Content() {
             </Column>
           </Columns>
         </div>
-      </Section>
+      </div>
 
+      {/* Testimonial */}
       <Section
         imageSrc="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
         imageAlt="Dolore in elit"
@@ -177,6 +179,7 @@ export default function Content() {
         </Swiper>
       </Section>
 
+      {/* Section */}
       <Section className="py-20 md:py-30 bg-body2 relative">
         <div className="absolute w-[50%] border-r border-b border-black left-0 -top-20 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>
         <Columns reverseColumns={false}>
@@ -227,6 +230,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* About */}
       <Section className="py-30">
         <Masonry
           breakpoints={{ default: 2, lg: 1, md: 1, sm: 1 }}

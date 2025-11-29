@@ -18,8 +18,8 @@ import {
 export default function Content() {
   return (
     <>
+      {/* Hero */}
       <Navbar />
-
       <Cover
         imageSrc="/images/portfolio/pexels-burst-545012.jpg"
         imageAlt="Lorem ipsum dolor sit amet"
@@ -43,6 +43,7 @@ export default function Content() {
         </div>
       </Cover>
 
+      {/* Section */}
       <Section className="bg-body py-30">
         <Columns reverseColumns>
           <Column className="aspect-[4/5] relative">
@@ -79,6 +80,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body-light py-30">
         <Columns>
           <Column className="aspect-[4/5] relative">
@@ -118,6 +120,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body py-30">
         <Columns
           align="items-start"
@@ -172,6 +175,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body-light py-30">
         <Columns
           reverseColumns
@@ -228,6 +232,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body2 py-30">
         <Columns
           reverseColumns={false}
@@ -284,6 +289,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body py-30">
         <Columns
           reverseColumns
@@ -342,6 +348,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body-light py-30">
         <Columns
           reverseColumns={false}
@@ -398,6 +405,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Section */}
       <Section className="bg-body2 py-30">
         <Columns
           reverseColumns

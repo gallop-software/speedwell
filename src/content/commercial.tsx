@@ -26,8 +26,8 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 export default function Content() {
   return (
     <>
+      {/* Hero */}
       <Navbar />
-
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -80,6 +80,7 @@ export default function Content() {
         </div>
       </div>
 
+      {/* Content */}
       <Section
         className="bg-body py-30"
         innerAlign="content"
@@ -119,6 +120,7 @@ export default function Content() {
         </Paragraph>
       </Section>
 
+      {/* Call To Action */}
       <Cover
         className="py-30 lg:py-50"
         imageSrc="/images/portfolio/pexels-mikhail-nilov-6707628.jpg"

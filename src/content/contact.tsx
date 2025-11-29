@@ -36,6 +36,7 @@ export default function Content() {
     <>
       <Navbar />
 
+      {/* Contact Form */}
       <Section className="py-20 md:py-30 bg-body2 relative">
         <Columns
           reverseColumns={false}
@@ -99,6 +100,7 @@ export default function Content() {
         </Columns>
       </Section>
 
+      {/* Contact Details */}
       <Section className="py-20 md:py-30 bg-accent4 relative">
         <Columns
           gap="gap-10 lg:gap-20"
