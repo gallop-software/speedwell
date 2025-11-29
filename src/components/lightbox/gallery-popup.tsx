@@ -125,7 +125,7 @@ export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => {
     return () => {
       removeAllListeners()
     }
-  }, []) // Rerun only when rootClass changes
+  }, [containerRef]) // Rerun when container changes
 
   const createSlide = (
     el: Element,
