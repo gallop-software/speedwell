@@ -1,6 +1,6 @@
 import { Section, FancyHeading, Blog } from '@/components'
 
-export function SectionBlog() {
+export default function SectionBlog() {
   return (
     <Section className="bg-body2 py-20">
       <FancyHeading

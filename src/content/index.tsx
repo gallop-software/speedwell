@@ -1,8 +1,8 @@
-import { Hero1 } from '@/blocks/hero-1'
-import { Section1 } from '@/blocks/section-1'
-import { Section2 } from '@/blocks/section-2'
-import { Section3 } from '@/blocks/section-3'
-import { SectionBlog } from '@/blocks/section-blog'
+import Hero1 from '@/blocks/hero-1'
+import Section1 from '@/blocks/section-1'
+import Section2 from '@/blocks/section-2'
+import Section3 from '@/blocks/section-3'
+import SectionBlog from '@/blocks/section-blog'
 
 export default function Content() {
   return (

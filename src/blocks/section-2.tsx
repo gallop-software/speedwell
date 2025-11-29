@@ -1,6 +1,6 @@
 import { Section, Grid, Card1 } from '@/components'
 
-export function Section2() {
+export default function Section2() {
   return (
     <Section className="pt-30 lg:pt-50 pb-30 bg-gradient-to-b from-body to-body-light">
       <Grid>
