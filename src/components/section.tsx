@@ -11,6 +11,7 @@ interface SectionProps {
   imageClassName?: string
   overlayColor?: string
   backgroundColor?: string
+  id?: string
 }
 
 export function Section({
@@ -22,9 +23,13 @@ export function Section({
   imageClassName,
   overlayColor,
   backgroundColor,
+  id,
 }: SectionProps) {
   return (
-    <section className={clsx('relative [&>*>*>*:last-child]:mb-0', className)}>
+    <section
+      id={id}
+      className={clsx('relative [&>*>*>*:last-child]:mb-0', className)}
+    >
       {imageSrc && (
         <>
           <img
