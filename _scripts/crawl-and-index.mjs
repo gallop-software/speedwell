@@ -20,9 +20,9 @@ function getSlugPaths(dir, basePath = '') {
       continue
     }
 
-    if (!entry.name.endsWith('.mdx')) continue
+    if (!entry.name.endsWith('.tsx')) continue
 
-    const slugPathNoExt = relative.replace(/\.mdx$/, '')
+    const slugPathNoExt = relative.replace(/\.tsx$/, '')
     const segs = slugPathNoExt.split('/')
     const slugPath = segs.join('/') || 'index'
 
@@ -158,7 +158,7 @@ function extractSectionsFromHtml(html, url) {
 async function crawlAndGenerateIndex() {
   console.log('🔍 Crawling local site to generate search index...\n')
 
-  const baseDir = path.resolve(__dirname, '../src/markdown')
+  const baseDir = path.resolve(__dirname, '../src/content')
   const slugPaths = getSlugPaths(baseDir)
   const baseUrl = 'http://localhost:3000'
 
