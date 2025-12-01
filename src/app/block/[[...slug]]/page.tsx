@@ -76,9 +76,11 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  // Slugs that should have py-30 class
-  // const slugsWithPadding = ['section-1', 'hero-2', 'hero-3']
-  // const shouldAddPadding = slugsWithPadding.includes(slugPath)
+  // Slugs that should have top and bottom padding
+  const slugsWithTopPadding = ['section-1', 'accordion-1']
+  const slugsWithBottomPadding = ['section-1']
+  const shouldAddTopPadding = slugsWithTopPadding.includes(slugPath)
+  const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
   try {
     const { default: Content, metadata } = await import(
@@ -91,8 +93,9 @@ export default async function Page({ params }: PageProps) {
           className={clsx(
             '[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl',
             '[&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl',
-            '[&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40'
-            // shouldAddPadding && 'py-30'
+            '[&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40',
+            shouldAddTopPadding && 'pt-30',
+            shouldAddBottomPadding && 'pb-30'
           )}
         >
           <Content />

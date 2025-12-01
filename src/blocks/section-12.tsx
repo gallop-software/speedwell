@@ -9,7 +9,7 @@ import {
 
 export default function Section12() {
   return (
-    <Section className="pb-30">
+    <Section className="py-30">
       <Columns reverseColumns={false}>
         <Column>
           <Heading as="h2">Voluptate labore</Heading>
