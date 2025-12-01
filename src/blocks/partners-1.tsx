@@ -2,7 +2,7 @@ import { Section, Heading, Grid, Card3 } from '@/components'
 
 export default function Partners1() {
   return (
-    <Section className="relative pb-30">
+    <Section className="relative py-30">
       <Heading as="h2">Non deserunt</Heading>
       <Grid
         cols="grid-cols-3"

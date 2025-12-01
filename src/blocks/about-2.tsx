@@ -11,7 +11,7 @@ import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
 
 export default function About2() {
   return (
-    <Section className="mb-30">
+    <Section className="mb-30 mt-30">
       <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         <Profile1
           aspect="aspect-[4/5]"
