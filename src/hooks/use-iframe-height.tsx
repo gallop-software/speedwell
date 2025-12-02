@@ -32,6 +32,11 @@ const IframeHeight = () => {
 
     resizeObserver.observe(document.body)
 
+    // Listen for height requests from parent
+    window.addEventListener('message', (event) => {
+      if (event.data?.type === 'requestHeight') sendHeight()
+    })
+
     return () => {
       resizeObserver.disconnect()
     }
