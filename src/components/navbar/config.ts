@@ -1,0 +1,146 @@
+import homeIcon from '@iconify/icons-mdi/home-outline'
+import officeIcon from '@iconify/icons-mdi/office-building-outline'
+import bathtubIcon from '@iconify/icons-mdi/bathtub-outline'
+import floorPlanIcon from '@iconify/icons-mdi/floor-plan'
+import paletteIcon from '@iconify/icons-mdi/palette-outline'
+import sofaIcon from '@iconify/icons-mdi/sofa-outline'
+import clipboardCheckIcon from '@iconify/icons-mdi/clipboard-check-outline'
+import bookOpenIcon from '@iconify/icons-mdi/book-open-page-variant-outline'
+import accountGroupIcon from '@iconify/icons-mdi/account-group-outline'
+import starIcon from '@iconify/icons-mdi/star-outline'
+import compareIcon from '@iconify/icons-mdi/compare-horizontal'
+import emailIcon from '@iconify/icons-mdi/email-outline'
+import handshakeIcon from '@iconify/icons-mdi/handshake-outline'
+import facebookIcon from '@iconify/icons-mdi/facebook'
+import instagramIcon from '@iconify/icons-mdi/instagram'
+import phoneIcon from '@iconify/icons-mdi/phone'
+import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
+import type { NavLink, SocialLink } from './types'
+
+/**
+ * Main navigation links configuration
+ * Includes both simple links and dropdown menus
+ */
+export const links: NavLink[] = [
+  { href: '/portfolio', label: 'Portfolio' },
+  {
+    href: '/services',
+    label: 'Services',
+    dropdown: {
+      items: [
+        {
+          name: 'Residential Design',
+          description: 'Transform your home into a personal sanctuary',
+          href: '/residential',
+          icon: homeIcon,
+        },
+        {
+          name: 'Commercial Design',
+          description: 'Create inspiring workspaces that drive success',
+          href: '/commercial',
+          icon: officeIcon,
+        },
+        {
+          name: 'Kitchen & Bath',
+          description: 'Luxury and functionality for your daily rituals',
+          href: '/kitchen-bath',
+          icon: bathtubIcon,
+        },
+        {
+          name: 'Space Planning',
+          description: 'Optimize your layout for comfort and flow',
+          href: '/space-planning',
+          icon: floorPlanIcon,
+        },
+        {
+          name: 'Color Consultation',
+          description: 'Expert guidance for the perfect palette',
+          href: '/color-consultation',
+          icon: paletteIcon,
+        },
+        {
+          name: 'Furniture Selection',
+          description: 'Curated pieces that reflect your style',
+          href: '/furniture',
+          icon: sofaIcon,
+        },
+        {
+          name: 'Project Management',
+          description: 'Seamless execution from concept to completion',
+          href: '/project-management',
+          icon: clipboardCheckIcon,
+        },
+      ],
+    },
+  },
+  {
+    href: '/contact',
+    label: 'About',
+    dropdown: {
+      items: [
+        {
+          name: 'Our Story',
+          description: 'Learn about our design philosophy and passion',
+          href: '/residential',
+          icon: bookOpenIcon,
+        },
+        {
+          name: 'Meet the Team',
+          description: 'Get to know our talented designers',
+          href: '/commercial',
+          icon: accountGroupIcon,
+        },
+        {
+          name: 'Client Testimonials',
+          description: 'Stories from our satisfied clients',
+          href: '/testimonials',
+          icon: starIcon,
+        },
+        {
+          name: 'Before & After',
+          description: 'See the transformation process',
+          href: '/before-after',
+          icon: compareIcon,
+        },
+        {
+          name: 'Contact',
+          description: 'Get in touch with our design team',
+          href: '/contact',
+          icon: emailIcon,
+        },
+        {
+          name: 'Join Our Team',
+          description: 'Explore career opportunities with us',
+          href: '/join-our-team',
+          icon: handshakeIcon,
+        },
+      ],
+    },
+  },
+]
+
+/**
+ * Social media links configuration
+ */
+export const socialLinks: SocialLink[] = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/speedwell',
+    icon: facebookIcon,
+  },
+  {
+    name: 'Instagram',
+    href: 'http://instagram.com/speedwell',
+    icon: instagramIcon,
+  },
+  {
+    name: 'Phone',
+    href: 'tel:5551234567',
+    icon: phoneIcon,
+  },
+  {
+    name: 'Email',
+    href: 'mailto:me@your-company.com',
+    icon: emailOutlineIcon,
+  },
+]

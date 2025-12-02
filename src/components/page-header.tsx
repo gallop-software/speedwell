@@ -1,4 +1,4 @@
-import { Navbar } from './navbar'
+import { Navbar } from './navbar/index'
 import { Heading } from './heading'
 import { GradientBackground } from './gradient'
 import { clsx } from 'clsx'
