@@ -1,0 +1,57 @@
+import { useEffect, useState, type ReactElement } from 'react'
+import searchIcon from '@iconify/icons-lucide/search'
+import { Icon } from '../icon'
+import { Search } from '../search'
+
+/**
+ * Search button component with dropdown
+ * Toggles Search visibility and positions it absolutely
+ * Manages its own state internally
+ * @returns {ReactElement} Search button with dropdown
+ */
+export function SearchButton({
+  enableShortcut = false,
+}: {
+  enableShortcut?: boolean
+}): ReactElement {
+  const [isSearching, setIsSearching] = useState(false)
+
+  useEffect(() => {
+    if (isSearching || !enableShortcut) {
+      return
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        event.preventDefault()
+        setIsSearching(true)
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [isSearching, enableShortcut])
+
+  return (
+    <div className="hidden lg:block">
+      <button
+        rel="noopener noreferrer"
+        className="text-accent hover:text-accent-dark hover:bg-black/2.5 rounded-lg transition-colors duration-200 cursor-pointer p-2 outline-none focus:outline-none"
+        aria-label="search"
+        onClick={() => setIsSearching((prev) => !prev)}
+      >
+        <Icon
+          icon={searchIcon}
+          className="h-7 w-7"
+        />
+      </button>
+      <Search
+        isOpen={isSearching}
+        setIsOpen={setIsSearching}
+      />
+    </div>
+  )
+}
