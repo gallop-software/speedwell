@@ -83,14 +83,8 @@ export default async function Page({ params }: PageProps) {
   const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
   try {
-    // Dynamic import with error handling
-    // Note: Turbopack warns about dynamic imports but this is safe because:
-    // 1. slugPath is validated to be non-null above
-    // 2. generateStaticParams() ensures only valid block files are accessible
-    // 3. All blocks are pre-rendered at build time successfully
-    const { default: Content, metadata } = await import(
-      /* webpackIgnore: true */ `../../blocks/${slugPath}.tsx`
-    )
+    const blockPath = `../../../blocks/${slugPath}.tsx`
+    const { default: Content, metadata } = await import(blockPath)
 
     return (
       <div className="overflow-hidden">
