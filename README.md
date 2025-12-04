@@ -220,5 +220,5 @@ Built with ❤️ by the team at [Gallop](https://gallop.software)
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Gallop Templates](https://gallop.software)
+- [Gallop Templates](https://gallop.software/templates)
 - [React Documentation](https://react.dev)
