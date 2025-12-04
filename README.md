@@ -116,18 +116,6 @@ speedwell/
 
 ---
 
-## Documentation
-
-📚 **Comprehensive Guides:**
-
-- 🖼️ **[Image Management](./_docs/images.md)** - Image processing system
-- 🔤 **[Font System](./_docs/fonts.md)** - Adding and managing fonts
-- ✍️ **[Content Guide](./_docs/content.md)** - TSX-based content management
-- 🚀 **[Deployment](./_docs/deployment.md)** - Deploy to Vercel and other platforms
-- 📦 **[Dependencies](./_docs/dependencies.md)** - Package details and usage
-
----
-
 ## Available Scripts
 
 ### Development
