@@ -27,6 +27,7 @@ npm run fonts Switzer heading heading2 heading3
 ```
 
 This will:
+
 1. Convert `src/styles/fonts/Switzer/*.ttf` to WOFF2
 2. Update `_data/_fonts/_heading.tsx`
 3. Update `_data/_fonts/_heading2.tsx`
@@ -147,6 +148,7 @@ export const heading = {
 ---
 
 **See also:**
+
 - [Font System Guide](./fonts.md) - Complete font documentation
 - [Font Configuration](./fonts.md#configuration) - Using fonts in your project
 - [WOFF2 Browser Support](https://caniuse.com/woff2) - Compatibility table

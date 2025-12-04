@@ -66,6 +66,7 @@ npm run images:reset
 ```
 
 Deletes all processed images and regenerates from scratch. Use when:
+
 - Configuration has changed significantly
 - Files appear corrupted
 - You need a clean slate
@@ -73,5 +74,6 @@ Deletes all processed images and regenerates from scratch. Use when:
 ---
 
 **See also:**
+
 - [Image Management Guide](./images.md) - Complete image system documentation
 - [.images Configuration](./images.md#configuration) - Size calculator and examples

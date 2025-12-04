@@ -21,6 +21,7 @@ public/originals/favicon.png
 ```
 
 **Recommended:**
+
 - Format: PNG with transparency
 - Size: 512x512px or larger
 - Square aspect ratio (1:1)
@@ -79,5 +80,6 @@ src/
 ---
 
 **See also:**
+
 - [Next.js Metadata](https://nextjs.org/docs/app/api-reference/file-conventions/metadata) - Official favicon documentation
 - [Favicon Best Practices](https://web.dev/articles/defining-app-icons) - Design guidelines

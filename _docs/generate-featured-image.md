@@ -39,6 +39,7 @@ SCREENSHOT_URL=https://example.com npm run featured-image
 ```
 
 Use this to:
+
 - Screenshot a different page
 - Use localhost during development
 - Capture staging environment
@@ -51,6 +52,7 @@ Use this to:
 - **Format:** JPEG (optimized for social media)
 
 This size is optimized for:
+
 - GitHub social preview
 - Open Graph images
 - Twitter Cards
@@ -99,5 +101,6 @@ Example README usage:
 ---
 
 **See also:**
+
 - [Puppeteer Documentation](https://pptr.dev/) - Browser automation
 - [Open Graph Protocol](https://ogp.me/) - Social preview metadata
