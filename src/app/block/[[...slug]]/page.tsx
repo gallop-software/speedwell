@@ -84,7 +84,7 @@ export default async function Page({ params }: PageProps) {
 
   try {
     const { default: Content, metadata } = await import(
-      `@/blocks/${slugPath}.tsx`
+      `../../blocks/${slugPath}.tsx`
     )
 
     return (

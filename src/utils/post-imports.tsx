@@ -64,7 +64,7 @@ export interface BlogPost {
 export async function importPost(slug: string): Promise<Post | null> {
   try {
     // Import the TSX file (server-side only)
-    const postModule = await import(`@/content/post/${slug}.tsx`)
+    const postModule = await import(`../content/post/${slug}.tsx`)
 
     if (!postModule.default || !postModule.metadata) {
       console.warn(`No default export or metadata found in ${slug}.tsx`)
@@ -146,7 +146,7 @@ export async function getPaginatedPosts(
   // Get all metadata first (lightweight - no component imports)
   const metadataPromises = slugs.map(async (slug) => {
     try {
-      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const postModule = await import(`../content/post/${slug}.tsx`)
       return {
         slug,
         metadata: postModule.metadata as Metadata,
@@ -185,7 +185,7 @@ export async function getPaginatedPosts(
   // Import full content for current page
   const currentPagePosts = await Promise.all(
     currentPageMetadata.map(async ({ slug, metadata }) => {
-      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const postModule = await import(`../content/post/${slug}.tsx`)
       const Component = postModule.BlogContent || postModule.default
       return {
         slug,
@@ -199,7 +199,7 @@ export async function getPaginatedPosts(
   // Import full content for prefetch (next page)
   const prefetchPosts = await Promise.all(
     prefetchMetadata.map(async ({ slug, metadata }) => {
-      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const postModule = await import(`../content/post/${slug}.tsx`)
       const Component = postModule.BlogContent || postModule.default
       return {
         slug,
