@@ -121,7 +121,6 @@ speedwell/
 
 📚 **Comprehensive Guides:**
 
-- 📜 **[Scripts Reference](./_docs/scripts.md)** - All npm scripts explained
 - 🖼️ **[Image Management](./_docs/images.md)** - Image processing system
 - 🔤 **[Font System](./_docs/fonts.md)** - Adding and managing fonts
 - ✍️ **[Content Guide](./_docs/content.md)** - TSX-based content management
@@ -130,21 +129,48 @@ speedwell/
 
 ---
 
-## Quick Reference
+## Available Scripts
 
-### Key Scripts
+### Development
 
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run images       # Process images
-npm run blog         # Generate blog metadata
-npm run search       # Build search index
-npm run fonts        # Compress fonts
-npm run favicon      # Generate favicons
-```
+- **`npm run dev`** - Start development server at http://localhost:3000
+- **`npm run build`** - Build for production (runs blog metadata first)
+- **`npm run start`** - Start production server
+- **`npm run lint`** - Run ESLint checks
 
-**See [Scripts Reference](./_docs/scripts.md) for complete documentation.**
+### Content & Assets
+
+- **`npm run images`** - Process images from `public/originals/` to responsive variants → [process-images.js](./_scripts/process-images.js) | [docs](./_docs/process-images.md)
+- **`npm run images:reset`** - Delete processed images and regenerate all
+- **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [generate-blog-metadata.mjs](./_scripts/generate-blog-metadata.mjs) | [docs](./_docs/generate-blog-metadata.md)
+- **`npm run search`** - Build FlexSearch index for site search → [generate-search.sh](./_scripts/generate-search.sh) | [docs](./_docs/generate-search.md)
+- **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [generate-favicon.js](./_scripts/generate-favicon.js) | [docs](./_docs/generate-favicon.md)
+- **`npm run featured-image`** - Screenshot homepage for social preview → [generate-featured-image.js](./_scripts/generate-featured-image.js) | [docs](./_docs/generate-featured-image.md)
+
+### Fonts
+
+- **`npm run fonts`** - Convert TTF fonts to WOFF2 → [compressFonts.js](./src/styles/fonts/compressFonts.js) | [docs](./_docs/compressFonts.md)
+- **`npm run fonts:use`** - Mark fonts as used in project
+
+### Environment
+
+- **`npm run env`** - Push local `.env.local` to Vercel → [push-env-to-vercel.sh](./push-env-to-vercel.sh)
+- **`npm run env:prod`** - Push to production environment
+- **`npm run env:prev`** - Push to preview environment
+
+### Package Management
+
+- **`npm run update:check`** - Check for package updates
+- **`npm run update:patch`** - Update to latest patch versions
+- **`npm run update:minor`** - Update to latest minor versions
+- **`npm run update:major`** - Update to latest major versions
+- **`npm run update:interactive`** - Interactively choose updates
+- **`npm run update:doctor`** - Update and test changes incrementally
+
+### Maintenance
+
+- **`npm run clean`** - Remove node_modules, .next, and package-lock.json
+- **`npm run clean:install`** - Clean and reinstall all dependencies
 
 ---
 
