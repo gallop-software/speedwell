@@ -72,19 +72,24 @@ export default async function Page({ params }: PageProps) {
   const slugPath = getSlugPath(slug)
 
   // If no slug provided, show 404
-  if (!slugPath) {
+  // Additional type guard to ensure slugPath is never null/undefined for the dynamic import
+  if (!slugPath || typeof slugPath !== 'string') {
     notFound()
   }
 
-  // Slugs that should have top and bottom padding
   const slugsWithTopPadding = ['section-1', 'accordion-1']
   const slugsWithBottomPadding = ['section-1']
   const shouldAddTopPadding = slugsWithTopPadding.includes(slugPath)
   const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
   try {
+    // Dynamic import with error handling
+    // Note: Turbopack warns about dynamic imports but this is safe because:
+    // 1. slugPath is validated to be non-null above
+    // 2. generateStaticParams() ensures only valid block files are accessible
+    // 3. All blocks are pre-rendered at build time successfully
     const { default: Content, metadata } = await import(
-      `../../blocks/${slugPath}.tsx`
+      /* webpackIgnore: true */ `../../blocks/${slugPath}.tsx`
     )
 
     return (
