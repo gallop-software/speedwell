@@ -178,6 +178,44 @@ vercel --prod
 
 ---
 
+## Core Dependencies
+
+### Frontend (Runtime)
+
+Packages shipped to production, loaded in the browser:
+
+- **Next.js** `16.0.7` - React framework with App Router
+- **React** `19.2.1` - UI library
+- **Tailwind CSS** `4.1.17` - Utility-first CSS framework
+- **Framer Motion** `12.23.25` - Animation library
+- **Headless UI** `2.2.9` - Unstyled accessible components
+- **Swiper** `12.0.3` - Modern slider/carousel
+- **FlexSearch** `0.8.212` - Full-text search
+- **React Highlight Words** `0.21.0` - Text highlighting
+- **Yet Another React Lightbox** `3.25.0` - Image gallery
+- **Valtio** `2.2.0` - State management
+
+### Development
+
+Tools for building and developing the site:
+
+- **TypeScript** `5` - Type safety and IntelliSense
+- **ESLint** `9` - Code linting
+- **Prettier** `3.7.4` - Code formatting
+- **PostCSS** `8.5.6` - CSS transformations
+
+### Scripts & Processing
+
+Build-time tools for content and asset generation:
+
+- **Sharp** `0.34.5` - Image processing and optimization
+- **Puppeteer** `24.32.0` - Screenshot generation (featured images)
+- **ttf2woff2** `8.0.0` - Font compression
+- **jsdom** `27.2.0` - HTML parsing for search indexing
+- **xml2js** `0.6.2` - XML/RSS feed generation
+
+---
+
 ## Support & Community
 
 - **Documentation:** [gallop.software](https://gallop.software)
