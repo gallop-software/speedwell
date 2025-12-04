@@ -195,7 +195,7 @@ vercel --prod
 - **Documentation:** [gallop.software](https://gallop.software)
 - **Issues:** [GitHub Issues](https://github.com/gallop-software/speedwell/issues)
 - **Slack:** [Join Community](https://join.slack.com/t/gallop-software/shared_invite/zt-358q3rdrp-H6kKvKzpR2qgB5xJviAOcw)
-- **Professional Services:** [webplant.media](https://webplant.media)
+- **Professional Services:** [Web Plant Media, LLC](https://webplant.media)
 
 ---
 
@@ -207,14 +207,12 @@ MIT License - see [LICENSE](./LICENSE) for details
 
 ## Credits
 
-**Author:** [Gallop](https://gallop.software)
-
 **Contributors:**
 
 - [Chris Baldelomar](https://github.com/webplantmedia)
 - [Niel Wostan](https://github.com/NielWostan)
 
-Built with ❤️ by the team at [Web Plant Media](https://webplant.media)
+Built with ❤️ by the team at [Gallop](https://gallop.software)
 
 ---
 
