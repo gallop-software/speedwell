@@ -140,21 +140,21 @@ speedwell/
 
 ### Content & Assets
 
-- **`npm run images`** - Process images from `public/originals/` to responsive variants → [process-images.js](./_scripts/process-images.js) | [docs](./_docs/process-images.md)
+- **`npm run images`** - Process images from `public/originals/` to responsive variants → [docs](./_docs/process-images.md)
 - **`npm run images:reset`** - Delete processed images and regenerate all
-- **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [generate-blog-metadata.mjs](./_scripts/generate-blog-metadata.mjs) | [docs](./_docs/generate-blog-metadata.md)
-- **`npm run search`** - Build FlexSearch index for site search → [generate-search.sh](./_scripts/generate-search.sh) | [docs](./_docs/generate-search.md)
-- **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [generate-favicon.js](./_scripts/generate-favicon.js) | [docs](./_docs/generate-favicon.md)
-- **`npm run featured-image`** - Screenshot homepage for social preview → [generate-featured-image.js](./_scripts/generate-featured-image.js) | [docs](./_docs/generate-featured-image.md)
+- **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_docs/generate-blog-metadata.md)
+- **`npm run search`** - Build FlexSearch index for site search → [docs](./_docs/generate-search.md)
+- **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [docs](./_docs/generate-favicon.md)
+- **`npm run featured-image`** - Screenshot homepage for social preview → [docs](./_docs/generate-featured-image.md)
 
 ### Fonts
 
-- **`npm run fonts`** - Convert TTF fonts to WOFF2 → [compressFonts.js](./src/styles/fonts/compressFonts.js) | [docs](./_docs/compressFonts.md)
+- **`npm run fonts`** - Convert TTF fonts to WOFF2 → [docs](./_docs/compressFonts.md)
 - **`npm run fonts:use`** - Mark fonts as used in project
 
 ### Environment
 
-- **`npm run env`** - Push local `.env.local` to Vercel → [push-env-to-vercel.sh](./push-env-to-vercel.sh)
+- **`npm run env`** - Push local `.env.local` to Vercel
 - **`npm run env:prod`** - Push to production environment
 - **`npm run env:prev`** - Push to preview environment
 

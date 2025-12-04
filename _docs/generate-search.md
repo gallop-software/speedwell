@@ -89,5 +89,6 @@ lsof -ti:3000 | xargs kill -9
 ---
 
 **See also:**
+
 - [Content Guide](./content.md) - Content structure and organization
 - [Search Component](../src/components/) - Search UI implementation
