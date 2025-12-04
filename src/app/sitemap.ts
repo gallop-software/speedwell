@@ -16,9 +16,10 @@ export default async function sitemap({
 }: {
   id: string
 }): Promise<MetadataRoute.Sitemap> {
+  const resolvedId = await id
   var resolvedMaps: any
 
-  if (id == 'post') {
+  if (resolvedId == 'post') {
     const { postSlugs } = await getPostSlugs()
     var postMaps: any
     if (Array.isArray(postSlugs)) {
@@ -32,7 +33,7 @@ export default async function sitemap({
     }
 
     resolvedMaps = await Promise.all(postMaps)
-  } else if (id === 'page') {
+  } else if (resolvedId === 'page') {
     const { pageSlugs } = await getPageSlugs()
     const { categorySlugs } = await getCategorySlugs()
     const base = process.env.NEXT_PUBLIC_PRODUCTION_URL ?? ''
