@@ -57,8 +57,6 @@
     "@iconify/icons-heroicons": "^1.2.9",
     "@iconify/icons-lucide": "^1.2.135",
     "@iconify/icons-mdi": "^1.2.48",
-    "@markdoc/markdoc": "^0.5.4",
-    "@markdoc/next.js": "^0.5.0",
     "@next/third-parties": "^16.0.7",
     "@sindresorhus/slugify": "^3.0.0",
     "@vercel/analytics": "^1.6.1",
