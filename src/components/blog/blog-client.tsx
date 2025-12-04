@@ -183,7 +183,7 @@ export function BlogClient({
 
     // Dynamically import the post component
     try {
-      const postModule = await import(`@/content/post/${slug}.tsx`)
+      const postModule = await import(`../../content/post/${slug}.tsx`)
       const Component = postModule.BlogContent || postModule.default
       setContent(<Component />)
       setIsLoading(false)

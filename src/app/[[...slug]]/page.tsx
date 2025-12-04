@@ -82,7 +82,7 @@ export async function generateMetadata({
   const slugPath = getSlugPath(slug)
 
   try {
-    const { metadata } = await import(`@/content/${slugPath}.tsx`)
+    const { metadata } = await import(`../../content/${slugPath}.tsx`)
 
     // Define image data variables
     const openGraphImageData = metadata?.openGraph?.image
@@ -205,9 +205,8 @@ export default async function Page({ params }: PageProps) {
   const slugPath = getSlugPath(slug)
 
   try {
-    const { default: Content, metadata } = await import(
-      `@/content/${slugPath}.tsx`
-    )
+    const contentPath = `../../content/${slugPath}.tsx`
+    const { default: Content, metadata } = await import(contentPath)
 
     const structuredData = {
       '@context': 'https://schema.org',

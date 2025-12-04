@@ -18,7 +18,7 @@ export async function getCategorySlugs(): Promise<{
     const slugPath = `post/${file.replace(/\.tsx$/, '')}`
 
     try {
-      const { metadata } = await import(`@/content/${slugPath}.tsx`)
+      const { metadata } = await import(`../../content/${slugPath}.tsx`)
 
       if (Array.isArray(metadata.categories)) {
         for (const category of metadata.categories) {
