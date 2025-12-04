@@ -4,9 +4,9 @@
 
 **A Next.js template for small businesses featuring high-quality feminine design.** Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.
 
-**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)
-
-**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)
+**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
+**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
+**📖 Documentation:** See [docs](./_docs/) folder
 
 ---
 
@@ -117,284 +117,40 @@ speedwell/
 
 ---
 
-## Available Scripts
+## Documentation
 
-### Development & Build
+📚 **Comprehensive Guides:**
 
-- **`npm run dev`** - Start development server on http://localhost:3000
-- **`npm run build`** - Build for production (runs blog metadata generation first)
-- **`npm run start`** - Start production server
-- **`npm run lint`** - Run ESLint
-
-### Image Management
-
-- **`npm run images`** - Process all images in `public/originals/`
-  - Sanitizes filenames to URL-friendly format
-  - Generates responsive variants (1920w, 1280w, 640w, 320w)
-  - Creates WebP versions for modern browsers
-  - Extracts EXIF metadata (orientation, dimensions, GPS)
-  - Updates `_data/_meta.json` with image data
-
-- **`npm run images:reset`** - Delete all processed images and regenerate from scratch
-
-- **`npm run featured-image`** - Generate social preview image
-  - Captures screenshot of homepage
-  - 2000x1000px at 2x scale (4000x2000 actual)
-  - Saves as `public/speedwell.jpg`
-  - Uses homepage URL from package.json
-
-### Font Management
-
-- **`npm run fonts <folder> [fontTypes...]`** - Compress and configure fonts
-
-  ```bash
-  # Compress only
-  npm run fonts Switzer
-
-  # Compress and update font config files
-  npm run fonts Switzer heading heading2 heading3
-  ```
-
-  **How it works:**
-  1. Converts TTF fonts to WOFF2 (90%+ smaller file size)
-  2. Auto-detects font weights and styles from filenames
-  3. Updates font configuration files in `_data/_fonts/`
-  4. Supports variable and static fonts
-
-  **Font file naming:**
-  - `FontName-Regular.ttf` → weight: 400, style: normal
-  - `FontName-Bold.ttf` → weight: 700, style: normal
-  - `FontName-BoldItalic.ttf` → weight: 700, style: italic
-  - `FontName-Variable.ttf` → weight: 100-900
-
-- **`npm run fonts:use`** - Apply configured fonts to components
-
-### Content & SEO
-
-- **`npm run blog`** - Generate blog post metadata
-- **`npm run search`** - Build search index for FlexSearch
-- **`npm run favicon`** - Generate favicon variants
-
-### Deployment
-
-- **`npm run env`** - Push environment variables to Vercel
-- **`npm run env:prod`** - Push to production environment
-- **`npm run env:prev`** - Push to preview environment
+- 📜 **[Scripts Reference](./_docs/scripts.md)** - All npm scripts explained
+- 🖼️ **[Image Management](./_docs/images.md)** - Image processing system
+- 🔤 **[Font System](./_docs/fonts.md)** - Adding and managing fonts
+- ✍️ **[Content Guide](./_docs/content.md)** - TSX-based content management
+- 🚀 **[Deployment](./_docs/deployment.md)** - Deploy to Vercel and other platforms
+- 📦 **[Dependencies](./_docs/dependencies.md)** - Package details and usage
 
 ---
 
-## Image Management System
+## Quick Reference
 
-### How It Works
+### Key Scripts
 
-Speedwell includes an intelligent image processing system that automates optimization and metadata extraction:
-
-1. **Place original images** in `public/originals/` (any folder structure)
-2. **Run `npm run images`**
-3. **Images are processed:**
-   - Filenames sanitized (spaces → dashes, lowercase, URL-safe)
-   - Multiple responsive sizes generated (1920w, 1280w, 640w, 320w)
-   - WebP versions created for modern browsers
-   - Orientation detected (portrait, landscape, square)
-   - EXIF data extracted (GPS, dimensions, orientation)
-4. **Metadata saved** to `_data/_meta.json`
-5. **Use in code:**
-
-   ```tsx
-   import { getImage } from '@/utils/image'
-
-   const image = getImage('portfolio/project-hero.jpg')
-   // Returns: { src, srcset, alt, width, height, orientation, ... }
-   ```
-
-### Image Configuration
-
-Create a `.images` file in your project root to customize processing:
-
-```json
-{
-  "widths": [1920, 1280, 640, 320],
-  "formats": ["webp", "jpg"],
-  "quality": 85
-}
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run images       # Process images
+npm run blog         # Generate blog metadata
+npm run search       # Build search index
+npm run fonts        # Compress fonts
+npm run favicon      # Generate favicons
 ```
 
-### Responsive Images
-
-The system automatically generates srcset attributes:
-
-```tsx
-<img
-  src="/images/project.jpg"
-  srcSet="/images/project-320w.webp 320w,
-          /images/project-640w.webp 640w,
-          /images/project-1280w.webp 1280w,
-          /images/project-1920w.webp 1920w"
-  sizes="(max-width: 640px) 100vw, 50vw"
-/>
-```
-
----
-
-## Font System
-
-### Adding Custom Fonts
-
-1. **Place TTF files** in `src/styles/fonts/YourFont/`
-2. **Run compression:**
-   ```bash
-   npm run fonts YourFont heading
-   ```
-3. **Font is automatically:**
-   - Converted to WOFF2 (smaller, faster)
-   - Weight/style detected from filename
-   - Configuration updated in `_data/_fonts/_heading.tsx`
-
-### Using Fonts in Components
-
-Fonts are configured in `_data/_fonts/`:
-
-- `_heading.tsx` - Main headings (h1)
-- `_heading2.tsx` - Subheadings (h2, h3)
-- `_heading3.tsx` - Small headings (h4-h6)
-- `_body.tsx` - Body text
-- `_accent.tsx` - Accent/special text
-
-Each font file exports font configurations that Next.js loads automatically.
-
----
-
-## Key Dependencies
-
-### Core Framework
-
-- **next** (15.5.3) - React framework with App Router
-- **react** (19) - UI library
-- **react-dom** (19.2.0) - React DOM rendering
-
-### Styling & Animation
-
-- **tailwindcss** (4.1.5) - Utility-first CSS
-- **framer-motion** (12.9.4) - Animation library
-- **clsx** (2.1.1) - Conditional classnames
-
-### Content & Markdown
-
-- **@markdoc/markdoc** (0.5.4) - Markdown processor
-- **@markdoc/next.js** (0.5.0) - Next.js integration
-
-### Search
-
-- **flexsearch** (0.8.212) - Fast full-text search
-- **@algolia/autocomplete-core** (1.19.4) - Search UI
-
-### UI Components
-
-- **@headlessui/react** (2.2.2) - Unstyled components
-- **swiper** (12.0.1) - Touch slider
-- **yet-another-react-lightbox** (3.25.0) - Image lightbox
-
-### Icons & Media
-
-- **@iconify/icons-heroicons** - Icon library
-- **@vimeo/player** (2.27.0) - Vimeo embed
-
-### Utilities
-
-- **dayjs** (1.11.13) - Date formatting
-- **@sindresorhus/slugify** (3.0.0) - URL slugs
-- **valtio** (2.1.7) - State management
-
-### Build Tools
-
-- **sharp** (0.34.4) - Image processing
-- **puppeteer** (23.9.0) - Browser automation
-- **ttf2woff2** (8.0.0) - Font conversion
-- **typescript** (5) - Type safety
-
-### Analytics & SEO
-
-- **@vercel/analytics** (1.5.0) - Web analytics
-- **feed** (4.2.2) - RSS feed generation
-
----
-
-## Content Management
-
-Speedwell uses **TSX files for content** instead of a traditional CMS:
-
-### Benefits
-
-- ✅ **Version control** - Track all content changes in Git
-- ✅ **Type safety** - TypeScript catches errors before deployment
-- ✅ **AI-friendly** - AI assistants can directly edit content
-- ✅ **Component-based** - Reuse blocks across pages
-- ✅ **No database** - Faster, cheaper, more secure
-- ✅ **Preview instantly** - See changes in milliseconds
-
-### Editing Content
-
-Content lives in `src/content/`. Each page is a TSX file:
-
-```tsx
-// src/content/home.tsx
-import Hero1 from '@/blocks/hero-1'
-import Section3 from '@/blocks/section-3'
-
-export default function HomePage() {
-  return (
-    <>
-      <Hero1
-        title="Welcome to Our Business"
-        subtitle="We deliver excellence"
-      />
-      <Section3
-        heading="Our Services"
-        items={services}
-      />
-    </>
-  )
-}
-```
-
-### Creating New Blocks
-
-See `_docs/block-extraction-workflow.md` for the complete workflow.
-
----
-
-## SEO & Performance
-
-### Built-in SEO Features
-
-- ✅ Semantic HTML structure
-- ✅ Open Graph tags
-- ✅ Twitter Card tags
-- ✅ Structured data (JSON-LD)
-- ✅ Automatic sitemap generation
-- ✅ RSS feed support
-- ✅ Optimized images with lazy loading
-- ✅ Fast page loads (<1s)
-
-### Metadata Configuration
-
-Update `src/app/metadata.tsx`:
-
-```tsx
-export const metadata = {
-  title: 'Your Business Name',
-  description: 'Your business description',
-  openGraph: {
-    images: ['/speedwell.jpg'],
-  },
-}
-```
+**See [Scripts Reference](./_docs/scripts.md) for complete documentation.**
 
 ---
 
 ## Deployment
 
-### Deploy to Vercel (Recommended)
+Deploy to Vercel with one click:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gallop-software/speedwell)
 
@@ -405,13 +161,7 @@ npm run build
 vercel --prod
 ```
 
-### Environment Variables
-
-Set these in your Vercel dashboard or `.env.local`:
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-```
+**See [Deployment Guide](./_docs/deployment.md) for other platforms and configuration.**
 
 ---
 
