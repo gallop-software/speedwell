@@ -178,7 +178,7 @@ vercel --prod
 
 ---
 
-## Core Dependencies
+## Technologies
 
 ### Frontend (Runtime)
 
