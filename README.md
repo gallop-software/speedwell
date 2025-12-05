@@ -188,6 +188,7 @@ Packages shipped to production, loaded in the browser:
 - **React** `19.2.1` - UI library
 - **Tailwind CSS** `4.1.17` - Utility-first CSS framework
 - **Framer Motion** `12.23.25` - Animation library
+- **React Intersection Observer** `10.0.0` - Scroll-based animations and lazy loading
 - **Headless UI** `2.2.9` - Unstyled accessible components
 - **Swiper** `12.0.3` - Modern slider/carousel
 - **FlexSearch** `0.8.212` - Full-text search
@@ -199,6 +200,7 @@ Packages shipped to production, loaded in the browser:
 - **Algolia Autocomplete** `1.19.4` - Search autocomplete
 - **Vimeo Player** `2.30.1` - Video player integration
 - **DayJS** `1.11.19` - Date formatting
+- **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design)
 
 ### Development
 
@@ -207,6 +209,8 @@ Tools for building and developing the site:
 - **TypeScript** `5` - Type safety and IntelliSense
 - **ESLint** `9` - Code linting
 - **Prettier** `3.7.4` - Code formatting
+- **Prettier Plugin Organize Imports** `4.3.0` - Auto-organize imports
+- **Prettier Plugin Tailwindcss** `0.7.2` - Sort Tailwind classes
 - **PostCSS** `8.5.6` - CSS transformations
 
 ### Scripts & Processing
