@@ -187,20 +187,20 @@ Packages shipped to production, loaded in the browser:
 - **Next.js** `16.0.7` - React framework with App Router
 - **React** `19.2.1` - UI library
 - **Tailwind CSS** `4.1.17` - Utility-first CSS framework
-- **Framer Motion** `12.23.25` - Animation library
-- **React Intersection Observer** `10.0.0` - Scroll-based animations and lazy loading
 - **Headless UI** `2.2.9` - Unstyled accessible components
-- **Swiper** `12.0.3` - Modern slider/carousel
-- **FlexSearch** `0.8.212` - Full-text search
-- **React Highlight Words** `0.21.0` - Text highlighting
-- **Yet Another React Lightbox** `3.25.0` - Image gallery
 - **Valtio** `2.2.0` - State management
-- **Vercel Analytics** `1.6.1` - Analytics integration
-- **Next Third Parties** `16.0.7` - Third-party script optimization
+- **Swiper** `12.0.3` - Modern slider/carousel
+- **Yet Another React Lightbox** `3.25.0` - Image gallery
+- **FlexSearch** `0.8.212` - Full-text search
 - **Algolia Autocomplete** `1.19.4` - Search autocomplete
+- **Framer Motion** `12.23.25` - Animation library
 - **Vimeo Player** `2.30.1` - Video player integration
 - **DayJS** `1.11.19` - Date formatting
+- **React Intersection Observer** `10.0.0` - Scroll-based animations and lazy loading
+- **React Highlight Words** `0.21.0` - Text highlighting
 - **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design)
+- **Vercel Analytics** `1.6.1` - Analytics integration
+- **Next Third Parties** `16.0.7` - Third-party script optimization
 
 ### Development
 
