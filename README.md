@@ -29,7 +29,7 @@ Gallop templates are trusted by professionals achieving #1 Google rankings in co
 - ⚛️ **React 19.2** for cutting-edge performance
 - 🎨 **Tailwind CSS 4.1** for pixel-perfect design
 - 📝 **TSX-powered content** - No CMS required
-- 🖼️ **Advanced image management** - Automatic metadata extraction, orientation detection, and responsive image generation
+- 🖼️ **Image processing** with automatic optimization
 - 🔍 **Built-in search** powered by FlexSearch
 - 📱 **Fully responsive** and mobile-optimized
 - ⚡ **Lightning-fast** performance
