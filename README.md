@@ -25,8 +25,8 @@ Gallop templates are trusted by professionals achieving #1 Google rankings in co
 
 ## Features
 
-- 🚀 **Next.js 15.5** with App Router
-- ⚛️ **React 19** for cutting-edge performance
+- 🚀 **Next.js 16.0** with App Router
+- ⚛️ **React 19.2** for cutting-edge performance
 - 🎨 **Tailwind CSS 4.1** for pixel-perfect design
 - 📝 **TSX-powered content** - No CMS required
 - 🖼️ **Intelligent image processing** with responsive variants
@@ -194,6 +194,11 @@ Packages shipped to production, loaded in the browser:
 - **React Highlight Words** `0.21.0` - Text highlighting
 - **Yet Another React Lightbox** `3.25.0` - Image gallery
 - **Valtio** `2.2.0` - State management
+- **Vercel Analytics** `1.6.1` - Analytics integration
+- **Next Third Parties** `16.0.7` - Third-party script optimization
+- **Algolia Autocomplete** `1.19.4` - Search autocomplete
+- **Vimeo Player** `2.30.1` - Video player integration
+- **DayJS** `1.11.19` - Date formatting
 
 ### Development
 
