@@ -2,7 +2,7 @@
 
 [![Speedwell Theme](./public/speedwell.jpg)](https://speedwell.gallop.software)
 
-**A Next.js template for small businesses featuring high-quality feminine design.** Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.
+A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)
@@ -182,7 +182,7 @@ vercel --prod
 
 ### Frontend (Runtime)
 
-Packages shipped to production, loaded in the browser:
+Every dependency is battle-tested in production and chosen for stability, performance, and long-term maintainability.
 
 - **Next.js** `16.0.7` - React framework with App Router
 - **React** `19.2.1` - UI library
