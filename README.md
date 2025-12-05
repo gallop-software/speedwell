@@ -193,8 +193,8 @@ Packages shipped to production, loaded in the browser:
 - **Yet Another React Lightbox** `3.25.0` - Image gallery
 - **FlexSearch** `0.8.212` - Full-text search
 - **Algolia Autocomplete** `1.19.4` - Search autocomplete
-- **Framer Motion** `12.23.25` - Animation library
 - **Vimeo Player** `2.30.1` - Video player integration
+- **Framer Motion** `12.23.25` - Animation library
 - **DayJS** `1.11.19` - Date formatting
 - **React Intersection Observer** `10.0.0` - Scroll-based animations and lazy loading
 - **React Highlight Words** `0.21.0` - Text highlighting
