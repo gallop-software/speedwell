@@ -85,7 +85,6 @@
     "@types/react-dom": "^19",
     "@types/react-highlight-words": "^0.20.0",
     "@types/vimeo__player": "^2.18.3",
-    "csv-writer": "^1.6.0",
     "eslint": "^9",
     "eslint-config-next": "^16.0.7",
     "jsdom": "^27.2.0",
