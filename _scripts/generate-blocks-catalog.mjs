@@ -37,18 +37,18 @@ function sortCategories(categories) {
   return categories.sort((a, b) => {
     const indexA = CATEGORY_ORDER.indexOf(a)
     const indexB = CATEGORY_ORDER.indexOf(b)
-    
+
     // If both in preferred order, use that order
     if (indexA !== -1 && indexB !== -1) {
       return indexA - indexB
     }
-    
+
     // If only A is in preferred order, A comes first
     if (indexA !== -1) return -1
-    
+
     // If only B is in preferred order, B comes first
     if (indexB !== -1) return 1
-    
+
     // If neither in preferred order, sort alphabetically
     return a.localeCompare(b)
   })
@@ -58,7 +58,7 @@ function sortCategories(categories) {
 function naturalSort(a, b) {
   return a.name.localeCompare(b.name, undefined, {
     numeric: true,
-    sensitivity: 'base'
+    sensitivity: 'base',
   })
 }
 
@@ -239,7 +239,9 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
     }
 
     // Load existing blocks from README to preserve order and tier settings
-    const existingReadmeBlocks = ignoreSavedOrder ? [] : await parseExistingReadme()
+    const existingReadmeBlocks = ignoreSavedOrder
+      ? []
+      : await parseExistingReadme()
     if (!ignoreSavedOrder) {
       console.log(
         `Loaded ${existingReadmeBlocks.length} blocks from existing README\n`
@@ -273,35 +275,35 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
     // Group blocks by category and preserve order within each category
     const blocksByCategory = {}
     const existingOrderByCategory = {}
-    
+
     // First, group existing blocks by category to preserve their order
     for (const existingBlock of existingReadmeBlocks) {
       if (allBlocksMap.has(existingBlock.displayName)) {
         const block = allBlocksMap.get(existingBlock.displayName)
         const category = block.name.split('-')[0]
-        
+
         if (!existingOrderByCategory[category]) {
           existingOrderByCategory[category] = []
         }
         existingOrderByCategory[category].push(block.displayName)
       }
     }
-    
+
     // Reconstruct blocks organized by category
     const blocks = []
     const processedBlocks = new Set()
-    
+
     // Get all categories and sort them by preferred order
     const allCategories = new Set()
     for (const block of allBlocksMap.values()) {
       allCategories.add(block.name.split('-')[0])
     }
     const sortedCategories = sortCategories([...allCategories])
-    
+
     // For each category (in preferred order), add blocks
     for (const category of sortedCategories) {
       const categoryBlocks = []
-      
+
       // First, add existing blocks in their README order within this category
       if (existingOrderByCategory[category]) {
         for (const displayName of existingOrderByCategory[category]) {
@@ -311,26 +313,27 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
           }
         }
       }
-      
+
       // Then, add any new blocks in this category (sorted naturally by number)
       const newCategoryBlocks = []
       for (const block of allBlocksMap.values()) {
-        if (block.name.split('-')[0] === category && !processedBlocks.has(block.displayName)) {
+        if (
+          block.name.split('-')[0] === category &&
+          !processedBlocks.has(block.displayName)
+        ) {
           newCategoryBlocks.push(block)
           processedBlocks.add(block.displayName)
         }
       }
       newCategoryBlocks.sort(naturalSort)
       categoryBlocks.push(...newCategoryBlocks)
-      
+
       blocks.push(...categoryBlocks)
     }
-    
+
     const totalNew = blocks.length - existingReadmeBlocks.length
     if (totalNew > 0) {
-      console.log(
-        `Found ${totalNew} new blocks\n`
-      )
+      console.log(`Found ${totalNew} new blocks\n`)
     }
 
     // Determine which blocks need screenshots
@@ -436,10 +439,9 @@ function generateReadme(blocks) {
   })
 
   readme += `## Categories\n\n`
-  sortCategories(Object.keys(categories))
-    .forEach((category) => {
-      readme += `- **${category.charAt(0).toUpperCase() + category.slice(1)}:** ${categories[category].length} blocks\n`
-    })
+  sortCategories(Object.keys(categories)).forEach((category) => {
+    readme += `- **${category.charAt(0).toUpperCase() + category.slice(1)}:** ${categories[category].length} blocks\n`
+  })
   readme += `\n`
 
   readme += `## Blocks\n\n`
@@ -455,21 +457,19 @@ function generateReadme(blocks) {
   })
 
   // Output blocks grouped by category (categories sorted by preferred order)
-  sortCategories(Object.keys(blocksByCategory))
-    .forEach((category) => {
-      readme += `### ${category.charAt(0).toUpperCase() + category.slice(1)}\n\n`
+  sortCategories(Object.keys(blocksByCategory)).forEach((category) => {
+    readme += `### ${category.charAt(0).toUpperCase() + category.slice(1)}\n\n`
 
-      blocksByCategory[category].forEach((block) => {
-        readme += `#### ${block.displayName}\n\n`
-        if (block.hasScreenshot) {
-          readme += `![${block.displayName}](/blocks/${block.slug}.jpg)\n\n`
-        }
-        readme += `**Slug:** \`${block.slug}\`  \n`
-        readme += `**File:** \`${block.filename}\`  \n`
-        readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
-        readme += `---\n\n`
-      })
+    blocksByCategory[category].forEach((block) => {
+      readme += `#### ${block.displayName}\n\n`
+      if (block.hasScreenshot) {
+        readme += `![${block.displayName}](../../public/blocks/${block.slug}.jpg)\n\n`
+      }
+      readme += `**Slug:** \`${block.slug}\`  \n`
+      readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
+      readme += `---\n\n`
     })
+  })
 
   return readme
 }
