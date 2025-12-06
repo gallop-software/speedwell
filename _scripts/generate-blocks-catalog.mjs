@@ -463,7 +463,7 @@ function generateReadme(blocks) {
     blocksByCategory[category].forEach((block) => {
       readme += `#### ${block.displayName}\n\n`
       if (block.hasScreenshot) {
-        readme += `![${block.displayName}](../../public/blocks/${block.slug}.jpg)\n\n`
+        readme += `<img src="../../public/blocks/${block.slug}.jpg" alt="${block.displayName}" width="500">\n\n`
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
       readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
