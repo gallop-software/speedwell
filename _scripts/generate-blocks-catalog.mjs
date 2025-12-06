@@ -12,8 +12,7 @@ const OUTPUT_DIR = join(__dirname, '../public/blocks')
 const README_PATH = join(__dirname, '../src/blocks/README.md')
 const META_JSON_PATH = join(__dirname, '../_data/_meta.json')
 const BASE_URL = 'https://speedwell.gallop.software'
-const FULL_SIZE = 1400 // Full image size on longest side
-const MEDIUM_SIZE = 700 // Medium image size on longest side
+const FULL_SIZE = 700 // Full image size on longest side
 
 // Preferred category order (edit this to reorder categories)
 const CATEGORY_ORDER = [
@@ -145,59 +144,32 @@ async function captureScreenshot(browser, slug, outputDir) {
     const metadata = await sharp(screenshotBuffer).metadata()
     const { width, height } = metadata
 
-    // Calculate full size (max 1400px on longest side) maintaining aspect ratio
+    // Calculate size (max 700px on longest side) maintaining aspect ratio
     const longestSide = Math.max(width, height)
-    let fullWidth, fullHeight
+    let imageWidth, imageHeight
 
     if (longestSide <= FULL_SIZE) {
-      // Image is already smaller than full size
-      fullWidth = width
-      fullHeight = height
+      // Image is already smaller than target size
+      imageWidth = width
+      imageHeight = height
     } else if (width > height) {
       // Width is longest side
-      fullWidth = FULL_SIZE
-      fullHeight = Math.round((height / width) * FULL_SIZE)
+      imageWidth = FULL_SIZE
+      imageHeight = Math.round((height / width) * FULL_SIZE)
     } else {
       // Height is longest side
-      fullHeight = FULL_SIZE
-      fullWidth = Math.round((width / height) * FULL_SIZE)
+      imageHeight = FULL_SIZE
+      imageWidth = Math.round((width / height) * FULL_SIZE)
     }
 
-    // Save full-size image (resized to max 1400px)
-    const fullPath = join(outputDir, `${slug}.jpg`)
+    // Save image (resized to max 700px)
+    const imagePath = join(outputDir, `${slug}.jpg`)
     await sharp(screenshotBuffer)
-      .resize(fullWidth, fullHeight, { fit: 'inside' })
+      .resize(imageWidth, imageHeight, { fit: 'inside' })
       .jpeg({ quality: 90 })
-      .toFile(fullPath)
+      .toFile(imagePath)
 
-    // Calculate medium size (max 700px on longest side) maintaining aspect ratio
-    const mediumLongestSide = Math.max(fullWidth, fullHeight)
-    let mediumWidth, mediumHeight
-
-    if (mediumLongestSide <= MEDIUM_SIZE) {
-      // Image is already smaller than medium size
-      mediumWidth = fullWidth
-      mediumHeight = fullHeight
-    } else if (fullWidth > fullHeight) {
-      // Width is longest side
-      mediumWidth = MEDIUM_SIZE
-      mediumHeight = Math.round((fullHeight / fullWidth) * MEDIUM_SIZE)
-    } else {
-      // Height is longest side
-      mediumHeight = MEDIUM_SIZE
-      mediumWidth = Math.round((fullWidth / fullHeight) * MEDIUM_SIZE)
-    }
-
-    // Save medium-size image
-    const mediumPath = join(outputDir, `${slug}-md.jpg`)
-    await sharp(screenshotBuffer)
-      .resize(mediumWidth, mediumHeight, { fit: 'inside' })
-      .jpeg({ quality: 90 })
-      .toFile(mediumPath)
-
-    console.log(
-      `✓ Saved: ${slug}.jpg (${fullWidth}x${fullHeight}) and ${slug}-md.jpg (${mediumWidth}x${mediumHeight})`
-    )
+    console.log(`✓ Saved: ${slug}.jpg (${imageWidth}x${imageHeight})`)
     return true
   } catch (error) {
     console.error(`✗ Error capturing ${slug}:`, error.message)
@@ -209,11 +181,9 @@ async function captureScreenshot(browser, slug, outputDir) {
 
 async function imageExists(slug, outputDir) {
   try {
-    const fullPath = join(outputDir, `${slug}.jpg`)
-    const mediumPath = join(outputDir, `${slug}-md.jpg`)
+    const imagePath = join(outputDir, `${slug}.jpg`)
     const { access } = await import('fs/promises')
-    await access(fullPath)
-    await access(mediumPath)
+    await access(imagePath)
     return true
   } catch {
     return false
@@ -463,7 +433,7 @@ function generateReadme(blocks) {
     blocksByCategory[category].forEach((block) => {
       readme += `#### ${block.displayName}\n\n`
       if (block.hasScreenshot) {
-        readme += `<img src="../../public/blocks/${block.slug}.jpg" alt="${block.displayName}" width="500">\n\n`
+        readme += `<img src="../../public/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
       readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
