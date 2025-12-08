@@ -61,6 +61,15 @@ function naturalSort(a, b) {
   })
 }
 
+// Helper function to get full category display name
+function getCategoryDisplayName(category) {
+  // Convert category slug to display name (e.g., "call-to-action" -> "Call To Action")
+  return category
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+
 // Helper function to convert filename to display name and slug
 function parseBlockName(filename) {
   const name = filename.replace('.tsx', '')
@@ -250,7 +259,7 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
     for (const existingBlock of existingReadmeBlocks) {
       if (allBlocksMap.has(existingBlock.displayName)) {
         const block = allBlocksMap.get(existingBlock.displayName)
-        const category = block.name.split('-')[0]
+        const category = block.name.replace(/-\d+$/, '')
 
         if (!existingOrderByCategory[category]) {
           existingOrderByCategory[category] = []
@@ -401,7 +410,7 @@ function generateReadme(blocks) {
   // Group blocks by category
   const categories = {}
   blocks.forEach((block) => {
-    const category = block.name.split('-')[0]
+    const category = block.name.replace(/-\d+$/, '')
     if (!categories[category]) {
       categories[category] = []
     }
@@ -410,7 +419,7 @@ function generateReadme(blocks) {
 
   readme += `## Categories\n\n`
   sortCategories(Object.keys(categories)).forEach((category) => {
-    readme += `- **${category.charAt(0).toUpperCase() + category.slice(1)}:** ${categories[category].length} blocks\n`
+    readme += `- **${getCategoryDisplayName(category)}:** ${categories[category].length} blocks\n`
   })
   readme += `\n`
 
@@ -419,7 +428,7 @@ function generateReadme(blocks) {
   // Group blocks by category while preserving order within each category
   const blocksByCategory = {}
   blocks.forEach((block) => {
-    const category = block.name.split('-')[0]
+    const category = block.name.replace(/-\d+$/, '')
     if (!blocksByCategory[category]) {
       blocksByCategory[category] = []
     }
@@ -428,7 +437,7 @@ function generateReadme(blocks) {
 
   // Output blocks grouped by category (categories sorted by preferred order)
   sortCategories(Object.keys(blocksByCategory)).forEach((category) => {
-    readme += `### ${category.charAt(0).toUpperCase() + category.slice(1)}\n\n`
+    readme += `### ${getCategoryDisplayName(category)}\n\n`
 
     blocksByCategory[category].forEach((block) => {
       readme += `#### ${block.displayName}\n\n`

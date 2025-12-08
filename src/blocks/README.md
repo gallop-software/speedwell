@@ -13,6 +13,7 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 - **Hero:** 13 blocks
 - **Section:** 30 blocks
 - **Content:** 5 blocks
+- **Call To Action:** 6 blocks
 - **Testimonial:** 3 blocks
 - **Contact:** 2 blocks
 - **About:** 2 blocks
@@ -22,7 +23,6 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 - **Partners:** 1 blocks
 - **Accordion:** 1 blocks
 - **Application:** 1 blocks
-- **Call:** 6 blocks
 
 ## Blocks
 
@@ -464,6 +464,62 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 
 ---
 
+### Call To Action
+
+#### Call To Action 1
+
+<img src="../../public/blocks/call-to-action-1.jpg" alt="Call To Action 1" width="350">
+
+**Slug:** `call-to-action-1`  
+**Tier:** Free
+
+---
+
+#### Call To Action 2
+
+<img src="../../public/blocks/call-to-action-2.jpg" alt="Call To Action 2" width="350">
+
+**Slug:** `call-to-action-2`  
+**Tier:** Free
+
+---
+
+#### Call To Action 3
+
+<img src="../../public/blocks/call-to-action-3.jpg" alt="Call To Action 3" width="350">
+
+**Slug:** `call-to-action-3`  
+**Tier:** Free
+
+---
+
+#### Call To Action 4
+
+<img src="../../public/blocks/call-to-action-4.jpg" alt="Call To Action 4" width="350">
+
+**Slug:** `call-to-action-4`  
+**Tier:** Free
+
+---
+
+#### Call To Action 5
+
+<img src="../../public/blocks/call-to-action-5.jpg" alt="Call To Action 5" width="350">
+
+**Slug:** `call-to-action-5`  
+**Tier:** Free
+
+---
+
+#### Call To Action 6
+
+<img src="../../public/blocks/call-to-action-6.jpg" alt="Call To Action 6" width="350">
+
+**Slug:** `call-to-action-6`  
+**Tier:** Free
+
+---
+
 ### Testimonial
 
 #### Testimonial 1
@@ -640,62 +696,6 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/application-1.jpg" alt="Application 1" width="350">
 
 **Slug:** `application-1`  
-**Tier:** Free
-
----
-
-### Call
-
-#### Call To Action 1
-
-<img src="../../public/blocks/call-to-action-1.jpg" alt="Call To Action 1" width="350">
-
-**Slug:** `call-to-action-1`  
-**Tier:** Free
-
----
-
-#### Call To Action 2
-
-<img src="../../public/blocks/call-to-action-2.jpg" alt="Call To Action 2" width="350">
-
-**Slug:** `call-to-action-2`  
-**Tier:** Free
-
----
-
-#### Call To Action 3
-
-<img src="../../public/blocks/call-to-action-3.jpg" alt="Call To Action 3" width="350">
-
-**Slug:** `call-to-action-3`  
-**Tier:** Free
-
----
-
-#### Call To Action 4
-
-<img src="../../public/blocks/call-to-action-4.jpg" alt="Call To Action 4" width="350">
-
-**Slug:** `call-to-action-4`  
-**Tier:** Free
-
----
-
-#### Call To Action 5
-
-<img src="../../public/blocks/call-to-action-5.jpg" alt="Call To Action 5" width="350">
-
-**Slug:** `call-to-action-5`  
-**Tier:** Free
-
----
-
-#### Call To Action 6
-
-<img src="../../public/blocks/call-to-action-6.jpg" alt="Call To Action 6" width="350">
-
-**Slug:** `call-to-action-6`  
 **Tier:** Free
 
 ---
