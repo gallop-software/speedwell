@@ -8,7 +8,6 @@ import {
   Buttons,
   Button,
   Accent,
-  ProBlock,
 } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
