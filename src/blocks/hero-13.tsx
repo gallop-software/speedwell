@@ -14,6 +14,12 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
 export default function Hero13() {
   return (
+    <ProBlock
+      blockSlug="hero-13"
+      blockName="Hero 13"
+    />
+  )
+  return (
     <>
       <Navbar />
       <div className="bg-accent3 pt-10 ">
