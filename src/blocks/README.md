@@ -5,8 +5,8 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 ## Overview
 
 - **Total Blocks:** 72
-- **Free Blocks:** 70
-- **Pro Blocks:** 2
+- **Free Blocks:** 72
+- **Pro Blocks:** 0
 
 ## Categories
 
@@ -123,16 +123,7 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/hero-11.jpg" alt="Hero 11" width="350">
 
 **Slug:** `hero-11`  
-**Tier:** Pro
-
----
-
-#### Hero 13
-
-<img src="../../public/blocks/hero-13.jpg" alt="Hero 13" width="350">
-
-**Slug:** `hero-13`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -141,6 +132,15 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/hero-12.jpg" alt="Hero 12" width="350">
 
 **Slug:** `hero-12`  
+**Tier:** Free
+
+---
+
+#### Hero 13
+
+<img src="../../public/blocks/hero-13.jpg" alt="Hero 13" width="350">
+
+**Slug:** `hero-13`  
 **Tier:** Free
 
 ---
