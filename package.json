@@ -40,6 +40,7 @@
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
     "blocks:screenshots": "node _scripts/generate-blocks-catalog.mjs --screenshots",
     "blocks:sort": "node _scripts/generate-blocks-catalog.mjs --sort",
+    "blocks:lite": "node _scripts/convert-pro-blocks.mjs",
     "env": "./push-env-to-vercel.sh",
     "env:prod": "./push-env-to-vercel.sh production",
     "env:prev": "./push-env-to-vercel.sh preview",
