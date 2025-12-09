@@ -2,7 +2,7 @@
 
 Generate favicon variants from a single source image.
 
-[← Back to README](../README.md) | [All Scripts](./scripts.md)
+**Tier:** Free
 
 ---
 

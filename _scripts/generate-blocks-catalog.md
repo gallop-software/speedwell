@@ -2,7 +2,7 @@
 
 Generate and maintain the blocks catalog with screenshots and metadata.
 
-[← Back to README](../README.md)
+**Tier:** Internal
 
 ---
 

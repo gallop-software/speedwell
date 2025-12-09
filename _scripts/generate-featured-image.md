@@ -2,7 +2,7 @@
 
 Generate social preview image by screenshotting the homepage.
 
-[← Back to README](../README.md) | [All Scripts](./scripts.md)
+**Tier:** Free
 
 ---
 

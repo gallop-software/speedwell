@@ -2,7 +2,7 @@
 
 Complete guide to managing fonts in Speedwell.
 
-[← Back to README](../README.md)
+**Tier:** Free
 
 ---
 
