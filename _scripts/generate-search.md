@@ -2,7 +2,7 @@
 
 Build FlexSearch index for client-side site search.
 
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
