@@ -47,7 +47,7 @@ if [ $ATTEMPT -eq $MAX_ATTEMPTS ]; then
 fi
 
 # Run the crawler
-node _scripts/crawl-and-index.mjs
+node _scripts/generate-search.mjs
 
 # Kill the server
 echo ""
