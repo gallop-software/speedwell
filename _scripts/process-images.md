@@ -2,7 +2,7 @@
 
 Complete guide to Speedwell's intelligent image processing system.
 
-[← Back to README](../README.md)
+**Tier:** Free
 
 ---
 

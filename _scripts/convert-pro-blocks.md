@@ -1,5 +1,7 @@
 # Convert Pro Blocks Script
 
+**Tier:** Internal
+
 ## Overview
 
 The `convert-pro-blocks.mjs` script automatically converts Pro tier blocks to use the `ProBlock` component, removing their implementation details and replacing them with a standardized Pro block placeholder.

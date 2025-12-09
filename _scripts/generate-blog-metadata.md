@@ -2,7 +2,7 @@
 
 Generate blog post metadata index for efficient querying.
 
-[← Back to README](../README.md) | [All Scripts](./scripts.md)
+**Tier:** Free
 
 ---
 

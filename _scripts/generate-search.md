@@ -2,7 +2,7 @@
 
 Build FlexSearch index for client-side site search.
 
-[← Back to README](../README.md) | [All Scripts](./scripts.md)
+**Tier:** Pro
 
 ---
 
