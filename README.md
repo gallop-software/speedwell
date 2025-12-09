@@ -136,7 +136,7 @@ speedwell/
 
 ### Fonts
 
-- **`npm run fonts`** - Convert TTF fonts to WOFF2 → [docs](./_scripts/compressFonts.md)
+- **`npm run fonts`** - Convert TTF fonts to WOFF2 → [docs](./_scripts/compress-fonts.md)
 - **`npm run fonts:use`** - Mark fonts as used in project
 
 ### Environment
