@@ -44,7 +44,7 @@
     "env": "./push-env-to-vercel.sh",
     "env:prod": "./push-env-to-vercel.sh production",
     "env:prev": "./push-env-to-vercel.sh preview",
-    "fonts": "node src/styles/fonts/compressFonts.js",
+    "fonts": "node _scripts/compressFonts.js",
     "fonts:use": "node src/styles/fonts/useFonts.js",
     "clean": "rm -rf node_modules .next package-lock.json",
     "clean:install": "npm run clean && npm install",
