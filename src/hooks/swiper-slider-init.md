@@ -2,6 +2,8 @@
 
 A client-side hook that initializes and manages Swiper slider instances with fade effects, autoplay, and intersection observer optimization.
 
+**Tier:** Free
+
 ## Usage
 
 ```tsx
