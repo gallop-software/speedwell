@@ -1,5 +1,7 @@
 # Smooth Scroll
 
+![Smooth Scroll](/code/hooks/smooth-scroll.gif)
+
 A client-side hook that enables smooth scrolling behavior for anchor links with an automatic offset adjustment.
 
 **Tier:** Free

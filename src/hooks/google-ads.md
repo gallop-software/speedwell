@@ -1,5 +1,7 @@
 # Google Ads
 
+![Google Ads](/code/hooks/google-ads.jpg)
+
 A Next.js component that integrates Google Ads tracking and configuration into your application.
 
 **Tier:** Free
