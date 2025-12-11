@@ -18,13 +18,13 @@ export default function Section6() {
         <Column className="aspect-[8/7] relative">
           <Image
             src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-            alt="Ea magna velit sit duis ullamco ea"
+            alt="Luxurious bedroom design with sophisticated styling"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
             src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-            alt="Cillum mollit minim mollit nostrud"
+            alt="Beautiful kitchen with modern amenities and design"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
             size="large"
@@ -35,28 +35,19 @@ export default function Section6() {
             as="h3"
             styleAs="h2"
           >
-            Sint elit sed cupidatat amet laborum
+            Personalized Design That Reflects Your Style
           </Heading>
           <Quote>
-            Laborum ipsum nulla veniam nulla quis aliqua minim laborum cupidatat
+            Every home tells a story, and we're here to help you tell yours
           </Quote>
           <Paragraph>
-            Tempor aliquip magna qui laborum sit mollit elit cillum in aliquip
-            laborum proident officia non dolore ea deserunt culpa sunt
-            consectetur non culpa et ullamco aute tempor adipiscing consequat et
-            sint eiusmod ullamco non amet laborum excepteur in nisi commodo
-            occaecat id pariatur ullamco laborum in amet esse qui
+            At Speedwell, we believe that great design is personal. Our process begins with understanding who you are, how you live, and what makes you feel at home. We take the time to learn about your daily routines, your aesthetic preferences, and your long-term goals for your space. This deep understanding allows us to create designs that aren't just beautiful, but truly functional for your unique lifestyle.
           </Paragraph>
           <Paragraph>
-            Aliquip excepteur ipsum cupidatat ipsum aliquip minim consequat
-            irure duis ea proident proident consectetur proident elit et
-            occaecat dolore reprehenderit exercitation amet in mollit enim
-            mollit consectetur culpa officia pariatur minim cupidatat consequat
-            incididunt enim nulla ipsum ullamco ipsum cillum occaecat deserunt
-            ullamco occaecat do
+            Our designers bring years of experience and a keen eye for detail to every project. We stay current with the latest trends while maintaining a timeless sensibility that ensures your home will feel fresh and relevant for years to come. From selecting the perfect color palette to sourcing unique furnishings and accessories, we handle every aspect with care and expertise.
           </Paragraph>
           <Paragraph>
-            Sunt laborum mollit tempor cillum dolore laboris
+            Quality craftsmanship and attention to detail are at the heart of everything we do.
           </Paragraph>
         </Column>
       </Columns>

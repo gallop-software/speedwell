@@ -23,7 +23,7 @@ export default function Hero3() {
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
                 src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
-                alt="Labore ut sint excepteur amet laboris commodo irure anim"
+                alt="Elegant modern living room with contemporary furniture and natural lighting"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
@@ -32,7 +32,7 @@ export default function Hero3() {
                 className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12"
                 color="text-white"
               >
-                lorem elit
+                Dream Homes
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -40,20 +40,10 @@ export default function Hero3() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Labore incididunt ipsum id commodo voluptate commodo do
-                reprehenderit veniam
+                Transform Your House Into Your Dream Home
               </Heading>
               <Paragraph>
-                Ipsum amet id dolor laboris voluptate elit aliqua consequat
-                consectetur ipsum cillum aliqua cupidatat voluptate laboris
-                consectetur minim excepteur qui labore ea cupidatat veniam ipsum
-                id incididunt ipsum aliquip nisi pariatur in dolore dolore
-                veniam laboris ut proident tempor velit fugiat occaecat mollit
-                laboris nisi consequat reprehenderit dolore adipiscing quis ex
-                ipsum excepteur quis consequat officia voluptate proident ea qui
-                commodo aute labore dolore qui laborum occaecat anim ex sed
-                dolor velit irure pariatur sunt ipsum cillum duis culpa est in
-                adipiscing pariatur
+                Experience the perfect blend of luxury, comfort, and functionality with our bespoke residential interior design services. We create personalized living spaces that reflect your unique style and enhance your everyday life. From modern minimalism to timeless elegance, our expert designers bring your vision to life with meticulous attention to detail, premium materials, and innovative solutions that maximize both beauty and practicality.
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -62,7 +52,7 @@ export default function Hero3() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Ad in mollit laboris enim excepteur tempor
+                  Explore Our Services
                 </Button>
               </Buttons>
             </Column>
