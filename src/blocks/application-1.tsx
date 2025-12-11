@@ -68,7 +68,12 @@ export default function Application1() {
         <FormCheckboxGroup
           heading="Which position are you interested in?*"
           name="position"
-          options={['Interior Designer', 'Project Manager', 'Design Intern', 'Other']}
+          options={[
+            'Interior Designer',
+            'Project Manager',
+            'Design Intern',
+            'Other',
+          ]}
           label="Position"
         />
         <FormTextArea
