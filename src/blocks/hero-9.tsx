@@ -22,14 +22,14 @@ export default function Hero9() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
                 alt="Stunning modern kitchen with custom cabinetry and contemporary design"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
-                Luxury Spaces
+                luxury spaces
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
