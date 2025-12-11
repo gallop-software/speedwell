@@ -69,6 +69,7 @@
     "dayjs": "^1.11.19",
     "flexsearch": "^0.8.212",
     "framer-motion": "^12.23.25",
+    "luxon": "^3.7.2",
     "next": "^16.0.7",
     "react": "^19",
     "react-dom": "^19.2.1",
@@ -83,6 +84,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",
+    "@types/luxon": "^3.7.1",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
