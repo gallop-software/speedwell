@@ -6,7 +6,7 @@ A Next.js template for small businesses featuring high-quality feminine design. 
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
-**Category:** Small Business Template
+**🏷️ Category:** Small Business Template
 
 ---
 
