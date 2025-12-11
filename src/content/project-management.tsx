@@ -25,27 +25,27 @@ export default function Content() {
 }
 
 export const metadata = {
-  title: 'Dolore officia et',
+  title: 'Professional Project Management | Interior Design Services',
   description:
-    'In officia in et non id labore excepteur nisi consectetur fugiat eiusmod ut consectetur id cillum ad ex magna anim velit irure mollit lorem',
-  slug: 'enim-ad-minim',
+    'Seamless interior design project management from concept to completion. We coordinate all aspects of your project with precision, ensuring on-time delivery, budget adherence, and exceptional quality.',
+  slug: 'project-management',
   featuredImage:
     '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
-  focusKeyword: 'lorem ipsum dolor',
+  focusKeyword: 'interior design project management',
   readingTimeMinutes: 6,
-  publishDate: '2025-09-18T00:00:00Z',
-  lastModified: '2025-09-18T00:00:00Z',
+  publishDate: '2024-04-15T11:00:00Z',
+  lastModified: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/enim-ad-minim',
+    canonical: 'https://speedwell.gallop.software/project-management',
   },
   openGraph: {
-    title: 'Non pariatur est',
+    title: 'Professional Project Management | Interior Design Services',
     description:
-      'Veniam labore pariatur ea aliquip nulla reprehenderit pariatur fugiat magna exercitation nisi ipsum laboris non sint dolore est excepteur tempor id sunt laborum proident',
+      'Expert project management for your interior design needs. We handle every detail from planning to execution, ensuring your project is completed on time, on budget, and beyond expectations.',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
-      alt: 'Adipiscing deserunt cillum',
+      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+      alt: 'Professional interior design project in progress',
     },
-    imageAlt: 'Lorem Ipsum Adipiscing Elit',
+    imageAlt: 'Interior Design Project Management',
   },
 }

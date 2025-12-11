@@ -18,7 +18,7 @@ export default function Section18() {
         <Column>
           <Image
             src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-            alt="Lorem Ipsum Consectetur"
+            alt="Detailed project planning and scheduling"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -32,33 +32,22 @@ export default function Section18() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Excepteur qui nisi velit cupidatat fugiat
+            Phase 1
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            In consectetur
+            Planning & Design Development
           </Heading>
           <Paragraph>
-            Incididunt commodo fugiat dolor in sed nulla quis est velit dolore
-            voluptate laboris cupidatat sit tempor quis anim dolore anim eiusmod
-            dolor dolore elit culpa aliqua est incididunt do sed et veniam
-            eiusmod exercitation nostrud minim ut exercitation esse adipiscing
-            officia velit dolore reprehenderit mollit quis amet sed esse ex
-            proident ad magna qui excepteur non veniam fugiat
+            Every successful project begins with thorough planning. We work closely with you to refine the design concept, establish realistic timelines, and create detailed budgets. Our team prepares comprehensive specifications, coordinates with architects and engineers, and ensures all design elements are perfectly aligned before moving forward.
           </Paragraph>
           <Paragraph>
-            Fugiat pariatur nulla amet laborum occaecat pariatur sunt tempor
-            mollit laborum do cupidatat occaecat do culpa qui ullamco nostrud
-            deserunt et id amet magna culpa nostrud officia commodo commodo non
-            ipsum exercitation sunt magna consectetur minim incididunt et cillum
-            exercitation exercitation fugiat proident id esse deserunt
+            During this phase, we finalize material selections, secure vendor quotes, and develop a detailed project schedule. We obtain necessary permits, coordinate with your HOA if applicable, and ensure all stakeholders understand their roles and responsibilities. This meticulous preparation sets the foundation for smooth execution.
           </Paragraph>
           <Quote>
-            Est officia fugiat commodo enim nostrud ipsum commodo officia
-            adipiscing ex et nulla qui nulla cillum in sit minim proident
-            exercitation dolore exercitation
+            Proper planning prevents problems – we invest time upfront to ensure flawless execution throughout your project
           </Quote>
         </Column>
       </Columns>

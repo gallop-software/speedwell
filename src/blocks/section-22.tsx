@@ -19,7 +19,7 @@ export default function Section22() {
         <Column>
           <Image
             src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-            alt="Sint irure irure"
+            alt="Quality assurance and inspection"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -33,34 +33,22 @@ export default function Section22() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Sit velit
+            Quality Assurance
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Laboris excepteur
+            Uncompromising Standards
           </Heading>
           <Paragraph>
-            Consequat nulla elit amet duis consequat id velit dolor sed non
-            proident dolor minim in aute exercitation velit dolor irure aliquip
-            magna consectetur in ipsum veniam irure ad non nulla proident dolore
-            magna laborum culpa sunt est laborum adipiscing ea eiusmod est enim
-            reprehenderit tempor adipiscing culpa officia adipiscing voluptate
-            et aute
+            Quality is never compromised on our projects. We maintain rigorous standards at every stage, conducting regular inspections and quality checks to ensure all work meets our exacting specifications. Our experienced eye catches details others might miss, and we address any issues immediately to maintain project momentum and protect your investment.
           </Paragraph>
           <Paragraph>
-            Aute in pariatur consequat esse quis culpa enim excepteur adipiscing
-            elit culpa officia consectetur esse sed sint nulla voluptate aliquip
-            amet mollit sunt ad commodo sint nulla qui id enim adipiscing aliqua
-            adipiscing non ea nulla non reprehenderit consectetur elit elit
-            voluptate veniam laborum ex irure quis
+            We work exclusively with licensed, insured contractors and craftspeople who share our commitment to excellence. Every material is inspected upon delivery, every installation is scrutinized for perfection, and every finished surface is evaluated against our quality standards. This meticulous approach ensures your completed project exceeds expectations and stands the test of time.
           </Paragraph>
           <Quote>
-            Nulla veniam incididunt ut commodo sint est magna sint do dolor
-            minim aliquip deserunt reprehenderit consequat ea excepteur laboris
-            irure pariatur elit consectetur laboris do cupidatat laboris culpa
-            laborum enim culpa ex reprehenderit minim
+            Excellence in execution is our promise – we accept nothing less than perfection in every detail
           </Quote>
         </Column>
       </Columns>

@@ -14,35 +14,25 @@ export default function Section17() {
         <Column className="aspect-4/5 relative">
           <Image
             src="/images/portfolio/pexels-pixabay-269218.jpg"
-            alt="Tempor ipsum voluptate et non"
+            alt="Quality craftsmanship and attention to detail"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
             src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
-            alt="Anim aute mollit duis consectetur"
+            alt="Professional contractor coordination"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column className="py-0 lg:py-10">
-          <Heading as="h2">Mollit esse ad magna culpa</Heading>
+          <Heading as="h2">Comprehensive Oversight & Coordination</Heading>
           <Paragraph>
-            Cupidatat qui est eiusmod est veniam enim pariatur irure dolore
-            mollit ea adipiscing dolor laborum est eiusmod quis est est nisi
-            eiusmod exercitation exercitation excepteur ut velit sed culpa
-            deserunt commodo cupidatat laboris qui ipsum fugiat nostrud sunt
-            laboris qui qui ullamco sint cillum aute excepteur fugiat duis
+            We serve as your single point of contact, coordinating with architects, contractors, vendors, and craftspeople to ensure seamless collaboration. Our established network of trusted professionals and rigorous quality standards guarantee exceptional results at every phase of your project.
           </Paragraph>
           <Paragraph>
-            Non ipsum cillum sit elit ut aute dolor cillum velit et
-            reprehenderit dolore ex aliquip fugiat commodo mollit dolor ad est
-            sint minim est et ut aliquip excepteur ut elit culpa enim ea velit
-            reprehenderit voluptate tempor veniam laborum minim sunt ut cillum
-            sed elit duis sit veniam ea dolore laboris adipiscing veniam irure
-            nulla consequat nostrud esse magna consectetur qui sunt sint sed
-            officia aliqua veniam sit amet est sed sit
+            From obtaining necessary permits and managing timelines to overseeing installations and conducting quality inspections, we handle all the complex details. Our proactive communication keeps you informed of progress while our problem-solving expertise ensures any challenges are resolved quickly and effectively, maintaining momentum and protecting your investment.
           </Paragraph>
         </Column>
       </Columns>
