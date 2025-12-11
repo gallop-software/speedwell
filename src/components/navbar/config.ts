@@ -87,7 +87,7 @@ export const links: NavLink[] = [
         {
           name: 'Meet the Team',
           description: 'Get to know our talented designers',
-          href: '/commercial',
+          href: '/meet-the-team',
           icon: accountGroupIcon,
         },
         {
