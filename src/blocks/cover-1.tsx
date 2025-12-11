@@ -4,7 +4,7 @@ export default function Cover1() {
   return (
     <Cover
       imageSrc="/images/portfolio/pexels-jworks1124-342800.jpg"
-      imageAlt="Nulla est cillum"
+      imageAlt="Speedwell interior design team workspace"
       imageClassName=""
     >
       <Accent
@@ -12,7 +12,7 @@ export default function Cover1() {
         size="medium"
         color="text-white"
       >
-        timeless elegance
+        meet our team
       </Accent>
     </Cover>
   )

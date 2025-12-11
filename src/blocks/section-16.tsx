@@ -31,10 +31,10 @@ export default function Section16() {
             id="learn-more"
             as="h2"
           >
-            Your Vision, Expertly Executed
+            Passionate Designers, Exceptional Results
           </Heading>
           <Paragraph>
-            Interior design projects require meticulous coordination, expert oversight, and seamless execution. Our comprehensive project management services ensure your design comes to life exactly as envisioned, on schedule and within budget. From the initial consultation through final installation, we handle every detail with professional precision, keeping you informed and confident throughout the entire process.
+            Our team brings together diverse talents, perspectives, and expertise to create interiors that truly transform how you live and work. Each member of Speedwell contributes unique skills and creative vision, united by a shared commitment to excellence and a passion for thoughtful design. We believe that great design comes from collaboration, listening, and understanding what makes each space and client unique.
           </Paragraph>
         </Column>
       </Columns>
