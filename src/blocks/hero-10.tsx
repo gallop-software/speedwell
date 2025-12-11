@@ -6,7 +6,7 @@ export default function Hero10() {
       <Navbar />
       <Cover
         imageSrc="/images/portfolio/pexels-burst-545012.jpg"
-        imageAlt="Lorem ipsum dolor sit amet"
+        imageAlt="Professional interior design project management"
         overlayColor="bg-accent4/90"
         height="h-[400px] md:h-[500px] lg:h-[600px]"
       >
@@ -16,13 +16,13 @@ export default function Hero10() {
             color="text-accent"
             margin="0"
           >
-            Elit laborum nulla
+            Project Management
           </Heading>
           <Accent
             size="medium"
             color="text-accent"
           >
-            adipiscing elit
+            Seamless Execution
           </Accent>
         </div>
       </Cover>

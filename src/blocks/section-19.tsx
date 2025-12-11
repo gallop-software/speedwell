@@ -19,7 +19,7 @@ export default function Section19() {
         <Column className="relative">
           <Image
             src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
-            alt="Tempor lorem enim"
+            alt="Construction and renovation management"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -33,34 +33,22 @@ export default function Section19() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Non dolore esse veniam id id
+            Phase 2
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Ea aliqua
+            Construction & Procurement
           </Heading>
           <Paragraph>
-            Sit sed eiusmod ipsum deserunt nulla pariatur magna sit est ullamco
-            velit amet aliquip do voluptate in consequat non officia
-            exercitation veniam veniam ad esse aute aute aute ut enim deserunt
-            proident consectetur sunt sit ut quis aliqua minim culpa consectetur
-            non exercitation elit qui nulla voluptate mollit ut ipsum cupidatat
-            do velit cupidatat velit
+            As construction begins, our project managers maintain constant oversight, conducting regular site visits to ensure work meets our exacting standards. We coordinate deliveries, manage contractor schedules, and address any issues immediately. Our hands-on approach means potential problems are identified and resolved before they impact your timeline or budget.
           </Paragraph>
           <Paragraph>
-            Sed sunt quis sint non adipiscing ullamco excepteur anim sit in
-            exercitation excepteur esse magna consequat mollit ullamco velit
-            sunt reprehenderit aute ullamco quis enim lorem deserunt pariatur
-            consequat adipiscing sunt anim pariatur elit veniam elit eiusmod ad
-            cupidatat non ut ipsum ex pariatur elit laborum
+            Simultaneously, we manage all procurement activities, tracking orders and coordinating deliveries to align perfectly with the construction schedule. Our relationships with premium suppliers and vendors ensure priority service and competitive pricing. We inspect all materials upon arrival and maintain detailed records throughout the process.
           </Paragraph>
           <Quote>
-            Ipsum reprehenderit mollit aliqua elit consectetur ipsum eiusmod
-            cupidatat incididunt dolor consectetur incididunt dolore cillum
-            laboris mollit qui laborum ipsum quis aliquip voluptate adipiscing
-            excepteur
+            Active oversight and clear communication ensure your project stays on track and exceeds quality expectations
           </Quote>
         </Column>
       </Columns>

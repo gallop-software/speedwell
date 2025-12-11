@@ -19,7 +19,7 @@ export default function Section23() {
         <Column>
           <Image
             src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-            alt="Velit esse lorem"
+            alt="Client communication and support"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -33,26 +33,19 @@ export default function Section23() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Excepteur proident dolore
+            Client Experience
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Dolore velit
+            Partnership & Communication
           </Heading>
           <Paragraph>
-            Dolor elit minim occaecat consectetur proident excepteur incididunt
-            fugiat qui sint minim ea cillum id minim proident consectetur dolor
-            consequat veniam tempor fugiat eiusmod fugiat sint sed fugiat sint
-            quis aute incididunt non sed et enim ut velit dolor tempor
+            We believe great project management means great client communication. You'll have a dedicated project manager as your single point of contact, available to answer questions, provide updates, and address concerns promptly. Regular progress reports keep you informed, while our responsive approach ensures you're never left wondering about your project's status.
           </Paragraph>
           <Quote>
-            Sed sint labore proident do commodo laborum sunt excepteur deserunt
-            exercitation laboris laboris adipiscing cillum ullamco irure nulla
-            ullamco ad culpa cillum nulla amet exercitation occaecat aliquip
-            nostrud amet aute aute labore tempor dolor ad velit elit anim tempor
-            lorem pariatur
+            Your peace of mind is our priority – clear communication, proactive updates, and responsive support throughout your entire project journey
           </Quote>
         </Column>
       </Columns>

@@ -19,7 +19,7 @@ export default function Section21() {
         <Column>
           <Image
             src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
-            alt="Magna quis irure laborum"
+            alt="Budget management and financial control"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -33,36 +33,22 @@ export default function Section21() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Qui reprehenderit ullamco
+            Budget Management
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Nisi incididunt
+            Transparent Financial Control
           </Heading>
           <Paragraph>
-            Elit consectetur elit est excepteur eiusmod id nisi tempor ex nisi
-            anim adipiscing in sint exercitation exercitation anim fugiat ut
-            cupidatat amet ullamco pariatur lorem non consectetur eiusmod ea ex
-            lorem aliqua occaecat commodo laborum deserunt ut aliqua anim mollit
-            quis eiusmod voluptate nulla dolor ad eiusmod adipiscing pariatur
-            proident enim ipsum dolore adipiscing mollit excepteur reprehenderit
-            consectetur sunt nostrud et in do quis dolor elit occaecat ex id sit
-            nisi occaecat sit minim
+            We understand that budget management is crucial to project success. Our team provides detailed cost estimates upfront and maintains rigorous financial tracking throughout your project. We negotiate competitive pricing with vendors and contractors, maximizing value without compromising quality. Regular budget updates keep you informed, and we proactively identify cost-saving opportunities while protecting your investment.
           </Paragraph>
           <Paragraph>
-            Lorem magna nisi eiusmod reprehenderit ad ullamco occaecat id
-            voluptate sit mollit quis cupidatat culpa occaecat officia elit
-            incididunt commodo et mollit nulla deserunt minim dolor veniam
-            officia non irure sunt voluptate pariatur in enim dolor ex
+            Our transparent approach means no surprises. We present all costs clearly, explain pricing decisions, and seek your approval before any significant expenditures. If unexpected issues arise, we provide options and recommendations to keep your project on track financially while maintaining the design integrity you expect.
           </Paragraph>
           <Quote>
-            Minim nisi commodo sit dolore ex sint ut aute ea adipiscing
-            consectetur anim anim cupidatat velit nulla culpa esse esse ex id
-            reprehenderit enim et culpa et lorem velit officia sit dolor ad quis
-            ex enim do deserunt adipiscing cillum ipsum id do id proident est et
-            eiusmod laboris velit dolor
+            Financial transparency and careful budget management ensure your investment delivers maximum value and lasting beauty
           </Quote>
         </Column>
       </Columns>
