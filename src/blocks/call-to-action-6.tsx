@@ -16,25 +16,23 @@ export default function CallToAction6() {
         styleAs="h2"
         textAlign="text-center"
       >
-        Fugiat laboris est
+        Ready to Optimize Your Space?
       </Heading>
       <Paragraph
         variant="large"
         textAlign="text-center"
       >
-        Ut dolor duis anim nostrud tempor consequat consequat aliquip est
-        reprehenderit officia occaecat occaecat enim voluptate adipiscing ad
-        excepteur occaecat dolor excepteur consectetur
+        Let us help you create a layout that works beautifully for your lifestyle. Our expert space planning services ensure every square foot is maximized for function, flow, and style. Contact us today to get started.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button
           size="medium"
-          href="/sit"
+          href="/contact"
           variant="primary"
           icon={arrowRightIcon}
           iconPlacement="after"
         >
-          Voluptate enim
+          Schedule Consultation
         </Button>
       </Buttons>
     </Cover>
