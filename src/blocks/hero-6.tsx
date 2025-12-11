@@ -24,13 +24,13 @@ export default function Hero6() {
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
                 src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-                alt="Laborum id dolor deserunt sint culpa cillum eiusmod proident ut"
+                alt="Beautifully designed interior showcasing expert color coordination and palette selection"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
-                qui est
+                Perfect Palette
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -38,34 +38,13 @@ export default function Hero6() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Tempor elit labore ad
+                Transform Your Space with Expert Color Consultation
               </Heading>
               <Quote>
-                Nulla sunt laboris nisi eiusmod aliqua reprehenderit id anim
-                ullamco enim id ea commodo
+                The right colors don't just beautify a space – they transform how you feel in it every single day
               </Quote>
               <Paragraph>
-                Sed sint laboris officia lorem ipsum proident reprehenderit
-                nostrud dolore proident sunt labore culpa sint est deserunt
-                eiusmod est id commodo adipiscing excepteur sunt elit irure enim
-                nostrud incididunt ea ut esse aliquip amet non occaecat
-                consectetur pariatur nostrud ipsum minim proident ex sunt
-                adipiscing dolore deserunt minim enim elit voluptate commodo non
-                dolore
-              </Paragraph>
-              <Paragraph>
-                Et nisi ex labore exercitation et pariatur proident amet amet id
-                duis anim qui velit ut aliquip nulla magna sed amet deserunt
-                minim magna ex laboris qui nulla amet do dolor dolore enim
-                cillum veniam ea nulla id reprehenderit incididunt occaecat
-                ullamco enim consectetur do
-              </Paragraph>
-              <Paragraph>
-                Non ex ipsum voluptate officia minim do consequat enim
-                adipiscing id ea duis minim excepteur esse ad cupidatat enim
-                pariatur veniam qui dolore aliqua ex ea aliquip laborum anim
-                esse consequat esse proident commodo occaecat non laboris
-                exercitation commodo ut
+                Choosing the perfect color palette can be overwhelming with thousands of options available. Our professional color consultation services guide you through the process with confidence, ensuring every room reflects your personality while creating the ideal mood and atmosphere. We consider lighting, architecture, and your lifestyle to create cohesive schemes that work beautifully throughout your home.
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -74,7 +53,7 @@ export default function Hero6() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Elit irure tempor dolor sint in commodo
+                  Explore Our Services
                 </Button>
               </Buttons>
             </Column>
