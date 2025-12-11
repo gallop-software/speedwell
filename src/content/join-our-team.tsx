@@ -15,13 +15,25 @@ export default function Content() {
 }
 
 export const metadata = {
-  title: 'Ipsum aliqua enim nisi',
+  title: 'Join our Team | Interior Design Careers',
   description:
-    'Lorem excepteur occaecat mollit laboris qui sit pariatur deserunt est ea nisi sed sint cupidatat duis sunt dolor enim et duis qui velit excepteur mollit nulla ullamco ipsum cillum exercitation esse pariatur commodo',
+    'Explore career opportunities at Timmerman. We are looking for talented interior designers, project managers, and design professionals passionate about creating exceptional spaces. Join our award-winning team.',
+  slug: 'join-our-team',
   featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  focusKeyword: 'interior design careers',
+  readingTimeMinutes: 5,
+  publishDate: '2024-06-01T10:00:00Z',
+  lastModified: '2025-12-11T00:00:00Z',
+  alternates: {
+    canonical: 'https://speedwell.gallop.software/join-our-team',
+  },
   openGraph: {
-    title: 'Minim esse sed qui',
+    title: 'Join our Team | Interior Design Careers',
     description:
-      'Voluptate aute laboris dolore magna ipsum culpa dolore ad duis veniam mollit eiusmod ex nisi anim proident elit culpa voluptate et ad culpa culpa fugiat est adipiscing dolor quis dolore amet sunt cupidatat',
+      'Join our talented team of interior designers and specialists. Explore career opportunities at Timmerman where creativity meets expertise in residential and commercial design.',
+    image: {
+      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+      alt: 'Timmerman design team collaboration',
+    },
   },
 }
