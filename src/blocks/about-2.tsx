@@ -80,13 +80,13 @@ export default function About2() {
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
-          cite="Jennifer Rodriguez"
+          cite="Robert Rodriguez"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Jennifer Rodriguez
+            Robert Rodriguez
           </Heading>
           <Heading
             as="h4"
@@ -96,7 +96,7 @@ export default function About2() {
             Residential Design Lead
           </Heading>
           <Paragraph textAlign="text-center">
-            Jennifer brings warmth and personality to every home with her thoughtful approach to residential design
+            Robert brings warmth and personality to every home with his thoughtful approach to residential design
           </Paragraph>
           <IconText
             className="uppercase"
@@ -144,13 +144,13 @@ export default function About2() {
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
-          cite="Rachel Anderson"
+          cite="Ryan Anderson"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Rachel Anderson
+            Ryan Anderson
           </Heading>
           <Heading
             as="h4"
@@ -160,7 +160,7 @@ export default function About2() {
             Kitchen & Bath Designer
           </Heading>
           <Paragraph textAlign="text-center">
-            Rachel specializes in creating beautiful, functional kitchens and bathrooms that stand the test of time
+            Ryan specializes in creating beautiful, functional kitchens and bathrooms that stand the test of time
           </Paragraph>
           <IconText
             className="uppercase"
@@ -176,13 +176,13 @@ export default function About2() {
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
-          cite="Lisa Martinez"
+          cite="Lucas Martinez"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Lisa Martinez
+            Lucas Martinez
           </Heading>
           <Heading
             as="h4"
@@ -192,7 +192,7 @@ export default function About2() {
             Space Planning Expert
           </Heading>
           <Paragraph textAlign="text-center">
-            Lisa transforms challenging layouts into optimized, flowing spaces that maximize function and beauty
+            Lucas transforms challenging layouts into optimized, flowing spaces that maximize function and beauty
           </Paragraph>
           <IconText
             className="uppercase"

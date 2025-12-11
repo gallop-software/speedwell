@@ -15,27 +15,27 @@ export default function Content() {
 }
 
 export const metadata = {
-  title: 'Cillum veniam ullamco officia et proident ex ea',
+  title: 'Before & After Transformations | Interior Design Portfolio',
   description:
-    'Fugiat ex anim do laborum laborum pariatur enim commodo consequat enim ad sint mollit ut cillum minim non velit qui ullamco minim ea adipiscing dolore mollit id',
-  slug: 'quis-nostrud',
+    'Explore stunning before and after transformations by Timmerman. See how our expert interior designers transform residential and commercial spaces with creative vision and meticulous attention to detail.',
+  slug: 'before-after',
   featuredImage:
     '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
-  focusKeyword: 'fusce dapibus cursus',
-  readingTimeMinutes: 8,
-  publishDate: '2025-10-16T00:00:00Z',
-  lastModified: '2025-10-16T00:00:00Z',
+  focusKeyword: 'before after interior design',
+  readingTimeMinutes: 6,
+  publishDate: '2024-09-15T00:00:00Z',
+  lastModified: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/quis-nostrud',
+    canonical: 'https://speedwell.gallop.software/before-after',
   },
   openGraph: {
-    title: 'Adipiscing adipiscing sit do velit consequat nisi proident',
+    title: 'Before & After Transformations | Interior Design Success Stories',
     description:
-      'Consectetur amet ad cupidatat fugiat sed amet duis quis sint in ea enim cupidatat aliquip excepteur voluptate elit ipsum magna aliquip laboris cupidatat dolor amet id ad',
+      'Discover remarkable interior design transformations by Timmerman. Browse our before and after gallery showcasing residential and commercial projects that demonstrate our creative expertise.',
     image: {
       url: '/images/portfolio/jvdm/pexels-jvdm-1457844.jpg',
-      alt: 'Elit occaecat incididunt aliquip mollit veniam',
+      alt: 'Before and after interior design transformation',
     },
-    imageAlt: 'Fusce Dapibus Cursus apud Tellus Commodo',
+    imageAlt: 'Interior Design Before & After Transformations',
   },
 }
