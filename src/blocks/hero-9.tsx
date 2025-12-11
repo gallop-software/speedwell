@@ -23,13 +23,13 @@ export default function Hero9() {
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
                 src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
-                alt="Esse velit reprehenderit duis non nostrud cupidatat occaecat lorem"
+                alt="Stunning modern kitchen with custom cabinetry and contemporary design"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
-                ex enim
+                Luxury Spaces
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -37,16 +37,10 @@ export default function Hero9() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Nisi reprehenderit ea pariatur esse sed commodo
+                Elevate Your Kitchen & Bath to Extraordinary
               </Heading>
               <Paragraph>
-                Culpa lorem cupidatat ipsum minim adipiscing aute mollit aliquip
-                laborum dolor dolore non pariatur lorem officia occaecat labore
-                qui sint sed eiusmod pariatur ipsum aliqua reprehenderit cillum
-                nisi non do sit do in do est occaecat id incididunt anim ex
-                nulla amet officia ut minim elit ullamco ad dolor exercitation
-                tempor ut qui incididunt culpa culpa aliqua eiusmod fugiat do
-                sint do ex aliquip proident tempor minim
+                Your kitchen and bathroom are the heart of your home, where functionality meets daily luxury. Our expert design team specializes in creating stunning, personalized spaces that transform routine into ritual. From contemporary chef's kitchens to spa-inspired bathrooms, we blend innovative design, premium materials, and meticulous craftsmanship to deliver spaces that exceed expectations. Whether you're dreaming of a complete remodel or a sophisticated refresh, we bring your vision to life with style and precision.
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -54,7 +48,7 @@ export default function Hero9() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Ullamco duis non elit laboris occaecat
+                  Discover Our Design Process
                 </Button>
               </Buttons>
             </Column>
