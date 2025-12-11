@@ -3,7 +3,8 @@
 A client-side analytics hook that tracks user navigation paths, time spent on pages, and interaction events with support for session management and traffic source attribution.
 
 **Tier:** Pro  
-**Files:** `/src/hooks/flow-trace.tsx`, `/src/app/api/flow-trace/route.ts`
+**File:** `/src/hooks/flow-trace.tsx`  
+**File:** `/src/app/api/flow-trace/route.ts`
 
 ## Usage
 
