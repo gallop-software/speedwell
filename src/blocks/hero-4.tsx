@@ -29,7 +29,7 @@ export default function Hero4() {
                 color="text-white"
                 className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
               >
-                ad duis
+                transformed
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -37,23 +37,13 @@ export default function Hero4() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Ullamco veniam aliquip officia fugiat officia
+                Before & After Transformations
               </Heading>
               <Paragraph className="max-w-2xl">
-                Sunt eiusmod labore nostrud quis laborum enim nisi consectetur
-                esse nulla aliquip eiusmod proident cillum minim aliqua eiusmod
-                ullamco aute incididunt deserunt et ullamco eiusmod culpa qui
-                proident dolor dolor pariatur aute commodo quis incididunt nulla
-                aute dolore ad
+                Witness the power of thoughtful interior design through our portfolio of stunning transformations. Each project tells a story of spaces reimagined, potential realized, and dreams brought to life. From outdated rooms to modern masterpieces, see how Timmerman transforms ordinary spaces into extraordinary environments.
               </Paragraph>
               <Paragraph className="max-w-2xl">
-                In elit est do adipiscing nulla esse mollit aute veniam anim in
-                aliquip consectetur qui sunt laborum excepteur quis occaecat
-                quis eiusmod enim cillum anim commodo commodo officia enim
-                consequat minim excepteur sunt tempor do enim occaecat eiusmod
-                deserunt eiusmod aliquip deserunt proident quis est ut cupidatat
-                in commodo cillum officia est labore magna adipiscing magna
-                minim lorem adipiscing qui commodo irure est sint sit minim
+                Our before and after gallery showcases the dramatic impact that expert design can have on any space. Whether it's a complete home renovation, a commercial office redesign, or a single room makeover, these transformations demonstrate our commitment to excellence, creativity, and attention to detail. Every project begins with understanding your vision and ends with exceeding your expectations.
               </Paragraph>
             </Column>
           </Columns>
