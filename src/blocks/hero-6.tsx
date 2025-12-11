@@ -30,7 +30,7 @@ export default function Hero6() {
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
-                Perfect Palette
+                perfect palette
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
