@@ -25,18 +25,12 @@ export function HeroCanvasBackground({
     let animationFrameId: number
     let time = 0
 
-    // Earth tone color palette for geometric shapes
-    const colors = [
-      '#8B7355', // Warm brown
-      '#A0826D', // Tan
-      '#6B5D4F', // Dark taupe
-      '#C19A6B', // Camel
-      '#987554', // Wood brown
-      '#8C7853', // Khaki
-      '#B5A642', // Olive
-      '#7D6E5D', // Stone gray
-      '#96836E', // Mushroom
-      '#9C8F7F', // Greige
+    // Three complementary shades for the wave gradients
+    // Based on the beige/cream background, using warmer earth tones
+    const waveColors = [
+      { start: '#B8A490', end: '#A08876' }, // Medium warm taupe
+      { start: '#C8B5A0', end: '#B09D88' }, // Light warm beige
+      { start: '#A89580', end: '#907D68' }, // Darker warm brown
     ]
 
     const resize = () => {
@@ -48,237 +42,162 @@ export function HeroCanvasBackground({
     resize()
     window.addEventListener('resize', resize)
 
-    // Geometric shapes floating towards top left
-    interface GeometricShape {
-      x: number
-      y: number
-      size: number
-      baseSize: number
-      sizePhase: number
-      speedX: number
-      speedY: number
-      rotation: number
-      rotationSpeed: number
+    // Wave configuration - concentrated in top left area
+    interface Wave {
+      amplitude: number
+      frequency: number
+      speed: number
+      offset: number
+      gradientColors: { start: string; end: string }
       opacity: number
-      color: string
-      type: 'square' | 'circle' | 'triangle' | 'hexagon' | 'diamond'
     }
 
-    const shapes: GeometricShape[] = []
-    const shapeCount = 25
+    const waves: Wave[] = [
+      {
+        amplitude: 60,
+        frequency: 0.008,
+        speed: 0.0008,
+        offset: 0,
+        gradientColors: waveColors[0],
+        opacity: 0.4,
+      },
+      {
+        amplitude: 80,
+        frequency: 0.006,
+        speed: 0.001,
+        offset: Math.PI / 2,
+        gradientColors: waveColors[1],
+        opacity: 0.35,
+      },
+      {
+        amplitude: 100,
+        frequency: 0.007,
+        speed: 0.0009,
+        offset: Math.PI,
+        gradientColors: waveColors[2],
+        opacity: 0.45,
+      },
+    ]
 
-    const initShapes = () => {
-      const width = canvas.offsetWidth
-      const height = canvas.offsetHeight
-      const types: GeometricShape['type'][] = [
-        'square',
-        'circle',
-        'triangle',
-        'hexagon',
-        'diamond',
-      ]
-
-      for (let i = 0; i < shapeCount; i++) {
-        const baseSize = Math.random() * 40 + 20
-        shapes.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          size: baseSize,
-          baseSize: baseSize,
-          sizePhase: Math.random() * Math.PI * 2,
-          speedX: -(Math.random() * 0.2 + 0.1), // Slower left movement
-          speedY: -(Math.random() * 0.2 + 0.1), // Slower upward movement
-          rotation: Math.random() * Math.PI * 2,
-          rotationSpeed: (Math.random() - 0.5) * 0.01,
-          opacity: Math.random() * 0.4 + 0.2,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          type: types[Math.floor(Math.random() * types.length)],
-        })
-      }
-    }
-
-    initShapes()
-
-    // Draw architectural grid lines (like blueprint overlay)
-    const drawArchitecturalGrid = () => {
+    // Draw animated wave lines focused in top left corner
+    const drawWaves = () => {
       const width = canvas.offsetWidth
       const height = canvas.offsetHeight
 
-      ctx.strokeStyle = 'rgba(139, 115, 85, 0.4)'
-      ctx.lineWidth = 1.5
+      waves.forEach((wave, index) => {
+        ctx.save()
 
-      // Vertical lines with subtle animation - start from gridSpacing to avoid edge line
-      const gridSpacing = 60
-      for (let x = gridSpacing; x < width; x += gridSpacing) {
-        const offset = Math.sin(time * 0.0005 + x * 0.01) * 3
+        // Create gradient radiating from top left
+        const gradient = ctx.createRadialGradient(
+          0,
+          0,
+          0,
+          0,
+          0,
+          Math.max(width, height) * 0.6
+        )
+        gradient.addColorStop(0, wave.gradientColors.start)
+        gradient.addColorStop(0.6, wave.gradientColors.end)
+        gradient.addColorStop(1, wave.gradientColors.end + '00')
+
+        ctx.globalAlpha = wave.opacity
+
+        // Draw flowing wave originating from top left
         ctx.beginPath()
-        ctx.moveTo(x + offset, 0)
-        ctx.lineTo(x + offset, height)
-        ctx.stroke()
-      }
 
-      // Horizontal lines - start from gridSpacing to avoid edge line
-      for (let y = gridSpacing; y < height; y += gridSpacing) {
-        const offset = Math.cos(time * 0.0005 + y * 0.01) * 3
-        ctx.beginPath()
-        ctx.moveTo(0, y + offset)
-        ctx.lineTo(width, y + offset)
-        ctx.stroke()
-      }
-    }
+        // Start from top left corner
+        ctx.moveTo(0, 0)
 
-    // Draw elegant flowing curves (like architectural arches)
-    const drawFlowingArches = () => {
-      const width = canvas.offsetWidth
-      const height = canvas.offsetHeight
-
-      // Multiple arch layers
-      for (let layer = 0; layer < 3; layer++) {
-        ctx.beginPath()
-        const yOffset = height * 0.2 + layer * 80
-        const amplitude = 60 + layer * 20
-        const frequency = 0.003
-
-        for (let x = 0; x <= width; x += 5) {
+        // Wave flows along the top edge
+        for (let x = 0; x <= width * 0.5; x += 3) {
+          const progress = x / (width * 0.5)
           const y =
-            yOffset +
-            Math.sin(x * frequency + time * 0.0008 + layer * 0.5) * amplitude +
-            Math.sin(x * frequency * 2 - time * 0.0005) * (amplitude * 0.3)
+            Math.sin(x * wave.frequency + time * wave.speed + wave.offset) *
+              wave.amplitude *
+              (1 - progress * 0.5) +
+            Math.sin(x * wave.frequency * 1.5 - time * wave.speed * 0.6) *
+              (wave.amplitude * 0.4) *
+              (1 - progress * 0.5) +
+            index * 40
+
+          ctx.lineTo(x, Math.max(0, y))
+        }
+
+        // Wave flows down the left edge
+        for (let y = 0; y <= height * 0.5; y += 3) {
+          const progress = y / (height * 0.5)
+          const x =
+            Math.sin(
+              y * wave.frequency + time * wave.speed + wave.offset + Math.PI / 2
+            ) *
+              wave.amplitude *
+              (1 - progress * 0.5) +
+            Math.sin(y * wave.frequency * 1.5 - time * wave.speed * 0.6) *
+              (wave.amplitude * 0.4) *
+              (1 - progress * 0.5) +
+            index * 40
+
+          ctx.lineTo(Math.max(0, x), y)
+        }
+
+        // Close path back to origin
+        ctx.lineTo(0, height * 0.5)
+        ctx.lineTo(0, 0)
+        ctx.closePath()
+
+        ctx.fillStyle = gradient
+        ctx.fill()
+
+        // Draw stroke along top edge for definition
+        ctx.beginPath()
+        for (let x = 0; x <= width * 0.5; x += 3) {
+          const progress = x / (width * 0.5)
+          const y =
+            Math.sin(x * wave.frequency + time * wave.speed + wave.offset) *
+              wave.amplitude *
+              (1 - progress * 0.5) +
+            Math.sin(x * wave.frequency * 1.5 - time * wave.speed * 0.6) *
+              (wave.amplitude * 0.4) *
+              (1 - progress * 0.5) +
+            index * 40
 
           if (x === 0) {
-            ctx.moveTo(x, y)
+            ctx.moveTo(x, Math.max(0, y))
           } else {
-            ctx.lineTo(x, y)
+            ctx.lineTo(x, Math.max(0, y))
           }
         }
 
-        ctx.strokeStyle = colors[layer % colors.length] + '40'
+        ctx.strokeStyle = gradient
         ctx.lineWidth = 3
+        ctx.globalAlpha = wave.opacity * 0.7
         ctx.stroke()
 
-        // Add subtle fill below curve
-        ctx.lineTo(width, height)
-        ctx.lineTo(0, height)
-        ctx.closePath()
-        ctx.fillStyle = colors[(layer + 1) % colors.length] + '15'
-        ctx.fill()
-      }
-    }
-
-    // Draw Art Deco inspired geometric patterns
-    const drawGeometricPatterns = () => {
-      const width = canvas.offsetWidth
-      const height = canvas.offsetHeight
-      const centerX = width * 0.3
-      const centerY = height * 0.4
-
-      // Rotating geometric sunburst pattern
-      const rays = 12
-      for (let i = 0; i < rays; i++) {
-        const angle = (i / rays) * Math.PI * 2 + time * 0.0002
-        const length = 80 + Math.sin(time * 0.001 + i) * 20
-
+        // Draw stroke along left edge for definition
         ctx.beginPath()
-        ctx.moveTo(centerX, centerY)
-        ctx.lineTo(
-          centerX + Math.cos(angle) * length,
-          centerY + Math.sin(angle) * length
-        )
+        for (let y = 0; y <= height * 0.5; y += 3) {
+          const progress = y / (height * 0.5)
+          const x =
+            Math.sin(
+              y * wave.frequency + time * wave.speed + wave.offset + Math.PI / 2
+            ) *
+              wave.amplitude *
+              (1 - progress * 0.5) +
+            Math.sin(y * wave.frequency * 1.5 - time * wave.speed * 0.6) *
+              (wave.amplitude * 0.4) *
+              (1 - progress * 0.5) +
+            index * 40
 
-        ctx.strokeStyle = colors[i % colors.length] + '35'
-        ctx.lineWidth = 2
-        ctx.stroke()
-
-        // Add small circle at end
-        ctx.beginPath()
-        ctx.arc(
-          centerX + Math.cos(angle) * length,
-          centerY + Math.sin(angle) * length,
-          4,
-          0,
-          Math.PI * 2
-        )
-        ctx.fillStyle = colors[i % colors.length] + '50'
-        ctx.fill()
-      }
-
-      // Concentric circles (like chandelier view from below)
-      for (let ring = 1; ring <= 4; ring++) {
-        ctx.beginPath()
-        ctx.arc(centerX, centerY, ring * 25, 0, Math.PI * 2)
-        ctx.strokeStyle = colors[ring % colors.length] + '30'
-        ctx.lineWidth = 2
-        ctx.stroke()
-      }
-    }
-
-    // Draw and animate geometric shapes
-    const drawGeometricShapes = () => {
-      const width = canvas.offsetWidth
-      const height = canvas.offsetHeight
-
-      shapes.forEach((shape) => {
-        // Update position - moving towards top left
-        shape.x += shape.speedX
-        shape.y += shape.speedY
-
-        // Update size (breathing animation) - slower
-        shape.sizePhase += 0.008
-        shape.size =
-          shape.baseSize + Math.sin(shape.sizePhase) * (shape.baseSize * 0.3)
-
-        // Update rotation
-        shape.rotation += shape.rotationSpeed
-
-        // Wrap around edges - reappear from bottom right when going off top left
-        if (shape.x < -100) shape.x = width + 100
-        if (shape.y < -100) shape.y = height + 100
-
-        ctx.save()
-        ctx.translate(shape.x, shape.y)
-        ctx.rotate(shape.rotation)
-        ctx.globalAlpha = shape.opacity
-        ctx.fillStyle = shape.color
-        ctx.strokeStyle = shape.color
-        ctx.lineWidth = 2
-
-        // Draw different geometric shapes
-        ctx.beginPath()
-        switch (shape.type) {
-          case 'square':
-            ctx.rect(-shape.size / 2, -shape.size / 2, shape.size, shape.size)
-            break
-          case 'circle':
-            ctx.arc(0, 0, shape.size / 2, 0, Math.PI * 2)
-            break
-          case 'triangle':
-            ctx.moveTo(0, -shape.size / 2)
-            ctx.lineTo(shape.size / 2, shape.size / 2)
-            ctx.lineTo(-shape.size / 2, shape.size / 2)
-            ctx.closePath()
-            break
-          case 'hexagon':
-            for (let i = 0; i < 6; i++) {
-              const angle = (i / 6) * Math.PI * 2
-              const x = (Math.cos(angle) * shape.size) / 2
-              const y = (Math.sin(angle) * shape.size) / 2
-              if (i === 0) ctx.moveTo(x, y)
-              else ctx.lineTo(x, y)
-            }
-            ctx.closePath()
-            break
-          case 'diamond':
-            ctx.moveTo(0, -shape.size / 2)
-            ctx.lineTo(shape.size / 3, 0)
-            ctx.lineTo(0, shape.size / 2)
-            ctx.lineTo(-shape.size / 3, 0)
-            ctx.closePath()
-            break
+          if (y === 0) {
+            ctx.moveTo(Math.max(0, x), y)
+          } else {
+            ctx.lineTo(Math.max(0, x), y)
+          }
         }
 
-        // Draw with subtle fill and stroke
-        ctx.fill()
-        ctx.globalAlpha = shape.opacity * 0.6
+        ctx.strokeStyle = gradient
+        ctx.lineWidth = 3
+        ctx.globalAlpha = wave.opacity * 0.7
         ctx.stroke()
 
         ctx.restore()
@@ -301,11 +220,8 @@ export function HeroCanvasBackground({
       ctx.fillRect(0, 0, width, height)
       ctx.globalAlpha = 1
 
-      // Layer the elements
-      drawArchitecturalGrid()
-      drawFlowingArches()
-      drawGeometricPatterns()
-      drawGeometricShapes()
+      // Draw the animated waves
+      drawWaves()
 
       time += 1
       animationFrameId = requestAnimationFrame(animate)
