@@ -17,124 +17,59 @@ export default function About1() {
         <Testimonial2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
-          cite="Commodo in"
+          cite="Rachel Anderson"
         >
-          <Heading as="h3">Enim laboris</Heading>
+          <Heading as="h3">A Dream Home Come True</Heading>
           <Paragraph textAlign="text-left">
-            Minim ad duis exercitation ullamco consequat ullamco officia ex
-            pariatur ad culpa reprehenderit esse quis consequat anim labore est
-            fugiat anim veniam ad amet excepteur dolor aliqua lorem elit velit
-            excepteur velit nulla pariatur ad mollit non proident consequat ut
-            ullamco duis ex lorem duis sit ex sint laborum cupidatat consectetur
-            cillum ullamco culpa magna deserunt fugiat enim occaecat adipiscing
-            ut ullamco sint est eiusmod id enim aute est proident consequat
-            mollit magna cillum pariatur eiusmod enim voluptate veniam ut labore
-            nulla elit nulla duis esse velit adipiscing amet id magna dolor
-            consectetur ut tempor duis dolore non amet voluptate aliqua esse
-            dolore amet sunt esse aliquip velit id ea commodo amet elit
-            exercitation proident qui magna et excepteur tempor sunt id sit
-            consequat enim enim reprehenderit officia eiusmod laborum non fugiat
-            qui officia fugiat aliqua pariatur ipsum pariatur sed nulla dolor
-            consequat anim magna ullamco fugiat quis nostrud aliquip
-            exercitation occaecat reprehenderit duis ipsum nisi sunt fugiat
-            pariatur id adipiscing mollit deserunt adipiscing nisi ex ea id
-            exercitation minim magna exercitation duis voluptate nulla magna
-            nostrud deserunt commodo laboris culpa commodo et aliquip nostrud
-            velit dolor ex elit duis esse fugiat nulla magna consequat officia
-            incididunt aliquip est dolor consequat esse dolor occaecat
+            We hired Speedwell to redesign our entire home after years of living with outdated decor. From our initial meeting, their team understood exactly what we were looking for. They created a cohesive design that flows from room to room while giving each space its own unique character. The furniture they selected is both stylish and comfortable, perfect for our busy family. Their color choices brightened our home and made it feel so much more inviting. The project was completed on schedule, and they handled every detail with professionalism. Our home now feels like a true reflection of who we are, and we love spending time here. We have recommended Speedwell to all our friends and family.
           </Paragraph>
         </Testimonial2>
         <Testimonial2
           aspect="aspect-[5/5]"
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
-          cite="Cupidatat do"
+          cite="James Williams"
         >
-          <Heading as="h3">Adipiscing amet</Heading>
+          <Heading as="h3">Professional Excellence</Heading>
           <Paragraph textAlign="text-left">
-            Laboris nulla deserunt dolore velit eiusmod ullamco culpa est culpa
-            enim cupidatat fugiat velit incididunt pariatur cupidatat ullamco
-            veniam lorem consequat sint dolor esse enim anim culpa veniam nulla
-            magna occaecat tempor laborum sint nulla aute proident duis sed
-            cupidatat reprehenderit voluptate duis ullamco mollit eiusmod amet
-            aliqua quis sunt esse mollit anim id amet nulla enim ullamco laborum
-            lorem quis nulla duis aute reprehenderit adipiscing in excepteur
-            nostrud reprehenderit consectetur consequat tempor laborum ut enim
-            aliqua consectetur velit eiusmod proident quis consectetur labore
-            sint ut sint sint mollit
+            Our company needed to redesign our corporate headquarters to better reflect our brand and accommodate our growing team. Speedwell delivered beyond our expectations. They created a workspace that is modern, functional, and inspiring. The open floor plan encourages collaboration while private offices and meeting rooms provide quiet spaces when needed. Their understanding of commercial design requirements, including lighting, acoustics, and ergonomics, was impressive. The project stayed within budget and minimal disruption to our operations. Employee satisfaction has noticeably improved, and our clients consistently comment on how professional and welcoming our space feels.
           </Paragraph>
         </Testimonial2>
         <Testimonial2
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
-          cite="Ea sint"
+          cite="Lisa Martinez"
         >
-          <Heading as="h3">Aute sunt</Heading>
+          <Heading as="h3">Exceeded All Expectations</Heading>
           <Paragraph textAlign="text-left">
-            Amet fugiat dolor fugiat pariatur in est sunt cillum nulla ad
-            pariatur mollit reprehenderit elit enim sed lorem ea laboris laborum
-            in esse magna cillum adipiscing cillum consectetur sunt enim velit
-            cillum labore sunt incididunt consectetur exercitation nisi esse
-            laborum proident cillum eiusmod veniam aliquip tempor adipiscing qui
-            nisi quis nulla magna cillum ullamco velit nulla excepteur cupidatat
-            tempor elit fugiat quis amet deserunt exercitation aliqua nulla
-            ipsum anim ea qui nostrud incididunt in
+            I purchased a condo that needed a complete renovation and had no idea where to start. Speedwell guided me through every decision with patience and expertise. They helped me maximize the small space with smart storage solutions and furniture that serves multiple purposes. The color consultation opened my eyes to possibilities I never would have considered. The end result is a sophisticated, modern home that feels spacious despite the square footage. Everyone who visits asks for their contact information because the transformation is so dramatic and beautiful.
           </Paragraph>
         </Testimonial2>
         <Testimonial2
           aspect="aspect-[4/3]"
           img="/images/profiles/pexels-linkedin-2182970.jpg"
-          cite="Sint id"
+          cite="Robert Taylor"
         >
-          <Heading as="h3">Aliqua ut</Heading>
+          <Heading as="h3">Worth Every Penny</Heading>
           <Paragraph textAlign="text-left">
-            Labore nisi lorem fugiat nulla sint irure excepteur enim ut non
-            laborum tempor sunt sed labore proident sed incididunt qui quis
-            nulla ea quis est mollit qui eiusmod sint minim laborum aliqua velit
-            deserunt est elit excepteur eiusmod tempor ut labore mollit ea culpa
-            qui officia sunt labore laboris reprehenderit dolore lorem voluptate
-            aute minim nisi deserunt do nostrud non aliquip laboris qui
-            incididunt tempor excepteur anim elit ea minim elit nulla occaecat
-            aliqua occaecat dolor elit labore tempor et nulla nisi ipsum ipsum
-            tempor do nulla aliquip do tempor sit commodo ex adipiscing ea amet
-            proident
+            After living in our home for 15 years, we knew it was time for an update but wanted to preserve what we loved about it. Speedwell struck the perfect balance between modernization and respecting the original character. They refreshed our kitchen with new cabinetry and updated appliances while keeping the layout we loved. The living areas now have better flow and lighting. Their recommendations for artwork and accessories added the perfect finishing touches. The quality of their work and materials is outstanding. We now have a home that feels brand new while still feeling like ours.
           </Paragraph>
         </Testimonial2>
         <Testimonial2
           img="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
-          cite="Veniam veniam"
+          cite="Amanda Foster"
         >
-          <Heading as="h3">Quis amet</Heading>
+          <Heading as="h3">Stress-Free Experience</Heading>
           <Paragraph textAlign="text-left">
-            Sed cillum ad do do proident aute dolor sunt laborum id incididunt
-            est laboris irure qui adipiscing dolore qui adipiscing qui in esse
-            tempor consequat dolor qui reprehenderit duis deserunt et ullamco
-            est ad officia dolore sunt id minim aliqua cupidatat voluptate sed
-            lorem proident veniam aliquip qui exercitation minim nisi aute
-            eiusmod ut ad magna est voluptate ullamco et pariatur incididunt
-            cupidatat magna ipsum commodo lorem sed excepteur do cupidatat
-            officia cupidatat ipsum minim laborum eiusmod reprehenderit ad
-            excepteur excepteur duis consectetur aliquip exercitation ea dolor
-            mollit labore deserunt commodo velit laboris sed irure consectetur
-            culpa voluptate non nostrud tempor magna enim elit cillum ipsum
-            tempor enim nisi ea velit id
+            As a busy professional, I did not have time to manage a home renovation myself. Speedwell handled everything from design to installation with minimal involvement needed from me. They provided regular updates and photos, made thoughtful decisions on my behalf, and always checked in before any major choices. The level of trust I developed with their team made the process enjoyable rather than stressful. When I finally saw the completed project, I was blown away. They captured my style perfectly and created a home that feels like a sanctuary after long work days. I cannot recommend them highly enough.
           </Paragraph>
         </Testimonial2>
         <Testimonial2
           aspect="aspect-[5/5]"
           img="/images/profiles/pexels-maide-arslan-128712163-31750456.jpg"
-          cite="Veniam aliquip"
+          cite="Daniel Park"
         >
-          <Heading as="h3">Dolor ea</Heading>
+          <Heading as="h3">Exceptional Service and Design</Heading>
           <Paragraph textAlign="text-left">
-            Eiusmod proident est consequat incididunt enim nisi fugiat velit
-            mollit velit non sunt ut cillum amet non labore ut aute consectetur
-            eiusmod anim eiusmod et amet in ut occaecat nulla officia adipiscing
-            lorem sint minim irure nostrud consequat qui labore laborum dolore
-            nostrud qui anim ad veniam qui sint nostrud dolore excepteur fugiat
-            anim et consequat cillum duis exercitation irure nulla veniam id
-            occaecat lorem qui dolore ea nulla esse adipiscing ipsum sit
-            consectetur enim proident deserunt quis nulla minim nulla irure
-            ullamco consectetur veniam esse velit laborum irure veniam ut est
-            aliquip est commodo cupidatat eiusmod dolor
+            We worked with several designers before finding Speedwell, and the difference was night and day. They truly listened to what we wanted and needed, rather than pushing their own agenda. Their design proposals were creative yet practical, beautiful yet livable. The project management was outstanding with clear timelines, regular communication, and problem-solving when unexpected issues arose. The craftsmanship of the work they coordinated was top-notch. Our home is now the envy of our neighborhood, but more importantly, it works perfectly for how we actually live. This was money well spent, and we look forward to working with them again.
           </Paragraph>
         </Testimonial2>
       </Masonry>

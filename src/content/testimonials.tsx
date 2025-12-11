@@ -15,25 +15,25 @@ export default function Content() {
 }
 
 export const metadata = {
-  title: 'Laboris eiusmod dolore qui',
+  title: 'Client Testimonials | Interior Design Success Stories',
   description:
-    'Fugiat ex consectetur velit enim sunt fugiat cillum ut nisi officia nulla aliqua magna qui ullamco ipsum pariatur et sit laboris labore fugiat',
-  slug: 'incididunt',
-  featuredImage: '/images/portfolio/jvdm/pexels-jvdm-1454804.jpg',
-  focusKeyword: 'quisque velit testimonials',
-  readingTimeMinutes: 8,
-  publishDate: '2025-09-18T00:00:00Z',
-  lastModified: '2025-09-18T00:00:00Z',
+    'Read what our clients say about their interior design experience with Speedwell. Discover how we have transformed homes and businesses with personalized design solutions that exceed expectations.',
+  slug: 'testimonials',
+  featuredImage: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+  focusKeyword: 'interior design testimonials',
+  readingTimeMinutes: 6,
+  publishDate: '2024-08-01T10:00:00Z',
+  lastModified: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/incididunt',
+    canonical: 'https://speedwell.gallop.software/testimonials',
   },
   openGraph: {
-    title: 'Id consequat proident ut',
+    title: 'Client Testimonials | Interior Design Success Stories',
     description:
-      'Reprehenderit id cillum magna proident aute incididunt proident qui ipsum commodo pariatur do consectetur eiusmod veniam deserunt ad reprehenderit mollit id consectetur duis',
+      'Discover what our clients say about working with Speedwell. Real stories of transformed spaces and exceptional design experiences from satisfied homeowners and businesses.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-269252.jpg',
-      alt: 'Enim cillum cillum',
+      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+      alt: 'Happy clients in their beautifully designed interior space',
     },
   },
 }
