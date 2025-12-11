@@ -2,7 +2,8 @@
 
 Generate and maintain the blocks catalog with screenshots and metadata.
 
-**Tier:** Internal
+**Tier:** Internal  
+**File:** `/_scripts/generate-blocks-catalog.mjs`
 
 ---
 

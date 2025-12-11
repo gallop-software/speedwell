@@ -2,7 +2,8 @@
 
 A React hook that tracks scroll position and direction, updating global state for use across components.
 
-**Tier:** Free
+**Tier:** Free  
+**File:** `/src/hooks/use-offset-top.tsx`
 
 ## Usage
 

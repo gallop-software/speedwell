@@ -2,7 +2,8 @@
 
 Complete guide to Speedwell's intelligent image processing system.
 
-**Tier:** Free
+**Tier:** Free  
+**File:** `/_scripts/process-images.js`
 
 ---
 
