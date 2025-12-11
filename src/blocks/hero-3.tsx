@@ -29,10 +29,10 @@ export default function Hero3() {
                 lazy={false}
               />
               <Accent
-                className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12"
+                className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-10 lg:-right-40 transform text-left lg:text-right -rotate-12"
                 color="text-white"
               >
-                Dream Homes
+                dream homes
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
