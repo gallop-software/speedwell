@@ -21,7 +21,7 @@ export default function Application1() {
       >
         Submit Your Application
       </Heading>
-      <Form classname="Career Application">
+      <Form classname="max-w-3xl mx-auto">
         <FormInput
           name="emailSubject"
           defaultValue="Job Application"
