@@ -1,17 +1,25 @@
-import Cover1 from '@/blocks/cover-1'
-import Section16 from '@/blocks/section-16'
-import Section17 from '@/blocks/section-17'
-import About2 from '@/blocks/about-2'
+import Cover4 from '@/blocks/cover-4'
+import Section33 from '@/blocks/section-33'
+import Section34 from '@/blocks/section-34'
+import Profile1 from '@/blocks/profile-1'
+import Profile2 from '@/blocks/profile-2'
+import Profile3 from '@/blocks/profile-3'
+import Profile4 from '@/blocks/profile-4'
+import Profile5 from '@/blocks/profile-5'
 import { Navbar } from '@/components'
 
 export default function Content() {
   return (
     <>
       <Navbar />
-      <Cover1 />
-      <Section16 />
-      <Section17 />
-      <About2 />
+      <Cover4 />
+      <Section33 />
+      <Section34 />
+      <Profile1 />
+      <Profile2 />
+      <Profile3 />
+      <Profile4 />
+      <Profile5 />
     </>
   )
 }
