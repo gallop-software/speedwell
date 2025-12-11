@@ -13,9 +13,9 @@ export default function Section16() {
       <Columns reverseColumns>
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-amelia-hallsworth-5461644.jpg"
+            src="/images/portfolio/pexels-pixabay-276724.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tmp"
-            className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover"
+            className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover aspect-[16/9]"
             lazy={false}
           />
           <Image

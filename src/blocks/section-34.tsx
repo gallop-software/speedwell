@@ -13,9 +13,9 @@ export default function Section17() {
       <Columns>
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-lamiko-3754699.jpg"
+            src="/images/portfolio/pexels-pixabay-269218.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover aspect-[16/9]"
             size="large"
           />
           <Image
