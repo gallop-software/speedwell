@@ -109,7 +109,7 @@ export const links: NavLink[] = [
           icon: emailIcon,
         },
         {
-          name: 'Join Our Team',
+          name: 'Join our Team',
           description: 'Explore career opportunities with us',
           href: '/join-our-team',
           icon: handshakeIcon,

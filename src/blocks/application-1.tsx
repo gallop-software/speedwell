@@ -19,9 +19,9 @@ export default function Application1() {
         as="h2"
         className="text-center"
       >
-        Officia dolor
+        Submit Your Application
       </Heading>
-      <Form classname="Non aliqua">
+      <Form classname="Career Application">
         <FormInput
           name="emailSubject"
           defaultValue="Job Application"
@@ -52,65 +52,72 @@ export default function Application1() {
           label="Phone"
           required
         />
+        <FormInput
+          name="location"
+          placeholder="Current Location*"
+          label="Location"
+          required
+        />
         <FormRadioGroup
-          heading="Do you currently live in Lubbock? Planning on relocating to Lubbock?"
-          name="lubbockStatus"
+          heading="Are you authorized to work in the United States?"
+          name="workAuthorization"
           options={['Yes', 'No']}
-          label="Lubbock Status"
+          label="Work Authorization"
           required
         />
         <FormCheckboxGroup
           heading="Which position are you interested in?*"
           name="position"
-          options={['Midwife', 'Student Midwife', 'Receptionist']}
+          options={['Interior Designer', 'Project Manager', 'Design Intern', 'Other']}
           label="Position"
         />
         <FormTextArea
-          name="defineMidwifery"
-          placeholder="Please define what midwifery is"
-          label="Definition of Midwifery"
+          name="designPhilosophy"
+          placeholder="Describe your design philosophy and approach*"
+          label="Design Philosophy"
           rows={4}
+          required
         />
         <FormTextArea
           name="hearAboutUs"
-          placeholder="How did you hear about Speedwell?*"
+          placeholder="How did you hear about Timmerman?*"
           label="How Did You Hear About Us?"
           rows={3}
           required
         />
         <FormTextArea
           name="interestReason"
-          placeholder="Why are you interested in working with Speedwell?"
+          placeholder="Why are you interested in joining our team?*"
           rows={3}
           label="Reason for Interest"
+          required
         />
         <FormTextArea
-          name="birthExperience"
-          placeholder="Describe any previous birth work experience in detail:"
+          name="experienceDescription"
+          placeholder="Describe your relevant interior design experience in detail:"
           rows={4}
-          label="Previous Birth Experience"
+          label="Experience"
         />
         <FormUpload
           id="files"
           name="files"
-          label="Uploaded Files"
+          label="Upload Resume, Portfolio, and Cover Letter (PDF format preferred)"
           multiple
         />
         <Heading
           as="h3"
           margin="mb-0 mt-8"
         >
-          Et ullamco in
+          Professional References
         </Heading>
         <Paragraph margin="my-0">
-          Laboris minim laborum voluptate non voluptate in enim aliquip anim
-          deserunt
+          Please provide at least one professional reference
         </Paragraph>
         <Heading
           as="h4"
           margin="mb-0"
         >
-          Amet laboris quis
+          Reference 1
         </Heading>
         <FormName
           name1="ref1FirstName"
@@ -136,11 +143,17 @@ export default function Application1() {
           required
           label="Reference 1 Phone"
         />
+        <FormInput
+          name="ref1Relationship"
+          placeholder="Relationship (e.g., Former Supervisor)*"
+          required
+          label="Reference 1 Relationship"
+        />
         <Heading
           as="h4"
           margin="mb-0"
         >
-          Ex commodo mollit
+          Reference 2 (Optional)
         </Heading>
         <FormName
           name1="ref2FirstName"
@@ -162,35 +175,14 @@ export default function Application1() {
           placeholder="Phone"
           label="Reference 2 Phone"
         />
-        <Heading
-          as="h4"
-          margin="mb-0"
-        >
-          Veniam anim nisi
-        </Heading>
-        <FormName
-          name1="ref3FirstName"
-          name2="ref3LastName"
-          placeholder1="First name"
-          placeholder2="Last name"
-          label1="Reference 3 First Name"
-          label2="Reference 3 Last Name"
-        />
         <FormInput
-          name="ref3Email"
-          type="email"
-          placeholder="Email"
-          label="Reference 3 Email"
-        />
-        <FormInput
-          name="ref3Phone"
-          type="tel"
-          placeholder="Phone"
-          label="Reference 3 Phone"
+          name="ref2Relationship"
+          placeholder="Relationship"
+          label="Reference 2 Relationship"
         />
         <FormButton
           label="Submit Application"
-          submitMessage="Application submitted."
+          submitMessage="Thank you! Your application has been submitted successfully. We will review it and contact you soon."
         />
       </Form>
     </Section>

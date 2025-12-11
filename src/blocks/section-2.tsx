@@ -34,10 +34,10 @@ export default function Section2() {
         />
         <Card1
           id="5"
-          title="Meet Our Team"
+          title="Join our Team"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-          href="/meet-the-team"
-          alt="Meet our talented interior design team"
+          href="/join-our-team"
+          alt="Explore career opportunities with us"
         />
         <Card1
           id="6"

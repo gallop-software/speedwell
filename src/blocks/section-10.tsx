@@ -11,7 +11,7 @@ export default function Section10() {
         fontSize="text-[10rem] lg:text-[12rem]"
         overflowFix="p-4 -ml-4"
       >
-        culpa
+        careers
       </Accent>
       <div className="relative">
         <Heading
@@ -19,25 +19,16 @@ export default function Section10() {
           as="h1"
           className="max-w-2xl"
         >
-          Nostrud qui quis
+          Join Our Team
         </Heading>
         <Paragraph className="max-w-lg">
-          Mollit consequat et irure commodo do nostrud commodo nostrud enim
-          exercitation sunt in excepteur culpa et sunt quis laboris in amet
-          ullamco ex nulla cupidatat nulla officia dolore quis ipsum cupidatat
-          ea irure sunt magna sed ad esse sunt irure sint fugiat voluptate amet
-          consectetur deserunt excepteur eiusmod do consequat ea dolor laboris
-          consequat sint veniam veniam
+          At Timmerman, we believe that great design comes from talented people who are passionate about their craft. We are always looking for creative professionals who share our commitment to excellence, innovation, and creating spaces that truly transform how people live and work. Whether you are an experienced designer or just starting your career, we offer opportunities to grow, collaborate, and make a meaningful impact.
         </Paragraph>
         <Paragraph
           className="max-w-lg"
           margin="pb-0"
         >
-          Elit tempor sed adipiscing duis laborum sit velit duis laborum do
-          ullamco cupidatat eiusmod deserunt ad exercitation laborum id
-          exercitation magna voluptate adipiscing voluptate pariatur dolore
-          nostrud in anim minim eiusmod eiusmod ea sed exercitation labore enim
-          ex id officia ex labore incididunt quis
+          Our team culture values creativity, collaboration, and continuous learning. We provide competitive compensation, professional development opportunities, and the chance to work on diverse projects that challenge and inspire. If you are ready to join a team that pushes boundaries and celebrates design excellence, we would love to hear from you.
         </Paragraph>
       </div>
     </Section>
