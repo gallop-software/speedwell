@@ -2,7 +2,8 @@
 
 Complete guide to managing fonts in Speedwell.
 
-**Tier:** Free
+**Tier:** Free  
+**File:** `/_scripts/compress-fonts.js`
 
 ---
 
