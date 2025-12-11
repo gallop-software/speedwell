@@ -20,7 +20,7 @@ export default function Section8() {
         <Column>
           <Image
             src="/images/portfolio/pexels-jworks1124-342800.jpg"
-            alt="Cupidatat reprehenderit qui eiusmod id laboris excepteur"
+            alt="Contemporary residential space with thoughtful design details"
             className="object-cover"
             rounded="rounded-t-full"
             size="large"
@@ -31,24 +31,19 @@ export default function Section8() {
             as="h3"
             styleAs="h2"
           >
-            Do magna eiusmod quis laborum elit proident
+            From Concept to Completion: Our Seamless Process
           </Heading>
           <Paragraph>
-            Minim anim nostrud nostrud id ea quis in non proident cupidatat
-            consequat fugiat anim dolore lorem veniam magna proident aliquip et
-            laboris ex sit aliquip irure consequat duis aliqua quis esse enim
-            magna voluptate ipsum enim elit cupidatat adipiscing reprehenderit
-            consequat enim sunt fugiat sit irure in consectetur eiusmod proident
-            excepteur reprehenderit
+            We've refined our design process to make your experience as smooth and enjoyable as possible. Starting with an in-depth consultation, we move through concept development, detailed planning, and meticulous execution. Throughout the project, we maintain clear communication and provide regular updates, ensuring you're involved at every stage while we handle all the complex details. Our established relationships with trusted contractors and suppliers mean we can deliver exceptional results on time and within budget.
           </Paragraph>
           <Buttons>
             <Button
               variant="primary"
-              href="/adipiscing-elit-sed"
+              href="/contact"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Minim laboris adipiscing et aliqua veniam
+              Schedule Your Consultation
             </Button>
           </Buttons>
         </Column>
