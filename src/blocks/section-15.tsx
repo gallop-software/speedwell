@@ -16,28 +16,24 @@ export default function Section15() {
         <Column>
           <Image
             src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-            alt="Esse commodo enim nostrud"
+            alt="Contemporary living space with harmonious color scheme"
             className="w-full object-cover"
             size="large"
           />
         </Column>
         <Column>
-          <Heading as="h2">Consectetur ullamco do</Heading>
+          <Heading as="h2">Why Choose Professional Color Consultation?</Heading>
           <Paragraph>
-            Aliqua sit irure ad deserunt sit eiusmod nisi adipiscing
+            The benefits of working with expert color consultants:
           </Paragraph>
           <List>
-            <Li>Velit velit consequat mollit fugiat cillum elit</Li>
-            <Li>Duis lorem aliqua ullamco proident eiusmod veniam</Li>
+            <Li>Save time and money by avoiding costly color mistakes</Li>
+            <Li>Create cohesive flow and harmony throughout your home</Li>
             <Li>
-              Ipsum nostrud aliqua incididunt qui ullamco aliquip reprehenderit
+              Gain confidence in your color choices with professional guidance
             </Li>
-            <Li>Laboris esse ea minim ut ipsum aliqua</Li>
+            <Li>Access to industry expertise and insider color knowledge</Li>
           </List>
-          <Paragraph className="mt-6">
-            Excepteur enim velit consectetur fugiat dolore aliqua reprehenderit
-            deserunt sed consequat mollit veniam laborum nostrud ex
-          </Paragraph>
         </Column>
       </Columns>
     </Section>
