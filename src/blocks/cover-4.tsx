@@ -4,7 +4,7 @@ export default function Cover4() {
   return (
     <Cover
       imageSrc="/images/portfolio/pexels-pixabay-269218.jpg"
-      imageAlt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod te"
+      imageAlt="Timmerman interior design team workspace"
       overlayColor="bg-accent4/90"
       height="h-[400px] md:h-[500px] lg:h-[600px]"
     >
@@ -14,13 +14,13 @@ export default function Cover4() {
           color="text-accent"
           margin="0"
         >
-          Lorem Ipsum Do
+          Meet Our Team
         </Heading>
         <Accent
           size="medium"
           color="text-accent"
         >
-          Lorem ipsum dolor sit amet consectetur
+          passionate designers creating exceptional spaces
         </Accent>
       </div>
     </Cover>

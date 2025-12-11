@@ -19,7 +19,7 @@ export default function Profile2() {
         <Column className="relative">
           <Image
             src="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
-            alt="Lorem Ipsum Dolor - sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt"
+            alt="Emily Chen - Senior Commercial Designer"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -33,31 +33,22 @@ export default function Profile2() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Lorem Ipsum Dolor Sit Amet Consectetur Elit
+            Senior Commercial Designer
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Lorem Ipsum Dolor
+            Emily Chen
           </Heading>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua quis nostrud ex
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo duis ex
-            aute irure dolor in reprehenderit voluptate. Velit esse cillum duis
-            aute irure dolor in reprehenderit.
+            Emily specializes in creating innovative commercial spaces that balance brand identity with employee wellbeing. With a background in corporate design and workplace strategy, she has transformed offices, retail spaces, and hospitality venues for clients ranging from tech startups to established corporations. Her designs are known for maximizing natural light, promoting collaboration, and incorporating sustainable materials.
           </Paragraph>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua quis nostrud ex
-            exercitation ullamco laboris nisi ut aliquip. Commodo consequat ex
-            ea duis aute irure dolor in reprehenderit voluptate esse culpa duis
-            aute irure dolor in reprehenderit.
+            A graduate of Parsons School of Design, Emily brings a strategic mindset to every project. She stays current with workplace trends and ergonomic research to create environments that boost productivity and employee satisfaction. Her portfolio includes award-winning office designs that have been featured in Architectural Digest and Interior Design Magazine.
           </Paragraph>
           <Quote>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore magna.
+            The best commercial spaces inspire people to do their best work while reflecting the unique culture and values of the organization.
           </Quote>
         </Column>
       </Columns>
