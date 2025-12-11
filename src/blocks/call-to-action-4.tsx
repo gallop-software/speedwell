@@ -16,25 +16,23 @@ export default function CallToAction4() {
         styleAs="h2"
         textAlign="text-center"
       >
-        Quis commodo sed tempor
+        Ready to Furnish Your Dream Space?
       </Heading>
       <Paragraph
         variant="large"
         textAlign="text-center"
       >
-        Quis consequat officia nisi ex sint laborum fugiat veniam eiusmod
-        nostrud aute nostrud ex eiusmod nulla aliquip officia veniam
-        exercitation incididunt est consequat pariatur id sed dolor dolor dolor
+        Let our experts curate the perfect furniture selections for your home or business. We'll handle every detail to create a beautifully furnished space that reflects your style and enhances your lifestyle. Contact us today to get started.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button
           size="medium"
-          href="/sit"
+          href="/contact"
           variant="primary"
           icon={arrowRightIcon}
           iconPlacement="after"
         >
-          Exercitation elit
+          Schedule Consultation
         </Button>
       </Buttons>
     </Cover>
