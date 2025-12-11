@@ -16,7 +16,7 @@ export default function Testimonial3() {
     >
       <FancyHeading
         id="learn-more"
-        text="Transforming Spaces, Transforming Lives"
+        text="Real Stories from Real Clients"
         accent="trusted partners"
       />
       <Swiper>
