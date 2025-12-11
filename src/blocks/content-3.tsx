@@ -11,34 +11,13 @@ export default function Content3() {
         id="services"
         className="text-center"
       >
-        Et sunt quis voluptate cupidatat ipsum
+        Personalized Furniture Curation for Every Style
       </Heading>
       <Paragraph>
-        Nisi aliqua tempor duis ad sunt enim laboris duis nostrud occaecat elit
-        cillum fugiat ipsum adipiscing ullamco excepteur ullamco aute ut sit
-        magna amet adipiscing eiusmod labore laborum labore adipiscing dolor qui
-        qui reprehenderit incididunt voluptate ullamco quis elit minim aliqua
-        pariatur veniam fugiat velit reprehenderit lorem irure voluptate
+        Finding furniture that perfectly balances aesthetics, comfort, quality, and value requires expertise and access to the right resources. Our furniture selection services provide both. We work with premium manufacturers, artisan craftspeople, and trusted suppliers to source pieces that meet our exacting standards. Whether you're drawn to contemporary minimalism, classic elegance, rustic charm, or eclectic sophistication, we curate furnishings that align with your vision while ensuring each piece functions beautifully within your space.
       </Paragraph>
       <Paragraph>
-        Duis non sit nostrud laboris tempor veniam anim ipsum minim irure aliqua
-        ex ea adipiscing sed amet ullamco eiusmod aute mollit velit quis irure
-        esse nostrud id minim fugiat velit laborum cillum do minim dolore et et
-        qui id qui et irure ea veniam nostrud ullamco aute magna
-      </Paragraph>
-
-      <Heading as="h3">Cupidatat ea esse nisi</Heading>
-      <Paragraph>
-        Dolor do qui proident cupidatat consectetur ex cillum velit irure amet
-        do reprehenderit aliquip in duis ad dolor reprehenderit anim sed elit
-        cupidatat in consectetur deserunt ipsum deserunt nostrud sit ea
-        exercitation lorem velit ea velit dolor proident
-      </Paragraph>
-      <Paragraph>
-        Ea id excepteur non et exercitation duis consequat ipsum commodo amet
-        adipiscing ea ullamco non aute qui pariatur voluptate dolore irure
-        aliquip commodo sunt ad amet minim sit veniam culpa consequat elit sint
-        ipsum excepteur id incididunt tempor eiusmod ut
+        Our process begins with understanding your lifestyle, preferences, and practical needs. We consider room dimensions, traffic patterns, existing architecture, and how you'll use each space. This comprehensive approach ensures we select furniture with proper scale and proportion while maximizing comfort and functionality. We handle all the details—from sourcing and specification to ordering and delivery coordination—making the furnishing process seamless and enjoyable.
       </Paragraph>
     </Section>
   )

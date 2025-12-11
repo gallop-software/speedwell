@@ -23,13 +23,13 @@ export default function Hero8() {
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
                 src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-                alt="Irure veniam et esse ex lorem reprehenderit elit dolor ad"
+                alt="Beautifully curated furniture selection for elegant interior design"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12">
-                ut esse
+                curated style
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -37,17 +37,10 @@ export default function Hero8() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Elit aute ex excepteur adipiscing enim commodo
+                Expertly Curated Furniture for Your Perfect Space
               </Heading>
               <Paragraph>
-                Nostrud est voluptate in proident mollit sed commodo sed do quis
-                quis anim anim cillum et magna do laboris qui fugiat laborum
-                esse excepteur laboris sed consectetur incididunt dolor cillum
-                ut officia mollit in mollit incididunt dolor eiusmod anim tempor
-                nostrud anim sunt id excepteur sunt do qui laborum voluptate
-                tempor et exercitation officia excepteur adipiscing eiusmod
-                incididunt do eiusmod consectetur mollit deserunt voluptate
-                deserunt laborum amet voluptate
+                Selecting the right furniture is essential to creating a space that's both beautiful and functional. Our expert furniture selection services take the guesswork out of furnishing your home or business. We curate pieces that perfectly suit your style, space, and budget while ensuring quality, comfort, and longevity. From statement sofas to elegant dining sets, every piece is carefully chosen to create a cohesive, stunning interior that reflects your unique vision.
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -55,7 +48,7 @@ export default function Hero8() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Tempor consequat consequat consectetur deserunt cillum
+                  Explore Our Process
                 </Button>
               </Buttons>
             </Column>
