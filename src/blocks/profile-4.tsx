@@ -19,7 +19,7 @@ export default function Profile4() {
         <Column>
           <Image
             src="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
-            alt="Lorem - ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
+            alt="Christopher Thompson - Color and Materials Specialist"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -33,29 +33,22 @@ export default function Profile4() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Lorem Ipsum Dolor
+            Color & Materials Specialist
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Lorem Ipsum Dolor Sit
+            Christopher Thompson
           </Heading>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua quis nostrud ex.
-            Exercitation ullamco laboris nisi ut aliquip ex ea commodo duis ex
-            aute irure dolor in reprehenderit voluptate velit esse cillum duis
-            aute irure dolor in reprehenderit voluptate velit.
+            Christopher has an exceptional eye for color theory and material composition. His expertise in selecting the perfect palette and finishes elevates every project, creating cohesive designs that feel both harmonious and dynamic. With a background in fine arts and interior design, Christopher brings a unique perspective to color consultation, helping clients move beyond safe choices to discover palettes that truly resonate.
           </Paragraph>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua quis nostrud ex
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo duis.
+            He stays at the forefront of material innovation, constantly researching new textiles, finishes, and sustainable options. His knowledge of how materials interact with light and space ensures that every selection not only looks beautiful but performs well over time.
           </Paragraph>
           <Quote>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua quis nostrud ut.
+            Color has the power to transform not just a space, but how you feel when you are in it. The right palette can energize, calm, or inspire depending on what you need.
           </Quote>
         </Column>
       </Columns>

@@ -21,7 +21,7 @@ export default function Profile1() {
         <Column>
           <Image
             src="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
-            alt="Lorem Ipsum Dolor - sit amet consectetur adipiscing elit sed do eiusmod"
+            alt="James Mitchell - Principal Designer and Founder"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -35,34 +35,22 @@ export default function Profile1() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Lorem Ipsum Dolor Sit Amet Elit
+            Principal Designer & Founder
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Lorem Ipsum Dolor
+            James Mitchell
           </Heading>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore magna aliqua quis nostrud exercitation.
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            fugiat nulla pariatur excepteur sint occaecat cupidatat. Non duis
-            aute irure dolor in reprehenderit in voluptate velit esse culpa qui
-            officia deserunt mollit anim id est laborum.
+            With over 15 years of experience in residential and commercial design, James founded Timmerman with a vision to create spaces that are both beautiful and deeply personal. His philosophy centers on listening first, understanding his clients' lifestyles, and translating their dreams into functional, stunning realities. James's work has been featured in numerous design publications, and he has earned a reputation for his attention to detail and collaborative approach.
           </Paragraph>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor ut labore et dolore magna aliqua ut enim ad minim veniam ex.
-            Quis nostrud exercitation ullamco laboris nisi ut aliquip commodo
-            consequat duis aute irure dolor in reprehenderit voluptate culpa
-            deserunt mollit anim.
+            James holds a degree in Interior Architecture from Rhode Island School of Design and is a certified member of ASID. When he is not designing, you can find him exploring antique markets, traveling for design inspiration, or mentoring young designers entering the field.
           </Paragraph>
           <Quote>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua ut enim ad minim
-            veniam quis nostrud exercitation!
+            Great design is not about following trends—it is about creating timeless spaces that truly enhance how people live and work every single day.
           </Quote>
         </Column>
       </Columns>

@@ -31,14 +31,10 @@ export default function Section16() {
             id="learn-more"
             as="h2"
           >
-            Lorem ipsum dolor sit amet
+            Passionate Designers, Exceptional Results
           </Heading>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
-            tempor incididunt ut labore et dolore magna aliqua quis nostrud ex
-            exercitation ullamco. Laboris nisi ut aliquip commodo consequat ex
-            ea duis aute irure dolor—in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat.
+            Our team brings together diverse talents, perspectives, and expertise to create interiors that truly transform how you live and work. Each member of Timmerman contributes unique skills and creative vision, united by a shared commitment to excellence and a passion for thoughtful design. We believe that great design comes from collaboration, listening, and understanding what makes each space and client unique.
           </Paragraph>
         </Column>
       </Columns>

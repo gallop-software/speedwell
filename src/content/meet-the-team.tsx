@@ -27,7 +27,7 @@ export default function Content() {
 export const metadata = {
   title: 'Meet Our Team | Interior Design Experts in Real Estate',
   description:
-    'Meet the talented interior designers and specialists at Speedwell. Learn about our experienced team dedicated to transforming residential and commercial spaces with creativity and expertise.',
+    'Meet the talented interior designers and specialists at Timmerman. Learn about our experienced team dedicated to transforming residential and commercial spaces with creativity and expertise.',
   slug: 'meet-the-team',
   featuredImage: '/images/portfolio/pexels-jworks1124-342800.jpg',
   focusKeyword: 'interior design team',
@@ -40,10 +40,10 @@ export const metadata = {
   openGraph: {
     title: 'Meet Our Team | Interior Design Experts',
     description:
-      'Meet our experienced interior designers and specialists at Speedwell. Discover the talented professionals who bring your design vision to life with creativity and expertise.',
+      'Meet our experienced interior designers and specialists at Timmerman. Discover the talented professionals who bring your design vision to life with creativity and expertise.',
     image: {
       url: '/images/portfolio/pexels-jworks1124-342800.jpg',
-      alt: 'Speedwell interior design team',
+      alt: 'Timmerman interior design team',
     },
   },
 }
