@@ -3,7 +3,7 @@
 A Next.js component that integrates Google Ads tracking and configuration into your application.
 
 **Tier:** Free  
-**File:** `/src/hooks/google-ads.tsx`
+**File:** `src/hooks/google-ads.tsx`
 
 ## Usage
 

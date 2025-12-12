@@ -3,7 +3,7 @@
 A client-side hook that enables smooth scrolling behavior for anchor links with an automatic offset adjustment.
 
 **Tier:** Free  
-**File:** `/src/hooks/smooth-scroll.tsx`
+**File:** `src/hooks/smooth-scroll.tsx`
 
 ## Usage
 

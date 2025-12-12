@@ -3,7 +3,7 @@
 A client-side hook that automatically communicates the document height to a parent window when the page is embedded in an iframe.
 
 **Tier:** Internal  
-**File:** `/src/hooks/use-iframe-height.tsx`
+**File:** `src/hooks/use-iframe-height.tsx`
 
 ## Usage
 

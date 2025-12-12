@@ -3,7 +3,7 @@
 Generate blog post metadata index for efficient querying.
 
 **Tier:** Free  
-**File:** `/_scripts/generate-blog-metadata.mjs`
+**File:** `_scripts/generate-blog-metadata.mjs`
 
 ---
 
