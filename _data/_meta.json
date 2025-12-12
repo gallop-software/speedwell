@@ -886,6 +886,28 @@
       "file": "/images/portfolio/pexels-frans-van-heerden-201846-633269.jpg"
     }
   },
+  "/images/portfolio/pexels-heyho-6794934.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/portfolio/pexels-heyho-6794934-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/portfolio/pexels-heyho-6794934-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 935,
+      "file": "/images/portfolio/pexels-heyho-6794934-1400x935.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1469,
+      "file": "/images/portfolio/pexels-heyho-6794934.jpg"
+    }
+  },
   "/images/portfolio/pexels-jworks1124-342800.jpg": {
     "small": {
       "width": 300,
