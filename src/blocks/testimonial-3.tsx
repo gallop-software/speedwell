@@ -22,7 +22,7 @@ export default function Testimonial3() {
       <Swiper>
         <Testimonial1
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
-          cite="Sarah Mitchell"
+          cite="James Mitchell"
         >
           <Quote>
             Working with Speedwell was an absolute dream. From our first consultation to the final reveal, their team listened to our vision and brought it to life beyond what we imagined. Our home now reflects our personality while being incredibly functional for our family. The attention to detail and quality of craftsmanship is evident in every corner. We could not be happier with the results and highly recommend them to anyone looking for exceptional interior design.
@@ -38,7 +38,7 @@ export default function Testimonial3() {
         </Testimonial1>
         <Testimonial1
           img="/images/profiles/pexels-skildring-12871464.jpg"
-          cite="Jennifer Rodriguez"
+          cite="Robert Rodriguez"
         >
           <Quote>
             I was hesitant about hiring a designer, but Speedwell made the entire process effortless. They took the time to understand my lifestyle and aesthetic preferences, then created a space that feels uniquely mine. The color palette is perfect, the furniture selections are both beautiful and comfortable, and every room flows seamlessly. What impressed me most was their ability to work within my budget while still achieving a high-end look. I receive compliments every time someone visits my home.
