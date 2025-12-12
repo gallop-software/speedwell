@@ -42,7 +42,7 @@ export default function Showcase1() {
         reverseColumns
         className="mt-30"
       >
-        <Column className="aspect-[8/7] relative">
+        <Column className="aspect-[29/28] relative">
           <Image
             src="/images/portfolio/pexels-pixabay-269252.jpg"
             alt="Nostrud ipsum magna"
