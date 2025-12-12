@@ -95,9 +95,9 @@ function WebMaster() {
       Web design by{' '}
       <a
         className="underline hover:text-contrast-light"
-        href="https://webplant.media"
+        href="https://gallop.software/"
       >
-        Web Plant Media
+        Gallop
       </a>
     </Paragraph>
   )
