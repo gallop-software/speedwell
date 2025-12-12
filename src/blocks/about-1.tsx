@@ -25,7 +25,7 @@ export default function About1() {
           </Paragraph>
         </Testimonial2>
         <Testimonial2
-          aspect="aspect-[5/5]"
+          aspect="aspect-[4/5]"
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
           cite="Casey Williams"
         >
@@ -36,9 +36,9 @@ export default function About1() {
         </Testimonial2>
         <Testimonial2
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
-          cite="Riley Martinez"
+          cite="Ryan Martinez"
         >
-          <Heading as="h3">Riley Martinez</Heading>
+          <Heading as="h3">Ryan Martinez</Heading>
           <Paragraph textAlign="text-left">
             I purchased a condo that needed a complete renovation and had no idea where to start. Speedwell guided me through every decision with patience and expertise. They helped me maximize the small space with smart storage solutions and furniture that serves multiple purposes. The color consultation opened my eyes to possibilities I never would have considered. The end result is a sophisticated, modern home that feels spacious despite the square footage. Everyone who visits asks for their contact information because the transformation is so dramatic and beautiful.
           </Paragraph>
@@ -53,11 +53,11 @@ export default function About1() {
           </Paragraph>
         </Testimonial2>
         <Testimonial2
-          aspect="aspect-[5/5]"
-          img="/images/profiles/pexels-maide-arslan-128712163-31750456.jpg"
-          cite="Morgan Park"
+          aspect="aspect-[4/5]"
+          img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
+          cite="Marcus Park"
         >
-          <Heading as="h3">Morgan Park</Heading>
+          <Heading as="h3">Marcus Park</Heading>
           <Paragraph textAlign="text-left">
             We worked with several designers before finding Speedwell, and the difference was night and day. They truly listened to what we wanted and needed, rather than pushing their own agenda. Their design proposals were creative yet practical, beautiful yet livable. The project management was outstanding with clear timelines, regular communication, and problem-solving when unexpected issues arose. The craftsmanship of the work they coordinated was top-notch. Our home is now the envy of our neighborhood, but more importantly, it works perfectly for how we actually live. This was money well spent, and we look forward to working with them again.
           </Paragraph>
