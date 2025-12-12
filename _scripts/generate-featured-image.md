@@ -3,7 +3,7 @@
 Generate social preview image by screenshotting the homepage.
 
 **Tier:** Free  
-**File:** `/_scripts/generate-featured-image.js`
+**File:** `_scripts/generate-featured-image.js`
 
 ---
 

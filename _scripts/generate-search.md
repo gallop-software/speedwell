@@ -3,8 +3,8 @@
 Build FlexSearch index for client-side site search.
 
 **Tier:** Free  
-**File:** `/_scripts/generate-search.sh`  
-**File:** `/_scripts/generate-search.mjs`
+**File:** `_scripts/generate-search.sh`  
+**File:** `_scripts/generate-search.mjs`
 
 ---
 

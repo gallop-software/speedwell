@@ -3,7 +3,7 @@
 Complete guide to managing fonts in Speedwell.
 
 **Tier:** Free  
-**File:** `/_scripts/compress-fonts.js`
+**File:** `_scripts/compress-fonts.js`
 
 ---
 

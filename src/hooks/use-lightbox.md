@@ -3,7 +3,7 @@
 A React hook that provides state management for a dynamically loaded lightbox component using `yet-another-react-lightbox`.
 
 **Tier:** Free  
-**File:** `/src/hooks/use-lightbox.tsx`
+**File:** `src/hooks/use-lightbox.tsx`
 
 ## Usage
 

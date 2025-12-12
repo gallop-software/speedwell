@@ -1,7 +1,7 @@
 # Convert Pro Blocks Script
 
 **Tier:** Internal  
-**File:** `/_scripts/convert-pro-blocks.mjs`
+**File:** `_scripts/convert-pro-blocks.mjs`
 
 ## Overview
 

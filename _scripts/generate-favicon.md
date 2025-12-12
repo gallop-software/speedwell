@@ -3,7 +3,7 @@
 Generate favicon variants from a single source image.
 
 **Tier:** Free  
-**File:** `/_scripts/generate-favicon.js`
+**File:** `_scripts/generate-favicon.js`
 
 ---
 

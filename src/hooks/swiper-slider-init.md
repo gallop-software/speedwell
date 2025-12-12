@@ -3,7 +3,7 @@
 A client-side hook that initializes and manages Swiper slider instances with fade effects, autoplay, and intersection observer optimization.
 
 **Tier:** Free  
-**File:** `/src/hooks/swiper-slider-init.tsx`
+**File:** `src/hooks/swiper-slider-init.tsx`
 
 ## Usage
 
