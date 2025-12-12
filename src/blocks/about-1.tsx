@@ -25,7 +25,7 @@ export default function About1() {
           </Paragraph>
         </Testimonial2>
         <Testimonial2
-          aspect="aspect-[4/5]"
+          aspect="aspect-[1/1]"
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
           cite="Casey Williams"
         >
@@ -35,6 +35,7 @@ export default function About1() {
           </Paragraph>
         </Testimonial2>
         <Testimonial2
+          aspect="aspect-[1/1]"
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
           cite="Ryan Martinez"
         >
