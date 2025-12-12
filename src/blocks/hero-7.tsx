@@ -22,7 +22,7 @@ export default function Hero7() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+                src="/images/portfolio/pexels-heyho-6794934.jpg"
                 alt="Modern commercial interior design with sophisticated professional style"
                 size="large"
                 rounded="rounded-none"
