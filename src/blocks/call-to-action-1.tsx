@@ -25,7 +25,7 @@ export default function CallToAction1() {
         color="text-contrast"
         className="mb-6"
       >
-        Deserunt eiusmod reprehenderit est
+        Ready to Transform Your Space?
       </Heading>
       <Paragraph
         variant="large"
@@ -33,10 +33,7 @@ export default function CallToAction1() {
         color="text-contrast"
         className="mb-12"
       >
-        In ad aliqua ullamco duis nulla commodo reprehenderit occaecat ad aute
-        nulla et cupidatat aute fugiat ut adipiscing duis do lorem duis
-        cupidatat ipsum cupidatat deserunt ex ipsum non irure proident id sit
-        dolore sed
+        These transformations could be yours. Whether you're looking to renovate a single room or redesign your entire property, our team is ready to bring your vision to life. Contact us today to schedule a consultation and discover how we can transform your space into something extraordinary.
       </Paragraph>
       <Columns
         gap="gap-16 lg:gap-16"
@@ -50,24 +47,24 @@ export default function CallToAction1() {
             color="text-contrast"
             margin="mb-4"
           >
-            Irure magna
+            Schedule a Consultation
           </Heading>
           <Paragraph
             textAlign="text-center"
             color="text-contrast-light"
+            className="mb-6"
           >
-            Ut proident laborum elit cillum est proident anim dolor labore
-            tempor elit ipsum
+            Meet with our design team to discuss your project goals, budget, and timeline
           </Paragraph>
           <div className="flex justify-center">
             <Button
               size="medium"
               variant="outline"
-              href="/sed-do"
+              href="/contact"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Ipsum irure
+              Get Started
             </Button>
           </div>
         </Column>
@@ -79,24 +76,24 @@ export default function CallToAction1() {
             color="text-contrast"
             margin="mb-4"
           >
-            Enim consectetur
+            View Our Portfolio
           </Heading>
           <Paragraph
             textAlign="text-center"
             color="text-contrast-light"
+            className="mb-6"
           >
-            Commodo officia labore non velit eiusmod non amet labore ipsum
-            reprehenderit quis et excepteur aliqua incididunt elit nulla
+            Explore more completed projects and see the full range of our capabilities
           </Paragraph>
           <div className="flex justify-center">
             <Button
               size="medium"
               variant="outline"
-              href="/contact"
+              href="/portfolio"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Lorem labore
+              See More Work
             </Button>
           </div>
         </Column>
