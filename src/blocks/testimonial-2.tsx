@@ -10,7 +10,7 @@ export default function Testimonial2() {
   return (
     <Section className="bg-body2 py-20">
       <FancyHeading
-        text="Real Stories, Real Transformations"
+        text="Client Success Stories"
         accent="what our clients say"
       />
       <Swiper>
