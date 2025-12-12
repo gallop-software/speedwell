@@ -10,13 +10,13 @@ export default function Testimonial2() {
   return (
     <Section className="bg-body2 py-20">
       <FancyHeading
-        text="What Our Clients Say"
-        accent="Real Stories, Real Transformations"
+        text="Real Stories, Real Transformations"
+        accent="what our clients say"
       />
       <Swiper>
         <Testimonial1
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
-          cite="Sarah Mitchell, Homeowner"
+          cite="James Mitchell"
         >
           <Quote>
             Working with this team was an absolute dream. They transformed our
@@ -28,7 +28,7 @@ export default function Testimonial2() {
         </Testimonial1>
         <Testimonial1
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
-          cite="Michael Chen, Restaurant Owner"
+          cite="Michael Chen"
         >
           <Quote>
             Our restaurant needed a complete redesign to attract a younger
@@ -41,7 +41,7 @@ export default function Testimonial2() {
         </Testimonial1>
         <Testimonial1
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
-          cite="Jennifer & Tom Bradley, Homeowners"
+          cite="Jennifer Bradley"
         >
           <Quote>
             From our initial consultation to the final reveal, every step was
@@ -53,7 +53,7 @@ export default function Testimonial2() {
         </Testimonial1>
         <Testimonial1
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
-          cite="David Park, Condo Owner"
+          cite="David Park"
         >
           <Quote>
             As a first-time homeowner, I was overwhelmed by the possibilities.
