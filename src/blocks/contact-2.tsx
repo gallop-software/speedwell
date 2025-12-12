@@ -46,13 +46,13 @@ export default function Contact2() {
               iconColor="text-accent bg-accent3 group-hover:bg-accent3-dark"
             />
             <CardContact
-              href="https://www.google.com/search?q=webplantmedia+lubbock&sca_esv=fbaa7d3b9c35fdd6&sxsrf=AE3TifPIizRDUI9FeRONIBEaFbM4rTiR2A%3A1761044847022&ei=b2n3aK-WAbigwN4PjsDUqAo&oq=webpla&gs_lp=Egxnd3Mtd2l6LXNlcnAiBndlYnBsYSoCCAAyBBAjGCcyBBAjGCcyEBAAGIAEGLEDGEMYgwEYigUyBxAAGIAEGAoyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAAGIAEMgUQABiABEjVHVD1B1jxC3ADeAGQAQCYAW2gAbMEqgEDMy4zuAEByAEA-AEBmAIJoALcBMICBxAjGLADGCfCAgoQABiwAxjWBBhHwgILEAAYgAQYkQIYigXCAhEQLhiABBixAxjRAxiDARjHAcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMY0QMYxwHCAgoQIxiABBgnGIoFwgIKEAAYgAQYQxiKBcICERAuGIAEGJECGMcBGIoFGK8BwgIQEC4YgAQYQxjHARiKBRivAcICDRAAGIAEGLEDGEMYigXCAhEQABiABBiRAhixAxiDARiKBcICCxAAGIAEGLEDGIMBmAMAiAYBkAYJkgcDNi4zoAe3P7IHAzMuM7gHzgTCBwUwLjUuNMgHHg&sclient=gws-wiz-serp#mpd=~7629446733757655296/customers/reviews"
+              href="https://customerreviews.google.com/"
               heading="Google Reviews"
               text="See What Our Customers Are Saying"
               icon={starIcon}
             />
             <CardContact
-              href="https://maps.app.goo.gl/c8y1wdDrV9quTUSh7"
+              href="https://www.google.com/maps"
               heading="Get Directions"
               text="Visit Our Location"
               icon={mapPinIcon}
