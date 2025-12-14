@@ -41,7 +41,7 @@ export function HeroCanvasBackground({
 
       // First set: horizontal lines full width, covering top 50%, rotated 60 degrees, moved left 50%
       ctx.save()
-      ctx.translate(width * 0.2, height / 2) // Move rotation center left
+      ctx.translate(200, height / 2) // Move rotation center left (fixed pixels)
       ctx.rotate((60 * Math.PI) / 180)
       ctx.translate(-width / 2, -height / 2)
 
@@ -60,9 +60,9 @@ export function HeroCanvasBackground({
 
       ctx.restore()
 
-      // Second set: horizontal lines full height (0 to 100% on y axis), moved down and right 5%
+      // Second set: horizontal lines full height (0 to 100% on y axis), moved down and right
       ctx.save()
-      ctx.translate(width * 0.05, height * 0.05)
+      ctx.translate(30, height * 0.1)
 
       const lineCount2 = Math.ceil(height / spacing)
 
@@ -77,10 +77,10 @@ export function HeroCanvasBackground({
 
       ctx.restore()
 
-      // Third set: horizontal lines from 0 to 33% on y axis, rotated -76 degrees, moved back 40% and down 21%
+      // Third set: horizontal lines from 0 to 33% on y axis, rotated -60 degrees
       ctx.save()
       ctx.globalAlpha = 0.8
-      ctx.translate(width * 0.8, height * 0.54) // Move rotation center left and down
+      ctx.translate(650, height * 0.54) // Move rotation center (fixed pixels from left)
       ctx.rotate((-60 * Math.PI) / 180)
       ctx.translate(-width / 2, -height / 2)
 
