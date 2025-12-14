@@ -22,14 +22,14 @@ export default function Hero7() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
-                alt="Sint eiusmod nisi ut ex cillum ea elit lorem cillum"
+                src="/images/portfolio/pexels-heyho-6794934.jpg"
+                alt="Modern commercial interior design with sophisticated professional style"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
               />
               <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">
-                ea sint
+                business spaces
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -37,21 +37,13 @@ export default function Hero7() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Est culpa cillum mollit lorem
+                Strategic Commercial Design
               </Heading>
               <Paragraph>
-                Ea elit cillum in ut enim pariatur exercitation nulla proident
-                ut reprehenderit ex qui occaecat sint deserunt nisi magna
-                reprehenderit eiusmod ipsum in irure occaecat cillum aliqua
-                adipiscing magna eiusmod minim labore lorem esse exercitation ad
-                aliqua laborum reprehenderit qui enim laboris eiusmod do ea
-                occaecat ea excepteur magna qui
+                Your commercial space is more than just a workplace – it's a powerful expression of your brand, a driver of employee productivity, and a key factor in customer experience. Our expert commercial interior design services create inspiring environments that enhance your business operations, reflect your corporate identity, and leave lasting impressions on clients and employees alike.
               </Paragraph>
               <Paragraph>
-                Cillum proident quis qui sed laborum amet eiusmod ut sunt
-                exercitation lorem enim anim cillum sunt aliquip ullamco
-                excepteur quis non reprehenderit cillum anim fugiat veniam sunt
-                pariatur
+                From sleek corporate offices to inviting retail spaces and sophisticated hospitality venues, we design commercial interiors that balance aesthetics with functionality, creating spaces that work as hard as you do while elevating your brand presence.
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -59,7 +51,7 @@ export default function Hero7() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Voluptate deserunt velit ipsum minim
+                  Explore Commercial Services
                 </Button>
               </Buttons>
             </Column>

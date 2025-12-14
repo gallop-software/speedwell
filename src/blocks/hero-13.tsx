@@ -44,16 +44,14 @@ export default function Hero13() {
             </Column>
             <Column className="py-16 md:py-20">
               <Accent className="transform -rotate-12 lg:-ml-64 -top-14 relative">
-                nostrud irure
+                client stories
               </Accent>
-              <Heading as="h1">Ipsum sed cillum pariatur</Heading>
+              <Heading as="h1">What Our Clients Say</Heading>
               <Paragraph
                 className="max-w-lg"
                 color="text-contrast"
               >
-                Adipiscing veniam elit fugiat duis fugiat consequat sed occaecat
-                sit reprehenderit irure aliqua irure officia velit aliquip sit
-                dolore ea enim in cupidatat magna elit excepteur
+                Real experiences from homeowners and businesses who have trusted us to transform their spaces. Discover how our personalized approach and commitment to excellence creates interiors that exceed expectations.
               </Paragraph>
               <Buttons className="lg:-ml-40">
                 <Button
@@ -61,7 +59,7 @@ export default function Hero13() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Cillum veniam tempor
+                  Read testimonials
                 </Button>
               </Buttons>
             </Column>

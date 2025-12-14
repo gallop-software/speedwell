@@ -21,13 +21,13 @@ export default function Section7() {
         <Column className="aspect-[4/5] relative">
           <Image
             src="/images/portfolio/pexels-pixabay-161758.jpg"
-            alt="Quis labore et irure sint"
+            alt="Elegant dining room with sophisticated decor"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
             src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
-            alt="Labore non non et mollit aute"
+            alt="Stylish home office with functional design"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
             size="large"
@@ -38,42 +38,28 @@ export default function Section7() {
             as="h3"
             styleAs="h2"
           >
-            Eiusmod in
+            Sustainable & Smart Design Solutions
           </Heading>
           <Quote>
-            Sed dolore enim occaecat laboris nulla eiusmod mollit et est quis
-            lorem
+            Creating beautiful spaces that are as sustainable as they are stunning
           </Quote>
           <Paragraph>
-            Sint fugiat anim magna fugiat do excepteur in eiusmod pariatur qui
-            aute amet qui labore adipiscing velit minim veniam tempor incididunt
-            amet dolor aliqua occaecat nisi culpa nostrud sit officia veniam
-            ullamco ut occaecat dolore non quis elit exercitation officia labore
-            cillum aliqua duis do consectetur anim velit magna nisi cillum qui
-            excepteur sint ut qui enim est fugiat adipiscing aliquip
+            We're committed to designing homes that not only look beautiful but also contribute to a healthier planet. Our team carefully selects eco-friendly materials, energy-efficient lighting, and sustainable furnishings whenever possible. We believe that responsible design doesn't mean compromising on style or quality – in fact, many of the most beautiful materials available today are also the most sustainable.
           </Paragraph>
           <Paragraph>
-            Ea do lorem labore proident aliqua dolor labore et commodo velit non
-            officia aliqua id et ea dolor veniam nostrud qui duis incididunt
-            aute sunt ex duis occaecat quis amet sit ut dolor nisi fugiat
-            laborum qui proident ex tempor irure cillum deserunt consectetur sit
+            Smart home integration is another area where we excel. From automated lighting and climate control to integrated entertainment systems, we seamlessly incorporate technology that enhances your comfort and convenience. Our designs ensure that all technical elements are thoughtfully concealed, maintaining the aesthetic integrity of your space while providing modern functionality.
           </Paragraph>
           <Paragraph>
-            Voluptate cillum ut adipiscing sunt anim occaecat cillum tempor sed
-            mollit ullamco enim nulla ea consectetur sunt excepteur velit aute
-            incididunt voluptate nostrud exercitation nisi voluptate minim
-            aliquip dolore aute dolor mollit ut reprehenderit lorem incididunt
-            sit proident ut dolor nostrud dolore velit qui aute eiusmod nisi
-            amet minim labore amet minim
+            We also prioritize durability and timeless design principles that ensure your investment stands the test of time. By selecting high-quality materials and classic design elements with contemporary touches, we create interiors that remain relevant and beautiful for decades. Our approach focuses on creating spaces that grow with you, adapting to your changing needs while maintaining their fundamental appeal.
           </Paragraph>
           <Buttons>
             <Button
               variant="primary"
-              href="/laboris-nisi"
+              href="/portfolio"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Cillum ex laborum id nulla
+              View Our Portfolio
             </Button>
           </Buttons>
         </Column>

@@ -16,28 +16,23 @@ export default function CallToAction5() {
         styleAs="h2"
         textAlign="text-center"
       >
-        Magna incididunt laboris mollit quis et anim occaecat culpa cupidatat
-        excepteur
+        Ready to Create the Kitchen or Bathroom of Your Dreams?
       </Heading>
       <Paragraph
         variant="large"
         textAlign="text-center"
       >
-        Ad occaecat sunt nulla minim sunt culpa anim lorem mollit do anim ipsum
-        magna magna fugiat non sed exercitation deserunt magna ad labore velit
-        adipiscing sint ipsum veniam est ea aliqua magna non voluptate culpa
-        dolor labore incididunt fugiat lorem quis duis nostrud sint id ullamco
-        cillum est aliqua ea labore reprehenderit
+        Let's bring your vision to life. Our expert design team is ready to transform your kitchen and bathroom into stunning, functional spaces that enhance your daily life and add lasting value to your home. With years of experience, a commitment to quality craftsmanship, and a passion for exceptional design, we're your partner in creating spaces you'll love for years to come. Schedule your complimentary consultation today and take the first step toward your dream renovation.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button
           size="medium"
-          href="/sit"
+          href="/contact"
           variant="primary"
           icon={arrowRightIcon}
           iconPlacement="after"
         >
-          Veniam non
+          Schedule Consultation
         </Button>
       </Buttons>
     </Cover>

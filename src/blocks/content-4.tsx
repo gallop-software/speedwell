@@ -11,70 +11,40 @@ export default function Content4() {
         id="learn-more"
         className="text-center"
       >
-        Laboris et laborum velit officia
+        Comprehensive Kitchen & Bath Design Services
       </Heading>
       <Paragraph>
-        Do id lorem aliqua sint proident ad minim labore enim proident amet enim
-        ad laboris mollit est labore esse eiusmod fugiat laboris quis ea et
-        velit pariatur commodo aliquip ad consequat do adipiscing velit
-        adipiscing ut qui consectetur pariatur adipiscing fugiat et sed magna
-        ipsum consectetur lorem tempor id sunt nulla dolor magna pariatur cillum
-        incididunt adipiscing magna ipsum exercitation officia
+        At Speedwell, we understand that kitchens and bathrooms are more than just functional spaces – they're where memories are made, where you start and end your day, and where style meets substance. Our comprehensive design approach encompasses every detail, from initial space planning and layout optimization to the selection of premium fixtures, finishes, and custom cabinetry. We work with the finest craftspeople and suppliers to ensure every element is perfectly executed, creating spaces that are as beautiful as they are practical.
       </Paragraph>
-      <Heading as="h3">Aliqua commodo lorem consectetur aliquip</Heading>
+      <Heading as="h3">Custom Kitchen Design & Remodeling</Heading>
       <Paragraph>
-        Sed veniam esse ex labore irure reprehenderit ea nulla deserunt elit ea
-        incididunt duis sunt eiusmod sit veniam aliqua non excepteur velit
-        laboris ut amet nostrud adipiscing proident consequat sunt quis laboris
-        nulla in nisi voluptate nisi nostrud lorem nostrud dolor consequat ad
-        est sunt labore occaecat pariatur culpa labore culpa ut occaecat irure
-        adipiscing
+        Our kitchen designs are tailored to how you live, cook, and entertain. We create layouts that maximize efficiency and flow, incorporating professional-grade appliances, custom cabinetry, stunning countertops, and innovative storage solutions. Whether you prefer sleek modern minimalism, warm traditional elegance, or contemporary farmhouse charm, we design kitchens that reflect your personal style while enhancing functionality. From open-concept entertaining spaces to cozy family kitchens, we transform your culinary dreams into reality.
       </Paragraph>
-      <Heading as="h3">Ut ex magna nulla irure esse sed dolore</Heading>
+      <Heading as="h3">Luxury Bathroom Design & Spa Retreats</Heading>
       <Paragraph>
-        Ea ad pariatur ad ex quis amet in id mollit magna ipsum dolor adipiscing
-        consequat commodo reprehenderit aliquip cillum ea fugiat sunt cillum
-        consectetur culpa fugiat esse pariatur occaecat voluptate pariatur esse
-        occaecat amet est velit enim esse labore amet nisi occaecat aliqua
-        commodo mollit adipiscing voluptate reprehenderit
+        Transform your bathroom into a personal sanctuary with our luxury design services. We specialize in creating spa-like retreats that offer the perfect blend of relaxation and sophistication. Our designs feature premium materials, elegant fixtures, custom vanities, frameless glass showers, and luxurious soaking tubs. We pay special attention to lighting, ventilation, and storage to ensure your bathroom is not only beautiful but also highly functional. From powder rooms to master bath suites, we create spaces that elevate your daily routine.
       </Paragraph>
       <Heading
         as="h2"
         className="mt-30"
       >
-        Magna elit sunt
+        Frequently Asked Questions
       </Heading>
-      <Accordion headingText="Is water birth safe?">
+      <Accordion headingText="How long does a typical kitchen or bath remodel take?">
         <Paragraph>
-          Sit lorem et et anim dolore eiusmod veniam aliqua sint reprehenderit
-          ipsum magna laborum lorem do nostrud consequat consequat mollit
-          laboris dolore irure nulla minim ea et cillum dolor veniam in
-          incididunt ullamco sint amet cillum irure deserunt magna ea deserunt
-          pariatur ex
+          Timeline varies based on project scope, but most kitchen remodels take 8-12 weeks from demolition to completion, while bathroom renovations typically require 4-6 weeks. We provide a detailed timeline during the planning phase and keep you informed throughout the process. Our project management ensures minimal disruption to your daily life while maintaining the highest quality standards.
         </Paragraph>
       </Accordion>
-      <Accordion headingText="What are the advantages of water birth?">
+      <Accordion headingText="What should I consider when planning my remodel?">
         <Paragraph>
-          Tempor ullamco nulla est sunt exercitation nostrud commodo qui esse
-          labore est labore esse velit culpa quis laborum exercitation amet
-          officia consectetur occaecat laborum aliqua aliqua culpa do magna
-          consectetur enim duis ullamco velit cupidatat
+          Start by considering how you use the space and what's not working in your current layout. Think about your must-haves versus nice-to-haves, your style preferences, and your budget. We'll guide you through material selections, layout options, and design choices that align with your lifestyle and investment goals. Our team helps prioritize features to maximize value and functionality.
         </Paragraph>
       </Accordion>
-      <Accordion headingText="Who is a good candidate?">
+      <Accordion headingText="Do you handle permits and coordinate with contractors?">
         <Paragraph>
-          Sunt aliqua consequat non amet voluptate nostrud ut cillum culpa amet
-          elit consectetur do duis elit labore mollit non sed ea sint tempor
-          ullamco non aute sed adipiscing deserunt aute ad excepteur anim aute
-          nostrud excepteur esse aliquip cillum aute sint est excepteur cillum
+          Absolutely. We manage the entire process from design through completion, including obtaining necessary permits, coordinating with licensed contractors and tradespeople, and ensuring all work meets code requirements. Our established relationships with trusted professionals ensure seamless execution and quality craftsmanship. You'll have a single point of contact throughout your project for peace of mind.
         </Paragraph>
       </Accordion>
-      <Paragraph className="text-sm mt-10">
-        Veniam irure minim ipsum dolore nostrud irure minim velit nisi aute
-        officia quis proident ad minim amet nisi non aliquip aliqua aliquip
-        mollit magna magna pariatur sunt veniam ex adipiscing duis esse deserunt
-        ex duis id veniam
-      </Paragraph>
     </Section>
   )
 }

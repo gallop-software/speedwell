@@ -17,13 +17,13 @@ export default function Section9() {
         <Column className="aspect-[4/5] relative">
           <Image
             src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-            alt="Voluptate aute anim cupidatat cupidatat"
+            alt="Cozy living space with warm and inviting atmosphere"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
             src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
-            alt="Aliqua exercitation sint eiusmod"
+            alt="Modern bathroom with spa-like features"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
             size="large"
@@ -34,26 +34,16 @@ export default function Section9() {
             as="h3"
             styleAs="h2"
           >
-            Laboris id nisi cupidatat occaecat officia ad elit
+            Award-Winning Design Excellence
           </Heading>
           <Paragraph>
-            Incididunt sint commodo quis officia non do laboris pariatur sint
-            enim duis nisi quis aliqua occaecat incididunt reprehenderit
-            excepteur reprehenderit amet officia excepteur magna minim lorem
-            labore ullamco ullamco duis
+            Our commitment to excellence has earned us recognition from leading industry organizations and the trust of discerning homeowners. With over a decade of experience transforming residential spaces, we've built a reputation for delivering designs that exceed expectations while respecting timelines and budgets.
           </Paragraph>
           <Paragraph>
-            Lorem officia lorem lorem mollit officia tempor duis do cupidatat
-            sit id occaecat eiusmod sed irure lorem sit aliqua occaecat minim
-            elit ut nostrud est aliqua ea mollit anim nostrud proident labore
-            enim magna sunt ullamco fugiat proident minim est officia sit minim
-            nisi ad et sunt nostrud esse fugiat ad ipsum aliquip occaecat
-            reprehenderit ullamco nisi mollit adipiscing consequat adipiscing
+            What sets Speedwell apart is our holistic approach to residential design. We don't just focus on aesthetics – we consider how you live, work, and relax in your space. Our designs enhance natural light, improve flow between rooms, and create harmonious environments that promote well-being. We collaborate with skilled craftspeople and artisans to ensure every element, from custom cabinetry to lighting fixtures, is executed to perfection.
           </Paragraph>
           <Paragraph>
-            Veniam labore tempor ea ut quis ullamco culpa laborum est et duis
-            ullamco nulla dolor sint nostrud sed ullamco voluptate ut ut minim
-            ad ipsum
+            Ready to transform your home? Contact us today to schedule a consultation and discover how we can bring your vision to life with our comprehensive residential interior design services.
           </Paragraph>
         </Column>
       </Columns>

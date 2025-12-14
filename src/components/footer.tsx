@@ -6,6 +6,7 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import instagramIcon from '@iconify/icons-mdi/instagram'
 import phoneIcon from '@iconify/icons-mdi/phone'
 import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
+import heartIcon from '@iconify/icons-heroicons/heart-solid'
 import { Icon } from './icon'
 import { Paragraph } from './paragraph'
 import { Heading } from './heading'
@@ -91,13 +92,14 @@ function WebMaster() {
     <Paragraph
       fontSize="text-sm"
       margin="mb-0"
+      className="flex items-center justify-center gap-1"
     >
-      Web design by{' '}
+      Built with <Icon icon={heartIcon} className="text-red-500" /> by the team at{' '}
       <a
         className="underline hover:text-contrast-light"
-        href="https://webplant.media"
+        href="https://gallop.software/"
       >
-        Web Plant Media
+        Gallop
       </a>
     </Paragraph>
   )

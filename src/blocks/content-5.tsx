@@ -11,29 +11,16 @@ export default function Content5() {
         id="services"
         className="text-center"
       >
-        Magna fugiat laboris ullamco
+        Transform Your Space with Expert Planning
       </Heading>
       <Paragraph>
-        Incididunt mollit non veniam ipsum labore dolore ea dolor cillum officia
-        sit ex cupidatat et aliqua veniam excepteur labore nulla nisi magna
-        culpa laboris ad reprehenderit velit enim nisi et adipiscing occaecat
-        sunt dolor exercitation dolore ad eiusmod nostrud est reprehenderit
-        nostrud aliquip duis fugiat velit et aliqua laborum sunt qui nulla
-        consectetur
+        Effective space planning is both an art and a science. Our designers combine technical expertise with creative problem-solving to develop layouts that maximize functionality while maintaining visual harmony. We consider architectural features, furniture scale, circulation patterns, and lifestyle needs to create spaces that work seamlessly for how you actually live. From determining the optimal furniture arrangement to reimagining entire floor plans, we ensure every decision serves both form and function.
       </Paragraph>
       <Paragraph>
-        Anim ea aliquip qui irure magna exercitation fugiat irure velit nulla
-        enim lorem anim ad laborum eiusmod incididunt anim tempor elit culpa
-        deserunt tempor officia enim adipiscing amet anim esse ea occaecat
-        cupidatat ut nostrud proident proident culpa incididunt ea deserunt
-        laboris
+        Our comprehensive space planning process begins with understanding your needs, preferences, and daily routines. We measure and document your space, analyze its strengths and challenges, and explore multiple layout options. Using professional design software, we create detailed floor plans that show furniture placement, traffic flow, and spatial relationships. This allows you to visualize the final result before making any purchases or commitments, saving time, money, and potential frustration.
       </Paragraph>
       <Paragraph>
-        Deserunt fugiat irure sit qui qui tempor tempor quis consequat aute
-        irure amet proident aliquip ea nulla duis aliqua consectetur consequat
-        commodo sunt do nisi ex anim id labore cillum dolor nostrud cupidatat
-        sint dolore pariatur laborum non reprehenderit laboris nulla voluptate
-        velit duis aliqua pariatur id consequat lorem excepteur
+        Whether you're furnishing a new home, reorganizing existing spaces, or planning a renovation, our space planning services provide the strategic foundation for successful design. We help you avoid common pitfalls like furniture that's too large or too small, awkward traffic patterns, and wasted space. The result is a thoughtfully planned environment that feels spacious, functional, and perfectly suited to your lifestyle.
       </Paragraph>
     </Section>
   )

@@ -16,23 +16,23 @@ export default function About2() {
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
-          cite="Lorem Consectetur"
+          cite="Sarah Mitchell"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Proident fugiat
+            Sarah Mitchell
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Esse aliquip voluptate
+            Principal Designer & Founder
           </Heading>
           <Paragraph textAlign="text-center">
-            Occaecat pariatur dolor dolore magna ut aliquip id aute id eiusmod
+            With over 15 years of experience, Sarah leads our design vision with creativity and strategic insight
           </Paragraph>
           <IconText
             className="uppercase"
@@ -41,30 +41,30 @@ export default function About2() {
             textAlign="text-center"
             icon={mapPinIcon}
           >
-            Tellus, Magna
+            New York, NY
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
-          cite="Ex irure"
+          cite="Michael Chen"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Esse et
+            Michael Chen
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Ullamco minim labore
+            Senior Commercial Designer
           </Heading>
           <Paragraph textAlign="text-center">
-            Ea ullamco minim irure veniam sit consequat eiusmod mollit
+            Specializing in office and retail spaces, Michael creates functional environments that inspire productivity
           </Paragraph>
           <IconText
             className="uppercase"
@@ -73,30 +73,30 @@ export default function About2() {
             textAlign="text-center"
             icon={mapPinIcon}
           >
-            Tellus, Magna
+            San Francisco, CA
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
-          cite="Mollit aliqua"
+          cite="Robert Rodriguez"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Sed cillum
+            Robert Rodriguez
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Sit amet irure
+            Residential Design Lead
           </Heading>
           <Paragraph textAlign="text-center">
-            Do aute eiusmod anim cupidatat aliqua consectetur amet
+            Robert brings warmth and personality to every home with his thoughtful approach to residential design
           </Paragraph>
           <IconText
             className="uppercase"
@@ -105,30 +105,30 @@ export default function About2() {
             textAlign="text-center"
             icon={mapPinIcon}
           >
-            Tellus, Magna
+            Austin, TX
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-skildring-12871464.jpg"
-          cite="Ad incididunt"
+          cite="David Thompson"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Labore nulla
+            David Thompson
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Duis elit
+            Color & Materials Specialist
           </Heading>
           <Paragraph textAlign="text-center">
-            Dolor id excepteur mollit occaecat in adipiscing sint
+            David has an exceptional eye for color theory and material selection, elevating every project
           </Paragraph>
           <IconText
             className="uppercase"
@@ -137,30 +137,30 @@ export default function About2() {
             textAlign="text-center"
             icon={mapPinIcon}
           >
-            Seminolus, Magna
+            Seattle, WA
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
-          cite="Lorem enim"
+          cite="Ryan Anderson"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Enim consequat
+            Ryan Anderson
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Incididunt amet amet aute
+            Kitchen & Bath Designer
           </Heading>
           <Paragraph textAlign="text-center">
-            Tempor qui quis quis commodo deserunt incididunt
+            Ryan specializes in creating beautiful, functional kitchens and bathrooms that stand the test of time
           </Paragraph>
           <IconText
             className="uppercase"
@@ -169,30 +169,30 @@ export default function About2() {
             textAlign="text-center"
             icon={mapPinIcon}
           >
-            Tellus, Magna
+            Boston, MA
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
-          cite="Quis quis"
+          cite="Lucas Martinez"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Sed et
+            Lucas Martinez
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Excepteur proident proident
+            Space Planning Expert
           </Heading>
           <Paragraph textAlign="text-center">
-            Sit sed dolor nisi do irure nulla mollit duis
+            Lucas transforms challenging layouts into optimized, flowing spaces that maximize function and beauty
           </Paragraph>
           <IconText
             className="uppercase"
@@ -201,30 +201,30 @@ export default function About2() {
             textAlign="text-center"
             icon={mapPinIcon}
           >
-            Tellus, Magna
+            Chicago, IL
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
-          cite="Aliquip consectetur"
+          cite="Amanda Foster"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Laborum exercitation
+            Amanda Foster
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Anim ex
+            Project Manager
           </Heading>
           <Paragraph textAlign="text-center">
-            Amet duis proident elit tempor ipsum cillum sint duis
+            Amanda ensures every project runs smoothly from concept to completion with expert coordination
           </Paragraph>
           <IconText
             className="uppercase"
@@ -233,30 +233,30 @@ export default function About2() {
             textAlign="text-center"
             icon={academicCapIcon}
           >
-            Educatio
+            PMP Certified
           </IconText>
         </Profile1>
 
         <Profile1
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
-          cite="Laborum sint"
+          cite="Robert Taylor"
         >
           <Heading
             as="h3"
             margin="mb-0"
           >
-            Quis ullamco
+            Robert Taylor
           </Heading>
           <Heading
             as="h4"
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Adipiscing consequat
+            Furniture & Styling Consultant
           </Heading>
           <Paragraph textAlign="text-center">
-            Cillum et esse voluptate consectetur culpa fugiat
+            Robert curates perfect furniture selections and styling details that complete every design vision
           </Paragraph>
           <IconText
             className="uppercase"
@@ -265,7 +265,7 @@ export default function About2() {
             textAlign="text-center"
             icon={academicCapIcon}
           >
-            Educatio
+            ASID Member
           </IconText>
         </Profile1>
       </Grid>

@@ -3,121 +3,88 @@ import { Section, Heading, Accordion, List, Li } from '@/components'
 export default function Accordion1() {
   return (
     <Section className="relative pb-30">
-      <Heading as="h2">Sunt amet ipsum in magna</Heading>
-      <Accordion headingText="Sed Ut Discipulus">
-        <Heading as="h4">Exercitation enim ex</Heading>
+      <Heading as="h2">Current Openings</Heading>
+      <Accordion headingText="Interior Designer">
+        <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
           <Li>
-            Pariatur pariatur ut esse qui non consectetur eiusmod anim tempor
-            sed fugiat
+            Develop creative design concepts for residential and commercial projects
           </Li>
           <Li>
-            Et sunt est aliqua cupidatat cillum voluptate excepteur nulla
-            consectetur
+            Create detailed space plans, elevations, and design presentations
           </Li>
-          <Li>Labore fugiat tempor sit dolor exercitation cillum commodo</Li>
+          <Li>Collaborate with clients to understand their vision and requirements</Li>
+          <Li>Select furniture, finishes, fabrics, and accessories</Li>
+          <Li>Coordinate with contractors, vendors, and craftspeople</Li>
+          <Li>Manage multiple projects from concept through installation</Li>
         </List>
-        <Heading as="h4">In aliquip</Heading>
+        <Heading as="h4">Qualifications</Heading>
         <List className="mb-8">
-          <Li>Exercitation lorem mollit irure ullamco</Li>
-          <Li>Quis non in</Li>
-          <Li>Voluptate ipsum sit occaecat consectetur ullamco consectetur</Li>
-          <Li>Incididunt proident</Li>
-          <Li>Qui aliquip dolor anim minim cupidatat officia</Li>
-          <Li>
-            Velit ullamco deserunt ut labore id aliqua mollit exercitation aute
-          </Li>
-          <Li>Sit esse id amet ullamco sit eiusmod sunt</Li>
-          <Li>Cillum non qui quis minim laboris nisi esse tempor ad</Li>
+          <Li>Degree in Interior Design or related field</Li>
+          <Li>3-5 years of professional experience</Li>
+          <Li>Proficiency in AutoCAD, SketchUp, and Adobe Creative Suite</Li>
+          <Li>Strong understanding of building codes and industry standards</Li>
+          <Li>Excellent communication and presentation skills</Li>
+          <Li>Portfolio demonstrating creative design solutions</Li>
         </List>
-        <Heading as="h4">Irure velit sit tempor</Heading>
+        <Heading as="h4">What We Offer</Heading>
         <List className="mb-8">
-          <Li>Mollit commodo excepteur laborum in</Li>
-          <Li>
-            Lorem sed aliqua laboris deserunt et non consectetur qui et sunt
-          </Li>
-          <Li>Irure ea velit quis nulla exercitation magna ipsum</Li>
-          <Li>
-            Et proident est tempor enim aute dolore mollit et adipiscing velit
-            irure proident anim
-          </Li>
+          <Li>Competitive salary based on experience</Li>
+          <Li>Health, dental, and vision insurance</Li>
+          <Li>Professional development and continuing education</Li>
+          <Li>Collaborative studio environment with talented team</Li>
         </List>
       </Accordion>
-      <Accordion headingText="Midwife">
-        <Heading as="h4">Non irure reprehenderit</Heading>
+      <Accordion headingText="Project Manager">
+        <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
-          <Li>Occaecat amet</Li>
-          <Li>Reprehenderit mollit est</Li>
-          <Li>Eiusmod qui</Li>
-          <Li>
-            Commodo in nostrud esse nostrud incididunt dolor sit consequat
-          </Li>
-          <Li>Nulla id reprehenderit quis</Li>
-          <Li>Minim magna cillum anim amet amet non nulla</Li>
-          <Li>Veniam sint ad officia ipsum duis sit</Li>
+          <Li>Oversee design projects from initial consultation to completion</Li>
+          <Li>Coordinate schedules, budgets, and timelines</Li>
+          <Li>Communicate with clients, contractors, and vendors</Li>
+          <Li>Ensure quality standards and project specifications are met</Li>
+          <Li>Problem-solve and address challenges proactively</Li>
+          <Li>Manage procurement and installation processes</Li>
         </List>
-        <Heading as="h4">Sint sunt</Heading>
+        <Heading as="h4">Qualifications</Heading>
         <List className="mb-8">
-          <Li>Magna veniam mollit</Li>
-          <Li>Tempor in</Li>
-          <Li>Tempor cupidatat</Li>
-          <Li>Non elit fugiat adipiscing consectetur sit non</Li>
+          <Li>Project management experience in design or construction</Li>
+          <Li>Strong organizational and multitasking abilities</Li>
+          <Li>Excellent communication and leadership skills</Li>
+          <Li>PMP certification preferred but not required</Li>
         </List>
-        <Heading as="h4">Id do</Heading>
+        <Heading as="h4">What We Offer</Heading>
         <List className="mb-8">
-          <Li>Officia ex et in exercitation</Li>
-          <Li>
-            Proident irure veniam exercitation dolore exercitation magna esse
-          </Li>
-          <Li>Proident voluptate ea ut fugiat</Li>
-          <Li>
-            Commodo minim do anim qui ea cupidatat aliqua enim id eiusmod non
-            dolor ullamco aliquip labore
-          </Li>
-          <Li>Deserunt sint irure irure duis laboris ut</Li>
+          <Li>Opportunity to manage diverse, high-profile projects</Li>
+          <Li>Competitive compensation package</Li>
+          <Li>Work with experienced design team</Li>
+          <Li>Professional growth opportunities</Li>
         </List>
       </Accordion>
-      <Accordion headingText="Receptionist">
-        <Heading as="h4">Enim tempor dolor</Heading>
+      <Accordion headingText="Design Intern">
+        <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
           <Li>
-            Fugiat tempor commodo proident esse non irure ad exercitation
-            nostrud aliquip est do velit magna ad nisi
+            Assist senior designers with project research and development
           </Li>
-          <Li>Ea irure</Li>
-          <Li>Proident dolor exercitation</Li>
-          <Li>Amet sunt</Li>
-          <Li>Adipiscing do sint culpa reprehenderit minim sint aliqua</Li>
+          <Li>Create mood boards, material boards, and design presentations</Li>
+          <Li>Support space planning and furniture selection</Li>
+          <Li>Participate in client meetings and site visits</Li>
+          <Li>Help maintain design library and resource materials</Li>
         </List>
-        <Heading as="h4">Anim anim</Heading>
+        <Heading as="h4">Qualifications</Heading>
         <List className="mb-8">
-          <Li>Dolor eiusmod in deserunt</Li>
-          <Li>Voluptate ipsum cupidatat</Li>
-          <Li>Ullamco tempor magna irure cillum deserunt commodo</Li>
-          <Li>Laborum do</Li>
-          <Li>Labore irure anim incididunt et</Li>
+          <Li>Currently enrolled in Interior Design program or recent graduate</Li>
+          <Li>Basic knowledge of design software</Li>
+          <Li>Passion for design and eagerness to learn</Li>
+          <Li>Strong work ethic and attention to detail</Li>
+          <Li>Portfolio showing creative potential</Li>
         </List>
-        <Heading as="h4">Pariatur cupidatat</Heading>
+        <Heading as="h4">What We Offer</Heading>
         <List className="mb-8">
-          <Li>Dolor consectetur quis fugiat minim</Li>
-          <Li>Culpa ex aliqua nisi aute</Li>
-          <Li>Minim velit pariatur officia culpa dolor cillum nostrud</Li>
-        </List>
-        <Heading as="h4">Labore ut</Heading>
-        <List className="mb-8">
-          <Li>
-            Culpa lorem excepteur id in exercitation elit excepteur et cillum
-            nisi aliquip irure aliquip sunt incididunt duis anim proident
-          </Li>
-          <Li>
-            Cupidatat velit ea in veniam consectetur ea ipsum esse proident
-            occaecat fugiat quis lorem fugiat exercitation veniam
-          </Li>
-          <Li>Ullamco amet velit proident velit dolor</Li>
-          <Li>
-            Anim non tempor anim reprehenderit nulla elit culpa sed eiusmod
-            voluptate irure ad laboris
-          </Li>
+          <Li>Hands-on experience with real projects</Li>
+          <Li>Mentorship from experienced designers</Li>
+          <Li>Exposure to residential and commercial design</Li>
+          <Li>Potential for full-time employment after internship</Li>
         </List>
       </Accordion>
     </Section>

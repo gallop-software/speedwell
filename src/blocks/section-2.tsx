@@ -34,7 +34,7 @@ export default function Section2() {
         />
         <Card1
           id="5"
-          title="Join Our Team"
+          title="Join our Team"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           href="/join-our-team"
           alt="Explore career opportunities with us"

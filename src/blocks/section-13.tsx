@@ -17,7 +17,7 @@ export default function Section13() {
         <Column>
           <Image
             src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
-            alt="Eiusmod enim adipiscing anim tempor sunt"
+            alt="Interior space showcasing professional color coordination"
             className="w-full object-cover"
             size="large"
           />
@@ -27,19 +27,18 @@ export default function Section13() {
             as="h2"
             id="services"
           >
-            Ad commodo sint
+            Comprehensive Color Services
           </Heading>
           <Quote>
-            Incididunt eiusmod adipiscing sint tempor aliquip ad eiusmod laboris
-            nulla
+            Every color tells a story – let us help you tell yours with confidence and style
           </Quote>
-          <Paragraph>Commodo aliquip excepteur anim cillum non</Paragraph>
+          <Paragraph>Our color consultation services include:</Paragraph>
           <List>
-            <Li>Ex consectetur anim</Li>
-            <Li>Est duis sit est lorem</Li>
-            <Li>Consectetur id non deserunt</Li>
-            <Li>Non ipsum</Li>
-            <Li>Voluptate minim consectetur laboris mollit</Li>
+            <Li>Personalized color palette development for entire homes</Li>
+            <Li>Room-by-room color coordination and flow planning</Li>
+            <Li>Paint brand and finish recommendations</Li>
+            <Li>Accent color selection for décor and accessories</Li>
+            <Li>Lighting analysis and color rendering assessment</Li>
           </List>
         </Column>
       </Columns>

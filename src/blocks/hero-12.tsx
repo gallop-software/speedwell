@@ -23,7 +23,7 @@ export default function Hero12() {
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
                 src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
-                alt="Consequat est ullamco esse laborum deserunt id amet adipiscing lorem ex"
+                alt="Professional space planning and interior layout optimization"
                 size="large"
                 rounded="rounded-none"
                 lazy={false}
@@ -32,7 +32,7 @@ export default function Hero12() {
                 className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
                 color="text-white"
               >
-                quis non
+                smart layouts
               </Accent>
             </Column>
             <Column className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -40,17 +40,10 @@ export default function Hero12() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Mollit esse tempor occaecat laboris
+                Strategic Space Planning for Better Living
               </Heading>
               <Paragraph>
-                Magna exercitation adipiscing fugiat nisi consectetur nostrud ut
-                cupidatat laborum proident mollit sed adipiscing sed ipsum do
-                velit sunt reprehenderit id anim sit sunt deserunt reprehenderit
-                dolore duis ut lorem occaecat culpa cillum pariatur fugiat ipsum
-                pariatur eiusmod nulla sunt commodo lorem enim nostrud quis anim
-                laboris dolor sint qui minim velit irure proident nisi
-                exercitation mollit in ea ad culpa nulla tempor nulla velit
-                consequat consequat
+                Great design starts with thoughtful space planning. Whether you're working with a compact urban apartment or a sprawling estate, our expert space planning services optimize every square foot to create layouts that flow naturally, function beautifully, and feel perfectly proportioned. We analyze traffic patterns, natural light, views, and how you actually use your space to develop strategic solutions that enhance both aesthetics and everyday living.
               </Paragraph>
               <Buttons className="">
                 <Button
@@ -58,7 +51,7 @@ export default function Hero12() {
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Enim esse laboris anim magna proident
+                  Discover Our Approach
                 </Button>
               </Buttons>
             </Column>

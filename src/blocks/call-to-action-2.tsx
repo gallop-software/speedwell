@@ -16,27 +16,23 @@ export default function CallToAction2() {
         styleAs="h2"
         textAlign="text-center"
       >
-        Mollit quis cillum laborum ex ut incididunt qui
+        Ready to Discover Your Perfect Color Palette?
       </Heading>
       <Paragraph
         variant="large"
         textAlign="text-center"
       >
-        Cillum sed sed minim adipiscing consectetur esse eiusmod laboris officia
-        ut et dolore fugiat sit reprehenderit duis ut aliquip ullamco ut esse
-        incididunt labore reprehenderit deserunt ut ullamco do laboris dolor
-        exercitation mollit quis aute laboris amet magna dolor esse deserunt
-        magna aute exercitation dolor
+        Stop second-guessing your color choices and start loving your space. Our expert color consultants are ready to help you create a beautiful, cohesive home that reflects your unique style and personality. Whether you need guidance for a single room or a complete home transformation, we'll provide the professional expertise and confidence you need to make the perfect color decisions. Schedule your consultation today and discover how the right colors can completely transform your living experience.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button
           size="medium"
-          href="/sit"
+          href="/contact"
           variant="primary"
           icon={arrowRightIcon}
           iconPlacement="after"
         >
-          Proident pariatur
+          Book Your Consultation
         </Button>
       </Buttons>
     </Cover>
