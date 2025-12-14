@@ -64,7 +64,7 @@ export function HeroCanvasBackground({
       ctx.save()
       ctx.translate(30, height * 0.1)
 
-      const lineCount2 = Math.ceil(height / spacing)
+      const lineCount2 = Math.ceil(height / spacing) - 18
 
       for (let i = 0; i < lineCount2; i++) {
         const y = i * spacing
