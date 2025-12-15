@@ -142,7 +142,7 @@ export const links: NavLink[] = [
       items: [
         {
           name: 'Homepage Demo',
-          description: 'Main landing page with hero and features',
+          description: 'Front page with hero and features',
           href: '/',
           icon: fileDocumentIcon,
         },
