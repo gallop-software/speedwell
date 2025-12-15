@@ -184,12 +184,16 @@ speedwell/
 
 ### Content & Assets
 
-- **`npm run images`** - Process images from `public/originals/` to responsive variants → [docs](./_docs/process-images.md)
+- **`npm run images`** - Process images from `public/originals/` to responsive variants
 - **`npm run images:reset`** - Delete processed images and regenerate all
-- **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_docs/generate-blog-metadata.md)
-- **`npm run search`** - Build FlexSearch index for site search → [docs](./_docs/generate-search.md)
-- **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [docs](./_docs/generate-favicon.md)
-- **`npm run featured-image`** - Screenshot homepage for social preview → [docs](./_docs/generate-featured-image.md)
+- **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_scripts/generate-blog-metadata.md)
+- **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
+- **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [docs](./_scripts/generate-favicon.md)
+- **`npm run featured-image`** - Screenshot homepage for social preview → [docs](./_scripts/generate-featured-image.md)
+- **`npm run blocks`** - Generate blocks catalog
+- **`npm run blocks:screenshots`** - Generate blocks catalog with screenshots
+- **`npm run blocks:sort`** - Sort blocks in catalog
+- **`npm run blocks:lite`** - Convert pro blocks → [docs](./_scripts/convert-pro-blocks.md)
 
 ### Fonts
 
@@ -242,7 +246,7 @@ vercel --prod
 Every dependency is battle-tested in production and chosen for stability, performance, and long-term maintainability.
 
 - **Next.js** `16.0.7` - React framework with App Router
-- **React** `19.2.1` - UI library
+- **React** `19` - UI library
 - **Tailwind CSS** `4.1.17` - Utility-first CSS framework
 - **Headless UI** `2.2.9` - Unstyled accessible components
 - **Valtio** `2.2.0` - State management
@@ -253,9 +257,13 @@ Every dependency is battle-tested in production and chosen for stability, perfor
 - **Vimeo Player** `2.30.1` - Video player integration
 - **Framer Motion** `12.23.25` - Animation library
 - **DayJS** `1.11.19` - Date formatting
+- **Luxon** `3.7.2` - DateTime library
 - **React Intersection Observer** `10.0.0` - Scroll-based animations and lazy loading
 - **React Highlight Words** `0.21.0` - Text highlighting
 - **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design)
+- **clsx** `2.1.1` - Conditional className utility
+- **Sindresorhus Slugify** `3.0.0` - URL-friendly slugs
+- **React DOM** `19.2.1` - React rendering
 - **Vercel Analytics** `1.6.1` - Analytics integration
 - **Next Third Parties** `16.0.7` - Third-party script optimization
 
