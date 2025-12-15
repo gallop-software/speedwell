@@ -1,28 +1,29 @@
 # Speedwell Blocks
 
-A collection of 72 pre-built UI blocks for the Speedwell template.
+A collection of 80 pre-built UI blocks for the Speedwell template.
 
 ## Overview
 
-- **Total Blocks:** 72
-- **Free Blocks:** 71
+- **Total Blocks:** 80
+- **Free Blocks:** 79
 - **Pro Blocks:** 1
 
 ## Categories
 
 - **Hero:** 13 blocks
-- **Section:** 30 blocks
+- **Section:** 32 blocks
 - **Content:** 5 blocks
 - **Call To Action:** 6 blocks
 - **Testimonial:** 3 blocks
 - **Contact:** 2 blocks
 - **About:** 2 blocks
-- **Cover:** 2 blocks
+- **Cover:** 3 blocks
 - **Showcase:** 5 blocks
 - **Blog:** 1 blocks
 - **Partners:** 1 blocks
 - **Accordion:** 1 blocks
 - **Application:** 1 blocks
+- **Profile:** 5 blocks
 
 ## Blocks
 
@@ -417,6 +418,24 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Section 33
+
+<img src="../../public/blocks/section-33.jpg" alt="Section 33" width="350">
+
+**Slug:** `section-33`  
+**Tier:** Free
+
+---
+
+#### Section 34
+
+<img src="../../public/blocks/section-34.jpg" alt="Section 34" width="350">
+
+**Slug:** `section-34`  
+**Tier:** Free
+
+---
+
 ### Content
 
 #### Content 1
@@ -609,6 +628,15 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Cover 4
+
+<img src="../../public/blocks/cover-4.jpg" alt="Cover 4" width="350">
+
+**Slug:** `cover-4`  
+**Tier:** Free
+
+---
+
 ### Showcase
 
 #### Showcase 1
@@ -696,6 +724,53 @@ A collection of 72 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/application-1.jpg" alt="Application 1" width="350">
 
 **Slug:** `application-1`  
+**Tier:** Free
+
+---
+
+### Profile
+
+#### Profile 1
+
+<img src="../../public/blocks/profile-1.jpg" alt="Profile 1" width="350">
+
+**Slug:** `profile-1`  
+**Tier:** Free
+
+---
+
+#### Profile 2
+
+<img src="../../public/blocks/profile-2.jpg" alt="Profile 2" width="350">
+
+**Slug:** `profile-2`  
+**Tier:** Free
+
+---
+
+#### Profile 3
+
+<img src="../../public/blocks/profile-3.jpg" alt="Profile 3" width="350">
+
+**Slug:** `profile-3`  
+**Tier:** Free
+
+---
+
+#### Profile 4
+
+<img src="../../public/blocks/profile-4.jpg" alt="Profile 4" width="350">
+
+**Slug:** `profile-4`  
+**Tier:** Free
+
+---
+
+#### Profile 5
+
+<img src="../../public/blocks/profile-5.jpg" alt="Profile 5" width="350">
+
+**Slug:** `profile-5`  
 **Tier:** Free
 
 ---
