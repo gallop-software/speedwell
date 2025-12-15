@@ -26,7 +26,7 @@ export default function Hero1() {
           <img
             src="/images/hero-bg.png"
             alt=""
-            className="absolute top-0 left-0 w-[95%] sm:w-[60%] lg:w-[40%] h-auto z-0 opacity-10"
+            className="absolute top-0 left-0 w-[95%] sm:w-[60%] lg:w-[40%] h-auto z-0 opacity-15"
           />
           <HeroCanvasBackground2 className="absolute -bottom-10 -right-10 w-[500px] h-[500px] z-0" />
           <Columns
