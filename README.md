@@ -311,6 +311,7 @@ MIT License - see [LICENSE](./LICENSE) for details
 
 - [Chris Baldelomar](https://github.com/webplantmedia)
 - [Niel Wostan](https://github.com/NielWostan)
+- [Rabpreet Singh](https://github.com/Rabpreet1233)
 
 Built with ❤️ by the team at [Gallop](https://gallop.software)
 
