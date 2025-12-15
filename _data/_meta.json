@@ -55,6 +55,28 @@
       "file": "/images/geometric.jpg"
     }
   },
+  "/images/hero-bg.png": {
+    "small": {
+      "width": 225,
+      "height": 300,
+      "file": "/images/hero-bg-225x300.png"
+    },
+    "medium": {
+      "width": 525,
+      "height": 700,
+      "file": "/images/hero-bg-525x700.png"
+    },
+    "large": {
+      "width": 1050,
+      "height": 1400,
+      "file": "/images/hero-bg-1050x1400.png"
+    },
+    "full": {
+      "width": 1650,
+      "height": 2200,
+      "file": "/images/hero-bg.png"
+    }
+  },
   "/images/leaf1.jpg": {
     "small": {
       "width": 169,

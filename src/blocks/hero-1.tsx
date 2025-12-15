@@ -23,7 +23,11 @@ export default function Hero1() {
       <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">
         <Navbar className="-mt-2" />
         <div className="mx-auto max-w-[1600px] relative">
-          <HeroCanvasBackground className="absolute top-0 left-0 w-full sm:w-[60%] lg:w-[40%] h-[524px] lg:h-full z-0 opacity-30" />
+          <img
+            src="/images/hero-bg.png"
+            alt=""
+            className="absolute top-0 left-0 w-[95%] sm:w-[60%] lg:w-[40%] h-auto z-0 opacity-10"
+          />
           <HeroCanvasBackground2 className="absolute -bottom-10 -right-10 w-[500px] h-[500px] z-0" />
           <Columns
             cols="grid-cols-1 lg:grid-cols-[3fr_2fr]"

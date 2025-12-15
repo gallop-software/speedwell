@@ -117,13 +117,13 @@ export function HeroCanvasBackground2({
         if (fadeOpacity > 0.01) {
           // Draw hexagon with soft glow
           ctx.beginPath()
-          
+
           // Draw hexagon (6 sides)
           for (let i = 0; i < 6; i++) {
             const angle = (Math.PI / 3) * i // 60 degrees per side
             const x = ball.x + ball.size * Math.cos(angle)
             const y = ball.y + ball.size * Math.sin(angle)
-            
+
             if (i === 0) {
               ctx.moveTo(x, y)
             } else {
