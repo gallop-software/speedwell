@@ -15,11 +15,16 @@ import { motion } from 'framer-motion'
 interface AccordionProps {
   headingText?: string
   children?: React.ReactNode
+  className?: string
 }
 
-export function Accordion({ headingText, children }: AccordionProps) {
+export function Accordion({
+  headingText,
+  children,
+  className,
+}: AccordionProps) {
   return (
-    <div className="w-full">
+    <div className={clsx('w-full', className)}>
       <Disclosure
         as="div"
         className="py-4"
