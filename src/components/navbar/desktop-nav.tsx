@@ -45,10 +45,22 @@ export function DesktopNav({
                     className="absolute left-1/2 -translate-x-1/2 xl:left-0 xl:-ml-4 xl:translate-x-0 z-50 mt-5 flex w-screen max-w-max px-4 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
                   >
                     <div
-                      className={`w-screen ${label === 'Services' ? 'max-w-2xl' : 'max-w-md'} flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
+                      className={`w-screen ${
+                        (dropdown.columns ?? 1) === 1
+                          ? 'max-w-md'
+                          : (dropdown.columns ?? 1) === 2
+                            ? 'max-w-2xl'
+                            : 'max-w-4xl'
+                      } flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
                     >
                       <div
-                        className={`p-4 ${label === 'Services' ? 'grid grid-cols-2 gap-x-4' : ''}`}
+                        className={`p-4 ${
+                          (dropdown.columns ?? 1) === 2
+                            ? 'grid grid-cols-2 gap-x-4'
+                            : (dropdown.columns ?? 1) === 3
+                              ? 'grid grid-cols-3 gap-x-4'
+                              : ''
+                        }`}
                       >
                         {dropdown.items.map((item: DropdownItem) => (
                           <Link

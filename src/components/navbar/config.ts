@@ -27,6 +27,7 @@ export const links: NavLink[] = [
     href: '/services',
     label: 'Services',
     dropdown: {
+      columns: 2,
       items: [
         {
           name: 'Residential Design',
@@ -77,6 +78,7 @@ export const links: NavLink[] = [
     href: '/contact',
     label: 'About',
     dropdown: {
+      columns: 1,
       items: [
         {
           name: 'Our Story',

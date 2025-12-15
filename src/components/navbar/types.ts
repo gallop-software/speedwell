@@ -20,6 +20,7 @@ export interface NavLink {
   label: string
   dropdown?: {
     items: DropdownItem[]
+    columns?: 1 | 2 | 3
   }
 }
 
