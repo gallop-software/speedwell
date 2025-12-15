@@ -14,6 +14,11 @@ import { StickyNavbar } from './sticky-navbar'
 import useOffsetTop from '@/hooks/use-offset-top'
 import { state, useSnapshot } from '@/state'
 import type { NavbarProps } from './types'
+import {
+  links as defaultLinks,
+  socialLinks as defaultSocialLinks,
+  homeLink as defaultHomeLink,
+} from './config'
 
 /**
  * Main navigation bar component for the application
@@ -26,10 +31,17 @@ import type { NavbarProps } from './types'
  * - TypeScript typed with comprehensive interfaces
  * - Accessible design with proper ARIA labels
  * - Tailwind CSS styling with custom theme colors
+ * - Configurable links via optional config prop
  *
  * @returns {ReactElement} The rendered navigation component
  */
-export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
+export function Navbar({
+  className = '',
+  config,
+}: NavbarProps = {}): ReactElement {
+  const links = config?.links ?? defaultLinks
+  const socialLinks = config?.socialLinks ?? defaultSocialLinks
+  const homeLink = config?.homeLink ?? defaultHomeLink
   useOffsetTop(800)
   const snap = useSnapshot(state)
   const isScrolling = snap.isScrolling
@@ -39,6 +51,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
     <>
       <Disclosure
         as="header"
+        id="navbar"
         className={clsx('pt-12 sm:pt-16 relative z-40 pb-10', className)}
       >
         {({ open }) => (
@@ -50,7 +63,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                   <Link
                     prefetch={true}
                     scroll={true}
-                    href="/"
+                    href={homeLink}
                     title="Speedwell"
                     className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                   >
@@ -63,17 +76,23 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
 
                 {/* Centered Navigation - using absolute positioning for true centering */}
                 <div className="absolute left-1/2 transform -translate-x-1/2">
-                  <DesktopNav isScrolling={isScrolling} />
+                  <DesktopNav
+                    isScrolling={isScrolling}
+                    links={links}
+                  />
                 </div>
 
                 {/* Right Side - Social Media Icons and Mobile Button */}
                 <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
                   <SearchButton enableShortcut={true} />
-                  <SocialMediaNav />
+                  <SocialMediaNav socialLinks={socialLinks} />
                   <MobileNavButton open={open} />
                 </div>
               </div>
-              <MobileNav />
+              <MobileNav
+                links={links}
+                socialLinks={socialLinks}
+              />
             </div>
           </>
         )}
@@ -81,6 +100,9 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
       <StickyNavbar
         isScrolling={isScrolling}
         scrollingDirection={scrollingDirection}
+        links={links}
+        socialLinks={socialLinks}
+        homeLink={homeLink}
       />
     </>
   )

@@ -8,6 +8,8 @@ import { DesktopNav } from './desktop-nav'
 import { SearchButton } from './search-button'
 import { SocialMediaNav } from './social-media-nav'
 import { StickyMobileNavButton } from './sticky-mobile-nav-button'
+import type { NavLink, SocialLink } from './types'
+import { homeLink as defaultHomeLink } from './config'
 
 /**
  * Sticky navbar component
@@ -18,9 +20,15 @@ import { StickyMobileNavButton } from './sticky-mobile-nav-button'
 export function StickyNavbar({
   isScrolling,
   scrollingDirection,
+  links,
+  socialLinks,
+  homeLink = defaultHomeLink,
 }: {
   isScrolling?: boolean
   scrollingDirection?: string
+  links?: NavLink[]
+  socialLinks?: SocialLink[]
+  homeLink?: string
 }): ReactElement {
   const shouldShow = isScrolling && scrollingDirection === 'up'
 
@@ -52,7 +60,7 @@ export function StickyNavbar({
                     <Link
                       prefetch={true}
                       scroll={true}
-                      href="/"
+                      href={homeLink}
                       title="Logo"
                       className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                     >
@@ -68,13 +76,14 @@ export function StickyNavbar({
                     <DesktopNav
                       isScrolling={isScrolling}
                       forceCloseOnHide={true}
+                      links={links}
                     />
                   </div>
 
                   {/* Right Side - Social Media Icons and Mobile Button */}
                   <div className="flex items-center ml-auto space-x-0 md:space-x-1">
                     <SearchButton enableShortcut={false} />
-                    <SocialMediaNav />
+                    <SocialMediaNav socialLinks={socialLinks} />
                     <StickyMobileNavButton />
                   </div>
                 </div>

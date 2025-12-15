@@ -10,7 +10,10 @@ import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
 import searchIcon from '@iconify/icons-lucide/search'
 import { Icon } from '../icon'
 import { Search } from '../search'
-import { links, socialLinks } from './config'
+import {
+  links as defaultLinks,
+  socialLinks as defaultSocialLinks,
+} from './config'
 import type { NavLink, DropdownItem, SocialLink } from './types'
 
 /**
@@ -18,7 +21,13 @@ import type { NavLink, DropdownItem, SocialLink } from './types'
  * Renders slide-down mobile menu with animations and expandable dropdowns
  * @returns {ReactElement} Mobile navigation menu
  */
-export function MobileNav(): ReactElement {
+export function MobileNav({
+  links = defaultLinks,
+  socialLinks = defaultSocialLinks,
+}: {
+  links?: NavLink[]
+  socialLinks?: SocialLink[]
+} = {}): ReactElement {
   const [isSearching, setIsSearching] = useState(false)
 
   return (
