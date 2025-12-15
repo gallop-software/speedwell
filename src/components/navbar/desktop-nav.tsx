@@ -3,7 +3,7 @@ import Link from 'next/link'
 import type { ReactElement } from 'react'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
 import { Icon } from '../icon'
-import { links } from './config'
+import { links as defaultLinks } from './config'
 import type { NavLink, DropdownItem } from './types'
 
 /**
@@ -14,9 +14,11 @@ import type { NavLink, DropdownItem } from './types'
 export function DesktopNav({
   isScrolling,
   forceCloseOnHide,
+  links = defaultLinks,
 }: {
   isScrolling?: boolean
   forceCloseOnHide?: boolean
+  links?: NavLink[]
 }): ReactElement {
   return (
     <nav className="relative hidden lg:flex">
