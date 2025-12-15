@@ -21,6 +21,7 @@ export interface NavLink {
   dropdown?: {
     items: DropdownItem[]
     columns?: 1 | 2 | 3
+    position?: 'left' | 'center' | 'right'
   }
 }
 
