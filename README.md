@@ -77,19 +77,45 @@ speedwell/
 │   │   ├── api/               # API routes
 │   │   ├── block/             # Block preview routes
 │   │   ├── category/          # Category pages
+│   │   ├── sitemap_index.xml/ # Sitemap generation
+│   │   ├── error.tsx          # Error boundary
 │   │   ├── layout.tsx         # Root layout
 │   │   ├── metadata.tsx       # Site metadata
-│   │   └── not-found.tsx      # 404 page
+│   │   ├── not-found.tsx      # 404 page
+│   │   ├── sitemap.ts         # Sitemap config
+│   │   └── *.png, *.ico       # App icons and favicon
 │   ├── blocks/                # Reusable content blocks
-│   │   ├── hero-*.tsx         # Hero sections
-│   │   ├── section-*.tsx      # Content sections
-│   │   ├── call-to-action-*.tsx
-│   │   ├── contact-*.tsx
-│   │   └── ...
+│   │   ├── hero-*.tsx         # Hero sections (1-13)
+│   │   ├── section-*.tsx      # Content sections (1-34)
+│   │   ├── call-to-action-*.tsx  # CTAs (1-6)
+│   │   ├── contact-*.tsx      # Contact sections (1-2)
+│   │   ├── content-*.tsx      # Content blocks (1-5)
+│   │   ├── cover-*.tsx        # Cover sections
+│   │   ├── profile-*.tsx      # Profile sections (1-5)
+│   │   ├── showcase-*.tsx     # Showcase sections (1-5)
+│   │   ├── testimonial-*.tsx  # Testimonials (1-3)
+│   │   ├── about-*.tsx        # About sections (1-2)
+│   │   ├── accordion-1.tsx    # Accordion component
+│   │   ├── application-1.tsx  # Application section
+│   │   ├── blog-1.tsx         # Blog listing
+│   │   ├── partners-1.tsx     # Partners section
+│   │   └── README.md          # Blocks documentation
 │   ├── components/            # React components
-│   │   ├── navbar/
-│   │   ├── footer/
-│   │   └── ui/
+│   │   ├── navbar/           # Navigation components
+│   │   ├── blog/             # Blog components
+│   │   ├── search/           # Search components
+│   │   ├── lightbox/         # Lightbox gallery
+│   │   ├── accordion.tsx
+│   │   ├── button.tsx
+│   │   ├── card-*.tsx
+│   │   ├── contact-form.tsx
+│   │   ├── footer.tsx
+│   │   ├── gallery.tsx
+│   │   ├── heading.tsx
+│   │   ├── image.tsx
+│   │   ├── logo.tsx
+│   │   ├── section.tsx
+│   │   └── ...
 │   ├── content/              # Page content (TSX files)
 │   ├── hooks/                # Custom React hooks
 │   ├── styles/               # Global styles & fonts
@@ -98,22 +124,51 @@ speedwell/
 │   ├── template/             # Page templates
 │   ├── tools/                # Utility tools
 │   ├── types/                # TypeScript types
-│   └── utils/                # Helper functions
+│   ├── utils/                # Helper functions
+│   └── state.ts              # Global state management
 ├── public/
+│   ├── blocks/               # Block preview screenshots
 │   ├── originals/            # Source images (not deployed)
+│   │   ├── portfolio/
+│   │   └── profiles/
 │   ├── images/               # Processed images
+│   │   ├── portfolio/
+│   │   └── profiles/
 │   ├── videos/               # Video assets
+│   ├── search-index.json     # FlexSearch index
 │   └── speedwell.jpg         # Featured image
 ├── _data/                    # Generated metadata
+│   ├── _blog.json           # Blog metadata
 │   ├── _meta.json           # Image metadata
-│   └── _fonts/              # Font configurations
+│   ├── _meta-old.json       # Backup metadata
+│   ├── _fonts/              # Font configurations
+│   │   ├── _accent.tsx
+│   │   ├── _body.tsx
+│   │   ├── _heading.tsx
+│   │   ├── _heading2.tsx
+│   │   └── _heading3.tsx
+│   └── _import/             # Import utilities
 ├── _scripts/                 # Automation scripts
-│   ├── process-images.js
+│   ├── process-images.js    # Image optimization
 │   ├── generate-blog-metadata.mjs
+│   ├── generate-blocks-catalog.mjs
 │   ├── generate-favicon.js
 │   ├── generate-featured-image.js
-│   └── generate-search.sh
-└── _docs/                    # Documentation
+│   ├── generate-search.mjs
+│   ├── generate-search.sh
+│   ├── compress-fonts.js
+│   ├── convert-pro-blocks.mjs
+│   └── *.md                 # Script documentation
+├── _docs/                    # Documentation
+│   ├── content.md
+│   └── deployment.md
+├── next.config.mjs          # Next.js configuration
+├── tsconfig.json            # TypeScript config
+├── postcss.config.js        # PostCSS config
+├── package.json             # Dependencies & scripts
+├── .prettierrc              # Prettier config
+├── .eslintrc.json           # ESLint config
+└── push-env-to-vercel.sh    # Environment sync script
 ```
 
 ---
