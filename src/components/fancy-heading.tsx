@@ -13,15 +13,14 @@ interface FancyHeadingProps {
 // Helper function to generate a valid ID from text
 function generateId(text: string, accent: string): string {
   const combined = `${text} ${accent}`
-  return (
-    combined
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
-      .replace(/\s+/g, '-') // Replace spaces with hyphens
-      .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
-      .replace(/^-|-$/g, '') || // Remove leading/trailing hyphens
-    'heading'
-  ) // Fallback if empty
+  const processed = combined
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+    .replace(/^-|-$/g, '') // Remove leading/trailing hyphens
+
+  return processed || 'heading' // Fallback if empty
 }
 
 export function FancyHeading({
@@ -34,14 +33,12 @@ export function FancyHeading({
   const generatedId = id || generateId(text, accent)
 
   return (
-    <div
-      id={generatedId}
-      className={`text-center mb-16 ${className || ''}`}
-    >
+    <div className={`text-center mb-16 ${className || ''}`}>
       <Heading
         as={as}
         styleAs="h2"
         margin="mb-0"
+        id={generatedId}
       >
         <span className="lg:pr-[25%] block">{text}</span>{' '}
         <Accent
