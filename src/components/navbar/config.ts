@@ -26,6 +26,11 @@ import viewSplitVerticalIcon from '@iconify/icons-mdi/view-split-vertical'
 import type { NavLink, SocialLink } from './types'
 
 /**
+ * Home link for logo navigation
+ */
+export const homeLink = '/'
+
+/**
  * Main navigation links configuration
  * Includes both simple links and dropdown menus
  */
@@ -135,6 +140,12 @@ export const links: NavLink[] = [
       position: 'center',
       columns: 3,
       items: [
+        {
+          name: 'Homepage Demo',
+          description: 'Main landing page with hero and features',
+          href: '/',
+          icon: fileDocumentIcon,
+        },
         {
           name: 'One Page Site',
           description: 'Navbar with smooth scrolling to sections',
