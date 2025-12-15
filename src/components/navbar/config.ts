@@ -131,7 +131,7 @@ export const links: NavLink[] = [
     href: '/demos',
     label: 'Demos',
     dropdown: {
-      position: 'right',
+      position: 'center',
       columns: 3,
       items: [
         {
