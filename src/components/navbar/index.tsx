@@ -67,7 +67,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                 </div>
 
                 {/* Right Side - Social Media Icons and Mobile Button */}
-                <div className="flex items-center ml-auto space-x-0 md:space-x-1">
+                <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
                   <SearchButton enableShortcut={true} />
                   <SocialMediaNav />
                   <MobileNavButton open={open} />

@@ -42,7 +42,13 @@ export function DesktopNav({
                   </PopoverButton>
                   <PopoverPanel
                     transition
-                    className="absolute left-1/2 -translate-x-1/2 xl:left-0 xl:-ml-4 xl:translate-x-0 z-50 mt-5 flex w-screen max-w-max px-4 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+                    className={`absolute z-50 mt-5 flex w-screen max-w-max px-4 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in ${
+                      (dropdown.position ?? 'left') === 'right'
+                        ? 'right-0 xl:-mr-4'
+                        : (dropdown.position ?? 'left') === 'center'
+                          ? 'left-1/2 -translate-x-1/2'
+                          : 'left-1/2 -translate-x-1/2 xl:left-0 xl:-ml-4 xl:translate-x-0'
+                    }`}
                   >
                     <div
                       className={`w-screen ${
@@ -50,7 +56,7 @@ export function DesktopNav({
                           ? 'max-w-md'
                           : (dropdown.columns ?? 1) === 2
                             ? 'max-w-2xl'
-                            : 'max-w-4xl'
+                            : 'max-w-2xl xl:max-w-4xl'
                       } flex-auto overflow-hidden rounded-3xl bg-body2 text-sm/6 shadow-lg ring-1 ring-accent/20`}
                     >
                       <div
@@ -58,7 +64,7 @@ export function DesktopNav({
                           (dropdown.columns ?? 1) === 2
                             ? 'grid grid-cols-2 gap-x-4'
                             : (dropdown.columns ?? 1) === 3
-                              ? 'grid grid-cols-3 gap-x-4'
+                              ? 'grid grid-cols-2 xl:grid-cols-3 gap-x-4'
                               : ''
                         }`}
                       >

@@ -10,7 +10,7 @@ import type { SocialLink } from './types'
  */
 export function SocialMediaNav(): ReactElement {
   return (
-    <div className="hidden lg:flex items-center space-x-1">
+    <div className="hidden lg:flex items-center space-x-0 xl:space-x-1">
       {socialLinks.map((item: SocialLink) => (
         <a
           key={item.name}
