@@ -55,7 +55,7 @@ export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
                     className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                   >
                     <Logo
-                      className=""
+                      className="w-[120px] md:w-[200px]"
                       width={200}
                     />
                   </Link>
