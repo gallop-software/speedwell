@@ -5,7 +5,7 @@
 A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
-**🎨 Template:** [gallop.software/templates/speedwell](https://gallop.software/templates/speedwell)  
+**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
 **📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
 **🏷️ Category:** Small Business Template
 
