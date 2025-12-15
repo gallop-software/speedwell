@@ -15,6 +15,13 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import instagramIcon from '@iconify/icons-mdi/instagram'
 import phoneIcon from '@iconify/icons-mdi/phone'
 import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
+import viewDashboardIcon from '@iconify/icons-mdi/view-dashboard-outline'
+import viewGridIcon from '@iconify/icons-mdi/view-grid-outline'
+import viewColumnIcon from '@iconify/icons-mdi/view-column-outline'
+import viewCarouselIcon from '@iconify/icons-mdi/view-carousel-outline'
+import dockLeftIcon from '@iconify/icons-mdi/dock-left'
+import windowMaximizeIcon from '@iconify/icons-mdi/window-maximize'
+import viewSplitVerticalIcon from '@iconify/icons-mdi/view-split-vertical'
 import type { NavLink, SocialLink } from './types'
 
 /**
@@ -79,6 +86,7 @@ export const links: NavLink[] = [
     label: 'About',
     dropdown: {
       columns: 1,
+      position: 'left',
       items: [
         {
           name: 'Our Story',
@@ -115,6 +123,58 @@ export const links: NavLink[] = [
           description: 'Explore career opportunities with us',
           href: '/join-our-team',
           icon: handshakeIcon,
+        },
+      ],
+    },
+  },
+  {
+    href: '/demos',
+    label: 'Demos',
+    dropdown: {
+      position: 'right',
+      columns: 3,
+      items: [
+        {
+          name: 'Layout 1',
+          description: 'Classic dashboard with sidebar navigation',
+          href: '/layout-1',
+          icon: viewDashboardIcon,
+        },
+        {
+          name: 'Layout 2',
+          description: 'Modern grid-based card layout system',
+          href: '/layout-2',
+          icon: viewGridIcon,
+        },
+        {
+          name: 'Layout 3',
+          description: 'Multi-column content distribution design',
+          href: '/layout-3',
+          icon: viewColumnIcon,
+        },
+        {
+          name: 'Layout 4',
+          description: 'Full-width carousel presentation style',
+          href: '/layout-4',
+          icon: viewCarouselIcon,
+        },
+        {
+          name: 'Layout 5',
+          description: 'Split-screen with fixed left panel',
+          href: '/layout-5',
+          icon: dockLeftIcon,
+        },
+        {
+          name: 'Layout 6',
+          description: 'Fullscreen hero with minimal chrome',
+          href: '/layout-6',
+          icon: windowMaximizeIcon,
+        },
+        {
+          name: 'Layout 7',
+          description: 'Vertical split content arrangement',
+          href: '/layout-7',
+          icon: viewSplitVerticalIcon,
         },
       ],
     },
