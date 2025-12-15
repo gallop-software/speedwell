@@ -115,9 +115,22 @@ export function HeroCanvasBackground2({
 
         // Only draw if opacity is visible
         if (fadeOpacity > 0.01) {
-          // Draw ball with soft glow
+          // Draw hexagon with soft glow
           ctx.beginPath()
-          ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2)
+          
+          // Draw hexagon (6 sides)
+          for (let i = 0; i < 6; i++) {
+            const angle = (Math.PI / 3) * i // 60 degrees per side
+            const x = ball.x + ball.size * Math.cos(angle)
+            const y = ball.y + ball.size * Math.sin(angle)
+            
+            if (i === 0) {
+              ctx.moveTo(x, y)
+            } else {
+              ctx.lineTo(x, y)
+            }
+          }
+          ctx.closePath()
 
           // White fill with fading opacity
           ctx.fillStyle = `rgba(255, 255, 255, ${fadeOpacity})`
