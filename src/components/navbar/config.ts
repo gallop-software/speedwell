@@ -15,6 +15,7 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import instagramIcon from '@iconify/icons-mdi/instagram'
 import phoneIcon from '@iconify/icons-mdi/phone'
 import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
+import fileDocumentIcon from '@iconify/icons-mdi/file-document-outline'
 import viewDashboardIcon from '@iconify/icons-mdi/view-dashboard-outline'
 import viewGridIcon from '@iconify/icons-mdi/view-grid-outline'
 import viewColumnIcon from '@iconify/icons-mdi/view-column-outline'
@@ -135,10 +136,10 @@ export const links: NavLink[] = [
       columns: 3,
       items: [
         {
-          name: 'Layout 1',
-          description: 'Classic dashboard with sidebar navigation',
+          name: 'One Page Site',
+          description: 'Navbar with smooth scrolling to sections',
           href: '/layout-1',
-          icon: viewDashboardIcon,
+          icon: fileDocumentIcon,
         },
         {
           name: 'Layout 2',
