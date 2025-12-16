@@ -77,6 +77,50 @@
       "file": "/images/hero-bg.png"
     }
   },
+  "/images/layout-1/pexels-anna-nekrashevich-7552446.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-anna-nekrashevich-7552446-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-anna-nekrashevich-7552446-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-anna-nekrashevich-7552446-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-1/pexels-anna-nekrashevich-7552446.jpg"
+    }
+  },
+  "/images/layout-1/pexels-ron-lach-8760891.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-ron-lach-8760891-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-ron-lach-8760891-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-ron-lach-8760891-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-1/pexels-ron-lach-8760891.jpg"
+    }
+  },
   "/images/leaf1.jpg": {
     "small": {
       "width": 169,

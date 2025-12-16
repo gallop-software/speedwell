@@ -130,21 +130,16 @@ export default function Hero14() {
                 as="h1"
                 className="max-w-2xl"
               >
-                Before & After Transformations
+                Building Brands That Stand Out
               </Heading>
               <Paragraph className="max-w-2xl">
-                Witness the power of thoughtful interior design through our
-                portfolio of stunning transformations. Each project tells a
-                story of spaces reimagined, potential realized, and dreams
-                brought to life. From outdated rooms to modern masterpieces, see
-                how Timmerman transforms ordinary spaces into extraordinary
-                environments.
+                We are a branding and creative agency specializing in brand identity, visual design, and strategic positioning. From logo design and brand guidelines to website development and marketing campaigns, we help businesses tell their story and connect with their audience in meaningful ways.
               </Paragraph>
             </Column>
             <Column className="relative -mx-6 flex items-center flex-row-reverse h-full  max-xl:order-1">
               <Image
                 className="w-2/3 h-full relative object-cover object-center"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+                src="/images/layout-1/pexels-anna-nekrashevich-7552446.jpg"
                 alt="Labore voluptate enim aliquip eiusmod occaecat"
                 rounded="rounded-none"
                 size="large"
@@ -154,7 +149,7 @@ export default function Hero14() {
                 <Image
                   className="width-full h-full object-cover object-top"
                   aspect="aspect-none"
-                  src="/images/portfolio/pexels-pixabay-269218.jpg"
+                  src="/images/layout-1/pexels-ron-lach-8760891.jpg"
                   alt="Labore voluptate enim aliquip eiusmod occaecat"
                   rounded="rounded-none"
                   size="large"
@@ -165,7 +160,7 @@ export default function Hero14() {
                 color="text-white"
                 className="absolute hidden lg:block -bottom-8 xl:top-0 left-6 xl:-left-30 transform -rotate-12"
               >
-                transformed
+                make impact
               </Accent>
             </Column>
           </Columns>
