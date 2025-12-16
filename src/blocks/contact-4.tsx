@@ -24,12 +24,7 @@ export default function Contact4() {
         <Column>
           <Heading as="h2">Get In Touch</Heading>
           <Paragraph>
-            We'd love to hear about your design project. Whether you're looking
-            to transform a single room or redesign your entire home, our team is
-            here to bring your vision to life. Schedule a consultation at our
-            Design District studio, give us a call, or send us a message. We
-            typically respond within 24 hours and offer complimentary initial
-            consultations for new clients.
+            We'd love to hear about your brand vision. Whether you're launching a new venture or refreshing an established brand, our team is here to bring your story to life. Schedule a consultation at our studio, give us a call, or send us a message. We typically respond within 24 hours and offer complimentary initial consultations for new clients to discuss your brand goals and explore how we can help.
           </Paragraph>
         </Column>
         <Column>
