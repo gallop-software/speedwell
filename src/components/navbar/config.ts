@@ -153,8 +153,8 @@ export const links: NavLink[] = [
           icon: fileDocumentIcon,
         },
         {
-          name: 'Layout 2',
-          description: 'Modern grid-based card layout system',
+          name: 'Startup Page',
+          description: 'Modern tech platform solution',
           href: '/layout-2',
           icon: viewGridIcon,
         },

@@ -17,17 +17,17 @@ export default function Content() {
 }
 
 export const metadata = {
-  title: 'Layout 2 | Modern Grid-Based Card Layout System',
+  title: 'Startup Page | Modern Tech Platform Solution',
   description:
-    'Explore our modern grid-based card layout system. Perfect for showcasing content in an organized and visually appealing way.',
+    'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
   keywords: [
-    'layout design',
-    'grid system',
-    'card layout',
-    'modern design',
-    'responsive design',
+    'startup platform',
+    'tech solution',
+    'collaboration tools',
+    'business software',
+    'saas platform',
   ],
-  focusKeyword: ['layout design', 'grid system', 'card layout'],
+  focusKeyword: ['startup platform', 'tech solution', 'collaboration tools'],
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   lastModified: '2025-09-28T01:00:00Z',
@@ -41,21 +41,21 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://speedwell.gallop.software/layout-2',
     siteName: 'Speedwell',
-    title: 'Layout 2 | Modern Grid-Based Card Layout System',
+    title: 'Startup Page | Modern Tech Platform Solution',
     description:
-      'Explore our modern grid-based card layout system. Perfect for showcasing content in an organized and visually appealing way.',
+      'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
     image: {
       url: '/images/portfolio/pexels-pixabay-259962.jpg',
-      alt: 'Modern grid-based layout design',
+      alt: 'Modern tech startup platform',
     },
   },
   twitter: {
     card: 'summary_large_image',
     site: '@speedwelldesign',
     creator: '@speedwelldesign',
-    title: 'Layout 2 | Modern Grid-Based Card Layout System',
+    title: 'Startup Page | Modern Tech Platform Solution',
     description:
-      'Explore our modern grid-based card layout system. Perfect for showcasing content in an organized and visually appealing way.',
+      'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
     image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
   },
   category: 'Layout Design',
@@ -74,7 +74,7 @@ export const metadata = {
         {
           '@type': 'ListItem',
           position: 2,
-          name: 'Layout 2',
+          name: 'Startup Page',
           item: 'https://speedwell.gallop.software/layout-2',
         },
       ],
