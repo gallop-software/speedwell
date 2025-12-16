@@ -16,7 +16,7 @@ export default function Hero15() {
     <>
       <Navbar />
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body-dark z-0"></div>
+        <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
           <Columns reverseColumns>
             <Column className="relative -mx-6">
@@ -47,7 +47,7 @@ export default function Hero15() {
               </Paragraph>
               <Buttons className="">
                 <Button
-                  href="#"
+                  href="#product-showcase"
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
