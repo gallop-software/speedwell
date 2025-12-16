@@ -5,63 +5,70 @@ import { Icon } from './icon'
 
 interface ContactLink {
   /** Iconify icon object */
-  icon: object
+  icon: { body: string; width?: number; height?: number }
   /** URL for the link */
   link: string
 }
 
 interface Profile2Props {
-  /** Image source URL for the testimonial author */
+  /** Image source URL for the profile */
   img: string
-  /** Name or citation for the testimonial author */
+  /** Name or citation for the profile */
   cite: string
-  /** Testimonial content - should be Paragraph components */
+  /** Profile content - should be Heading and Paragraph components */
   children: React.ReactNode
-  /** Custom aspect ratio classes for the image (default: "aspect-[3/4]") */
-  aspect?: string
-  /** Custom rounded classes for the image (default: "rounded-t-full") */
-  rounded?: string
   /** Social media or contact links with icons */
   contact?: ContactLink[]
+  /** Background color classes (default: "bg-body2") */
+  bgColor?: string
+  /** Border radius classes (default: "rounded-lg") */
+  rounded?: string
+  /** Border classes (default: "border border-accent/20") */
+  border?: string
 }
 
 export function Profile2({
   img,
   cite,
   children,
-  aspect = 'aspect-[3/4]',
-  rounded = 'rounded-t-full',
   contact,
+  bgColor = 'bg-body2',
+  rounded = 'rounded-lg',
+  border = 'border border-accent/10',
 }: Profile2Props) {
   return (
-    <div className="flex flex-col items-center relative">
+    <div
+      className={clsx(
+        bgColor,
+        rounded,
+        border,
+        'shadow-xl flex flex-col p-10 h-full'
+      )}
+    >
       <Image
         src={img}
         alt={cite}
-        rounded={rounded}
+        rounded="rounded-full"
         wrap={false}
         size="large"
-        aspect={aspect}
-        className={clsx(
-          aspect,
-          'w-[85%] lg:w-[75%] object-cover shadow-xl max-w-lg mx-auto relative z-10'
-        )}
+        aspect="aspect-square"
+        className="w-40 h-40 object-cover mb-6"
       />
-      <div className="px-6 text-center w-full border border-accent2 pt-[130px] -mt-24 relative z-0 [&>*:last-child]:mb-0 pb-14 [&>*]:max-w-lg flex justify-center flex-col items-center">
+      <div className="text-left w-full [&>*:last-child]:mb-0 flex justify-start flex-col items-start h-full">
         {children}
         {contact && contact.length > 0 && (
-          <div className="flex gap-4 justify-center mt-4">
+          <div className="flex gap-4 justify-center mt-auto">
             {contact.map((item, index) => (
               <a
                 key={index}
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:text-accent transition-colors"
+                className="text-accent hover:text-accent/80 transition-colors"
               >
                 <Icon
                   icon={item.icon}
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                 />
               </a>
             ))}
