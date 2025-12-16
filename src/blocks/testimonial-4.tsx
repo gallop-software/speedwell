@@ -19,11 +19,7 @@ export default function Testimonial4() {
           cite="James Mitchell"
         >
           <Quote>
-            Working with this team was an absolute dream. They transformed our
-            outdated living room into a modern, sophisticated space that
-            perfectly reflects our style. Their attention to detail and ability
-            to understand our vision made the entire process seamless. We
-            couldn't be happier with the results!
+            Working with this team was an absolute game-changer for our startup. They transformed our vague ideas into a bold, cohesive brand identity that perfectly captures our mission. Their strategic approach and creative execution helped us stand out in a crowded market. We couldn't be happier with the results!
           </Quote>
         </Testimonial1>
         <Testimonial1
@@ -31,12 +27,7 @@ export default function Testimonial4() {
           cite="Michael Chen"
         >
           <Quote>
-            Our restaurant needed a complete redesign to attract a younger
-            clientele while maintaining our established charm. The interior
-            design team exceeded our expectations with a fresh, inviting
-            atmosphere that has significantly increased foot traffic. Their
-            commercial design expertise and project management skills were
-            outstanding. Highly recommended!
+            Our restaurant needed a complete rebrand to attract a younger clientele while maintaining our established reputation. The creative team exceeded our expectations with a fresh, modern brand identity that has significantly increased customer engagement. Their branding expertise and strategic thinking were outstanding. Highly recommended!
           </Quote>
         </Testimonial1>
         <Testimonial1
@@ -44,11 +35,7 @@ export default function Testimonial4() {
           cite="Jennifer Bradley"
         >
           <Quote>
-            From our initial consultation to the final reveal, every step was
-            professional and exciting. They helped us reimagine our entire home,
-            creating functional spaces that are also beautiful. The color
-            consultation alone was worth it – our home has never felt more
-            cohesive and welcoming. We've already referred them to friends!
+            From our initial consultation to the final brand launch, every step was professional and exciting. They helped us reimagine our entire brand, creating a visual identity that truly resonates with our audience. The brand strategy and messaging alone were worth it – our company has never felt more cohesive and authentic. We've already referred them to colleagues!
           </Quote>
         </Testimonial1>
         <Testimonial1
@@ -56,11 +43,7 @@ export default function Testimonial4() {
           cite="David Park"
         >
           <Quote>
-            As a first-time homeowner, I was overwhelmed by the possibilities.
-            The design team listened to my needs, respected my budget, and
-            delivered a stunning space that maximizes every square foot of my
-            urban condo. Their furniture selection and space planning expertise
-            turned my small space into a comfortable, stylish home. Thank you!
+            As a first-time business owner, I was overwhelmed by the branding process. The creative team listened to my vision, respected my budget, and delivered a stunning brand identity that positions us perfectly in our market. Their design expertise and strategic guidance gave me confidence to launch. Thank you!
           </Quote>
         </Testimonial1>
       </Swiper>
