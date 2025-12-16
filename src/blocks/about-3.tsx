@@ -1,6 +1,7 @@
 import {
   Section,
   Grid,
+  Swiper,
   Profile2,
   Heading,
   Paragraph,
@@ -17,7 +18,7 @@ export default function About3() {
         text="Meet Our Team"
         accent="professional designers"
       />
-      <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+      <Swiper layout="carousel">
         <Profile2
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
           bgColor="bg-body2/40"
@@ -249,7 +250,7 @@ export default function About3() {
             complete every design vision
           </Paragraph>
         </Profile2>
-      </Grid>
+      </Swiper>
     </Section>
   )
 }
