@@ -143,6 +143,28 @@
       "file": "/images/layout-1/pexels-ekrulila-27467420.jpg"
     }
   },
+  "/images/layout-1/pexels-ivan-s-8117415.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-ivan-s-8117415-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-ivan-s-8117415-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 934,
+      "file": "/images/layout-1/pexels-ivan-s-8117415-1400x934.jpg"
+    },
+    "full": {
+      "width": 2199,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-ivan-s-8117415.jpg"
+    }
+  },
   "/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg": {
     "small": {
       "width": 200,
