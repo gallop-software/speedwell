@@ -7,9 +7,7 @@ interface CanvasBackground3Props {
   className?: string
 }
 
-export function CanvasBackground3({
-  className = '',
-}: CanvasBackground3Props) {
+export function CanvasBackground3({ className = '' }: CanvasBackground3Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { ref: inViewRef, inView } = useInView({
     threshold: 0.1,
