@@ -90,23 +90,23 @@ export default function Showcase6() {
           className="mt-20"
         >
           <GalleryItem
-            src="/images/layout-1/gallery-1.jpg"
+            src="/images/layout-1/pexels-cottonbro-9745332.jpg"
             size="large"
           />
           <GalleryItem
-            src="/images/layout-1/gallery-2.jpg"
+            src="/images/layout-1/pexels-rachel-claire-5490970.jpg"
             size="large"
           />
           <GalleryItem
-            src="/images/layout-1/gallery-3.jpg"
+            src="/images/layout-1/pexels-divinetechygirl-1181311.jpg"
             size="large"
           />
           <GalleryItem
-            src="/images/layout-1/gallery-4.jpg"
+            src="/images/layout-1/pexels-mareklevak-2265482.jpg"
             size="large"
           />
           <GalleryItem
-            src="/images/layout-1/gallery-5.jpg"
+            src="/images/layout-1/pexels-tranmautritam-326518.jpg"
             size="large"
           />
           <GalleryItem

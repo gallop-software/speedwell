@@ -99,6 +99,28 @@
       "file": "/images/layout-1/pexels-anna-nekrashevich-7552446.jpg"
     }
   },
+  "/images/layout-1/pexels-cottonbro-9745332.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-cottonbro-9745332-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-cottonbro-9745332-467x700.jpg"
+    },
+    "large": {
+      "width": 934,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-cottonbro-9745332-934x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2199,
+      "file": "/images/layout-1/pexels-cottonbro-9745332.jpg"
+    }
+  },
   "/images/layout-1/pexels-diva-plavalaguna-6937932.jpg": {
     "small": {
       "width": 300,
@@ -119,6 +141,28 @@
       "width": 2200,
       "height": 1467,
       "file": "/images/layout-1/pexels-diva-plavalaguna-6937932.jpg"
+    }
+  },
+  "/images/layout-1/pexels-divinetechygirl-1181311.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-divinetechygirl-1181311-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-divinetechygirl-1181311-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 935,
+      "file": "/images/layout-1/pexels-divinetechygirl-1181311-1400x935.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1469,
+      "file": "/images/layout-1/pexels-divinetechygirl-1181311.jpg"
     }
   },
   "/images/layout-1/pexels-edmond-dantes-4344617.jpg": {
@@ -187,6 +231,28 @@
       "file": "/images/layout-1/pexels-ivan-s-8117415.jpg"
     }
   },
+  "/images/layout-1/pexels-mareklevak-2265482.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-mareklevak-2265482-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-mareklevak-2265482-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-1/pexels-mareklevak-2265482-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-mareklevak-2265482.jpg"
+    }
+  },
   "/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg": {
     "small": {
       "width": 200,
@@ -229,6 +295,28 @@
       "width": 2200,
       "height": 1467,
       "file": "/images/layout-1/pexels-pixabay-221185.jpg"
+    }
+  },
+  "/images/layout-1/pexels-rachel-claire-5490970.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-rachel-claire-5490970-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-rachel-claire-5490970-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-1/pexels-rachel-claire-5490970-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-rachel-claire-5490970.jpg"
     }
   },
   "/images/layout-1/pexels-ron-lach-8760891.jpg": {
@@ -295,6 +383,28 @@
       "width": 2200,
       "height": 1467,
       "file": "/images/layout-1/pexels-thirdman-5257578.jpg"
+    }
+  },
+  "/images/layout-1/pexels-tranmautritam-326518.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-tranmautritam-326518-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-tranmautritam-326518-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-1/pexels-tranmautritam-326518-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-tranmautritam-326518.jpg"
     }
   },
   "/images/leaf1.jpg": {
