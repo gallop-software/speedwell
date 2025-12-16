@@ -1,5 +1,5 @@
-import Hero1 from '@/blocks/hero-1'
-import Section1 from '@/blocks/section-1'
+import Hero15 from '@/blocks/hero-15'
+import Showcase7 from '@/blocks/showcase-7'
 import Section2 from '@/blocks/section-2'
 import Section3 from '@/blocks/section-3'
 import Blog1 from '@/blocks/blog-1'
@@ -7,8 +7,8 @@ import Blog1 from '@/blocks/blog-1'
 export default function Content() {
   return (
     <>
-      <Hero1 />
-      <Section1 />
+      <Hero15 />
+      <Showcase7 />
       <Section2 />
       <Section3 />
       <Blog1 />
