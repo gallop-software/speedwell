@@ -47,6 +47,7 @@ export {
 export { Testimonial2 } from './testimonial-2'
 export { Profile1 } from './profile-1'
 export { Masonry } from './masonry'
+export { CanvasBackground1 } from './canvas-background-1'
 export { ColorAnimation } from './color-animation'
 export { HeroCanvasBackground } from './hero-canvas-background'
 export { HeroCanvasBackground2 } from './hero-canvas-background-2'
