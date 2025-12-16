@@ -50,7 +50,7 @@ export function Profile2({
         alt={cite}
         rounded="rounded-full"
         wrap={false}
-        size="large"
+        size="small"
         aspect="aspect-square"
         className="w-40 h-40 object-cover mb-6"
       />
