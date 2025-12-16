@@ -10,9 +10,15 @@ interface SwiperProps {
   children: React.ReactNode
   /** Layout type: "slider" (default) or "carousel" */
   layout?: 'slider' | 'carousel'
+  /** Text for the next button in carousel layout (default: "See More") */
+  nextButtonText?: string
 }
 
-export function Swiper({ children, layout = 'slider' }: SwiperProps) {
+export function Swiper({
+  children,
+  layout = 'slider',
+  nextButtonText = 'See More',
+}: SwiperProps) {
   let swiperId = 'swiper-' + useId()
   swiperId = swiperId.replace(/:/g, '-')
 
@@ -33,7 +39,7 @@ export function Swiper({ children, layout = 'slider' }: SwiperProps) {
             className={`swiper-button-next-${swiperId} text-accent hover:text-accent/80 text-base justify-end flex flex-row items-center gap-2 cursor-pointer disabled:opacity-40 transition-opacity ml-4`}
             aria-label="Next slide"
           >
-            <span className="hidden sm:inline">See More</span>
+            <span className="hidden sm:inline">{nextButtonText}</span>
             <Icon
               icon={arrowLongRightIcon}
               className="shrink-0 h-auto w-6"
@@ -49,11 +55,11 @@ export function Swiper({ children, layout = 'slider' }: SwiperProps) {
           layout === 'slider' && 'max-w-[950px] xl:max-w-none'
         )}
       >
-        <div className="swiper-wrapper items-start flex mb-20">
+        <div className="swiper-wrapper flex mb-20">
           {Children.map(children, (child, index) => (
             <div
               key={index}
-              className="swiper-slide"
+              className="swiper-slide h-full! *:h-full!"
             >
               {child}
             </div>
