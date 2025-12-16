@@ -4,11 +4,8 @@ import {
   Profile2,
   Heading,
   Paragraph,
-  IconText,
   FancyHeading,
 } from '@/components'
-import mapPinIcon from '@iconify/icons-heroicons/map-pin'
-import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
 
 export default function About3() {
   return (
@@ -40,15 +37,6 @@ export default function About3() {
             With over 15 years of experience, Sarah leads our design vision with
             creativity and strategic insight
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            New York, NY
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -73,15 +61,6 @@ export default function About3() {
             Specializing in office and retail spaces, Michael creates functional
             environments that inspire productivity
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            San Francisco, CA
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -106,15 +85,6 @@ export default function About3() {
             Robert brings warmth and personality to every home with his
             thoughtful approach to residential design
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Austin, TX
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -139,15 +109,6 @@ export default function About3() {
             David has an exceptional eye for color theory and material
             selection, elevating every project
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Seattle, WA
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -172,15 +133,6 @@ export default function About3() {
             Ryan specializes in creating beautiful, functional kitchens and
             bathrooms that stand the test of time
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Boston, MA
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -205,15 +157,6 @@ export default function About3() {
             Lucas transforms challenging layouts into optimized, flowing spaces
             that maximize function and beauty
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Chicago, IL
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -238,15 +181,6 @@ export default function About3() {
             Amanda ensures every project runs smoothly from concept to
             completion with expert coordination
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={academicCapIcon}
-          >
-            PMP Certified
-          </IconText>
         </Profile2>
 
         <Profile2
@@ -271,15 +205,6 @@ export default function About3() {
             Robert curates perfect furniture selections and styling details that
             complete every design vision
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={academicCapIcon}
-          >
-            ASID Member
-          </IconText>
         </Profile2>
       </Grid>
     </Section>

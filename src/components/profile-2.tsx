@@ -1,6 +1,14 @@
 import React from 'react'
 import { clsx } from 'clsx'
 import { Image } from './image'
+import { Icon } from './icon'
+
+interface ContactLink {
+  /** Iconify icon object */
+  icon: object
+  /** URL for the link */
+  link: string
+}
 
 interface Profile2Props {
   /** Image source URL for the testimonial author */
@@ -13,6 +21,8 @@ interface Profile2Props {
   aspect?: string
   /** Custom rounded classes for the image (default: "rounded-t-full") */
   rounded?: string
+  /** Social media or contact links with icons */
+  contact?: ContactLink[]
 }
 
 export function Profile2({
@@ -21,6 +31,7 @@ export function Profile2({
   children,
   aspect = 'aspect-[3/4]',
   rounded = 'rounded-t-full',
+  contact,
 }: Profile2Props) {
   return (
     <div className="flex flex-col items-center relative">
@@ -38,6 +49,24 @@ export function Profile2({
       />
       <div className="px-6 text-center w-full border border-accent2 pt-[130px] -mt-24 relative z-0 [&>*:last-child]:mb-0 pb-14 [&>*]:max-w-lg flex justify-center flex-col items-center">
         {children}
+        {contact && contact.length > 0 && (
+          <div className="flex gap-4 justify-center mt-4">
+            {contact.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-accent transition-colors"
+              >
+                <Icon
+                  icon={item.icon}
+                  className="w-5 h-5"
+                />
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
