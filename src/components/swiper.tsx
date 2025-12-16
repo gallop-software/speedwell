@@ -1,6 +1,9 @@
 import { useId, Children } from 'react'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import clsx from 'clsx'
+import { Icon } from './icon'
+import arrowLongRightIcon from '@iconify/icons-heroicons/arrow-long-right-20-solid'
+import arrowLongLeftIcon from '@iconify/icons-heroicons/arrow-long-left-20-solid'
 
 interface SwiperProps {
   /** Child components to render inside the swiper */
@@ -15,6 +18,29 @@ export function Swiper({ children, layout = 'slider' }: SwiperProps) {
 
   return (
     <>
+      {layout === 'carousel' && (
+        <div className="w-full flex justify-between mb-3 mt-0">
+          <button
+            className={`swiper-button-prev-${swiperId} text-accent hover:text-accent/80 text-lg justify-end flex flex-row items-center gap-2 cursor-pointer disabled:opacity-40 transition-opacity`}
+            aria-label="Previous slide"
+          >
+            <Icon
+              icon={arrowLongLeftIcon}
+              className="shrink-0 h-auto w-6"
+            />
+          </button>
+          <button
+            className={`swiper-button-next-${swiperId} text-accent hover:text-accent/80 text-base justify-end flex flex-row items-center gap-2 cursor-pointer disabled:opacity-40 transition-opacity ml-4`}
+            aria-label="Next slide"
+          >
+            <span className="hidden sm:inline">See More</span>
+            <Icon
+              icon={arrowLongRightIcon}
+              className="shrink-0 h-auto w-6"
+            />
+          </button>
+        </div>
+      )}
       <div
         id={swiperId}
         className={clsx(

@@ -2,10 +2,17 @@
 
 import { useEffect, useRef } from 'react'
 import Swiper from 'swiper'
-import { Pagination, Autoplay, EffectFade } from 'swiper/modules'
+import {
+  Pagination,
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Keyboard,
+} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-fade'
+import 'swiper/css/navigation'
 
 interface SwiperSliderInitProps {
   swiperId: string
@@ -29,12 +36,15 @@ const SwiperSliderInit = ({
 
     // Initialize Swiper with layout-specific config
     const config: any = {
-      modules: [Pagination, Autoplay, EffectFade],
+      modules: [Pagination, Autoplay, EffectFade, Navigation, Keyboard],
       spaceBetween: 30,
       autoHeight: true,
       observer: true,
       observeParents: true,
-      loop: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
       autoplay: {
         delay: 4500,
         pauseOnMouseEnter: false,
@@ -42,22 +52,33 @@ const SwiperSliderInit = ({
       },
       pagination: {
         el: `#${swiperId} .swiper-pagination`,
-        clickable: true, // Enables clicking on dots
+        clickable: true,
       },
     }
 
     if (layout === 'slider') {
       config.effect = 'fade'
+      config.loop = true
       config.fadeEffect = { crossFade: true }
     } else if (layout === 'carousel') {
+      config.loop = false
       config.slidesPerView = 1
       config.breakpoints = {
-        640: { slidesPerView: 1 },
-        1024: { slidesPerView: 2 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+      config.navigation = {
+        prevEl: `.swiper-button-prev-${swiperId}`,
+        nextEl: `.swiper-button-next-${swiperId}`,
       }
     }
 
     swiperInstanceRef.current = new Swiper(swiperContainer, config)
+
+    // Force enable keyboard after initialization
+    if (swiperInstanceRef.current?.keyboard) {
+      swiperInstanceRef.current.keyboard.enable()
+    }
 
     // Mark as initialized
     initializedRef.current = true
