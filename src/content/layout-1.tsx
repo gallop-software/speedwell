@@ -4,6 +4,7 @@ import Content6 from '@/blocks/content-6'
 import Showcase6 from '@/blocks/showcase-6'
 import Cover5 from '@/blocks/cover-5'
 import About3 from '@/blocks/about-3'
+import Section36 from '@/blocks/section-36'
 import Blog2 from '@/blocks/blog-2'
 import Contact3 from '@/blocks/contact-3'
 import Contact4 from '@/blocks/contact-4'
@@ -17,6 +18,7 @@ export default function Content() {
       <Content6 />
       <Showcase6 />
       <About3 />
+      <Section36 />
       <Cover5 />
       <Blog2 />
       <Testimonial4 />
