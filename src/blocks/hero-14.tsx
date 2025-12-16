@@ -117,26 +117,15 @@ export default function Hero14() {
     <>
       <Navbar config={navConfig} />
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
-        <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
-          <Columns reverseColumns>
-            <Column className="relative -mx-6">
-              <Image
-                className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover object-top"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-                alt="Labore voluptate enim aliquip eiusmod occaecat"
-                rounded="rounded-none"
-                size="large"
-                lazy={false}
-              />
-              <Accent
-                color="text-white"
-                className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
-              >
-                transformed
-              </Accent>
-            </Column>
-            <Column className="mx-auto max-w-2xl lg:max-w-7xl">
+        <div className="absolute inset-y-0 left-0 w-full xl:w-2/3 bg-body2 z-0"></div>
+        <div className="px-6 mx-auto max-w-[1600px] relative">
+          <Columns
+            reverseColumns={false}
+            className="bg-body2"
+            cols="grid-cols-1 xl:grid-cols-2"
+            gap="gap-0 xl:gap-20"
+          >
+            <Column className="mx-auto max-w-2xl lg:max-w-7xl py-24 max-xl:order-2">
               <Heading
                 as="h1"
                 className="max-w-2xl"
@@ -151,15 +140,33 @@ export default function Hero14() {
                 how Timmerman transforms ordinary spaces into extraordinary
                 environments.
               </Paragraph>
-              <Paragraph className="max-w-2xl">
-                Our before and after gallery showcases the dramatic impact that
-                expert design can have on any space. Whether it's a complete
-                home renovation, a commercial office redesign, or a single room
-                makeover, these transformations demonstrate our commitment to
-                excellence, creativity, and attention to detail. Every project
-                begins with understanding your vision and ends with exceeding
-                your expectations.
-              </Paragraph>
+            </Column>
+            <Column className="relative -mx-6 flex items-center flex-row-reverse h-full  max-xl:order-1">
+              <Image
+                className="w-2/3 h-full relative object-cover object-center"
+                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+                alt="Labore voluptate enim aliquip eiusmod occaecat"
+                rounded="rounded-none"
+                size="large"
+                lazy={false}
+              />
+              <div className="absolute h-auto top-30 bottom-30 w-3/7 left-0">
+                <Image
+                  className="width-full h-full object-cover object-top"
+                  aspect="aspect-none"
+                  src="/images/portfolio/pexels-pixabay-269218.jpg"
+                  alt="Labore voluptate enim aliquip eiusmod occaecat"
+                  rounded="rounded-none"
+                  size="large"
+                  lazy={false}
+                />
+              </div>
+              <Accent
+                color="text-white"
+                className="absolute hidden lg:block -bottom-8 xl:top-0 left-6 xl:-left-30 transform -rotate-12"
+              >
+                transformed
+              </Accent>
             </Column>
           </Columns>
         </div>
