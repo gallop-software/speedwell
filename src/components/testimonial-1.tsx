@@ -13,7 +13,7 @@ interface Testimonial1Props {
 
 export function Testimonial1({ img, cite, children }: Testimonial1Props) {
   return (
-    <div className="swiper-slide flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
       <div className="flex justify-center w-full [&>*]:max-w-3xl [&>*]:xl:max-w-4xl">
         {children}
       </div>
