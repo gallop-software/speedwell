@@ -5,6 +5,7 @@ import {
   Heading,
   Paragraph,
   IconText,
+  FancyHeading,
 } from '@/components'
 import mapPinIcon from '@iconify/icons-heroicons/map-pin'
 import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
@@ -12,6 +13,10 @@ import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
 export default function About3() {
   return (
     <Section className="mb-30 mt-30">
+      <FancyHeading
+        text="Meet Our Team"
+        accent="professional designers"
+      />
       <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         <Profile1
           aspect="aspect-[4/5]"
