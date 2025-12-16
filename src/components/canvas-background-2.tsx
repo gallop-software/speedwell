@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-interface HeroCanvasBackgroundProps {
+interface CanvasBackground2Props {
   className?: string
 }
 
-export function HeroCanvasBackground({
+export function CanvasBackground2({
   className = '',
-}: HeroCanvasBackgroundProps) {
+}: CanvasBackground2Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { ref: inViewRef, inView } = useInView({
     threshold: 0.1,

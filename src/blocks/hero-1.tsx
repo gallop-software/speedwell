@@ -11,8 +11,8 @@ import {
   Columns,
   Column,
   VimeoAutoPlayer,
-  HeroCanvasBackground,
-  HeroCanvasBackground2,
+  CanvasBackground2,
+  CanvasBackground3,
 } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
@@ -28,7 +28,7 @@ export default function Hero1() {
             alt=""
             className="absolute top-0 left-0 w-[95%] sm:w-[60%] lg:w-[40%] h-auto z-0 opacity-15"
           />
-          <HeroCanvasBackground2 className="absolute -bottom-10 -right-10 w-[500px] h-[500px] z-0" />
+          <CanvasBackground3 className="absolute -bottom-10 -right-10 w-[500px] h-[500px] z-0" />
           <Columns
             cols="grid-cols-1 lg:grid-cols-[3fr_2fr]"
             gap="gap-8 lg:gap-8 xl:gap-16"
