@@ -8,7 +8,7 @@ import {
   Image,
 } from '@/components'
 
-export default function Profile2() {
+export default function Content8() {
   return (
     <Section className="bg-body-light py-30">
       <Columns
@@ -42,13 +42,25 @@ export default function Profile2() {
             Emily Chen
           </Heading>
           <Paragraph>
-            Emily specializes in creating innovative commercial spaces that balance brand identity with employee wellbeing. With a background in corporate design and workplace strategy, she has transformed offices, retail spaces, and hospitality venues for clients ranging from tech startups to established corporations. Her designs are known for maximizing natural light, promoting collaboration, and incorporating sustainable materials.
+            Emily specializes in creating innovative commercial spaces that
+            balance brand identity with employee wellbeing. With a background in
+            corporate design and workplace strategy, she has transformed
+            offices, retail spaces, and hospitality venues for clients ranging
+            from tech startups to established corporations. Her designs are
+            known for maximizing natural light, promoting collaboration, and
+            incorporating sustainable materials.
           </Paragraph>
           <Paragraph>
-            A graduate of Parsons School of Design, Emily brings a strategic mindset to every project. She stays current with workplace trends and ergonomic research to create environments that boost productivity and employee satisfaction. Her portfolio includes award-winning office designs that have been featured in Architectural Digest and Interior Design Magazine.
+            A graduate of Parsons School of Design, Emily brings a strategic
+            mindset to every project. She stays current with workplace trends
+            and ergonomic research to create environments that boost
+            productivity and employee satisfaction. Her portfolio includes
+            award-winning office designs that have been featured in
+            Architectural Digest and Interior Design Magazine.
           </Paragraph>
           <Quote>
-            The best commercial spaces inspire people to do their best work while reflecting the unique culture and values of the organization.
+            The best commercial spaces inspire people to do their best work
+            while reflecting the unique culture and values of the organization.
           </Quote>
         </Column>
       </Columns>

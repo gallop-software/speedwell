@@ -8,7 +8,7 @@ import {
   Image,
 } from '@/components'
 
-export default function Profile3() {
+export default function Content9() {
   return (
     <Section className="bg-body2 py-30">
       <Columns
@@ -42,13 +42,24 @@ export default function Profile3() {
             Robert Rodriguez
           </Heading>
           <Paragraph>
-            Robert has a gift for transforming houses into homes that truly reflect his clients' personalities and lifestyles. With 10 years of experience in residential design, he specializes in creating warm, inviting spaces that balance aesthetics with everyday functionality. His approachable style and ability to listen make him a favorite among clients who want a collaborative design experience.
+            Robert has a gift for transforming houses into homes that truly
+            reflect his clients' personalities and lifestyles. With 10 years of
+            experience in residential design, he specializes in creating warm,
+            inviting spaces that balance aesthetics with everyday functionality.
+            His approachable style and ability to listen make him a favorite
+            among clients who want a collaborative design experience.
           </Paragraph>
           <Paragraph>
-            Robert graduated from Savannah College of Art and Design and has worked on projects ranging from cozy apartments to sprawling estates. He is passionate about sustainable design practices and loves incorporating vintage finds alongside contemporary pieces to create unique, layered interiors.
+            Robert graduated from Savannah College of Art and Design and has
+            worked on projects ranging from cozy apartments to sprawling
+            estates. He is passionate about sustainable design practices and
+            loves incorporating vintage finds alongside contemporary pieces to
+            create unique, layered interiors.
           </Paragraph>
           <Quote>
-            A home should tell your story and support how you actually live. My goal is to create spaces that feel both beautiful and effortlessly comfortable for daily life.
+            A home should tell your story and support how you actually live. My
+            goal is to create spaces that feel both beautiful and effortlessly
+            comfortable for daily life.
           </Quote>
         </Column>
       </Columns>

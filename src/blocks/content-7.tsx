@@ -8,7 +8,7 @@ import {
   Image,
 } from '@/components'
 
-export default function Profile1() {
+export default function Content7() {
   return (
     <Section
       className="bg-body py-30"
@@ -44,13 +44,25 @@ export default function Profile1() {
             James Mitchell
           </Heading>
           <Paragraph>
-            With over 15 years of experience in residential and commercial design, James founded Timmerman with a vision to create spaces that are both beautiful and deeply personal. His philosophy centers on listening first, understanding his clients' lifestyles, and translating their dreams into functional, stunning realities. James's work has been featured in numerous design publications, and he has earned a reputation for his attention to detail and collaborative approach.
+            With over 15 years of experience in residential and commercial
+            design, James founded Timmerman with a vision to create spaces that
+            are both beautiful and deeply personal. His philosophy centers on
+            listening first, understanding his clients' lifestyles, and
+            translating their dreams into functional, stunning realities.
+            James's work has been featured in numerous design publications, and
+            he has earned a reputation for his attention to detail and
+            collaborative approach.
           </Paragraph>
           <Paragraph>
-            James holds a degree in Interior Architecture from Rhode Island School of Design and is a certified member of ASID. When he is not designing, you can find him exploring antique markets, traveling for design inspiration, or mentoring young designers entering the field.
+            James holds a degree in Interior Architecture from Rhode Island
+            School of Design and is a certified member of ASID. When he is not
+            designing, you can find him exploring antique markets, traveling for
+            design inspiration, or mentoring young designers entering the field.
           </Paragraph>
           <Quote>
-            Great design is not about following trends—it is about creating timeless spaces that truly enhance how people live and work every single day.
+            Great design is not about following trends—it is about creating
+            timeless spaces that truly enhance how people live and work every
+            single day.
           </Quote>
         </Column>
       </Columns>

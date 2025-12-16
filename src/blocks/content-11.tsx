@@ -8,7 +8,7 @@ import {
   Image,
 } from '@/components'
 
-export default function Profile5() {
+export default function Content11() {
   return (
     <Section className="bg-body2 py-30">
       <Columns
@@ -42,10 +42,18 @@ export default function Profile5() {
             Marcus Foster
           </Heading>
           <Paragraph>
-            Marcus is the backbone of every Timmerman project, ensuring seamless execution from concept to completion. With his PMP certification and years of experience coordinating complex design projects, he keeps timelines on track, budgets in check, and communication flowing between all parties. Clients appreciate his proactive approach and ability to solve problems before they become issues.
+            Marcus is the backbone of every Timmerman project, ensuring seamless
+            execution from concept to completion. With his PMP certification and
+            years of experience coordinating complex design projects, he keeps
+            timelines on track, budgets in check, and communication flowing
+            between all parties. Clients appreciate his proactive approach and
+            ability to solve problems before they become issues.
           </Paragraph>
           <Quote>
-            Great design deserves flawless execution. My job is to handle all the logistics so our clients can focus on the exciting part—watching their vision come to life. Every detail matters, and I make sure nothing falls through the cracks.
+            Great design deserves flawless execution. My job is to handle all
+            the logistics so our clients can focus on the exciting part—watching
+            their vision come to life. Every detail matters, and I make sure
+            nothing falls through the cracks.
           </Quote>
         </Column>
       </Columns>
