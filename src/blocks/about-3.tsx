@@ -1,7 +1,7 @@
 import {
   Section,
   Grid,
-  Profile1,
+  Profile2,
   Heading,
   Paragraph,
   IconText,
@@ -18,7 +18,7 @@ export default function About3() {
         accent="professional designers"
       />
       <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
           cite="Sarah Mitchell"
@@ -49,9 +49,9 @@ export default function About3() {
           >
             New York, NY
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
           cite="Michael Chen"
@@ -82,9 +82,9 @@ export default function About3() {
           >
             San Francisco, CA
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
           cite="Robert Rodriguez"
@@ -115,9 +115,9 @@ export default function About3() {
           >
             Austin, TX
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-skildring-12871464.jpg"
           cite="David Thompson"
@@ -148,9 +148,9 @@ export default function About3() {
           >
             Seattle, WA
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
           cite="Ryan Anderson"
@@ -181,9 +181,9 @@ export default function About3() {
           >
             Boston, MA
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
           cite="Lucas Martinez"
@@ -214,9 +214,9 @@ export default function About3() {
           >
             Chicago, IL
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
           cite="Amanda Foster"
@@ -247,9 +247,9 @@ export default function About3() {
           >
             PMP Certified
           </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
+        <Profile2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
           cite="Robert Taylor"
@@ -280,7 +280,7 @@ export default function About3() {
           >
             ASID Member
           </IconText>
-        </Profile1>
+        </Profile2>
       </Grid>
     </Section>
   )
