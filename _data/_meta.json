@@ -99,6 +99,28 @@
       "file": "/images/layout-1/pexels-anna-nekrashevich-7552446.jpg"
     }
   },
+  "/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-pavel-danilyuk-6925321-1-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-pavel-danilyuk-6925321-1-467x700.jpg"
+    },
+    "large": {
+      "width": 935,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-pavel-danilyuk-6925321-1-935x1400.jpg"
+    },
+    "full": {
+      "width": 1469,
+      "height": 2200,
+      "file": "/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg"
+    }
+  },
   "/images/layout-1/pexels-ron-lach-8760891.jpg": {
     "small": {
       "width": 200,
