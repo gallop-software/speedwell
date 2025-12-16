@@ -66,7 +66,10 @@ export default function Section35() {
           </Quote>
         </Column>
       </Columns>
-      <Container align="content">
+      <Container
+        align="content"
+        padding="px-0"
+      >
         <Heading as="h2">Current Openings</Heading>
         <Accordion headingText="Interior Designer">
           <Heading as="h4">Responsibilities</Heading>

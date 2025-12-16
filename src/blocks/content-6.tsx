@@ -1,4 +1,4 @@
-import { Section, Heading, Paragraph } from '@/components'
+import { Section, Heading, Paragraph, Image } from '@/components'
 
 export default function Content6() {
   return (
@@ -23,6 +23,12 @@ export default function Content6() {
         incorporating the latest trends in workplace innovation and commercial
         aesthetics.
       </Paragraph>
+      <Image
+        src="/images/portfolio/pexels-pixabay-276724.jpg"
+        alt="Commercial interior design showcase"
+        size="large"
+        className="my-8"
+      />
       <Paragraph>
         We understand that successful commercial spaces must balance multiple
         objectives: enhancing employee productivity and satisfaction, creating
