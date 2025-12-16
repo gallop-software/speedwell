@@ -19,7 +19,7 @@ export default function Contact3() {
         align="items-start"
       >
         <Column className="mb-10">
-          <Heading as="h1">Let's Create Your Dream Space</Heading>
+          <Heading as="h1">Let's Build Your Brand Together</Heading>
           <Form>
             <FormInput
               name="emailSubject"
@@ -50,7 +50,7 @@ export default function Contact3() {
             />
             <FormTextArea
               name="message"
-              placeholder="Tell us about your project*"
+              placeholder="Tell us about your brand*"
               rows={4}
               label="Message"
               required
@@ -60,8 +60,8 @@ export default function Contact3() {
         </Column>
         <Column className="aspect-[8/9] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
-            alt="Beautiful interior design space"
+            src="/images/layout-1/pexels-edmond-dantes-4344617.jpg"
+            alt="Creative branding workspace"
             className="object-cover absolute inset-0 w-full h-full"
             size="large"
             lazy={false}

@@ -121,6 +121,28 @@
       "file": "/images/layout-1/pexels-diva-plavalaguna-6937932.jpg"
     }
   },
+  "/images/layout-1/pexels-edmond-dantes-4344617.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-edmond-dantes-4344617-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-edmond-dantes-4344617-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-1/pexels-edmond-dantes-4344617-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-edmond-dantes-4344617.jpg"
+    }
+  },
   "/images/layout-1/pexels-ekrulila-27467420.jpg": {
     "small": {
       "width": 200,
