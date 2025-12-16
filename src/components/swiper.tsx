@@ -44,7 +44,7 @@ export function Swiper({ children, layout = 'slider' }: SwiperProps) {
       <div
         id={swiperId}
         className={clsx(
-          'swiper lg:mt-0',
+          'swiper lg:mt-0 opacity-0 transition-opacity duration-300',
           layout === 'carousel' && 'overflow-visible!',
           layout === 'slider' && 'max-w-[950px] xl:max-w-none'
         )}

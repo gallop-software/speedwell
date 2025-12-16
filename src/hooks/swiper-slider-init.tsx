@@ -9,6 +9,7 @@ import {
   Navigation,
   Keyboard,
 } from 'swiper/modules'
+import { useInView } from 'react-intersection-observer'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-fade'
@@ -25,7 +26,24 @@ const SwiperSliderInit = ({
 }: SwiperSliderInitProps) => {
   const initializedRef = useRef(false)
   const swiperInstanceRef = useRef<Swiper | null>(null)
-  const observerRef = useRef<IntersectionObserver | null>(null)
+  const { ref, inView } = useInView({
+    threshold: 0.9,
+  })
+
+  useEffect(() => {
+    const swiperContainer = document.getElementById(swiperId)
+    if (swiperContainer) {
+      ref(swiperContainer)
+    }
+  }, [swiperId, ref])
+
+  useEffect(() => {
+    if (inView) {
+      swiperInstanceRef.current?.autoplay.start()
+    } else {
+      swiperInstanceRef.current?.autoplay.stop()
+    }
+  }, [inView])
 
   useEffect(() => {
     if (initializedRef.current) return // Ensure initialization only happens once
@@ -53,6 +71,13 @@ const SwiperSliderInit = ({
       pagination: {
         el: `#${swiperId} .swiper-pagination`,
         clickable: true,
+      },
+      on: {
+        init: function () {
+          // Fade in swiper after initialization
+          swiperContainer.classList.remove('opacity-0')
+          swiperContainer.classList.add('opacity-100')
+        },
       },
     }
 
@@ -83,28 +108,7 @@ const SwiperSliderInit = ({
     // Mark as initialized
     initializedRef.current = true
 
-    // Setup IntersectionObserver
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            swiperInstanceRef.current?.autoplay.start()
-          } else {
-            swiperInstanceRef.current?.autoplay.stop()
-          }
-        })
-      },
-      {
-        threshold: 0.9, // 10% of the swiper container should be visible
-      }
-    )
-
-    if (swiperContainer) {
-      observerRef.current.observe(swiperContainer)
-    }
-
     return () => {
-      observerRef.current?.disconnect()
       swiperInstanceRef.current?.destroy()
       initializedRef.current = false
     }
