@@ -15,7 +15,7 @@ export default function About3() {
     <Section className="mb-30 mt-30">
       <FancyHeading
         text="Meet Our Team"
-        accent="professional designers"
+        accent="creative minds"
       />
       <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         <Profile2
@@ -39,11 +39,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Principal Designer & Founder
+            Creative Director & Founder
           </Heading>
           <Paragraph>
-            With over 15 years of experience, Sarah leads our design vision with
-            creativity and strategic insight
+            With over 15 years of experience, Sarah leads our creative vision with
+            strategic insight and bold thinking
           </Paragraph>
         </Profile2>
 
@@ -68,11 +68,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Senior Commercial Designer
+            Brand Strategist
           </Heading>
           <Paragraph>
-            Specializing in office and retail spaces, Michael creates functional
-            environments that inspire productivity
+            Specializing in brand positioning and market analysis, Michael creates
+            strategic foundations that drive business growth
           </Paragraph>
         </Profile2>
 
@@ -97,11 +97,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Residential Design Lead
+            Lead Visual Designer
           </Heading>
           <Paragraph>
-            Robert brings warmth and personality to every home with his
-            thoughtful approach to residential design
+            Robert brings artistry and attention to detail to every brand identity
+            with his thoughtful approach to visual design
           </Paragraph>
         </Profile2>
 
@@ -126,11 +126,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Color & Materials Specialist
+            Typography & Color Specialist
           </Heading>
           <Paragraph>
-            David has an exceptional eye for color theory and material
-            selection, elevating every project
+            David has an exceptional eye for typography and color systems,
+            creating cohesive visual languages for every brand
           </Paragraph>
         </Profile2>
 
@@ -155,11 +155,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Kitchen & Bath Designer
+            Digital Designer
           </Heading>
           <Paragraph>
-            Ryan specializes in creating beautiful, functional kitchens and
-            bathrooms that stand the test of time
+            Ryan specializes in creating engaging digital experiences and
+            interactive designs that connect brands with audiences
           </Paragraph>
         </Profile2>
 
@@ -184,11 +184,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Space Planning Expert
+            UX/UI Designer
           </Heading>
           <Paragraph>
-            Lucas transforms challenging layouts into optimized, flowing spaces
-            that maximize function and beauty
+            Lucas transforms complex user journeys into intuitive experiences
+            that maximize engagement and conversion
           </Paragraph>
         </Profile2>
 
@@ -213,11 +213,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Project Manager
+            Account Director
           </Heading>
           <Paragraph>
-            Amanda ensures every project runs smoothly from concept to
-            completion with expert coordination
+            Amanda ensures every project runs smoothly from briefing to
+            launch with expert client coordination and strategic oversight
           </Paragraph>
         </Profile2>
 
@@ -242,11 +242,11 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Furniture & Styling Consultant
+            Copywriter & Content Strategist
           </Heading>
           <Paragraph>
-            Robert curates perfect furniture selections and styling details that
-            complete every design vision
+            Robert crafts compelling brand narratives and messaging strategies
+            that resonate with audiences and drive action
           </Paragraph>
         </Profile2>
       </Grid>
