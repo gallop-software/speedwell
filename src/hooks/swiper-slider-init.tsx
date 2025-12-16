@@ -39,9 +39,9 @@ const SwiperSliderInit = ({
 
   useEffect(() => {
     if (inView) {
-      swiperInstanceRef.current?.autoplay.start()
+      swiperInstanceRef.current?.autoplay?.start()
     } else {
-      swiperInstanceRef.current?.autoplay.stop()
+      swiperInstanceRef.current?.autoplay?.stop()
     }
   }, [inView])
 
