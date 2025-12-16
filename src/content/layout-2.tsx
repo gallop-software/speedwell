@@ -1,7 +1,7 @@
 import Hero15 from '@/blocks/hero-15'
 import Showcase7 from '@/blocks/showcase-7'
 import Pricing1 from '@/blocks/pricing-1'
-import Section2 from '@/blocks/section-2'
+import Testimonial5 from '@/blocks/testimonial-5'
 import Section3 from '@/blocks/section-3'
 import Blog1 from '@/blocks/blog-1'
 
@@ -11,7 +11,7 @@ export default function Content() {
       <Hero15 />
       <Showcase7 />
       <Pricing1 />
-      <Section2 />
+      <Testimonial5 />
       <Section3 />
       <Blog1 />
     </>

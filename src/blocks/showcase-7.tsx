@@ -10,8 +10,7 @@ import {
 
 export default function Showcase7() {
   return (
-    <Section className="py-30 bg-body-dark relative overflow-hidden">
-      <CanvasBackground1 className="absolute inset-0 w-full h-full" />
+    <Section className="py-30 bg-body2 relative overflow-hidden">
       <div className="relative">
         <Columns
           className="mb-8"
