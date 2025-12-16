@@ -143,6 +143,28 @@
       "file": "/images/layout-1/pexels-ron-lach-8760891.jpg"
     }
   },
+  "/images/layout-1/pexels-thirdman-5257578.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-thirdman-5257578-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-thirdman-5257578-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-1/pexels-thirdman-5257578-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-thirdman-5257578.jpg"
+    }
+  },
   "/images/leaf1.jpg": {
     "small": {
       "width": 169,
