@@ -24,7 +24,7 @@ interface SwiperSliderInitProps {
 const SwiperSliderInit = ({
   swiperId,
   layout = 'slider',
-  columns = 3,
+  columns,
 }: SwiperSliderInitProps) => {
   const initializedRef = useRef(false)
   const swiperInstanceRef = useRef<Swiper | null>(null)
@@ -70,10 +70,6 @@ const SwiperSliderInit = ({
         pauseOnMouseEnter: false,
         disableOnInteraction: true,
       },
-      pagination: {
-        el: `#${swiperId} .swiper-pagination`,
-        clickable: true,
-      },
       on: {
         init: function () {
           // Fade in swiper after initialization
@@ -84,9 +80,27 @@ const SwiperSliderInit = ({
     }
 
     if (layout === 'slider') {
-      config.effect = 'fade'
-      config.loop = true
-      config.fadeEffect = { crossFade: true }
+      config.pagination = {
+        el: `#${swiperId} .swiper-pagination`,
+        clickable: true,
+      }
+      config.navigation = {
+        prevEl: `.swiper-button-prev-${swiperId}`,
+        nextEl: `.swiper-button-next-${swiperId}`,
+      }
+      if (!columns) {
+        config.loop = true
+        config.effect = 'fade'
+        config.fadeEffect = { crossFade: true }
+      }
+
+      if (columns) {
+        config.slidesPerView = 1
+        config.breakpoints = {
+          768: { slidesPerView: columns === 2 ? 2 : 2 },
+          1024: { slidesPerView: columns },
+        }
+      }
     } else if (layout === 'carousel') {
       config.loop = false
       config.slidesPerView = 1

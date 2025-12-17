@@ -20,7 +20,7 @@ export function Swiper({
   children,
   layout = 'slider',
   nextButtonText = 'See More',
-  columns = 3,
+  columns,
 }: SwiperProps) {
   let swiperId = 'swiper-' + useId()
   swiperId = swiperId.replace(/:/g, '-')
