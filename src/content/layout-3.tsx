@@ -3,7 +3,7 @@ import Services1 from '@/blocks/services-1'
 import Portfolio1 from '@/blocks/portfolio-1'
 import Cover6 from '@/blocks/cover-6'
 import Testimonial6 from '@/blocks/testimonial-6'
-import Blog1 from '@/blocks/blog-1'
+import Contact6 from '@/blocks/contact-6'
 
 export default function Content() {
   return (
@@ -13,7 +13,7 @@ export default function Content() {
       <Portfolio1 />
       <Cover6 />
       <Testimonial6 />
-      <Blog1 />
+      <Contact6 />
     </>
   )
 }
