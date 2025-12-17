@@ -803,6 +803,28 @@
       "file": "/images/layout-3/pexels-the-iop-86002042-35241787.jpg"
     }
   },
+  "/images/layout-4/pexels-pixabay-260922.jpg": {
+    "small": {
+      "width": 300,
+      "height": 169,
+      "file": "/images/layout-4/pexels-pixabay-260922-300x169.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 394,
+      "file": "/images/layout-4/pexels-pixabay-260922-700x394.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 788,
+      "file": "/images/layout-4/pexels-pixabay-260922-1400x788.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1238,
+      "file": "/images/layout-4/pexels-pixabay-260922.jpg"
+    }
+  },
   "/images/leaf1.jpg": {
     "small": {
       "width": 169,
