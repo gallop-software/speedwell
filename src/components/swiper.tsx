@@ -25,6 +25,10 @@ export function Swiper({
   let swiperId = 'swiper-' + useId()
   swiperId = swiperId.replace(/:/g, '-')
 
+  if (!columns && layout === 'carousel') {
+    columns = 3
+  }
+
   return (
     <>
       {layout === 'carousel' && (
