@@ -16,9 +16,9 @@ export default function Content() {
       <Hero14 />
       <Section35 />
       <Content6 />
+      <Process1 />
       <Showcase6 />
       <About3 />
-      <Process1 />
       <Cover5 />
       <Blog2 />
       <Testimonial4 />

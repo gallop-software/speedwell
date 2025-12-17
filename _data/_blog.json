@@ -180,6 +180,21 @@
     }
   },
   {
+    "slug": "boutique-retail-design",
+    "metadata": {
+      "title": "Artisan Coffee Brand Identity | Specialty Roaster Branding",
+      "description": "Complete brand identity for specialty coffee roaster featuring sustainable packaging design, custom illustrations, and authentic visual storytelling.",
+      "date": "2024-12-10",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Packaging Design"
+      ],
+      "featuredImage": "/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg",
+      "author": ""
+    }
+  },
+  {
     "slug": "urban-penthouse-makeover",
     "metadata": {
       "title": "Urban Penthouse Makeover | Luxury City Living Interior Design",
@@ -206,6 +221,21 @@
         "Restaurant"
       ],
       "featuredImage": "/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg",
+      "author": ""
+    }
+  },
+  {
+    "slug": "modern-medical-office",
+    "metadata": {
+      "title": "Tech Startup Brand Launch | SaaS Company Branding",
+      "description": "Bold brand identity for innovative SaaS startup featuring vibrant gradients, custom iconography, and scalable design system for growth.",
+      "date": "2024-11-15",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Digital Branding"
+      ],
+      "featuredImage": "/images/layout-1/pexels-pixabay-221185.jpg",
       "author": ""
     }
   },
@@ -251,6 +281,21 @@
         "Minimalist"
       ],
       "featuredImage": "/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg",
+      "author": ""
+    }
+  },
+  {
+    "slug": "creative-agency-workspace",
+    "metadata": {
+      "title": "Organic Skincare Rebrand | Clean Beauty Brand Identity",
+      "description": "Minimalist rebrand for organic skincare line featuring botanical elements, sustainable packaging, and sophisticated visual identity for clean beauty market.",
+      "date": "2024-10-20",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Packaging Design"
+      ],
+      "featuredImage": "/images/layout-1/pexels-cottonbro-4154192.jpg",
       "author": ""
     }
   },
@@ -330,6 +375,21 @@
     }
   },
   {
+    "slug": "urban-coffee-house",
+    "metadata": {
+      "title": "Farm-to-Table Restaurant Brand | Sustainable Dining Identity",
+      "description": "Warm restaurant brand identity celebrating local agriculture with hand-lettered typography, seasonal design, and community-focused visual storytelling.",
+      "date": "2024-09-05",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Hospitality"
+      ],
+      "featuredImage": "/images/layout-1/pexels-enginakyurt-1435894.jpg",
+      "author": ""
+    }
+  },
+  {
     "slug": "sustainable-green-home",
     "metadata": {
       "title": "Sustainable Green Home | Eco-Friendly Interior Design",
@@ -360,6 +420,21 @@
     }
   },
   {
+    "slug": "tech-startup-headquarters",
+    "metadata": {
+      "title": "Boutique Hotel Rebrand | Luxury Hospitality Brand Identity",
+      "description": "Elegant rebrand for historic boutique hotel blending classic sophistication with modern luxury across all guest touchpoints and digital platforms.",
+      "date": "2024-08-12",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Hospitality"
+      ],
+      "featuredImage": "/images/layout-1/pexels-cottonbro-5379175.jpg",
+      "author": ""
+    }
+  },
+  {
     "slug": "transitional-townhouse",
     "metadata": {
       "title": "Transitional Townhouse | Historic Home Modern Update",
@@ -386,6 +461,21 @@
         "Minimalist"
       ],
       "featuredImage": "/images/portfolio/jvdm/pexels-jvdm-1457844.jpg",
+      "author": ""
+    }
+  },
+  {
+    "slug": "luxury-fitness-studio",
+    "metadata": {
+      "title": "Craft Brewery Brand Identity | Beer Label Design",
+      "description": "Bold brewery brand featuring custom illustrations, vibrant label designs, and cohesive identity system that stands out in craft beer market.",
+      "date": "2024-07-18",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Packaging Design"
+      ],
+      "featuredImage": "/images/layout-1/pexels-elevate-1267700.jpg",
       "author": ""
     }
   },

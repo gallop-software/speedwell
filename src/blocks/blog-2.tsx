@@ -7,7 +7,7 @@ export default function Blog2() {
         text="Latest Projects"
         accent="explore our portfolio"
       />
-      <Blog categoriesInclude={['Residential']} />
+      <Blog categoriesInclude={['Portfolio']} />
     </Section>
   )
 }
