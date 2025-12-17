@@ -66,7 +66,7 @@ const SwiperSliderInit = ({
       autoplay: {
         delay: 4500,
         pauseOnMouseEnter: false,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       },
       pagination: {
         el: `#${swiperId} .swiper-pagination`,
