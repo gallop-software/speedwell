@@ -6,6 +6,7 @@ export default function Cover5() {
       imageSrc="/images/layout-1/pexels-ivan-s-8117415.jpg"
       imageAlt="Creative workspace with design materials"
       imageClassName=""
+      parallax={true}
     >
       <Accent
         className="text-center"
