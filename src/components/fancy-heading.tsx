@@ -1,6 +1,7 @@
 import React from 'react'
 import { Heading } from './heading'
 import { Accent } from './accent'
+import clsx from 'clsx'
 
 interface FancyHeadingProps {
   text: string
@@ -8,6 +9,7 @@ interface FancyHeadingProps {
   className?: string
   id?: string
   as?: 'h1' | 'h2'
+  margin?: string
 }
 
 // Helper function to generate a valid ID from text
@@ -29,11 +31,12 @@ export function FancyHeading({
   className,
   id,
   as = 'h2',
+  margin = 'mb-16',
 }: FancyHeadingProps) {
   const generatedId = id || generateId(text, accent)
 
   return (
-    <div className={`text-center mb-16 ${className || ''}`}>
+    <div className={clsx('text-center', margin, className)}>
       <Heading
         as={as}
         styleAs="h2"
