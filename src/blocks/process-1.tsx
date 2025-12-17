@@ -19,7 +19,7 @@ const WhimsicalArrow = () => (
   </svg>
 )
 
-export default function Section36() {
+export default function Process1() {
   return (
     <Section className="my-30 bg-body">
       <div className="text-center max-w-4xl mx-auto mb-16">
