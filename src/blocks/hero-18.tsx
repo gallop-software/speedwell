@@ -68,7 +68,7 @@ export default function Hero18() {
                 <div className="absolute top-0 right-0 w-[70%] h-[60%] z-10">
                   <Image
                     className="w-full h-full object-cover shadow-2xl"
-                    src="/images/layout-5/pexels-jeremy-wong-382920-1082024.jpg"
+                    src="/images/layout-5/pexels-mat-brown-150387-1395967.jpg"
                     alt="Elegant wedding ceremony setup with beautiful floral arrangements"
                     size="large"
                     rounded="rounded-lg"
@@ -82,7 +82,7 @@ export default function Hero18() {
                 <div className="absolute bottom-0 left-0 w-[65%] h-[55%] z-20">
                   <Image
                     className="w-full h-full object-cover shadow-2xl"
-                    src="/images/layout-5/pexels-bohlemedia-1114425.jpg"
+                    src="/images/layout-5/pexels-thatguycraig000-2306281.jpg"
                     alt="Beautiful event decoration with elegant table settings"
                     size="large"
                     rounded="rounded-lg"
