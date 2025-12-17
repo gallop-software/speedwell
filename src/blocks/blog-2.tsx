@@ -7,7 +7,11 @@ export default function Blog2() {
         text="Latest Projects"
         accent="explore our portfolio"
       />
-      <Blog categoriesInclude={['Portfolio']} />
+      <Blog
+        perPage={6}
+        categoriesInclude={['Portfolio']}
+        loadMoreText="See More of My Work"
+      />
     </Section>
   )
 }
