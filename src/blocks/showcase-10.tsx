@@ -29,7 +29,7 @@ export default function Showcase10() {
         {/* Tall image - spans 2 rows */}
         <div className="md:row-span-2 relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[600px]">
           <Image
-            src="/images/portfolio/pexels-amelia-hallsworth-5461644.jpg"
+            src="/images/layout-5/pexels-jeremy-wong-382920-1082024.jpg"
             alt="Elegant wedding ceremony with floral arch"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -46,7 +46,7 @@ export default function Showcase10() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/portfolio/pexels-burst-545012.jpg"
+            src="/images/layout-5/pexels-bohlemedia-1114425.jpg"
             alt="Elegant table setting with floral centerpiece"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -63,7 +63,7 @@ export default function Showcase10() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/portfolio/pexels-clickerhappy-584399.jpg"
+            src="/images/layout-5/pexels-jeremy-wong-382920-1035665.jpg"
             alt="Beautiful event venue decoration"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -80,7 +80,7 @@ export default function Showcase10() {
         {/* Wide image - spans 2 columns */}
         <div className="md:col-span-2 relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/portfolio/pexels-dropshado-2251247.jpg"
+            src="/images/layout-5/pexels-pavel-danilyuk-6405768.jpg"
             alt="Corporate event setup"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -97,7 +97,7 @@ export default function Showcase10() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/portfolio/pexels-emrecan-2079249.jpg"
+            src="/images/layout-5/pexels-bendix-251808.jpg"
             alt="Event detail shot"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -114,7 +114,7 @@ export default function Showcase10() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/portfolio/pexels-bemistermister-2442904.jpg"
+            src="/images/layout-5/pexels-panditwiguna-2788488.jpg"
             alt="Outdoor event setup"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -128,10 +128,10 @@ export default function Showcase10() {
           </div>
         </div>
 
-        {/* Tall image - spans 2 rows */}
-        <div className="md:row-span-2 relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[600px]">
+        {/* Regular image */}
+        <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
+            src="/images/layout-5/pexels-pixabay-265947.jpg"
             alt="Elegant ballroom setup"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             size="large"
@@ -139,7 +139,7 @@ export default function Showcase10() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-2xl mb-2">Grand Ballroom</h3>
+              <h3 className="font-heading text-xl mb-2">Grand Ballroom</h3>
               <p className="text-sm text-white/90">Luxury wedding reception with 250 guests</p>
             </div>
           </div>
