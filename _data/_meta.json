@@ -121,6 +121,72 @@
       "file": "/images/layout-1/pexels-anna-nekrashevich-7552446.jpg"
     }
   },
+  "/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-blanca-isela-2156722885-35240180-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-blanca-isela-2156722885-35240180-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-1/pexels-blanca-isela-2156722885-35240180-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1466,
+      "file": "/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg"
+    }
+  },
+  "/images/layout-1/pexels-cottonbro-4154192.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-cottonbro-4154192-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-cottonbro-4154192-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-cottonbro-4154192-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-1/pexels-cottonbro-4154192.jpg"
+    }
+  },
+  "/images/layout-1/pexels-cottonbro-5379175.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-cottonbro-5379175-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-cottonbro-5379175-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-cottonbro-5379175-933x1400.jpg"
+    },
+    "full": {
+      "width": 1466,
+      "height": 2199,
+      "file": "/images/layout-1/pexels-cottonbro-5379175.jpg"
+    }
+  },
   "/images/layout-1/pexels-cottonbro-9745332.jpg": {
     "small": {
       "width": 200,
@@ -229,6 +295,50 @@
       "width": 1467,
       "height": 2200,
       "file": "/images/layout-1/pexels-ekrulila-27467420.jpg"
+    }
+  },
+  "/images/layout-1/pexels-elevate-1267700.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-elevate-1267700-200x300.jpg"
+    },
+    "medium": {
+      "width": 468,
+      "height": 700,
+      "file": "/images/layout-1/pexels-elevate-1267700-468x700.jpg"
+    },
+    "large": {
+      "width": 935,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-elevate-1267700-935x1400.jpg"
+    },
+    "full": {
+      "width": 1469,
+      "height": 2199,
+      "file": "/images/layout-1/pexels-elevate-1267700.jpg"
+    }
+  },
+  "/images/layout-1/pexels-enginakyurt-1435894.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-enginakyurt-1435894-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-enginakyurt-1435894-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 934,
+      "file": "/images/layout-1/pexels-enginakyurt-1435894-1400x934.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-1/pexels-enginakyurt-1435894.jpg"
     }
   },
   "/images/layout-1/pexels-goumbik-669610.jpg": {

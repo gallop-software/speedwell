@@ -19,7 +19,7 @@ export default function Testimonial5() {
       <Swiper>
         <Testimonial1
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
-          cite="Sarah Johnson"
+          cite="James Anderson"
         >
           <Quote>
             This platform has completely transformed how our team collaborates.

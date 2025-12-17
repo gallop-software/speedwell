@@ -1,17 +1,17 @@
-import Hero1 from '@/blocks/hero-1'
-import Section1 from '@/blocks/section-1'
-import Section2 from '@/blocks/section-2'
-import Section3 from '@/blocks/section-3'
-import Blog1 from '@/blocks/blog-1'
+import Hero18 from '@/blocks/hero-18'
+import Showcase10 from '@/blocks/showcase-10'
+import Section36 from '@/blocks/section-36'
+import Testimonial8 from '@/blocks/testimonial-8'
+import Pricing2 from '@/blocks/pricing-2'
 
 export default function Content() {
   return (
     <>
-      <Hero1 />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Blog1 />
+      <Hero18 />
+      <Showcase10 />
+      <Section36 />
+      <Testimonial8 />
+      <Pricing2 />
     </>
   )
 }
