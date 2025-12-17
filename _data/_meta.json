@@ -869,6 +869,28 @@
       "file": "/images/layout-3/pexels-the-iop-86002042-35241787.jpg"
     }
   },
+  "/images/layout-4/pexels-jonathanborba-2878738.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-4/pexels-jonathanborba-2878738-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-4/pexels-jonathanborba-2878738-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-4/pexels-jonathanborba-2878738-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-4/pexels-jonathanborba-2878738.jpg"
+    }
+  },
   "/images/layout-4/pexels-pixabay-260922.jpg": {
     "small": {
       "width": 300,
