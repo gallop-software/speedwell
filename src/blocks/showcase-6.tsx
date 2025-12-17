@@ -12,7 +12,10 @@ import {
 
 export default function Showcase6() {
   return (
-    <Section className="py-30 bg-body-dark relative overflow-hidden">
+    <Section
+      id="portfolio"
+      className="py-30 bg-body-dark relative overflow-hidden"
+    >
       <CanvasBackground1 className="absolute inset-0 w-full h-full" />
       <div className="relative">
         <Columns
@@ -34,7 +37,13 @@ export default function Showcase6() {
               Tech Startup Brand Identity
             </Heading>
             <Paragraph>
-              A complete brand transformation for an innovative tech startup, including logo design, brand guidelines, website design, and marketing collateral. Our strategic approach positioned them as industry leaders, resulting in increased investor confidence and customer acquisition. The bold visual identity perfectly captures their forward-thinking mission while maintaining accessibility and professionalism across all touchpoints.
+              A complete brand transformation for an innovative tech startup,
+              including logo design, brand guidelines, website design, and
+              marketing collateral. Our strategic approach positioned them as
+              industry leaders, resulting in increased investor confidence and
+              customer acquisition. The bold visual identity perfectly captures
+              their forward-thinking mission while maintaining accessibility and
+              professionalism across all touchpoints.
             </Paragraph>
           </Column>
           <Column className="aspect-[7/6] relative">
@@ -62,10 +71,22 @@ export default function Showcase6() {
               Luxury Retail Rebrand
             </Heading>
             <Paragraph>
-              Repositioning an established retail brand for the modern luxury market through refined visual identity, elegant packaging design, and immersive digital experience. Our strategic rebrand elevated their market position while honoring their heritage, resulting in expanded customer base and premium pricing power. The cohesive brand system works seamlessly across physical stores, e-commerce, and social media.
+              Repositioning an established retail brand for the modern luxury
+              market through refined visual identity, elegant packaging design,
+              and immersive digital experience. Our strategic rebrand elevated
+              their market position while honoring their heritage, resulting in
+              expanded customer base and premium pricing power. The cohesive
+              brand system works seamlessly across physical stores, e-commerce,
+              and social media.
             </Paragraph>
             <Paragraph>
-              The rebrand included comprehensive photography direction, custom typography, and a sophisticated color palette that speaks to discerning customers. Every touchpoint was carefully crafted to deliver a consistent luxury experience, from embossed business cards to responsive web design. The result is a brand that commands attention and builds lasting emotional connections with its audience.
+              The rebrand included comprehensive photography direction, custom
+              typography, and a sophisticated color palette that speaks to
+              discerning customers. Every touchpoint was carefully crafted to
+              deliver a consistent luxury experience, from embossed business
+              cards to responsive web design. The result is a brand that
+              commands attention and builds lasting emotional connections with
+              its audience.
             </Paragraph>
           </Column>
           <Column className="aspect-[5/7] relative">

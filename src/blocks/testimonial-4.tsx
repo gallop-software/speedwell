@@ -9,7 +9,10 @@ import {
 
 export default function Testimonial4() {
   return (
-    <Section className="bg-accent4 py-20">
+    <Section
+      id="testimonials"
+      className="bg-accent4 py-20"
+    >
       <FancyHeading
         text="Client Success Stories"
         accent="what our clients say"

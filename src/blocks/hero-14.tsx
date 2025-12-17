@@ -21,8 +21,8 @@ import type { NavConfig } from '@/components/navbar/types'
 
 const navConfig: NavConfig = {
   links: [
-    { href: '#phase-1', label: 'About' },
-    { href: '#latest-projects-explore-our-portfolio', label: 'Portfolio' },
+    { href: '#about', label: 'About' },
+    { href: '#portfolio', label: 'Portfolio' },
     {
       href: '#',
       label: 'Company',
@@ -32,19 +32,19 @@ const navConfig: NavConfig = {
           {
             name: 'Showcase',
             description: 'View our featured work',
-            href: '#commercial-excellence',
+            href: '#showcase',
             icon: sparklesIcon,
           },
           {
             name: 'Testimonials',
             description: 'What our clients say about us',
-            href: '#client-success-stories-what-our-clients-say',
+            href: '#testimonials',
             icon: chatBubbleIcon,
           },
           {
             name: 'Contact',
             description: 'Get in touch with our team',
-            href: '#lets-create-your-dream-space',
+            href: '#contact',
             icon: userIcon,
           },
         ],
@@ -133,7 +133,11 @@ export default function Hero14() {
                 Building Brands That Stand Out
               </Heading>
               <Paragraph className="max-w-2xl">
-                We are a branding and creative agency specializing in brand identity, visual design, and strategic positioning. From logo design and brand guidelines to website development and marketing campaigns, we help businesses tell their story and connect with their audience in meaningful ways.
+                We are a branding and creative agency specializing in brand
+                identity, visual design, and strategic positioning. From logo
+                design and brand guidelines to website development and marketing
+                campaigns, we help businesses tell their story and connect with
+                their audience in meaningful ways.
               </Paragraph>
             </Column>
             <Column className="relative -mx-6 flex items-center flex-row-reverse h-full  max-xl:order-1">

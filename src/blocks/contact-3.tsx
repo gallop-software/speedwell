@@ -1,79 +1,114 @@
 import {
   Section,
-  Columns,
-  Column,
   Heading,
   Form,
   FormInput,
   FormTextArea,
   FormButton,
+  FormName,
+  FormRadioGroup,
+  FormCheckboxGroup,
   Image,
   Accent,
+  Container,
 } from '@/components'
 
 export default function Contact3() {
   return (
-    <Section className="py-20 md:py-30 bg-body2 relative">
-      <Columns
-        reverseColumns={false}
-        align="items-start"
+    <Section
+      id="contact"
+      className="py-20 md:py-30 bg-body2 relative"
+    >
+      <Container
+        align="content"
+        padding="p-0"
       >
-        <Column className="mb-10">
-          <Heading as="h1">Let's Build Your Brand Together</Heading>
-          <Form>
-            <FormInput
-              name="emailSubject"
-              defaultValue="Contact Form"
-              label="Email Subject"
-              hidden
-            />
-            <FormInput
-              name="email"
-              type="email"
-              placeholder="Email*"
-              label="Email"
-              required
-            />
-            <FormInput
-              name="phone"
-              type="tel"
-              placeholder="Phone*"
-              label="Phone"
-              required
-            />
-            <FormInput
-              name="subject"
-              type="text"
-              placeholder="Subject*"
-              label="Subject"
-              required
-            />
-            <FormTextArea
-              name="message"
-              placeholder="Tell us about your brand*"
-              rows={4}
-              label="Message"
-              required
-            />
-            <FormButton label="Send Message" />
-          </Form>
-        </Column>
-        <Column className="aspect-[8/9] relative">
-          <Image
-            src="/images/layout-1/pexels-edmond-dantes-4344617.jpg"
-            alt="Creative branding workspace"
-            className="object-cover absolute inset-0 w-full h-full"
-            size="large"
-            lazy={false}
+        <Heading
+          textAlign="text-center"
+          as="h1"
+        >
+          Let's Build Your Brand Together
+        </Heading>
+        <Form>
+          <FormInput
+            name="emailSubject"
+            defaultValue="Brand Consultation Request"
+            label="Email Subject"
+            hidden
           />
-          <Accent
-            className="absolute -top-[5%] lg:-top-[10%] right-[5%] lg:right-[5%] xl:-right-[10%] z-30 -rotate-[10deg]"
-            color="text-white"
-          >
-            connect
-          </Accent>
-        </Column>
-      </Columns>
+          <FormName
+            name1="firstName"
+            name2="lastName"
+            placeholder1="First name*"
+            placeholder2="Last name*"
+            label1="First Name"
+            label2="Last Name"
+            requiredFirst
+            requiredSecond
+          />
+          <FormInput
+            name="email"
+            type="email"
+            placeholder="Email*"
+            label="Email"
+            required
+          />
+          <FormInput
+            name="company"
+            type="text"
+            placeholder="Company/Business Name"
+            label="Company"
+          />
+          <FormInput
+            name="phone"
+            type="tel"
+            placeholder="Phone"
+            label="Phone"
+          />
+          <FormCheckboxGroup
+            heading="What services are you interested in?"
+            name="services"
+            options={[
+              'Brand Strategy',
+              'Logo Design',
+              'Visual Identity',
+              'Marketing Consulting',
+              'Website Design',
+              'Social Media / Digital Marketing',
+              'Packaging Design',
+              'Print Materials',
+            ]}
+            label="Services"
+          />
+          <FormRadioGroup
+            heading="What is your estimated budget?"
+            name="budget"
+            options={[
+              'Under $5,000',
+              '$5,000 - $10,000',
+              '$10,000 - $25,000',
+              '$25,000 - $50,000',
+              '$50,000+',
+              'Not sure yet',
+            ]}
+            label="Budget"
+          />
+          <FormRadioGroup
+            heading="What is your timeline?"
+            name="timeline"
+            options={['ASAP', '1-2 weeks', '1 month', '2-3 months', 'Flexible']}
+            label="Timeline"
+          />
+          <FormTextArea
+            name="message"
+            placeholder="Tell us about your project, goals, and any challenges you're facing*"
+            rows={4}
+            label="Message"
+            required
+          />
+          <FormButton label="Send Message" />
+        </Form>
+      </Container>
     </Section>
   )
 }
