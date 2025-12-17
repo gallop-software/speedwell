@@ -55,11 +55,11 @@ export function Swiper({
           layout === 'slider' && 'max-w-[950px] xl:max-w-none'
         )}
       >
-        <div className="swiper-wrapper flex mb-20">
+        <div className="swiper-wrapper flex items-start mb-20">
           {Children.map(children, (child, index) => (
             <div
               key={index}
-              className="swiper-slide h-full! *:h-full!"
+              className="swiper-slide"
             >
               {child}
             </div>
