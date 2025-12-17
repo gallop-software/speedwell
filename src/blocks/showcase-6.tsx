@@ -98,6 +98,14 @@ export default function Showcase6() {
             size="large"
           />
           <GalleryItem
+            src="/images/layout-1/pexels-alesiakozik-7797453.jpg"
+            size="large"
+          />
+          <GalleryItem
+            src="/images/layout-1/pexels-leeloothefirst-7598022.jpg"
+            size="large"
+          />
+          <GalleryItem
             src="/images/layout-1/pexels-divinetechygirl-1181311.jpg"
             size="large"
           />
@@ -110,15 +118,7 @@ export default function Showcase6() {
             size="large"
           />
           <GalleryItem
-            src="/images/layout-1/gallery-6.jpg"
-            size="large"
-          />
-          <GalleryItem
-            src="/images/layout-1/gallery-7.jpg"
-            size="large"
-          />
-          <GalleryItem
-            src="/images/layout-1/gallery-8.jpg"
+            src="/images/layout-1/pexels-goumbik-669610.jpg"
             size="large"
           />
         </Gallery>
