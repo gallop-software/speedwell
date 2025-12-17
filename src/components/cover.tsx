@@ -12,6 +12,7 @@ interface CoverProps {
   height?: string
   className?: string
   innerAlign?: 'wide' | 'none' | 'content'
+  parallax?: boolean
 }
 
 export function Cover({
@@ -24,6 +25,7 @@ export function Cover({
   height,
   className,
   innerAlign,
+  parallax = false,
 }: CoverProps) {
   return (
     <div
@@ -37,15 +39,27 @@ export function Cover({
     >
       {imageSrc && (
         <>
-          <Image
-            src={imageSrc}
-            size="full"
-            alt={imageAlt || ''}
-            className={clsx(
-              'object-cover object-center absolute inset-0 w-full h-full',
-              imageClassName
-            )}
-          />
+          {parallax ? (
+            <div
+              className={clsx(
+                'absolute inset-0 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat',
+                imageClassName
+              )}
+              style={{ backgroundImage: `url(${imageSrc})` }}
+              role="img"
+              aria-label={imageAlt || ''}
+            />
+          ) : (
+            <Image
+              src={imageSrc}
+              size="full"
+              alt={imageAlt || ''}
+              className={clsx(
+                'object-cover object-center absolute inset-0 w-full h-full',
+                imageClassName
+              )}
+            />
+          )}
           <div
             className={clsx('absolute inset-0', overlayColor || 'bg-black/30')}
           ></div>
