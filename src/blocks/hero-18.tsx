@@ -43,7 +43,7 @@ export default function Hero18() {
               
               <Buttons className="flex-wrap">
                 <Button
-                  href="#services"
+                  href="#planning-services-tailored-to-you"
                   variant="primary"
                   icon={heartIcon}
                   iconPlacement="after"
@@ -51,7 +51,7 @@ export default function Hero18() {
                   Plan Your Event
                 </Button>
                 <Button
-                  href="#portfolio"
+                  href="#moments-weve-crafted"
                   variant="secondary"
                   icon={sparklesIcon}
                   iconPlacement="after"
@@ -68,7 +68,7 @@ export default function Hero18() {
                 <div className="absolute top-0 right-0 w-[70%] h-[60%] z-10">
                   <Image
                     className="w-full h-full object-cover shadow-2xl"
-                    src="/images/portfolio/pexels-amelia-hallsworth-5461644.jpg"
+                    src="/images/layout-5/pexels-jeremy-wong-382920-1082024.jpg"
                     alt="Elegant wedding ceremony setup with beautiful floral arrangements"
                     size="large"
                     rounded="rounded-lg"
@@ -82,7 +82,7 @@ export default function Hero18() {
                 <div className="absolute bottom-0 left-0 w-[65%] h-[55%] z-20">
                   <Image
                     className="w-full h-full object-cover shadow-2xl"
-                    src="/images/portfolio/pexels-burst-545012.jpg"
+                    src="/images/layout-5/pexels-bohlemedia-1114425.jpg"
                     alt="Beautiful event decoration with elegant table settings"
                     size="large"
                     rounded="rounded-lg"
