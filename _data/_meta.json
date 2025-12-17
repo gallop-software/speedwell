@@ -979,6 +979,28 @@
       "file": "/images/layout-4/pexels-pixabay-260922.jpg"
     }
   },
+  "/images/layout-4/pexels-reneterp-1581384.jpg": {
+    "small": {
+      "width": 225,
+      "height": 300,
+      "file": "/images/layout-4/pexels-reneterp-1581384-225x300.jpg"
+    },
+    "medium": {
+      "width": 525,
+      "height": 700,
+      "file": "/images/layout-4/pexels-reneterp-1581384-525x700.jpg"
+    },
+    "large": {
+      "width": 1050,
+      "height": 1400,
+      "file": "/images/layout-4/pexels-reneterp-1581384-1050x1400.jpg"
+    },
+    "full": {
+      "width": 1650,
+      "height": 2200,
+      "file": "/images/layout-4/pexels-reneterp-1581384.jpg"
+    }
+  },
   "/images/layout-4/pexels-valeriya-9266842.jpg": {
     "small": {
       "width": 200,
