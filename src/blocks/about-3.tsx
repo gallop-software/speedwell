@@ -17,6 +17,7 @@ export default function About3() {
       <FancyHeading
         text="Meet Our Team"
         accent="creative minds"
+        margin="mb-4"
       />
       <Swiper layout="carousel">
         <Profile2
