@@ -1,45 +1,96 @@
-import { Section, Columns, Column, Heading, Paragraph, Card1 } from '@/components'
+'use client'
+
+import { Section, Heading, Paragraph, Card1, Button } from '@/components'
 
 export default function Services1() {
+  const scrollToPortfolio = (category: string) => {
+    const portfolioSection = document.getElementById('portfolio-section')
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' })
+      // Trigger category change after scroll
+      setTimeout(() => {
+        const event = new CustomEvent('portfolioFilterChange', { detail: category })
+        window.dispatchEvent(event)
+      }, 500)
+    }
+  }
+
   return (
     <Section className="py-20 bg-body relative">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-12">
-          <Heading as="h2">Our Services</Heading>
-          <Paragraph>
-            Built for startups — product design, integrations, analytics, and
-            dedicated support to help your team scale.
-          </Paragraph>
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left side - Service Cards Grid */}
+          <div className="grid grid-cols-2 gap-6">
+            {/* Portrait Photography - top left */}
+            <div className="col-span-1">
+              <div onClick={() => scrollToPortfolio('PORTRAIT')} className="cursor-pointer">
+                <Card1
+                  id="service-portrait"
+                  title="Portrait"
+                  image="/images/layout-3/pexels-shotbyrain-6507483.jpg"
+                  href="#portfolio-section"
+                  alt="Portrait photography"
+                  size="large"
+                />
+              </div>
+            </div>
+            
+            {/* Landscape & Nature - top right (offset down) */}
+            <div className="col-span-1 mt-12">
+              <div onClick={() => scrollToPortfolio('LANDSCAPE')} className="cursor-pointer">
+                <Card1
+                  id="service-landscape"
+                  title="Landscape"
+                  image="/images/layout-3/pexels-akos-szabo-145938-440731.jpg"
+                  href="#portfolio-section"
+                  alt="Landscape and nature photography"
+                  size="large"
+                />
+              </div>
+            </div>
+            
+            {/* Abstract Photography - bottom left */}
+            <div className="col-span-1">
+              <div onClick={() => scrollToPortfolio('ABSTRACT')} className="cursor-pointer">
+                <Card1
+                  id="service-abstract"
+                  title="Abstract"
+                  image="/images/layout-3/pexels-2149489342-35218938.jpg"
+                  href="#portfolio-section"
+                  alt="Abstract photography"
+                  size="large"
+                />
+              </div>
+            </div>
+
+            {/* Commercial - bottom right (offset down) */}
+            <div className="col-span-1 mt-12">
+              <div onClick={() => scrollToPortfolio('COMMERCIAL')} className="cursor-pointer">
+                <Card1
+                  id="service-commercial"
+                  title="Commercial"
+                  image="/images/layout-1/pexels-shattha-pilabut-38930-135620.jpg"
+                  href="#portfolio-section"
+                  alt="Commercial photography"
+                  size="large"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Services Content */}
+          <div className="flex flex-col justify-center">
+            <Heading as="h2" className="mb-6">
+              My Services
+            </Heading>
+            <Paragraph className="text-lg mb-6">
+              Photography is my passion and I love to turn ideas into beautiful things. Whether capturing intimate portraits, stunning landscapes, creative abstracts, or professional commercial work, I bring a unique artistic vision to every project.
+            </Paragraph>
+            <Paragraph className="mb-8">
+              With years of experience and a commitment to excellence, I specialize in creating images that tell compelling stories and evoke emotion. From concept to final delivery, I work closely with my clients to understand their vision and bring it to life through thoughtful composition, expert lighting, and creative post-processing. Each photograph is crafted with attention to detail and a dedication to capturing moments that matter.
+            </Paragraph>
+          </div>
         </div>
-        <Columns cols="grid-cols-1 md:grid-cols-3" gap="gap-8">
-          <Column>
-            <Card1
-              id="service-ux"
-              title="Product Design"
-              image="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-              href="#"
-              alt="Product design"
-            />
-          </Column>
-          <Column>
-            <Card1
-              id="service-integrations"
-              title="Integrations & API"
-              image="/images/portfolio/pexels-pixabay-259962.jpg"
-              href="#"
-              alt="Integrations"
-            />
-          </Column>
-          <Column>
-            <Card1
-              id="service-analytics"
-              title="Analytics & Insights"
-              image="/images/portfolio/pexels-mikhail-nilov-6707628.jpg"
-              href="#"
-              alt="Analytics"
-            />
-          </Column>
-        </Columns>
       </div>
     </Section>
   )
