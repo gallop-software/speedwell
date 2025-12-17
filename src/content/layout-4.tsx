@@ -1,17 +1,19 @@
-import Hero1 from '@/blocks/hero-1'
-import Section1 from '@/blocks/section-1'
-import Section2 from '@/blocks/section-2'
-import Section3 from '@/blocks/section-3'
-import Blog1 from '@/blocks/blog-1'
+import Hero17 from '@/blocks/hero-17'
+import About4 from '@/blocks/about-4'
+import Showcase8 from '@/blocks/showcase-8'
+import Showcase9 from '@/blocks/showcase-9'
+import Testimonial7 from '@/blocks/testimonial-7'
+import { Navbar } from '@/components'
 
 export default function Content() {
   return (
     <>
-      <Hero1 />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Blog1 />
+      <Navbar />
+      <Hero17 />
+      <About4 />
+      <Showcase8 />
+      <Showcase9 />
+      <Testimonial7 />
     </>
   )
 }
