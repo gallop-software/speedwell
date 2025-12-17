@@ -44,8 +44,8 @@ export default function About3() {
             Creative Director & Founder
           </Heading>
           <Paragraph>
-            With over 15 years of experience, Sarah leads our creative vision with
-            strategic insight and bold thinking
+            With over 15 years of experience, Sarah leads our creative vision
+            with strategic insight and bold thinking
           </Paragraph>
         </Profile2>
 
@@ -73,8 +73,8 @@ export default function About3() {
             Brand Strategist
           </Heading>
           <Paragraph>
-            Specializing in brand positioning and market analysis, Michael creates
-            strategic foundations that drive business growth
+            Specializing in brand positioning and market analysis, Michael
+            creates strategic foundations that drive business growth
           </Paragraph>
         </Profile2>
 
@@ -102,8 +102,8 @@ export default function About3() {
             Lead Visual Designer
           </Heading>
           <Paragraph>
-            Robert brings artistry and attention to detail to every brand identity
-            with his thoughtful approach to visual design
+            Robert brings artistry and attention to detail to every brand
+            identity with his thoughtful approach to visual design
           </Paragraph>
         </Profile2>
 
@@ -218,8 +218,8 @@ export default function About3() {
             Account Director
           </Heading>
           <Paragraph>
-            Amanda ensures every project runs smoothly from briefing to
-            launch with expert client coordination and strategic oversight
+            Amanda ensures every project runs smoothly from briefing to launch
+            with expert client coordination and strategic oversight
           </Paragraph>
         </Profile2>
 
