@@ -23,10 +23,9 @@ export default function Process1() {
   return (
     <Section className="my-30 bg-body">
       <div className="text-center max-w-4xl mx-auto mb-16">
-        <Subheading className="mb-6">Our Working Process</Subheading>
+        <Subheading className="mb-6">Our Branding Process</Subheading>
         <Heading as="h2">
-          Find out everything you need to know about creating a business process
-          model
+          A strategic approach to building brands that resonate with your audience
         </Heading>
       </div>
       <Columns
@@ -43,10 +42,10 @@ export default function Process1() {
               styleAs="h4"
               margin="mb-8"
             >
-              Collect Ideas
+              Discovery & Research
             </Heading>
             <Paragraph margin="mb-0">
-              Etiam porta malesuada magna mollis euismod consectetur leo elit
+              We dive deep into your business, audience, and market to uncover unique insights that shape your brand strategy
             </Paragraph>
           </Card4>
           <WhimsicalArrow />
@@ -61,10 +60,10 @@ export default function Process1() {
               styleAs="h4"
               margin="mb-8"
             >
-              Data Analysis
+              Creative Development
             </Heading>
             <Paragraph margin="mb-0">
-              Etiam porta malesuada magna mollis euismod consectetur leo elit
+              Our team crafts compelling visual identities, messaging, and brand experiences that connect with your target audience
             </Paragraph>
           </Card4>
           <WhimsicalArrow />
@@ -79,10 +78,10 @@ export default function Process1() {
               styleAs="h4"
               margin="mb-8"
             >
-              Finalize Product
+              Launch & Support
             </Heading>
             <Paragraph margin="mb-0">
-              Etiam porta malesuada magna mollis euismod consectetur leo elit
+              We deliver comprehensive brand guidelines and support your team in bringing the brand to life across all touchpoints
             </Paragraph>
           </Card4>
         </Column>
