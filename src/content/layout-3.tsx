@@ -2,6 +2,7 @@ import Hero16 from '@/blocks/hero-16'
 import Services1 from '@/blocks/services-1'
 import Portfolio1 from '@/blocks/portfolio-1'
 import Cover6 from '@/blocks/cover-6'
+import Testimonial6 from '@/blocks/testimonial-6'
 import Blog1 from '@/blocks/blog-1'
 
 export default function Content() {
@@ -11,6 +12,7 @@ export default function Content() {
       <Services1 />
       <Portfolio1 />
       <Cover6 />
+      <Testimonial6 />
       <Blog1 />
     </>
   )
