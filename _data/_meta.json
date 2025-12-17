@@ -77,6 +77,28 @@
       "file": "/images/hero-bg.png"
     }
   },
+  "/images/layout-1/pexels-alesiakozik-7797453.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-1/pexels-alesiakozik-7797453-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-1/pexels-alesiakozik-7797453-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-1/pexels-alesiakozik-7797453-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-1/pexels-alesiakozik-7797453.jpg"
+    }
+  },
   "/images/layout-1/pexels-anna-nekrashevich-7552446.jpg": {
     "small": {
       "width": 200,
@@ -209,6 +231,28 @@
       "file": "/images/layout-1/pexels-ekrulila-27467420.jpg"
     }
   },
+  "/images/layout-1/pexels-goumbik-669610.jpg": {
+    "small": {
+      "width": 300,
+      "height": 199,
+      "file": "/images/layout-1/pexels-goumbik-669610-300x199.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 464,
+      "file": "/images/layout-1/pexels-goumbik-669610-700x464.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 927,
+      "file": "/images/layout-1/pexels-goumbik-669610-1400x927.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1457,
+      "file": "/images/layout-1/pexels-goumbik-669610.jpg"
+    }
+  },
   "/images/layout-1/pexels-ivan-s-8117415.jpg": {
     "small": {
       "width": 300,
@@ -229,6 +273,28 @@
       "width": 2199,
       "height": 1467,
       "file": "/images/layout-1/pexels-ivan-s-8117415.jpg"
+    }
+  },
+  "/images/layout-1/pexels-leeloothefirst-7598022.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-1/pexels-leeloothefirst-7598022-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-1/pexels-leeloothefirst-7598022-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 935,
+      "file": "/images/layout-1/pexels-leeloothefirst-7598022-1400x935.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1469,
+      "file": "/images/layout-1/pexels-leeloothefirst-7598022.jpg"
     }
   },
   "/images/layout-1/pexels-mareklevak-2265482.jpg": {
@@ -801,6 +867,28 @@
       "width": 2200,
       "height": 1466,
       "file": "/images/layout-3/pexels-the-iop-86002042-35241787.jpg"
+    }
+  },
+  "/images/layout-4/pexels-pixabay-260922.jpg": {
+    "small": {
+      "width": 300,
+      "height": 169,
+      "file": "/images/layout-4/pexels-pixabay-260922-300x169.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 394,
+      "file": "/images/layout-4/pexels-pixabay-260922-700x394.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 788,
+      "file": "/images/layout-4/pexels-pixabay-260922-1400x788.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1238,
+      "file": "/images/layout-4/pexels-pixabay-260922.jpg"
     }
   },
   "/images/leaf1.jpg": {
