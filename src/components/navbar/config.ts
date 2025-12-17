@@ -159,7 +159,7 @@ export const links: NavLink[] = [
           icon: viewGridIcon,
         },
         {
-          name: 'Layout 3',
+          name: 'Photographer Portfolio',
           description: 'Multi-column content distribution design',
           href: '/layout-3',
           icon: viewColumnIcon,
