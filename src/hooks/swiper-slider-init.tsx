@@ -18,11 +18,13 @@ import 'swiper/css/navigation'
 interface SwiperSliderInitProps {
   swiperId: string
   layout?: 'slider' | 'carousel'
+  columns?: 2 | 3
 }
 
 const SwiperSliderInit = ({
   swiperId,
   layout = 'slider',
+  columns = 3,
 }: SwiperSliderInitProps) => {
   const initializedRef = useRef(false)
   const swiperInstanceRef = useRef<Swiper | null>(null)
@@ -89,8 +91,8 @@ const SwiperSliderInit = ({
       config.loop = false
       config.slidesPerView = 1
       config.breakpoints = {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
+        768: { slidesPerView: columns === 2 ? 2 : 2 },
+        1024: { slidesPerView: columns },
       }
       config.navigation = {
         prevEl: `.swiper-button-prev-${swiperId}`,

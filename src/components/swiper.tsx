@@ -12,12 +12,15 @@ interface SwiperProps {
   layout?: 'slider' | 'carousel'
   /** Text for the next button in carousel layout (default: "See More") */
   nextButtonText?: string
+  /** Number of columns for carousel layout (2 or 3, default: 3) */
+  columns?: 2 | 3
 }
 
 export function Swiper({
   children,
   layout = 'slider',
   nextButtonText = 'See More',
+  columns = 3,
 }: SwiperProps) {
   let swiperId = 'swiper-' + useId()
   swiperId = swiperId.replace(/:/g, '-')
@@ -72,6 +75,7 @@ export function Swiper({
       <SwiperSliderInit
         swiperId={swiperId}
         layout={layout}
+        columns={columns}
       />
     </>
   )
