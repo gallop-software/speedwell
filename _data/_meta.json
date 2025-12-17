@@ -891,6 +891,72 @@
       "file": "/images/layout-4/pexels-jonathanborba-2878738.jpg"
     }
   },
+  "/images/layout-4/pexels-minchephoto-7491887.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-4/pexels-minchephoto-7491887-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-4/pexels-minchephoto-7491887-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-4/pexels-minchephoto-7491887-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-4/pexels-minchephoto-7491887.jpg"
+    }
+  },
+  "/images/layout-4/pexels-nadin-sh-78971847-12918197.jpg": {
+    "small": {
+      "width": 225,
+      "height": 300,
+      "file": "/images/layout-4/pexels-nadin-sh-78971847-12918197-225x300.jpg"
+    },
+    "medium": {
+      "width": 525,
+      "height": 700,
+      "file": "/images/layout-4/pexels-nadin-sh-78971847-12918197-525x700.jpg"
+    },
+    "large": {
+      "width": 1050,
+      "height": 1400,
+      "file": "/images/layout-4/pexels-nadin-sh-78971847-12918197-1050x1400.jpg"
+    },
+    "full": {
+      "width": 1650,
+      "height": 2200,
+      "file": "/images/layout-4/pexels-nadin-sh-78971847-12918197.jpg"
+    }
+  },
+  "/images/layout-4/pexels-peps-silvestro-180443212-18229216.jpg": {
+    "small": {
+      "width": 300,
+      "height": 300,
+      "file": "/images/layout-4/pexels-peps-silvestro-180443212-18229216-300x300.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 700,
+      "file": "/images/layout-4/pexels-peps-silvestro-180443212-18229216-700x700.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 1400,
+      "file": "/images/layout-4/pexels-peps-silvestro-180443212-18229216-1400x1400.jpg"
+    },
+    "full": {
+      "width": 2048,
+      "height": 2048,
+      "file": "/images/layout-4/pexels-peps-silvestro-180443212-18229216.jpg"
+    }
+  },
   "/images/layout-4/pexels-pixabay-260922.jpg": {
     "small": {
       "width": 300,
@@ -911,6 +977,28 @@
       "width": 2200,
       "height": 1238,
       "file": "/images/layout-4/pexels-pixabay-260922.jpg"
+    }
+  },
+  "/images/layout-4/pexels-valeriya-9266842.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-4/pexels-valeriya-9266842-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-4/pexels-valeriya-9266842-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-4/pexels-valeriya-9266842-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-4/pexels-valeriya-9266842.jpg"
     }
   },
   "/images/leaf1.jpg": {
