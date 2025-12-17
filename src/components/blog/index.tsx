@@ -10,11 +10,13 @@ export async function Blog({
   perPage = 9,
   categoriesInclude,
   categoriesExclude,
+  loadMoreText = 'Load More Posts',
 }: {
   className?: string
   perPage?: number
   categoriesInclude?: string[]
   categoriesExclude?: string[]
+  loadMoreText?: string
 }) {
   // Get all posts from static metadata file and sort by date (newest first)
   let allPosts = []
@@ -58,6 +60,7 @@ export async function Blog({
       allPosts={allPosts}
       perPage={perPage}
       className={className}
+      loadMoreText={loadMoreText}
     />
   )
 }

@@ -42,10 +42,12 @@ export function BlogClient({
   allPosts = [],
   perPage = 9,
   className,
+  loadMoreText = 'Load More Posts',
 }: {
   allPosts?: BlogPost[]
   perPage?: number
   className?: string
+  loadMoreText?: string
 }) {
   const [displayedCount, setDisplayedCount] = useState(perPage)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -318,7 +320,7 @@ export function BlogClient({
             iconPlacement="after"
             className="cursor-pointer"
           >
-            Load More Posts
+            {loadMoreText}
           </Button>
         </div>
       )}
