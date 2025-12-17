@@ -210,6 +210,21 @@
     }
   },
   {
+    "slug": "creative-coworking-space",
+    "metadata": {
+      "title": "Creative Coworking Space Brand | Community-Driven Design",
+      "description": "Dynamic brand identity for coworking space featuring bold design that fosters creative community and inspires collaboration among professionals.",
+      "date": "2024-12-03",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Workspace"
+      ],
+      "featuredImage": "/images/layout-1/pexels-mareklevak-2265482.jpg",
+      "author": ""
+    }
+  },
+  {
     "slug": "restaurant-interior-design",
     "metadata": {
       "title": "Restaurant Interior Design | Upscale Dining Experience",
@@ -255,6 +270,21 @@
     }
   },
   {
+    "slug": "fashion-boutique-rebrand",
+    "metadata": {
+      "title": "Fashion Boutique Rebrand | Sustainable Luxury Design",
+      "description": "Sophisticated rebrand for fashion boutique balancing timeless elegance with sustainability, creating a destination for conscious consumers.",
+      "date": "2024-11-08",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Fashion"
+      ],
+      "featuredImage": "/images/layout-1/pexels-rachel-claire-5490970.jpg",
+      "author": ""
+    }
+  },
+  {
     "slug": "historic-brownstone-revival",
     "metadata": {
       "title": "Historic Brownstone Revival | Victorian Home Restoration",
@@ -281,6 +311,21 @@
         "Minimalist"
       ],
       "featuredImage": "/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg",
+      "author": ""
+    }
+  },
+  {
+    "slug": "wellness-brand-identity",
+    "metadata": {
+      "title": "Wellness Studio Brand Identity | Holistic Design",
+      "description": "Serene brand identity for wellness studio featuring soft palettes, organic shapes, and mindful design that creates calm, welcoming experiences.",
+      "date": "2024-10-22",
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Wellness"
+      ],
+      "featuredImage": "/images/layout-1/pexels-diva-plavalaguna-6937932.jpg",
       "author": ""
     }
   },
