@@ -1,6 +1,7 @@
 import Hero18 from '@/blocks/hero-18'
 import Showcase10 from '@/blocks/showcase-10'
 import Section36 from '@/blocks/section-36'
+import Testimonial8 from '@/blocks/testimonial-8'
 
 export default function Content() {
   return (
@@ -8,6 +9,7 @@ export default function Content() {
       <Hero18 />
       <Showcase10 />
       <Section36 />
+      <Testimonial8 />
     </>
   )
 }
