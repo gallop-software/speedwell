@@ -9,7 +9,7 @@ import { DesktopNav } from './desktop-nav'
 import { MobileNav } from './mobile-nav'
 import { SearchButton } from './search-button'
 import { SocialMediaNav } from './social-media-nav'
-import { StickyMobileNavButton } from './sticky-mobile-nav-button'
+import { MobileNavButton } from './mobile-nav-button'
 import { StickyNavbar } from './sticky-navbar'
 import useOffsetTop from '@/hooks/use-offset-top'
 import { state, useSnapshot } from '@/state'
@@ -82,7 +82,7 @@ export function Navbar2({
                     dark={dark}
                   />
                   <SocialMediaNav dark={dark} />
-                  <StickyMobileNavButton />
+                  <MobileNavButton />
                 </div>
               </div>
               <MobileNav />

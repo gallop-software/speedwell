@@ -15,7 +15,7 @@ import { MobileNav } from './mobile-nav'
  * Sticky Mobile Nav Button with Sidebar Dialog
  * Opens mobile navigation in a sliding sidebar dialog
  */
-export function StickyMobileNavButton(): ReactElement {
+export function MobileNavButton(): ReactElement {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeModal = () => {

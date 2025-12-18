@@ -7,7 +7,7 @@ import { Logo } from '../logo'
 import { DesktopNav } from './desktop-nav'
 import { SearchButton } from './search-button'
 import { SocialMediaNav } from './social-media-nav'
-import { StickyMobileNavButton } from './sticky-mobile-nav-button'
+import { MobileNavButton } from './mobile-nav-button'
 import { homeLink } from './config'
 
 /**
@@ -76,7 +76,7 @@ export function StickyNavbar({
                   <div className="flex items-center ml-auto space-x-0 md:space-x-1">
                     <SearchButton enableShortcut={false} />
                     <SocialMediaNav />
-                    <StickyMobileNavButton />
+                    <MobileNavButton />
                   </div>
                 </div>
               </div>
