@@ -1,15 +1,17 @@
-import { Navbar, Cover, Heading, Accent } from '@/components'
+import { Navbar, Image, Container, Heading, Accent } from '@/components'
 
 export default function Hero17() {
   return (
-    <Cover
-      imageSrc="/images/layout-4/pexels-pixabay-260922.jpg"
-      imageAlt="Layout 4 hero image"
-      overlayColor="bg-black/40"
-      height="h-[600px] md:h-[750px] lg:h-[900px]"
-    >
+    <div className="relative w-full overflow-hidden z-0 bg-body2">
+      <Image
+        src="/images/layout-4/pexels-pixabay-260922.jpg"
+        size="full"
+        alt="Layout 4 hero image"
+        className="object-cover object-center absolute inset-0 w-full h-full"
+      />
+      <div className="absolute inset-0 bg-black/40"></div>
       <Navbar dark />
-      <div className="flex flex-col gap-0 justify-center items-center text-center">
+      <div className="relative flex flex-col justify-center items-center text-center min-h-[700px] py-64">
         <Heading
           as="h1"
           color="text-white"
@@ -24,6 +26,6 @@ export default function Hero17() {
           where flavor meets elegance
         </Accent>
       </div>
-    </Cover>
+    </div>
   )
 }
