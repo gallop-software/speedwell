@@ -131,6 +131,7 @@ The navbar supports a `dark` prop for use on dark backgrounds (e.g., hero sectio
 ```
 
 When `dark={true}`:
+
 - Logo switches to white version (`/images/logo-white.png`)
 - Desktop nav links use white text with `hover:bg-white/10`
 - Social media icons use white color
