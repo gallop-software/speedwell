@@ -1,14 +1,14 @@
-# Navbar Architecture
+# Navbar2 Architecture
 
 ## Overview
 
-The navbar is a modular component system organized in `/src/components/navbar/`. This architecture improves maintainability, readability, and makes it easier to understand and modify specific parts of the navigation.
+The navbar is a modular component system organized in `/src/components/navbar-2/`. This architecture improves maintainability, readability, and makes it easier to understand and modify specific parts of the navigation.
 
 ## File Structure
 
 ```
-src/components/navbar/
-├── index.tsx                      # Main navbar component
+src/components/navbar-2/
+├── index.tsx                      # Main navbar component (Navbar2)
 ├── types.ts                       # TypeScript interfaces
 ├── config.ts                      # Navigation data (links, social, homeLink)
 ├── desktop-nav.tsx               # Desktop navigation with dropdowns
@@ -31,6 +31,7 @@ src/components/navbar/
   - Renders both desktop and mobile navigation
   - Renders sticky navbar that appears on scroll
 - **Props**: `className?: string`
+- **Export**: `Navbar2`
 
 ### `types.ts`
 
