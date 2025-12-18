@@ -4,7 +4,6 @@ import Showcase8 from '@/blocks/showcase-8'
 import Showcase9 from '@/blocks/showcase-9'
 import Testimonial7 from '@/blocks/testimonial-7'
 import Contact7 from '@/blocks/contact-7'
-import { Navbar } from '@/components'
 
 export default function Content() {
   return (
