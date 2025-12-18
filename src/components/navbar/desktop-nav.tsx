@@ -2,6 +2,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
+import clsx from 'clsx'
 import { Icon } from '../icon'
 import { links } from './config'
 import type { NavLink, DropdownItem } from './types'
@@ -14,9 +15,11 @@ import type { NavLink, DropdownItem } from './types'
 export function DesktopNav({
   isScrolling,
   forceCloseOnHide,
+  dark = false,
 }: {
   isScrolling?: boolean
   forceCloseOnHide?: boolean
+  dark?: boolean
 } = {}): ReactElement {
   return (
     <nav className="relative hidden lg:flex">
@@ -32,7 +35,14 @@ export function DesktopNav({
             >
               {({ open }: any) => (
                 <>
-                  <PopoverButton className="flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium text-contrast bg-blend-multiply focus:outline-none data-hover:bg-black/[2.5%] rounded-lg">
+                  <PopoverButton
+                    className={clsx(
+                      'flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
+                      dark
+                        ? 'text-white hover:bg-white/10'
+                        : 'text-contrast data-hover:bg-black/[2.5%]'
+                    )}
+                  >
                     {label}
                     <Icon
                       icon={chevronDownIcon}
@@ -102,7 +112,12 @@ export function DesktopNav({
           ) : (
             <Link
               href={href}
-              className="flex items-center px-4 py-3 text-lg font-body font-medium text-contrast bg-blend-multiply hover:bg-black/[2.5%] rounded-lg"
+              className={clsx(
+                'flex items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply rounded-lg',
+                dark
+                  ? 'text-white hover:bg-white/10'
+                  : 'text-contrast hover:bg-black/[2.5%]'
+              )}
             >
               {label}
             </Link>

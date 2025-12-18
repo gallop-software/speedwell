@@ -48,6 +48,7 @@ export interface SocialLink {
  */
 export interface NavbarProps {
   className?: string
+  dark?: boolean
 }
 
 /**

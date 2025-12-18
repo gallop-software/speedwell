@@ -4,13 +4,19 @@ interface LogoProps {
   className?: string
   width?: number
   height?: number
+  dark?: boolean
 }
 
-export function Logo({ className = '', width, height }: LogoProps) {
+export function Logo({
+  className = '',
+  width,
+  height,
+  dark = false,
+}: LogoProps) {
   return (
     <Image
       rounded="rounded-none"
-      src="/images/logo.png"
+      src={dark ? '/images/logo-white.png' : '/images/logo.png'}
       size="medium"
       alt="Logo"
       {...(width && { width })}

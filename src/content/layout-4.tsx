@@ -9,7 +9,6 @@ import { Navbar } from '@/components'
 export default function Content() {
   return (
     <>
-      <Navbar />
       <Hero17 />
       <About4 />
       <Showcase8 />
