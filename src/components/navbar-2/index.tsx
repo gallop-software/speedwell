@@ -30,7 +30,10 @@ import { homeLink } from './config'
  *
  * @returns {ReactElement} The rendered navigation component
  */
-export function Navbar2({ className = '' }: NavbarProps = {}): ReactElement {
+export function Navbar2({
+  className = '',
+  dark = false,
+}: NavbarProps = {}): ReactElement {
   useOffsetTop(800)
   const snap = useSnapshot(state)
   const isScrolling = snap.isScrolling
@@ -59,19 +62,26 @@ export function Navbar2({ className = '' }: NavbarProps = {}): ReactElement {
                     <Logo
                       className="w-[120px] md:w-[200px]"
                       width={200}
+                      dark={dark}
                     />
                   </Link>
                 </div>
 
                 {/* Centered Navigation - using absolute positioning for true centering */}
                 <div className="absolute left-1/2 transform -translate-x-1/2">
-                  <DesktopNav isScrolling={isScrolling} />
+                  <DesktopNav
+                    isScrolling={isScrolling}
+                    dark={dark}
+                  />
                 </div>
 
                 {/* Right Side - Social Media Icons and Mobile Button */}
                 <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
-                  <SearchButton enableShortcut={true} />
-                  <SocialMediaNav />
+                  <SearchButton
+                    enableShortcut={true}
+                    dark={dark}
+                  />
+                  <SocialMediaNav dark={dark} />
                   <MobileNavButton open={open} />
                 </div>
               </div>
