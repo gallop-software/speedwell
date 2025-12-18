@@ -82,7 +82,7 @@ export function Navbar2({
                     dark={dark}
                   />
                   <SocialMediaNav dark={dark} />
-                  <MobileNavButton />
+                  <MobileNavButton dark={dark} />
                 </div>
               </div>
               <MobileNav />

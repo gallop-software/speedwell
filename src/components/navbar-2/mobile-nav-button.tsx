@@ -11,11 +11,17 @@ import xMarkIcon from '@iconify/icons-heroicons/x-mark-20-solid'
 import { Icon } from '../icon'
 import { MobileNav } from './mobile-nav'
 
+interface MobileNavButtonProps {
+  dark?: boolean
+}
+
 /**
  * Sticky Mobile Nav Button with Sidebar Dialog
  * Opens mobile navigation in a sliding sidebar dialog
  */
-export function MobileNavButton(): ReactElement {
+export function MobileNavButton({
+  dark = false,
+}: MobileNavButtonProps): ReactElement {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeModal = () => {
@@ -26,7 +32,12 @@ export function MobileNavButton(): ReactElement {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden text-accent hover:text-accent-dark rounded-lg transition-colors duration-200 p-2 cursor-pointer -mr-2 focus:outline-none focus:ring-0"
+        className={clsx(
+          'lg:hidden rounded-lg transition-colors duration-200 p-2 cursor-pointer -mr-2 focus:outline-none focus:ring-0',
+          dark
+            ? 'text-white hover:text-white/80'
+            : 'text-accent hover:text-accent-dark'
+        )}
         aria-label="Open mobile menu"
       >
         <Icon
