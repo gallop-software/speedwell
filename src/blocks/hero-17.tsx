@@ -1,4 +1,4 @@
-import { Cover, Heading, Accent } from '@/components'
+import { Navbar, Cover, Heading, Accent } from '@/components'
 
 export default function Hero17() {
   return (
@@ -8,6 +8,7 @@ export default function Hero17() {
       overlayColor="bg-black/40"
       height="h-[600px] md:h-[750px] lg:h-[900px]"
     >
+      <Navbar dark />
       <div className="flex flex-col gap-0 justify-center items-center text-center">
         <Heading
           as="h1"
