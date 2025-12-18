@@ -82,7 +82,10 @@ export function Navbar({
                     dark={dark}
                   />
                   <SocialMediaNav dark={dark} />
-                  <MobileNavButton open={open} />
+                  <MobileNavButton
+                    open={open}
+                    dark={dark}
+                  />
                 </div>
               </div>
               <MobileNav />
