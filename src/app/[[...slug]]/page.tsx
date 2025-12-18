@@ -206,7 +206,11 @@ export default async function Page({ params }: PageProps) {
 
   try {
     const contentPath = `../../content/${slugPath}.tsx`
-    const { default: Content, metadata } = await import(contentPath)
+    const {
+      default: Content,
+      metadata,
+      Footer: CustomFooter,
+    } = await import(contentPath)
 
     const structuredData = {
       '@context': 'https://schema.org',
@@ -225,7 +229,8 @@ export default async function Page({ params }: PageProps) {
           <Content />
           <GalleryPopup />
         </main>
-        <Footer />
+        {CustomFooter !== false &&
+          (CustomFooter ? <CustomFooter /> : <Footer />)}
       </div>
     )
   } catch (error) {
