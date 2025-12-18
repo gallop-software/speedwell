@@ -16,7 +16,7 @@ export function Card4({
   children,
   className,
   rounded = 'rounded-xl',
-  bgColor = 'bg-body2/30',
+  bgColor = 'bg-body2',
   border = 'border border-accent/10',
   shadow = 'shadow-lg',
   padding = 'p-10 md:p-10',

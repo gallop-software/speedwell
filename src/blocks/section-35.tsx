@@ -46,13 +46,24 @@ export default function Section35() {
             A Creative Agency Built on Strategy
           </Heading>
           <Paragraph>
-            We are a team of designers, strategists, and storytellers passionate about creating brands that resonate. Our approach combines creative excellence with strategic thinking to deliver branding solutions that not only look beautiful but also drive real business results. From startups to established businesses, we partner with clients who are ready to make their mark.
+            We are a team of designers, strategists, and storytellers passionate
+            about creating brands that resonate. Our approach combines creative
+            excellence with strategic thinking to deliver branding solutions
+            that not only look beautiful but also drive real business results.
+            From startups to established businesses, we partner with clients who
+            are ready to make their mark.
           </Paragraph>
           <Paragraph>
-            Our studio thrives on collaboration and innovation. We believe the best brands emerge from deep understanding of your business, audience, and market. By blending research, creativity, and strategic insight, we craft brand identities that are distinctive, memorable, and built to last. Every project we take on is an opportunity to push boundaries and create something exceptional.
+            Our studio thrives on collaboration and innovation. We believe the
+            best brands emerge from deep understanding of your business,
+            audience, and market. By blending research, creativity, and
+            strategic insight, we craft brand identities that are distinctive,
+            memorable, and built to last. Every project we take on is an
+            opportunity to push boundaries and create something exceptional.
           </Paragraph>
           <Quote>
-            Great brands are born from the intersection of creativity, strategy, and authentic storytelling
+            Great brands are born from the intersection of creativity, strategy,
+            and authentic storytelling
           </Quote>
         </Column>
       </Columns>
@@ -60,11 +71,19 @@ export default function Section35() {
         align="content"
         padding="px-0"
       >
-        <Heading as="h2">What We Do</Heading>
+        <Heading
+          textAlign="text-center"
+          as="h2"
+        >
+          What We Do
+        </Heading>
         <Accordion headingText="Brand Identity & Design">
           <Heading as="h4">Our Approach</Heading>
           <Paragraph>
-            We create visual identities that capture the essence of your brand. From logo design to complete brand systems, we develop cohesive visual languages that communicate your values and connect with your audience.
+            We create visual identities that capture the essence of your brand.
+            From logo design to complete brand systems, we develop cohesive
+            visual languages that communicate your values and connect with your
+            audience.
           </Paragraph>
           <Heading as="h4">Services Include</Heading>
           <List className="mb-8">
@@ -79,7 +98,9 @@ export default function Section35() {
         <Accordion headingText="Digital & Web Design">
           <Heading as="h4">Our Approach</Heading>
           <Paragraph>
-            We design digital experiences that are both beautiful and functional. Our websites and digital products are crafted to engage users, communicate your message clearly, and drive conversions.
+            We design digital experiences that are both beautiful and
+            functional. Our websites and digital products are crafted to engage
+            users, communicate your message clearly, and drive conversions.
           </Paragraph>
           <Heading as="h4">Services Include</Heading>
           <List className="mb-8">
@@ -94,7 +115,10 @@ export default function Section35() {
         <Accordion headingText="Brand Strategy & Marketing">
           <Heading as="h4">Our Approach</Heading>
           <Paragraph>
-            We develop strategic foundations that guide all your branding efforts. Through research, positioning, and messaging development, we help you define who you are and how to communicate it effectively.
+            We develop strategic foundations that guide all your branding
+            efforts. Through research, positioning, and messaging development,
+            we help you define who you are and how to communicate it
+            effectively.
           </Paragraph>
           <Heading as="h4">Services Include</Heading>
           <List className="mb-8">

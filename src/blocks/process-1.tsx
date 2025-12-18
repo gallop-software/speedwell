@@ -21,11 +21,12 @@ const WhimsicalArrow = () => (
 
 export default function Process1() {
   return (
-    <Section className="my-30 bg-body">
+    <Section className="py-30 bg-gradient-to-br from-gray-100 to-white">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <Subheading className="mb-6">Our Branding Process</Subheading>
         <Heading as="h2">
-          A strategic approach to building brands that resonate with your audience
+          A strategic approach to building brands that resonate with your
+          audience
         </Heading>
       </div>
       <Columns
@@ -45,7 +46,8 @@ export default function Process1() {
               Discovery & Research
             </Heading>
             <Paragraph margin="mb-0">
-              We dive deep into your business, audience, and market to uncover unique insights that shape your brand strategy
+              We dive deep into your business, audience, and market to uncover
+              unique insights that shape your brand strategy
             </Paragraph>
           </Card4>
           <WhimsicalArrow />
@@ -63,7 +65,8 @@ export default function Process1() {
               Creative Development
             </Heading>
             <Paragraph margin="mb-0">
-              Our team crafts compelling visual identities, messaging, and brand experiences that connect with your target audience
+              Our team crafts compelling visual identities, messaging, and brand
+              experiences that connect with your target audience
             </Paragraph>
           </Card4>
           <WhimsicalArrow />
@@ -81,7 +84,8 @@ export default function Process1() {
               Launch & Support
             </Heading>
             <Paragraph margin="mb-0">
-              We deliver comprehensive brand guidelines and support your team in bringing the brand to life across all touchpoints
+              We deliver comprehensive brand guidelines and support your team in
+              bringing the brand to life across all touchpoints
             </Paragraph>
           </Card4>
         </Column>
