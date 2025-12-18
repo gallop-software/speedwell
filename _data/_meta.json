@@ -1375,6 +1375,23 @@
       "file": "/images/leaf2.jpg"
     }
   },
+  "/images/logo-white.png": {
+    "small": {
+      "width": 300,
+      "height": 177,
+      "file": "/images/logo-white-300x177.png"
+    },
+    "medium": {
+      "width": 700,
+      "height": 414,
+      "file": "/images/logo-white-700x414.png"
+    },
+    "full": {
+      "width": 704,
+      "height": 416,
+      "file": "/images/logo-white.png"
+    }
+  },
   "/images/logo.png": {
     "small": {
       "width": 300,
