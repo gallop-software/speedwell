@@ -30,13 +30,15 @@ src/components/navbar/
   - Manages scroll state for sticky navbar behavior
   - Renders both desktop and mobile navigation
   - Renders sticky navbar that appears on scroll
-- **Props**: `className?: string`
+- **Props**:
+  - `className?: string` - Additional CSS classes
+  - `dark?: boolean` - When true, renders white text/icons for dark backgrounds (default: false)
 
 ### `types.ts`
 
 - **Purpose**: Centralized TypeScript type definitions
 - **Key Types**:
-  - `NavbarProps`: Main navbar props with className
+  - `NavbarProps`: Main navbar props with className and dark
   - `NavLink`: Navigation link structure with optional dropdowns
   - `DropdownItem`: Dropdown menu item structure
   - `SocialLink`: Social media link structure
@@ -60,7 +62,8 @@ src/components/navbar/
   - Multi-column dropdown support (1, 2, or 3 columns)
   - Dropdown positioning (left, center, right)
   - Icon support for dropdown items
-- **Props**: `isScrolling?: boolean`, `forceCloseOnHide?: boolean`
+  - Dark mode support for white text on dark backgrounds
+- **Props**: `isScrolling?: boolean`, `forceCloseOnHide?: boolean`, `dark?: boolean`
 
 ### `mobile-nav.tsx`
 
@@ -78,7 +81,8 @@ src/components/navbar/
 - **Features**:
   - Keyboard shortcut listener (Cmd/Ctrl+K)
   - Opens search modal
-- **Props**: `enableShortcut?: boolean`
+  - Dark mode support for white icon
+- **Props**: `enableShortcut?: boolean`, `dark?: boolean`
 
 ### `social-media-nav.tsx`
 
@@ -87,7 +91,8 @@ src/components/navbar/
   - Renders social links from config
   - Desktop-only display (hidden on mobile)
   - Uses Iconify icons
-- **Props**: None (imports from config directly)
+  - Dark mode support for white icons
+- **Props**: `dark?: boolean`
 
 ### `mobile-nav-button.tsx`
 
@@ -115,6 +120,20 @@ src/components/navbar/
   - Slide-in animation from right
   - Full-height scrollable menu
 - **Props**: None
+
+## Dark Mode
+
+The navbar supports a `dark` prop for use on dark backgrounds (e.g., hero sections with background images):
+
+```tsx
+<Navbar dark={true} />
+```
+
+When `dark={true}`:
+- Logo switches to white version (`/images/logo-white.png`)
+- Desktop nav links use white text with `hover:bg-white/10`
+- Social media icons use white color
+- Search icon uses white color
 
 ## Data Flow
 
@@ -153,6 +172,10 @@ Edit `config.ts` and update the `socialLinks` array
 ### Changing the logo link destination
 
 Edit `homeLink` in `config.ts`
+
+### Using dark mode
+
+Pass `dark={true}` to the Navbar component for dark backgrounds
 
 ### Updating mobile menu behavior
 
