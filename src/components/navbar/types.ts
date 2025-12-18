@@ -44,20 +44,10 @@ export interface SocialLink {
 }
 
 /**
- * Navigation configuration
- */
-export interface NavConfig {
-  links?: NavLink[]
-  socialLinks?: SocialLink[]
-  homeLink?: string
-}
-
-/**
  * Main navbar component props
  */
 export interface NavbarProps {
   className?: string
-  config?: NavConfig
 }
 
 /**

@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { Icon } from '../icon'
-import { socialLinks as defaultSocialLinks } from './config'
+import { socialLinks } from './config'
 import type { SocialLink } from './types'
 
 /**
@@ -8,11 +8,7 @@ import type { SocialLink } from './types'
  * Renders social media icons for desktop view
  * @returns {ReactElement} Social media links
  */
-export function SocialMediaNav({
-  socialLinks = defaultSocialLinks,
-}: {
-  socialLinks?: SocialLink[]
-} = {}): ReactElement {
+export function SocialMediaNav(): ReactElement {
   return (
     <div className="hidden lg:flex items-center space-x-0 xl:space-x-1">
       {socialLinks.map((item: SocialLink) => (

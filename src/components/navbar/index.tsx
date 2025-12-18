@@ -14,11 +14,7 @@ import { StickyNavbar } from './sticky-navbar'
 import useOffsetTop from '@/hooks/use-offset-top'
 import { state, useSnapshot } from '@/state'
 import type { NavbarProps } from './types'
-import {
-  links as defaultLinks,
-  socialLinks as defaultSocialLinks,
-  homeLink as defaultHomeLink,
-} from './config'
+import { homeLink } from './config'
 
 /**
  * Main navigation bar component for the application
@@ -31,17 +27,10 @@ import {
  * - TypeScript typed with comprehensive interfaces
  * - Accessible design with proper ARIA labels
  * - Tailwind CSS styling with custom theme colors
- * - Configurable links via optional config prop
  *
  * @returns {ReactElement} The rendered navigation component
  */
-export function Navbar({
-  className = '',
-  config,
-}: NavbarProps = {}): ReactElement {
-  const links = config?.links ?? defaultLinks
-  const socialLinks = config?.socialLinks ?? defaultSocialLinks
-  const homeLink = config?.homeLink ?? defaultHomeLink
+export function Navbar({ className = '' }: NavbarProps = {}): ReactElement {
   useOffsetTop(800)
   const snap = useSnapshot(state)
   const isScrolling = snap.isScrolling
@@ -76,23 +65,17 @@ export function Navbar({
 
                 {/* Centered Navigation - using absolute positioning for true centering */}
                 <div className="absolute left-1/2 transform -translate-x-1/2">
-                  <DesktopNav
-                    isScrolling={isScrolling}
-                    links={links}
-                  />
+                  <DesktopNav isScrolling={isScrolling} />
                 </div>
 
                 {/* Right Side - Social Media Icons and Mobile Button */}
                 <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
                   <SearchButton enableShortcut={true} />
-                  <SocialMediaNav socialLinks={socialLinks} />
+                  <SocialMediaNav />
                   <MobileNavButton open={open} />
                 </div>
               </div>
-              <MobileNav
-                links={links}
-                socialLinks={socialLinks}
-              />
+              <MobileNav />
             </div>
           </>
         )}
@@ -100,9 +83,6 @@ export function Navbar({
       <StickyNavbar
         isScrolling={isScrolling}
         scrollingDirection={scrollingDirection}
-        links={links}
-        socialLinks={socialLinks}
-        homeLink={homeLink}
       />
     </>
   )
