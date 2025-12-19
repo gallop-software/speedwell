@@ -1,0 +1,84 @@
+'use client'
+
+import { Disclosure } from '@headlessui/react'
+import Link from 'next/link'
+import type { ReactElement } from 'react'
+import clsx from 'clsx'
+import { Logo } from '../logo'
+import { DesktopNav } from './desktop-nav'
+import { MobileNav } from './mobile-nav'
+import { SearchButton } from './search-button'
+import { SocialMediaNav } from './social-media-nav'
+import { MobileNavButton } from './mobile-nav-button'
+import { StickyNavbar } from './sticky-navbar'
+import useOffsetTop from '@/hooks/use-offset-top'
+import { state, useSnapshot } from '@/state'
+import type { NavbarProps } from './types'
+import { homeLink } from './config'
+
+/**
+ * Main navigation bar component for the application (Navbar3)
+ */
+export function Navbar3({
+  className = '',
+  dark = false,
+}: NavbarProps = {}): ReactElement {
+  useOffsetTop(800)
+  const snap = useSnapshot(state)
+  const isScrolling = snap.isScrolling
+  const scrollingDirection = snap.scrollingDirection
+
+  return (
+    <>
+      <Disclosure
+        as="header"
+        id="navbar"
+        className={clsx('pt-12 sm:pt-16 relative z-40 pb-10', className)}
+      >
+        {({ open }) => (
+          <>
+            <div className="mx-auto max-w-[1800px] px-6 lg:px-8">
+              <div className="relative flex items-center">
+                {/* Logo Section */}
+                <div className="shrink-0">
+                  <Link
+                    prefetch={true}
+                    scroll={true}
+                    href={homeLink}
+                    title="Speedwell"
+                    className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
+                  >
+                    <Logo
+                      className="w-[120px] md:w-[200px]"
+                      width={200}
+                      dark={dark}
+                    />
+                  </Link>
+                </div>
+
+                {/* Right Side - Social Media Icons and Mobile Button */}
+                <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
+                  <SearchButton
+                    enableShortcut={true}
+                    dark={dark}
+                  />
+                  <DesktopNav
+                    isScrolling={isScrolling}
+                    dark={dark}
+                  />
+                  <SocialMediaNav dark={dark} />
+                  <MobileNavButton dark={dark} />
+                </div>
+              </div>
+              <MobileNav />
+            </div>
+          </>
+        )}
+      </Disclosure>
+      <StickyNavbar
+        isScrolling={isScrolling}
+        scrollingDirection={scrollingDirection}
+      />
+    </>
+  )
+}
