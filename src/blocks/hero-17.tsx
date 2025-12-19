@@ -7,6 +7,7 @@ export default function Hero17() {
         src="/images/layout-4/pexels-pixabay-260922.jpg"
         size="full"
         alt="Layout 4 hero image"
+        rounded="rounded-none"
         className="object-cover object-center absolute inset-0 w-full h-full"
       />
       <div className="absolute inset-0 bg-black/40"></div>
