@@ -18,6 +18,7 @@ export interface DropdownItem {
 export interface NavLink {
   href: string
   label: string
+  callToAction?: boolean
   dropdown?: {
     items: DropdownItem[]
     columns?: 1 | 2 | 3

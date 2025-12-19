@@ -22,8 +22,8 @@ export function DesktopNav({
   dark?: boolean
 } = {}): ReactElement {
   return (
-    <nav className="relative hidden lg:flex">
-      {links.map(({ href, label, dropdown }: NavLink) => (
+    <nav className="relative hidden lg:flex items-center mr-4">
+      {links.map(({ href, label, dropdown, callToAction }: NavLink) => (
         <div
           key={href}
           className="relative flex"
@@ -37,10 +37,23 @@ export function DesktopNav({
                 <>
                   <PopoverButton
                     className={clsx(
-                      'flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
-                      dark
-                        ? 'text-white hover:bg-white/10'
-                        : 'text-contrast data-hover:bg-black/2.5'
+                      callToAction
+                        ? clsx(
+                            'inline-flex items-center justify-center ml-2',
+                            'rounded-full border border-transparent shadow-md',
+                            'px-6 py-2 text-base font-medium',
+                            'transition-colors duration-200 cursor-pointer',
+                            'focus:outline-none',
+                            dark
+                              ? 'bg-white text-gray-950 hover:bg-gray-100'
+                              : 'bg-gray-950 text-white hover:bg-gray-800'
+                          )
+                        : clsx(
+                            'flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
+                            dark
+                              ? 'text-white hover:bg-white/10'
+                              : 'text-contrast data-hover:bg-black/2.5'
+                          )
                     )}
                   >
                     {label}
@@ -113,10 +126,23 @@ export function DesktopNav({
             <Link
               href={href}
               className={clsx(
-                'flex items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply rounded-lg',
-                dark
-                  ? 'text-white hover:bg-white/10'
-                  : 'text-contrast hover:bg-black/2.5'
+                callToAction
+                  ? clsx(
+                      'inline-flex items-center justify-center ml-2',
+                      'rounded-full border border-transparent shadow-md',
+                      'px-6 py-2 text-base font-medium',
+                      'transition-colors duration-200',
+                      'focus:outline-none',
+                      dark
+                        ? 'bg-white text-gray-950 hover:bg-gray-100'
+                        : 'bg-gray-950 text-white hover:bg-gray-800'
+                    )
+                  : clsx(
+                      'flex items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply rounded-lg',
+                      dark
+                        ? 'text-white hover:bg-white/10'
+                        : 'text-contrast hover:bg-black/2.5'
+                    )
               )}
             >
               {label}
