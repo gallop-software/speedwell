@@ -1,10 +1,4 @@
-import {
-  Swiper,
-  Image,
-  Navbar,
-  Heading,
-  Accent,
-} from '@/components'
+import { Swiper, Image, Navbar, Heading, Accent } from '@/components'
 
 export default function Hero16() {
   return (
