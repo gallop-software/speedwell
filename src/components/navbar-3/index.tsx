@@ -49,7 +49,7 @@ export function Navbar3({
                     className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                   >
                     <Logo
-                      className="w-[120px] md:w-[200px]"
+                      className="w-[120px] xl:w-[200px]"
                       width={200}
                       dark={dark}
                     />
