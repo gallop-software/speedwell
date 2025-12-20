@@ -1,4 +1,6 @@
 import {
+  Columns,
+  Column,
   Card4,
   Section,
   Heading,
@@ -25,9 +27,14 @@ export default function Pricing1() {
             flexible options and premium features.
           </Paragraph>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {/* Starter Plan */}
+      <Columns
+        align="items-start"
+        cols="grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
+        gap="gap-16 lg:gap-16"
+      >
+        <Column className="relative">
           <Card4>
             <Heading
               as="h4"
@@ -58,25 +65,29 @@ export default function Pricing1() {
 
             <Button
               href="#contact"
-              className="w-full"
+              className="w-full mt-auto"
             >
               Select Plan
             </Button>
           </Card4>
+        </Column>
 
-          {/* Professional Plan - Featured */}
-          <div className="bg-body backdrop-blur-sm p-8 rounded-lg border border-body1/10 hover:border-accent/40 transition-all hover:shadow-xl relative flex flex-col">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">
-              Most Popular
-            </div>
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Professional</h3>
-              <div className="flex items-baseline mb-4">
-                <span className="text-5xl font-bold">$99</span>
-                <span className="text-xl text-body1/60 ml-2">/mo</span>
-              </div>
-              <p className="text-body1/70">For growing businesses</p>
-            </div>
+        <Column>
+          <Card4 className="relative">
+            <Heading
+              as="h4"
+              margin="mb-2"
+            >
+              Professional
+            </Heading>
+            <Heading
+              className="flex items-baseline"
+              margin="mb-4"
+            >
+              <span className="text-5xl font-bold">$99</span>
+              <span className="text-xl text-body1/60 ml-2">/mo</span>
+            </Heading>
+            <Paragraph>For growing businesses</Paragraph>
 
             <List
               variant="unstyled"
@@ -93,22 +104,29 @@ export default function Pricing1() {
 
             <Button
               href="#contact"
-              className="w-full"
+              className="w-full mt-auto"
             >
-              Contact Us
+              Select Plan
             </Button>
-          </div>
+          </Card4>
+        </Column>
 
-          {/* Enterprise Plan */}
-          <div className="bg-body backdrop-blur-sm p-8 rounded-lg border border-body1/10 hover:border-accent/40 transition-all hover:shadow-xl flex flex-col">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
-              <div className="flex items-baseline mb-4">
-                <span className="text-5xl font-bold">$299</span>
-                <span className="text-xl text-body1/60 ml-2">/mo</span>
-              </div>
-              <p className="text-body1/70">For large organizations</p>
-            </div>
+        <Column>
+          <Card4>
+            <Heading
+              as="h4"
+              margin="mb-2"
+            >
+              Enterprise
+            </Heading>
+            <Heading
+              className="flex items-baseline"
+              margin="mb-4"
+            >
+              <span className="text-5xl font-bold">$299</span>
+              <span className="text-xl text-body1/60 ml-2">/mo</span>
+            </Heading>
+            <Paragraph>For large organizations</Paragraph>
 
             <List
               variant="unstyled"
@@ -125,14 +143,13 @@ export default function Pricing1() {
 
             <Button
               href="#contact"
-              variant="secondary"
-              className="w-full"
+              className="w-full mt-auto"
             >
-              Contact Us
+              Select Plan
             </Button>
-          </div>
-        </div>
-      </div>
+          </Card4>
+        </Column>
+      </Columns>
     </Section>
   )
 }
