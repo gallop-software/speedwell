@@ -10,7 +10,6 @@ export default function Content() {
       <Hero15 />
       <Showcase7 />
       <Pricing1 />
-      <Testimonial5 />
       <Contact5 />
     </>
   )
