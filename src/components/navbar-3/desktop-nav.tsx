@@ -49,7 +49,7 @@ export function DesktopNav({
                               : 'bg-gray-950 text-white hover:bg-gray-800'
                           )
                         : clsx(
-                            'flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
+                            'flex h-full cursor-pointer items-center px-4 py-2 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
                             dark
                               ? 'text-white hover:bg-white/10'
                               : 'text-contrast data-hover:bg-black/2.5'
@@ -138,7 +138,7 @@ export function DesktopNav({
                         : 'bg-gray-950 text-white hover:bg-gray-800'
                     )
                   : clsx(
-                      'flex items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply rounded-lg',
+                      'flex items-center px-4 py-2 text-lg font-body font-medium bg-blend-multiply rounded-lg',
                       dark
                         ? 'text-white hover:bg-white/10'
                         : 'text-contrast hover:bg-black/2.5'
