@@ -64,17 +64,13 @@ export function StickyNavbar({
                     </Link>
                   </div>
 
-                  {/* Centered Navigation - using absolute positioning for true centering */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
+                  {/* Right Side - Social Media Icons and Mobile Button */}
+                  <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
+                    <SearchButton enableShortcut={false} />
                     <DesktopNav
                       isScrolling={isScrolling}
                       forceCloseOnHide={true}
                     />
-                  </div>
-
-                  {/* Right Side - Social Media Icons and Mobile Button */}
-                  <div className="flex items-center ml-auto space-x-0 md:space-x-1">
-                    <SearchButton enableShortcut={false} />
                     <SocialMediaNav />
                     <MobileNavButton />
                   </div>
