@@ -52,7 +52,7 @@ export default function Hero15() {
               </Paragraph>
               <Buttons className="">
                 <Button
-                  href="#product-showcase"
+                  href="#features"
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
