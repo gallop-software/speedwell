@@ -47,7 +47,7 @@ export const metadata = {
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Full-width carousel layout design',
     },
   },
@@ -58,7 +58,7 @@ export const metadata = {
     title: 'Layout 4 | Full-Width Carousel Presentation Style',
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Layout Design',
   applicationName: 'Speedwell',

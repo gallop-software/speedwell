@@ -87,7 +87,7 @@ export const metadata = {
     description:
       'Serene home yoga studio with natural materials and calming design',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+      url: '/images/banner.jpg',
       alt: 'Private yoga studio with bamboo floors and peaceful ambiance',
     },
   },

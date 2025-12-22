@@ -90,7 +90,7 @@ export const metadata = {
     description:
       'Charming farmhouse kitchen with Shaker cabinets and rustic character',
     image: {
-      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg',
+      url: '/images/banner.jpg',
       alt: 'Farmhouse kitchen with sage green cabinets and rustic details',
     },
   },

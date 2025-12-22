@@ -87,7 +87,7 @@ export const metadata = {
     description:
       'Professional home office with custom millwork and executive furnishings',
     image: {
-      url: '/images/portfolio/pexels-mikhail-nilov-6707628.jpg',
+      url: '/images/banner.jpg',
       alt: 'Executive home office with built-in shelving',
     },
   },

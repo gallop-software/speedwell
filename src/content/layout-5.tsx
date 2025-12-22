@@ -45,7 +45,7 @@ export const metadata = {
     description:
       'Check out our split-screen layout with fixed left panel. Great for highlighting key information while providing detailed content.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Split-screen layout design',
     },
   },
@@ -56,7 +56,7 @@ export const metadata = {
     title: 'Layout 5 | Split-Screen with Fixed Left Panel',
     description:
       'Check out our split-screen layout with fixed left panel. Great for highlighting key information while providing detailed content.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Layout Design',
   applicationName: 'Speedwell',

@@ -77,7 +77,7 @@ export const metadata = {
     description:
       'Clean minimalist kitchen with integrated appliances and seamless design',
     image: {
-      url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
+      url: '/images/banner.jpg',
       alt: 'Minimalist kitchen with white cabinetry and waterfall countertops',
     },
   },

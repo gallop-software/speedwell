@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Mindful brand identity creating serene experiences for wellness seekers',
     image: {
-      url: '/images/layout-1/pexels-diva-plavalaguna-6937932.jpg',
+      url: '/images/banner.jpg',
       alt: 'Wellness studio brand materials',
     },
   },

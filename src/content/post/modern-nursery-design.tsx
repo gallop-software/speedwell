@@ -78,7 +78,7 @@ export const metadata = {
     description:
       'Modern nursery with sustainable materials and convertible furniture',
     image: {
-      url: '/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg',
+      url: '/images/banner.jpg',
       alt: 'Modern nursery with soft colors and natural materials',
     },
   },

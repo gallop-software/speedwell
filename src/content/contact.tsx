@@ -30,7 +30,7 @@ export const metadata = {
     description:
       'Schedule your complimentary design consultation today. Our award-winning team is ready to transform your space.',
     image: {
-      url: '/images/portfolio/pexels-alex-qian-1180283-2343465.jpg',
+      url: '/images/banner.jpg',
       alt: 'Modern interior design studio',
     },
     imageAlt: 'Contact Our Interior Design Studio',

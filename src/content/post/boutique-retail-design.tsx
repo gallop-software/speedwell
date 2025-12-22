@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Sustainable brand identity and packaging design for artisan coffee roaster',
     image: {
-      url: '/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg',
+      url: '/images/banner.jpg',
       alt: 'Artisan coffee brand packaging',
     },
   },

@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Energetic brand identity for tech startup with bold visuals and scalable system',
     image: {
-      url: '/images/layout-1/pexels-pixabay-221185.jpg',
+      url: '/images/banner.jpg',
       alt: 'Tech startup brand identity',
     },
   },

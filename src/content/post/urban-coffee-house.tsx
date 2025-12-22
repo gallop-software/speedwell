@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Community-focused restaurant brand celebrating local farmers and seasonal ingredients',
     image: {
-      url: '/images/layout-1/pexels-enginakyurt-1435894.jpg',
+      url: '/images/banner.jpg',
       alt: 'Farm-to-table restaurant branding',
     },
   },

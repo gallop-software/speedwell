@@ -92,7 +92,7 @@ export const metadata = {
     description:
       'Glamorous Art Deco restoration with period details and modern convenience',
     image: {
-      url: '/images/portfolio/pexels-pixabay-269252.jpg',
+      url: '/images/banner.jpg',
       alt: 'Art Deco interior with geometric patterns and luxurious finishes',
     },
   },

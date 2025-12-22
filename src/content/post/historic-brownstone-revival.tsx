@@ -78,7 +78,7 @@ export const metadata = {
     description:
       '19th-century brownstone restoration honoring original details while incorporating modern comfort',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
+      url: '/images/banner.jpg',
       alt: 'Restored historic brownstone interior with Victorian details',
     },
   },

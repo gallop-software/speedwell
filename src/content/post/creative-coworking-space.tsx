@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Vibrant brand connecting creative professionals through inspired design',
     image: {
-      url: '/images/layout-1/pexels-mareklevak-2265482.jpg',
+      url: '/images/banner.jpg',
       alt: 'Coworking space brand materials',
     },
   },

@@ -32,7 +32,7 @@ export const metadata = {
     description:
       'Join our talented team of interior designers and specialists. Explore career opportunities at Timmerman where creativity meets expertise in residential and commercial design.',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+      url: '/images/banner.jpg',
       alt: 'Timmerman design team collaboration',
     },
   },

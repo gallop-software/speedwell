@@ -76,7 +76,7 @@ export const metadata = {
     description:
       'Open-plan contemporary home with custom millwork and smart home features',
     image: {
-      url: '/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
+      url: '/images/banner.jpg',
       alt: 'Contemporary family home with open-plan living spaces',
     },
   },

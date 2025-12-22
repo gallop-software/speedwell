@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Elegant rebrand merging timeless style with sustainable fashion values',
     image: {
-      url: '/images/layout-1/pexels-rachel-claire-5490970.jpg',
+      url: '/images/banner.jpg',
       alt: 'Fashion boutique brand identity',
     },
   },

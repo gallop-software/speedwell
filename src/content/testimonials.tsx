@@ -32,7 +32,7 @@ export const metadata = {
     description:
       'Discover what our clients say about working with Speedwell. Real stories of transformed spaces and exceptional design experiences from satisfied homeowners and businesses.',
     image: {
-      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+      url: '/images/banner.jpg',
       alt: 'Happy clients in their beautifully designed interior space',
     },
   },

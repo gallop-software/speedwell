@@ -45,7 +45,7 @@ export const metadata = {
     description:
       'Explore our fullscreen hero layout with minimal chrome. Designed for maximum impact with distraction-free presentation.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Fullscreen hero layout design',
     },
   },
@@ -56,7 +56,7 @@ export const metadata = {
     title: 'Layout 6 | Fullscreen Hero with Minimal Chrome',
     description:
       'Explore our fullscreen hero layout with minimal chrome. Designed for maximum impact with distraction-free presentation.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Layout Design',
   applicationName: 'Speedwell',

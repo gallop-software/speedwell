@@ -65,7 +65,7 @@ export const metadata = {
     description:
       'Award-winning interior design studio specializing in residential and commercial projects. We create beautiful, functional spaces that reflect your unique style and enhance your daily living experience.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Beautifully designed modern interior living space',
     },
   },
@@ -76,7 +76,7 @@ export const metadata = {
     title: 'Transform Your Space | Professional Interior Design Services',
     description:
       'Creating stunning interiors for homes and businesses. Expert design, custom furnishings, and complete project management from concept to completion.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Interior Design',
   applicationName: 'Speedwell Interior Design',

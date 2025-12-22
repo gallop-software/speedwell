@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Sustainable rebrand for organic skincare with minimalist design',
     image: {
-      url: '/images/layout-1/pexels-cottonbro-4154192.jpg',
+      url: '/images/banner.jpg',
       alt: 'Organic skincare brand packaging',
     },
   },

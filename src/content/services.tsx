@@ -63,7 +63,7 @@ export const metadata = {
     description:
       'Adipiscing adipiscing fugiat mollit ut tempor reprehenderit dolore duis culpa do non mollit nulla ex laboris cillum sed dolor',
     image: {
-      url: '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
+      url: '/images/banner.jpg',
       alt: 'Aliquip aliqua id consectetur nulla veniam adipiscing proident commodo esse',
     },
   },
@@ -72,6 +72,6 @@ export const metadata = {
     title: 'Enim commodo ipsum deserunt esse consequat amet adipiscing',
     description:
       'Est non esse elit est voluptate do minim proident laborum aute excepteur voluptate duis sunt fugiat in veniam et',
-    image: '/images/701475_c31a167342294f6ab8a5c7a56fb0b65emv2.jpg',
+    image: '/images/banner.jpg',
   },
 }

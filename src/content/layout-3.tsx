@@ -47,7 +47,7 @@ export const metadata = {
     description:
       'Discover our multi-column content distribution design. Ideal for organizing and presenting diverse content in a structured format.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Multi-column layout design',
     },
   },
@@ -58,7 +58,7 @@ export const metadata = {
     title: 'Layout 3 | Multi-Column Content Distribution Design',
     description:
       'Discover our multi-column content distribution design. Ideal for organizing and presenting diverse content in a structured format.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Layout Design',
   applicationName: 'Speedwell',

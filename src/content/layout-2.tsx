@@ -45,7 +45,7 @@ export const metadata = {
     description:
       'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Modern tech startup platform',
     },
   },
@@ -56,7 +56,7 @@ export const metadata = {
     title: 'Startup Page | Modern Tech Platform Solution',
     description:
       'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Layout Design',
   applicationName: 'Speedwell',

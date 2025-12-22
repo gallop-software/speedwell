@@ -77,7 +77,7 @@ export const metadata = {
     description:
       '1960s home renovation with authentic midcentury modern design and furnishings',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
+      url: '/images/banner.jpg',
       alt: 'Midcentury modern living room with period furnishings',
     },
   },

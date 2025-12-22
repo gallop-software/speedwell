@@ -45,7 +45,7 @@ export const metadata = {
     description:
       'Discover our vertical split content arrangement. Ideal for balancing text and visuals in an elegant, side-by-side format.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Vertical split layout design',
     },
   },
@@ -56,7 +56,7 @@ export const metadata = {
     title: 'Layout 7 | Vertical Split Content Arrangement',
     description:
       'Discover our vertical split content arrangement. Ideal for balancing text and visuals in an elegant, side-by-side format.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Layout Design',
   applicationName: 'Speedwell',

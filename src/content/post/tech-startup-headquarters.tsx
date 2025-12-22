@@ -62,7 +62,7 @@ export const metadata = {
     description:
       'Sophisticated rebrand honoring heritage while attracting modern luxury travelers',
     image: {
-      url: '/images/layout-1/pexels-cottonbro-5379175.jpg',
+      url: '/images/banner.jpg',
       alt: 'Boutique hotel brand identity',
     },
   },

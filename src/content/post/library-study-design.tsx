@@ -77,7 +77,7 @@ export const metadata = {
     description:
       'Traditional library with custom bookcases and leather furnishings',
     image: {
-      url: '/images/portfolio/pexels-pixabay-276724.jpg',
+      url: '/images/banner.jpg',
       alt: 'Library study with floor-to-ceiling bookshelves and reading nook',
     },
   },
