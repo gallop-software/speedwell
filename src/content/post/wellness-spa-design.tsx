@@ -90,7 +90,7 @@ export const metadata = {
     description:
       'Boutique wellness spa with treatment rooms and holistic design',
     image: {
-      url: '/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
+      url: '/images/banner.jpg',
       alt: 'Wellness spa with tranquil treatment rooms',
     },
   },

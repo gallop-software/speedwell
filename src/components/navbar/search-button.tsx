@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import searchIcon from '@iconify/icons-lucide/search'
+import clsx from 'clsx'
 import { Icon } from '../icon'
 import { Search } from '../search'
 
@@ -11,8 +12,10 @@ import { Search } from '../search'
  */
 export function SearchButton({
   enableShortcut = false,
+  dark = false,
 }: {
   enableShortcut?: boolean
+  dark?: boolean
 }): ReactElement {
   const [isSearching, setIsSearching] = useState(false)
 
@@ -39,7 +42,12 @@ export function SearchButton({
     <div className="hidden lg:block">
       <button
         rel="noopener noreferrer"
-        className="text-accent hover:text-accent-dark hover:bg-black/2.5 rounded-lg transition-colors duration-200 cursor-pointer p-2 outline-none focus:outline-none"
+        className={clsx(
+          'rounded-lg transition-colors duration-200 cursor-pointer p-2 outline-none focus:outline-none',
+          dark
+            ? 'text-white hover:text-white/80 hover:bg-white/10'
+            : 'text-accent hover:text-accent-dark hover:bg-black/2.5'
+        )}
         aria-label="search"
         onClick={() => setIsSearching((prev) => !prev)}
       >

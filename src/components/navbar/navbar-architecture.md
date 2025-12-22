@@ -2,7 +2,7 @@
 
 ## Overview
 
-The navbar has been refactored from a single 999-line file into a modular component system organized in `/src/components/navbar/`. This architecture improves maintainability, readability, and makes it easier to understand and modify specific parts of the navigation.
+The navbar is a modular component system organized in `/src/components/navbar/`. This architecture improves maintainability, readability, and makes it easier to understand and modify specific parts of the navigation.
 
 ## File Structure
 
@@ -10,8 +10,8 @@ The navbar has been refactored from a single 999-line file into a modular compon
 src/components/navbar/
 ├── index.tsx                      # Main navbar component
 ├── types.ts                       # TypeScript interfaces
-├── config.ts                      # Navigation data (links, social)
-├── desktop-nav.tsx               # Desktop navigation
+├── config.ts                      # Navigation data (links, social, homeLink)
+├── desktop-nav.tsx               # Desktop navigation with dropdowns
 ├── mobile-nav.tsx                # Mobile navigation menu
 ├── search-button.tsx             # Search functionality
 ├── social-media-nav.tsx          # Social media icons
@@ -26,42 +26,44 @@ src/components/navbar/
 
 - **Purpose**: Main entry point for the navbar
 - **Responsibilities**:
-  - Manages authentication session state
-  - Handles login modal state
-  - Passes theme prop to child components
+  - Tracks scroll position via `useOffsetTop` hook
+  - Manages scroll state for sticky navbar behavior
   - Renders both desktop and mobile navigation
-- **Props**: `theme?: 'hero' | 'normal'` (default: 'normal')
+  - Renders sticky navbar that appears on scroll
+- **Props**:
+  - `className?: string` - Additional CSS classes
+  - `dark?: boolean` - When true, renders white text/icons for dark backgrounds (default: false)
 
 ### `types.ts`
 
 - **Purpose**: Centralized TypeScript type definitions
 - **Key Types**:
-  - `NavbarProps`: Main navbar props with theme
+  - `NavbarProps`: Main navbar props with className and dark
   - `NavLink`: Navigation link structure with optional dropdowns
   - `DropdownItem`: Dropdown menu item structure
   - `SocialLink`: Social media link structure
-  - `LoginView`: Union type for login modal states
+  - `PopoverRenderProps`: Headless UI popover render props
 
 ### `config.ts`
 
 - **Purpose**: Centralized configuration data
 - **Contents**:
-  - `links`: Array of main navigation links
-  - `socialLinks`: Array of social media links (GitHub, Slack)
+  - `homeLink`: Logo link destination
+  - `links`: Array of main navigation links with optional dropdowns
+  - `socialLinks`: Array of social media links
 - **Benefits**: Easy to add/remove/modify navigation items without touching component logic
+- **Note**: All subcomponents import directly from this file rather than receiving props
 
 ### `desktop-nav.tsx`
 
 - **Purpose**: Desktop navigation with dropdowns
 - **Features**:
   - Popover-based dropdown menus using Headless UI
-  - Theme-aware button styling (conditional "Get full access" button)
-  - Theme-aware dropdown backgrounds (gradient vs solid)
-  - Theme-aware icon styling in dropdowns
-  - Account dropdown with user info, settings, logout
-- **Theme Behavior**:
-  - `theme='normal'`: Dark button, gradient dropdown background
-  - `theme='hero'`: Transparent button, solid dropdown background
+  - Multi-column dropdown support (1, 2, or 3 columns)
+  - Dropdown positioning (left, center, right)
+  - Icon support for dropdown items
+  - Dark mode support for white text on dark backgrounds
+- **Props**: `isScrolling?: boolean`, `forceCloseOnHide?: boolean`, `dark?: boolean`
 
 ### `mobile-nav.tsx`
 
@@ -69,21 +71,18 @@ src/components/navbar/
 - **Features**:
   - Expandable accordion sections using Headless UI Disclosure
   - Framer Motion animations
-  - Theme-aware button styling matching desktop
-  - Theme-aware "logged in as" box and icon backgrounds
-  - Integrated search functionality
+  - Integrated search button
   - Social media links at bottom
-- **Theme Behavior**:
-  - `theme='normal'`: Gradient overlay on logged-in box and icons
-  - `theme='hero'`: Simple transparent styling
+- **Props**: None (imports from config directly)
 
 ### `search-button.tsx`
 
 - **Purpose**: Search toggle with keyboard shortcuts
 - **Features**:
-  - Platform detection (⌘ for Mac, Ctrl for Windows/Linux)
   - Keyboard shortcut listener (Cmd/Ctrl+K)
   - Opens search modal
+  - Dark mode support for white icon
+- **Props**: `enableShortcut?: boolean`, `dark?: boolean`
 
 ### `social-media-nav.tsx`
 
@@ -92,6 +91,8 @@ src/components/navbar/
   - Renders social links from config
   - Desktop-only display (hidden on mobile)
   - Uses Iconify icons
+  - Dark mode support for white icons
+- **Props**: `dark?: boolean`
 
 ### `mobile-nav-button.tsx`
 
@@ -100,15 +101,16 @@ src/components/navbar/
   - Animated icon using Framer Motion
   - Rotates when menu is open
   - Mobile/tablet only (hidden on desktop)
+- **Props**: `open: boolean`
 
 ### `sticky-navbar.tsx`
 
 - **Purpose**: Sticky navbar that appears on scroll
 - **Features**:
-  - Motion-based scroll detection
-  - Slides in/out based on scroll direction
-  - Always uses `theme='normal'`
-  - Includes both desktop and mobile navigation
+  - Motion-based slide animation
+  - Slides in when scrolling up, slides out when scrolling down
+  - Includes desktop nav, search, social links, and sticky mobile button
+- **Props**: `isScrolling?: boolean`, `scrollingDirection?: string`
 
 ### `sticky-mobile-nav-button.tsx`
 
@@ -116,65 +118,43 @@ src/components/navbar/
 - **Features**:
   - Sidebar dialog using Headless UI
   - Slide-in animation from right
-  - Gradient background matching sign-in modal
-  - Always passes `theme='normal'` to MobileNav
   - Full-height scrollable menu
+- **Props**: None
 
-## Theme System
+## Dark Mode
 
-The navbar supports two theme modes:
+The navbar supports a `dark` prop for use on dark backgrounds (e.g., hero sections with background images):
 
-### `theme='normal'` (Default)
-
-- Used on most pages and sticky navbar
-- Desktop: Dark "Get full access" button, gradient dropdown
-- Mobile: Gradient overlay on logged-in box and icons
-- Sticky mobile nav: Full gradient background panel
-
-### `theme='hero'`
-
-- Used on hero/landing sections
-- Desktop: Transparent "Get full access" button, solid dropdown
-- Mobile: Simple transparent styling
-- Creates a lighter, more minimal appearance
-
-## Styling Patterns
-
-### Gradient Background
-
-```
-bg-linear-115 from-[#fff9e0] from-8% via-[#ffc9e8] via-70% to-[#d4b3ff]
+```tsx
+<Navbar dark={true} />
 ```
 
-Used in:
+When `dark={true}`:
 
-- Desktop dropdown (when theme='normal')
-- Sticky mobile nav panel
-- Sign-in modal
+- Logo switches to white version (`/images/logo-white.png`)
+- Desktop nav links use white text with `hover:bg-white/10`
+- Social media icons use white color
+- Search icon uses white color
 
-### Icon Gradient Overlay (Mobile, theme='normal')
+## Data Flow
 
-```
-before:bg-linear-to-br before:from-[#fffaeb]/20 before:via-[#ffd4e8]/20 before:to-[#e0d4ff]/20 before:opacity-50
-```
-
-### Border & Shadow
+All navigation data is centralized in `config.ts`. Components import directly from this file:
 
 ```
-ring-1 ring-[#D15052]/15
-after:shadow-[inset_0_0_2px_1px_#ffffff4d]
+config.ts
+├── homeLink → index.tsx, sticky-navbar.tsx
+├── links → desktop-nav.tsx, mobile-nav.tsx
+└── socialLinks → social-media-nav.tsx, mobile-nav.tsx
 ```
 
 ## Benefits of This Architecture
 
 1. **Modularity**: Each component has a single responsibility
 2. **Maintainability**: Easy to locate and modify specific features
-3. **Reusability**: Components can be reused in different contexts
+3. **Centralized Config**: All navigation data in one place
 4. **Type Safety**: Centralized types prevent inconsistencies
-5. **Configuration**: Data separated from presentation logic
-6. **Testing**: Individual components can be tested in isolation
-7. **Performance**: Can lazy load or code-split if needed
-8. **Readability**: Much easier to understand than a 999-line file
+5. **Reusability**: Components can be reused in different contexts
+6. **Readability**: Clear separation of concerns
 
 ## Making Changes
 
@@ -182,20 +162,22 @@ after:shadow-[inset_0_0_2px_1px_#ffffff4d]
 
 Edit `config.ts` and add to the `links` array
 
-### Modifying theme behavior
+### Adding a dropdown to a link
 
-Edit the conditional logic in `desktop-nav.tsx` or `mobile-nav.tsx`
+Add a `dropdown` property with `items`, optional `columns` (1-3), and optional `position` ('left', 'center', 'right')
 
-### Changing dropdown styling
+### Modifying social links
 
-Modify the theme-based classes in `desktop-nav.tsx`
+Edit `config.ts` and update the `socialLinks` array
+
+### Changing the logo link destination
+
+Edit `homeLink` in `config.ts`
+
+### Using dark mode
+
+Pass `dark={true}` to the Navbar component for dark backgrounds
 
 ### Updating mobile menu behavior
 
 Edit `mobile-nav.tsx` for the menu content or `sticky-mobile-nav-button.tsx` for the container
-
-### Adding new theme options
-
-1. Update `types.ts` to add new theme value
-2. Update conditional logic in affected components
-3. Add new styling variants

@@ -18,9 +18,9 @@ export default function MySlider() {
         className="swiper"
       >
         <div className="swiper-wrapper">
-          <div className="swiper-slide">Slide 1</div>
-          <div className="swiper-slide">Slide 2</div>
-          <div className="swiper-slide">Slide 3</div>
+          <div>Slide 1</div>
+          <div>Slide 2</div>
+          <div>Slide 3</div>
         </div>
         <div className="swiper-pagination"></div>
       </div>

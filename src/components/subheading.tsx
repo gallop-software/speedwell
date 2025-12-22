@@ -50,14 +50,14 @@ export function Subheading({
 }: SubheadingProps) {
   // Define consistent default styles for all subheadings
   const defaults = {
-    fontSize: 'text-xs',
+    fontSize: 'text-xl',
     fontWeight: 'font-semibold',
-    letterSpacing: 'tracking-widest',
+    letterSpacing: 'tracking-tight',
     textWrap: 'leading-relaxed',
-    fontFamily: 'font-body',
-    color: 'text-gray-400',
+    fontFamily: 'font-heading',
+    color: 'text-accent',
     margin: 'mb-0',
-    textTransform: 'uppercase',
+    textTransform: 'normal',
   }
 
   // Use user-defined values if provided, otherwise use defaults

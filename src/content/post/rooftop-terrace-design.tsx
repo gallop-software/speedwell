@@ -87,7 +87,7 @@ export const metadata = {
     description:
       'Urban rooftop oasis with dining, lounge areas, and city views',
     image: {
-      url: '/images/portfolio/pexels-dropshado-2251247.jpg',
+      url: '/images/banner.jpg',
       alt: 'Rooftop terrace with outdoor furniture and city views',
     },
   },

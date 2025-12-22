@@ -53,7 +53,7 @@ export const metadata = {
     description:
       'Expert commercial interior design for offices, retail, restaurants, and hospitality spaces. Create inspiring environments that elevate your brand and drive business success.',
     image: {
-      url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+      url: '/images/banner.jpg',
       alt: 'Modern commercial interior design with sophisticated style',
     },
   },
@@ -62,6 +62,6 @@ export const metadata = {
     title: 'Commercial Interior Design Services | Office & Retail Spaces',
     description:
       'Transform your commercial space with expert design. Create inspiring work environments and engaging experiences that elevate your brand.',
-    image: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+    image: '/images/banner.jpg',
   },
 }

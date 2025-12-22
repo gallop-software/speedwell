@@ -4,6 +4,7 @@ import Content6 from '@/blocks/content-6'
 import Showcase6 from '@/blocks/showcase-6'
 import Cover5 from '@/blocks/cover-5'
 import About3 from '@/blocks/about-3'
+import Process1 from '@/blocks/process-1'
 import Blog2 from '@/blocks/blog-2'
 import Contact3 from '@/blocks/contact-3'
 import Contact4 from '@/blocks/contact-4'
@@ -15,6 +16,7 @@ export default function Content() {
       <Hero14 />
       <Section35 />
       <Content6 />
+      <Process1 />
       <Showcase6 />
       <About3 />
       <Cover5 />
@@ -63,7 +65,7 @@ export const metadata = {
     description:
       'Award-winning interior design studio specializing in residential and commercial projects. We create beautiful, functional spaces that reflect your unique style and enhance your daily living experience.',
     image: {
-      url: '/images/portfolio/pexels-pixabay-259962.jpg',
+      url: '/images/banner.jpg',
       alt: 'Beautifully designed modern interior living space',
     },
   },
@@ -74,7 +76,7 @@ export const metadata = {
     title: 'Transform Your Space | Professional Interior Design Services',
     description:
       'Creating stunning interiors for homes and businesses. Expert design, custom furnishings, and complete project management from concept to completion.',
-    image: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+    image: '/images/banner.jpg',
   },
   category: 'Interior Design',
   applicationName: 'Speedwell Interior Design',

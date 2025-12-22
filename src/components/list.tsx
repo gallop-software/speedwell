@@ -1,4 +1,5 @@
 import { clsx } from 'clsx'
+import { Icon } from './icon'
 
 export interface ListProps extends React.ComponentPropsWithoutRef<'ul'> {
   /** Variant of the list - controls default styling */
@@ -32,6 +33,14 @@ export interface ListProps extends React.ComponentPropsWithoutRef<'ul'> {
 export interface LiProps extends React.ComponentPropsWithoutRef<'li'> {
   /** Additional CSS classes */
   className?: string
+  /** Icon component or iconify icon object to display before text */
+  icon?:
+    | React.ComponentType<{ className?: string }>
+    | { body: string; width?: number; height?: number }
+  /** Icon size - default is 'w-5 h-5' */
+  iconSize?: string
+  /** Gap between icon and text - default is 'gap-x-3' */
+  iconGap?: string
 }
 
 export function List({
@@ -66,9 +75,9 @@ export function List({
 
   // Use user-defined values if provided, otherwise use defaults
   const finalFontSize = fontSize || 'text-base'
-  const finalColor = color || 'text-gray-950'
+  const finalColor = color || 'text-contrast'
   const finalFontFamily = fontFamily || '' // no default font family
-  const finalFontWeight = fontWeight || 'font-medium' // default font weight
+  const finalFontWeight = fontWeight || 'font-normal' // default font weight
   const finalFontStyle = fontStyle || '' // no default font style
   const finalLineHeight = lineHeight || '' // no default line height
   const finalTextAlign = textAlign || '' // no default text alignment
@@ -103,13 +112,39 @@ export function List({
   )
 }
 
-export function Li({ className = '', children, ...props }: LiProps) {
+export function Li({
+  className = '',
+  icon,
+  iconSize = 'w-5 h-5',
+  iconGap = 'gap-x-3',
+  children,
+  ...props
+}: LiProps) {
+  const isIconifyIcon = icon && typeof icon === 'object' && 'body' in icon
+  const IconComponent = !isIconifyIcon
+    ? (icon as React.ComponentType<{ className?: string }>)
+    : null
+
   return (
     <li
-      className={clsx('[&>ul]:mt-2', className)}
+      className={clsx(
+        '[&>ul]:mt-2',
+        icon && 'flex',
+        icon && iconGap,
+        className
+      )}
       {...props}
     >
-      {children}
+      {isIconifyIcon && (
+        <Icon
+          icon={icon as { body: string; width?: number; height?: number }}
+          className={clsx(iconSize, 'flex-none mt-1.5')}
+        />
+      )}
+      {IconComponent && (
+        <IconComponent className={clsx(iconSize, 'flex-none mt-1.5')} />
+      )}
+      {icon ? <span>{children}</span> : children}
     </li>
   )
 }

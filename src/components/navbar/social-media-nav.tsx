@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
+import clsx from 'clsx'
 import { Icon } from '../icon'
-import { socialLinks as defaultSocialLinks } from './config'
+import { socialLinks } from './config'
 import type { SocialLink } from './types'
 
 /**
@@ -9,10 +10,8 @@ import type { SocialLink } from './types'
  * @returns {ReactElement} Social media links
  */
 export function SocialMediaNav({
-  socialLinks = defaultSocialLinks,
-}: {
-  socialLinks?: SocialLink[]
-} = {}): ReactElement {
+  dark = false,
+}: { dark?: boolean } = {}): ReactElement {
   return (
     <div className="hidden lg:flex items-center space-x-0 xl:space-x-1">
       {socialLinks.map((item: SocialLink) => (
@@ -21,7 +20,12 @@ export function SocialMediaNav({
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent-dark hover:bg-black/2.5 rounded-lg transition-colors duration-200 p-2"
+          className={clsx(
+            'rounded-lg transition-colors duration-200 p-2',
+            dark
+              ? 'text-white hover:text-white/80 hover:bg-white/10'
+              : 'text-accent hover:text-accent-dark hover:bg-black/2.5'
+          )}
           aria-label={item.name}
         >
           <Icon icon={item.icon} />

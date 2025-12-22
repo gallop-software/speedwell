@@ -1,41 +1,101 @@
-import { DisclosureButton } from '@headlessui/react'
-import { motion } from 'framer-motion'
-import type { ReactElement } from 'react'
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from '@headlessui/react'
+import { useState, type ReactElement } from 'react'
+import clsx from 'clsx'
 import bars2Icon from '@iconify/icons-heroicons/bars-2-20-solid'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark-20-solid'
 import { Icon } from '../icon'
+import { MobileNav } from './mobile-nav'
+
+interface MobileNavButtonProps {
+  dark?: boolean
+}
 
 /**
- * Mobile navigation hamburger button
- * Toggles the mobile menu visibility with animated icon transition
- * @param open - Whether the mobile menu is open
- * @returns {ReactElement} Mobile menu toggle button
+ * Sticky Mobile Nav Button with Sidebar Dialog
+ * Opens mobile navigation in a sliding sidebar dialog
  */
-export function MobileNavButton({ open }: { open: boolean }): ReactElement {
+export function MobileNavButton({
+  dark = false,
+}: MobileNavButtonProps): ReactElement {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const closeModal = () => {
+    setIsOpen(false)
+  }
+
   return (
-    <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg focus:outline-none focus:ring-0 lg:hidden cursor-pointer -mr-2"
-      aria-label="Open main menu"
-      suppressHydrationWarning
-    >
-      <motion.div
-        animate={{ rotate: open ? 90 : 0 }}
-        transition={{ duration: 0.2 }}
-        className="relative"
-        suppressHydrationWarning
-      >
-        {open ? (
-          <Icon
-            icon={xMarkIcon}
-            className="size-6"
-          />
-        ) : (
-          <Icon
-            icon={bars2Icon}
-            className="size-6"
-          />
+    <>
+      <button
+        onClick={() => setIsOpen(true)}
+        className={clsx(
+          'lg:hidden rounded-lg transition-colors duration-200 p-2 cursor-pointer -mr-2 focus:outline-none focus:ring-0',
+          dark
+            ? 'text-white hover:text-white/80'
+            : 'text-accent hover:text-accent-dark'
         )}
-      </motion.div>
-    </DisclosureButton>
+        aria-label="Open mobile menu"
+      >
+        <Icon
+          icon={bars2Icon}
+          className="h-7 w-7"
+        />
+      </button>
+
+      <Dialog
+        as="div"
+        className="relative z-50 lg:hidden"
+        onClose={closeModal}
+        open={isOpen}
+      >
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-white/50 backdrop-blur-md duration-500 ease-out data-[closed]:opacity-0"
+        />
+
+        <div className="fixed inset-0 font-body h-screen min-h-screen text-contrast max-w-[86%] md:max-w-[77%] w-full right-0 left-auto scroll-smooth">
+          <div className="flex justify-end h-full">
+            <DialogPanel
+              transition
+              className="pointer-events-auto h-full bg-body2 shadow-xl text-left align-middle overflow-hidden overflow-y-auto scrollbar-hide w-full duration-500 ease-in-out transition data-[closed]:translate-x-full [-webkit-overflow-scrolling:touch]"
+            >
+              <div className="relative flex items-center justify-start flex-col h-full pt-6 pb-14">
+                {/* Header */}
+                <div className="w-full flex justify-between px-8 mb-6">
+                  <DialogTitle className="text-xl font-heading font-bold">
+                    Menu
+                  </DialogTitle>
+                  <button
+                    type="button"
+                    className="rounded-full focus:outline-none focus:ring-0 p-1.5 cursor-pointer -mr-2"
+                    onClick={closeModal}
+                  >
+                    <Icon
+                      icon={xMarkIcon}
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    />
+                  </button>
+                </div>
+
+                {/* Mobile Navigation Content */}
+                <div
+                  className={clsx(
+                    'h-full px-8 [&>*:first-child]:mt-0 w-full',
+                    "after:content-[''] after:block after:w-full after:h-20 after:xl:h-10"
+                  )}
+                >
+                  <MobileNav />
+                </div>
+              </div>
+            </DialogPanel>
+          </div>
+        </div>
+      </Dialog>
+    </>
   )
 }

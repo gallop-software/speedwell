@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Curated gallery wall with personal art collection and professional arrangement',
     image: {
-      url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg',
+      url: '/images/banner.jpg',
       alt: 'Gallery wall with curated art and family photographs',
     },
   },

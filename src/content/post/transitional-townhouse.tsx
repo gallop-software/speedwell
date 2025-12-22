@@ -77,7 +77,7 @@ export const metadata = {
     description:
       'Historic townhouse with transitional design blending old and new',
     image: {
-      url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+      url: '/images/banner.jpg',
       alt: 'Transitional townhouse with classic and contemporary elements',
     },
   },

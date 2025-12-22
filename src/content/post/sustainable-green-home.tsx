@@ -97,7 +97,7 @@ export const metadata = {
     description:
       'Eco-friendly home with sustainable materials and energy-efficient design',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
+      url: '/images/banner.jpg',
       alt: 'Sustainable home interior with natural materials',
     },
   },

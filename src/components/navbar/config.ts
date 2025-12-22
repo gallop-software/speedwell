@@ -21,6 +21,7 @@ import viewGridIcon from '@iconify/icons-mdi/view-grid-outline'
 import viewColumnIcon from '@iconify/icons-mdi/view-column-outline'
 import viewCarouselIcon from '@iconify/icons-mdi/view-carousel-outline'
 import dockLeftIcon from '@iconify/icons-mdi/dock-left'
+import dockTopIcon from '@iconify/icons-mdi/dock-top'
 import windowMaximizeIcon from '@iconify/icons-mdi/window-maximize'
 import viewSplitVerticalIcon from '@iconify/icons-mdi/view-split-vertical'
 import type { NavLink, SocialLink } from './types'
@@ -138,28 +139,28 @@ export const links: NavLink[] = [
     label: 'Demos',
     dropdown: {
       position: 'center',
-      columns: 3,
+      columns: 1,
       items: [
         {
           name: 'Homepage Demo',
           description: 'Front page with hero and features',
           href: '/',
-          icon: fileDocumentIcon,
+          icon: homeIcon,
         },
         {
           name: 'One Page Site',
           description: 'Navbar with smooth scrolling to sections',
           href: '/layout-1',
-          icon: fileDocumentIcon,
+          icon: viewDashboardIcon,
         },
         {
-          name: 'Layout 2',
-          description: 'Modern grid-based card layout system',
+          name: 'Navbar Style 2',
+          description: 'Right aligned navigation',
           href: '/layout-2',
-          icon: viewGridIcon,
+          icon: dockTopIcon,
         },
-        {
-          name: 'Layout 3',
+        /*{
+          name: 'Photographer Portfolio',
           description: 'Multi-column content distribution design',
           href: '/layout-3',
           icon: viewColumnIcon,
@@ -187,7 +188,7 @@ export const links: NavLink[] = [
           description: 'Vertical split content arrangement',
           href: '/layout-7',
           icon: viewSplitVerticalIcon,
-        },
+        },*/
       ],
     },
   },

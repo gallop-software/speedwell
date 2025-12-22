@@ -88,7 +88,7 @@ export const metadata = {
     description:
       'Sophisticated downtown penthouse with panoramic city views and contemporary design',
     image: {
-      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
+      url: '/images/banner.jpg',
       alt: 'Urban penthouse with city views and contemporary design',
     },
   },

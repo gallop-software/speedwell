@@ -78,7 +78,7 @@ export const metadata = {
     description:
       'Upscale restaurant with sophisticated ambiance and thoughtful design',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+      url: '/images/banner.jpg',
       alt: 'Upscale restaurant interior with rich materials',
     },
   },

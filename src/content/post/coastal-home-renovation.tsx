@@ -74,7 +74,7 @@ export const metadata = {
     description:
       'Fresh, airy beachfront home renovation with ocean views and coastal-inspired interiors',
     image: {
-      url: '/images/portfolio/pexels-burst-545012.jpg',
+      url: '/images/banner.jpg',
       alt: 'Coastal living room with ocean views and light airy design',
     },
   },

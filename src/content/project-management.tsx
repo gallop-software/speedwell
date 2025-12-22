@@ -43,7 +43,7 @@ export const metadata = {
     description:
       'Expert project management for your interior design needs. We handle every detail from planning to execution, ensuring your project is completed on time, on budget, and beyond expectations.',
     image: {
-      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+      url: '/images/banner.jpg',
       alt: 'Professional interior design project in progress',
     },
     imageAlt: 'Interior Design Project Management',

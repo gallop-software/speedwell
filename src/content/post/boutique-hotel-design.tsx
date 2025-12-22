@@ -78,7 +78,7 @@ export const metadata = {
     description:
       'Sophisticated boutique hotel with unique rooms and curated public spaces',
     image: {
-      url: '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
+      url: '/images/banner.jpg',
       alt: 'Boutique hotel lobby with sophisticated furnishings',
     },
   },

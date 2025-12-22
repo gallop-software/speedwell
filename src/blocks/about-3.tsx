@@ -1,22 +1,34 @@
 import {
   Section,
   Grid,
-  Profile1,
+  Swiper,
+  Profile2,
   Heading,
   Paragraph,
-  IconText,
+  FancyHeading,
 } from '@/components'
-import mapPinIcon from '@iconify/icons-heroicons/map-pin'
-import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
+import facebookIcon from '@iconify/icons-simple-icons/facebook'
+import dribbbleIcon from '@iconify/icons-simple-icons/dribbble'
+import xIcon from '@iconify/icons-simple-icons/x'
 
 export default function About3() {
   return (
     <Section className="mb-30 mt-30">
-      <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-        <Profile1
-          aspect="aspect-[4/5]"
+      <FancyHeading
+        text="Meet Our Team"
+        accent="creative minds"
+        margin="mb-4"
+      />
+      <Swiper layout="carousel">
+        <Profile2
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
+          bgColor="bg-body2/40"
           cite="Sarah Mitchell"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -29,27 +41,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Principal Designer & Founder
+            Creative Director & Founder
           </Heading>
-          <Paragraph textAlign="text-center">
-            With over 15 years of experience, Sarah leads our design vision with
-            creativity and strategic insight
+          <Paragraph>
+            With over 15 years of experience, Sarah leads our creative vision
+            with strategic insight and bold thinking
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            New York, NY
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
+          bgColor="bg-body2/50"
           cite="Michael Chen"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -62,27 +70,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Senior Commercial Designer
+            Brand Strategist
           </Heading>
-          <Paragraph textAlign="text-center">
-            Specializing in office and retail spaces, Michael creates functional
-            environments that inspire productivity
+          <Paragraph>
+            Specializing in brand positioning and market analysis, Michael
+            creates strategic foundations that drive business growth
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            San Francisco, CA
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
+          bgColor="bg-body2/60"
           cite="Robert Rodriguez"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -95,27 +99,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Residential Design Lead
+            Lead Visual Designer
           </Heading>
-          <Paragraph textAlign="text-center">
-            Robert brings warmth and personality to every home with his
-            thoughtful approach to residential design
+          <Paragraph>
+            Robert brings artistry and attention to detail to every brand
+            identity with his thoughtful approach to visual design
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Austin, TX
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-skildring-12871464.jpg"
+          bgColor="bg-body2/70"
           cite="David Thompson"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -128,27 +128,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Color & Materials Specialist
+            Typography & Color Specialist
           </Heading>
-          <Paragraph textAlign="text-center">
-            David has an exceptional eye for color theory and material
-            selection, elevating every project
+          <Paragraph>
+            David has an exceptional eye for typography and color systems,
+            creating cohesive visual languages for every brand
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Seattle, WA
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
+          bgColor="bg-body2/40"
           cite="Ryan Anderson"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -161,27 +157,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Kitchen & Bath Designer
+            Digital Designer
           </Heading>
-          <Paragraph textAlign="text-center">
-            Ryan specializes in creating beautiful, functional kitchens and
-            bathrooms that stand the test of time
+          <Paragraph>
+            Ryan specializes in creating engaging digital experiences and
+            interactive designs that connect brands with audiences
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Boston, MA
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
+          bgColor="bg-body2/50"
           cite="Lucas Martinez"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -194,27 +186,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Space Planning Expert
+            UX/UI Designer
           </Heading>
-          <Paragraph textAlign="text-center">
-            Lucas transforms challenging layouts into optimized, flowing spaces
-            that maximize function and beauty
+          <Paragraph>
+            Lucas transforms complex user journeys into intuitive experiences
+            that maximize engagement and conversion
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={mapPinIcon}
-          >
-            Chicago, IL
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
+          bgColor="bg-body2/60"
           cite="Amanda Foster"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -227,27 +215,23 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Project Manager
+            Account Director
           </Heading>
-          <Paragraph textAlign="text-center">
-            Amanda ensures every project runs smoothly from concept to
-            completion with expert coordination
+          <Paragraph>
+            Amanda ensures every project runs smoothly from briefing to launch
+            with expert client coordination and strategic oversight
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={academicCapIcon}
-          >
-            PMP Certified
-          </IconText>
-        </Profile1>
+        </Profile2>
 
-        <Profile1
-          aspect="aspect-[4/5]"
+        <Profile2
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
+          bgColor="bg-body2/70"
           cite="Robert Taylor"
+          contact={[
+            { icon: facebookIcon, link: '#' },
+            { icon: dribbbleIcon, link: '#' },
+            { icon: xIcon, link: '#' },
+          ]}
         >
           <Heading
             as="h3"
@@ -260,23 +244,14 @@ export default function About3() {
             fontSize="text-lg"
             className="text-accent mb-3"
           >
-            Furniture & Styling Consultant
+            Copywriter & Content Strategist
           </Heading>
-          <Paragraph textAlign="text-center">
-            Robert curates perfect furniture selections and styling details that
-            complete every design vision
+          <Paragraph>
+            Robert crafts compelling brand narratives and messaging strategies
+            that resonate with audiences and drive action
           </Paragraph>
-          <IconText
-            className="uppercase"
-            fontWeight="font-semibold"
-            fontSize="text-sm"
-            textAlign="text-center"
-            icon={academicCapIcon}
-          >
-            ASID Member
-          </IconText>
-        </Profile1>
-      </Grid>
+        </Profile2>
+      </Swiper>
     </Section>
   )
 }

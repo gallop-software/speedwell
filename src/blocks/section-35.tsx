@@ -22,8 +22,8 @@ export default function Section35() {
       >
         <Column>
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-            alt="Detailed project planning and scheduling"
+            src="/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg"
+            alt="Creative team collaborating on brand strategy"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
@@ -37,32 +37,33 @@ export default function Section35() {
             fontSize="text-3xl"
             color="text-accent5"
           >
-            Phase 1
+            Who We Are
           </Heading>
           <Heading
             as="h4"
             styleAs="h2"
           >
-            Planning & Design Development
+            A Creative Agency Built on Strategy
           </Heading>
           <Paragraph>
-            Every successful project begins with thorough planning. We work
-            closely with you to refine the design concept, establish realistic
-            timelines, and create detailed budgets. Our team prepares
-            comprehensive specifications, coordinates with architects and
-            engineers, and ensures all design elements are perfectly aligned
-            before moving forward.
+            We are a team of designers, strategists, and storytellers passionate
+            about creating brands that resonate. Our approach combines creative
+            excellence with strategic thinking to deliver branding solutions
+            that not only look beautiful but also drive real business results.
+            From startups to established businesses, we partner with clients who
+            are ready to make their mark.
           </Paragraph>
           <Paragraph>
-            During this phase, we finalize material selections, secure vendor
-            quotes, and develop a detailed project schedule. We obtain necessary
-            permits, coordinate with your HOA if applicable, and ensure all
-            stakeholders understand their roles and responsibilities. This
-            meticulous preparation sets the foundation for smooth execution.
+            Our studio thrives on collaboration and innovation. We believe the
+            best brands emerge from deep understanding of your business,
+            audience, and market. By blending research, creativity, and
+            strategic insight, we craft brand identities that are distinctive,
+            memorable, and built to last. Every project we take on is an
+            opportunity to push boundaries and create something exceptional.
           </Paragraph>
           <Quote>
-            Proper planning prevents problems – we invest time upfront to ensure
-            flawless execution throughout your project
+            Great brands are born from the intersection of creativity, strategy,
+            and authentic storytelling
           </Quote>
         </Column>
       </Columns>
@@ -70,100 +71,63 @@ export default function Section35() {
         align="content"
         padding="px-0"
       >
-        <Heading as="h2">Current Openings</Heading>
-        <Accordion headingText="Interior Designer">
-          <Heading as="h4">Responsibilities</Heading>
+        <Heading
+          textAlign="text-center"
+          as="h2"
+        >
+          What We Do
+        </Heading>
+        <Accordion headingText="Brand Identity & Design">
+          <Heading as="h4">Our Approach</Heading>
+          <Paragraph>
+            We create visual identities that capture the essence of your brand.
+            From logo design to complete brand systems, we develop cohesive
+            visual languages that communicate your values and connect with your
+            audience.
+          </Paragraph>
+          <Heading as="h4">Services Include</Heading>
           <List className="mb-8">
-            <Li>
-              Develop creative design concepts for residential and commercial
-              projects
-            </Li>
-            <Li>
-              Create detailed space plans, elevations, and design presentations
-            </Li>
-            <Li>
-              Collaborate with clients to understand their vision and
-              requirements
-            </Li>
-            <Li>Select furniture, finishes, fabrics, and accessories</Li>
-            <Li>Coordinate with contractors, vendors, and craftspeople</Li>
-            <Li>Manage multiple projects from concept through installation</Li>
-          </List>
-          <Heading as="h4">Qualifications</Heading>
-          <List className="mb-8">
-            <Li>Degree in Interior Design or related field</Li>
-            <Li>3-5 years of professional experience</Li>
-            <Li>Proficiency in AutoCAD, SketchUp, and Adobe Creative Suite</Li>
-            <Li>
-              Strong understanding of building codes and industry standards
-            </Li>
-            <Li>Excellent communication and presentation skills</Li>
-            <Li>Portfolio demonstrating creative design solutions</Li>
-          </List>
-          <Heading as="h4">What We Offer</Heading>
-          <List className="mb-8">
-            <Li>Competitive salary based on experience</Li>
-            <Li>Health, dental, and vision insurance</Li>
-            <Li>Professional development and continuing education</Li>
-            <Li>Collaborative studio environment with talented team</Li>
+            <Li>Logo design and brand mark development</Li>
+            <Li>Brand guidelines and style guides</Li>
+            <Li>Color palette and typography systems</Li>
+            <Li>Business card and stationery design</Li>
+            <Li>Packaging and product design</Li>
+            <Li>Brand refresh and evolution</Li>
           </List>
         </Accordion>
-        <Accordion headingText="Project Manager">
-          <Heading as="h4">Responsibilities</Heading>
+        <Accordion headingText="Digital & Web Design">
+          <Heading as="h4">Our Approach</Heading>
+          <Paragraph>
+            We design digital experiences that are both beautiful and
+            functional. Our websites and digital products are crafted to engage
+            users, communicate your message clearly, and drive conversions.
+          </Paragraph>
+          <Heading as="h4">Services Include</Heading>
           <List className="mb-8">
-            <Li>
-              Oversee design projects from initial consultation to completion
-            </Li>
-            <Li>Coordinate schedules, budgets, and timelines</Li>
-            <Li>Communicate with clients, contractors, and vendors</Li>
-            <Li>Ensure quality standards and project specifications are met</Li>
-            <Li>Problem-solve and address challenges proactively</Li>
-            <Li>Manage procurement and installation processes</Li>
-          </List>
-          <Heading as="h4">Qualifications</Heading>
-          <List className="mb-8">
-            <Li>Project management experience in design or construction</Li>
-            <Li>Strong organizational and multitasking abilities</Li>
-            <Li>Excellent communication and leadership skills</Li>
-            <Li>PMP certification preferred but not required</Li>
-          </List>
-          <Heading as="h4">What We Offer</Heading>
-          <List className="mb-8">
-            <Li>Opportunity to manage diverse, high-profile projects</Li>
-            <Li>Competitive compensation package</Li>
-            <Li>Work with experienced design team</Li>
-            <Li>Professional growth opportunities</Li>
+            <Li>Website design and development</Li>
+            <Li>User experience (UX) and interface (UI) design</Li>
+            <Li>E-commerce solutions</Li>
+            <Li>Mobile app design</Li>
+            <Li>Landing page design and optimization</Li>
+            <Li>Digital marketing assets</Li>
           </List>
         </Accordion>
-        <Accordion headingText="Design Intern">
-          <Heading as="h4">Responsibilities</Heading>
+        <Accordion headingText="Brand Strategy & Marketing">
+          <Heading as="h4">Our Approach</Heading>
+          <Paragraph>
+            We develop strategic foundations that guide all your branding
+            efforts. Through research, positioning, and messaging development,
+            we help you define who you are and how to communicate it
+            effectively.
+          </Paragraph>
+          <Heading as="h4">Services Include</Heading>
           <List className="mb-8">
-            <Li>
-              Assist senior designers with project research and development
-            </Li>
-            <Li>
-              Create mood boards, material boards, and design presentations
-            </Li>
-            <Li>Support space planning and furniture selection</Li>
-            <Li>Participate in client meetings and site visits</Li>
-            <Li>Help maintain design library and resource materials</Li>
-          </List>
-          <Heading as="h4">Qualifications</Heading>
-          <List className="mb-8">
-            <Li>
-              Currently enrolled in Interior Design program or recent graduate
-            </Li>
-            <Li>Basic knowledge of design software</Li>
-            <Li>Passion for design and eagerness to learn</Li>
-            <Li>Strong work ethic and attention to detail</Li>
-            <Li>Portfolio showing creative potential</Li>
-          </List>
-          <Heading as="h4">What We Offer</Heading>
-          <List className="mb-8">
-            <Li>Hands-on experience with real projects</Li>
-            <Li>Mentorship from experienced designers</Li>
-            <Li>Exposure to residential and commercial design</Li>
-            <Li>Potential for full-time employment after internship</Li>
+            <Li>Brand strategy and positioning</Li>
+            <Li>Market research and competitive analysis</Li>
+            <Li>Messaging and brand voice development</Li>
+            <Li>Content strategy and creation</Li>
+            <Li>Social media strategy and management</Li>
+            <Li>Marketing campaign development</Li>
           </List>
         </Accordion>
       </Container>

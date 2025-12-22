@@ -86,7 +86,7 @@ export const metadata = {
     title: 'Open Concept Living | Modern Home Renovation Design',
     description: 'Flowing open-concept renovation with connected living spaces',
     image: {
-      url: '/images/portfolio/houzlook/pexels-houzlook-3356416.jpg',
+      url: '/images/banner.jpg',
       alt: 'Open concept living space with kitchen and dining areas',
     },
   },

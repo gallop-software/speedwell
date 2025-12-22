@@ -89,7 +89,7 @@ export const metadata = {
     description:
       'Minimalist Japanese-inspired home with natural materials and Zen principles',
     image: {
-      url: '/images/portfolio/jvdm/pexels-jvdm-1454804.jpg',
+      url: '/images/banner.jpg',
       alt: 'Japanese Zen interior with minimal design and natural materials',
     },
   },

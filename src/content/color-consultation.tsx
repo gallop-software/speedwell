@@ -56,7 +56,7 @@ export const metadata = {
     description:
       'Transform your space with expert color consultation services. Our designers help you select the perfect color palette that enhances beauty and reflects your unique style.',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+      url: '/images/banner.jpg',
       alt: 'Beautiful interior space showcasing professional color coordination and design',
     },
   },
@@ -65,6 +65,6 @@ export const metadata = {
     title: 'Professional Color Consultation Services | Interior Design',
     description:
       'Expert color consultation to transform your space. Choose colors that enhance beauty, reflect personality, and create the perfect ambiance.',
-    image: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+    image: '/images/banner.jpg',
   },
 }

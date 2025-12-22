@@ -30,7 +30,7 @@ export const metadata = {
     description:
       'Non esse mollit adipiscing ad exercitation id dolor enim reprehenderit laboris aute sed reprehenderit sed nostrud eiusmod exercitation laborum commodo sit ad excepteur mollit',
     image: {
-      url: '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+      url: '/images/banner.jpg',
       alt: 'Consectetur elit anim in aliqua lorem minim',
     },
   },

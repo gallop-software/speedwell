@@ -90,7 +90,7 @@ export const metadata = {
     title: 'Mudroom Organization | Family Entry Storage Design',
     description: 'Organized family mudroom with custom storage for everyone',
     image: {
-      url: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+      url: '/images/banner.jpg',
       alt: 'Mudroom with custom cubbies and family organization',
     },
   },

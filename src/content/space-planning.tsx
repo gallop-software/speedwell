@@ -52,7 +52,7 @@ export const metadata = {
     description:
       'Expert space planning that maximizes functionality and flow. Strategic layouts that optimize every square foot for beautiful, efficient living and working spaces.',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+      url: '/images/banner.jpg',
       alt: 'Professional space planning and interior layout design',
     },
   },
@@ -61,6 +61,6 @@ export const metadata = {
     title: 'Space Planning Services | Optimize Your Interior Layout',
     description:
       'Expert space planning services that maximize functionality and flow. Create efficient, beautiful layouts that enhance how you live and work.',
-    image: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+    image: '/images/banner.jpg',
   },
 }

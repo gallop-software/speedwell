@@ -3,16 +3,17 @@ import { Cover, Accent } from '@/components'
 export default function Cover5() {
   return (
     <Cover
-      imageSrc="/images/portfolio/pexels-clickerhappy-584399.jpg"
-      imageAlt="Beautiful interior design space"
+      imageSrc="/images/layout-1/pexels-ivan-s-8117415.jpg"
+      imageAlt="Creative workspace with design materials"
       imageClassName=""
+      parallax={true}
     >
       <Accent
         className="text-center"
         color="text-white"
         size="medium"
       >
-        Transform Your Space
+        Strategy Meets Creativity
       </Accent>
     </Cover>
   )

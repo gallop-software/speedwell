@@ -33,7 +33,7 @@ export const metadata = {
     description:
       'Discover remarkable interior design transformations by Timmerman. Browse our before and after gallery showcasing residential and commercial projects that demonstrate our creative expertise.',
     image: {
-      url: '/images/portfolio/jvdm/pexels-jvdm-1457844.jpg',
+      url: '/images/banner.jpg',
       alt: 'Before and after interior design transformation',
     },
     imageAlt: 'Interior Design Before & After Transformations',

@@ -75,7 +75,7 @@ export const metadata = {
     description:
       'Five-star master suite with spa bathroom and custom walk-in closet',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
+      url: '/images/banner.jpg',
       alt: 'Luxury master bedroom with sophisticated furnishings',
     },
   },

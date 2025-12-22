@@ -90,7 +90,7 @@ export const metadata = {
     title: 'Wine Country Estate | Rustic Elegant Interior Design',
     description: 'Wine country estate with rustic elegance and vineyard views',
     image: {
-      url: '/images/portfolio/pexels-alex-qian-1180283-2343465.jpg',
+      url: '/images/banner.jpg',
       alt: 'Wine country estate with exposed beams and vineyard views',
     },
   },

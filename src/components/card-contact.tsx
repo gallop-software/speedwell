@@ -1,8 +1,11 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import { clsx } from 'clsx'
 import { Icon } from './icon'
 import { Heading } from './heading'
 import { Paragraph } from './paragraph'
+import clipboardIcon from '@iconify/icons-lucide/clipboard'
 
 interface CardContactProps {
   children?: React.ReactNode
@@ -19,6 +22,8 @@ interface CardContactProps {
   icon: { body: string; width?: number; height?: number }
   /** Icon color override */
   iconColor?: string
+  /** Value to copy to clipboard when copy button is clicked */
+  copy?: string
 }
 
 export function CardContact({
@@ -30,12 +35,25 @@ export function CardContact({
   text,
   icon,
   iconColor = '',
+  copy,
 }: CardContactProps) {
+  const [showTooltip, setShowTooltip] = useState(false)
+
   // Use user-defined values if provided, otherwise use defaults
   const finalColor = color || 'bg-body hover:bg-body/90 text-contrast'
   const finalIconColor =
     iconColor ||
     'text-accent bg-accent3 group-hover:bg-accent3-dark group-hover:text-accent-dark'
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (copy) {
+      navigator.clipboard.writeText(copy)
+      setShowTooltip(true)
+      setTimeout(() => setShowTooltip(false), 1500)
+    }
+  }
 
   return (
     <a
@@ -62,18 +80,38 @@ export function CardContact({
         </Paragraph>
         {children}
       </div>
-      <span
-        className={clsx(
-          finalIconColor,
-          'flex size-11 flex-none items-center justify-center rounded-full'
+      <div className="flex items-center gap-3">
+        {copy && (
+          <button
+            onClick={handleCopy}
+            className="relative flex size-11 flex-none items-center justify-center rounded-full bg-gray-100 text-gray-400 hover:bg-gray-200 transition-colors cursor-grab"
+            aria-label="Copy to clipboard"
+          >
+            <Icon
+              icon={clipboardIcon}
+              aria-hidden={true}
+              className="size-5"
+            />
+            {showTooltip && (
+              <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                Copied!
+              </span>
+            )}
+          </button>
         )}
-      >
-        <Icon
-          icon={icon}
-          aria-hidden={true}
-          className={clsx('size-5')}
-        />
-      </span>
+        <span
+          className={clsx(
+            finalIconColor,
+            'flex size-11 flex-none items-center justify-center rounded-full'
+          )}
+        >
+          <Icon
+            icon={icon}
+            aria-hidden={true}
+            className={clsx('size-5')}
+          />
+        </span>
+      </div>
     </a>
   )
 }

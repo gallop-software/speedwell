@@ -89,7 +89,7 @@ export const metadata = {
     description:
       'Cozy mountain chalet with rustic luxury and spectacular views',
     image: {
-      url: '/images/portfolio/pexels-jworks1124-342800.jpg',
+      url: '/images/banner.jpg',
       alt: 'Mountain chalet interior with exposed beams and stone fireplace',
     },
   },

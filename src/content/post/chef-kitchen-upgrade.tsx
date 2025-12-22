@@ -77,7 +77,7 @@ export const metadata = {
     description:
       'Professional chef kitchen with restaurant-grade appliances and functionality',
     image: {
-      url: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
+      url: '/images/banner.jpg',
       alt: 'Chef kitchen with professional appliances and large island',
     },
   },

@@ -77,7 +77,7 @@ export const metadata = {
     description:
       'Modern creative office in converted warehouse with industrial character',
     image: {
-      url: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg',
+      url: '/images/banner.jpg',
       alt: 'Industrial office space with exposed brick and modern furnishings',
     },
   },
