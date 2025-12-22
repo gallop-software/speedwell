@@ -6,7 +6,6 @@ import { _heading2Font } from '@/data/_fonts/_heading2'
 import { _heading3Font } from '@/data/_fonts/_heading3'
 import type { Metadata } from 'next'
 import SmoothScroll from '@/hooks/smooth-scroll'
-import IframeHeight from '@/hooks/use-iframe-height'
 import { baseURL } from './metadata'
 import GoogleAds from '@/hooks/google-ads'
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -61,7 +60,6 @@ export default function RootLayout({
       <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
         {children}
         <SmoothScroll />
-        <IframeHeight />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
       {process.env.NODE_ENV === 'production' &&
