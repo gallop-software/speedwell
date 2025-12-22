@@ -3,7 +3,7 @@ import { getMetaImage } from '@/utils/image-meta'
 export const baseURL =
   process.env.NEXT_PUBLIC_PRODUCTION_URL || 'http://localhost:3000'
 
-const logoImageData = getMetaImage('/images/pexels-pixabay-247462.jpg', 'large')
+const logoImageData = getMetaImage('/images/banner.jpg', 'large')
 
 const businessImageData = getMetaImage(
   '/images/pexels-helenalopes-1996337.jpg',
