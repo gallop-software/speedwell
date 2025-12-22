@@ -17,17 +17,17 @@ export default function Content() {
 }
 
 export const metadata = {
-  title: 'Startup Page | Modern Tech Platform Solution',
+  title: 'Navbar Style 2 | Right Aligned Navigation',
   description:
-    'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
+    'Explore the second navbar style featuring right aligned navigation. A clean, modern layout with navigation links positioned on the right side.',
   keywords: [
-    'startup platform',
-    'tech solution',
-    'collaboration tools',
-    'business software',
-    'saas platform',
+    'navbar style',
+    'navigation design',
+    'header layout',
+    'centered logo',
+    'modern navigation',
   ],
-  focusKeyword: ['startup platform', 'tech solution', 'collaboration tools'],
+  focusKeyword: ['navbar style', 'navigation design', 'header layout'],
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   lastModified: '2025-09-28T01:00:00Z',
@@ -41,21 +41,21 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://speedwell.gallop.software/layout-2',
     siteName: 'Speedwell',
-    title: 'Startup Page | Modern Tech Platform Solution',
+    title: 'Navbar Style 2 | Alternate Navigation Layout',
     description:
-      'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
+      'Explore the second navbar style with a clean, modern design. Features a centered logo layout with balanced navigation links on either side.',
     image: {
       url: '/images/banner.jpg',
-      alt: 'Modern tech startup platform',
+      alt: 'Navbar style 2 preview',
     },
   },
   twitter: {
     card: 'summary_large_image',
     site: '@speedwelldesign',
     creator: '@speedwelldesign',
-    title: 'Startup Page | Modern Tech Platform Solution',
+    title: 'Navbar Style 2 | Alternate Navigation Layout',
     description:
-      'Discover our innovative tech platform designed for modern startups. Powerful features, seamless collaboration, and scalable solutions for your growing business.',
+      'Explore the second navbar style with a clean, modern design. Features a centered logo layout with balanced navigation links on either side.',
     image: '/images/banner.jpg',
   },
   category: 'Layout Design',
@@ -74,7 +74,7 @@ export const metadata = {
         {
           '@type': 'ListItem',
           position: 2,
-          name: 'Startup Page',
+          name: 'Navbar Style 2',
           item: 'https://speedwell.gallop.software/layout-2',
         },
       ],
