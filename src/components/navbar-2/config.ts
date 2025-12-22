@@ -58,7 +58,7 @@ export const links: NavLink[] = [
     label: 'Demos',
     dropdown: {
       position: 'center',
-      columns: 3,
+      columns: 1,
       items: [
         {
           name: 'Homepage Demo',
@@ -78,7 +78,7 @@ export const links: NavLink[] = [
           href: '/layout-2',
           icon: viewGridIcon,
         },
-        {
+        /*{
           name: 'Layout 3',
           description: 'Multi-column content distribution design',
           href: '/layout-3',
@@ -107,7 +107,7 @@ export const links: NavLink[] = [
           description: 'Vertical split content arrangement',
           href: '/layout-7',
           icon: viewSplitVerticalIcon,
-        },
+        },*/
       ],
     },
   },
