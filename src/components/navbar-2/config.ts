@@ -17,7 +17,7 @@ import type { NavLink, SocialLink } from './types'
 /**
  * Home link for logo navigation
  */
-export const homeLink = '#navbar'
+export const homeLink = '/'
 
 /**
  * Main navigation links configuration

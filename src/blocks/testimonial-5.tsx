@@ -10,7 +10,6 @@ import {
 export default function Testimonial5() {
   return (
     <Section className="bg-body-dark py-20 relative overflow-hidden">
-      <CanvasBackground1 className="absolute inset-0 w-full h-full" />
       <div className="relative">
         <FancyHeading
           text="Trusted by Leaders"

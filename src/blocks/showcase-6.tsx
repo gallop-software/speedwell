@@ -16,7 +16,6 @@ export default function Showcase6() {
       id="portfolio"
       className="py-30 bg-body-dark relative overflow-hidden"
     >
-      <CanvasBackground1 className="absolute inset-0 w-full h-full" />
       <div className="relative">
         <Columns
           className="mb-8"
