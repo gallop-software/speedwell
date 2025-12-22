@@ -1,4 +1,26 @@
 {
+  "/images/banner.jpg": {
+    "small": {
+      "width": 300,
+      "height": 180,
+      "file": "/images/banner-300x180.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 420,
+      "file": "/images/banner-700x420.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 840,
+      "file": "/images/banner-1400x840.jpg"
+    },
+    "full": {
+      "width": 2000,
+      "height": 1200,
+      "file": "/images/banner.jpg"
+    }
+  },
   "/images/favicon.png": {
     "small": {
       "width": 300,
