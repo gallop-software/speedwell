@@ -4,7 +4,6 @@ import {
   Swiper,
   Testimonial1,
   Quote,
-  CanvasBackground1,
 } from '@/components'
 
 export default function Testimonial5() {

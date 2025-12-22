@@ -7,7 +7,6 @@ import {
   Paragraph,
   Gallery,
   GalleryItem,
-  CanvasBackground1,
 } from '@/components'
 
 export default function Showcase6() {

@@ -5,7 +5,6 @@ import {
   Image,
   Heading,
   Paragraph,
-  CanvasBackground1,
 } from '@/components'
 
 export default function Showcase7() {

@@ -11,8 +11,6 @@ import {
   Columns,
   Column,
   VimeoAutoPlayer,
-  CanvasBackground2,
-  CanvasBackground3,
 } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
