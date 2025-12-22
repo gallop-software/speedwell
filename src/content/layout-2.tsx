@@ -1,8 +1,6 @@
 import Hero15 from '@/blocks/hero-15'
 import Showcase7 from '@/blocks/showcase-7'
 import Pricing1 from '@/blocks/pricing-1'
-import Testimonial5 from '@/blocks/testimonial-5'
-import Contact5 from '@/blocks/contact-5'
 
 export default function Content() {
   return (
@@ -10,8 +8,6 @@ export default function Content() {
       <Hero15 />
       <Showcase7 />
       <Pricing1 />
-      <Testimonial5 />
-      <Contact5 />
     </>
   )
 }
