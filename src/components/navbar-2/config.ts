@@ -1,11 +1,14 @@
 import userIcon from '@iconify/icons-heroicons/user-group'
 import chatBubbleIcon from '@iconify/icons-heroicons/chat-bubble-left-right'
 import sparklesIcon from '@iconify/icons-heroicons/sparkles'
+import homeIcon from '@iconify/icons-mdi/home-outline'
 import fileDocumentIcon from '@iconify/icons-mdi/file-document-outline'
+import viewDashboardIcon from '@iconify/icons-mdi/view-dashboard-outline'
 import viewGridIcon from '@iconify/icons-mdi/view-grid-outline'
 import viewColumnIcon from '@iconify/icons-mdi/view-column-outline'
 import viewCarouselIcon from '@iconify/icons-mdi/view-carousel-outline'
 import dockLeftIcon from '@iconify/icons-mdi/dock-left'
+import dockTopIcon from '@iconify/icons-mdi/dock-top'
 import windowMaximizeIcon from '@iconify/icons-mdi/window-maximize'
 import viewSplitVerticalIcon from '@iconify/icons-mdi/view-split-vertical'
 import facebookIcon from '@iconify/icons-mdi/facebook'
@@ -64,19 +67,19 @@ export const links: NavLink[] = [
           name: 'Homepage Demo',
           description: 'Front page with hero and features',
           href: '/',
-          icon: fileDocumentIcon,
+          icon: homeIcon,
         },
         {
           name: 'One Page Site',
           description: 'Navbar with smooth scrolling to sections',
           href: '/layout-1',
-          icon: fileDocumentIcon,
+          icon: viewDashboardIcon,
         },
         {
-          name: 'Startup Page',
-          description: 'Modern tech platform solution',
+          name: 'Navbar Style 2',
+          description: 'Right aligned navigation',
           href: '/layout-2',
-          icon: viewGridIcon,
+          icon: dockTopIcon,
         },
         /*{
           name: 'Layout 3',
