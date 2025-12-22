@@ -21,6 +21,7 @@ const BLOCKS_DIR = path.join(__dirname, '../src/blocks')
 const HOOKS_DIR = path.join(__dirname, '../src/hooks')
 const API_DIR = path.join(__dirname, '../src/app/api')
 const LAYOUT_PATH = path.join(__dirname, '../src/app/layout.tsx')
+const NEXT_CACHE_DIR = path.join(__dirname, '../.next')
 
 // Files and directories to delete for lite version
 const FILES_TO_DELETE = [
@@ -30,7 +31,7 @@ const FILES_TO_DELETE = [
   path.join(HOOKS_DIR, 'use-iframe-height.md'),
 ]
 
-const DIRS_TO_DELETE = [path.join(API_DIR, 'flow-trace')]
+const DIRS_TO_DELETE = [path.join(API_DIR, 'flow-trace'), NEXT_CACHE_DIR]
 
 // Lines to remove from layout.tsx
 const LAYOUT_IMPORT_PATTERNS = [
