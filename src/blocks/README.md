@@ -5,8 +5,8 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 ## Overview
 
 - **Total Blocks:** 94
-- **Free Blocks:** 79
-- **Pro Blocks:** 15
+- **Free Blocks:** 80
+- **Pro Blocks:** 14
 
 ## Categories
 
@@ -752,7 +752,7 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/cover-5.jpg" alt="Cover 5" width="350">
 
 **Slug:** `cover-5`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
