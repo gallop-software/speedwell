@@ -10,6 +10,7 @@ const __dirname = dirname(__filename)
 const LAYOUTS_DIR = join(__dirname, '../src/content')
 const OUTPUT_DIR = join(__dirname, '../public/layouts')
 const README_PATH = join(__dirname, '../src/content/README.md')
+const BLOCKS_README_PATH = join(__dirname, '../src/blocks/README.md')
 const BASE_URL = 'https://speedwell.gallop.software'
 const SCREENSHOT_WIDTH = 1920
 const SCREENSHOT_HEIGHT = 2400 // Tall screenshot for layouts
@@ -28,11 +29,6 @@ function naturalSort(a, b) {
 function parseLayoutName(filename) {
   const name = filename.replace('.tsx', '')
   const slug = name
-
-  // Special case: index.tsx should display as "Home"
-  if (name === 'index') {
-    return { name, slug, displayName: 'Home' }
-  }
 
   // Convert to display name (e.g., "layout-1" -> "Layout 1")
   const displayName = name
@@ -65,6 +61,57 @@ async function parseExistingReadme() {
   } catch (error) {
     // README doesn't exist yet, return empty array
     return []
+  }
+}
+
+// Helper function to parse blocks README and get a map of block slugs to their tier
+async function parseBlocksTiers() {
+  try {
+    const readme = await readFile(BLOCKS_README_PATH, 'utf8')
+    const blockTiers = new Map()
+
+    // Match blocks with their slug and tier: **Slug:** `slug` **Tier:** Free or Pro
+    const blockRegex =
+      /\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
+    let match
+
+    while ((match = blockRegex.exec(readme)) !== null) {
+      const slug = match[1].trim()
+      const tier = match[2].toLowerCase()
+      blockTiers.set(slug, tier)
+    }
+
+    return blockTiers
+  } catch (error) {
+    console.warn('Warning: Could not parse blocks README for tier info')
+    return new Map()
+  }
+}
+
+// Helper function to extract block imports from a layout file and determine if any are pro
+async function getLayoutTierFromBlocks(layoutFilePath, blockTiers) {
+  try {
+    const content = await readFile(layoutFilePath, 'utf8')
+
+    // Match imports from @/blocks/ - e.g., import Hero14 from '@/blocks/hero-14'
+    const importRegex = /import\s+\w+\s+from\s+['"]@\/blocks\/([^'"]+)['"]/g
+    let match
+    const usedBlocks = []
+
+    while ((match = importRegex.exec(content)) !== null) {
+      usedBlocks.push(match[1])
+    }
+
+    // Check if any used block is pro
+    for (const blockSlug of usedBlocks) {
+      if (blockTiers.get(blockSlug) === 'pro') {
+        return 'pro'
+      }
+    }
+
+    return 'free'
+  } catch (error) {
+    return 'free'
   }
 }
 
@@ -218,7 +265,9 @@ async function captureScreenshot(browser, slug, outputDir) {
       .jpeg({ quality: 90 })
       .toFile(mediumImagePath)
 
-    console.log(`✓ Saved: ${slug}.jpg (${large.w}x${large.h}) + ${slug}-md.jpg (${medium.w}x${medium.h})`)
+    console.log(
+      `✓ Saved: ${slug}.jpg (${large.w}x${large.h}) + ${slug}-md.jpg (${medium.w}x${medium.h})`
+    )
     return true
   } catch (error) {
     console.error(`✗ Error capturing ${slug}:`, error.message)
@@ -270,20 +319,32 @@ async function generateLayoutsCatalog(
       existingReadmeLayouts.map((l) => [l.displayName, l])
     )
 
+    // Parse blocks README to get block tiers
+    console.log('Parsing blocks README for tier info...')
+    const blockTiers = await parseBlocksTiers()
+    console.log(`Found ${blockTiers.size} blocks with tier info\n`)
+
     // Parse all layout files
     const allLayoutsMap = new Map()
     for (const file of layoutFiles) {
       const { name, slug, displayName } = parseLayoutName(file)
-      // Use existing tier and preview from README, default to 'free' and null (Auto)
+      const layoutFilePath = join(LAYOUTS_DIR, file)
+
+      // Determine tier from blocks used in the layout
+      const detectedTier = await getLayoutTierFromBlocks(
+        layoutFilePath,
+        blockTiers
+      )
+
+      // Use existing preview from README, default to null (Auto)
       const existingLayout = existingLayoutMap.get(displayName)
-      const tier = existingLayout?.tier || 'free'
       const preview = existingLayout?.preview || null // null means Auto (omitted)
 
       allLayoutsMap.set(displayName, {
         name,
         slug,
         displayName,
-        tier,
+        tier: detectedTier, // Always use detected tier based on blocks
         preview,
         filename: file,
       })
