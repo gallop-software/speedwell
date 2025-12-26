@@ -11,6 +11,7 @@ import {
   Columns,
   Column,
   VimeoAutoPlayer,
+  Video,
 } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
@@ -33,9 +34,8 @@ export default function Hero1() {
           >
             <Column className="pt-10">
               <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
-                <video
+                <Video
                   src="/videos/hero-op.mp4"
-                  autoPlay
                   loop
                   muted
                   playsInline
