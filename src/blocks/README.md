@@ -35,7 +35,8 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/hero-1.jpg" alt="Hero 1" width="350">
 
 **Slug:** `hero-1`  
-**Tier:** Free
+**Tier:** Free  
+**Preview:** Scroll
 
 ---
 
