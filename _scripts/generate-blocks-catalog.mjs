@@ -12,7 +12,8 @@ const OUTPUT_DIR = join(__dirname, '../public/blocks')
 const README_PATH = join(__dirname, '../src/blocks/README.md')
 const META_JSON_PATH = join(__dirname, '../_data/_meta.json')
 const BASE_URL = 'https://speedwell.gallop.software'
-const FULL_SIZE = 700 // Full image size on longest side
+const LARGE_SIZE = 1400 // Large image size on longest side
+const MEDIUM_SIZE = 700 // Medium image size on longest side (with -md suffix)
 
 // Preferred category order (edit this to reorder categories)
 const CATEGORY_ORDER = [
@@ -155,32 +156,39 @@ async function captureScreenshot(browser, slug, outputDir) {
     const metadata = await sharp(screenshotBuffer).metadata()
     const { width, height } = metadata
 
-    // Calculate size (max 700px on longest side) maintaining aspect ratio
-    const longestSide = Math.max(width, height)
-    let imageWidth, imageHeight
-
-    if (longestSide <= FULL_SIZE) {
-      // Image is already smaller than target size
-      imageWidth = width
-      imageHeight = height
-    } else if (width > height) {
-      // Width is longest side
-      imageWidth = FULL_SIZE
-      imageHeight = Math.round((height / width) * FULL_SIZE)
-    } else {
-      // Height is longest side
-      imageHeight = FULL_SIZE
-      imageWidth = Math.round((width / height) * FULL_SIZE)
+    // Helper function to calculate dimensions for a target size
+    const calculateDimensions = (targetSize) => {
+      const longestSide = Math.max(width, height)
+      if (longestSide <= targetSize) {
+        return { w: width, h: height }
+      } else if (width > height) {
+        return { w: targetSize, h: Math.round((height / width) * targetSize) }
+      } else {
+        return { w: Math.round((width / height) * targetSize), h: targetSize }
+      }
     }
 
-    // Save image (resized to max 700px)
-    const imagePath = join(outputDir, `${slug}.jpg`)
-    await sharp(screenshotBuffer)
-      .resize(imageWidth, imageHeight, { fit: 'inside' })
-      .jpeg({ quality: 90 })
-      .toFile(imagePath)
+    // Calculate dimensions for both sizes
+    const large = calculateDimensions(LARGE_SIZE)
+    const medium = calculateDimensions(MEDIUM_SIZE)
 
-    console.log(`✓ Saved: ${slug}.jpg (${imageWidth}x${imageHeight})`)
+    // Save large image (1400px)
+    const largeImagePath = join(outputDir, `${slug}.jpg`)
+    await sharp(screenshotBuffer)
+      .resize(large.w, large.h, { fit: 'inside' })
+      .jpeg({ quality: 90 })
+      .toFile(largeImagePath)
+
+    // Save medium image (700px with -md suffix)
+    const mediumImagePath = join(outputDir, `${slug}-md.jpg`)
+    await sharp(screenshotBuffer)
+      .resize(medium.w, medium.h, { fit: 'inside' })
+      .jpeg({ quality: 90 })
+      .toFile(mediumImagePath)
+
+    console.log(
+      `✓ Saved: ${slug}.jpg (${large.w}x${large.h}) + ${slug}-md.jpg (${medium.w}x${medium.h})`
+    )
     return true
   } catch (error) {
     console.error(`✗ Error capturing ${slug}:`, error.message)
