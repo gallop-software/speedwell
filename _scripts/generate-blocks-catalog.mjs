@@ -84,20 +84,22 @@ function parseBlockName(filename) {
   return { name, slug, displayName }
 }
 
-// Helper function to parse existing README to preserve tier settings and order
+// Helper function to parse existing README to preserve tier settings, preview, and order
 async function parseExistingReadme() {
   try {
     const readme = await readFile(README_PATH, 'utf8')
     const existingBlocks = []
 
-    // Match blocks with their tier info: **Tier:** Free or Pro (h4 headings)
-    const blockRegex = /####\s+([^\n]+)[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
+    // Match blocks with their tier info and optional preview: **Tier:** Free or Pro, **Preview:** value
+    const blockRegex =
+      /####\s+([^\n]+)[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)(?:[\s\S]*?\*\*Preview:\*\*\s+([^\n]+))?/g
     let match
 
     while ((match = blockRegex.exec(readme)) !== null) {
       const displayName = match[1].trim()
       const tier = match[2].toLowerCase()
-      existingBlocks.push({ displayName, tier })
+      const preview = match[3] ? match[3].trim() : null
+      existingBlocks.push({ displayName, tier, preview })
     }
 
     return existingBlocks
@@ -239,14 +241,17 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
     for (const file of blockFiles) {
       const filePath = join(BLOCKS_DIR, file)
       const { name, slug, displayName } = parseBlockName(file)
-      // Use existing tier from README, default to 'free'
-      const tier = existingBlockMap.get(displayName)?.tier || 'free'
+      // Use existing tier and preview from README, default to 'free' and null
+      const existingBlock = existingBlockMap.get(displayName)
+      const tier = existingBlock?.tier || 'free'
+      const preview = existingBlock?.preview || null
 
       allBlocksMap.set(displayName, {
         name,
         slug,
         displayName,
         tier,
+        preview,
         filename: file,
       })
     }
@@ -445,7 +450,12 @@ function generateReadme(blocks) {
         readme += `<img src="../../public/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
-      readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
+      readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}  \n`
+      if (block.preview) {
+        readme += `**Preview:** ${block.preview}\n\n`
+      } else {
+        readme += `\n`
+      }
       readme += `---\n\n`
     })
   })
