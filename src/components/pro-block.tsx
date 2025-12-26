@@ -34,7 +34,7 @@ export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
         </Paragraph>
 
         <Button
-          href={`https://gallop.software/code/speedwell/blocks/${category}#${blockSlug}`}
+          href={`https://gallop.software/code/speedwell/blocks/${category}/${blockSlug}`}
           variant="primary"
           target="_blank"
           icon={arrowRightIcon}
