@@ -59,7 +59,8 @@ export default function RootLayout({
       style={rootStyle}
     >
       <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
-        {children}
+        <div className="overflow-hidden">{children}</div>
+        <Footer />
         <SmoothScroll />
         <IframeHeight />
         {process.env.NODE_ENV === 'production' && <Analytics />}
