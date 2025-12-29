@@ -15,7 +15,7 @@ export default function Hero13() {
   return (
     <>
       <Navbar />
-      <div className="bg-accent3 pt-10 ">
+      <div className="bg-accent3 pt-70 ">
         <div className="mx-auto max-w-[1600px] relative">
           <div
             className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-full z-0 opacity-30 bg-cover bg-no-repeat bg-top-left bg-[url('/images/leaf1.jpg')]"
@@ -51,7 +51,10 @@ export default function Hero13() {
                 className="max-w-lg"
                 color="text-contrast"
               >
-                Real experiences from homeowners and businesses who have trusted us to transform their spaces. Discover how our personalized approach and commitment to excellence creates interiors that exceed expectations.
+                Real experiences from homeowners and businesses who have trusted
+                us to transform their spaces. Discover how our personalized
+                approach and commitment to excellence creates interiors that
+                exceed expectations.
               </Paragraph>
               <Buttons className="lg:-ml-40">
                 <Button

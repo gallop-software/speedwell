@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@custom-variant hero (html.hero &);
+/* @custom-variant hero (.hero &); */
 
 @theme {
   --font-heading: var(--font-heading-family);

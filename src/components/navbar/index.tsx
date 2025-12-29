@@ -33,6 +33,7 @@ import { homeLink } from './config'
 export function Navbar({
   className = '',
   dark = false,
+  hero = false,
 }: NavbarProps = {}): ReactElement {
   useOffsetTop(800)
   const snap = useSnapshot(state)
@@ -45,7 +46,8 @@ export function Navbar({
         as="header"
         id="navbar"
         className={clsx(
-          'absolute top-0 left-0 right-0 pt-12 sm:pt-16 z-40 pb-10',
+          'pt-12 sm:pt-16 z-40 pb-10',
+          hero ? 'absolute top-0 left-0 right-0 mx-4' : 'relative',
           className
         )}
       >
