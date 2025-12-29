@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,
@@ -14,7 +13,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Hero8() {
   return (
     <>
-      <Navbar />
       <div className="relative">
         <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -40,7 +38,14 @@ export default function Hero8() {
                 Expertly Curated Furniture for Your Perfect Space
               </Heading>
               <Paragraph>
-                Selecting the right furniture is essential to creating a space that's both beautiful and functional. Our expert furniture selection services take the guesswork out of furnishing your home or business. We curate pieces that perfectly suit your style, space, and budget while ensuring quality, comfort, and longevity. From statement sofas to elegant dining sets, every piece is carefully chosen to create a cohesive, stunning interior that reflects your unique vision.
+                Selecting the right furniture is essential to creating a space
+                that's both beautiful and functional. Our expert furniture
+                selection services take the guesswork out of furnishing your
+                home or business. We curate pieces that perfectly suit your
+                style, space, and budget while ensuring quality, comfort, and
+                longevity. From statement sofas to elegant dining sets, every
+                piece is carefully chosen to create a cohesive, stunning
+                interior that reflects your unique vision.
               </Paragraph>
               <Buttons className="">
                 <Button

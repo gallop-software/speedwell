@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,
@@ -14,7 +13,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Hero12() {
   return (
     <>
-      <Navbar />
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body-dark z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -43,7 +41,14 @@ export default function Hero12() {
                 Strategic Space Planning for Better Living
               </Heading>
               <Paragraph>
-                Great design starts with thoughtful space planning. Whether you're working with a compact urban apartment or a sprawling estate, our expert space planning services optimize every square foot to create layouts that flow naturally, function beautifully, and feel perfectly proportioned. We analyze traffic patterns, natural light, views, and how you actually use your space to develop strategic solutions that enhance both aesthetics and everyday living.
+                Great design starts with thoughtful space planning. Whether
+                you're working with a compact urban apartment or a sprawling
+                estate, our expert space planning services optimize every square
+                foot to create layouts that flow naturally, function
+                beautifully, and feel perfectly proportioned. We analyze traffic
+                patterns, natural light, views, and how you actually use your
+                space to develop strategic solutions that enhance both
+                aesthetics and everyday living.
               </Paragraph>
               <Buttons className="">
                 <Button

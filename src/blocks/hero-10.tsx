@@ -1,9 +1,8 @@
-import { Navbar, Cover, Heading, Accent } from '@/components'
+import { Cover, Heading, Accent } from '@/components'
 
 export default function Hero10() {
   return (
     <>
-      <Navbar />
       <Cover
         imageSrc="/images/portfolio/pexels-burst-545012.jpg"
         imageAlt="Professional interior design project management"

@@ -1,5 +1,4 @@
 import {
-  Navbar3,
   Columns,
   Column,
   Image,
@@ -14,7 +13,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Hero15() {
   return (
     <>
-      <Navbar3 />
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">

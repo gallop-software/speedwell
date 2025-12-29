@@ -1,5 +1,4 @@
 import {
-  Navbar2,
   Columns,
   Column,
   Image,
@@ -11,7 +10,6 @@ import {
 export default function Hero14() {
   return (
     <>
-      <Navbar2 />
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full xl:w-2/3 bg-body2 z-0"></div>
         <div className="px-6 mx-auto max-w-[1600px] relative">

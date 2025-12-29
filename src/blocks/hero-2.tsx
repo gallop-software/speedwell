@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,

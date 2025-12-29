@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,
@@ -14,7 +13,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Hero7() {
   return (
     <>
-      <Navbar />
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -40,10 +38,19 @@ export default function Hero7() {
                 Strategic Commercial Design
               </Heading>
               <Paragraph>
-                Your commercial space is more than just a workplace – it's a powerful expression of your brand, a driver of employee productivity, and a key factor in customer experience. Our expert commercial interior design services create inspiring environments that enhance your business operations, reflect your corporate identity, and leave lasting impressions on clients and employees alike.
+                Your commercial space is more than just a workplace – it's a
+                powerful expression of your brand, a driver of employee
+                productivity, and a key factor in customer experience. Our
+                expert commercial interior design services create inspiring
+                environments that enhance your business operations, reflect your
+                corporate identity, and leave lasting impressions on clients and
+                employees alike.
               </Paragraph>
               <Paragraph>
-                From sleek corporate offices to inviting retail spaces and sophisticated hospitality venues, we design commercial interiors that balance aesthetics with functionality, creating spaces that work as hard as you do while elevating your brand presence.
+                From sleek corporate offices to inviting retail spaces and
+                sophisticated hospitality venues, we design commercial interiors
+                that balance aesthetics with functionality, creating spaces that
+                work as hard as you do while elevating your brand presence.
               </Paragraph>
               <Buttons className="">
                 <Button
