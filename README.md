@@ -73,38 +73,57 @@ npm run start
 speedwell/
 ├── src/
 │   ├── app/                    # Next.js App Router
-│   │   ├── [[...slug]]/       # Dynamic catch-all routes
+│   │   ├── (default)/         # Default layout route group
+│   │   │   ├── layout.tsx     # Default navbar layout
+│   │   │   ├── category/      # Category pages
+│   │   │   ├── services/      # Service pages
+│   │   │   └── .../           # Other page routes
+│   │   ├── (hero)/            # Hero layout route group
+│   │   │   ├── layout.tsx     # Hero navbar layout
+│   │   │   ├── page.tsx       # Home page
+│   │   │   ├── testimonials/  # Testimonials page
+│   │   │   └── .../           # Other hero pages
+│   │   ├── (post)/            # Blog post route group
+│   │   │   ├── layout.tsx     # Post layout with gradient
+│   │   │   └── post/[slug]/   # Dynamic blog posts
+│   │   ├── (demo)/            # Demo/preview route group
+│   │   │   └── block/         # Block preview routes
+│   │   ├── (one-page-site)/   # Single-page layout group
+│   │   ├── (alternate)/       # Alternate navbar group
+│   │   ├── (color-navbar)/    # Colored navbar group
 │   │   ├── api/               # API routes
-│   │   ├── block/             # Block preview routes
-│   │   ├── category/          # Category pages
 │   │   ├── sitemap_index.xml/ # Sitemap generation
 │   │   ├── error.tsx          # Error boundary
 │   │   ├── layout.tsx         # Root layout
 │   │   ├── metadata.tsx       # Site metadata
 │   │   ├── not-found.tsx      # 404 page
 │   │   ├── sitemap.ts         # Sitemap config
+│   │   ├── README.md          # Layouts documentation
 │   │   └── *.png, *.ico       # App icons and favicon
+│   ├── blog/                  # Blog post content (TSX files)
 │   ├── blocks/                # Reusable content blocks
-│   │   ├── hero-*.tsx         # Hero sections (1-13)
-│   │   ├── section-*.tsx      # Content sections (1-34)
+│   │   ├── hero-*.tsx         # Hero sections (1-15)
+│   │   ├── content-*.tsx      # Content sections (1-11)
 │   │   ├── call-to-action-*.tsx  # CTAs (1-6)
-│   │   ├── contact-*.tsx      # Contact sections (1-2)
-│   │   ├── content-*.tsx      # Content blocks (1-5)
+│   │   ├── contact-*.tsx      # Contact sections (1-4)
 │   │   ├── cover-*.tsx        # Cover sections
-│   │   ├── profile-*.tsx      # Profile sections (1-5)
-│   │   ├── showcase-*.tsx     # Showcase sections (1-5)
-│   │   ├── testimonial-*.tsx  # Testimonials (1-3)
-│   │   ├── about-*.tsx        # About sections (1-2)
+│   │   ├── profile-*.tsx      # Profile sections
+│   │   ├── testimonial-*.tsx  # Testimonials
+│   │   ├── about-*.tsx        # About sections
 │   │   ├── accordion-1.tsx    # Accordion component
 │   │   ├── application-1.tsx  # Application section
-│   │   ├── blog-1.tsx         # Blog listing
+│   │   ├── blog-*.tsx         # Blog listing
 │   │   ├── partners-1.tsx     # Partners section
+│   │   ├── pricing-1.tsx      # Pricing section
 │   │   └── README.md          # Blocks documentation
 │   ├── components/            # React components
-│   │   ├── navbar/           # Navigation components
+│   │   ├── navbar/           # Main navigation
+│   │   ├── navbar-2/         # Alternate navigation
+│   │   ├── navbar-3/         # Third navigation variant
 │   │   ├── blog/             # Blog components
 │   │   ├── search/           # Search components
 │   │   ├── lightbox/         # Lightbox gallery
+│   │   ├── page-wrapper.tsx  # Page wrapper with structured data
 │   │   ├── accordion.tsx
 │   │   ├── button.tsx
 │   │   ├── card-*.tsx
@@ -116,7 +135,6 @@ speedwell/
 │   │   ├── logo.tsx
 │   │   ├── section.tsx
 │   │   └── ...
-│   ├── content/              # Page content (TSX files)
 │   ├── hooks/                # Custom React hooks
 │   ├── styles/               # Global styles & fonts
 │   │   ├── fonts/           # Font files & management
@@ -190,10 +208,13 @@ speedwell/
 - **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
 - **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [docs](./_scripts/generate-favicon.md)
 - **`npm run featured-image`** - Screenshot homepage for social preview → [docs](./_scripts/generate-featured-image.md)
-- **`npm run blocks`** - Generate blocks catalog
-- **`npm run blocks:screenshots`** - Generate blocks catalog with screenshots
+- **`npm run blocks`** - Generate blocks catalog with screenshots
+- **`npm run blocks:screenshots`** - Force regenerate all block screenshots
 - **`npm run blocks:sort`** - Sort blocks in catalog
 - **`npm run blocks:lite`** - Convert pro blocks → [docs](./_scripts/convert-pro-blocks.md)
+- **`npm run layouts`** - Generate layouts catalog from app route groups
+- **`npm run layouts:screenshots`** - Force regenerate all layout screenshots
+- **`npm run layouts:sort`** - Sort layouts in catalog
 
 ### Fonts
 
