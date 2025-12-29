@@ -44,7 +44,10 @@ export function Navbar({
       <Disclosure
         as="header"
         id="navbar"
-        className={clsx('pt-12 sm:pt-16 relative z-40 pb-10', className)}
+        className={clsx(
+          'hero:absolute relative hero:top-0 hero:left-0 hero:right-0 pt-12 sm:pt-16 z-40 pb-10',
+          className
+        )}
       >
         {({ open }) => (
           <>

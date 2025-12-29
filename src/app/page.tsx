@@ -85,7 +85,6 @@ const metadata: PageMetadata = {
 }
 
 export const generateMetadata = () => generatePageMetadata(metadata)
-
 export default () => (
   <PageWrapper metadata={metadata}>
     <Content />

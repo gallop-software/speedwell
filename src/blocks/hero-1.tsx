@@ -6,21 +6,21 @@ import {
   Buttons,
   Accent,
   Gradient,
-  Navbar,
   Section,
   Columns,
   Column,
   VimeoAutoPlayer,
   Video,
 } from '@/components'
+import { HtmlClass } from '@/hooks/html-class'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
 
 export default function Hero1() {
   return (
     <>
-      <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">
-        <Navbar className="-mt-2" />
+      <HtmlClass className="hero" />
+      <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2 pt-56">
         <div className="mx-auto max-w-[1600px] relative">
           <img
             src="/images/hero-bg.png"
