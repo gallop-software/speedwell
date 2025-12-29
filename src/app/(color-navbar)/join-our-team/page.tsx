@@ -1,7 +1,6 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import { Navbar } from '@/components'
 import Section10 from '@/blocks/section-10'
 import Accordion1 from '@/blocks/accordion-1'
 import Application1 from '@/blocks/application-1'
