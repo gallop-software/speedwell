@@ -12,6 +12,7 @@ import GoogleAds from '@/hooks/google-ads'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
 import { Footer } from '@/components'
+import { GalleryPopup } from '@/components/lightbox/gallery-popup'
 
 export const revalidate = 86400
 
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
         <div className="overflow-hidden">{children}</div>
         <Footer />
+        <GalleryPopup />
         <SmoothScroll />
         <IframeHeight />
         {process.env.NODE_ENV === 'production' && <Analytics />}
