@@ -1,6 +1,5 @@
 import React from 'react'
 import { BlogClient } from '@/components/blog/blog-client'
-import { GalleryPopup } from '@/components/lightbox/gallery-popup'
 import { FancyHeading, PageWrapper, Section } from '@/components'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { getSlug } from '@/tools/get-slug'
@@ -90,7 +89,6 @@ export default async function Page({ params }: PageProps) {
           perPage={9}
         />
       </Section>
-      <GalleryPopup />
     </PageWrapper>
   )
 }
