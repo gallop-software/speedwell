@@ -41,7 +41,7 @@ export function DesktopNav({
             >
               {({ open }: any) => (
                 <>
-                  <PopoverBackdrop className="fixed inset-0 bg-black/20 z-40" />
+                  <PopoverBackdrop className="fixed inset-0 z-40" />
                   <PopoverButton
                     className={clsx(
                       callToAction
