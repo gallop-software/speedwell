@@ -9,7 +9,6 @@ import Application1 from '@/blocks/application-1'
 function Content() {
   return (
     <>
-      <Navbar className="bg-body2" />
       <Section10 />
       <Accordion1 />
       <Application1 />

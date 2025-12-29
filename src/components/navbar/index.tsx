@@ -90,7 +90,6 @@ export function Navbar({
                   <MobileNavButton dark={dark} />
                 </div>
               </div>
-              <MobileNav />
             </div>
           </>
         )}

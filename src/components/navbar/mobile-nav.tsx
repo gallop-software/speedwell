@@ -16,9 +16,10 @@ import type { NavLink, DropdownItem, SocialLink } from './types'
 /**
  * Mobile navigation menu component
  * Renders slide-down mobile menu with animations and expandable dropdowns
+ * @param {function} close - Function to close the mobile menu
  * @returns {ReactElement} Mobile navigation menu
  */
-export function MobileNav(): ReactElement {
+export function MobileNav({ close }: { close: () => void }): ReactElement {
   const [isSearching, setIsSearching] = useState(false)
 
   return (
@@ -67,6 +68,7 @@ export function MobileNav(): ReactElement {
                                 prefetch={true}
                                 scroll={true}
                                 href={item.href}
+                                onClick={close}
                                 className="font-body font-medium text-contrast text-base"
                               >
                                 {item.name}
@@ -94,6 +96,7 @@ export function MobileNav(): ReactElement {
               >
                 <Link
                   href={href}
+                  onClick={close}
                   className="text-lg block font-body font-medium text-contrast py-2 px-0"
                 >
                   {label}

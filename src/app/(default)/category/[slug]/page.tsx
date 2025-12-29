@@ -57,7 +57,6 @@ export default async function Page({ params }: PageProps) {
   return (
     <div className="overflow-hidden">
       <main className="[&>p]:mx-auto [&>p]:max-w-3xl [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl [&>*:last-child:not(div):not(section)]:mb-40">
-        <Navbar />
         <Section className="bg-body2 py-20">
           <FancyHeading
             as="h1"

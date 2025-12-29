@@ -14,7 +14,6 @@ import Content11 from '@/blocks/content-11'
 function Content() {
   return (
     <>
-      <Navbar />
       <Cover4 />
       <Section33 />
       <Section34 />

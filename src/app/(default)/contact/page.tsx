@@ -8,7 +8,6 @@ import Contact2 from '@/blocks/contact-2'
 function Content() {
   return (
     <>
-      <Navbar />
       <Contact1 />
       <Contact2 />
     </>
