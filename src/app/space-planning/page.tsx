@@ -1,0 +1,76 @@
+import { PageWrapper } from '@/components/page-wrapper'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
+
+import Hero12 from '@/blocks/hero-12'
+import Content5 from '@/blocks/content-5'
+import CallToAction6 from '@/blocks/call-to-action-6'
+import PageFooter from '@/template/page-footer'
+
+function Content() {
+  return (
+    <>
+      <Hero12 />
+      <Content5 />
+      <CallToAction6 />
+      <PageFooter />
+    </>
+  )
+}
+
+const metadata: PageMetadata = {
+  title: 'Space Planning Services | Optimize Your Interior Layout',
+  description:
+    'Expert space planning services that maximize functionality and flow. Our strategic approach optimizes every square foot, creating efficient, beautiful layouts that enhance how you live and work.',
+  keywords: [
+    'space planning services',
+    'interior space planning',
+    'floor plan design',
+    'layout optimization',
+    'room planning',
+    'space design consultant',
+    'furniture layout planning',
+    'architectural space planning',
+    'residential space planning',
+    'commercial space planning',
+    'efficient space design',
+    'interior layout design',
+    'space utilization',
+  ],
+  slug: 'space-planning',
+  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  focusKeyword: 'space planning services',
+  readingTimeMinutes: 4,
+  publishDate: '2024-06-15T10:00:00Z',
+  modifiedDate: '2025-12-11T00:00:00Z',
+  alternates: {
+    canonical: 'https://speedwell.gallop.software/space-planning',
+  },
+  authors: [{ name: 'Speedwell Design Team' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://speedwell.gallop.software/space-planning',
+    siteName: 'Speedwell Interior Design',
+    title: 'Space Planning Services | Optimize Your Interior Layout',
+    description:
+      'Expert space planning that maximizes functionality and flow. Strategic layouts that optimize every square foot for beautiful, efficient living and working spaces.',
+    image: {
+      url: '/images/banner.jpg',
+      alt: 'Professional space planning and interior layout design',
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Space Planning Services | Optimize Your Interior Layout',
+    description:
+      'Expert space planning services that maximize functionality and flow. Create efficient, beautiful layouts that enhance how you live and work.',
+    image: '/images/banner.jpg',
+  },
+}
+
+export const generateMetadata = () => generatePageMetadata(metadata)
+export default () => (
+  <PageWrapper metadata={metadata}>
+    <Content />
+  </PageWrapper>
+)

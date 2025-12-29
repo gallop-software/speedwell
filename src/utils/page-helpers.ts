@@ -6,6 +6,10 @@ export interface PageMetadata {
   title?: string
   description?: string
   keywords?: string[]
+  slug?: string
+  featuredImage?: string
+  focusKeyword?: string | string[]
+  readingTimeMinutes?: number
   publishDate?: string
   modifiedDate?: string
   alternates?: { canonical?: string }
