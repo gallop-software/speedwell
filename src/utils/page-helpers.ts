@@ -10,6 +10,8 @@ export interface PageMetadata {
   featuredImage?: string
   focusKeyword?: string | string[]
   readingTimeMinutes?: number
+  date?: string
+  categories?: string[]
   publishDate?: string
   modifiedDate?: string
   alternates?: { canonical?: string }
