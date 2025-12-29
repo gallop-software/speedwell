@@ -11,6 +11,7 @@ import { baseURL } from './metadata'
 import GoogleAds from '@/hooks/google-ads'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
+import { Footer } from '@/components'
 
 export const revalidate = 86400
 
