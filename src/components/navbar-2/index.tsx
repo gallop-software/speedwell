@@ -6,7 +6,6 @@ import type { ReactElement } from 'react'
 import clsx from 'clsx'
 import { Logo } from '../logo'
 import { DesktopNav } from './desktop-nav'
-import { MobileNav } from './mobile-nav'
 import { SearchButton } from './search-button'
 import { SocialMediaNav } from './social-media-nav'
 import { MobileNavButton } from './mobile-nav-button'
@@ -90,7 +89,6 @@ export function Navbar2({
                   <MobileNavButton dark={dark} />
                 </div>
               </div>
-              <MobileNav />
             </div>
           </>
         )}
