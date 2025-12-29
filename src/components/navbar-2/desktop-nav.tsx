@@ -1,4 +1,10 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  PopoverBackdrop,
+  CloseButton,
+} from '@headlessui/react'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
@@ -35,6 +41,7 @@ export function DesktopNav({
             >
               {({ open }: any) => (
                 <>
+                  <PopoverBackdrop className="fixed inset-0 z-40" />
                   <PopoverButton
                     className={clsx(
                       'flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
@@ -79,7 +86,8 @@ export function DesktopNav({
                         }`}
                       >
                         {dropdown.items.map((item: DropdownItem) => (
-                          <Link
+                          <CloseButton
+                            as={Link}
                             key={item.name}
                             href={item.href}
                             prefetch={true}
@@ -101,7 +109,7 @@ export function DesktopNav({
                                 {item.description}
                               </span>
                             </span>
-                          </Link>
+                          </CloseButton>
                         ))}
                       </div>
                     </div>

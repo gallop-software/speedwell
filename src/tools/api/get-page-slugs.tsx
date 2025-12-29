@@ -1,4 +1,4 @@
-import { readdirSync, statSync } from 'fs'
+import { readdirSync, statSync, existsSync } from 'fs'
 import path from 'path'
 
 type PageSlugItem = {
@@ -7,52 +7,69 @@ type PageSlugItem = {
   uri: string
 }
 
-export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
-  const rootDir = path.join(process.cwd(), 'src/content')
+const BLOCKED_ROUTE_GROUPS = ['(demo)']
+const EXCLUDED_FOLDERS = [
+  'api',
+  'sitemap_index.xml',
+  'post', // Posts are handled separately
+]
 
-  function walk(dir: string, basePath = ''): PageSlugItem[] {
-    const entries = readdirSync(dir, { withFileTypes: true })
-    const out: PageSlugItem[] = []
+export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
+  const appDir = path.join(process.cwd(), 'src/app')
+  const out: PageSlugItem[] = []
+
+  function scanRouteGroup(routeGroupPath: string): void {
+    const entries = readdirSync(routeGroupPath, { withFileTypes: true })
+
+    // Check for home page (page.tsx directly in route group)
+    const homePagePath = path.join(routeGroupPath, 'page.tsx')
+    if (existsSync(homePagePath)) {
+      const stats = statSync(homePagePath)
+      out.push({
+        slug: '',
+        modified: stats.mtime.toISOString(),
+        uri: '/',
+      })
+    }
 
     for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name)
-      const relPath = basePath ? `${basePath}/${entry.name}` : entry.name
+      if (!entry.isDirectory()) continue
+      if (EXCLUDED_FOLDERS.includes(entry.name)) continue
+      if (entry.name.startsWith('[') && entry.name.endsWith(']')) continue
+      if (entry.name.startsWith('(') && entry.name.endsWith(')')) continue
 
-      if (entry.isDirectory()) {
-        if (basePath === '' && entry.name === 'post') continue
-        out.push(...walk(fullPath, relPath))
-        continue
-      }
-
-      if (entry.isFile() && entry.name.endsWith('.tsx')) {
-        const isIndex = entry.name.toLowerCase() === 'index.tsx'
-
-        const rawPath = isIndex
-          ? basePath
-          : (basePath ? `${basePath}/` : '') + entry.name.slice(0, -4)
-
-        const segments = rawPath
-          .split('/')
-          .filter(Boolean)
-          .map((seg) => {
-            const decoded = decodeURIComponent(seg)
-            return encodeURIComponent(decoded).toLowerCase()
-          })
-
-        const slug = segments.join('/')
-        const uri = '/' + slug
-        const stats = statSync(fullPath)
-
+      const pagePath = path.join(routeGroupPath, entry.name, 'page.tsx')
+      if (existsSync(pagePath)) {
+        const stats = statSync(pagePath)
         out.push({
-          slug,
+          slug: entry.name,
           modified: stats.mtime.toISOString(),
-          uri: uri === '//' ? '/' : uri,
+          uri: '/' + entry.name,
         })
       }
     }
-
-    return out
   }
 
-  return { pageSlugs: walk(rootDir) }
+  // Scan all route groups in app directory
+  const appEntries = readdirSync(appDir, { withFileTypes: true })
+  for (const entry of appEntries) {
+    if (
+      entry.isDirectory() &&
+      entry.name.startsWith('(') &&
+      entry.name.endsWith(')')
+    ) {
+      if (BLOCKED_ROUTE_GROUPS.includes(entry.name)) continue
+      scanRouteGroup(path.join(appDir, entry.name))
+    }
+  }
+
+  // Remove duplicate home pages (keep first one)
+  const seen = new Set<string>()
+  const unique = out.filter((item) => {
+    if (seen.has(item.uri)) return false
+    seen.add(item.uri)
+    return true
+  })
+
+  return { pageSlugs: unique }
 }

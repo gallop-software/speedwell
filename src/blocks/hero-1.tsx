@@ -6,7 +6,6 @@ import {
   Buttons,
   Accent,
   Gradient,
-  Navbar,
   Section,
   Columns,
   Column,
@@ -19,8 +18,7 @@ import playCircleIcon from '@iconify/icons-lucide/play-circle'
 export default function Hero1() {
   return (
     <>
-      <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2">
-        <Navbar className="-mt-2" />
+      <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2 pt-60">
         <div className="mx-auto max-w-[1600px] relative">
           <img
             src="/images/hero-bg.png"

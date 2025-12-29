@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer'
-import { readdir, readFile, writeFile, mkdir } from 'fs/promises'
+import { readdir, readFile, writeFile, mkdir, stat } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
@@ -7,9 +7,9 @@ import sharp from 'sharp'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const LAYOUTS_DIR = join(__dirname, '../src/content')
+const APP_DIR = join(__dirname, '../src/app')
 const OUTPUT_DIR = join(__dirname, '../public/layouts')
-const README_PATH = join(__dirname, '../src/content/README.md')
+const README_PATH = join(__dirname, '../src/app/README.md')
 const BLOCKS_README_PATH = join(__dirname, '../src/blocks/README.md')
 const BASE_URL = 'https://speedwell.gallop.software'
 const SCREENSHOT_WIDTH = 1920
@@ -25,9 +25,13 @@ function naturalSort(a, b) {
   })
 }
 
-// Helper function to convert filename to display name and slug
-function parseLayoutName(filename) {
-  const name = filename.replace('.tsx', '')
+// Helper function to convert route folder name to display name and slug
+function parseLayoutName(folderName, isHomePage = false) {
+  if (isHomePage) {
+    return { name: 'index', slug: 'index', displayName: 'Index' }
+  }
+
+  const name = folderName
   const slug = name
 
   // Convert to display name (e.g., "layout-1" -> "Layout 1")
@@ -37,6 +41,138 @@ function parseLayoutName(filename) {
     .join(' ')
 
   return { name, slug, displayName }
+}
+
+// Helper function to find all layout files that apply to a page path
+async function findLayoutsForPage(pagePath) {
+  const layouts = []
+  const appDir = join(__dirname, '../src/app')
+
+  // Get the relative path from app directory
+  const relativePath = pagePath.replace(appDir, '').replace(/^\//, '')
+  const parts = relativePath.split('/')
+
+  // Check for layout.tsx at each level, starting from the page's directory going up
+  for (let i = parts.length - 1; i >= 0; i--) {
+    // Skip the page.tsx file itself
+    if (parts[i] === 'page.tsx') continue
+
+    const pathParts = parts.slice(0, i + 1)
+    const layoutPath = join(appDir, ...pathParts, 'layout.tsx')
+
+    try {
+      await stat(layoutPath)
+      // Store relative path from src/app
+      const relativeLayoutPath = pathParts.join('/') + '/layout.tsx'
+      layouts.push(relativeLayoutPath)
+    } catch {
+      // layout.tsx doesn't exist at this level
+    }
+  }
+
+  // Check for root layout.tsx
+  const rootLayoutPath = join(appDir, 'layout.tsx')
+  try {
+    await stat(rootLayoutPath)
+    layouts.push('layout.tsx')
+  } catch {
+    // No root layout
+  }
+
+  return layouts
+}
+
+// Helper function to find all layout pages in app directory route groups
+async function findLayoutPages() {
+  const layouts = []
+  const BLOCKED_ROUTE_GROUPS = ['(demo)']
+  const EXCLUDED_FOLDERS = [
+    'api',
+    'sitemap_index.xml',
+    // Files/folders that are not page routes
+  ]
+  const EXCLUDED_FILES = [
+    'error.tsx',
+    'not-found.tsx',
+    'layout.tsx',
+    'loading.tsx',
+    'template.tsx',
+    'default.tsx',
+  ]
+
+  try {
+    const entries = await readdir(APP_DIR, { withFileTypes: true })
+
+    for (const entry of entries) {
+      // Look for route groups (folders starting with parentheses)
+      if (
+        entry.isDirectory() &&
+        entry.name.startsWith('(') &&
+        entry.name.endsWith(')')
+      ) {
+        // Skip blocked route groups
+        if (BLOCKED_ROUTE_GROUPS.includes(entry.name)) {
+          continue
+        }
+
+        const routeGroupPath = join(APP_DIR, entry.name)
+        const routeGroupContents = await readdir(routeGroupPath, {
+          withFileTypes: true,
+        })
+
+        // Check for home page (page.tsx directly in route group)
+        const homePagePath = join(routeGroupPath, 'page.tsx')
+        try {
+          await stat(homePagePath)
+          layouts.push({
+            folderName: '', // Empty for home page
+            routeGroup: entry.name,
+            pagePath: homePagePath,
+            isHomePage: true,
+          })
+        } catch {
+          // No home page in this route group
+        }
+
+        for (const item of routeGroupContents) {
+          // Skip excluded folders
+          if (EXCLUDED_FOLDERS.includes(item.name)) {
+            continue
+          }
+
+          // Skip dynamic route segments like [slug]
+          if (item.name.startsWith('[') && item.name.endsWith(']')) {
+            continue
+          }
+
+          // Skip nested route groups
+          if (item.name.startsWith('(') && item.name.endsWith(')')) {
+            continue
+          }
+
+          // Look for any folder with a page.tsx
+          if (item.isDirectory()) {
+            const pagePath = join(routeGroupPath, item.name, 'page.tsx')
+            try {
+              await stat(pagePath)
+              layouts.push({
+                folderName: item.name,
+                routeGroup: entry.name,
+                pagePath: pagePath,
+                isHomePage: false,
+              })
+            } catch {
+              // page.tsx doesn't exist, skip
+            }
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error scanning app directory:', error)
+  }
+
+  return layouts
 }
 
 // Helper function to parse existing README to preserve tier settings, preview, and order
@@ -295,12 +431,10 @@ async function generateLayoutsCatalog(
   try {
     console.log('Starting layouts catalog generation...\n')
 
-    // Read all files from content directory
-    const files = await readdir(LAYOUTS_DIR)
-    // Include all top-level .tsx files (excluding directories)
-    const layoutFiles = files.filter((f) => f.endsWith('.tsx'))
+    // Find all layout pages in app directory route groups
+    const layoutPages = await findLayoutPages()
 
-    console.log(`Found ${layoutFiles.length} layout files\n`)
+    console.log(`Found ${layoutPages.length} layout pages\n`)
 
     // Load existing layouts from README to preserve order and tier settings
     const existingReadmeLayouts = ignoreSavedOrder
@@ -326,13 +460,15 @@ async function generateLayoutsCatalog(
 
     // Parse all layout files
     const allLayoutsMap = new Map()
-    for (const file of layoutFiles) {
-      const { name, slug, displayName } = parseLayoutName(file)
-      const layoutFilePath = join(LAYOUTS_DIR, file)
+    for (const layoutPage of layoutPages) {
+      const { name, slug, displayName } = parseLayoutName(
+        layoutPage.folderName,
+        layoutPage.isHomePage
+      )
 
       // Determine tier from blocks used in the layout
       const detectedTier = await getLayoutTierFromBlocks(
-        layoutFilePath,
+        layoutPage.pagePath,
         blockTiers
       )
 
@@ -340,13 +476,19 @@ async function generateLayoutsCatalog(
       const existingLayout = existingLayoutMap.get(displayName)
       const preview = existingLayout?.preview || null // null means Auto (omitted)
 
+      // Find all layout files that apply to this page
+      const layoutFiles = await findLayoutsForPage(layoutPage.pagePath)
+
       allLayoutsMap.set(displayName, {
         name,
         slug,
         displayName,
         tier: detectedTier, // Always use detected tier based on blocks
         preview,
-        filename: file,
+        routeGroup: layoutPage.routeGroup,
+        pagePath: layoutPage.pagePath,
+        isHomePage: layoutPage.isHomePage,
+        layoutFiles, // Array of layout file paths
       })
     }
 
@@ -482,6 +624,15 @@ function generateReadme(layouts) {
       readme += `<img src="../../public/layouts/${layout.slug}.jpg" alt="${layout.displayName}" width="350">\n\n`
     }
     readme += `**Slug:** \`${layout.slug}\`  \n`
+    // Generate relative path from src/app
+    const relativePath = layout.pagePath.replace(/.*\/src\/app\//, '')
+    readme += `**Path:** \`${relativePath}\`  \n`
+    // Output each layout file path
+    if (layout.layoutFiles && layout.layoutFiles.length > 0) {
+      layout.layoutFiles.forEach((layoutFile) => {
+        readme += `**Layout:** \`${layoutFile}\`  \n`
+      })
+    }
     readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}  \n`
     // Only show Preview if it's not Auto (null)
     if (layout.preview) {

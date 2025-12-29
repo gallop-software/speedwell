@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const ROOT_DIR = path.resolve(__dirname, '..')
 
-const POSTS_DIR = path.join(ROOT_DIR, 'src/content/post')
+const POSTS_DIR = path.join(ROOT_DIR, 'src/blog')
 const OUTPUT_FILE = path.join(ROOT_DIR, '_data/_blog.json')
 
 function extractMetadata(filePath) {

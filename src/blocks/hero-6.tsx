@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,
@@ -15,7 +14,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Hero6() {
   return (
     <>
-      <Navbar />
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-accent3 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -41,10 +39,17 @@ export default function Hero6() {
                 Transform Your Space with Expert Color Consultation
               </Heading>
               <Quote>
-                The right colors don't just beautify a space – they transform how you feel in it every single day
+                The right colors don't just beautify a space – they transform
+                how you feel in it every single day
               </Quote>
               <Paragraph>
-                Choosing the perfect color palette can be overwhelming with thousands of options available. Our professional color consultation services guide you through the process with confidence, ensuring every room reflects your personality while creating the ideal mood and atmosphere. We consider lighting, architecture, and your lifestyle to create cohesive schemes that work beautifully throughout your home.
+                Choosing the perfect color palette can be overwhelming with
+                thousands of options available. Our professional color
+                consultation services guide you through the process with
+                confidence, ensuring every room reflects your personality while
+                creating the ideal mood and atmosphere. We consider lighting,
+                architecture, and your lifestyle to create cohesive schemes that
+                work beautifully throughout your home.
               </Paragraph>
               <Buttons className="">
                 <Button

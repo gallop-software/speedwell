@@ -89,7 +89,7 @@ export function MobileNavButton({
                     "after:content-[''] after:block after:w-full after:h-20 after:xl:h-10"
                   )}
                 >
-                  <MobileNav />
+                  <MobileNav close={closeModal} />
                 </div>
               </div>
             </DialogPanel>

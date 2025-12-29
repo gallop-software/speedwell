@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,
@@ -14,7 +13,6 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 export default function Hero3() {
   return (
     <>
-      <Navbar />
       <div className="relative">
         <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 bg-body-dark z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -43,7 +41,14 @@ export default function Hero3() {
                 Transform Your House Into Your Dream Home
               </Heading>
               <Paragraph>
-                Experience the perfect blend of luxury, comfort, and functionality with our bespoke residential interior design services. We create personalized living spaces that reflect your unique style and enhance your everyday life. From modern minimalism to timeless elegance, our expert designers bring your vision to life with meticulous attention to detail, premium materials, and innovative solutions that maximize both beauty and practicality.
+                Experience the perfect blend of luxury, comfort, and
+                functionality with our bespoke residential interior design
+                services. We create personalized living spaces that reflect your
+                unique style and enhance your everyday life. From modern
+                minimalism to timeless elegance, our expert designers bring your
+                vision to life with meticulous attention to detail, premium
+                materials, and innovative solutions that maximize both beauty
+                and practicality.
               </Paragraph>
               <Buttons className="">
                 <Button

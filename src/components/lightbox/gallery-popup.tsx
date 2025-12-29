@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Lightbox from 'yet-another-react-lightbox'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import Counter from 'yet-another-react-lightbox/plugins/counter'
@@ -22,6 +23,7 @@ interface GalleryPopupProps {
 }
 
 export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => {
+  const pathname = usePathname()
   const [galleries, setGalleries] = useState<
     { slides: Slide[]; open: boolean; index: number; galleryIndex: number }[]
   >([])
@@ -125,7 +127,7 @@ export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => {
     return () => {
       removeAllListeners()
     }
-  }, [containerRef]) // Rerun when container changes
+  }, [containerRef, pathname]) // Rerun when container or pathname changes
 
   const createSlide = (
     el: Element,

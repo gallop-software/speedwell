@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Columns,
   Column,
   Image,
@@ -11,7 +10,6 @@ import {
 export default function Hero4() {
   return (
     <>
-      <Navbar />
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-full lg:w-3/4 bg-body2 z-0"></div>
         <div className="pt-0 pb-20 lg:py-24 px-6 mx-auto max-w-[1600px] relative">
@@ -40,10 +38,21 @@ export default function Hero4() {
                 Before & After Transformations
               </Heading>
               <Paragraph className="max-w-2xl">
-                Witness the power of thoughtful interior design through our portfolio of stunning transformations. Each project tells a story of spaces reimagined, potential realized, and dreams brought to life. From outdated rooms to modern masterpieces, see how Timmerman transforms ordinary spaces into extraordinary environments.
+                Witness the power of thoughtful interior design through our
+                portfolio of stunning transformations. Each project tells a
+                story of spaces reimagined, potential realized, and dreams
+                brought to life. From outdated rooms to modern masterpieces, see
+                how Timmerman transforms ordinary spaces into extraordinary
+                environments.
               </Paragraph>
               <Paragraph className="max-w-2xl">
-                Our before and after gallery showcases the dramatic impact that expert design can have on any space. Whether it's a complete home renovation, a commercial office redesign, or a single room makeover, these transformations demonstrate our commitment to excellence, creativity, and attention to detail. Every project begins with understanding your vision and ends with exceeding your expectations.
+                Our before and after gallery showcases the dramatic impact that
+                expert design can have on any space. Whether it's a complete
+                home renovation, a commercial office redesign, or a single room
+                makeover, these transformations demonstrate our commitment to
+                excellence, creativity, and attention to detail. Every project
+                begins with understanding your vision and ends with exceeding
+                your expectations.
               </Paragraph>
             </Column>
           </Columns>
