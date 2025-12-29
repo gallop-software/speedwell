@@ -1,7 +1,8 @@
 import React from 'react'
 import { BlogClient } from '@/components/blog/blog-client'
 import { GalleryPopup } from '@/components/lightbox/gallery-popup'
-import { FancyHeading, Footer, Navbar, Section } from '@/components'
+import { FancyHeading, PageWrapper, Section } from '@/components'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { getSlug } from '@/tools/get-slug'
 import { getTitle } from '@/tools/get-title'
 import fs from 'fs'
@@ -20,6 +21,22 @@ function toCategoryArray(value?: string | string[]) {
     .split(/[,\|/]/)
     .map((s) => s.trim())
     .filter(Boolean)
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params
+  const category = slug ? decodeURIComponent(slug) : ''
+  const categoryTitle = getTitle(category)
+
+  const metadata: PageMetadata = {
+    title: categoryTitle ? `${categoryTitle} | Our Journal` : 'Our Journal',
+    description: categoryTitle
+      ? `Browse our articles about ${categoryTitle.toLowerCase()}`
+      : 'Browse all articles in our journal',
+    slug: `category/${slug}`,
+  }
+
+  return generatePageMetadata(metadata, ['category', slug || ''])
 }
 
 export default async function Page({ params }: PageProps) {
@@ -54,23 +71,26 @@ export default async function Page({ params }: PageProps) {
     console.error('Failed to read blog metadata:', error)
   }
 
+  const metadata: PageMetadata = {
+    title: getTitle(category)
+      ? `${getTitle(category)} | Our Journal`
+      : 'Our Journal',
+  }
+
   return (
-    <div className="overflow-hidden">
-      <main className="[&>p]:mx-auto [&>p]:max-w-3xl [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl [&>*:last-child:not(div):not(section)]:mb-40">
-        <Section className="bg-body2 py-20">
-          <FancyHeading
-            as="h1"
-            text="Our Journal"
-            accent={getTitle(category)}
-          />
-          <BlogClient
-            allPosts={allPosts}
-            perPage={9}
-          />
-        </Section>
-        <GalleryPopup />
-      </main>
-      <Footer />
-    </div>
+    <PageWrapper metadata={metadata}>
+      <Section className="bg-body2 py-20">
+        <FancyHeading
+          as="h1"
+          text="Our Journal"
+          accent={getTitle(category)}
+        />
+        <BlogClient
+          allPosts={allPosts}
+          perPage={9}
+        />
+      </Section>
+      <GalleryPopup />
+    </PageWrapper>
   )
 }
