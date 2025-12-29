@@ -50,6 +50,7 @@ export interface SocialLink {
 export interface NavbarProps {
   className?: string
   dark?: boolean
+  hero?: boolean
 }
 
 /**
