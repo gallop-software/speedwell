@@ -43,6 +43,45 @@ function parseLayoutName(folderName, isHomePage = false) {
   return { name, slug, displayName }
 }
 
+// Helper function to find all layout files that apply to a page path
+async function findLayoutsForPage(pagePath) {
+  const layouts = []
+  const appDir = join(__dirname, '../src/app')
+
+  // Get the relative path from app directory
+  const relativePath = pagePath.replace(appDir, '').replace(/^\//, '')
+  const parts = relativePath.split('/')
+
+  // Check for layout.tsx at each level, starting from the page's directory going up
+  for (let i = parts.length - 1; i >= 0; i--) {
+    // Skip the page.tsx file itself
+    if (parts[i] === 'page.tsx') continue
+
+    const pathParts = parts.slice(0, i + 1)
+    const layoutPath = join(appDir, ...pathParts, 'layout.tsx')
+
+    try {
+      await stat(layoutPath)
+      // Store relative path from src/app
+      const relativeLayoutPath = pathParts.join('/') + '/layout.tsx'
+      layouts.push(relativeLayoutPath)
+    } catch {
+      // layout.tsx doesn't exist at this level
+    }
+  }
+
+  // Check for root layout.tsx
+  const rootLayoutPath = join(appDir, 'layout.tsx')
+  try {
+    await stat(rootLayoutPath)
+    layouts.push('layout.tsx')
+  } catch {
+    // No root layout
+  }
+
+  return layouts
+}
+
 // Helper function to find all layout pages in app directory route groups
 async function findLayoutPages() {
   const layouts = []
@@ -437,6 +476,9 @@ async function generateLayoutsCatalog(
       const existingLayout = existingLayoutMap.get(displayName)
       const preview = existingLayout?.preview || null // null means Auto (omitted)
 
+      // Find all layout files that apply to this page
+      const layoutFiles = await findLayoutsForPage(layoutPage.pagePath)
+
       allLayoutsMap.set(displayName, {
         name,
         slug,
@@ -446,6 +488,7 @@ async function generateLayoutsCatalog(
         routeGroup: layoutPage.routeGroup,
         pagePath: layoutPage.pagePath,
         isHomePage: layoutPage.isHomePage,
+        layoutFiles, // Array of layout file paths
       })
     }
 
@@ -584,6 +627,12 @@ function generateReadme(layouts) {
     // Generate relative path from src/app
     const relativePath = layout.pagePath.replace(/.*\/src\/app\//, '')
     readme += `**Path:** \`${relativePath}\`  \n`
+    // Output each layout file path
+    if (layout.layoutFiles && layout.layoutFiles.length > 0) {
+      layout.layoutFiles.forEach((layoutFile) => {
+        readme += `**Layout:** \`${layoutFile}\`  \n`
+      })
+    }
     readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}  \n`
     // Only show Preview if it's not Auto (null)
     if (layout.preview) {

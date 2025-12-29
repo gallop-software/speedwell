@@ -16,6 +16,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `index`  
 **Path:** `(hero)/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -26,6 +28,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `layout-1`  
 **Path:** `(one-page-site)/layout-1/page.tsx`  
+**Layout:** `(one-page-site)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Pro  
 
 ---
@@ -36,6 +40,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `layout-2`  
 **Path:** `(alternate)/layout-2/page.tsx`  
+**Layout:** `(alternate)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Pro  
 
 ---
@@ -46,6 +52,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `before-after`  
 **Path:** `(default)/before-after/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -56,6 +64,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `case-studies`  
 **Path:** `(default)/case-studies/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -66,6 +76,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `color-consultation`  
 **Path:** `(default)/color-consultation/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -76,6 +88,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `commercial`  
 **Path:** `(default)/commercial/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -86,6 +100,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `contact`  
 **Path:** `(default)/contact/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -96,6 +112,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `furniture`  
 **Path:** `(default)/furniture/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -106,6 +124,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `join-our-team`  
 **Path:** `(color-navbar)/join-our-team/page.tsx`  
+**Layout:** `(color-navbar)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -116,6 +136,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `kitchen-bath`  
 **Path:** `(default)/kitchen-bath/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -126,6 +148,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `meet-the-team`  
 **Path:** `(default)/meet-the-team/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -136,6 +160,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `portfolio`  
 **Path:** `(default)/portfolio/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -146,6 +172,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `project-management`  
 **Path:** `(default)/project-management/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -156,6 +184,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `residential`  
 **Path:** `(default)/residential/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -166,6 +196,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `services`  
 **Path:** `(default)/services/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -176,6 +208,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `space-planning`  
 **Path:** `(default)/space-planning/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
@@ -186,6 +220,8 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 
 **Slug:** `testimonials`  
 **Path:** `(hero)/testimonials/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
+**Layout:** `layout.tsx`  
 **Tier:** Pro  
 
 ---
