@@ -10,15 +10,15 @@ type CategorySlug = {
 export async function getCategorySlugs(): Promise<{
   categorySlugs: CategorySlug[]
 }> {
-  const postsDir = path.join(process.cwd(), 'src/content/post')
+  const postsDir = path.join(process.cwd(), 'src/blog')
   const files = readdirSync(postsDir).filter((file) => file.endsWith('.tsx'))
   const categorySet = new Set<string>()
 
   for (const file of files) {
-    const slugPath = `post/${file.replace(/\.tsx$/, '')}`
+    const slug = file.replace(/\.tsx$/, '')
 
     try {
-      const { metadata } = await import(`../../content/${slugPath}.tsx`)
+      const { metadata } = await import(`../../blog/${slug}.tsx`)
 
       if (Array.isArray(metadata.categories)) {
         for (const category of metadata.categories) {
