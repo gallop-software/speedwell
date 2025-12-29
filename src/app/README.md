@@ -15,6 +15,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/index.jpg" alt="Index" width="350">
 
 **Slug:** `index`  
+**Path:** `(hero)/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -24,6 +25,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/layout-1.jpg" alt="Layout 1" width="350">
 
 **Slug:** `layout-1`  
+**Path:** `(one-page-site)/layout-1/page.tsx`  
 **Tier:** Pro  
 
 ---
@@ -33,6 +35,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
 
 **Slug:** `layout-2`  
+**Path:** `(alternate)/layout-2/page.tsx`  
 **Tier:** Pro  
 
 ---
@@ -42,6 +45,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/before-after.jpg" alt="Before After" width="350">
 
 **Slug:** `before-after`  
+**Path:** `(default)/before-after/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -51,6 +55,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/case-studies.jpg" alt="Case Studies" width="350">
 
 **Slug:** `case-studies`  
+**Path:** `(default)/case-studies/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -60,6 +65,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/color-consultation.jpg" alt="Color Consultation" width="350">
 
 **Slug:** `color-consultation`  
+**Path:** `(default)/color-consultation/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -69,6 +75,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/commercial.jpg" alt="Commercial" width="350">
 
 **Slug:** `commercial`  
+**Path:** `(default)/commercial/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -78,6 +85,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/contact.jpg" alt="Contact" width="350">
 
 **Slug:** `contact`  
+**Path:** `(default)/contact/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -87,6 +95,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/furniture.jpg" alt="Furniture" width="350">
 
 **Slug:** `furniture`  
+**Path:** `(default)/furniture/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -96,6 +105,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/join-our-team.jpg" alt="Join Our Team" width="350">
 
 **Slug:** `join-our-team`  
+**Path:** `(color-navbar)/join-our-team/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -105,6 +115,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/kitchen-bath.jpg" alt="Kitchen Bath" width="350">
 
 **Slug:** `kitchen-bath`  
+**Path:** `(default)/kitchen-bath/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -114,6 +125,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/meet-the-team.jpg" alt="Meet The Team" width="350">
 
 **Slug:** `meet-the-team`  
+**Path:** `(default)/meet-the-team/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -123,6 +135,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/portfolio.jpg" alt="Portfolio" width="350">
 
 **Slug:** `portfolio`  
+**Path:** `(default)/portfolio/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -132,6 +145,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/project-management.jpg" alt="Project Management" width="350">
 
 **Slug:** `project-management`  
+**Path:** `(default)/project-management/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -141,6 +155,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/residential.jpg" alt="Residential" width="350">
 
 **Slug:** `residential`  
+**Path:** `(default)/residential/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -150,6 +165,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/services.jpg" alt="Services" width="350">
 
 **Slug:** `services`  
+**Path:** `(default)/services/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -159,6 +175,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/space-planning.jpg" alt="Space Planning" width="350">
 
 **Slug:** `space-planning`  
+**Path:** `(default)/space-planning/page.tsx`  
 **Tier:** Free  
 
 ---
@@ -168,6 +185,7 @@ A collection of 18 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/testimonials.jpg" alt="Testimonials" width="350">
 
 **Slug:** `testimonials`  
+**Path:** `(hero)/testimonials/page.tsx`  
 **Tier:** Pro  
 
 ---

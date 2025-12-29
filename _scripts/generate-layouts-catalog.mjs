@@ -581,6 +581,9 @@ function generateReadme(layouts) {
       readme += `<img src="../../public/layouts/${layout.slug}.jpg" alt="${layout.displayName}" width="350">\n\n`
     }
     readme += `**Slug:** \`${layout.slug}\`  \n`
+    // Generate relative path from src/app
+    const relativePath = layout.pagePath.replace(/.*\/src\/app\//, '')
+    readme += `**Path:** \`${relativePath}\`  \n`
     readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}  \n`
     // Only show Preview if it's not Auto (null)
     if (layout.preview) {
