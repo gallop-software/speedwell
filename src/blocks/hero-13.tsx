@@ -12,7 +12,7 @@ import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
 export default function Hero13() {
   return (
-    <div className="bg-accent3 pt-70 ">
+    <div className="bg-accent3 pt-navbar ">
       <div className="mx-auto max-w-[1600px] relative">
         <div
           className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-full z-0 opacity-30 bg-cover bg-no-repeat bg-top-left bg-[url('/images/leaf1.jpg')]"
