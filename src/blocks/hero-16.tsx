@@ -1,10 +1,9 @@
-import { Swiper, Image, Navbar, Heading, Accent } from '@/components'
+import { Swiper, Image, Heading, Accent } from '@/components'
 
 export default function Hero16() {
   return (
     <>
-      <Navbar />
-      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden pt-navbar">
         <Swiper>
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
             <Image
