@@ -101,6 +101,12 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+
+  /* Padding top matching navbar height at different breakpoints */
+  /* Navbar: pt-12 sm:pt-16 + logo (~60px mobile, ~80px desktop) + pb-10 */
+  .pt-navbar {
+    @apply pt-40 sm:pt-48 md:pt-56 lg:pt-60;
+  }
 }
 
 @keyframes move-x {
