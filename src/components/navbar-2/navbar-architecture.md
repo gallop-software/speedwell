@@ -2,22 +2,21 @@
 
 ## Overview
 
-The navbar is a modular component system organized in `/src/components/navbar-2/`. This architecture improves maintainability, readability, and makes it easier to understand and modify specific parts of the navigation.
+Navbar2 is a modular component system organized in `/src/components/navbar-2/`. It shares the same architecture as the main Navbar but with its own configuration for different navigation layouts.
 
 ## File Structure
 
 ```
 src/components/navbar-2/
-├── index.tsx                      # Main navbar component (Navbar2)
-├── types.ts                       # TypeScript interfaces
-├── config.ts                      # Navigation data (links, social, homeLink)
-├── desktop-nav.tsx               # Desktop navigation with dropdowns
-├── mobile-nav.tsx                # Mobile navigation menu
-├── search-button.tsx             # Search functionality
-├── social-media-nav.tsx          # Social media icons
-├── mobile-nav-button.tsx         # Mobile hamburger button
-├── sticky-navbar.tsx             # Sticky navbar on scroll
-└── sticky-mobile-nav-button.tsx  # Sticky mobile menu
+├── index.tsx              # Main navbar component (Navbar2)
+├── types.ts               # TypeScript interfaces
+├── config.ts              # Navigation data (links, social, homeLink)
+├── desktop-nav.tsx        # Desktop navigation with dropdowns
+├── mobile-nav.tsx         # Mobile navigation menu content
+├── mobile-nav-button.tsx  # Mobile hamburger button with Dialog sidebar
+├── search-button.tsx      # Search functionality
+├── social-media-nav.tsx   # Social media icons
+└── sticky-navbar.tsx      # Sticky navbar on scroll
 ```
 
 ## Component Breakdown
@@ -25,6 +24,7 @@ src/components/navbar-2/
 ### `index.tsx`
 
 - **Purpose**: Main entry point for the navbar
+- **Export**: `Navbar2`
 - **Responsibilities**:
   - Tracks scroll position via `useOffsetTop` hook
   - Manages scroll state for sticky navbar behavior
@@ -33,13 +33,13 @@ src/components/navbar-2/
 - **Props**:
   - `className?: string` - Additional CSS classes
   - `dark?: boolean` - When true, renders white text/icons for dark backgrounds (default: false)
-- **Export**: `Navbar2`
+  - `hero?: boolean` - When true, positions navbar absolutely over content (default: false)
 
 ### `types.ts`
 
 - **Purpose**: Centralized TypeScript type definitions
 - **Key Types**:
-  - `NavbarProps`: Main navbar props with className and dark
+  - `NavbarProps`: Main navbar props (className, dark, hero)
   - `NavLink`: Navigation link structure with optional dropdowns
   - `DropdownItem`: Dropdown menu item structure
   - `SocialLink`: Social media link structure
@@ -47,19 +47,21 @@ src/components/navbar-2/
 
 ### `config.ts`
 
-- **Purpose**: Centralized configuration data
+- **Purpose**: Centralized configuration data for Navbar2
 - **Contents**:
   - `homeLink`: Logo link destination
   - `links`: Array of main navigation links with optional dropdowns
   - `socialLinks`: Array of social media links
 - **Benefits**: Easy to add/remove/modify navigation items without touching component logic
-- **Note**: All subcomponents import directly from this file rather than receiving props
+- **Note**: This config is independent from the main Navbar config
 
 ### `desktop-nav.tsx`
 
 - **Purpose**: Desktop navigation with dropdowns
 - **Features**:
   - Popover-based dropdown menus using Headless UI
+  - `PopoverBackdrop` for click-outside-to-close behavior
+  - `CloseButton` wrapping Links for close-on-navigation
   - Multi-column dropdown support (1, 2, or 3 columns)
   - Dropdown positioning (left, center, right)
   - Icon support for dropdown items
@@ -68,13 +70,24 @@ src/components/navbar-2/
 
 ### `mobile-nav.tsx`
 
-- **Purpose**: Mobile slide-down navigation menu
+- **Purpose**: Mobile navigation menu content
 - **Features**:
   - Expandable accordion sections using Headless UI Disclosure
   - Framer Motion animations
   - Integrated search button
   - Social media links at bottom
-- **Props**: None (imports from config directly)
+  - Closes menu when clicking navigation links
+- **Props**: `close: () => void` - Function to close the mobile menu
+
+### `mobile-nav-button.tsx`
+
+- **Purpose**: Mobile hamburger button with sliding sidebar
+- **Features**:
+  - Opens Dialog sidebar from the right
+  - Animated backdrop overlay
+  - Passes `closeModal` to MobileNav for close-on-click behavior
+  - Mobile/tablet only (hidden on desktop)
+- **Props**: `dark?: boolean`
 
 ### `search-button.tsx`
 
@@ -95,58 +108,68 @@ src/components/navbar-2/
   - Dark mode support for white icons
 - **Props**: `dark?: boolean`
 
-### `mobile-nav-button.tsx`
-
-- **Purpose**: Hamburger menu button for mobile
-- **Features**:
-  - Animated icon using Framer Motion
-  - Rotates when menu is open
-  - Mobile/tablet only (hidden on desktop)
-- **Props**: `open: boolean`
-
 ### `sticky-navbar.tsx`
 
 - **Purpose**: Sticky navbar that appears on scroll
 - **Features**:
-  - Motion-based slide animation
+  - Framer Motion slide animation
   - Slides in when scrolling up, slides out when scrolling down
-  - Includes desktop nav, search, social links, and sticky mobile button
+  - Uses same DesktopNav component with `forceCloseOnHide` for proper dropdown behavior
+  - Includes desktop nav, search, social links, and mobile button
 - **Props**: `isScrolling?: boolean`, `scrollingDirection?: string`
-
-### `sticky-mobile-nav-button.tsx`
-
-- **Purpose**: Mobile menu for sticky navbar
-- **Features**:
-  - Sidebar dialog using Headless UI
-  - Slide-in animation from right
-  - Full-height scrollable menu
-- **Props**: None
 
 ## Dark Mode
 
-The navbar supports a `dark` prop for use on dark backgrounds (e.g., hero sections with background images):
+The navbar supports a `dark` prop for use on dark backgrounds:
 
-```tsx
+\`\`\`tsx
 <Navbar2 dark={true} />
-```
+\`\`\`
 
 When `dark={true}`:
 
-- Logo switches to white version (`/images/logo-white.png`)
+- Logo switches to white version
 - Desktop nav links use white text with `hover:bg-white/10`
 - Social media icons use white color
 - Search icon uses white color
+
+## Hero Mode
+
+The navbar supports a `hero` prop for overlaying content:
+
+\`\`\`tsx
+<Navbar2 hero={true} />
+\`\`\`
+
+When `hero={true}`:
+
+- Navbar is positioned absolutely over the content below
+- Typically used with dark backgrounds where `dark={true}` is also set
+
+## Dropdown Close Behavior
+
+Desktop dropdowns close when:
+
+1. **Clicking the backdrop** - `PopoverBackdrop` covers the screen behind the dropdown
+2. **Clicking a menu item** - `CloseButton as={Link}` closes the popover and navigates
+3. **Pressing Escape** - Built-in Headless UI behavior
+
+Mobile menu closes when:
+
+1. **Clicking the backdrop** - Dialog backdrop click
+2. **Clicking a navigation link** - `onClick={close}` on all links
+3. **Pressing Escape** - Built-in Headless UI behavior
 
 ## Data Flow
 
 All navigation data is centralized in `config.ts`. Components import directly from this file:
 
-```
+\`\`\`
 config.ts
 ├── homeLink → index.tsx, sticky-navbar.tsx
 ├── links → desktop-nav.tsx, mobile-nav.tsx
 └── socialLinks → social-media-nav.tsx, mobile-nav.tsx
-```
+\`\`\`
 
 ## Benefits of This Architecture
 
@@ -179,6 +202,10 @@ Edit `homeLink` in `config.ts`
 
 Pass `dark={true}` to the Navbar2 component for dark backgrounds
 
+### Using hero mode
+
+Pass `hero={true}` to position navbar absolutely over content
+
 ### Updating mobile menu behavior
 
-Edit `mobile-nav.tsx` for the menu content or `sticky-mobile-nav-button.tsx` for the container
+Edit `mobile-nav.tsx` for the menu content or `mobile-nav-button.tsx` for the sidebar container

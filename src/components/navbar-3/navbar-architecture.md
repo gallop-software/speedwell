@@ -1,14 +1,14 @@
-# Navbar Architecture
+# Navbar3 Architecture
 
 ## Overview
 
-The navbar is a modular component system organized in `/src/components/navbar/`. This architecture improves maintainability, readability, and makes it easier to understand and modify specific parts of the navigation.
+Navbar3 is a modular component system organized in `/src/components/navbar-3/`. It shares the same architecture as the main Navbar but with its own configuration for different navigation layouts.
 
 ## File Structure
 
 ```
-src/components/navbar/
-├── index.tsx              # Main navbar component (Navbar)
+src/components/navbar-3/
+├── index.tsx              # Main navbar component (Navbar3)
 ├── types.ts               # TypeScript interfaces
 ├── config.ts              # Navigation data (links, social, homeLink)
 ├── desktop-nav.tsx        # Desktop navigation with dropdowns
@@ -24,7 +24,7 @@ src/components/navbar/
 ### `index.tsx`
 
 - **Purpose**: Main entry point for the navbar
-- **Export**: `Navbar`
+- **Export**: `Navbar3`
 - **Responsibilities**:
   - Tracks scroll position via `useOffsetTop` hook
   - Manages scroll state for sticky navbar behavior
@@ -47,13 +47,13 @@ src/components/navbar/
 
 ### `config.ts`
 
-- **Purpose**: Centralized configuration data
+- **Purpose**: Centralized configuration data for Navbar3
 - **Contents**:
   - `homeLink`: Logo link destination
   - `links`: Array of main navigation links with optional dropdowns
   - `socialLinks`: Array of social media links
 - **Benefits**: Easy to add/remove/modify navigation items without touching component logic
-- **Note**: All subcomponents import directly from this file rather than receiving props
+- **Note**: This config is independent from the main Navbar config
 
 ### `desktop-nav.tsx`
 
@@ -120,10 +120,10 @@ src/components/navbar/
 
 ## Dark Mode
 
-The navbar supports a `dark` prop for use on dark backgrounds (e.g., hero sections with background images):
+The navbar supports a `dark` prop for use on dark backgrounds:
 
 ```tsx
-<Navbar dark={true} />
+<Navbar3 dark={true} />
 ```
 
 When `dark={true}`:
@@ -138,7 +138,7 @@ When `dark={true}`:
 The navbar supports a `hero` prop for overlaying content:
 
 ```tsx
-<Navbar hero={true} />
+<Navbar3 hero={true} />
 ```
 
 When `hero={true}`:
@@ -200,7 +200,7 @@ Edit `homeLink` in `config.ts`
 
 ### Using dark mode
 
-Pass `dark={true}` to the Navbar component for dark backgrounds
+Pass `dark={true}` to the Navbar3 component for dark backgrounds
 
 ### Using hero mode
 
