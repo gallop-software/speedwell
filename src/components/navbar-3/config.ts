@@ -141,7 +141,7 @@ export const links: NavLink[] = [
     callToAction: true,
     dropdown: {
       position: 'right',
-      columns: 1,
+      columns: 2,
       items: [
         {
           name: 'Homepage Demo',
@@ -161,7 +161,7 @@ export const links: NavLink[] = [
           href: '/layout-2',
           icon: dockTopIcon,
         },
-        /*{
+        {
           name: 'Photographer Portfolio',
           description: 'Multi-column content distribution design',
           href: '/layout-3',
@@ -190,7 +190,7 @@ export const links: NavLink[] = [
           description: 'Vertical split content arrangement',
           href: '/layout-7',
           icon: viewSplitVerticalIcon,
-        },*/
+        },
       ],
     },
   },

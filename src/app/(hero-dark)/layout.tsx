@@ -7,7 +7,10 @@ export default function HeroDarkLayout({
 }>) {
   return (
     <>
-      <Navbar hero={true} dark={true} />
+      <Navbar
+        hero={true}
+        dark={true}
+      />
       {children}
       <Footer />
     </>
