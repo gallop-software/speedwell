@@ -1,0 +1,39 @@
+name: Build Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create zip with correct folder name
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          cd ..
+          cp -r $REPO_NAME $REPO_NAME-temp
+          rm -rf $REPO_NAME-temp/.git
+          rm -rf $REPO_NAME-temp/.github
+          mv $REPO_NAME-temp $REPO_NAME-folder
+          mkdir -p $REPO_NAME-folder/$REPO_NAME
+          cd $REPO_NAME-folder
+          shopt -s dotglob
+          mv * $REPO_NAME/ 2>/dev/null || true
+          zip -r ../$REPO_NAME.zip $REPO_NAME
+          cd ..
+          mv $REPO_NAME.zip $REPO_NAME/
+
+      - name: Update latest release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Release
+          files: ${{ github.event.repository.name }}.zip
+          make_latest: true
