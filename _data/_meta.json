@@ -891,6 +891,28 @@
       "file": "/images/layout-3/pexels-minoa-film-112544374-35241220.jpg"
     }
   },
+  "/images/layout-3/pexels-olly-774909.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-3/pexels-olly-774909-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-3/pexels-olly-774909-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-3/pexels-olly-774909-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-3/pexels-olly-774909.jpg"
+    }
+  },
   "/images/layout-3/pexels-pixabay-355465.jpg": {
     "small": {
       "width": 300,
@@ -911,6 +933,28 @@
       "width": 2000,
       "height": 1086,
       "file": "/images/layout-3/pexels-pixabay-355465.jpg"
+    }
+  },
+  "/images/layout-3/pexels-pixabay-462162.jpg": {
+    "small": {
+      "width": 300,
+      "height": 168,
+      "file": "/images/layout-3/pexels-pixabay-462162-300x168.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 393,
+      "file": "/images/layout-3/pexels-pixabay-462162-700x393.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 786,
+      "file": "/images/layout-3/pexels-pixabay-462162-1400x786.jpg"
+    },
+    "full": {
+      "width": 2000,
+      "height": 1123,
+      "file": "/images/layout-3/pexels-pixabay-462162.jpg"
     }
   },
   "/images/layout-3/pexels-sebastian-palomino-933481-1955134.jpg": {
