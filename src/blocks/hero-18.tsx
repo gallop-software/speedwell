@@ -64,6 +64,35 @@ export default function Hero18() {
           <Column className="relative">
             {/* Image grid with elegant overlapping layout */}
             <div className="relative h-[500px] lg:h-[650px]">
+              {/* Falling confetti */}
+              <div className="absolute -inset-x-20 inset-y-0 z-40 pointer-events-none overflow-hidden">
+                {/* Row 1 - spread across */}
+                <div className="absolute top-[2%] left-[5%] w-3 h-3 bg-pink-400 rounded-sm animate-fall-slow opacity-80 rotate-45"></div>
+                <div className="absolute top-[5%] left-[20%] w-2 h-4 bg-yellow-400 rounded-sm animate-fall-medium opacity-75 rotate-12"></div>
+                <div className="absolute top-[3%] left-[35%] w-4 h-2 bg-purple-400 rounded-sm animate-fall-fast opacity-85 -rotate-12"></div>
+                <div className="absolute top-[6%] left-[50%] w-3 h-3 bg-teal-400 rounded-sm animate-fall-slow opacity-70 rotate-45"></div>
+                <div className="absolute top-[4%] left-[65%] w-2 h-3 bg-orange-400 rounded-sm animate-fall-medium opacity-80 -rotate-45"></div>
+                <div className="absolute top-[2%] left-[80%] w-4 h-2 bg-rose-400 rounded-sm animate-fall-fast opacity-75 rotate-12"></div>
+                <div className="absolute top-[5%] left-[95%] w-2 h-4 bg-sky-400 rounded-sm animate-fall-slow opacity-80 -rotate-12"></div>
+                
+                {/* Row 2 - offset */}
+                <div className="absolute top-[10%] left-[10%] w-2 h-2 bg-lime-400 rounded-full animate-fall-medium opacity-70"></div>
+                <div className="absolute top-[12%] left-[28%] w-3 h-2 bg-fuchsia-400 rounded-sm animate-fall-fast opacity-75 rotate-45"></div>
+                <div className="absolute top-[8%] left-[42%] w-2 h-3 bg-amber-400 rounded-sm animate-fall-slow opacity-80 -rotate-12"></div>
+                <div className="absolute top-[11%] left-[58%] w-4 h-2 bg-pink-400 rounded-sm animate-fall-medium opacity-75 rotate-12"></div>
+                <div className="absolute top-[9%] left-[72%] w-3 h-3 bg-yellow-400 rounded-sm animate-fall-fast opacity-80 -rotate-45"></div>
+                <div className="absolute top-[13%] left-[88%] w-2 h-4 bg-purple-400 rounded-sm animate-fall-slow opacity-70 rotate-45"></div>
+                
+                {/* Row 3 - more spread */}
+                <div className="absolute top-[16%] left-[3%] w-2 h-3 bg-teal-400 rounded-sm animate-fall-fast opacity-75 -rotate-12"></div>
+                <div className="absolute top-[18%] left-[18%] w-3 h-2 bg-orange-400 rounded-sm animate-fall-slow opacity-80 rotate-45"></div>
+                <div className="absolute top-[15%] left-[33%] w-2 h-2 bg-rose-400 rounded-full animate-fall-medium opacity-70"></div>
+                <div className="absolute top-[19%] left-[48%] w-4 h-3 bg-sky-400 rounded-sm animate-fall-fast opacity-85 rotate-12"></div>
+                <div className="absolute top-[17%] left-[62%] w-2 h-4 bg-lime-400 rounded-sm animate-fall-slow opacity-75 -rotate-45"></div>
+                <div className="absolute top-[14%] left-[78%] w-3 h-2 bg-fuchsia-400 rounded-sm animate-fall-medium opacity-80 rotate-45"></div>
+                <div className="absolute top-[20%] left-[92%] w-2 h-2 bg-amber-400 rounded-full animate-fall-fast opacity-70"></div>
+              </div>
+
               {/* Main large image */}
               <div className="absolute top-0 right-0 w-[70%] h-[60%] z-10">
                 <Image
@@ -88,22 +117,6 @@ export default function Hero18() {
                   rounded="rounded-lg"
                   lazy={false}
                 />
-                {/* Decorative accent */}
-                <div className="absolute -top-3 -right-3 w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white text-3xl">✦</span>
-                </div>
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute top-1/3 left-1/4 z-30 bg-white px-6 py-4 rounded-full shadow-xl transform -rotate-6">
-                <div className="text-center">
-                  <div className="font-accent text-sm text-accent mb-1">
-                    Award Winning
-                  </div>
-                  <div className="text-xs text-body-dark/60">
-                    Event Planners
-                  </div>
-                </div>
               </div>
             </div>
           </Column>
