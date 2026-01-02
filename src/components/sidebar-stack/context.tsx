@@ -10,10 +10,8 @@ import React, {
 
 export interface SidebarItem {
   id: string
-  name: string
-  code?: string
-  filepath: string
-  isLoading?: boolean
+  title: string
+  componentId: string
 }
 
 interface SidebarStackContextType {
@@ -21,8 +19,6 @@ interface SidebarStackContextType {
   stack: SidebarItem[]
   /** Push a new sidebar onto the stack, returns id */
   push: (item: Omit<SidebarItem, 'id'>) => string
-  /** Update an existing sidebar by id */
-  update: (id: string, updates: Partial<Omit<SidebarItem, 'id'>>) => void
   /** Close a specific sidebar by id */
   close: (id: string) => void
   /** Close all sidebars */
@@ -48,15 +44,6 @@ export function SidebarStackProvider({ children }: { children: ReactNode }) {
     return id
   }, [])
 
-  const update = useCallback(
-    (id: string, updates: Partial<Omit<SidebarItem, 'id'>>) => {
-      setStack((prev) =>
-        prev.map((item) => (item.id === id ? { ...item, ...updates } : item))
-      )
-    },
-    []
-  )
-
   const close = useCallback((id: string) => {
     setStack((prev) => prev.filter((item) => item.id !== id))
   }, [])
@@ -69,7 +56,7 @@ export function SidebarStackProvider({ children }: { children: ReactNode }) {
 
   return (
     <SidebarStackContext.Provider
-      value={{ stack, push, update, close, closeAll, isOpen }}
+      value={{ stack, push, close, closeAll, isOpen }}
     >
       {children}
     </SidebarStackContext.Provider>

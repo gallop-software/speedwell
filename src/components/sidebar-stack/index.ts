@@ -4,7 +4,4 @@ export {
   type SidebarItem,
 } from './context'
 
-export {
-  SidebarStackRenderer,
-  type SidebarStackRendererProps,
-} from './renderer'
+export { SidebarStackRenderer } from './renderer'
