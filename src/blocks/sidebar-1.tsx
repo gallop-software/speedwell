@@ -34,6 +34,7 @@ function Demo1() {
       <Image
         src="/images/portfolio/pexels-pixabay-161758.jpg"
         alt="Modern interior"
+        size="medium"
         className="w-full"
       />
       <Heading as="h2">The Art of Interior Design</Heading>
@@ -97,6 +98,7 @@ function Demo2() {
       <Image
         src="/images/portfolio/pexels-burst-545012.jpg"
         alt="Modern living room"
+        size="medium"
         className="w-full"
       />
       <Heading as="h2">Modern Interior Style</Heading>
@@ -145,6 +147,7 @@ function Demo3() {
       <Image
         src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
         alt="Colorful interior"
+        size="medium"
         className="w-full"
       />
       <Heading as="h2">Color Theory in Design</Heading>
@@ -198,6 +201,7 @@ function Demo4() {
       <Image
         src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
         alt="Floor plan"
+        size="medium"
         className="w-full"
       />
       <Heading as="h2">Space Planning Fundamentals</Heading>
@@ -252,6 +256,7 @@ function Demo5() {
       <Image
         src="/images/portfolio/pexels-pixabay-276724.jpg"
         alt="Minimalist room"
+        size="medium"
         className="w-full"
       />
       <Heading as="h2">Minimalist Design Philosophy</Heading>
@@ -298,6 +303,7 @@ function Demo6() {
       <Image
         src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
         alt="Bohemian interior"
+        size="medium"
         className="w-full"
       />
       <Heading as="h2">Bohemian Style Guide</Heading>
@@ -367,7 +373,7 @@ function Sidebar1Content() {
 
   return (
     <>
-      <Section className="py-[300px]">
+      <Section className="py-[300px] lg:py-[600px]">
         <div className="flex justify-center">
           <Button onClick={handleOpenBlog}>Open Blog</Button>
         </div>
