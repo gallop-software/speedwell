@@ -367,7 +367,7 @@ function Sidebar1Content() {
 
   return (
     <>
-      <Section className="py-62">
+      <Section className="py-[300px]">
         <div className="flex justify-center">
           <Button onClick={handleOpenBlog}>Open Blog</Button>
         </div>
