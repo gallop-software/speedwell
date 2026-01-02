@@ -122,7 +122,9 @@ export interface SidebarStackRendererProps {
 }
 
 /** Renders sidebar stack with shared backdrop */
-export function SidebarStackRenderer({ renderContent }: SidebarStackRendererProps) {
+export function SidebarStackRenderer({
+  renderContent,
+}: SidebarStackRendererProps) {
   const { stack, close, isOpen } = useSidebarStack()
   const [closingIds, setClosingIds] = useState<Set<string>>(new Set())
   const [shouldRender, setShouldRender] = useState(false)
