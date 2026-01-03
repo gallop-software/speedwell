@@ -76,8 +76,8 @@ export const links: NavLink[] = [
           icon: viewDashboardIcon,
         },
         {
-          name: 'Navbar Style 2',
-          description: 'Right aligned navigation',
+          name: 'Alternate Navbar/Footer',
+          description: 'Right aligned navigation with 4 columns footer',
           href: '/layout-2',
           icon: dockTopIcon,
         },
