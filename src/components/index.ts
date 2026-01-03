@@ -35,6 +35,7 @@ export { Cover } from './cover'
 export { Blog } from './blog'
 export { Contact1 } from './contact-1'
 export { Footer } from './footer'
+export { Footer2 } from './footer-2'
 export { default as VimeoAutoPlayer } from './vimeo-auto-player'
 export { Accordion } from './accordion'
 export {

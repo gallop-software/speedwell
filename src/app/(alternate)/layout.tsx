@@ -1,4 +1,4 @@
-import { Footer, Navbar3 } from '@/components'
+import { Footer2, Navbar3 } from '@/components'
 
 export default function AlternateLayout({
   children,
@@ -9,7 +9,7 @@ export default function AlternateLayout({
     <>
       <Navbar3 />
       {children}
-      <Footer />
+      <Footer2 />
     </>
   )
 }
