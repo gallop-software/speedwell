@@ -42,10 +42,13 @@ export function Cover({
           {parallax ? (
             <div
               className={clsx(
-                'absolute inset-0 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat',
+                'absolute inset-0 w-full h-full bg-fixed bg-top bg-no-repeat',
                 imageClassName
               )}
-              style={{ backgroundImage: `url(${imageSrc})` }}
+              style={{
+                backgroundImage: `url(${imageSrc})`,
+                backgroundSize: '100vw auto',
+              }}
               role="img"
               aria-label={imageAlt || ''}
             />
