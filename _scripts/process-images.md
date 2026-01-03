@@ -333,4 +333,4 @@ Process specific folders:
 
 ---
 
-[← Back to README](../README.md) | [Scripts Reference](./scripts.md)
+[← Back to README](../README.md)
