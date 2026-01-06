@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import classNames from 'classnames'
 import { DateTime } from 'luxon'
 
 function getDayId(dayName: string): number | undefined {
@@ -93,10 +92,7 @@ export default function CurrentTime({
 
   return (
     <div
-      className={classNames(
-        isWithinLimits ? openColor : closedColor,
-        'font-bold flex justify-between w-full'
-      )}
+      className={`${isWithinLimits ? openColor : closedColor} font-bold flex justify-between w-full`}
     >
       <span>{isWithinLimits ? 'Open' : 'Closed'}</span>
       {formattedTime}

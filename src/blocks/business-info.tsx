@@ -1,20 +1,26 @@
 'use client'
 
 import Link from 'next/link'
-import { Heading, Paragraph, Icon } from '@/components'
+import {
+  Heading,
+  Paragraph,
+  Icon,
+  CurrentDate,
+  CurrentTime,
+} from '@/components'
 import phoneIcon from '@iconify/icons-heroicons/phone-20-solid'
 import envelopeIcon from '@iconify/icons-heroicons/envelope-20-solid'
 import buildingOfficeIcon from '@iconify/icons-heroicons/building-office-20-solid'
 import arrowUpRightIcon from '@iconify/icons-heroicons/arrow-up-right-20-solid'
 
 const hours = [
-  { day: 'Monday', time: '9:00 AM - 6:00 PM' },
-  { day: 'Tuesday', time: '9:00 AM - 6:00 PM' },
-  { day: 'Wednesday', time: '9:00 AM - 6:00 PM' },
-  { day: 'Thursday', time: '9:00 AM - 6:00 PM' },
-  { day: 'Friday', time: '9:00 AM - 5:00 PM' },
-  { day: 'Saturday', time: '10:00 AM - 2:00 PM' },
-  { day: 'Sunday', time: 'Closed' },
+  { day: 'Monday', time: '9:00 AM - 6:00 PM', timeRange: '9am-6pm' },
+  { day: 'Tuesday', time: '9:00 AM - 6:00 PM', timeRange: '9am-6pm' },
+  { day: 'Wednesday', time: '9:00 AM - 6:00 PM', timeRange: '9am-6pm' },
+  { day: 'Thursday', time: '9:00 AM - 6:00 PM', timeRange: '9am-6pm' },
+  { day: 'Friday', time: '9:00 AM - 5:00 PM', timeRange: '9am-5pm' },
+  { day: 'Saturday', time: '10:00 AM - 2:00 PM', timeRange: '10am-2pm' },
+  { day: 'Sunday', time: 'Closed', timeRange: '' },
 ]
 
 const contactItems = [
@@ -55,10 +61,21 @@ export default function BusinessInfo() {
             {hours.map((item, index) => (
               <div
                 key={index}
-                className="w-full flex justify-between py-4 text-base text-accent3-contrast"
+                className="w-full flex flex-wrap justify-between py-4 text-base text-accent3-contrast"
               >
-                <span>{item.day}</span>
+                <span>
+                  {item.day}{' '}
+                  <span className="text-accent3-contrast/50">
+                    <CurrentDate dayString={item.day} />
+                  </span>
+                </span>
                 <span>{item.time}</span>
+                <CurrentTime
+                  dayOfWeek={item.day}
+                  timeRange={item.timeRange}
+                  openColor="text-green-600"
+                  closedColor="text-red-600"
+                />
               </div>
             ))}
           </div>
