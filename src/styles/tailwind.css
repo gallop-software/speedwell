@@ -102,6 +102,21 @@
     display: none; /* Chrome, Safari and Opera */
   }
 
+  /* Text stroke/outline effect */
+  .text-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+  }
+  .text-stroke-body {
+    -webkit-text-stroke-color: var(--color-body);
+  }
+  .text-stroke-contrast {
+    -webkit-text-stroke-color: var(--color-contrast);
+  }
+  .text-stroke-accent {
+    -webkit-text-stroke-color: var(--color-accent);
+  }
+
   /* Padding top matching navbar height at different breakpoints */
   /* Navbar: pt-12 sm:pt-16 + logo (~60px mobile, ~80px desktop) + pb-10 */
   .pt-navbar {
@@ -180,5 +195,17 @@
   .animate-fall-fast {
     animation: fall-fast 5s ease-in-out infinite;
     animation-delay: 2s;
+  }
+  .animate-spin-slow-reverse {
+    animation: spin-slow-reverse 10s linear infinite;
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
