@@ -1,84 +1,80 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Hero1 from '@/blocks/hero-1'
-import Section1 from '@/blocks/section-1'
-import Section2 from '@/blocks/section-2'
-import Section3 from '@/blocks/section-3'
-import Blog1 from '@/blocks/blog-1'
+import PodcastHero1 from '@/blocks/podcast-hero-1'
+import PodcastAbout1 from '@/blocks/podcast-about-1'
+import PodcastEpisodes1 from '@/blocks/podcast-episodes-1'
+import PodcastSubscribe1 from '@/blocks/podcast-subscribe-1'
+import PodcastTestimonials1 from '@/blocks/podcast-testimonials-1'
+import PodcastCta1 from '@/blocks/podcast-cta-1'
 
 function Content() {
   return (
     <>
-      <Hero1 />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Blog1 />
+      <PodcastHero1 />
+      <PodcastAbout1 />
+      <PodcastEpisodes1 />
+      <PodcastSubscribe1 />
+      <PodcastTestimonials1 />
+      <PodcastCta1 />
     </>
   )
 }
 
 const metadata: PageMetadata = {
-  title: 'Layout 7 | Vertical Split Content Arrangement',
+  title: 'The Mindshift Podcast | Conversations That Change Perspectives',
   description:
-    'Discover our vertical split content arrangement. Ideal for balancing text and visuals in an elegant, side-by-side format.',
+    'Join host Sarah Chen for intimate conversations with thought leaders, innovators, and everyday people making extraordinary impacts. New episodes every Wednesday.',
   keywords: [
-    'layout design',
-    'vertical split',
-    'content arrangement',
-    'side-by-side layout',
-    'balanced design',
+    'mindshift podcast',
+    'personal growth',
+    'self improvement',
+    'inspiring conversations',
+    'Sarah Chen',
+    'thought leadership',
   ],
-  focusKeyword: 'layout design',
-  readingTimeMinutes: 12,
+  focusKeyword: 'mindshift podcast',
+  readingTimeMinutes: 10,
   publishDate: '2019-10-23T06:12:20Z',
-  modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  modifiedDate: '2026-01-06T01:00:00Z',
+  featuredImage: '/images/layout-7/hero-bg.jpg',
   alternates: {
     canonical: 'https://speedwell.gallop.software/layout-7',
   },
-  authors: [{ name: 'Speedwell Design Studio' }],
+  authors: [{ name: 'The Mindshift Podcast' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://speedwell.gallop.software/layout-7',
-    siteName: 'Speedwell',
-    title: 'Layout 7 | Vertical Split Content Arrangement',
+    siteName: 'The Mindshift',
+    title: 'The Mindshift Podcast | Conversations That Change Perspectives',
     description:
-      'Discover our vertical split content arrangement. Ideal for balancing text and visuals in an elegant, side-by-side format.',
+      'Join host Sarah Chen for intimate conversations with thought leaders, innovators, and everyday people making extraordinary impacts. New episodes every Wednesday.',
     image: {
-      url: '/images/banner.jpg',
-      alt: 'Vertical split layout design',
+      url: '/images/layout-7/hero-bg.jpg',
+      alt: 'The Mindshift Podcast with Sarah Chen',
     },
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@speedwelldesign',
-    creator: '@speedwelldesign',
-    title: 'Layout 7 | Vertical Split Content Arrangement',
+    site: '@mindshiftpod',
+    creator: '@sarahchen',
+    title: 'The Mindshift Podcast | Conversations That Change Perspectives',
     description:
-      'Discover our vertical split content arrangement. Ideal for balancing text and visuals in an elegant, side-by-side format.',
-    image: '/images/banner.jpg',
+      'Join host Sarah Chen for intimate conversations with thought leaders, innovators, and everyday people making extraordinary impacts. New episodes every Wednesday.',
+    image: '/images/layout-7/hero-bg.jpg',
   },
   structuredData: [
     {
       '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://speedwell.gallop.software',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Layout 7',
-          item: 'https://speedwell.gallop.software/layout-7',
-        },
-      ],
+      '@type': 'PodcastSeries',
+      name: 'The Mindshift Podcast',
+      description: 'Conversations that challenge perspectives and inspire personal growth',
+      url: 'https://speedwell.gallop.software/layout-7',
+      author: {
+        '@type': 'Person',
+        name: 'Sarah Chen',
+      },
     },
   ],
 }
