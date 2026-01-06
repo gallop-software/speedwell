@@ -96,7 +96,10 @@ export default function Hero16() {
             </div>
             <div className="z-10 swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 flex justify-center w-full [&>.swiper-pagination-bullet]:w-3 [&>.swiper-pagination-bullet]:h-3 [&>.swiper-pagination-bullet]:bg-body/50 [&>.swiper-pagination-bullet]:rounded-full [&>.swiper-pagination-bullet]:transition [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet]:mx-1 [&>.swiper-pagination-bullet]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-body [&>.swiper-pagination-bullet-active]:scale-110"></div>
           </div>
-          <SwiperSliderInit swiperId={swiperId} />
+          <SwiperSliderInit
+            swiperId={swiperId}
+            autoHeight={false}
+          />
         </div>
 
         {/* Right side - Video popup with circle animation */}

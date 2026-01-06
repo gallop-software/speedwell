@@ -19,12 +19,14 @@ interface SwiperSliderInitProps {
   swiperId: string
   layout?: 'slider' | 'carousel'
   columns?: 2 | 3
+  autoHeight?: boolean
 }
 
 const SwiperSliderInit = ({
   swiperId,
   layout = 'slider',
   columns,
+  autoHeight = true,
 }: SwiperSliderInitProps) => {
   const initializedRef = useRef(false)
   const swiperInstanceRef = useRef<Swiper | null>(null)
@@ -58,7 +60,7 @@ const SwiperSliderInit = ({
     const config: any = {
       modules: [Pagination, Autoplay, EffectFade, Navigation, Keyboard],
       spaceBetween: 30,
-      autoHeight: true,
+      autoHeight,
       observer: true,
       observeParents: true,
       keyboard: {
