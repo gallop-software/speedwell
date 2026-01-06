@@ -1397,6 +1397,160 @@
       "file": "/images/layout-5/pexels-thatguycraig000-2306281.jpg"
     }
   },
+  "/images/layout-6/pexels-daka-12360528.jpg": {
+    "small": {
+      "width": 214,
+      "height": 300,
+      "file": "/images/layout-6/pexels-daka-12360528-214x300.jpg"
+    },
+    "medium": {
+      "width": 500,
+      "height": 700,
+      "file": "/images/layout-6/pexels-daka-12360528-500x700.jpg"
+    },
+    "large": {
+      "width": 1000,
+      "height": 1400,
+      "file": "/images/layout-6/pexels-daka-12360528-1000x1400.jpg"
+    },
+    "full": {
+      "width": 1571,
+      "height": 2199,
+      "file": "/images/layout-6/pexels-daka-12360528.jpg"
+    }
+  },
+  "/images/layout-6/pexels-ertabbt-150087708-14210586.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-6/pexels-ertabbt-150087708-14210586-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-6/pexels-ertabbt-150087708-14210586-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-6/pexels-ertabbt-150087708-14210586-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-6/pexels-ertabbt-150087708-14210586.jpg"
+    }
+  },
+  "/images/layout-6/pexels-larissafarber-34190188.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-6/pexels-larissafarber-34190188-200x300.jpg"
+    },
+    "medium": {
+      "width": 466,
+      "height": 700,
+      "file": "/images/layout-6/pexels-larissafarber-34190188-466x700.jpg"
+    },
+    "large": {
+      "width": 932,
+      "height": 1400,
+      "file": "/images/layout-6/pexels-larissafarber-34190188-932x1400.jpg"
+    },
+    "full": {
+      "width": 1464,
+      "height": 2200,
+      "file": "/images/layout-6/pexels-larissafarber-34190188.jpg"
+    }
+  },
+  "/images/layout-6/pexels-nano-erdozain-120534369-28180071.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-6/pexels-nano-erdozain-120534369-28180071-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-6/pexels-nano-erdozain-120534369-28180071-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-6/pexels-nano-erdozain-120534369-28180071-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-6/pexels-nano-erdozain-120534369-28180071.jpg"
+    }
+  },
+  "/images/layout-6/pexels-roman-odintsov-5837002.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-6/pexels-roman-odintsov-5837002-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-6/pexels-roman-odintsov-5837002-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-6/pexels-roman-odintsov-5837002-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-6/pexels-roman-odintsov-5837002.jpg"
+    }
+  },
+  "/images/layout-6/pexels-yankrukov-5480235.jpg": {
+    "small": {
+      "width": 200,
+      "height": 300,
+      "file": "/images/layout-6/pexels-yankrukov-5480235-200x300.jpg"
+    },
+    "medium": {
+      "width": 467,
+      "height": 700,
+      "file": "/images/layout-6/pexels-yankrukov-5480235-467x700.jpg"
+    },
+    "large": {
+      "width": 933,
+      "height": 1400,
+      "file": "/images/layout-6/pexels-yankrukov-5480235-933x1400.jpg"
+    },
+    "full": {
+      "width": 1467,
+      "height": 2200,
+      "file": "/images/layout-6/pexels-yankrukov-5480235.jpg"
+    }
+  },
+  "/images/layout-7/pexels-karola-g-6919956.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-7/pexels-karola-g-6919956-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-7/pexels-karola-g-6919956-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-7/pexels-karola-g-6919956-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-7/pexels-karola-g-6919956.jpg"
+    }
+  },
   "/images/leaf1.jpg": {
     "small": {
       "width": 169,
