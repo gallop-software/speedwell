@@ -1,0 +1,128 @@
+# Speedwell Project Conventions
+
+## Tech Stack
+
+- Next.js 16 with App Router
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- clsx for conditional class names
+- Swiper.js for sliders
+- Headless UI for modals/dialogs
+- Iconify for icons
+- Luxon for date/time handling
+
+## Block Components
+
+### File Structure
+
+- All block components go in `src/blocks/`
+- Name files as `{block-name}.tsx` (lowercase, hyphenated)
+- Hero blocks use sequential numbering: `hero-1.tsx`, `hero-2.tsx`, etc.
+- Check existing hero files to find the next available number
+
+### Naming Conventions
+
+- Export function name should be PascalCase matching the file name
+- `hero-16.tsx` → `export default function Hero16()`
+- `business-info.tsx` → `export default function BusinessInfo()`
+
+### Component Guidelines
+
+- Use `'use client'` directive only when needed (hooks, interactivity, event handlers)
+- Import shared components from `@/components`
+- Do not copy imports/components from other projects - adapt to this project's conventions
+
+## Styling
+
+### Tailwind CSS
+
+- Use Tailwind classes exclusively, not inline styles (inline styles break hover effects)
+- Use `clsx` for conditional classes:
+
+  ```tsx
+  import clsx from 'clsx'
+
+  className={clsx(
+    'base-classes',
+    index === 0 && 'bg-body/0',
+    index === 1 && 'bg-body/2',
+    index === 2 && 'bg-body/4'
+  )}
+  ```
+
+### Color Tokens
+
+- Text: `text-body`, `text-contrast`, `text-accent`, `text-accent-contrast`
+- Background: `bg-body`, `bg-contrast`, `bg-accent`, `bg-accent2`, `bg-accent3`, etc.
+- Accent colors have contrast variants: `bg-accent` pairs with `text-accent-contrast`
+
+### Responsive Design
+
+- Mobile-first approach
+- Breakpoints: `sm:`, `md:`, `lg:`, `xl:`
+- Common pattern: `flex-col xl:flex-row`
+
+## Imports
+
+### Path Aliases
+
+- Use `@/` path alias for src directory
+- Components: `import { Heading, Paragraph, Icon } from '@/components'`
+- Hooks: `import useCircleAnimation from '@/hooks/use-circle-animation'`
+- Blocks: `import BusinessInfo from '@/blocks/business-info'`
+
+### Icons
+
+- Use Iconify packages: `@iconify/icons-heroicons/`, `@iconify/icons-carbon/`, etc.
+- Import specific icons: `import playIcon from '@iconify/icons-heroicons/play-solid'`
+- Render with Icon component: `<Icon icon={playIcon} className="w-6 h-6" />`
+
+## Available Components
+
+### Typography
+
+- `Heading` - with props: `as`, `color`, `className`, `textAlign`, `margin`
+- `Paragraph` - with props: `variant` ("large"), `color`, `className`, `textAlign`, `margin`
+- `Accent` - with props: `size`, `color`, `margin`, `textAlign`
+
+### Interactive
+
+- `Button` - with props: `href`, `variant` ("primary", "outline")
+- `Buttons` - wrapper for button groups
+- `VideoPopup` - modal video player with Vimeo support
+- `Icon` - Iconify icon wrapper
+
+### Layout
+
+- `Cover` - background image/video sections
+- `Container` - max-width wrapper
+- `Section` - semantic section wrapper
+
+## Hooks
+
+### Location
+
+- All hooks go in `src/hooks/`
+- Name files as `use-{hook-name}.tsx`
+- Include a markdown documentation file: `use-{hook-name}.md`
+
+### Available Hooks
+
+- `useCircleAnimation` - animates rotating text circles on scroll
+- `SwiperSliderInit` - initializes Swiper sliders with props: `swiperId`, `autoHeight`
+
+## Creating New Blocks
+
+1. Check `src/blocks/` for the highest numbered file of that type
+2. Create new file with incremented number
+3. Use PascalCase function name matching file name
+4. Import components from `@/components`
+5. Hardcode all content
+6. Use Tailwind for all styling
+
+## Do NOT
+
+- Use `classnames` package - use `clsx` instead (it's installed)
+- Import components/utilities from other projects without adapting them
+- Create documentation files unless explicitly requested
