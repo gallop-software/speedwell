@@ -1,15 +1,7 @@
 'use client'
 
 import { useId } from 'react'
-import {
-  Cover,
-  Container,
-  Heading,
-  Paragraph,
-  Accent,
-  VideoPopup,
-  Icon,
-} from '@/components'
+import { Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
 import useCircleAnimation from '@/hooks/use-circle-animation'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import playIcon from '@iconify/icons-heroicons/play-solid'
@@ -48,21 +40,23 @@ export default function Hero16() {
   useCircleAnimation(circleTextId)
 
   return (
-    <Cover
-      imageSrc="/images/portfolio/pexels-heyho-6794934.jpg"
-      imageAlt="Interior design showcase"
-      overlayColor="bg-contrast/60"
-      height="lg:min-h-screen"
-      className="flex items-center justify-center"
+    <div
+      className="relative px-6 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/portfolio/pexels-heyho-6794934.jpg')",
+      }}
     >
-      <div className="mx-auto max-w-[1600px] relative flex flex-col xl:flex-row py-16 gap-12 xl:gap-0 pt-40 mb-40">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-contrast/60" />
+
+      <div className="mx-auto max-w-[1600px] relative flex flex-col xl:flex-row gap-12 xl:gap-0 pt-40 pb-40 mb-40">
         {/* Left side - Swiper slider */}
         <div className="w-full xl:w-7/12 flex justify-center">
           <div
             id={swiperId}
             className="swiper max-w-[950px] xl:max-w-none"
           >
-            <div className="swiper-wrapper items-start flex mb-20">
+            <div className="swiper-wrapper items-center lg:items-start flex mb-20">
               {slides.map((slide, index) => (
                 <div
                   key={index}
@@ -71,15 +65,17 @@ export default function Hero16() {
                   <div className="flex flex-col gap-8">
                     <Accent
                       size="medium"
-                      margin="ml-2"
+                      margin="xl:ml-2"
                       color="text-body"
+                      textAlign="text-center xl:text-left"
                     >
                       {slide.accent}
                     </Accent>
                     <Heading
                       as="h1"
                       color="text-body"
-                      className="mb-0!"
+                      className="mb-0! max-w-3xl"
+                      textAlign="text-center xl:text-left mx-auto xl:mx-0"
                     >
                       {slide.heading}
                     </Heading>
@@ -87,6 +83,7 @@ export default function Hero16() {
                       variant="large"
                       color="text-body"
                       className="mb-0! max-w-xl"
+                      textAlign="text-center xl:text-left mx-auto xl:mx-0"
                     >
                       {slide.paragraph}
                     </Paragraph>
@@ -94,7 +91,7 @@ export default function Hero16() {
                 </div>
               ))}
             </div>
-            <div className="z-10 swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 flex justify-center w-full [&>.swiper-pagination-bullet]:w-3 [&>.swiper-pagination-bullet]:h-3 [&>.swiper-pagination-bullet]:bg-body/50 [&>.swiper-pagination-bullet]:rounded-full [&>.swiper-pagination-bullet]:transition [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet]:mx-1 [&>.swiper-pagination-bullet]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-body [&>.swiper-pagination-bullet-active]:scale-110"></div>
+            <div className="z-10 swiper-pagination absolute bottom-4 left-0 flex justify-center xl:justify-start w-full [&>.swiper-pagination-bullet]:w-3 [&>.swiper-pagination-bullet]:h-3 [&>.swiper-pagination-bullet]:bg-body/50 [&>.swiper-pagination-bullet]:rounded-full [&>.swiper-pagination-bullet]:transition [&>.swiper-pagination-bullet]:duration-300 [&>.swiper-pagination-bullet]:mx-1 [&>.swiper-pagination-bullet]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-body [&>.swiper-pagination-bullet-active]:scale-110"></div>
           </div>
           <SwiperSliderInit
             swiperId={swiperId}
@@ -150,6 +147,6 @@ export default function Hero16() {
           </VideoPopup>
         </div>
       </div>
-    </Cover>
+    </div>
   )
 }
