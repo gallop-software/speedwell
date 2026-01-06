@@ -9,22 +9,22 @@ import BusinessInfo from './business-info'
 
 const slides = [
   {
-    accent: 'award winning',
-    heading: 'Transforming Spaces Into Dreams',
+    accent: 'professional photography',
+    heading: 'Capturing Moments That Last Forever',
     paragraph:
-      'We craft interiors that blend timeless elegance with modern functionality, creating spaces that inspire and delight.',
+      'I specialize in creating stunning visual stories through portrait, wedding, and lifestyle photography.',
   },
   {
-    accent: 'luxury design',
-    heading: 'Where Vision Meets Reality',
+    accent: 'creative vision',
+    heading: 'Where Light Meets Artistry',
     paragraph:
-      'Our expert team brings your design aspirations to life with meticulous attention to detail and unparalleled craftsmanship.',
+      'I bring your vision to life with meticulous attention to detail and artistic excellence.',
   },
   {
-    accent: 'bespoke solutions',
-    heading: 'Curated Interiors For Living',
+    accent: 'timeless imagery',
+    heading: 'Your Story Through My Lens',
     paragraph:
-      'Every project is a unique journey tailored to your lifestyle, reflecting your personality in every carefully chosen element.',
+      'Every session is a unique journey tailored to capture your authentic self in beautifully crafted photographs.',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function Hero16() {
     <div
       className="relative px-6 bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/portfolio/pexels-heyho-6794934.jpg')",
+        backgroundImage: "url('/images/layout-3/pexels-plann-2999237-4549411.jpg')",
       }}
     >
       {/* Overlay */}
@@ -107,8 +107,8 @@ export default function Hero16() {
             embed={{
               wpBlockEmbedWrapper: {
                 iframe: {
-                  _src: 'https://player.vimeo.com/video/1134529903',
-                  _title: 'Interior Design Showcase',
+                  _src: 'https://player.vimeo.com/video/1152014031?h=d4f2d5db16',
+                  _title: 'Photography Showcase',
                 },
               },
             }}
