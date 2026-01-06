@@ -1,0 +1,105 @@
+'use client'
+
+import Link from 'next/link'
+import { Heading, Paragraph, Icon } from '@/components'
+import phoneIcon from '@iconify/icons-heroicons/phone-20-solid'
+import envelopeIcon from '@iconify/icons-heroicons/envelope-20-solid'
+import buildingOfficeIcon from '@iconify/icons-heroicons/building-office-20-solid'
+import arrowUpRightIcon from '@iconify/icons-heroicons/arrow-up-right-20-solid'
+
+const hours = [
+  { day: 'Monday', time: '9:00 AM - 6:00 PM' },
+  { day: 'Tuesday', time: '9:00 AM - 6:00 PM' },
+  { day: 'Wednesday', time: '9:00 AM - 6:00 PM' },
+  { day: 'Thursday', time: '9:00 AM - 6:00 PM' },
+  { day: 'Friday', time: '9:00 AM - 5:00 PM' },
+  { day: 'Saturday', time: '10:00 AM - 2:00 PM' },
+  { day: 'Sunday', time: 'Closed' },
+]
+
+const contactItems = [
+  {
+    icon: phoneIcon,
+    title: 'Call Us',
+    description: '(555) 123-4567',
+    href: 'tel:+15551234567',
+  },
+  {
+    icon: envelopeIcon,
+    title: 'Email Us',
+    description: 'hello@speedwell.com',
+    href: 'mailto:hello@speedwell.com',
+  },
+  {
+    icon: buildingOfficeIcon,
+    title: 'Visit Us',
+    description: '123 Design Street, Suite 100',
+    href: '/contact',
+  },
+]
+
+export default function BusinessInfo() {
+  return (
+    <div className="relative bg-contrast z-1 px-6">
+      <div className="mx-auto max-w-[1600px] relative flex flex-col xl:flex-row gap-6 xl:gap-0">
+        {/* Hours Section */}
+        <div className="pt-14 pb-10 px-8 w-full xl:w-4/12 -mt-20 xl:-mb-20 relative rounded-md xl:rounded-b-md xl:rounded-t-md overflow-hidden shadow-lg bg-accent3">
+          <Heading
+            as="h3"
+            color="text-accent3-contrast"
+            className="mb-7 text-center"
+          >
+            Business Hours
+          </Heading>
+          <div className="divide-y divide-accent3-contrast/10">
+            {hours.map((item, index) => (
+              <div
+                key={index}
+                className="w-full flex justify-between py-4 text-base text-accent3-contrast"
+              >
+                <span>{item.day}</span>
+                <span>{item.time}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Cards */}
+        <div className="w-full xl:w-8/12 flex flex-col xl:flex-row gap-4 xl:gap-0 mb-6 xl:mb-0">
+          {contactItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/10 transition-colors"
+              style={{ backgroundColor: `rgba(255,255,255,${index * 0.02})` }}
+            >
+              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-accent-contrast">
+                <Icon
+                  icon={item.icon}
+                  className="w-10 h-10 text-accent"
+                />
+              </div>
+              <Heading
+                as="h3"
+                color="text-body"
+                className="text-2xl flex items-center gap-1"
+              >
+                {item.title}
+                <Icon
+                  icon={arrowUpRightIcon}
+                  className="w-6 h-6"
+                />
+              </Heading>
+              <Paragraph
+                color="text-body/60"
+                className="text-lg"
+              >
+                {item.description}
+              </Paragraph>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
