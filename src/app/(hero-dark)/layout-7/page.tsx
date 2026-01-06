@@ -1,7 +1,7 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import PodcastHero1 from '@/blocks/podcast-hero-1'
+import Hero20 from '@/blocks/hero-20'
 import PodcastAbout1 from '@/blocks/podcast-about-1'
 import PodcastEpisodes1 from '@/blocks/podcast-episodes-1'
 import PodcastSubscribe1 from '@/blocks/podcast-subscribe-1'
@@ -11,7 +11,7 @@ import PodcastCta1 from '@/blocks/podcast-cta-1'
 function Content() {
   return (
     <>
-      <PodcastHero1 />
+      <Hero20 />
       <PodcastAbout1 />
       <PodcastEpisodes1 />
       <PodcastSubscribe1 />
@@ -69,7 +69,8 @@ const metadata: PageMetadata = {
       '@context': 'https://schema.org',
       '@type': 'PodcastSeries',
       name: 'The Mindshift Podcast',
-      description: 'Conversations that challenge perspectives and inspire personal growth',
+      description:
+        'Conversations that challenge perspectives and inspire personal growth',
       url: 'https://speedwell.gallop.software/layout-7',
       author: {
         '@type': 'Person',

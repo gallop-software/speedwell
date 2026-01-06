@@ -1,6 +1,6 @@
 import { Heading, Button, Buttons } from '@/components'
 
-export default function PodcastHero1() {
+export default function Hero20() {
   return (
     <div className="relative min-h-screen bg-contrast overflow-hidden">
       {/* Background gradient overlay */}
