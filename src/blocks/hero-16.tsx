@@ -140,7 +140,7 @@ export default function Hero16() {
               <div className="absolute w-20 h-20 rounded-full bg-body flex items-center justify-center">
                 <Icon
                   icon={playIcon}
-                  className="shrink-0 h-auto w-10 text-contrast -mr-1"
+                  className="shrink-0 h-auto w-10 text-accent -mr-1"
                 />
               </div>
             </div>
