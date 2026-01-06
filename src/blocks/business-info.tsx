@@ -82,13 +82,18 @@ export default function BusinessInfo() {
         </div>
 
         {/* Contact Cards */}
-        <div className="w-full xl:w-8/12 flex flex-col xl:flex-row gap-4 xl:gap-0 mb-6 xl:mb-0">
+        <div className="w-full xl:w-8/12 flex flex-col xl:flex-row gap-6 xl:gap-0 mb-6 xl:mb-0">
           {contactItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/10 transition-colors"
-              style={{ backgroundColor: `rgba(255,255,255,${index * 0.02})` }}
+              className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${
+                index === 0
+                  ? 'bg-body/3'
+                  : index === 1
+                    ? 'bg-body/6'
+                    : 'bg-body/9'
+              }`}
             >
               <div className="w-20 h-20 flex items-center justify-center rounded-full bg-accent-contrast">
                 <Icon
@@ -110,6 +115,7 @@ export default function BusinessInfo() {
               <Paragraph
                 color="text-body/60"
                 className="text-lg"
+                margin="m-0"
               >
                 {item.description}
               </Paragraph>
