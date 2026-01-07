@@ -957,6 +957,28 @@
       "file": "/images/layout-3/pexels-pixabay-462162.jpg"
     }
   },
+  "/images/layout-3/pexels-plann-2999237-4549411.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-3/pexels-plann-2999237-4549411-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-3/pexels-plann-2999237-4549411-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-3/pexels-plann-2999237-4549411-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-3/pexels-plann-2999237-4549411.jpg"
+    }
+  },
   "/images/layout-3/pexels-sebastian-palomino-933481-1955134.jpg": {
     "small": {
       "width": 200,
