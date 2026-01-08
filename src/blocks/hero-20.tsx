@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Paragraph, Button, Buttons, CountUp } from '@/components'
+import { Heading, Paragraph, Accent, Button, Buttons, CountUp } from '@/components'
 
 export default function Hero20() {
   return (
@@ -23,13 +23,10 @@ export default function Hero20() {
       {/* Content */}
       <div className="relative z-20 min-h-screen flex flex-col justify-center items-center text-center px-6 pt-navbar">
         <div className="max-w-4xl mx-auto">
-          {/* Podcast badge */}
-          <div className="inline-flex items-center gap-2 bg-accent3/20 border border-accent3/30 rounded-full px-6 py-2 mb-8">
-            <span className="w-2 h-2 bg-accent3 rounded-full animate-pulse"></span>
-            <span className="text-accent3 text-sm tracking-[0.2em] uppercase font-medium">
-              New Episode Weekly
-            </span>
-          </div>
+          {/* Accent text */}
+          <Accent size="medium" color="text-white" margin="mb-4">
+            new episode weekly
+          </Accent>
 
           {/* Main heading */}
           <Heading
