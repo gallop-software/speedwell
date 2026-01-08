@@ -76,6 +76,7 @@
     "luxon": "^3.7.2",
     "next": "^16.0.7",
     "react": "^19",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.2.1",
     "react-highlight-words": "^0.21.0",
     "react-intersection-observer": "^10.0.0",
