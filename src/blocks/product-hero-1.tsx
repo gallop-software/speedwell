@@ -52,22 +52,18 @@ export default function ProductHero1() {
             <Button
               href="#discover"
               variant="primary"
+              dark
             >
               Discover the Craft
             </Button>
             <Button
               href="#purchase"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10"
+              dark
             >
               Shop Now
             </Button>
           </Buttons>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-          <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
         </div>
       </div>
     </div>
