@@ -1,7 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { clsx } from 'clsx'
 import {
   Heading,
   Paragraph,
@@ -10,50 +6,18 @@ import {
   Buttons,
   CountUp,
   Label,
-  Image,
+  VideoBackground,
 } from '@/components'
 
 export default function Hero20() {
-  const [isMounted, setIsMounted] = useState(false)
-  const [videoLoaded, setVideoLoaded] = useState(false)
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
   return (
     <div className="relative bg-contrast overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black/60 to-black/80 z-10"></div>
-
-      {/* Background poster image - stays visible underneath */}
-      <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="/images/layout-7/video-image.png"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Background video - fades in on top of poster */}
-      <div
-        className={clsx(
-          'absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-1000',
-          videoLoaded ? 'opacity-100' : 'opacity-0'
-        )}
-      >
-        {isMounted && (
-          <iframe
-            src="https://player.vimeo.com/video/1151997268?h=ec0ec60a5d&autoplay=1&loop=1&muted=1&background=1&quality=1080p"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
-            style={{ aspectRatio: '16/9' }}
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            title="Podcast Background"
-            onLoad={() => setVideoLoaded(true)}
-          ></iframe>
-        )}
-      </div>
+      <VideoBackground
+        videoId="1151997268"
+        videoHash="ec0ec60a5d"
+        posterImage="/images/layout-7/video-image.png"
+        gradientOverlay="bg-gradient-to-br from-purple-900/40 via-black/60 to-black/80"
+      />
 
       {/* Content */}
       <div className="relative z-20 flex flex-col justify-center items-center text-center px-6 py-24 md:py-40 pt-navbar">
