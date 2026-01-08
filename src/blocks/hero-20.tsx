@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Paragraph, Accent, Button, Buttons, CountUp } from '@/components'
+import { Heading, Paragraph, Accent, Button, Buttons, CountUp, Label } from '@/components'
 
 export default function Hero20() {
   return (
@@ -39,30 +39,37 @@ export default function Hero20() {
           </Heading>
 
           {/* Tagline */}
-          <Paragraph className="text-white/80 text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+          <Paragraph
+            color="text-white/80"
+            fontSize="text-xl md:text-2xl"
+            fontWeight="font-light"
+            lineHeight="leading-relaxed"
+            margin="mb-8"
+            className="max-w-2xl mx-auto"
+          >
             Conversations that challenge perspectives and inspire personal growth
           </Paragraph>
 
           {/* Stats */}
-          <div className="flex items-center justify-center gap-8 mb-12">
+          <div className="flex items-stretch justify-center gap-8 mb-12">
             <div className="text-center">
               <Heading as="h3" color="text-white" margin="mb-1" className="text-2xl">
                 <CountUp end={150} suffix="+" delay={0.3} duration={3} />
               </Heading>
-              <Paragraph className="text-white/60 text-xs tracking-wider uppercase">
+              <Label color="text-white/60">
                 Episodes
-              </Paragraph>
+              </Label>
             </div>
-            <div className="w-px h-12 bg-white/20"></div>
+            <div className="w-px bg-white/20"></div>
             <div className="text-center">
               <Heading as="h3" color="text-white" margin="mb-1" className="text-2xl">
                 <CountUp end={2} decimals={1} suffix="M+" delay={0.5} duration={3} />
               </Heading>
-              <Paragraph className="text-white/60 text-xs tracking-wider uppercase">
+              <Label color="text-white/60">
                 Listeners
-              </Paragraph>
+              </Label>
             </div>
-            <div className="w-px h-12 bg-white/20"></div>
+            <div className="w-px bg-white/20"></div>
             <div className="text-center">
               <Heading as="h3" color="text-white" margin="mb-1" className="text-2xl flex items-center justify-center gap-1">
                 <CountUp end={4.9} decimals={1} delay={0.7} duration={3} />
@@ -70,9 +77,9 @@ export default function Hero20() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               </Heading>
-              <Paragraph className="text-white/60 text-xs tracking-wider uppercase">
+              <Label color="text-white/60">
                 Rating
-              </Paragraph>
+              </Label>
             </div>
           </div>
 
