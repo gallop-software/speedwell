@@ -90,31 +90,39 @@ export default function PodcastTestimonials1() {
         <div className="mt-24 pt-16 border-t border-white/10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">
+              <Heading as="h3" color="text-white" margin="mb-2" className="text-4xl">
                 <CountUp end={2} decimals={1} suffix="M+" delay={0.3} duration={3} />
-              </div>
-              <div className="text-sm text-white/50 tracking-wide">Monthly Listeners</div>
+              </Heading>
+              <Paragraph className="text-white/50 text-sm tracking-wide">
+                Monthly Listeners
+              </Paragraph>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">
+              <Heading as="h3" color="text-white" margin="mb-2" className="text-4xl">
                 <CountUp end={150} suffix="+" delay={0.5} duration={3} />
-              </div>
-              <div className="text-sm text-white/50 tracking-wide">Total Episodes</div>
+              </Heading>
+              <Paragraph className="text-white/50 text-sm tracking-wide">
+                Total Episodes
+              </Paragraph>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">
+              <Heading as="h3" color="text-white" margin="mb-2" className="text-4xl">
                 <CountUp end={15} suffix="K+" delay={0.7} duration={3} />
-              </div>
-              <div className="text-sm text-white/50 tracking-wide">Reviews</div>
+              </Heading>
+              <Paragraph className="text-white/50 text-sm tracking-wide">
+                Reviews
+              </Paragraph>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2 flex items-center justify-center gap-1">
+              <Heading as="h3" color="text-white" margin="mb-2" className="text-4xl flex items-center justify-center gap-1">
                 <CountUp end={4.9} decimals={1} delay={0.9} duration={3} />
                 <svg className="w-8 h-8 text-yellow-400 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
-              </div>
-              <div className="text-sm text-white/50 tracking-wide">Average Rating</div>
+              </Heading>
+              <Paragraph className="text-white/50 text-sm tracking-wide">
+                Average Rating
+              </Paragraph>
             </div>
           </div>
         </div>

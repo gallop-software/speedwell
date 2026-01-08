@@ -44,29 +44,35 @@ export default function Hero20() {
           </Paragraph>
 
           {/* Stats */}
-          <div className="flex items-center justify-center gap-8 mb-12 text-white/60 text-sm">
+          <div className="flex items-center justify-center gap-8 mb-12">
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">
+              <Heading as="h3" color="text-white" margin="mb-1" className="text-2xl">
                 <CountUp end={150} suffix="+" delay={0.3} duration={3} />
-              </div>
-              <div className="text-xs tracking-wider uppercase">Episodes</div>
+              </Heading>
+              <Paragraph className="text-white/60 text-xs tracking-wider uppercase">
+                Episodes
+              </Paragraph>
             </div>
             <div className="w-px h-12 bg-white/20"></div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">
+              <Heading as="h3" color="text-white" margin="mb-1" className="text-2xl">
                 <CountUp end={2} decimals={1} suffix="M+" delay={0.5} duration={3} />
-              </div>
-              <div className="text-xs tracking-wider uppercase">Listeners</div>
+              </Heading>
+              <Paragraph className="text-white/60 text-xs tracking-wider uppercase">
+                Listeners
+              </Paragraph>
             </div>
             <div className="w-px h-12 bg-white/20"></div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1 flex items-center justify-center gap-1">
+              <Heading as="h3" color="text-white" margin="mb-1" className="text-2xl flex items-center justify-center gap-1">
                 <CountUp end={4.9} decimals={1} delay={0.7} duration={3} />
                 <svg className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
-              </div>
-              <div className="text-xs tracking-wider uppercase">Rating</div>
+              </Heading>
+              <Paragraph className="text-white/60 text-xs tracking-wider uppercase">
+                Rating
+              </Paragraph>
             </div>
           </div>
 
