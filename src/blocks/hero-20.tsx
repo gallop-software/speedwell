@@ -1,8 +1,15 @@
 'use client'
 
 import { Heading, Paragraph, Accent, Button, Buttons, CountUp, Label } from '@/components'
+import { useState, useEffect } from 'react'
 
 export default function Hero20() {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   return (
     <div className="relative min-h-screen bg-contrast overflow-hidden">
       {/* Background gradient overlay */}
@@ -10,14 +17,16 @@ export default function Hero20() {
       
       {/* Background video - Vimeo iframe */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <iframe
-          src="https://player.vimeo.com/video/1151997268?h=ec0ec60a5d&autoplay=1&loop=1&muted=1&background=1&quality=1080p"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
-          style={{ aspectRatio: '16/9' }}
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          title="Podcast Background"
-        ></iframe>
+        {isMounted && (
+          <iframe
+            src="https://player.vimeo.com/video/1151997268?h=ec0ec60a5d&autoplay=1&loop=1&muted=1&background=1&quality=1080p"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
+            style={{ aspectRatio: '16/9' }}
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="Podcast Background"
+          ></iframe>
+        )}
       </div>
 
       {/* Content */}
