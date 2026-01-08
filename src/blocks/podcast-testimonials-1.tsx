@@ -1,4 +1,6 @@
-import { Section, Heading, Paragraph } from '@/components'
+'use client'
+
+import { Section, Heading, Paragraph, CountUp } from '@/components'
 
 const testimonials = [
   {
@@ -88,20 +90,26 @@ export default function PodcastTestimonials1() {
         <div className="mt-24 pt-16 border-t border-white/10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">2M+</div>
+              <div className="text-4xl font-bold text-white mb-2">
+                <CountUp end={2} decimals={1} suffix="M+" delay={0.3} duration={3} />
+              </div>
               <div className="text-sm text-white/50 tracking-wide">Monthly Listeners</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">150+</div>
+              <div className="text-4xl font-bold text-white mb-2">
+                <CountUp end={150} suffix="+" delay={0.5} duration={3} />
+              </div>
               <div className="text-sm text-white/50 tracking-wide">Total Episodes</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">15K+</div>
+              <div className="text-4xl font-bold text-white mb-2">
+                <CountUp end={15} suffix="K+" delay={0.7} duration={3} />
+              </div>
               <div className="text-sm text-white/50 tracking-wide">Reviews</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2 flex items-center justify-center gap-1">
-                4.9
+                <CountUp end={4.9} decimals={1} delay={0.9} duration={3} />
                 <svg className="w-8 h-8 text-yellow-400 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
