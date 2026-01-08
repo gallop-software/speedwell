@@ -19,7 +19,7 @@ export default function Hero20() {
   }, [])
 
   return (
-    <div className="relative min-h-screen bg-contrast overflow-hidden">
+    <div className="relative bg-contrast overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black/60 to-black/80 z-10"></div>
 
@@ -38,7 +38,7 @@ export default function Hero20() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 min-h-screen flex flex-col justify-center items-center text-center px-6 pt-navbar">
+      <div className="relative z-20 flex flex-col justify-center items-center text-center px-6 py-24 md:py-40 pt-navbar">
         <div className="max-w-4xl mx-auto">
           {/* Accent text */}
           <Accent
@@ -78,7 +78,7 @@ export default function Hero20() {
               <Heading
                 as="h3"
                 color="text-white"
-                margin="mb-1"
+                margin=""
                 className="text-2xl"
               >
                 <CountUp
@@ -88,14 +88,14 @@ export default function Hero20() {
                   duration={3}
                 />
               </Heading>
-              <Label color="text-white/60">Episodes</Label>
+              <Label color="text-white/60" margin="">Episodes</Label>
             </div>
             <div className="w-full md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
                 color="text-white"
-                margin="mb-1"
+                margin=""
                 className="text-2xl"
               >
                 <CountUp
@@ -106,14 +106,14 @@ export default function Hero20() {
                   duration={3}
                 />
               </Heading>
-              <Label color="text-white/60">Listeners</Label>
+              <Label color="text-white/60" margin="">Listeners</Label>
             </div>
             <div className="w-full md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
                 color="text-white"
-                margin="mb-1"
+                margin=""
                 className="text-2xl flex items-center justify-center gap-1"
               >
                 <CountUp
@@ -129,7 +129,7 @@ export default function Hero20() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               </Heading>
-              <Label color="text-white/60">Rating</Label>
+              <Label color="text-white/60" margin="">Rating</Label>
             </div>
           </div>
 
