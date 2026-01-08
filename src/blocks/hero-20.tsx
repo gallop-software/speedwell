@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Button, Buttons, CountUp } from '@/components'
+import { Heading, Paragraph, Button, Buttons, CountUp } from '@/components'
 
 export default function Hero20() {
   return (
@@ -42,9 +42,9 @@ export default function Hero20() {
           </Heading>
 
           {/* Tagline */}
-          <p className="text-white/80 text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+          <Paragraph className="text-white/80 text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto leading-relaxed">
             Conversations that challenge perspectives and inspire personal growth
-          </p>
+          </Paragraph>
 
           {/* Stats */}
           <div className="flex items-center justify-center gap-8 mb-12 text-white/60 text-sm">
