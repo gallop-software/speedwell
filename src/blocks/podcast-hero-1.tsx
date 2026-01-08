@@ -73,7 +73,7 @@ export default function PodcastHero1() {
             </Button>
             <Button
               href="#subscribe"
-              variant="outline"
+              variant="secondary"
               dark
             >
               Subscribe Now
