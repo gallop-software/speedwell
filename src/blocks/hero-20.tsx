@@ -73,7 +73,7 @@ export default function Hero20() {
           </Paragraph>
 
           {/* Stats */}
-          <div className="flex items-stretch justify-center gap-8 mb-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-12">
             <div className="text-center">
               <Heading
                 as="h3"
@@ -90,7 +90,7 @@ export default function Hero20() {
               </Heading>
               <Label color="text-white/60">Episodes</Label>
             </div>
-            <div className="w-px bg-white/20"></div>
+            <div className="hidden md:block w-px self-stretch bg-white/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
@@ -108,7 +108,7 @@ export default function Hero20() {
               </Heading>
               <Label color="text-white/60">Listeners</Label>
             </div>
-            <div className="w-px bg-white/20"></div>
+            <div className="hidden md:block w-px self-stretch bg-white/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
