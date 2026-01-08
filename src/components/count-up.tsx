@@ -1,6 +1,12 @@
 'use client'
 
-import { useCountUp } from 'react-countup'
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 interface CountUpProps {
@@ -28,40 +34,40 @@ export function CountUp({
   decimal = '.',
   className = '',
 }: CountUpProps) {
-  const countUpRef = useRef<HTMLSpanElement>(null!)
-  const hasStartedRef = useRef(false)
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
+
+  const value = useMotionValue(start)
   
-  const { start: startCountUp } = useCountUp({
-    ref: countUpRef,
-    start,
-    end,
-    decimals,
-    duration,
-    delay,
-    prefix,
-    suffix,
-    separator,
-    decimal,
-    startOnMount: false,
+  // Convert duration to spring physics (higher duration = lower stiffness)
+  const stiffness = Math.max(50, 150 / duration)
+  const damping = Math.max(20, 40 / duration)
+  
+  const spring = useSpring(value, { damping, stiffness })
+  
+  const display = useTransform(spring, (num) => {
+    const fixed = num.toFixed(decimals)
+    const [intPart, decPart] = fixed.split('.')
+    
+    // Add separator to integer part if provided
+    const formattedInt = separator
+      ? intPart.replace(/\B(?=(\d{3})+(?!\d))/g, separator)
+      : intPart
+    
+    // Reconstruct with custom decimal point
+    const formatted = decPart ? `${formattedInt}${decimal}${decPart}` : formattedInt
+    
+    return `${prefix}${formatted}${suffix}`
   })
 
   useEffect(() => {
-    const element = countUpRef.current
-    if (!element) return
+    if (isInView) {
+      const timeout = setTimeout(() => {
+        value.set(end)
+      }, delay * 1000)
+      return () => clearTimeout(timeout)
+    }
+  }, [isInView, end, delay, value])
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting && !hasStartedRef.current) {
-          hasStartedRef.current = true
-          startCountUp()
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    observer.observe(element)
-    return () => observer.disconnect()
-  }, [startCountUp])
-
-  return <span ref={countUpRef} className={className} />
+  return <motion.span ref={ref} className={className}>{display}</motion.span>
 }
