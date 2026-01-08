@@ -1573,6 +1573,28 @@
       "file": "/images/layout-7/pexels-karola-g-6919956.jpg"
     }
   },
+  "/images/layout-7/video-image.png": {
+    "small": {
+      "width": 300,
+      "height": 169,
+      "file": "/images/layout-7/video-image-300x169.png"
+    },
+    "medium": {
+      "width": 700,
+      "height": 394,
+      "file": "/images/layout-7/video-image-700x394.png"
+    },
+    "large": {
+      "width": 1400,
+      "height": 788,
+      "file": "/images/layout-7/video-image-1400x788.png"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1238,
+      "file": "/images/layout-7/video-image.png"
+    }
+  },
   "/images/leaf1.jpg": {
     "small": {
       "width": 169,
