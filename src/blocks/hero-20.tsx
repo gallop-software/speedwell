@@ -11,7 +11,7 @@ import {
 
 export default function Hero20() {
   return (
-    <div className="relative bg-contrast overflow-hidden">
+    <div className="relative bg-contrast overflow-hidden pt-navbar">
       <VideoBackground
         videoId="1151997268"
         videoHash="ec0ec60a5d"
@@ -20,7 +20,7 @@ export default function Hero20() {
       />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col justify-center items-center text-center px-6 py-24 md:py-40 pt-navbar">
+      <div className="relative z-20 flex flex-col justify-center items-center text-center px-6 py-20 md:py-20">
         <div className="max-w-4xl mx-auto">
           {/* Accent text */}
           <Accent
@@ -70,9 +70,14 @@ export default function Hero20() {
                   duration={3}
                 />
               </Heading>
-              <Label color="text-white/60" margin="">Episodes</Label>
+              <Label
+                color="text-white/60"
+                margin=""
+              >
+                Episodes
+              </Label>
             </div>
-            <div className="w-full md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
+            <div className="w-full max-w-20 md:max-w-none md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
@@ -88,9 +93,14 @@ export default function Hero20() {
                   duration={3}
                 />
               </Heading>
-              <Label color="text-white/60" margin="">Listeners</Label>
+              <Label
+                color="text-white/60"
+                margin=""
+              >
+                Listeners
+              </Label>
             </div>
-            <div className="w-full md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
+            <div className="w-full max-w-20 md:max-w-none md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
@@ -111,7 +121,12 @@ export default function Hero20() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               </Heading>
-              <Label color="text-white/60" margin="">Rating</Label>
+              <Label
+                color="text-white/60"
+                margin=""
+              >
+                Rating
+              </Label>
             </div>
           </div>
 
