@@ -11,7 +11,7 @@ import {
 
 export default function Hero20() {
   return (
-    <div className="relative bg-contrast overflow-hidden pt-navbar">
+    <div className="relative bg-contrast overflow-hidden pt-navbar min-h-0 flex items-center justify-center">
       <VideoBackground
         videoId="1151997268"
         videoHash="ec0ec60a5d"
@@ -20,7 +20,7 @@ export default function Hero20() {
       />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col justify-center items-center text-center px-6 py-20 md:py-20">
+      <div className="relative z-20 flex flex-col justify-center items-center text-center px-6 pt-14 pb-28 lg:pb-28">
         <div className="max-w-4xl mx-auto">
           {/* Accent text */}
           <Accent
@@ -131,7 +131,10 @@ export default function Hero20() {
           </div>
 
           {/* CTA Buttons */}
-          <Buttons className="justify-center">
+          <Buttons
+            margin="mb-0"
+            className="justify-center"
+          >
             <Button
               href="#episodes"
               variant="primary"
