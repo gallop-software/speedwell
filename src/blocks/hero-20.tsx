@@ -66,7 +66,7 @@ export default function Hero20() {
                 <CountUp
                   end={150}
                   suffix="+"
-                  delay={0.3}
+                  delay={0}
                   duration={3}
                 />
               </Heading>
@@ -89,7 +89,7 @@ export default function Hero20() {
                   end={2}
                   decimals={1}
                   suffix="M+"
-                  delay={0.5}
+                  delay={0}
                   duration={3}
                 />
               </Heading>
@@ -111,7 +111,7 @@ export default function Hero20() {
                 <CountUp
                   end={4.9}
                   decimals={1}
-                  delay={0.7}
+                  delay={0}
                   duration={3}
                 />
                 <svg
