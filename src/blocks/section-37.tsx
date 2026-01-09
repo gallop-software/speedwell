@@ -73,7 +73,7 @@ export default function Section37() {
           </Paragraph>
 
           {/* Host info */}
-          <div className="flex items-center gap-6 pt-8 border-t-2 border-accent/20">
+          <div className="flex items-center gap-6">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-bold text-xl">
                 SC
