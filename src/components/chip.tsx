@@ -1,12 +1,13 @@
 import { clsx } from 'clsx'
 import { Icon } from './icon'
-import type { IconifyIcon } from '@iconify/react'
+
+type IconData = { body: string; width?: number; height?: number }
 
 export interface ChipProps extends React.ComponentPropsWithoutRef<'span'> {
   /** Icon to display before text */
-  iconBefore?: IconifyIcon
+  iconBefore?: IconData
   /** Icon to display after text */
-  iconAfter?: IconifyIcon
+  iconAfter?: IconData
   /** Icon size */
   iconSize?: string
   /** Font size override */
