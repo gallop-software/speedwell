@@ -27,7 +27,7 @@ export default function Services1() {
                 <Card1
                   id="service-portrait"
                   title="Portrait"
-                  image="/images/layout-3/pexels-shotbyrain-6507483.jpg"
+                  image="/images/layout-3/pexels-olly-774909.jpg"
                   href="#portfolio-section"
                   alt="Portrait photography"
                   size="large"
@@ -41,7 +41,7 @@ export default function Services1() {
                 <Card1
                   id="service-landscape"
                   title="Landscape"
-                  image="/images/layout-3/pexels-akos-szabo-145938-440731.jpg"
+                  image="/images/layout-3/pexels-pixabay-462162.jpg"
                   href="#portfolio-section"
                   alt="Landscape and nature photography"
                   size="large"

@@ -14,6 +14,83 @@ import sparklesIcon from '@iconify/icons-heroicons/sparkles'
 export default function Hero18() {
   return (
     <div className="relative bg-gradient-to-br from-body via-accent2/5 to-body overflow-hidden">
+      {/* Falling confetti - covers entire hero */}
+      <div className="absolute inset-0 z-40 pointer-events-none overflow-hidden">
+        {/* Row 1 */}
+        <div className="absolute top-[1%] left-[2%] w-3 h-3 bg-pink-400 rounded-sm animate-fall-slow opacity-80 rotate-45"></div>
+        <div className="absolute top-[3%] left-[8%] w-2 h-4 bg-yellow-400 rounded-sm animate-fall-medium opacity-75 rotate-12"></div>
+        <div className="absolute top-[2%] left-[14%] w-4 h-2 bg-purple-400 rounded-sm animate-fall-fast opacity-85 -rotate-12"></div>
+        <div className="absolute top-[4%] left-[20%] w-3 h-3 bg-teal-400 rounded-sm animate-fall-slow opacity-70 rotate-45"></div>
+        <div className="absolute top-[1%] left-[26%] w-2 h-3 bg-orange-400 rounded-sm animate-fall-medium opacity-80 -rotate-45"></div>
+        <div className="absolute top-[3%] left-[32%] w-4 h-2 bg-rose-400 rounded-sm animate-fall-fast opacity-75 rotate-12"></div>
+        <div className="absolute top-[2%] left-[38%] w-2 h-4 bg-sky-400 rounded-sm animate-fall-slow opacity-80 -rotate-12"></div>
+        <div className="absolute top-[4%] left-[44%] w-3 h-2 bg-lime-400 rounded-sm animate-fall-medium opacity-70 rotate-45"></div>
+        <div className="absolute top-[1%] left-[50%] w-2 h-2 bg-fuchsia-400 rounded-full animate-fall-fast opacity-75"></div>
+        <div className="absolute top-[3%] left-[56%] w-2 h-3 bg-amber-400 rounded-sm animate-fall-slow opacity-80 -rotate-12"></div>
+        <div className="absolute top-[2%] left-[62%] w-3 h-3 bg-pink-400 rounded-sm animate-fall-medium opacity-75 rotate-45"></div>
+        <div className="absolute top-[4%] left-[68%] w-2 h-4 bg-yellow-400 rounded-sm animate-fall-fast opacity-80 -rotate-45"></div>
+        <div className="absolute top-[1%] left-[74%] w-4 h-2 bg-purple-400 rounded-sm animate-fall-slow opacity-70 rotate-12"></div>
+        <div className="absolute top-[3%] left-[80%] w-3 h-2 bg-teal-400 rounded-sm animate-fall-medium opacity-85 -rotate-12"></div>
+        <div className="absolute top-[2%] left-[86%] w-2 h-3 bg-orange-400 rounded-sm animate-fall-fast opacity-75 rotate-45"></div>
+        <div className="absolute top-[4%] left-[92%] w-2 h-2 bg-rose-400 rounded-full animate-fall-slow opacity-80"></div>
+        <div className="absolute top-[1%] left-[98%] w-3 h-3 bg-sky-400 rounded-sm animate-fall-medium opacity-70 -rotate-45"></div>
+        
+        {/* Row 2 */}
+        <div className="absolute top-[7%] left-[5%] w-2 h-2 bg-amber-400 rounded-full animate-fall-medium opacity-70"></div>
+        <div className="absolute top-[9%] left-[11%] w-3 h-2 bg-fuchsia-400 rounded-sm animate-fall-fast opacity-75 rotate-45"></div>
+        <div className="absolute top-[6%] left-[17%] w-2 h-3 bg-pink-400 rounded-sm animate-fall-slow opacity-80 -rotate-12"></div>
+        <div className="absolute top-[8%] left-[23%] w-4 h-2 bg-yellow-400 rounded-sm animate-fall-medium opacity-75 rotate-12"></div>
+        <div className="absolute top-[7%] left-[29%] w-3 h-3 bg-purple-400 rounded-sm animate-fall-fast opacity-80 -rotate-45"></div>
+        <div className="absolute top-[9%] left-[35%] w-2 h-4 bg-teal-400 rounded-sm animate-fall-slow opacity-70 rotate-45"></div>
+        <div className="absolute top-[6%] left-[41%] w-4 h-2 bg-orange-400 rounded-sm animate-fall-medium opacity-75 -rotate-12"></div>
+        <div className="absolute top-[8%] left-[47%] w-2 h-3 bg-rose-400 rounded-sm animate-fall-fast opacity-80 rotate-45"></div>
+        <div className="absolute top-[7%] left-[53%] w-3 h-2 bg-sky-400 rounded-sm animate-fall-slow opacity-70 -rotate-45"></div>
+        <div className="absolute top-[9%] left-[59%] w-2 h-2 bg-lime-400 rounded-full animate-fall-medium opacity-75"></div>
+        <div className="absolute top-[6%] left-[65%] w-3 h-3 bg-amber-400 rounded-sm animate-fall-fast opacity-80 rotate-12"></div>
+        <div className="absolute top-[8%] left-[71%] w-2 h-4 bg-fuchsia-400 rounded-sm animate-fall-slow opacity-75 -rotate-45"></div>
+        <div className="absolute top-[7%] left-[77%] w-4 h-2 bg-pink-400 rounded-sm animate-fall-medium opacity-70 rotate-45"></div>
+        <div className="absolute top-[9%] left-[83%] w-3 h-2 bg-yellow-400 rounded-sm animate-fall-fast opacity-85 -rotate-12"></div>
+        <div className="absolute top-[6%] left-[89%] w-2 h-3 bg-purple-400 rounded-sm animate-fall-slow opacity-80 rotate-12"></div>
+        <div className="absolute top-[8%] left-[95%] w-2 h-2 bg-teal-400 rounded-full animate-fall-medium opacity-75"></div>
+        
+        {/* Row 3 */}
+        <div className="absolute top-[12%] left-[3%] w-2 h-3 bg-sky-400 rounded-sm animate-fall-fast opacity-75 -rotate-12"></div>
+        <div className="absolute top-[14%] left-[9%] w-3 h-2 bg-lime-400 rounded-sm animate-fall-slow opacity-80 rotate-45"></div>
+        <div className="absolute top-[11%] left-[15%] w-2 h-2 bg-fuchsia-400 rounded-full animate-fall-medium opacity-70"></div>
+        <div className="absolute top-[13%] left-[21%] w-4 h-3 bg-amber-400 rounded-sm animate-fall-fast opacity-85 rotate-12"></div>
+        <div className="absolute top-[12%] left-[27%] w-2 h-4 bg-pink-400 rounded-sm animate-fall-slow opacity-75 -rotate-45"></div>
+        <div className="absolute top-[14%] left-[33%] w-3 h-2 bg-yellow-400 rounded-sm animate-fall-medium opacity-80 rotate-45"></div>
+        <div className="absolute top-[11%] left-[39%] w-2 h-2 bg-purple-400 rounded-full animate-fall-fast opacity-70"></div>
+        <div className="absolute top-[13%] left-[45%] w-3 h-3 bg-teal-400 rounded-sm animate-fall-slow opacity-75 -rotate-12"></div>
+        <div className="absolute top-[12%] left-[51%] w-4 h-2 bg-orange-400 rounded-sm animate-fall-medium opacity-80 rotate-12"></div>
+        <div className="absolute top-[14%] left-[57%] w-2 h-3 bg-rose-400 rounded-sm animate-fall-fast opacity-70 -rotate-45"></div>
+        <div className="absolute top-[11%] left-[63%] w-3 h-2 bg-sky-400 rounded-sm animate-fall-slow opacity-85 rotate-45"></div>
+        <div className="absolute top-[13%] left-[69%] w-2 h-4 bg-lime-400 rounded-sm animate-fall-medium opacity-75 -rotate-12"></div>
+        <div className="absolute top-[12%] left-[75%] w-2 h-2 bg-amber-400 rounded-full animate-fall-fast opacity-80"></div>
+        <div className="absolute top-[14%] left-[81%] w-3 h-3 bg-fuchsia-400 rounded-sm animate-fall-slow opacity-70 rotate-12"></div>
+        <div className="absolute top-[11%] left-[87%] w-4 h-2 bg-pink-400 rounded-sm animate-fall-medium opacity-75 -rotate-45"></div>
+        <div className="absolute top-[13%] left-[93%] w-2 h-3 bg-yellow-400 rounded-sm animate-fall-fast opacity-80 rotate-45"></div>
+        
+        {/* Row 4 */}
+        <div className="absolute top-[17%] left-[1%] w-3 h-2 bg-purple-400 rounded-sm animate-fall-medium opacity-75 -rotate-12"></div>
+        <div className="absolute top-[19%] left-[7%] w-2 h-3 bg-teal-400 rounded-sm animate-fall-fast opacity-80 rotate-45"></div>
+        <div className="absolute top-[16%] left-[13%] w-4 h-2 bg-orange-400 rounded-sm animate-fall-slow opacity-70 -rotate-45"></div>
+        <div className="absolute top-[18%] left-[19%] w-2 h-2 bg-rose-400 rounded-full animate-fall-medium opacity-85"></div>
+        <div className="absolute top-[17%] left-[25%] w-3 h-3 bg-sky-400 rounded-sm animate-fall-fast opacity-75 rotate-12"></div>
+        <div className="absolute top-[19%] left-[31%] w-2 h-4 bg-lime-400 rounded-sm animate-fall-slow opacity-80 -rotate-12"></div>
+        <div className="absolute top-[16%] left-[37%] w-3 h-2 bg-amber-400 rounded-sm animate-fall-medium opacity-70 rotate-45"></div>
+        <div className="absolute top-[18%] left-[43%] w-2 h-3 bg-fuchsia-400 rounded-sm animate-fall-fast opacity-75 -rotate-45"></div>
+        <div className="absolute top-[17%] left-[49%] w-4 h-2 bg-pink-400 rounded-sm animate-fall-slow opacity-80 rotate-12"></div>
+        <div className="absolute top-[19%] left-[55%] w-2 h-2 bg-yellow-400 rounded-full animate-fall-medium opacity-85"></div>
+        <div className="absolute top-[16%] left-[61%] w-3 h-3 bg-purple-400 rounded-sm animate-fall-fast opacity-70 -rotate-12"></div>
+        <div className="absolute top-[18%] left-[67%] w-2 h-4 bg-teal-400 rounded-sm animate-fall-slow opacity-75 rotate-45"></div>
+        <div className="absolute top-[17%] left-[73%] w-4 h-2 bg-orange-400 rounded-sm animate-fall-medium opacity-80 -rotate-45"></div>
+        <div className="absolute top-[19%] left-[79%] w-3 h-2 bg-rose-400 rounded-sm animate-fall-fast opacity-70 rotate-12"></div>
+        <div className="absolute top-[16%] left-[85%] w-2 h-3 bg-sky-400 rounded-sm animate-fall-slow opacity-85 -rotate-12"></div>
+        <div className="absolute top-[18%] left-[91%] w-2 h-2 bg-lime-400 rounded-full animate-fall-medium opacity-75"></div>
+        <div className="absolute top-[17%] left-[97%] w-3 h-3 bg-amber-400 rounded-sm animate-fall-fast opacity-80 rotate-45"></div>
+      </div>
+
       {/* Decorative background elements */}
       <div className="absolute top-20 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-60 h-60 bg-accent2/10 rounded-full blur-3xl"></div>
@@ -88,22 +165,6 @@ export default function Hero18() {
                   rounded="rounded-lg"
                   lazy={false}
                 />
-                {/* Decorative accent */}
-                <div className="absolute -top-3 -right-3 w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white text-3xl">✦</span>
-                </div>
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute top-1/3 left-1/4 z-30 bg-white px-6 py-4 rounded-full shadow-xl transform -rotate-6">
-                <div className="text-center">
-                  <div className="font-accent text-sm text-accent mb-1">
-                    Award Winning
-                  </div>
-                  <div className="text-xs text-body-dark/60">
-                    Event Planners
-                  </div>
-                </div>
               </div>
             </div>
           </Column>

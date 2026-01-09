@@ -1,30 +1,34 @@
 # Speedwell Blocks
 
-A collection of 94 pre-built UI blocks for the Speedwell template.
+A collection of 116 pre-built UI blocks for the Speedwell template.
 
 ## Overview
 
-- **Total Blocks:** 94
-- **Free Blocks:** 80
-- **Pro Blocks:** 14
+- **Total Blocks:** 116
+- **Free Blocks:** 81
+- **Pro Blocks:** 35
 
 ## Categories
 
-- **Hero:** 15 blocks
-- **Section:** 33 blocks
+- **Hero:** 20 blocks
+- **Section:** 35 blocks
 - **Content:** 11 blocks
 - **Call To Action:** 6 blocks
-- **Testimonial:** 4 blocks
-- **Contact:** 4 blocks
-- **About:** 3 blocks
-- **Cover:** 4 blocks
-- **Showcase:** 7 blocks
+- **Testimonial:** 7 blocks
+- **Contact:** 6 blocks
+- **About:** 4 blocks
+- **Cover:** 5 blocks
+- **Showcase:** 10 blocks
 - **Blog:** 2 blocks
 - **Partners:** 1 blocks
 - **Accordion:** 1 blocks
 - **Application:** 1 blocks
-- **Pricing:** 1 blocks
+- **Archive:** 1 blocks
+- **Business Info:** 1 blocks
+- **Portfolio:** 1 blocks
+- **Pricing:** 2 blocks
 - **Process:** 1 blocks
+- **Sidebar:** 1 blocks
 
 ## Blocks
 
@@ -161,6 +165,51 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/hero-15.jpg" alt="Hero 15" width="350">
 
 **Slug:** `hero-15`  
+**Tier:** Pro
+
+---
+
+#### Hero 16
+
+<img src="../../public/blocks/hero-16.jpg" alt="Hero 16" width="350">
+
+**Slug:** `hero-16`  
+**Tier:** Pro
+
+---
+
+#### Hero 17
+
+<img src="../../public/blocks/hero-17.jpg" alt="Hero 17" width="350">
+
+**Slug:** `hero-17`  
+**Tier:** Pro
+
+---
+
+#### Hero 18
+
+<img src="../../public/blocks/hero-18.jpg" alt="Hero 18" width="350">
+
+**Slug:** `hero-18`  
+**Tier:** Pro
+
+---
+
+#### Hero 19
+
+<img src="../../public/blocks/hero-19.jpg" alt="Hero 19" width="350">
+
+**Slug:** `hero-19`  
+**Tier:** Free
+
+---
+
+#### Hero 20
+
+<img src="../../public/blocks/hero-20.jpg" alt="Hero 20" width="350">
+
+**Slug:** `hero-20`  
 **Tier:** Pro
 
 ---
@@ -464,6 +513,24 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Section 36
+
+<img src="../../public/blocks/section-36.jpg" alt="Section 36" width="350">
+
+**Slug:** `section-36`  
+**Tier:** Pro
+
+---
+
+#### Section 37
+
+<img src="../../public/blocks/section-37.jpg" alt="Section 37" width="350">
+
+**Slug:** `section-37`  
+**Tier:** Pro
+
+---
+
 ### Content
 
 #### Content 1
@@ -659,6 +726,33 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Testimonial 6
+
+<img src="../../public/blocks/testimonial-6.jpg" alt="Testimonial 6" width="350">
+
+**Slug:** `testimonial-6`  
+**Tier:** Pro
+
+---
+
+#### Testimonial 7
+
+<img src="../../public/blocks/testimonial-7.jpg" alt="Testimonial 7" width="350">
+
+**Slug:** `testimonial-7`  
+**Tier:** Pro
+
+---
+
+#### Testimonial 8
+
+<img src="../../public/blocks/testimonial-8.jpg" alt="Testimonial 8" width="350">
+
+**Slug:** `testimonial-8`  
+**Tier:** Pro
+
+---
+
 ### Contact
 
 #### Contact 1
@@ -697,6 +791,24 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Contact 6
+
+<img src="../../public/blocks/contact-6.jpg" alt="Contact 6" width="350">
+
+**Slug:** `contact-6`  
+**Tier:** Pro
+
+---
+
+#### Contact 7
+
+<img src="../../public/blocks/contact-7.jpg" alt="Contact 7" width="350">
+
+**Slug:** `contact-7`  
+**Tier:** Pro
+
+---
+
 ### About
 
 #### About 1
@@ -722,6 +834,15 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/about-3.jpg" alt="About 3" width="350">
 
 **Slug:** `about-3`  
+**Tier:** Pro
+
+---
+
+#### About 4
+
+<img src="../../public/blocks/about-4.jpg" alt="About 4" width="350">
+
+**Slug:** `about-4`  
 **Tier:** Pro
 
 ---
@@ -760,7 +881,16 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/cover-5.jpg" alt="Cover 5" width="350">
 
 **Slug:** `cover-5`  
-**Tier:** Free
+**Tier:** Pro
+
+---
+
+#### Cover 6
+
+<img src="../../public/blocks/cover-6.jpg" alt="Cover 6" width="350">
+
+**Slug:** `cover-6`  
+**Tier:** Pro
 
 ---
 
@@ -829,6 +959,33 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Showcase 8
+
+<img src="../../public/blocks/showcase-8.jpg" alt="Showcase 8" width="350">
+
+**Slug:** `showcase-8`  
+**Tier:** Pro
+
+---
+
+#### Showcase 9
+
+<img src="../../public/blocks/showcase-9.jpg" alt="Showcase 9" width="350">
+
+**Slug:** `showcase-9`  
+**Tier:** Pro
+
+---
+
+#### Showcase 10
+
+<img src="../../public/blocks/showcase-10.jpg" alt="Showcase 10" width="350">
+
+**Slug:** `showcase-10`  
+**Tier:** Pro
+
+---
+
 ### Blog
 
 #### Blog 1
@@ -882,6 +1039,39 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 
 ---
 
+### Archive
+
+#### Archive 1
+
+<img src="../../public/blocks/archive-1.jpg" alt="Archive 1" width="350">
+
+**Slug:** `archive-1`  
+**Tier:** Pro
+
+---
+
+### Business Info
+
+#### Business Info
+
+<img src="../../public/blocks/business-info.jpg" alt="Business Info" width="350">
+
+**Slug:** `business-info`  
+**Tier:** Free
+
+---
+
+### Portfolio
+
+#### Portfolio 1
+
+<img src="../../public/blocks/portfolio-1.jpg" alt="Portfolio 1" width="350">
+
+**Slug:** `portfolio-1`  
+**Tier:** Pro
+
+---
+
 ### Pricing
 
 #### Pricing 1
@@ -893,6 +1083,15 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Pricing 2
+
+<img src="../../public/blocks/pricing-2.jpg" alt="Pricing 2" width="350">
+
+**Slug:** `pricing-2`  
+**Tier:** Pro
+
+---
+
 ### Process
 
 #### Process 1
@@ -900,6 +1099,17 @@ A collection of 94 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/process-1.jpg" alt="Process 1" width="350">
 
 **Slug:** `process-1`  
+**Tier:** Pro
+
+---
+
+### Sidebar
+
+#### Sidebar 1
+
+<img src="../../public/blocks/sidebar-1.jpg" alt="Sidebar 1" width="350">
+
+**Slug:** `sidebar-1`  
 **Tier:** Pro
 
 ---

@@ -37,7 +37,9 @@ export default function About4() {
         {/* Three column features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
-            <div className="text-5xl mb-4">👨‍🍳</div>
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
+              <span className="text-2xl font-serif text-accent">I</span>
+            </div>
             <Heading
               as="h3"
               styleAs="h4"
@@ -51,7 +53,9 @@ export default function About4() {
           </div>
 
           <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
-            <div className="text-5xl mb-4">🌿</div>
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
+              <span className="text-2xl font-serif text-accent">II</span>
+            </div>
             <Heading
               as="h3"
               styleAs="h4"
@@ -65,7 +69,9 @@ export default function About4() {
           </div>
 
           <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
-            <div className="text-5xl mb-4">✨</div>
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
+              <span className="text-2xl font-serif text-accent">III</span>
+            </div>
             <Heading
               as="h3"
               styleAs="h4"

@@ -9,7 +9,7 @@ const portfolioItems = [
   {
     id: 1,
     category: 'PORTRAIT',
-    image: '/images/layout-3/pexels-shotbyrain-6507483.jpg',
+    image: '/images/layout-3/pexels-olly-774909.jpg',
     alt: 'Portrait photography 1',
   },
   {
@@ -33,7 +33,7 @@ const portfolioItems = [
   {
     id: 5,
     category: 'LANDSCAPE',
-    image: '/images/layout-3/pexels-akos-szabo-145938-440731.jpg',
+    image: '/images/layout-3/pexels-pixabay-462162.jpg',
     alt: 'Landscape photography 1',
   },
   {
