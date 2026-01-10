@@ -201,7 +201,7 @@ A collection of 116 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/hero-19.jpg" alt="Hero 19" width="350">
 
 **Slug:** `hero-19`  
-**Tier:** Free
+**Tier:** Pro
 
 ---
 
