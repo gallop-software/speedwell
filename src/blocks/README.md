@@ -1057,7 +1057,7 @@ A collection of 116 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/business-info-1.jpg" alt="Business Info 1" width="350">
 
 **Slug:** `business-info-1`  
-**Tier:** Free
+**Tier:** Pro
 
 ---
 
