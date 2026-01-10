@@ -1052,11 +1052,11 @@ A collection of 116 pre-built UI blocks for the Speedwell template.
 
 ### Business Info
 
-#### Business Info
+#### Business Info 1
 
-<img src="../../public/blocks/business-info.jpg" alt="Business Info" width="350">
+<img src="../../public/blocks/business-info-1.jpg" alt="Business Info 1" width="350">
 
-**Slug:** `business-info`  
+**Slug:** `business-info-1`  
 **Tier:** Free
 
 ---
