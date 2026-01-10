@@ -1061,17 +1061,6 @@ A collection of 116 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Portfolio
-
-#### Portfolio 1
-
-<img src="../../public/blocks/portfolio-1.jpg" alt="Portfolio 1" width="350">
-
-**Slug:** `portfolio-1`  
-**Tier:** Pro
-
----
-
 ### Pricing
 
 #### Pricing 1
