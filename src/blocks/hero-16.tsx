@@ -5,7 +5,7 @@ import { Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
 import useCircleAnimation from '@/hooks/use-circle-animation'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import playIcon from '@iconify/icons-heroicons/play-solid'
-import BusinessInfo from './business-info'
+import BusinessInfo1 from './business-info-1'
 
 const slides = [
   {
