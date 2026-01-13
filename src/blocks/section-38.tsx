@@ -52,12 +52,12 @@ export default function Section38() {
           <a
             key={index}
             href="#"
-            className="group relative bg-body2 border border-contrast/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent3/30 hover:shadow-lg hover:shadow-accent3/5 transition-all duration-300 overflow-hidden"
+            className="group relative bg-body2 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-body2/90 hover:shadow-md hover:ring-contrast/5 ring-1 ring-body2 transition-all duration-300 overflow-hidden"
           >
             {/* Icon */}
             <div
               className={clsx(
-                'relative w-12 h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300',
+                'relative w-12 h-12 rounded-full flex items-center justify-center',
                 platform.color
               )}
             >
