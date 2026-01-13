@@ -18,6 +18,8 @@ interface AccentProps {
   overflowFix?: string
   /** Text alignment (Tailwind CSS classes) */
   textAlign?: string
+  /** Text transform (Tailwind CSS classes) */
+  textTransform?: string
 }
 
 export function Accent({
@@ -30,6 +32,7 @@ export function Accent({
   margin = '',
   overflowFix = '',
   textAlign = '',
+  textTransform = 'lowercase',
 }: AccentProps) {
   // Define font size presets
   const sizeClasses = {
@@ -60,6 +63,7 @@ export function Accent({
         finalMargin,
         finalOverflowFix,
         textAlign,
+        textTransform,
         textShadow,
         // Custom className can override or extend default styles
         className
