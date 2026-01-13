@@ -6,7 +6,7 @@ import Section37 from '@/blocks/section-37'
 import Archive1 from '@/blocks/archive-1'
 import Section38 from '@/blocks/section-38'
 import Testimonial9 from '@/blocks/testimonial-9'
-import PodcastCta1 from '@/blocks/podcast-cta-1'
+import CallToAction7 from '@/blocks/call-to-action-7'
 
 function Content() {
   return (
@@ -16,7 +16,7 @@ function Content() {
       <Archive1 />
       <Section38 />
       <Testimonial9 />
-      <PodcastCta1 />
+      <CallToAction7 />
     </>
   )
 }
