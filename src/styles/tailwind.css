@@ -199,6 +199,42 @@
   .animate-spin-slow-reverse {
     animation: spin-slow-reverse 10s linear infinite;
   }
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+  .animate-spin-medium {
+    animation: spin-medium 15s linear infinite;
+  }
+  .animate-spin-medium-reverse {
+    animation: spin-medium-reverse 15s linear infinite;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-medium {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-medium-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes spin-slow-reverse {

@@ -47,7 +47,6 @@ export default function CallToAction7() {
       <Columns
         cols="grid-cols-1 lg:grid-cols-2"
         gap="gap-10 lg:gap-20"
-        reverseColumns={false}
         align="items-center"
       >
         {/* Content */}
@@ -133,11 +132,16 @@ export default function CallToAction7() {
           <div className="relative w-full max-w-md">
             {/* Circular design */}
             <div className="relative aspect-square">
-              {/* Outer ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-[#9933CC]/20 animate-[spin_20s_linear_infinite]"></div>
+              {/* Outer ring with orbiting dot */}
+              <div className="absolute inset-0 rounded-full border-2 border-[#9933CC]/20 animate-spin-slow">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#9933CC] rounded-full"></div>
+              </div>
 
-              {/* Middle ring */}
-              <div className="absolute inset-8 rounded-full border-2 border-[#5865F2]/20 animate-[spin_15s_linear_infinite_reverse]"></div>
+              {/* Middle ring with orbiting dot */}
+              <div className="absolute inset-8 rounded-full border-2 border-[#5865F2]/20 animate-spin-medium-reverse">
+                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#FF0000]/70 rounded-full"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 bg-[#5865F2] rounded-full"></div>
+              </div>
 
               {/* Inner circle */}
               <div className="absolute inset-16 rounded-full bg-gradient-to-br from-[#5865F2]/20 to-[#9933CC]/20 flex items-center justify-center">
@@ -158,11 +162,6 @@ export default function CallToAction7() {
                   <Label margin="">Episodes</Label>
                 </div>
               </div>
-
-              {/* Floating dots */}
-              <div className="absolute top-0 left-1/2 w-3 h-3 bg-[#9933CC] rounded-full animate-pulse"></div>
-              <div className="absolute bottom-0 right-1/4 w-2 h-2 bg-[#5865F2] rounded-full animate-pulse delay-75"></div>
-              <div className="absolute top-1/4 right-0 w-3 h-3 bg-[#FF0000]/50 rounded-full animate-pulse delay-150"></div>
             </div>
           </div>
         </Column>
