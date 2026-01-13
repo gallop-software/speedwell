@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Section,
   Columns,
@@ -11,6 +13,7 @@ import {
   Icon,
 } from '@/components'
 import clsx from 'clsx'
+import { useInView } from 'react-intersection-observer'
 import chatBubbleLeftRightIcon from '@iconify/icons-heroicons/chat-bubble-left-right-solid'
 import videoCameraIcon from '@iconify/icons-heroicons/video-camera-solid'
 import bookOpenIcon from '@iconify/icons-heroicons/book-open-solid'
@@ -39,6 +42,11 @@ const features = [
 ]
 
 export default function CallToAction7() {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: false,
+  })
+
   return (
     <Section
       className="py-20 md:py-30 bg-body"
@@ -75,11 +83,11 @@ export default function CallToAction7() {
           </Paragraph>
 
           {/* Community features */}
-          <div className="space-y-6 mb-8">
+          <div className="space-y-4 mb-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4"
+                className="flex items-center gap-4"
               >
                 <div
                   className={clsx(
@@ -96,13 +104,15 @@ export default function CallToAction7() {
                   <Heading
                     as="h4"
                     fontSize="text-lg"
-                    margin="mb-1"
+                    margin="mb-0"
+                    lineHeight="leading-tight"
                   >
                     {feature.title}
                   </Heading>
                   <Paragraph
                     variant="small"
-                    margin=""
+                    margin="mb-0"
+                    lineHeight="leading-tight"
                   >
                     {feature.description}
                   </Paragraph>
@@ -129,16 +139,29 @@ export default function CallToAction7() {
 
         {/* Visual Element */}
         <Column className="relative flex items-center justify-center">
-          <div className="relative w-full max-w-md">
+          <div
+            ref={ref}
+            className="relative w-full max-w-md"
+          >
             {/* Circular design */}
             <div className="relative aspect-square">
               {/* Outer ring with orbiting dot */}
-              <div className="absolute inset-0 rounded-full border-2 border-[#9933CC]/20 animate-spin-slow">
+              <div
+                className={clsx(
+                  'absolute inset-0 rounded-full border-2 border-[#9933CC]/20',
+                  inView && 'animate-spin-slow'
+                )}
+              >
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#9933CC] rounded-full"></div>
               </div>
 
               {/* Middle ring with orbiting dot */}
-              <div className="absolute inset-8 rounded-full border-2 border-[#5865F2]/20 animate-spin-medium-reverse">
+              <div
+                className={clsx(
+                  'absolute inset-8 rounded-full border-2 border-[#5865F2]/20',
+                  inView && 'animate-spin-medium-reverse'
+                )}
+              >
                 <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#FF0000]/70 rounded-full"></div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 bg-[#5865F2] rounded-full"></div>
               </div>
