@@ -20,6 +20,8 @@ interface AccentProps {
   textAlign?: string
   /** Text transform (Tailwind CSS classes) */
   textTransform?: string
+  /** Display (Tailwind CSS classes) */
+  display?: string
 }
 
 export function Accent({
@@ -33,6 +35,7 @@ export function Accent({
   overflowFix = '',
   textAlign = '',
   textTransform = 'lowercase',
+  display = 'inline-block',
 }: AccentProps) {
   // Define font size presets
   const sizeClasses = {
@@ -55,7 +58,8 @@ export function Accent({
   return (
     <span
       className={clsx(
-        'inline-block font-normal',
+        'font-normal',
+        display,
         // Apply final styles (user-defined or defaults)
         finalFontSize,
         finalColor,
