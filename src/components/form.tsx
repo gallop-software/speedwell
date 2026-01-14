@@ -11,9 +11,13 @@ import React, { Children, isValidElement } from 'react'
 function Form({
   classname,
   children,
+  gap = 'gap-8',
+  flexDirection = 'flex-col',
 }: {
   classname?: string
   children: React.ReactNode
+  gap?: string
+  flexDirection?: string
 }) {
   const [status, setStatus] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -126,7 +130,7 @@ function Form({
     <>
       <form
         onSubmit={handleSubmit}
-        className={clsx('flex flex-col gap-8', classname)}
+        className={clsx('flex', flexDirection, gap, classname)}
       >
         {Children.map(children, (child) => {
           if (

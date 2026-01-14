@@ -4,9 +4,9 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import Hero20 from '@/blocks/hero-20'
 import Section37 from '@/blocks/section-37'
 import Archive1 from '@/blocks/archive-1'
-import PodcastSubscribe1 from '@/blocks/podcast-subscribe-1'
-import PodcastTestimonials1 from '@/blocks/podcast-testimonials-1'
-import PodcastCta1 from '@/blocks/podcast-cta-1'
+import Section38 from '@/blocks/section-38'
+import Testimonial9 from '@/blocks/testimonial-9'
+import CallToAction7 from '@/blocks/call-to-action-7'
 
 function Content() {
   return (
@@ -14,9 +14,9 @@ function Content() {
       <Hero20 />
       <Section37 />
       <Archive1 />
-      <PodcastSubscribe1 />
-      <PodcastTestimonials1 />
-      <PodcastCta1 />
+      <Section38 />
+      <Testimonial9 />
+      <CallToAction7 />
     </>
   )
 }
