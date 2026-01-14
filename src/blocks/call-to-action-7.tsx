@@ -70,7 +70,7 @@ export default function CallToAction7() {
 
           <Heading
             as="h2"
-            margin="mb-6"
+            margin="mb-8"
           >
             Be Part of Something Bigger
           </Heading>
@@ -83,7 +83,7 @@ export default function CallToAction7() {
           </Paragraph>
 
           {/* Community features */}
-          <div className="space-y-4 mb-8">
+          <div className="space-y-6 mb-10">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -104,7 +104,7 @@ export default function CallToAction7() {
                   <Heading
                     as="h4"
                     fontSize="text-lg"
-                    margin="mb-0"
+                    margin="mb-1"
                     lineHeight="leading-tight"
                   >
                     {feature.title}
