@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Section,
   Columns,
@@ -9,11 +7,10 @@ import {
   Button,
   Buttons,
   Accent,
-  Label,
   Icon,
+  OrbitStats,
 } from '@/components'
 import clsx from 'clsx'
-import { useInView } from 'react-intersection-observer'
 import chatBubbleLeftRightIcon from '@iconify/icons-heroicons/chat-bubble-left-right-solid'
 import videoCameraIcon from '@iconify/icons-heroicons/video-camera-solid'
 import bookOpenIcon from '@iconify/icons-heroicons/book-open-solid'
@@ -42,11 +39,6 @@ const features = [
 ]
 
 export default function CallToAction7() {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: false,
-  })
-
   return (
     <Section
       className="py-20 md:py-30 bg-body"
@@ -54,28 +46,29 @@ export default function CallToAction7() {
     >
       <Columns
         cols="grid-cols-1 lg:grid-cols-2"
-        gap="gap-10 lg:gap-20"
+        gap="gap-16 lg:gap-20"
         align="items-center"
       >
         {/* Content */}
-        <Column className="flex flex-col justify-center">
+        <Column className="flex flex-col justify-center gap-8">
           <Accent
             size="small"
             color="text-accent"
-            margin="mb-4"
+            margin="mb-0"
             display="block"
+            overflowFix="ml-6"
           >
             Join the Conversation
           </Accent>
 
           <Heading
             as="h2"
-            margin="mb-8"
+            margin="mb-0"
           >
             Be Part of Something Bigger
           </Heading>
 
-          <Paragraph margin="mb-8">
+          <Paragraph margin="mb-0">
             The Mindshift Podcast isn't just about listening—it's about
             connecting with a community of curious minds seeking growth and
             understanding. Share your story, suggest guests, or simply join the
@@ -83,7 +76,7 @@ export default function CallToAction7() {
           </Paragraph>
 
           {/* Community features */}
-          <div className="space-y-6 mb-10">
+          <div className="space-y-6">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -121,7 +114,7 @@ export default function CallToAction7() {
             ))}
           </div>
 
-          <Buttons>
+          <Buttons margin="mt-4 mb-0">
             <Button
               href="#subscribe"
               variant="primary"
@@ -139,54 +132,18 @@ export default function CallToAction7() {
 
         {/* Visual Element */}
         <Column className="relative flex items-center justify-center">
-          <div
-            ref={ref}
-            className="relative w-full max-w-md"
-          >
-            {/* Circular design */}
-            <div className="relative aspect-square">
-              {/* Outer ring with orbiting dot */}
-              <div
-                className={clsx(
-                  'absolute inset-0 rounded-full border-2 border-[#9933CC]/20',
-                  inView && 'animate-spin-slow'
-                )}
-              >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#9933CC] rounded-full"></div>
-              </div>
-
-              {/* Middle ring with orbiting dot */}
-              <div
-                className={clsx(
-                  'absolute inset-8 rounded-full border-2 border-[#5865F2]/20',
-                  inView && 'animate-spin-medium-reverse'
-                )}
-              >
-                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#FF0000]/70 rounded-full"></div>
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 bg-[#5865F2] rounded-full"></div>
-              </div>
-
-              {/* Inner circle */}
-              <div className="absolute inset-16 rounded-full bg-gradient-to-br from-[#5865F2]/20 to-[#9933CC]/20 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#5865F2] to-[#9933CC] flex items-center justify-center">
-                    <Icon
-                      icon={musicalNoteIcon}
-                      className="w-10 h-10 text-white"
-                    />
-                  </div>
-                  <Heading
-                    as="h3"
-                    margin="mb-2"
-                    className="text-3xl"
-                  >
-                    150+
-                  </Heading>
-                  <Label margin="">Episodes</Label>
-                </div>
-              </div>
-            </div>
-          </div>
+          <OrbitStats
+            stat={150}
+            suffix="+"
+            label="Episodes"
+            icon={musicalNoteIcon}
+            colors={{
+              primary: '#5865F2',
+              secondary: '#9933CC',
+              accent: '#FF0000',
+            }}
+            className="max-w-md"
+          />
         </Column>
       </Columns>
     </Section>
