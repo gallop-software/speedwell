@@ -80,9 +80,9 @@ export default function Testimonial9() {
               {/* Quote */}
               <Paragraph
                 lineHeight="leading-relaxed"
-                margin=""
+                margin="mb-8"
                 fontStyle="italic"
-                className="flex-grow mb-8"
+                className="grow"
               >
                 &ldquo;{testimonial.quote}&rdquo;
               </Paragraph>
@@ -110,7 +110,7 @@ export default function Testimonial9() {
             <Heading
               as="h3"
               margin=""
-              className="text-4xl"
+              fontSize="text-4xl"
             >
               <CountUp
                 end={2}
@@ -126,7 +126,7 @@ export default function Testimonial9() {
             <Heading
               as="h3"
               margin=""
-              className="text-4xl"
+              fontSize="text-4xl"
             >
               <CountUp
                 end={150}
@@ -141,7 +141,7 @@ export default function Testimonial9() {
             <Heading
               as="h3"
               margin=""
-              className="text-4xl"
+              fontSize="text-4xl"
             >
               <CountUp
                 end={15}
@@ -156,7 +156,8 @@ export default function Testimonial9() {
             <Heading
               as="h3"
               margin=""
-              className="text-4xl flex items-center justify-center gap-1"
+              fontSize="text-4xl"
+              className="flex items-center justify-center gap-1"
             >
               <CountUp
                 end={4.9}
