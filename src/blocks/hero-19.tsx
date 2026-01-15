@@ -1,8 +1,5 @@
-'use client'
-
-import { useId } from 'react'
 import { Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
-import useCircleAnimation from '@/hooks/use-circle-animation'
+import CircleAnimationInit from '@/hooks/use-circle-animation'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import playIcon from '@iconify/icons-heroicons/play-solid'
 import BusinessInfo1 from './business-info-1'
@@ -31,13 +28,8 @@ const slides = [
 const circleText = 'Watch Video - Watch Video - '
 
 export default function Hero19() {
-  let swiperId = 'swiper-' + useId()
-  swiperId = swiperId.replace(/:/g, '-')
-
-  let circleTextId = 'circle-text-' + useId()
-  circleTextId = circleTextId.replace(/:/g, '-')
-
-  useCircleAnimation(circleTextId)
+  const swiperId = 'hero-19-swiper'
+  const circleTextId = 'hero-19-circle-text'
 
   return (
     <div className="mb-40">
@@ -119,6 +111,7 @@ export default function Hero19() {
             >
               <div className="relative w-36 h-36 flex items-center justify-center">
                 {/* Circle text animation */}
+                <CircleAnimationInit targetId={circleTextId} />
                 <div
                   id={circleTextId}
                   className="absolute w-full h-full"
