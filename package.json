@@ -54,6 +54,8 @@
     "env:prev": "./push-env-to-vercel.sh preview",
     "fonts": "node _scripts/compress-fonts.js",
     "fonts:use": "node src/styles/fonts/useFonts.js",
+    "refresh": "rm -rf node_modules .next",
+    "refresh:install": "npm run refresh && npm install",
     "clean": "rm -rf node_modules .next package-lock.json",
     "clean:install": "npm run clean && npm install",
     "update:check": "npx npm-check-updates",
