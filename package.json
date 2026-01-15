@@ -100,7 +100,7 @@
     "@types/vimeo__player": "^2.18.3",
     "eslint": "^9",
     "eslint-config-next": "^16.0.7",
-    "eslint-plugin-gallop": "*",
+    "@gallop/eslint-plugin": "*",
     "jsdom": "^27.2.0",
     "postcss": "^8.5.6",
     "prettier": "^3.7.4",
