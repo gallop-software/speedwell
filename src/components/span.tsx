@@ -48,7 +48,7 @@ export function Span({
   const finalFontSize = fontSize || variantFontSizes[variant]
   const finalColor = color || 'text-contrast'
   const finalFontFamily = fontFamily || '' // no default font family
-  const finalFontWeight = fontWeight || 'font-medium' // default font weight
+  const finalFontWeight = fontWeight || 'font-normal' // inherit font weight
   const finalFontStyle = fontStyle || '' // no default font style
   const finalLineHeight = lineHeight || 'leading-normal' // default line height
   const finalTextAlign = textAlign || '' // no default text alignment

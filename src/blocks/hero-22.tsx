@@ -4,7 +4,7 @@ export default function Hero22() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 z-10"></div>
 
       {/* Background image */}
       <Image
@@ -53,12 +53,12 @@ export default function Hero22() {
           </Paragraph>
 
           {/* Product details */}
-          <div className="flex items-center justify-center gap-8 mb-10 text-white/60 text-sm tracking-wider">
-            <Span>0% Alcohol</Span>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 my-10 text-white/80 text-sm tracking-wider">
+            <Span color="text-inherit">0% Alcohol</Span>
             <span className="w-1 h-1 bg-white/40 rounded-full"></span>
-            <Span>750ml</Span>
+            <Span color="text-inherit">750ml</Span>
             <span className="w-1 h-1 bg-white/40 rounded-full"></span>
-            <Span>Small Batch</Span>
+            <Span color="text-inherit">Small Batch</Span>
           </div>
 
           {/* CTA Buttons */}
