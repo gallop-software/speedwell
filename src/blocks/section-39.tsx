@@ -7,7 +7,7 @@ import {
   Paragraph,
 } from '@/components'
 
-export default function ProductStory1() {
+export default function Section39() {
   return (
     <Section
       id="discover"
