@@ -31,6 +31,7 @@
     "build": "npm run blog && next build",
     "start": "next start",
     "lint": "eslint src/",
+    "lint:file": "eslint",
     "lint:next": "eslint src/ --rule 'gallop/no-client-blocks: off' --rule 'gallop/no-container-in-section: off' --rule 'gallop/prefer-component-props: off'",
     "lint:gallop": "eslint src/blocks/ --rule 'gallop/no-client-blocks: warn' --rule 'gallop/no-container-in-section: warn' --rule 'gallop/prefer-component-props: warn'",
     "audit": "gallop audit",

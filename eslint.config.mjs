@@ -24,6 +24,7 @@ export default [
       'gallop/no-container-in-section': 'warn',
       'gallop/prefer-component-props': 'warn',
       'gallop/prefer-typography-components': 'warn',
+      'gallop/prefer-layout-components': 'warn',
     },
   },
 ]
