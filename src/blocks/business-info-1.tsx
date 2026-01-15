@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import {
   Heading,
@@ -53,7 +51,8 @@ export default function BusinessInfo1() {
           <Heading
             as="h3"
             color="text-accent3-contrast"
-            margin="mb-7" textAlign="text-center"
+            margin="mb-7"
+            textAlign="text-center"
           >
             Business Hours
           </Heading>
@@ -104,7 +103,8 @@ export default function BusinessInfo1() {
               <Heading
                 as="h3"
                 color="text-body"
-                fontSize="text-2xl" className="flex items-center gap-1"
+                fontSize="text-2xl"
+                className="flex items-center gap-1"
               >
                 {item.title}
                 <Icon
