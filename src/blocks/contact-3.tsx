@@ -10,7 +10,6 @@ import {
   FormCheckboxGroup,
   Image,
   Accent,
-  Container,
 } from '@/components'
 
 export default function Contact3() {
@@ -19,10 +18,7 @@ export default function Contact3() {
       id="contact"
       className="py-20 md:py-30 bg-body2 relative"
     >
-      <Container
-        align="content"
-        padding="p-0"
-      >
+      <div className="mx-auto max-w-4xl">
         <Heading
           textAlign="text-center"
           as="h1"
@@ -108,7 +104,7 @@ export default function Contact3() {
           />
           <FormButton label="Send Message" />
         </Form>
-      </Container>
+      </div>
     </Section>
   )
 }

@@ -27,7 +27,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Principal Designer & Founder
           </Heading>
@@ -60,7 +60,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Senior Commercial Designer
           </Heading>
@@ -93,7 +93,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Residential Design Lead
           </Heading>
@@ -126,7 +126,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Color & Materials Specialist
           </Heading>
@@ -159,7 +159,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Kitchen & Bath Designer
           </Heading>
@@ -192,7 +192,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Space Planning Expert
           </Heading>
@@ -225,7 +225,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Project Manager
           </Heading>
@@ -258,7 +258,7 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Furniture & Styling Consultant
           </Heading>

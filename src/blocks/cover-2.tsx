@@ -8,7 +8,7 @@ export default function Cover2() {
       imageClassName=""
     >
       <Accent
-        className="text-center"
+        textAlign="text-center"
         color="text-white"
         size="medium"
       >

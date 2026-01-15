@@ -9,7 +9,7 @@ export default function Content2() {
       <Heading
         as="h2"
         id="services"
-        className="text-center"
+        textAlign="text-center"
       >
         Comprehensive Commercial Design Solutions
       </Heading>

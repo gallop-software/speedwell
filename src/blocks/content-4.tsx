@@ -9,7 +9,7 @@ export default function Content4() {
       <Heading
         as="h2"
         id="learn-more"
-        className="text-center"
+        textAlign="text-center"
       >
         Comprehensive Kitchen & Bath Design Services
       </Heading>

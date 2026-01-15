@@ -1,11 +1,4 @@
-import {
-  Section,
-  Container,
-  Heading,
-  Paragraph,
-  Accent,
-  Image,
-} from '@/components'
+import { Section, Heading, Paragraph, Accent, Image } from '@/components'
 
 export default function About4() {
   return (
@@ -14,10 +7,10 @@ export default function About4() {
       <div className="absolute top-20 right-0 w-1/3 h-96 bg-accent/5 rounded-l-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-1/2 h-80 bg-accent2/5 rounded-r-full blur-3xl"></div>
 
-      <Container align="content">
+      <div className="mx-auto max-w-4xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Accent
-            className="mb-4"
+            margin="mb-4"
             color="text-accent"
             size="small"
           >
@@ -29,7 +22,7 @@ export default function About4() {
           >
             A Culinary Journey Rooted in Tradition
           </Heading>
-          <Paragraph className="text-lg">
+          <Paragraph fontSize="text-lg">
             For over two decades, we've been crafting unforgettable dining
             experiences that celebrate the perfect marriage of time-honored
             techniques and innovative gastronomy. Each dish tells a story, each
@@ -50,7 +43,7 @@ export default function About4() {
             >
               Master Chefs
             </Heading>
-            <Paragraph className="text-sm">
+            <Paragraph fontSize="text-sm">
               Award-winning culinary artists with decades of experience across
               Michelin-starred kitchens worldwide
             </Paragraph>
@@ -67,7 +60,7 @@ export default function About4() {
             >
               Farm to Table
             </Heading>
-            <Paragraph className="text-sm">
+            <Paragraph fontSize="text-sm">
               Partnering with local farms and artisans to bring you the freshest
               seasonal ingredients at their peak
             </Paragraph>
@@ -84,13 +77,13 @@ export default function About4() {
             >
               Artisan Approach
             </Heading>
-            <Paragraph className="text-sm">
+            <Paragraph fontSize="text-sm">
               Every dish is meticulously crafted with passion, precision, and an
               unwavering commitment to excellence
             </Paragraph>
           </div>
         </div>
-      </Container>
+      </div>
     </Section>
   )
 }

@@ -10,7 +10,7 @@ export default function Content6() {
       <Heading
         as="h2"
         id="our-process"
-        className="text-center"
+        textAlign="text-center"
       >
         How We Bring Brands to Life
       </Heading>

@@ -9,7 +9,7 @@ export default function Content5() {
       <Heading
         as="h2"
         id="services"
-        className="text-center"
+        textAlign="text-center"
       >
         Transform Your Space with Expert Planning
       </Heading>

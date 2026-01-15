@@ -19,11 +19,11 @@ export default function Pricing2() {
         <div className="text-center mb-20">
           <Heading
             as="h2"
-            className="mb-6"
+            margin="mb-6"
           >
             Planning Services Tailored to You
           </Heading>
-          <Paragraph className="text-lg max-w-2xl mx-auto">
+          <Paragraph fontSize="text-lg" className="max-w-2xl mx-auto">
             From intimate gatherings to grand celebrations, we offer
             comprehensive planning packages designed to make your event
             stress-free and unforgettable.

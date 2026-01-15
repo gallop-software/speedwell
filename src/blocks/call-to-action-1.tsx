@@ -23,7 +23,7 @@ export default function CallToAction1() {
         styleAs="h2"
         textAlign="text-center"
         color="text-contrast"
-        className="mb-6"
+        margin="mb-6"
       >
         Ready to Transform Your Space?
       </Heading>
@@ -31,7 +31,7 @@ export default function CallToAction1() {
         variant="large"
         textAlign="text-center"
         color="text-contrast"
-        className="mb-12"
+        margin="mb-12"
       >
         These transformations could be yours. Whether you're looking to renovate
         a single room or redesign your entire property, our team is ready to
@@ -56,7 +56,7 @@ export default function CallToAction1() {
           <Paragraph
             textAlign="text-center"
             color="text-contrast-light"
-            className="mb-6"
+            margin="mb-6"
           >
             Meet with our design team to discuss your project goals, budget, and
             timeline
@@ -86,7 +86,7 @@ export default function CallToAction1() {
           <Paragraph
             textAlign="text-center"
             color="text-contrast-light"
-            className="mb-6"
+            margin="mb-6"
           >
             Explore more completed projects and see the full range of our
             capabilities

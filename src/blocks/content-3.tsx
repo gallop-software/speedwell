@@ -9,7 +9,7 @@ export default function Content3() {
       <Heading
         as="h2"
         id="services"
-        className="text-center"
+        textAlign="text-center"
       >
         Personalized Furniture Curation for Every Style
       </Heading>

@@ -18,11 +18,14 @@ export default function Pricing1() {
         <div className="text-center mb-16">
           <Heading
             as="h2"
-            className="mb-4"
+            margin="mb-4"
           >
             Simple, Transparent Pricing
           </Heading>
-          <Paragraph className="text-lg max-w-2xl mx-auto">
+          <Paragraph
+            fontSize="text-lg"
+            className="max-w-2xl mx-auto"
+          >
             Choose the perfect plan for your team. Scale as you grow with
             flexible options and premium features.
           </Paragraph>

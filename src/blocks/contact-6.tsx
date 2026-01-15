@@ -15,11 +15,11 @@ export default function Contact6() {
         <Heading
           as="h2"
           margin="mb-6"
-          className="text-center"
+          textAlign="text-center"
         >
           Request Photography Pricing
         </Heading>
-        <Paragraph className="text-center text-body-muted mb-12">
+        <Paragraph textAlign="text-center" color="text-body-muted" margin="mb-12">
           For more information please get in touch using the form below:
         </Paragraph>
 

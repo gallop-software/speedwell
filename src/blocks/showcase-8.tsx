@@ -35,14 +35,14 @@ export default function Showcase8() {
             >
               Our Signature Dish
             </Heading>
-            <Paragraph className="text-white/90 text-lg mb-4">
+            <Paragraph color="text-white/90" fontSize="text-lg" margin="mb-4">
               Introducing our renowned Prime Aged Ribeye with Truffle-Infused
               Mashed Potatoes and Roasted Seasonal Vegetables. A masterful
               composition of premium beef, velvety potatoes, and garden-fresh
               accompaniments that represents the pinnacle of steakhouse
               excellence.
             </Paragraph>
-            <Paragraph className="text-white/80 mb-8">
+            <Paragraph color="text-white/80" margin="mb-8">
               Featuring 28-day dry-aged USDA Prime ribeye, hand-selected for its
               exceptional marbling and tenderness. Our silky mashed potatoes are
               enriched with black truffle oil and European butter, while

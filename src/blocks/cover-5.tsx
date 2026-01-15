@@ -9,7 +9,7 @@ export default function Cover5() {
       parallax={true}
     >
       <Accent
-        className="text-center"
+        textAlign="text-center"
         color="text-white"
         size="medium"
       >

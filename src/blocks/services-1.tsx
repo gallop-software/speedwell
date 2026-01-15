@@ -96,17 +96,20 @@ export default function Services1() {
           <div className="flex flex-col justify-center">
             <Heading
               as="h2"
-              className="mb-6"
+              margin="mb-6"
             >
               My Services
             </Heading>
-            <Paragraph className="text-lg mb-6">
+            <Paragraph
+              fontSize="text-lg"
+              margin="mb-6"
+            >
               Photography is my passion and I love to turn ideas into beautiful
               things. Whether capturing intimate portraits, stunning landscapes,
               creative abstracts, or professional commercial work, I bring a
               unique artistic vision to every project.
             </Paragraph>
-            <Paragraph className="mb-8">
+            <Paragraph margin="mb-8">
               With years of experience and a commitment to excellence, I
               specialize in creating images that tell compelling stories and
               evoke emotion. From concept to final delivery, I work closely with

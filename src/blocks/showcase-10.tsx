@@ -20,7 +20,7 @@ export default function Showcase10() {
         >
           Moments We've Crafted
         </Heading>
-        <Paragraph className="text-lg">
+        <Paragraph fontSize="text-lg">
           Every celebration tells a unique story. Explore our portfolio of
           weddings, corporate events, and special occasions where dreams became
           reality through meticulous planning and creative execution.

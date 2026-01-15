@@ -53,7 +53,7 @@ export default function BusinessInfo1() {
           <Heading
             as="h3"
             color="text-accent3-contrast"
-            className="mb-7 text-center"
+            margin="mb-7" textAlign="text-center"
           >
             Business Hours
           </Heading>
@@ -104,7 +104,7 @@ export default function BusinessInfo1() {
               <Heading
                 as="h3"
                 color="text-body"
-                className="text-2xl flex items-center gap-1"
+                fontSize="text-2xl" className="flex items-center gap-1"
               >
                 {item.title}
                 <Icon
@@ -114,7 +114,7 @@ export default function BusinessInfo1() {
               </Heading>
               <Paragraph
                 color="text-body/60"
-                className="text-lg"
+                fontSize="text-lg"
                 margin="m-0"
               >
                 {item.description}

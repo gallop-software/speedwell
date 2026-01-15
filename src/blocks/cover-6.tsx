@@ -9,7 +9,7 @@ export default function Cover6() {
       parallax={true}
     >
       <Accent
-        className="text-center"
+        textAlign="text-center"
         color="text-white"
         size="medium"
       >

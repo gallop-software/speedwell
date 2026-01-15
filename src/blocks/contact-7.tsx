@@ -26,7 +26,7 @@ export default function Contact7() {
           >
             Make a Reservation
           </Heading>
-          <Paragraph className="mb-4 text-body-muted text-sm">
+          <Paragraph margin="mb-4" color="text-body-muted" fontSize="text-sm">
             Experience exceptional dining in our thoughtfully designed space.
             Book your table today and let us create an unforgettable culinary
             experience for you.
@@ -108,7 +108,8 @@ export default function Contact7() {
               lazy={false}
             />
             <Accent
-              className="absolute -top-[5%] lg:-top-[10%] right-[5%] lg:right-[5%] xl:-right-[10%] z-30 -rotate-[10deg] text-body2"
+              color="text-body2"
+              className="absolute -top-[5%] lg:-top-[10%] right-[5%] lg:right-[5%] xl:-right-[10%] z-30 -rotate-[10deg]"
               size="large"
             >
               Reserve Your Table

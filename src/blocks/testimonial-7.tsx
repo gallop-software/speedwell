@@ -1,11 +1,4 @@
-import {
-  Section,
-  Container,
-  Heading,
-  Accent,
-  Paragraph,
-  Swiper,
-} from '@/components'
+import { Section, Heading, Accent, Paragraph, Swiper } from '@/components'
 
 function StarRating({ rating = 5 }: { rating?: number }) {
   return (
@@ -56,13 +49,10 @@ export default function Testimonial7() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent2/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
 
-      <Container
-        align="content"
-        className="relative z-10"
-      >
+      <div className="mx-auto max-w-4xl relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Accent
-            className="mb-4"
+            margin="mb-4"
             color="text-accent2"
             size="medium"
           >
@@ -74,7 +64,7 @@ export default function Testimonial7() {
           >
             What Our Guests Are Saying
           </Heading>
-          <Paragraph className="text-lg text-body-muted">
+          <Paragraph fontSize="text-lg" color="text-body-muted">
             Don't just take our word for it – hear from the diners who have
             experienced our unique blend of culinary artistry and thoughtful
             design
@@ -138,7 +128,7 @@ export default function Testimonial7() {
             />
           </div>
         </Swiper>
-      </Container>
+      </div>
     </Section>
   )
 }

@@ -17,7 +17,7 @@ export default function Application1() {
     <Section className="py-20 md:py-30 bg-body2 relative">
       <Heading
         as="h2"
-        className="text-center"
+        textAlign="text-center"
       >
         Submit Your Application
       </Heading>

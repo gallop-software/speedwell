@@ -55,7 +55,7 @@ export default function Testimonial6() {
       <Heading
         as="h2"
         margin="mb-16"
-        className="text-center"
+        textAlign="text-center"
       >
         Happy Customers
       </Heading>
