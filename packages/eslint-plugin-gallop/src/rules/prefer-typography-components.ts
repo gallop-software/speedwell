@@ -37,19 +37,43 @@ const rule: Rule.RuleModule = {
         }
 
         if (elementName === 'span') {
-          // Check if this span has text-related classes or content
-          // Skip spans that are purely structural (like icons, decorative elements)
-          const hasTextClasses = node.attributes?.some((attr: any) => {
+          // Skip spans that are inside typography components (Heading, Paragraph, Label, etc.)
+          // These are used for inline styling effects like gradient text, emphasis, etc.
+          const typographyComponents = ['Heading', 'Paragraph', 'Label', 'Span', 'Quote', 'Subheading', 'Accent']
+          
+          let parent = node.parent
+          while (parent) {
+            if (
+              parent.type === 'JSXElement' &&
+              parent.openingElement?.name?.name &&
+              typographyComponents.includes(parent.openingElement.name.name)
+            ) {
+              // Span is inside a typography component, skip warning
+              return
+            }
+            parent = parent.parent
+          }
+
+          // Check className for text-related classes and gradient text
+          let hasTextClasses = false
+          let isGradientText = false
+
+          node.attributes?.forEach((attr: any) => {
             if (attr.type === 'JSXAttribute' && attr.name?.name === 'className') {
               const value = attr.value?.value || ''
               // Check for text-related Tailwind classes
-              return /\b(text-|font-|leading-|tracking-)/.test(value)
+              if (/\b(text-|font-|leading-|tracking-)/.test(value)) {
+                hasTextClasses = true
+              }
+              // Skip gradient text spans (bg-clip-text is used for gradient text effects)
+              if (/\bbg-clip-text\b/.test(value)) {
+                isGradientText = true
+              }
             }
-            return false
           })
 
-          // Only warn if the span appears to contain text styling
-          if (hasTextClasses) {
+          // Only warn if the span has text styling and is not gradient text
+          if (hasTextClasses && !isGradientText) {
             context.report({
               node,
               messageId: 'useSpan',

@@ -4,6 +4,8 @@ import {
   Column,
   Heading,
   Paragraph,
+  Span,
+  Label,
   Button,
   Buttons,
   Chip,
@@ -138,27 +140,65 @@ export default function Hero21() {
                 className="w-full aspect-[4/3] object-cover"
               />
               <div className="p-6">
-                <p className="text-sm text-gray-500 mb-1">Featured Project</p>
-                <p className="font-semibold text-gray-900">
+                <Label
+                  color="text-gray-500"
+                  margin="mb-1"
+                >
+                  Featured Project
+                </Label>
+                <Heading
+                  as="h3"
+                  fontSize="text-base"
+                  color="text-gray-900"
+                  margin="mb-0"
+                >
                   Modern Minimalist Living
-                </p>
-                <p className="text-sm text-gray-600">Completed 2025</p>
+                </Heading>
+                <Paragraph
+                  fontSize="text-sm"
+                  color="text-gray-600"
+                  margin="mb-0"
+                >
+                  Completed 2025
+                </Paragraph>
               </div>
             </div>
 
             {/* Stats card */}
             <div className="absolute top-8 right-0 w-[55%] bg-white rounded-2xl shadow-2xl p-6">
-              <p className="text-sm text-gray-500 mb-4">This Year</p>
+              <Label
+                color="text-gray-500"
+                margin="mb-4"
+              >
+                This Year
+              </Label>
               <div className="space-y-4">
                 <div>
-                  <p className="text-3xl font-bold text-gray-900">47</p>
-                  <p className="text-sm text-gray-500">Projects Completed</p>
+                  <Heading
+                    as="h4"
+                    fontSize="text-3xl"
+                    margin="mb-0"
+                  >
+                    47{' '}
+                    <span className="text-sm text-gray-500 block">
+                      Projects Completed
+                    </span>
+                  </Heading>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-green-500 text-sm font-medium">
+                  <Span
+                    fontSize="text-sm"
+                    fontWeight="font-medium"
+                    color="text-green-500"
+                  >
                     +28%
-                  </span>
-                  <span className="text-gray-400 text-sm">vs last year</span>
+                  </Span>
+                  <Span
+                    fontSize="text-sm"
+                    color="text-gray-400"
+                  >
+                    vs last year
+                  </Span>
                 </div>
               </div>
             </div>
@@ -168,22 +208,39 @@ export default function Hero21() {
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400" />
                 <div>
-                  <p className="font-medium text-gray-900 text-sm">Sarah M.</p>
-                  <p className="text-xs text-gray-500">Verified Client</p>
+                  <Paragraph
+                    fontSize="text-sm"
+                    fontWeight="font-medium"
+                    color="text-gray-900"
+                    margin="mb-0"
+                  >
+                    Sarah M.
+                  </Paragraph>
+                  <Label
+                    fontSize="text-xs"
+                    color="text-gray-500"
+                  >
+                    Verified Client
+                  </Label>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 italic">
+              <Paragraph
+                fontSize="text-sm"
+                color="text-gray-600"
+                fontStyle="italic"
+                margin="mb-0"
+              >
                 "Absolutely transformed our home. The attention to detail was
                 incredible."
-              </p>
+              </Paragraph>
               <div className="flex gap-0.5 mt-2">
                 {[...Array(5)].map((_, i) => (
-                  <span
+                  <Span
                     key={i}
-                    className="text-amber-400"
+                    color="text-amber-400"
                   >
                     ★
-                  </span>
+                  </Span>
                 ))}
               </div>
             </div>
