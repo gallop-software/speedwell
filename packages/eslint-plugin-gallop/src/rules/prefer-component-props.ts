@@ -9,7 +9,7 @@ type MessageIds = 'preferComponentProps'
 // Map of component names to their style props and corresponding Tailwind patterns
 const componentPropMappings: Record<string, Record<string, RegExp>> = {
   Paragraph: {
-    margin: /^m[btlrxyse]?-/,
+    margin: /^m([by])?-/, // m- (all), mb- (bottom), my- (y-axis) - all affect bottom margin
     color: /^text-(body|contrast|accent|white|black)/,
     fontSize: /^text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)$/,
     lineHeight: /^leading-/,
@@ -17,7 +17,7 @@ const componentPropMappings: Record<string, Record<string, RegExp>> = {
     fontWeight: /^font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)$/,
   },
   Heading: {
-    margin: /^m[btlrxyse]?-/,
+    margin: /^m([by])?-/, // m- (all), mb- (bottom), my- (y-axis) - all affect bottom margin
     color: /^text-(body|contrast|accent|white|black)/,
     fontSize: /^text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)$/,
     lineHeight: /^leading-/,
@@ -25,16 +25,16 @@ const componentPropMappings: Record<string, Record<string, RegExp>> = {
     fontWeight: /^font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)$/,
   },
   Accent: {
-    margin: /^m[btlrxyse]?-/,
+    margin: /^m([by])?-/, // m- (all), mb- (bottom), my- (y-axis) - all affect bottom margin
     color: /^text-(body|contrast|accent|white|black)/,
     size: /^text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)$/,
     textAlign: /^text-(left|center|right|justify)$/,
   },
   Button: {
-    margin: /^m[btlrxyse]?-/,
+    margin: /^m([by])?-/, // m- (all), mb- (bottom), my- (y-axis) - all affect bottom margin
   },
   Label: {
-    margin: /^m[btlrxyse]?-/,
+    margin: /^m([by])?-/, // m- (all), mb- (bottom), my- (y-axis) - all affect bottom margin
     color: /^text-(body|contrast|accent|white|black)/,
   },
 }
