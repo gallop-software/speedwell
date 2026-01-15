@@ -7,6 +7,7 @@ declare const plugin: {
         'no-client-blocks': import("@typescript-eslint/utils/dist/ts-eslint").RuleModule<"noClientBlocks", [], unknown, import("@typescript-eslint/utils/dist/ts-eslint").RuleListener>;
         'no-container-in-section': import("@typescript-eslint/utils/dist/ts-eslint").RuleModule<"noContainerInSection", [], unknown, import("@typescript-eslint/utils/dist/ts-eslint").RuleListener>;
         'prefer-component-props': import("@typescript-eslint/utils/dist/ts-eslint").RuleModule<"preferComponentProps", [], unknown, import("@typescript-eslint/utils/dist/ts-eslint").RuleListener>;
+        'prefer-typography-components': import("eslint").Rule.RuleModule;
     };
     configs: {
         speedwell: {
@@ -27,4 +28,4 @@ declare const plugin: {
         };
     };
 };
-export = plugin;
+export default plugin;

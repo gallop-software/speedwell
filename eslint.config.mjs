@@ -1,5 +1,8 @@
 import nextConfig from 'eslint-config-next'
-import gallop from 'eslint-plugin-gallop'
+import gallopModule from 'eslint-plugin-gallop'
+
+// Handle CJS default export
+const gallop = gallopModule.default || gallopModule
 
 export default [
   ...nextConfig,
@@ -23,6 +26,7 @@ export default [
       'gallop/no-client-blocks': 'warn',
       'gallop/no-container-in-section': 'warn',
       'gallop/prefer-component-props': 'warn',
+      'gallop/prefer-typography-components': 'warn',
     },
   },
 ]
