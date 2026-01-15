@@ -1,8 +1,8 @@
 import { Image, Heading, Accent, Button, Buttons } from '@/components'
 
-export default function ProductHero1() {
+export default function Hero22() {
   return (
-    <div className="relative min-h-screen bg-contrast overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50 z-10"></div>
 
