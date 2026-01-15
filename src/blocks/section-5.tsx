@@ -37,7 +37,14 @@ export default function Section5() {
             Comprehensive Design Solutions for Every Room
           </Heading>
           <Paragraph>
-            Our full-service residential design approach covers every aspect of your home. From initial concept development and space planning to furniture selection and final styling, we handle it all. We specialize in creating cohesive designs that flow seamlessly from room to room while maintaining each space's unique character. Whether you're looking to redesign a single room or transform your entire home, our team works closely with you to ensure every detail aligns with your lifestyle and aesthetic preferences.
+            Our full-service residential design approach covers every aspect of
+            your home. From initial concept development and space planning to
+            furniture selection and final styling, we handle it all. We
+            specialize in creating cohesive designs that flow seamlessly from
+            room to room while maintaining each space's unique character.
+            Whether you're looking to redesign a single room or transform your
+            entire home, our team works closely with you to ensure every detail
+            aligns with your lifestyle and aesthetic preferences.
           </Paragraph>
           <Buttons>
             <Button

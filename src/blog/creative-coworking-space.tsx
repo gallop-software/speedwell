@@ -13,7 +13,15 @@ function Details() {
       />
 
       <P>
-        This innovative coworking space for creatives needed a brand that fostered community and inspired collaboration. We developed a dynamic visual identity featuring bold colors, geometric patterns, and versatile typography that reflects the diverse creative community. The brand system includes wayfinding signage, member materials, event collateral, and digital platforms. Custom illustrations celebrate different creative disciplines while maintaining brand unity. From the reception area to private studios, every brand element reinforces the space's mission to connect creative professionals and spark meaningful partnerships.
+        This innovative coworking space for creatives needed a brand that
+        fostered community and inspired collaboration. We developed a dynamic
+        visual identity featuring bold colors, geometric patterns, and versatile
+        typography that reflects the diverse creative community. The brand
+        system includes wayfinding signage, member materials, event collateral,
+        and digital platforms. Custom illustrations celebrate different creative
+        disciplines while maintaining brand unity. From the reception area to
+        private studios, every brand element reinforces the space's mission to
+        connect creative professionals and spark meaningful partnerships.
       </P>
 
       <Button

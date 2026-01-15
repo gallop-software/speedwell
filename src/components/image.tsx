@@ -20,8 +20,10 @@ type ImageMetaData = {
   [key: string]: ImageMetadata
 }
 
-export interface ImageProps
-  extends Omit<ComponentProps<'img'>, 'alt' | 'title'> {
+export interface ImageProps extends Omit<
+  ComponentProps<'img'>,
+  'alt' | 'title'
+> {
   /** Image source URL */
   src: string
   /** Alt text for accessibility - optional, falls back to empty string */

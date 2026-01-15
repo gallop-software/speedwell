@@ -42,13 +42,24 @@ export default function Section19() {
             Construction & Procurement
           </Heading>
           <Paragraph>
-            As construction begins, our project managers maintain constant oversight, conducting regular site visits to ensure work meets our exacting standards. We coordinate deliveries, manage contractor schedules, and address any issues immediately. Our hands-on approach means potential problems are identified and resolved before they impact your timeline or budget.
+            As construction begins, our project managers maintain constant
+            oversight, conducting regular site visits to ensure work meets our
+            exacting standards. We coordinate deliveries, manage contractor
+            schedules, and address any issues immediately. Our hands-on approach
+            means potential problems are identified and resolved before they
+            impact your timeline or budget.
           </Paragraph>
           <Paragraph>
-            Simultaneously, we manage all procurement activities, tracking orders and coordinating deliveries to align perfectly with the construction schedule. Our relationships with premium suppliers and vendors ensure priority service and competitive pricing. We inspect all materials upon arrival and maintain detailed records throughout the process.
+            Simultaneously, we manage all procurement activities, tracking
+            orders and coordinating deliveries to align perfectly with the
+            construction schedule. Our relationships with premium suppliers and
+            vendors ensure priority service and competitive pricing. We inspect
+            all materials upon arrival and maintain detailed records throughout
+            the process.
           </Paragraph>
           <Quote>
-            Active oversight and clear communication ensure your project stays on track and exceeds quality expectations
+            Active oversight and clear communication ensure your project stays
+            on track and exceeds quality expectations
           </Quote>
         </Column>
       </Columns>

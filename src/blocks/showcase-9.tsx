@@ -11,32 +11,35 @@ export default function Showcase9() {
   const menuItems = [
     {
       name: 'Truffle Risotto',
-      description: 'Creamy arborio rice with black truffle, parmigiano, and wild mushrooms',
+      description:
+        'Creamy arborio rice with black truffle, parmigiano, and wild mushrooms',
       price: '$42',
       image: '/images/layout-4/pexels-minchephoto-7491887.jpg',
-      category: 'Signature Dishes'
+      category: 'Signature Dishes',
     },
     {
       name: 'Grilled Sea Bass',
-      description: 'Mediterranean-style with lemon butter, capers, and seasonal vegetables',
+      description:
+        'Mediterranean-style with lemon butter, capers, and seasonal vegetables',
       price: '$48',
       image: '/images/layout-4/pexels-nadin-sh-78971847-12918197.jpg',
-      category: 'Seafood'
+      category: 'Seafood',
     },
     {
       name: 'Wagyu Beef Tartare',
       description: 'Hand-cut wagyu with quail egg, caviar, and crispy shallots',
       price: '$38',
       image: '/images/layout-4/pexels-peps-silvestro-180443212-18229216.jpg',
-      category: 'Appetizers'
+      category: 'Appetizers',
     },
     {
       name: 'Duck Confit',
-      description: 'Slow-cooked duck leg with orange gastrique and root vegetables',
+      description:
+        'Slow-cooked duck leg with orange gastrique and root vegetables',
       price: '$45',
       image: '/images/layout-4/pexels-valeriya-9266842.jpg',
-      category: 'Main Course'
-    }
+      category: 'Main Course',
+    },
   ]
 
   return (
@@ -54,15 +57,15 @@ export default function Showcase9() {
             Featured Menu Selection
           </Heading>
           <Paragraph className="text-body-light max-w-2xl mx-auto text-lg">
-            Discover our chef's handpicked creations, each dish crafted with passion 
-            and the finest seasonal ingredients.
+            Discover our chef's handpicked creations, each dish crafted with
+            passion and the finest seasonal ingredients.
           </Paragraph>
         </div>
 
         {/* Menu Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {menuItems.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="group relative bg-body-light rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
@@ -76,7 +79,7 @@ export default function Showcase9() {
                 />
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                
+
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
                   <span className="bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -107,11 +110,14 @@ export default function Showcase9() {
 
         {/* CTA Section */}
         <div className="text-center mt-16 py-12 px-6 bg-accent/5 rounded-2xl border border-accent/10">
-          <Heading as="h3" className="mb-4">
+          <Heading
+            as="h3"
+            className="mb-4"
+          >
             Explore Our Complete Menu
           </Heading>
           <Paragraph className="text-body-light mb-8 max-w-xl mx-auto">
-            From appetizers to desserts, discover our full collection of 
+            From appetizers to desserts, discover our full collection of
             meticulously crafted dishes that celebrate flavor and artistry.
           </Paragraph>
           <Button
@@ -121,17 +127,17 @@ export default function Showcase9() {
             className="inline-flex items-center gap-2 group"
           >
             View Full Menu
-            <svg 
-              className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M17 8l4 4m0 0l-4 4m4-4H3" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
           </Button>

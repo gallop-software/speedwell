@@ -16,7 +16,10 @@ export default function Section14() {
       <Columns gap="gap-10 lg:gap-20">
         <Column>
           <Heading as="h2">Our Proven Color Consultation Process</Heading>
-          <Quote>From inspiration to implementation – we guide you every step of the way</Quote>
+          <Quote>
+            From inspiration to implementation – we guide you every step of the
+            way
+          </Quote>
           <Paragraph>What to expect during your consultation:</Paragraph>
           <List>
             <Li>Initial consultation to understand your style and goals</Li>

@@ -34,7 +34,13 @@ export default function Section16() {
             Passionate Designers, Exceptional Results
           </Heading>
           <Paragraph>
-            Our team brings together diverse talents, perspectives, and expertise to create interiors that truly transform how you live and work. Each member of Speedwell contributes unique skills and creative vision, united by a shared commitment to excellence and a passion for thoughtful design. We believe that great design comes from collaboration, listening, and understanding what makes each space and client unique.
+            Our team brings together diverse talents, perspectives, and
+            expertise to create interiors that truly transform how you live and
+            work. Each member of Speedwell contributes unique skills and
+            creative vision, united by a shared commitment to excellence and a
+            passion for thoughtful design. We believe that great design comes
+            from collaboration, listening, and understanding what makes each
+            space and client unique.
           </Paragraph>
         </Column>
       </Columns>

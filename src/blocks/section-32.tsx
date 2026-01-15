@@ -42,7 +42,14 @@ export default function Section32() {
             Building Lasting Relationships
           </Heading>
           <Paragraph fontStyle="italic">
-            Our greatest achievement is not just beautiful spaces, but the lasting relationships we build with our clients. Many return to us for additional projects, refer their friends and family, and become true advocates for our work. This trust is earned through consistent communication, respect for your vision and budget, and an unwavering commitment to exceeding expectations. We believe that exceptional design is a collaborative journey, and we are honored to be your partner in creating spaces that truly enhance your life.
+            Our greatest achievement is not just beautiful spaces, but the
+            lasting relationships we build with our clients. Many return to us
+            for additional projects, refer their friends and family, and become
+            true advocates for our work. This trust is earned through consistent
+            communication, respect for your vision and budget, and an unwavering
+            commitment to exceeding expectations. We believe that exceptional
+            design is a collaborative journey, and we are honored to be your
+            partner in creating spaces that truly enhance your life.
           </Paragraph>
         </Column>
       </Columns>

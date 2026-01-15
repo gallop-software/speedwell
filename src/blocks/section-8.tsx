@@ -34,7 +34,14 @@ export default function Section8() {
             From Concept to Completion: Our Seamless Process
           </Heading>
           <Paragraph>
-            We've refined our design process to make your experience as smooth and enjoyable as possible. Starting with an in-depth consultation, we move through concept development, detailed planning, and meticulous execution. Throughout the project, we maintain clear communication and provide regular updates, ensuring you're involved at every stage while we handle all the complex details. Our established relationships with trusted contractors and suppliers mean we can deliver exceptional results on time and within budget.
+            We've refined our design process to make your experience as smooth
+            and enjoyable as possible. Starting with an in-depth consultation,
+            we move through concept development, detailed planning, and
+            meticulous execution. Throughout the project, we maintain clear
+            communication and provide regular updates, ensuring you're involved
+            at every stage while we handle all the complex details. Our
+            established relationships with trusted contractors and suppliers
+            mean we can deliver exceptional results on time and within budget.
           </Paragraph>
           <Buttons>
             <Button

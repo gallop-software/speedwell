@@ -67,7 +67,11 @@ export default function ProductGallery1() {
           <p className="text-accent text-sm tracking-[0.2em] uppercase mb-3 font-medium">
             Experience
           </p>
-          <Heading as="h2" styleAs="h3" margin="mb-0">
+          <Heading
+            as="h2"
+            styleAs="h3"
+            margin="mb-0"
+          >
             The Art of Craft
           </Heading>
         </div>

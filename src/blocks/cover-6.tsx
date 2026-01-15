@@ -8,7 +8,11 @@ export default function Cover6() {
       imageClassName=""
       parallax={true}
     >
-      <Accent className="text-center" color="text-white" size="medium">
+      <Accent
+        className="text-center"
+        color="text-white"
+        size="medium"
+      >
         Capturing Moments That Last Forever
       </Accent>
     </Cover>

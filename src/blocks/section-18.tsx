@@ -41,13 +41,23 @@ export default function Section18() {
             Planning & Design Development
           </Heading>
           <Paragraph>
-            Every successful project begins with thorough planning. We work closely with you to refine the design concept, establish realistic timelines, and create detailed budgets. Our team prepares comprehensive specifications, coordinates with architects and engineers, and ensures all design elements are perfectly aligned before moving forward.
+            Every successful project begins with thorough planning. We work
+            closely with you to refine the design concept, establish realistic
+            timelines, and create detailed budgets. Our team prepares
+            comprehensive specifications, coordinates with architects and
+            engineers, and ensures all design elements are perfectly aligned
+            before moving forward.
           </Paragraph>
           <Paragraph>
-            During this phase, we finalize material selections, secure vendor quotes, and develop a detailed project schedule. We obtain necessary permits, coordinate with your HOA if applicable, and ensure all stakeholders understand their roles and responsibilities. This meticulous preparation sets the foundation for smooth execution.
+            During this phase, we finalize material selections, secure vendor
+            quotes, and develop a detailed project schedule. We obtain necessary
+            permits, coordinate with your HOA if applicable, and ensure all
+            stakeholders understand their roles and responsibilities. This
+            meticulous preparation sets the foundation for smooth execution.
           </Paragraph>
           <Quote>
-            Proper planning prevents problems – we invest time upfront to ensure flawless execution throughout your project
+            Proper planning prevents problems – we invest time upfront to ensure
+            flawless execution throughout your project
           </Quote>
         </Column>
       </Columns>

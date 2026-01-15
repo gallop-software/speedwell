@@ -13,7 +13,15 @@ function Details() {
       />
 
       <P>
-        This independent fashion boutique needed a rebrand that captured their curated aesthetic and commitment to sustainable fashion. We designed a sophisticated visual identity that balances timeless elegance with contemporary edge. The logo features refined letterforms with fashion-forward styling, while the color palette evokes luxury and sustainability. Brand applications span from shopping bags and tags to window displays and social media templates. The cohesive system positions the boutique as a destination for conscious consumers seeking unique, high-quality pieces that stand the test of time.
+        This independent fashion boutique needed a rebrand that captured their
+        curated aesthetic and commitment to sustainable fashion. We designed a
+        sophisticated visual identity that balances timeless elegance with
+        contemporary edge. The logo features refined letterforms with
+        fashion-forward styling, while the color palette evokes luxury and
+        sustainability. Brand applications span from shopping bags and tags to
+        window displays and social media templates. The cohesive system
+        positions the boutique as a destination for conscious consumers seeking
+        unique, high-quality pieces that stand the test of time.
       </P>
 
       <Button

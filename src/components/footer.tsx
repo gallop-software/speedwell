@@ -94,7 +94,12 @@ function WebMaster() {
       margin="mb-0"
       className="flex items-center justify-center gap-1"
     >
-      Built with <Icon icon={heartIcon} className="text-red-500" /> by the team at{' '}
+      Built with{' '}
+      <Icon
+        icon={heartIcon}
+        className="text-red-500"
+      />{' '}
+      by the team at{' '}
       <a
         className="underline hover:text-contrast-light"
         href="https://gallop.software/"

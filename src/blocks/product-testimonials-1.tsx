@@ -2,22 +2,25 @@ import { Section, Heading, Paragraph } from '@/components'
 
 const testimonials = [
   {
-    quote: "Veloria represents the pinnacle of botanical craftsmanship. The depth of flavor is simply unmatched in contemporary non-alcoholic beverages.",
-    author: "James Mercer",
-    title: "Beverage Consultant",
-    publication: "Wellness & Lifestyle Review",
+    quote:
+      'Veloria represents the pinnacle of botanical craftsmanship. The depth of flavor is simply unmatched in contemporary non-alcoholic beverages.',
+    author: 'James Mercer',
+    title: 'Beverage Consultant',
+    publication: 'Wellness & Lifestyle Review',
   },
   {
-    quote: "In my thirty years of crafting drinks, few beverages have inspired me quite like Veloria. It's a mixologist's dream for sophisticated mocktails.",
-    author: "Elena Vasquez",
-    title: "Head Mixologist",
-    publication: "The Savoy, London",
+    quote:
+      "In my thirty years of crafting drinks, few beverages have inspired me quite like Veloria. It's a mixologist's dream for sophisticated mocktails.",
+    author: 'Elena Vasquez',
+    title: 'Head Mixologist',
+    publication: 'The Savoy, London',
   },
   {
-    quote: "The attention to detail in every bottle is extraordinary. From first sip to final finish, it tells a complete story.",
-    author: "Robert Chen",
-    title: "Beverage Writer",
-    publication: "Modern Drinks Magazine",
+    quote:
+      'The attention to detail in every bottle is extraordinary. From first sip to final finish, it tells a complete story.',
+    author: 'Robert Chen',
+    title: 'Beverage Writer',
+    publication: 'Modern Drinks Magazine',
   },
 ]
 
@@ -34,7 +37,11 @@ export default function ProductTestimonials1() {
           <p className="text-accent3 text-sm tracking-[0.2em] uppercase mb-4 font-medium">
             Acclaim
           </p>
-          <Heading as="h2" color="text-white" margin="mb-6">
+          <Heading
+            as="h2"
+            color="text-white"
+            margin="mb-6"
+          >
             What the Experts Say
           </Heading>
           <div className="w-16 h-px bg-white/20 mx-auto"></div>
@@ -79,16 +86,28 @@ export default function ProductTestimonials1() {
         <div className="mt-24 pt-16 border-t border-white/10">
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
             <div className="text-center">
-              <div className="text-white/30 text-xs tracking-[0.2em] uppercase mb-2">Gold Medal</div>
-              <div className="text-white text-sm">World Beverage Innovation Awards 2024</div>
+              <div className="text-white/30 text-xs tracking-[0.2em] uppercase mb-2">
+                Gold Medal
+              </div>
+              <div className="text-white text-sm">
+                World Beverage Innovation Awards 2024
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-white/30 text-xs tracking-[0.2em] uppercase mb-2">Best in Class</div>
-              <div className="text-white text-sm">International Non-Alcoholic Awards</div>
+              <div className="text-white/30 text-xs tracking-[0.2em] uppercase mb-2">
+                Best in Class
+              </div>
+              <div className="text-white text-sm">
+                International Non-Alcoholic Awards
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-white/30 text-xs tracking-[0.2em] uppercase mb-2">Editor's Choice</div>
-              <div className="text-white text-sm">Mindful Drinking Magazine</div>
+              <div className="text-white/30 text-xs tracking-[0.2em] uppercase mb-2">
+                Editor's Choice
+              </div>
+              <div className="text-white text-sm">
+                Mindful Drinking Magazine
+              </div>
             </div>
           </div>
         </div>

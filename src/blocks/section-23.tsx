@@ -42,10 +42,17 @@ export default function Section23() {
             Partnership & Communication
           </Heading>
           <Paragraph>
-            We believe great project management means great client communication. You'll have a dedicated project manager as your single point of contact, available to answer questions, provide updates, and address concerns promptly. Regular progress reports keep you informed, while our responsive approach ensures you're never left wondering about your project's status.
+            We believe great project management means great client
+            communication. You'll have a dedicated project manager as your
+            single point of contact, available to answer questions, provide
+            updates, and address concerns promptly. Regular progress reports
+            keep you informed, while our responsive approach ensures you're
+            never left wondering about your project's status.
           </Paragraph>
           <Quote>
-            Your peace of mind is our priority – clear communication, proactive updates, and responsive support throughout your entire project journey
+            Your peace of mind is our priority – clear communication, proactive
+            updates, and responsive support throughout your entire project
+            journey
           </Quote>
         </Column>
       </Columns>

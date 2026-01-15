@@ -13,7 +13,15 @@ function Details() {
       />
 
       <P>
-        This holistic wellness studio required a brand that embodied tranquility and modern mindfulness. We created a serene visual identity featuring soft color palettes, organic shapes, and minimalist typography that reflects their approach to wellness. The brand system includes studio signage, class schedules, promotional materials, and a cohesive digital presence. Custom icons represent different wellness practices from yoga to meditation. Every touchpoint was designed to create a calm, welcoming atmosphere that resonates with clients seeking balance and wellbeing in their busy lives.
+        This holistic wellness studio required a brand that embodied tranquility
+        and modern mindfulness. We created a serene visual identity featuring
+        soft color palettes, organic shapes, and minimalist typography that
+        reflects their approach to wellness. The brand system includes studio
+        signage, class schedules, promotional materials, and a cohesive digital
+        presence. Custom icons represent different wellness practices from yoga
+        to meditation. Every touchpoint was designed to create a calm, welcoming
+        atmosphere that resonates with clients seeking balance and wellbeing in
+        their busy lives.
       </P>
 
       <Button
@@ -53,8 +61,7 @@ export const metadata = {
   featuredImage: '/images/layout-1/pexels-diva-plavalaguna-6937932.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Wellness'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/wellness-brand-identity',
+    canonical: 'https://speedwell.gallop.software/post/wellness-brand-identity',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

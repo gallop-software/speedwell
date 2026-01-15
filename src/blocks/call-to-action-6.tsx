@@ -22,7 +22,10 @@ export default function CallToAction6() {
         variant="large"
         textAlign="text-center"
       >
-        Let us help you create a layout that works beautifully for your lifestyle. Our expert space planning services ensure every square foot is maximized for function, flow, and style. Contact us today to get started.
+        Let us help you create a layout that works beautifully for your
+        lifestyle. Our expert space planning services ensure every square foot
+        is maximized for function, flow, and style. Contact us today to get
+        started.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button

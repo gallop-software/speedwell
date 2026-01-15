@@ -24,7 +24,7 @@ function Content() {
 const metadata: PageMetadata = {
   title: 'Professional Color Consultation Services | Interior Design',
   description:
-    'Expert color consultation services to transform your space with the perfect palette. Our designers help you choose colors that enhance your home\'s beauty, reflect your personality, and create the perfect ambiance.',
+    "Expert color consultation services to transform your space with the perfect palette. Our designers help you choose colors that enhance your home's beauty, reflect your personality, and create the perfect ambiance.",
   keywords: [
     'color consultation',
     'interior color design',

@@ -30,7 +30,8 @@ export default function Section13() {
             Comprehensive Color Services
           </Heading>
           <Quote>
-            Every color tells a story – let us help you tell yours with confidence and style
+            Every color tells a story – let us help you tell yours with
+            confidence and style
           </Quote>
           <Paragraph>Our color consultation services include:</Paragraph>
           <List>

@@ -13,7 +13,15 @@ function Details() {
       />
 
       <P>
-        This fast-growing SaaS startup needed a brand that could compete with industry giants while showcasing their innovative approach. We developed a bold, energetic visual identity featuring vibrant gradients, geometric patterns, and modern typography. The brand system scales seamlessly across digital and print applications, from website to investor presentations. Custom iconography and illustrations communicate complex technical concepts with clarity and personality. The result is a confident, forward-thinking brand that resonates with both enterprise clients and startup culture.
+        This fast-growing SaaS startup needed a brand that could compete with
+        industry giants while showcasing their innovative approach. We developed
+        a bold, energetic visual identity featuring vibrant gradients, geometric
+        patterns, and modern typography. The brand system scales seamlessly
+        across digital and print applications, from website to investor
+        presentations. Custom iconography and illustrations communicate complex
+        technical concepts with clarity and personality. The result is a
+        confident, forward-thinking brand that resonates with both enterprise
+        clients and startup culture.
       </P>
 
       <Button
@@ -53,8 +61,7 @@ export const metadata = {
   featuredImage: '/images/layout-1/pexels-pixabay-221185.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Digital Branding'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/modern-medical-office',
+    canonical: 'https://speedwell.gallop.software/post/modern-medical-office',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

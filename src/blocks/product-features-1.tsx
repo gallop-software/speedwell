@@ -4,22 +4,26 @@ const ingredients = [
   {
     name: 'Wild Juniper',
     origin: 'Scottish Highlands',
-    description: 'Hand-picked from ancient groves, imparting a crisp, piney essence with subtle citrus undertones.',
+    description:
+      'Hand-picked from ancient groves, imparting a crisp, piney essence with subtle citrus undertones.',
   },
   {
     name: 'Orris Root',
     origin: 'Tuscany, Italy',
-    description: 'Aged for three years to develop its distinctive violet and earthy character.',
+    description:
+      'Aged for three years to develop its distinctive violet and earthy character.',
   },
   {
     name: 'Coriander Seeds',
     origin: 'Morocco',
-    description: 'Sun-dried to perfection, adding warm, spicy notes with hints of lemon.',
+    description:
+      'Sun-dried to perfection, adding warm, spicy notes with hints of lemon.',
   },
   {
     name: 'Angelica Root',
     origin: 'Belgium',
-    description: 'The binding botanical that harmonizes all flavors into a cohesive symphony.',
+    description:
+      'The binding botanical that harmonizes all flavors into a cohesive symphony.',
   },
 ]
 
@@ -32,11 +36,14 @@ export default function ProductFeatures1() {
           <p className="text-accent text-sm tracking-[0.2em] uppercase mb-4 font-medium">
             The Craft
           </p>
-          <Heading as="h2" margin="mb-6">
+          <Heading
+            as="h2"
+            margin="mb-6"
+          >
             A Symphony of Botanicals
           </Heading>
           <Paragraph className="text-lg text-body-contrast/70">
-            Twelve carefully selected botanicals, each contributing its unique 
+            Twelve carefully selected botanicals, each contributing its unique
             character to create a spirit of extraordinary depth and complexity.
           </Paragraph>
         </div>
@@ -54,14 +61,18 @@ export default function ProductFeatures1() {
               </div>
 
               {/* Content */}
-              <Heading as="h3" styleAs="h4" margin="mb-2">
+              <Heading
+                as="h3"
+                styleAs="h4"
+                margin="mb-2"
+              >
                 {ingredient.name}
               </Heading>
-              
+
               <div className="text-sm text-accent tracking-wide mb-4">
                 {ingredient.origin}
               </div>
-              
+
               <Paragraph className="text-body-contrast/70">
                 {ingredient.description}
               </Paragraph>

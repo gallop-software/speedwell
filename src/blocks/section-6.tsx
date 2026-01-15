@@ -41,13 +41,25 @@ export default function Section6() {
             Every home tells a story, and we're here to help you tell yours
           </Quote>
           <Paragraph>
-            At Speedwell, we believe that great design is personal. Our process begins with understanding who you are, how you live, and what makes you feel at home. We take the time to learn about your daily routines, your aesthetic preferences, and your long-term goals for your space. This deep understanding allows us to create designs that aren't just beautiful, but truly functional for your unique lifestyle.
+            At Speedwell, we believe that great design is personal. Our process
+            begins with understanding who you are, how you live, and what makes
+            you feel at home. We take the time to learn about your daily
+            routines, your aesthetic preferences, and your long-term goals for
+            your space. This deep understanding allows us to create designs that
+            aren't just beautiful, but truly functional for your unique
+            lifestyle.
           </Paragraph>
           <Paragraph>
-            Our designers bring years of experience and a keen eye for detail to every project. We stay current with the latest trends while maintaining a timeless sensibility that ensures your home will feel fresh and relevant for years to come. From selecting the perfect color palette to sourcing unique furnishings and accessories, we handle every aspect with care and expertise.
+            Our designers bring years of experience and a keen eye for detail to
+            every project. We stay current with the latest trends while
+            maintaining a timeless sensibility that ensures your home will feel
+            fresh and relevant for years to come. From selecting the perfect
+            color palette to sourcing unique furnishings and accessories, we
+            handle every aspect with care and expertise.
           </Paragraph>
           <Paragraph>
-            Quality craftsmanship and attention to detail are at the heart of everything we do.
+            Quality craftsmanship and attention to detail are at the heart of
+            everything we do.
           </Paragraph>
         </Column>
       </Columns>

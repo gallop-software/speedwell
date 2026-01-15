@@ -33,7 +33,11 @@ export default function CallToAction1() {
         color="text-contrast"
         className="mb-12"
       >
-        These transformations could be yours. Whether you're looking to renovate a single room or redesign your entire property, our team is ready to bring your vision to life. Contact us today to schedule a consultation and discover how we can transform your space into something extraordinary.
+        These transformations could be yours. Whether you're looking to renovate
+        a single room or redesign your entire property, our team is ready to
+        bring your vision to life. Contact us today to schedule a consultation
+        and discover how we can transform your space into something
+        extraordinary.
       </Paragraph>
       <Columns
         gap="gap-16 lg:gap-16"
@@ -54,7 +58,8 @@ export default function CallToAction1() {
             color="text-contrast-light"
             className="mb-6"
           >
-            Meet with our design team to discuss your project goals, budget, and timeline
+            Meet with our design team to discuss your project goals, budget, and
+            timeline
           </Paragraph>
           <div className="flex justify-center">
             <Button
@@ -83,7 +88,8 @@ export default function CallToAction1() {
             color="text-contrast-light"
             className="mb-6"
           >
-            Explore more completed projects and see the full range of our capabilities
+            Explore more completed projects and see the full range of our
+            capabilities
           </Paragraph>
           <div className="flex justify-center">
             <Button

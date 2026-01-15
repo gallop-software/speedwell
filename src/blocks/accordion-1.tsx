@@ -8,12 +8,15 @@ export default function Accordion1() {
         <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
           <Li>
-            Develop creative design concepts for residential and commercial projects
+            Develop creative design concepts for residential and commercial
+            projects
           </Li>
           <Li>
             Create detailed space plans, elevations, and design presentations
           </Li>
-          <Li>Collaborate with clients to understand their vision and requirements</Li>
+          <Li>
+            Collaborate with clients to understand their vision and requirements
+          </Li>
           <Li>Select furniture, finishes, fabrics, and accessories</Li>
           <Li>Coordinate with contractors, vendors, and craftspeople</Li>
           <Li>Manage multiple projects from concept through installation</Li>
@@ -38,7 +41,9 @@ export default function Accordion1() {
       <Accordion headingText="Project Manager">
         <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
-          <Li>Oversee design projects from initial consultation to completion</Li>
+          <Li>
+            Oversee design projects from initial consultation to completion
+          </Li>
           <Li>Coordinate schedules, budgets, and timelines</Li>
           <Li>Communicate with clients, contractors, and vendors</Li>
           <Li>Ensure quality standards and project specifications are met</Li>
@@ -63,9 +68,7 @@ export default function Accordion1() {
       <Accordion headingText="Design Intern">
         <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
-          <Li>
-            Assist senior designers with project research and development
-          </Li>
+          <Li>Assist senior designers with project research and development</Li>
           <Li>Create mood boards, material boards, and design presentations</Li>
           <Li>Support space planning and furniture selection</Li>
           <Li>Participate in client meetings and site visits</Li>
@@ -73,7 +76,9 @@ export default function Accordion1() {
         </List>
         <Heading as="h4">Qualifications</Heading>
         <List className="mb-8">
-          <Li>Currently enrolled in Interior Design program or recent graduate</Li>
+          <Li>
+            Currently enrolled in Interior Design program or recent graduate
+          </Li>
           <Li>Basic knowledge of design software</Li>
           <Li>Passion for design and eagerness to learn</Li>
           <Li>Strong work ethic and attention to detail</Li>

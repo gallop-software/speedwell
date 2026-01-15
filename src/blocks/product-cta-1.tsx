@@ -1,8 +1,20 @@
-import { Section, Columns, Column, Image, Heading, Paragraph, Button, Buttons } from '@/components'
+import {
+  Section,
+  Columns,
+  Column,
+  Image,
+  Heading,
+  Paragraph,
+  Button,
+  Buttons,
+} from '@/components'
 
 export default function ProductCta1() {
   return (
-    <Section id="purchase" className="py-24 md:py-32 bg-body relative overflow-hidden">
+    <Section
+      id="purchase"
+      className="py-24 md:py-32 bg-body relative overflow-hidden"
+    >
       {/* Decorative background */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-body2/50 -skew-x-12 origin-top-right"></div>
 
@@ -17,7 +29,7 @@ export default function ProductCta1() {
             <div className="relative w-full">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-accent/5 blur-3xl rounded-full scale-150"></div>
-              
+
               <Image
                 src="/images/layout-6/pexels-roman-odintsov-5837002.jpg"
                 alt="Veloria Botanical Elixir bottle"
@@ -33,14 +45,17 @@ export default function ProductCta1() {
               Limited Release
             </p>
 
-            <Heading as="h2" margin="mb-6">
+            <Heading
+              as="h2"
+              margin="mb-6"
+            >
               Bring Veloria Home
             </Heading>
 
             <Paragraph className="text-lg mb-8 text-body-contrast/80">
-              Each bottle is individually numbered and crafted with exceptional care. 
-              Experience the culmination of six generations of 
-              botanical craftsmanship.
+              Each bottle is individually numbered and crafted with exceptional
+              care. Experience the culmination of six generations of botanical
+              craftsmanship.
             </Paragraph>
 
             {/* Product details */}
@@ -69,7 +84,7 @@ export default function ProductCta1() {
                 <div className="text-sm text-body-contrast/50 mb-1">Price</div>
                 <div className="text-4xl font-heading text-accent">$89</div>
               </div>
-              
+
               <Buttons className="flex-1 sm:justify-end">
                 <Button
                   href="#"

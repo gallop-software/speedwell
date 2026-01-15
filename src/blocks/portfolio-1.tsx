@@ -112,10 +112,16 @@ export default function Portfolio1() {
       setActiveCategory(event.detail)
     }
 
-    window.addEventListener('portfolioFilterChange', handleFilterChange as EventListener)
+    window.addEventListener(
+      'portfolioFilterChange',
+      handleFilterChange as EventListener
+    )
 
     return () => {
-      window.removeEventListener('portfolioFilterChange', handleFilterChange as EventListener)
+      window.removeEventListener(
+        'portfolioFilterChange',
+        handleFilterChange as EventListener
+      )
     }
   }, [])
 
@@ -125,11 +131,17 @@ export default function Portfolio1() {
       : portfolioItems.filter((item) => item.category === activeCategory)
 
   return (
-    <Section id="portfolio-section" className="py-20 bg-body2">
+    <Section
+      id="portfolio-section"
+      className="py-20 bg-body2"
+    >
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <Heading as="h2" className="mb-4">
+          <Heading
+            as="h2"
+            className="mb-4"
+          >
             My Selected Shots
           </Heading>
         </div>

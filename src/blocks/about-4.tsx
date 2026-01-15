@@ -30,7 +30,10 @@ export default function About4() {
             A Culinary Journey Rooted in Tradition
           </Heading>
           <Paragraph className="text-lg">
-            For over two decades, we've been crafting unforgettable dining experiences that celebrate the perfect marriage of time-honored techniques and innovative gastronomy. Each dish tells a story, each ingredient is chosen with care, and every meal becomes a memory.
+            For over two decades, we've been crafting unforgettable dining
+            experiences that celebrate the perfect marriage of time-honored
+            techniques and innovative gastronomy. Each dish tells a story, each
+            ingredient is chosen with care, and every meal becomes a memory.
           </Paragraph>
         </div>
 
@@ -48,7 +51,8 @@ export default function About4() {
               Master Chefs
             </Heading>
             <Paragraph className="text-sm">
-              Award-winning culinary artists with decades of experience across Michelin-starred kitchens worldwide
+              Award-winning culinary artists with decades of experience across
+              Michelin-starred kitchens worldwide
             </Paragraph>
           </div>
 
@@ -64,7 +68,8 @@ export default function About4() {
               Farm to Table
             </Heading>
             <Paragraph className="text-sm">
-              Partnering with local farms and artisans to bring you the freshest seasonal ingredients at their peak
+              Partnering with local farms and artisans to bring you the freshest
+              seasonal ingredients at their peak
             </Paragraph>
           </div>
 
@@ -80,7 +85,8 @@ export default function About4() {
               Artisan Approach
             </Heading>
             <Paragraph className="text-sm">
-              Every dish is meticulously crafted with passion, precision, and an unwavering commitment to excellence
+              Every dish is meticulously crafted with passion, precision, and an
+              unwavering commitment to excellence
             </Paragraph>
           </div>
         </div>

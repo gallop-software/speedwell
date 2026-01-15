@@ -14,13 +14,16 @@ export default function Showcase10() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-20">
         <Subheading className="mb-4">Our Portfolio</Subheading>
-        <Heading as="h2" margin="mb-6">
+        <Heading
+          as="h2"
+          margin="mb-6"
+        >
           Moments We've Crafted
         </Heading>
         <Paragraph className="text-lg">
-          Every celebration tells a unique story. Explore our portfolio of weddings, 
-          corporate events, and special occasions where dreams became reality through 
-          meticulous planning and creative execution.
+          Every celebration tells a unique story. Explore our portfolio of
+          weddings, corporate events, and special occasions where dreams became
+          reality through meticulous planning and creative execution.
         </Paragraph>
       </div>
 
@@ -38,7 +41,9 @@ export default function Showcase10() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <h3 className="font-heading text-2xl mb-2">Garden Wedding</h3>
-              <p className="text-sm text-white/90">Intimate outdoor ceremony with 120 guests</p>
+              <p className="text-sm text-white/90">
+                Intimate outdoor ceremony with 120 guests
+              </p>
             </div>
           </div>
         </div>
@@ -72,7 +77,9 @@ export default function Showcase10() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <h3 className="font-heading text-xl mb-2">Venue Styling</h3>
-              <p className="text-sm text-white/90">Complete event transformation</p>
+              <p className="text-sm text-white/90">
+                Complete event transformation
+              </p>
             </div>
           </div>
         </div>
@@ -89,7 +96,9 @@ export default function Showcase10() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <h3 className="font-heading text-2xl mb-2">Corporate Gala</h3>
-              <p className="text-sm text-white/90">Annual awards ceremony for 300 attendees</p>
+              <p className="text-sm text-white/90">
+                Annual awards ceremony for 300 attendees
+              </p>
             </div>
           </div>
         </div>
@@ -123,7 +132,9 @@ export default function Showcase10() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <h3 className="font-heading text-xl mb-2">Outdoor Celebration</h3>
-              <p className="text-sm text-white/90">Al fresco dining experience</p>
+              <p className="text-sm text-white/90">
+                Al fresco dining experience
+              </p>
             </div>
           </div>
         </div>
@@ -140,7 +151,9 @@ export default function Showcase10() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <h3 className="font-heading text-xl mb-2">Grand Ballroom</h3>
-              <p className="text-sm text-white/90">Luxury wedding reception with 250 guests</p>
+              <p className="text-sm text-white/90">
+                Luxury wedding reception with 250 guests
+              </p>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ export default function ProductHero1() {
     <div className="relative min-h-screen bg-contrast overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50 z-10"></div>
-      
+
       {/* Background image */}
       <Image
         src="/images/layout-6/pexels-roman-odintsov-5837002.jpg"
@@ -34,7 +34,7 @@ export default function ProductHero1() {
 
           {/* Tagline */}
           <p className="text-white/80 text-xl md:text-2xl font-light mb-4 max-w-2xl mx-auto leading-relaxed">
-            A harmonious blend of rare botanicals and pristine spring water, 
+            A harmonious blend of rare botanicals and pristine spring water,
             crafted for mindful moments.
           </p>
 

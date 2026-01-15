@@ -36,29 +36,53 @@ export default function Showcase8() {
               Our Signature Dish
             </Heading>
             <Paragraph className="text-white/90 text-lg mb-4">
-              Introducing our renowned Prime Aged Ribeye with Truffle-Infused Mashed Potatoes and Roasted Seasonal Vegetables. A masterful composition of premium beef, velvety potatoes, and garden-fresh accompaniments that represents the pinnacle of steakhouse excellence.
+              Introducing our renowned Prime Aged Ribeye with Truffle-Infused
+              Mashed Potatoes and Roasted Seasonal Vegetables. A masterful
+              composition of premium beef, velvety potatoes, and garden-fresh
+              accompaniments that represents the pinnacle of steakhouse
+              excellence.
             </Paragraph>
             <Paragraph className="text-white/80 mb-8">
-              Featuring 28-day dry-aged USDA Prime ribeye, hand-selected for its exceptional marbling and tenderness. Our silky mashed potatoes are enriched with black truffle oil and European butter, while seasonal vegetables are roasted to caramelized perfection. Each component showcases our dedication to quality and craftsmanship.
+              Featuring 28-day dry-aged USDA Prime ribeye, hand-selected for its
+              exceptional marbling and tenderness. Our silky mashed potatoes are
+              enriched with black truffle oil and European butter, while
+              seasonal vegetables are roasted to caramelized perfection. Each
+              component showcases our dedication to quality and craftsmanship.
             </Paragraph>
-            
+
             {/* Features grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">Preparation</div>
-                <div className="text-white/80 text-xs">Wood-fired grill with butter basting technique</div>
+                <div className="text-white text-sm font-semibold mb-1">
+                  Preparation
+                </div>
+                <div className="text-white/80 text-xs">
+                  Wood-fired grill with butter basting technique
+                </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">Wine Pairing</div>
-                <div className="text-white/80 text-xs">2018 Napa Valley Cabernet Sauvignon</div>
+                <div className="text-white text-sm font-semibold mb-1">
+                  Wine Pairing
+                </div>
+                <div className="text-white/80 text-xs">
+                  2018 Napa Valley Cabernet Sauvignon
+                </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">Chef's Note</div>
-                <div className="text-white/80 text-xs">Recommended medium-rare for optimal flavor</div>
+                <div className="text-white text-sm font-semibold mb-1">
+                  Chef's Note
+                </div>
+                <div className="text-white/80 text-xs">
+                  Recommended medium-rare for optimal flavor
+                </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">Accolades</div>
-                <div className="text-white/80 text-xs">Best Steak Award 2024 - Culinary Excellence</div>
+                <div className="text-white text-sm font-semibold mb-1">
+                  Accolades
+                </div>
+                <div className="text-white/80 text-xs">
+                  Best Steak Award 2024 - Culinary Excellence
+                </div>
               </div>
             </div>
           </div>

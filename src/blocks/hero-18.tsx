@@ -34,7 +34,7 @@ export default function Hero18() {
         <div className="absolute top-[2%] left-[86%] w-2 h-3 bg-orange-400 rounded-sm animate-fall-fast opacity-75 rotate-45"></div>
         <div className="absolute top-[4%] left-[92%] w-2 h-2 bg-rose-400 rounded-full animate-fall-slow opacity-80"></div>
         <div className="absolute top-[1%] left-[98%] w-3 h-3 bg-sky-400 rounded-sm animate-fall-medium opacity-70 -rotate-45"></div>
-        
+
         {/* Row 2 */}
         <div className="absolute top-[7%] left-[5%] w-2 h-2 bg-amber-400 rounded-full animate-fall-medium opacity-70"></div>
         <div className="absolute top-[9%] left-[11%] w-3 h-2 bg-fuchsia-400 rounded-sm animate-fall-fast opacity-75 rotate-45"></div>
@@ -52,7 +52,7 @@ export default function Hero18() {
         <div className="absolute top-[9%] left-[83%] w-3 h-2 bg-yellow-400 rounded-sm animate-fall-fast opacity-85 -rotate-12"></div>
         <div className="absolute top-[6%] left-[89%] w-2 h-3 bg-purple-400 rounded-sm animate-fall-slow opacity-80 rotate-12"></div>
         <div className="absolute top-[8%] left-[95%] w-2 h-2 bg-teal-400 rounded-full animate-fall-medium opacity-75"></div>
-        
+
         {/* Row 3 */}
         <div className="absolute top-[12%] left-[3%] w-2 h-3 bg-sky-400 rounded-sm animate-fall-fast opacity-75 -rotate-12"></div>
         <div className="absolute top-[14%] left-[9%] w-3 h-2 bg-lime-400 rounded-sm animate-fall-slow opacity-80 rotate-45"></div>
@@ -70,7 +70,7 @@ export default function Hero18() {
         <div className="absolute top-[14%] left-[81%] w-3 h-3 bg-fuchsia-400 rounded-sm animate-fall-slow opacity-70 rotate-12"></div>
         <div className="absolute top-[11%] left-[87%] w-4 h-2 bg-pink-400 rounded-sm animate-fall-medium opacity-75 -rotate-45"></div>
         <div className="absolute top-[13%] left-[93%] w-2 h-3 bg-yellow-400 rounded-sm animate-fall-fast opacity-80 rotate-45"></div>
-        
+
         {/* Row 4 */}
         <div className="absolute top-[17%] left-[1%] w-3 h-2 bg-purple-400 rounded-sm animate-fall-medium opacity-75 -rotate-12"></div>
         <div className="absolute top-[19%] left-[7%] w-2 h-3 bg-teal-400 rounded-sm animate-fall-fast opacity-80 rotate-45"></div>
@@ -110,7 +110,10 @@ export default function Hero18() {
               >
                 Your Dream Event, Perfectly Planned
               </Heading>
-              <Paragraph fontSize="text-lg" className="max-w-xl">
+              <Paragraph
+                fontSize="text-lg"
+                className="max-w-xl"
+              >
                 From intimate ceremonies to grand celebrations, we bring your
                 vision to life with meticulous attention to detail, creative
                 flair, and seamless execution. Let us transform your special

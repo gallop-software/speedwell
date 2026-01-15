@@ -13,7 +13,14 @@ function Details() {
       />
 
       <P>
-        We crafted a complete brand identity for this specialty coffee roaster that honors their commitment to sustainability and craft. The visual system features earthy tones, hand-drawn illustrations, and custom typography that evokes warmth and authenticity. The packaging design showcases each coffee's origin story through unique color coding and illustrated maps. From business cards to bags, every touchpoint reinforces the brand's artisanal approach and environmental values, helping them stand out in the competitive specialty coffee market.
+        We crafted a complete brand identity for this specialty coffee roaster
+        that honors their commitment to sustainability and craft. The visual
+        system features earthy tones, hand-drawn illustrations, and custom
+        typography that evokes warmth and authenticity. The packaging design
+        showcases each coffee's origin story through unique color coding and
+        illustrated maps. From business cards to bags, every touchpoint
+        reinforces the brand's artisanal approach and environmental values,
+        helping them stand out in the competitive specialty coffee market.
       </P>
 
       <Button
@@ -53,8 +60,7 @@ export const metadata = {
   featuredImage: '/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/boutique-retail-design',
+    canonical: 'https://speedwell.gallop.software/post/boutique-retail-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

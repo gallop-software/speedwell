@@ -13,7 +13,15 @@ function Details() {
       />
 
       <P>
-        This new farm-to-table restaurant needed a brand that honored local agriculture while feeling fresh and contemporary. We developed a warm, inviting identity featuring hand-lettered typography, seasonal color palettes, and illustrations celebrating regional ingredients. The menu design showcases farmer partnerships with beautiful photography and storytelling. From signage to staff uniforms, every brand element reinforces the restaurant's commitment to sustainability and community. The cohesive visual system creates a memorable dining experience that has customers returning and sharing on social media.
+        This new farm-to-table restaurant needed a brand that honored local
+        agriculture while feeling fresh and contemporary. We developed a warm,
+        inviting identity featuring hand-lettered typography, seasonal color
+        palettes, and illustrations celebrating regional ingredients. The menu
+        design showcases farmer partnerships with beautiful photography and
+        storytelling. From signage to staff uniforms, every brand element
+        reinforces the restaurant's commitment to sustainability and community.
+        The cohesive visual system creates a memorable dining experience that
+        has customers returning and sharing on social media.
       </P>
 
       <Button
@@ -53,8 +61,7 @@ export const metadata = {
   featuredImage: '/images/layout-1/pexels-enginakyurt-1435894.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/urban-coffee-house',
+    canonical: 'https://speedwell.gallop.software/post/urban-coffee-house',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

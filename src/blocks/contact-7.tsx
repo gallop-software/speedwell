@@ -20,9 +20,16 @@ export default function Contact7() {
         align="items-center"
       >
         <Column className="mb-10">
-          <Heading as="h2" margin="mb-2">Make a Reservation</Heading>
+          <Heading
+            as="h2"
+            margin="mb-2"
+          >
+            Make a Reservation
+          </Heading>
           <Paragraph className="mb-4 text-body-muted text-sm">
-            Experience exceptional dining in our thoughtfully designed space. Book your table today and let us create an unforgettable culinary experience for you.
+            Experience exceptional dining in our thoughtfully designed space.
+            Book your table today and let us create an unforgettable culinary
+            experience for you.
           </Paragraph>
           <Form classname="space-y-2">
             <FormInput

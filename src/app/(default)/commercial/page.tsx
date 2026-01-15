@@ -37,7 +37,8 @@ const metadata: PageMetadata = {
     'business interior design',
   ],
   slug: 'commercial',
-  featuredImage: '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+  featuredImage:
+    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
   focusKeyword: 'commercial interior design',
   readingTimeMinutes: 5,
   publishDate: '2024-05-20T09:30:00Z',

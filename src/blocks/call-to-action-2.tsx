@@ -22,7 +22,14 @@ export default function CallToAction2() {
         variant="large"
         textAlign="text-center"
       >
-        Stop second-guessing your color choices and start loving your space. Our expert color consultants are ready to help you create a beautiful, cohesive home that reflects your unique style and personality. Whether you need guidance for a single room or a complete home transformation, we'll provide the professional expertise and confidence you need to make the perfect color decisions. Schedule your consultation today and discover how the right colors can completely transform your living experience.
+        Stop second-guessing your color choices and start loving your space. Our
+        expert color consultants are ready to help you create a beautiful,
+        cohesive home that reflects your unique style and personality. Whether
+        you need guidance for a single room or a complete home transformation,
+        we'll provide the professional expertise and confidence you need to make
+        the perfect color decisions. Schedule your consultation today and
+        discover how the right colors can completely transform your living
+        experience.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button

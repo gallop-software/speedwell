@@ -37,13 +37,25 @@ export default function Section9() {
             Award-Winning Design Excellence
           </Heading>
           <Paragraph>
-            Our commitment to excellence has earned us recognition from leading industry organizations and the trust of discerning homeowners. With over a decade of experience transforming residential spaces, we've built a reputation for delivering designs that exceed expectations while respecting timelines and budgets.
+            Our commitment to excellence has earned us recognition from leading
+            industry organizations and the trust of discerning homeowners. With
+            over a decade of experience transforming residential spaces, we've
+            built a reputation for delivering designs that exceed expectations
+            while respecting timelines and budgets.
           </Paragraph>
           <Paragraph>
-            What sets Speedwell apart is our holistic approach to residential design. We don't just focus on aesthetics – we consider how you live, work, and relax in your space. Our designs enhance natural light, improve flow between rooms, and create harmonious environments that promote well-being. We collaborate with skilled craftspeople and artisans to ensure every element, from custom cabinetry to lighting fixtures, is executed to perfection.
+            What sets Speedwell apart is our holistic approach to residential
+            design. We don't just focus on aesthetics – we consider how you
+            live, work, and relax in your space. Our designs enhance natural
+            light, improve flow between rooms, and create harmonious
+            environments that promote well-being. We collaborate with skilled
+            craftspeople and artisans to ensure every element, from custom
+            cabinetry to lighting fixtures, is executed to perfection.
           </Paragraph>
           <Paragraph>
-            Ready to transform your home? Contact us today to schedule a consultation and discover how we can bring your vision to life with our comprehensive residential interior design services.
+            Ready to transform your home? Contact us today to schedule a
+            consultation and discover how we can bring your vision to life with
+            our comprehensive residential interior design services.
           </Paragraph>
         </Column>
       </Columns>

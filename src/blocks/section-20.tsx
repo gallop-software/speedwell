@@ -42,13 +42,23 @@ export default function Section20() {
             Installation & Styling
           </Heading>
           <Paragraph>
-            The final phase brings your design vision to life. Our team oversees the installation of all furnishings, fixtures, and décor elements with meticulous attention to detail. We coordinate specialty contractors for custom work, ensure proper placement and assembly, and conduct thorough quality checks at every stage.
+            The final phase brings your design vision to life. Our team oversees
+            the installation of all furnishings, fixtures, and décor elements
+            with meticulous attention to detail. We coordinate specialty
+            contractors for custom work, ensure proper placement and assembly,
+            and conduct thorough quality checks at every stage.
           </Paragraph>
           <Paragraph>
-            Once installations are complete, our designers perform final styling, adding the finishing touches that make your space truly exceptional. We conduct a comprehensive walkthrough with you, ensuring every element meets your expectations. Our detailed punch list process addresses any final adjustments needed before project completion.
+            Once installations are complete, our designers perform final
+            styling, adding the finishing touches that make your space truly
+            exceptional. We conduct a comprehensive walkthrough with you,
+            ensuring every element meets your expectations. Our detailed punch
+            list process addresses any final adjustments needed before project
+            completion.
           </Paragraph>
           <Quote>
-            The final details make all the difference – we perfect every element to ensure your complete satisfaction
+            The final details make all the difference – we perfect every element
+            to ensure your complete satisfaction
           </Quote>
         </Column>
       </Columns>

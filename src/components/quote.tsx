@@ -1,7 +1,6 @@
 import { clsx } from 'clsx'
 
-export interface QuoteProps
-  extends React.ComponentPropsWithoutRef<'blockquote'> {
+export interface QuoteProps extends React.ComponentPropsWithoutRef<'blockquote'> {
   /** Variant of the quote - controls default styling */
   variant?: 'default' | 'large' | 'small'
   /** Font size override */
