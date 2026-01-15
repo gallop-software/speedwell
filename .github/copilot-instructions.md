@@ -129,6 +129,7 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 - `Heading` - props: `as` (h1-h6), `color`, `className`, `textAlign`, `margin`, `fontSize`, `fontWeight`, `id`
 - `Subheading` - accent subheadings, props: `as`, `fontSize`, `color`, `margin`, `textAlign`
 - `Paragraph` - props: `variant` ("large"), `color`, `className`, `textAlign`, `margin`, `fontSize`, `lineHeight`
+- `Span` - inline text (like Paragraph but `mb-0` default), props: `variant`, `color`, `fontSize`, `margin`, `textAlign`
 - `Accent` - props: `size`, `color`, `margin`, `textAlign`, `className`
 - `Label` - uppercase text for labels, props: `variant`, `fontSize`, `color`, `margin`, `textAlign`, `fontWeight`
 - `Quote` - blockquotes, props: `variant`, `fontSize`, `color`, `margin`, `textAlign`, `fontStyle`
@@ -279,6 +280,24 @@ Don't use `Container` inside `Section` - it's redundant. Use `Section`'s `innerA
 <Section innerAlign="content">
   <Heading>...</Heading>
 </Section>
+```
+
+### `gallop/prefer-typography-components`
+
+Use `Paragraph` and `Span` components instead of raw `<p>` and `<span>` elements in blocks.
+
+**Bad:**
+
+```tsx
+<p className="text-sm text-gray-500">Some text</p>
+<span className="text-green-500">+28%</span>
+```
+
+**Good:**
+
+```tsx
+<Paragraph fontSize="text-sm" color="text-gray-500">Some text</Paragraph>
+<Span fontSize="text-sm" color="text-green-500">+28%</Span>
 ```
 
 ### `gallop/prefer-component-props`
