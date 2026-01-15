@@ -13,7 +13,7 @@ export function Contact1() {
           <div className="order-1 lg:order-1">
             <Heading
               as="h2"
-              className="text-center"
+              textAlign="text-center"
             >
               Get in touch
             </Heading>

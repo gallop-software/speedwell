@@ -115,7 +115,7 @@ function Copyright() {
     <Paragraph
       fontSize="text-sm"
       margin="mb-0"
-      className="text-center lg:text-left"
+      textAlign="text-center lg:text-left"
     >
       &copy; {new Date().getFullYear()} Timmerman Interior Designer
     </Paragraph>
@@ -139,7 +139,7 @@ export function Footer2() {
               <Paragraph
                 fontSize="text-sm"
                 margin="mb-4"
-                className="text-center md:text-left"
+                textAlign="text-center md:text-left"
               >
                 Situated in the heart of the Design District on Main Street, our
                 studio is steps away from premier showrooms and artisan
@@ -154,7 +154,7 @@ export function Footer2() {
                 as="h4"
                 fontSize="text-lg"
                 margin="mb-6"
-                className="text-center md:text-left"
+                textAlign="text-center md:text-left"
               >
                 Menu
               </Heading>
@@ -178,7 +178,7 @@ export function Footer2() {
                 as="h4"
                 fontSize="text-lg"
                 margin="mb-6"
-                className="text-center md:text-left"
+                textAlign="text-center md:text-left"
               >
                 Our Services
               </Heading>
@@ -202,7 +202,7 @@ export function Footer2() {
                 as="h4"
                 fontSize="text-lg"
                 margin="mb-6"
-                className="text-center md:text-left"
+                textAlign="text-center md:text-left"
               >
                 Contact
               </Heading>

@@ -97,7 +97,7 @@ export function OrbitStats({
             <Heading
               as="h3"
               margin="mb-2"
-              className="text-3xl"
+              fontSize="text-3xl"
             >
               <CountUp
                 end={stat}

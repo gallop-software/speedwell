@@ -137,7 +137,7 @@ export function Footer() {
                 as="h4"
                 styleAs="h3"
                 fontSize="text-xl"
-                className="text-center italic"
+                textAlign="text-center" className="italic"
               >
                 Situated in the heart of the Design District on Main Street, our
                 studio is steps away from premier showrooms and artisan

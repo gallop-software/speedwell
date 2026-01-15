@@ -430,7 +430,7 @@ const FormRadioGroup = ({
 }: FormRadioProps) => (
   <fieldset className="space-y-2">
     {heading && (
-      <Paragraph className="text-contrast !mb-3">{heading}</Paragraph>
+      <Paragraph color="text-contrast" margin="mb-3">{heading}</Paragraph>
     )}
     <div className="flex flex-col gap-3">
       {options.map((option) => (
@@ -471,7 +471,7 @@ const FormCheckboxGroup = ({
 }: FormCheckboxProps) => (
   <fieldset className="space-y-2">
     {heading && (
-      <Paragraph className="text-contrast !mb-3">{heading}</Paragraph>
+      <Paragraph color="text-contrast" margin="mb-3">{heading}</Paragraph>
     )}
     <div className="flex flex-col gap-3">
       {options.map((option) => (

@@ -38,7 +38,9 @@ export function Card2({
       >
         <Heading
           as="h3"
-          className="text-contrast !m-0 w-full px-8 text-center whitespace-normal break-words"
+          color="text-contrast"
+          textAlign="text-center"
+          margin="m-0" className="w-full px-8 whitespace-normal break-words"
         >
           {name}
         </Heading>

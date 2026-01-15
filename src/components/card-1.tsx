@@ -67,7 +67,8 @@ export function Card1({
         {/* Vertical Text Label - Rotated 90 degrees */}
         <Heading
           as="h3"
-          className="absolute flex items-center -rotate-90 h-14 right-20 xl:right-24 -top-10 transform origin-top-right bg-body2 text-body2-contrast px-12 whitespace-nowrap shadow-lg !text-[1.4rem]"
+          color="text-body2-contrast"
+          className="absolute flex items-center -rotate-90 h-14 right-20 xl:right-24 -top-10 transform origin-top-right bg-body2 px-12 whitespace-nowrap shadow-lg !text-[1.4rem]"
         >
           {title}
         </Heading>
