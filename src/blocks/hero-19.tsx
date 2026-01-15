@@ -76,7 +76,8 @@ export default function Hero19() {
                       <Heading
                         as="h1"
                         color="text-body"
-                        className="mb-0! max-w-3xl"
+                        margin="mb-0!"
+                        className="max-w-3xl"
                         textAlign="text-center xl:text-left mx-auto xl:mx-0"
                       >
                         {slide.heading}
@@ -84,7 +85,8 @@ export default function Hero19() {
                       <Paragraph
                         variant="large"
                         color="text-body"
-                        className="mb-0! max-w-xl"
+                        margin="mb-0!"
+                        className="max-w-xl"
                         textAlign="text-center xl:text-left mx-auto xl:mx-0"
                       >
                         {slide.paragraph}

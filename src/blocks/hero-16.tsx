@@ -43,7 +43,8 @@ export default function Hero16() {
     <div
       className="relative px-6 bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/layout-3/pexels-plann-2999237-4549411.jpg')",
+        backgroundImage:
+          "url('/images/layout-3/pexels-plann-2999237-4549411.jpg')",
       }}
     >
       {/* Overlay */}
@@ -74,7 +75,8 @@ export default function Hero16() {
                     <Heading
                       as="h1"
                       color="text-body"
-                      className="mb-0! max-w-3xl"
+                      margin="mb-0!"
+                      className="max-w-3xl"
                       textAlign="text-center xl:text-left mx-auto xl:mx-0"
                     >
                       {slide.heading}
@@ -82,7 +84,8 @@ export default function Hero16() {
                     <Paragraph
                       variant="large"
                       color="text-body"
-                      className="mb-0! max-w-xl"
+                      margin="mb-0!"
+                      className="max-w-xl"
                       textAlign="text-center xl:text-left mx-auto xl:mx-0"
                     >
                       {slide.paragraph}

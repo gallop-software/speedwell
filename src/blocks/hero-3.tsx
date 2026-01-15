@@ -27,7 +27,8 @@ export default function Hero3() {
                 lazy={false}
               />
               <Accent
-                className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-10 lg:-right-40 transform text-left lg:text-right -rotate-12"
+                className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-10 lg:-right-40 transform lg:text-right -rotate-12"
+                textAlign="text-left"
                 color="text-white"
               >
                 dream homes

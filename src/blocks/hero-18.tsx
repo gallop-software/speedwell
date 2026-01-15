@@ -110,7 +110,7 @@ export default function Hero18() {
               >
                 Your Dream Event, Perfectly Planned
               </Heading>
-              <Paragraph className="text-lg max-w-xl">
+              <Paragraph fontSize="text-lg" className="max-w-xl">
                 From intimate ceremonies to grand celebrations, we bring your
                 vision to life with meticulous attention to detail, creative
                 flair, and seamless execution. Let us transform your special

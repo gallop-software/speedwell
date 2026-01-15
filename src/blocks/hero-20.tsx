@@ -36,7 +36,7 @@ export default function Hero20() {
             as="h1"
             color="text-white"
             margin="mb-6"
-            className="text-5xl md:text-6xl lg:text-7xl"
+            fontSize="text-5xl md:text-6xl lg:text-7xl"
           >
             The Mindshift Podcast
           </Heading>
@@ -61,7 +61,7 @@ export default function Hero20() {
                 as="h3"
                 color="text-white"
                 margin=""
-                className="text-2xl"
+                fontSize="text-2xl"
               >
                 <CountUp
                   end={150}
@@ -83,7 +83,7 @@ export default function Hero20() {
                 as="h3"
                 color="text-white"
                 margin=""
-                className="text-2xl"
+                fontSize="text-2xl"
               >
                 <CountUp
                   end={2}
@@ -106,7 +106,8 @@ export default function Hero20() {
                 as="h3"
                 color="text-white"
                 margin=""
-                className="text-2xl flex items-center justify-center gap-1"
+                fontSize="text-2xl"
+                className="flex items-center justify-center gap-1"
               >
                 <CountUp
                   end={4.9}
