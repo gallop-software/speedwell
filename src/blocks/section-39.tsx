@@ -5,6 +5,9 @@ import {
   Image,
   Heading,
   Paragraph,
+  Label,
+  Grid,
+  CountUp,
 } from '@/components'
 
 export default function Section39() {
@@ -47,18 +50,25 @@ export default function Section39() {
 
           {/* Content Column */}
           <Column className="flex flex-col justify-center">
-            <p className="text-accent text-sm tracking-[0.2em] uppercase mb-4 font-medium">
-              Our Story
-            </p>
-
             <Heading
               as="h2"
-              margin="mb-6"
+              styleAs="h3"
+              fontSize="text-3xl"
+              color="text-accent5"
+              margin="mb-4"
+              fontWeight="font-medium"
+            >
+              Our Story
+            </Heading>
+
+            <Heading
+              as="h3"
+              styleAs="h2"
             >
               Born from Tradition, Refined by Time
             </Heading>
 
-            <Paragraph className="text-lg mb-6 leading-relaxed">
+            <Paragraph>
               In the mist-covered hills of the Scottish Highlands, where ancient
               rivers meet untouched wilderness, we discovered the inspiration
               for Veloria. Our master blenders have spent decades perfecting the
@@ -66,7 +76,7 @@ export default function Section39() {
               generations.
             </Paragraph>
 
-            <Paragraph className="mb-8 text-body-contrast/70">
+            <Paragraph>
               Each bottle represents over 200 hours of careful
               craftsmanship—from hand-selecting the finest botanicals at dawn to
               the slow cold-press extraction that captures every nuanced flavor.
@@ -76,32 +86,73 @@ export default function Section39() {
             </Paragraph>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-body-dark/20">
+            <Grid
+              cols="grid-cols-3"
+              gap="gap-8"
+            >
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-heading text-accent mb-2">
-                  1847
-                </div>
-                <div className="text-sm text-body-contrast/60 tracking-wide">
+                <Heading
+                  as="h3"
+                  fontSize="text-3xl md:text-4xl"
+                  color="text-accent"
+                  margin="mb-2"
+                >
+                  <CountUp
+                    end={1847}
+                    duration={2.5}
+                    separator=","
+                  />
+                </Heading>
+                <Label
+                  fontSize="text-sm"
+                  color="text-body-contrast/60"
+                  className="tracking-wide"
+                >
                   Year Founded
-                </div>
+                </Label>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-heading text-accent mb-2">
-                  12
-                </div>
-                <div className="text-sm text-body-contrast/60 tracking-wide">
+                <Heading
+                  as="h3"
+                  fontSize="text-3xl md:text-4xl"
+                  color="text-accent"
+                  margin="mb-2"
+                >
+                  <CountUp
+                    end={12}
+                    duration={2}
+                  />
+                </Heading>
+                <Label
+                  fontSize="text-sm"
+                  color="text-body-contrast/60"
+                  className="tracking-wide"
+                >
                   Botanicals
-                </div>
+                </Label>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-heading text-accent mb-2">
-                  6th
-                </div>
-                <div className="text-sm text-body-contrast/60 tracking-wide">
+                <Heading
+                  as="h3"
+                  fontSize="text-3xl md:text-4xl"
+                  color="text-accent"
+                  margin="mb-2"
+                >
+                  <CountUp
+                    end={6}
+                    suffix="th"
+                    duration={2}
+                  />
+                </Heading>
+                <Label
+                  fontSize="text-sm"
+                  color="text-body-contrast/60"
+                  className="tracking-wide"
+                >
                   Generation
-                </div>
+                </Label>
               </div>
-            </div>
+            </Grid>
           </Column>
         </Columns>
       </div>
