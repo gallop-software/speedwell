@@ -59,7 +59,8 @@ function showVersion() {
 async function main() {
   switch (command) {
     case 'audit':
-      const auditPath = args[1] && !args[1].startsWith('--') ? args[1] : 'src/blocks/'
+      const auditPath =
+        args[1] && !args[1].startsWith('--') ? args[1] : 'src/blocks/'
       const auditOptions = {
         strict: args.includes('--strict'),
         json: args.includes('--json'),
