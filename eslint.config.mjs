@@ -1,5 +1,5 @@
 import nextConfig from 'eslint-config-next'
-import gallop from '@gallop.software/eslint-plugin'
+import gallop from '@gallop.software/canon/eslint'
 
 export default [
   ...nextConfig,

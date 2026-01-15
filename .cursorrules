@@ -12,7 +12,7 @@ This file is auto-generated from @gallop.software/canon. Do not edit manually. R
 
 ## Enforced Patterns (ESLint)
 
-These patterns are enforced by `@gallop.software/eslint-plugin`. Violations will be flagged.
+These patterns are enforced by `@gallop.software/canon/eslint`. Violations will be flagged.
 
 ### 001: Server-First Blocks
 
