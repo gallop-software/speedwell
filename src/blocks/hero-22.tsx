@@ -1,4 +1,4 @@
-import { Image, Heading, Accent, Button, Buttons } from '@/components'
+import { Image, Heading, Paragraph, Span, Button, Buttons } from '@/components'
 
 export default function Hero22() {
   return (
@@ -12,39 +12,53 @@ export default function Hero22() {
         alt="Premium botanical beverage"
         className="absolute inset-0 w-full h-full object-cover"
         size="full"
+        rounded="rounded-none"
       />
 
       {/* Content */}
       <div className="relative z-20 min-h-screen flex flex-col justify-center items-center text-center px-6 pt-navbar">
         <div className="max-w-4xl mx-auto">
           {/* Brand accent */}
-          <p className="text-accent3 text-sm tracking-[0.3em] uppercase mb-6 font-medium">
+          <Paragraph
+            color="text-accent3"
+            fontSize="text-sm"
+            margin="mb-6"
+            fontWeight="font-medium"
+            className="tracking-[0.3em] uppercase"
+          >
             Crafted with Purpose
-          </p>
+          </Paragraph>
 
           {/* Main heading */}
           <Heading
             as="h1"
             color="text-white"
             margin="mb-6"
-            className="text-5xl md:text-6xl lg:text-7xl"
+            fontSize="text-5xl md:text-6xl lg:text-7xl"
           >
             Veloria Botanical Elixir
           </Heading>
 
           {/* Tagline */}
-          <p className="text-white/80 text-xl md:text-2xl font-light mb-4 max-w-2xl mx-auto leading-relaxed">
+          <Paragraph
+            color="text-white/80"
+            fontSize="text-xl md:text-2xl"
+            margin="mb-4"
+            lineHeight="leading-relaxed"
+            fontWeight="font-light"
+            className="max-w-2xl mx-auto"
+          >
             A harmonious blend of rare botanicals and pristine spring water,
             crafted for mindful moments.
-          </p>
+          </Paragraph>
 
           {/* Product details */}
           <div className="flex items-center justify-center gap-8 mb-10 text-white/60 text-sm tracking-wider">
-            <span>0% Alcohol</span>
+            <Span>0% Alcohol</Span>
             <span className="w-1 h-1 bg-white/40 rounded-full"></span>
-            <span>750ml</span>
+            <Span>750ml</Span>
             <span className="w-1 h-1 bg-white/40 rounded-full"></span>
-            <span>Small Batch</span>
+            <Span>Small Batch</Span>
           </div>
 
           {/* CTA Buttons */}
