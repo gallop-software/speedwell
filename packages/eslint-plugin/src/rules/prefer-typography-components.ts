@@ -7,12 +7,13 @@ const rule: Rule.RuleModule = {
       description:
         'Prefer Paragraph and Span components over raw <p> and <span> elements in blocks',
       recommended: true,
+      url: 'https://github.com/gallop-software/canon/blob/main/patterns/003-typography-components.md',
     },
     messages: {
       useParagraph:
-        'Use the Paragraph component instead of <p>. Import from @/components: import { Paragraph } from "@/components"',
+        '[Canon 003] Use the Paragraph component instead of <p>. Import: import { Paragraph } from "@/components"',
       useSpan:
-        'Use the Span component instead of <span> for text content. Import from @/components: import { Span } from "@/components"',
+        '[Canon 003] Use the Span component instead of <span> for text content. Import: import { Span } from "@/components"',
     },
     schema: [],
   },
