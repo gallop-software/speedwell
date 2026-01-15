@@ -188,6 +188,7 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 6. Use Tailwind for all styling
 7. Use `Section`, `Columns`, `Column` for layout structure
 8. Add `Image` components with `size="large"` for large images
+9. Run `npm run lint` on the new file to verify it passes all rules
 
 ## Creating Blocks from Inspiration
 

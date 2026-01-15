@@ -1,6 +1,7 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
+import Hero21 from '@/blocks/hero-21'
 import ProductHero1 from '@/blocks/product-hero-1'
 import ProductStory1 from '@/blocks/product-story-1'
 import ProductFeatures1 from '@/blocks/product-features-1'
@@ -11,6 +12,7 @@ import ProductCta1 from '@/blocks/product-cta-1'
 function Content() {
   return (
     <>
+      <Hero21 />
       <ProductHero1 />
       <ProductStory1 />
       <ProductFeatures1 />
