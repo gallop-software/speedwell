@@ -15,24 +15,70 @@ import sparklesIcon from '@iconify/icons-heroicons/sparkles-20-solid'
 export default function Hero21() {
   return (
     <Section className="relative min-h-screen overflow-hidden pt-navbar">
-      {/* Gradient mesh background */}
+      {/* Gradient mesh background with diagonal clip */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 opacity-80" />
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-violet-600 to-transparent opacity-60 blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-amber-400 to-transparent opacity-50 blur-3xl" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-400 rounded-full opacity-30 blur-3xl" />
+        {/* Base - white background below the diagonal */}
+        <div className="absolute inset-0 bg-white" />
+
+        {/* Main colorful gradient with diagonal clip */}
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
+        />
+
+        {/* Blur overlays for depth */}
+        <div
+          className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-violet-600 to-transparent opacity-60 blur-3xl"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
+        />
+        <div
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-400 rounded-full opacity-30 blur-3xl"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
+        />
       </div>
+
+      {/* Diagonal dashed lines overlay */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-20"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <pattern
+            id="hero21-diagonal-lines"
+            patternUnits="userSpaceOnUse"
+            width="50"
+            height="50"
+            patternTransform="rotate(-45)"
+          >
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="50"
+              stroke="white"
+              strokeWidth="1"
+              strokeDasharray="6 12"
+            />
+          </pattern>
+        </defs>
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#hero21-diagonal-lines)"
+        />
+      </svg>
 
       <Columns
         cols="grid-cols-1 lg:grid-cols-2"
         gap="gap-12 lg:gap-16"
         align="items-center"
-        className="py-20 lg:py-32"
+        className="pb-20 lg:pb-32"
       >
         <Column>
           <Chip
             iconBefore={sparklesIcon}
-            bgColor="bg-white/20"
+            bgColor="bg-gray-900"
             color="text-white"
             margin="mb-8"
           >
@@ -41,18 +87,18 @@ export default function Hero21() {
 
           <Heading
             as="h1"
-            color="text-white"
+            color="text-gray-900"
             fontSize="text-5xl sm:text-6xl lg:text-7xl"
             margin="mb-6"
           >
             Transform your space into something{' '}
-            <span className="bg-gradient-to-r from-amber-200 via-yellow-300 to-orange-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">
               extraordinary
             </span>
           </Heading>
 
           <Paragraph
-            color="text-white/90"
+            color="text-gray-600"
             fontSize="text-lg md:text-xl"
             className="max-w-xl"
             margin="mb-10"
@@ -66,7 +112,6 @@ export default function Hero21() {
             <Button
               href="/contact"
               variant="primary"
-              dark
               icon={arrowRightIcon}
               iconPlacement="after"
               size="medium"
@@ -76,7 +121,6 @@ export default function Hero21() {
             <Button
               href="/portfolio"
               variant="outline"
-              dark
             >
               View Portfolio
             </Button>
