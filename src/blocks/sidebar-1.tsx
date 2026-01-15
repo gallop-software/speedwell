@@ -1,32 +1,11 @@
-'use client'
-
-import React from 'react'
-import { Button, Section, Heading, Paragraph, Image } from '@/components'
+import { Section, Heading, Paragraph, Image } from '@/components'
 import {
   SidebarStackProvider,
-  useSidebarStack,
-  SidebarStackRenderer,
+  SidebarPanels,
+  SidebarLink,
+  SidebarClickHandler,
+  OpenSidebarButton,
 } from '@/components/sidebar-stack'
-
-function SidebarLink({
-  children,
-  componentId,
-  title,
-}: {
-  children: React.ReactNode
-  componentId: string
-  title: string
-}) {
-  const { push } = useSidebarStack()
-  return (
-    <button
-      onClick={() => push({ title, componentId })}
-      className="text-blue-600 underline cursor-pointer hover:text-blue-800"
-    >
-      {children}
-    </button>
-  )
-}
 
 function Demo1() {
   return (
@@ -350,43 +329,31 @@ function Demo6() {
   )
 }
 
-const demoComponents: Record<string, () => React.ReactNode> = {
-  demo1: Demo1,
-  demo2: Demo2,
-  demo3: Demo3,
-  demo4: Demo4,
-  demo5: Demo5,
-  demo6: Demo6,
-}
-
-function Sidebar1Content() {
-  const { push } = useSidebarStack()
-
-  const handleOpenBlog = () => {
-    push({ title: 'Interior Design', componentId: 'demo1' })
-  }
-
-  const renderContent = (componentId: string) => {
-    const Component = demoComponents[componentId]
-    return Component ? <Component /> : <Paragraph>Content not found</Paragraph>
-  }
-
-  return (
-    <>
-      <Section className="py-[300px] lg:py-[600px]">
-        <div className="flex justify-center">
-          <Button onClick={handleOpenBlog}>Open Blog</Button>
-        </div>
-      </Section>
-      <SidebarStackRenderer renderContent={renderContent} />
-    </>
-  )
+const panels = {
+  demo1: <Demo1 />,
+  demo2: <Demo2 />,
+  demo3: <Demo3 />,
+  demo4: <Demo4 />,
+  demo5: <Demo5 />,
+  demo6: <Demo6 />,
 }
 
 export default function Sidebar1() {
   return (
     <SidebarStackProvider>
-      <Sidebar1Content />
+      <SidebarClickHandler>
+        <Section className="py-[300px] lg:py-[600px]">
+          <div className="flex justify-center">
+            <OpenSidebarButton
+              componentId="demo1"
+              title="Interior Design"
+            >
+              Open Blog
+            </OpenSidebarButton>
+          </div>
+        </Section>
+        <SidebarPanels panels={panels} />
+      </SidebarClickHandler>
     </SidebarStackProvider>
   )
 }
