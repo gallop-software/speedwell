@@ -189,6 +189,50 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 7. Use `Section`, `Columns`, `Column` for layout structure
 8. Add `Image` components with `size="large"` for large images
 
+## Creating Blocks from Inspiration
+
+When given an inspiration image, screenshot, or verbal description to create a block:
+
+**Do NOT copy designs exactly.** Draw inspiration from the reference, but build using this template's existing components and design language. The goal is a block that fits seamlessly with the rest of the template.
+
+1. **Use existing components first** - Check `@/components` for components that match elements in the design (Heading, Paragraph, Button, Image, etc.)
+2. **Identify missing elements** - If the design has a visual element not covered by existing components, create a new reusable component
+3. **Create new components properly**:
+   - Place in `src/components/` with lowercase hyphenated filename
+   - Export from `src/components/index.ts`
+   - Use prop overrides for common Tailwind classes (margin, color, fontSize, textAlign, etc.)
+   - Follow the pattern of existing components like `Paragraph` or `Label`
+4. **Use new component in the block** - Import and use the new component in the block design
+
+### New Component Prop Pattern
+
+New components should expose props for commonly overridden styles instead of relying on className:
+
+```tsx
+interface MyComponentProps {
+  margin?: string // e.g., "mb-8"
+  color?: string // e.g., "text-accent"
+  fontSize?: string // e.g., "text-lg"
+  textAlign?: string // e.g., "text-center"
+  className?: string // for additional styling
+}
+
+export function MyComponent({
+  margin = 'mb-4', // sensible default
+  color = 'text-contrast', // sensible default
+  fontSize = 'text-base',
+  textAlign = '',
+  className = '',
+  children,
+}: MyComponentProps) {
+  return (
+    <div className={clsx(margin, color, fontSize, textAlign, className)}>
+      {children}
+    </div>
+  )
+}
+```
+
 ## Gallop Lint Rules
 
 This project uses `eslint-plugin-gallop` for architectural governance. Run `npm run lint` to check.
