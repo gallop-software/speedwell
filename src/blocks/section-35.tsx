@@ -9,7 +9,6 @@ import {
   Accordion,
   Li,
   List,
-  Container,
 } from '@/components'
 
 export default function Section35() {
@@ -67,10 +66,7 @@ export default function Section35() {
           </Quote>
         </Column>
       </Columns>
-      <Container
-        align="content"
-        padding="px-0"
-      >
+      <div className="mx-auto max-w-4xl">
         <Heading
           textAlign="text-center"
           as="h2"
@@ -130,7 +126,7 @@ export default function Section35() {
             <Li>Marketing campaign development</Li>
           </List>
         </Accordion>
-      </Container>
+      </div>
     </Section>
   )
 }
