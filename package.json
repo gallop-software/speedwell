@@ -2,9 +2,6 @@
   "name": "speedwell",
   "version": "1.0",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "description": "A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.",
   "homepage": "https://speedwell.gallop.software",
   "author": {
@@ -36,11 +33,11 @@
     "lint": "eslint src/",
     "lint:next": "eslint src/ --rule 'gallop/no-client-blocks: off' --rule 'gallop/no-container-in-section: off' --rule 'gallop/prefer-component-props: off'",
     "lint:gallop": "eslint src/blocks/ --rule 'gallop/no-client-blocks: warn' --rule 'gallop/no-container-in-section: warn' --rule 'gallop/prefer-component-props: warn'",
-    "audit": "node packages/cli/dist/index.js audit",
-    "audit:strict": "node packages/cli/dist/index.js audit --strict",
-    "audit:json": "node packages/cli/dist/index.js audit --json",
-    "generate:ai-rules": "node packages/cli/dist/index.js generate .cursorrules",
-    "generate:copilot": "node packages/cli/dist/index.js generate .github/copilot-instructions.md",
+    "audit": "npx @gallop.software/cli audit",
+    "audit:strict": "npx @gallop.software/cli audit --strict",
+    "audit:json": "npx @gallop.software/cli audit --json",
+    "generate:ai-rules": "npx @gallop.software/cli generate .cursorrules",
+    "generate:copilot": "npx @gallop.software/cli generate .github/copilot-instructions.md",
     "images": "node _scripts/process-images.js",
     "images:reset": "rm -rf public/images && npm run images",
     "favicon": "node _scripts/generate-favicon.js",
@@ -96,7 +93,7 @@
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
-    "@gallop/eslint-plugin": "*",
+    "@gallop.software/eslint-plugin": "^1.0.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",

@@ -1,7 +1,6 @@
 # Gallop Canon v1.0.0 - AI Rules
 
-This file is auto-generated from @gallop/canon. Do not edit manually.
-Regenerate with: npm run generate:ai-rules
+This file is auto-generated from @gallop.software/canon. Do not edit manually. Regenerate with: npm run generate:ai-rules
 
 ## Tech Stack
 
@@ -13,7 +12,7 @@ Regenerate with: npm run generate:ai-rules
 
 ## Enforced Patterns (ESLint)
 
-These patterns are enforced by `@gallop/eslint-plugin`. Violations will be flagged.
+These patterns are enforced by `@gallop.software/eslint-plugin`. Violations will be flagged.
 
 ### 001: Server-First Blocks
 
@@ -198,17 +197,20 @@ Following these patterns provides these guarantees:
 ## Component Quick Reference
 
 ### Typography
+
 - `Heading` - props: `as`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
 - `Paragraph` - props: `color`, `margin`, `fontSize`, `lineHeight`, `textAlign`
 - `Span` - props: `color`, `margin`, `fontSize` (inline text, mb-0 default)
 - `Label` - props: `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
 
 ### Layout
+
 - `Section` - semantic section wrapper
 - `Columns` - grid layout, props: `cols`, `gap`, `align`
 - `Column` - column child
 
 ### Interactive
+
 - `Button` - props: `href`, `variant`, `icon`, `iconPlacement`, `margin`
 - `Icon` - Iconify icon wrapper
 
@@ -224,6 +226,7 @@ Following these patterns provides these guarantees:
 ## Post-Edit Verification
 
 After editing files:
+
 1. Run `npm run lint` to check for errors
 2. Fix any violations before committing
 

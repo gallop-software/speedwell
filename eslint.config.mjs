@@ -1,8 +1,5 @@
 import nextConfig from 'eslint-config-next'
-import gallopModule from '@gallop/eslint-plugin'
-
-// Handle CJS default export
-const gallop = gallopModule.default || gallopModule
+import gallop from '@gallop.software/eslint-plugin'
 
 export default [
   ...nextConfig,
