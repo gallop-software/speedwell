@@ -7,6 +7,7 @@ import {
   Label,
   Icon,
   Image,
+  Grid,
 } from '@/components'
 import starIcon from '@iconify/icons-heroicons/star-solid'
 import chatBubbleIcon from '@iconify/icons-heroicons/chat-bubble-bottom-center-text-solid'
@@ -69,7 +70,10 @@ export default function Testimonial9() {
       </Heading>
 
       {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-10">
+      <Grid
+        cols="grid-cols-1 md:grid-cols-3"
+        gap="gap-10 lg:gap-10"
+      >
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
@@ -156,11 +160,14 @@ export default function Testimonial9() {
             </div>
           </div>
         ))}
-      </div>
+      </Grid>
 
       {/* Stats Bar */}
       <div className="pt-10 lg:pt-20 border-t border-body-dark/10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-8">
+        <Grid
+          cols="grid-cols-2 md:grid-cols-4"
+          gap="gap-y-12 gap-x-8 md:gap-8"
+        >
           <div className="text-center">
             <Heading
               as="h3"
@@ -227,7 +234,7 @@ export default function Testimonial9() {
             </Heading>
             <Label margin="">Average Rating</Label>
           </div>
-        </div>
+        </Grid>
       </div>
     </Section>
   )
