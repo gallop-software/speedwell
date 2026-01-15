@@ -82,8 +82,17 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 
 - Max-width container: `mx-auto max-w-[1600px]`
 - Section padding: `py-20 md:py-30`
-- Horizontal padding: `px-6 lg:px-10`
+- Horizontal padding: `px-6 lg:px-8`
 - Responsive columns: `grid-cols-1 lg:grid-cols-2`
+
+### Spacing Defaults
+
+- Section padding: `py-20 md:py-30`
+- Horizontal padding: `px-6 lg:px-8`
+- Heading margin: `mb-8` (all levels)
+- Paragraph margin: `mb-8`
+- Accent margin: `mb-4` above headings, `mb-0` when decorative
+- Label margin: `mb-0`
 
 ### Color Tokens
 
