@@ -22,26 +22,26 @@ export default function Hero21() {
         {/* Base - white background below the diagonal */}
         <div className="absolute inset-0 bg-white" />
 
-        {/* Main colorful gradient with diagonal clip */}
+        {/* Main gradient with diagonal clip - using template color scheme */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400"
+          className="absolute inset-0 bg-gradient-to-br from-[var(--color-body2)] via-[var(--color-accent3)] to-[var(--color-accent3-dark)]"
           style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
         />
 
         {/* Blur overlays for depth */}
         <div
-          className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-violet-600 to-transparent opacity-60 blur-3xl"
+          className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-[var(--color-accent3-gradient2)] to-transparent opacity-40 blur-3xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
         />
         <div
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-400 rounded-full opacity-30 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-[var(--color-accent3-gradient)] rounded-full opacity-30 blur-3xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
         />
       </div>
 
       {/* Diagonal dashed lines overlay */}
       <svg
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-20"
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-35"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
       >
@@ -58,7 +58,7 @@ export default function Hero21() {
               y1="0"
               x2="0"
               y2="50"
-              stroke="white"
+              stroke="var(--color-accent3-gradient2)"
               strokeWidth="1"
               strokeDasharray="6 12"
             />
