@@ -1,6 +1,6 @@
 # Gallop Canon v1.0.0 - AI Rules
 
-This file is auto-generated from @gallop/canon. Do not edit manually.
+This file is auto-generated from @gallop.software/canon. Do not edit manually.
 Regenerate with: npm run generate:ai-rules
 
 ## Tech Stack
@@ -13,7 +13,7 @@ Regenerate with: npm run generate:ai-rules
 
 ## Enforced Patterns (ESLint)
 
-These patterns are enforced by `@gallop/eslint-plugin`. Violations will be flagged.
+These patterns are enforced by `@gallop.software/canon/eslint`. Violations will be flagged.
 
 ### 001: Server-First Blocks
 
