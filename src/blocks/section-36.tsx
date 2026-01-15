@@ -24,7 +24,7 @@ export default function Section36() {
           >
             Comprehensive Event Services
           </Heading>
-          <Paragraph className="text-lg">
+          <Paragraph fontSize="text-lg">
             From intimate gatherings to grand celebrations, we provide
             full-service planning and design to create seamless, unforgettable
             experiences tailored to your vision.
@@ -46,7 +46,11 @@ export default function Section36() {
             >
               Wedding Planning
             </Heading>
-            <Paragraph className="text-sm mb-4 flex-grow">
+            <Paragraph
+              fontSize="text-sm"
+              margin="mb-4"
+              className="flex-grow"
+            >
               Complete wedding coordination from engagement to "I do." We handle
               every detail including venue selection, vendor management,
               timeline creation, and day-of coordination to ensure your perfect
@@ -73,7 +77,11 @@ export default function Section36() {
             >
               Corporate Events
             </Heading>
-            <Paragraph className="text-sm mb-4 flex-grow">
+            <Paragraph
+              fontSize="text-sm"
+              margin="mb-4"
+              className="flex-grow"
+            >
               Professional event planning for conferences, galas, product
               launches, and corporate celebrations. Strategic planning, brand
               integration, and flawless execution for memorable business events.
@@ -99,7 +107,11 @@ export default function Section36() {
             >
               Event Design & Styling
             </Heading>
-            <Paragraph className="text-sm mb-4 flex-grow">
+            <Paragraph
+              fontSize="text-sm"
+              margin="mb-4"
+              className="flex-grow"
+            >
               Creative design concepts bringing your vision to life. Custom
               decor, floral arrangements, lighting design, and styling that
               creates stunning atmospheres and lasting impressions.
@@ -125,7 +137,11 @@ export default function Section36() {
             >
               Social Celebrations
             </Heading>
-            <Paragraph className="text-sm mb-4 flex-grow">
+            <Paragraph
+              fontSize="text-sm"
+              margin="mb-4"
+              className="flex-grow"
+            >
               Milestone birthdays, anniversaries, engagement parties, and
               special celebrations. Personalized planning that captures the
               spirit of your occasion and creates cherished memories.
@@ -151,7 +167,11 @@ export default function Section36() {
             >
               Vendor Coordination
             </Heading>
-            <Paragraph className="text-sm mb-4 flex-grow">
+            <Paragraph
+              fontSize="text-sm"
+              margin="mb-4"
+              className="flex-grow"
+            >
               Access to our curated network of premium vendors. We manage all
               communications, contracts, and coordination to ensure seamless
               collaboration and exceptional service delivery.
@@ -177,7 +197,11 @@ export default function Section36() {
             >
               Day-of Coordination
             </Heading>
-            <Paragraph className="text-sm mb-4 flex-grow">
+            <Paragraph
+              fontSize="text-sm"
+              margin="mb-4"
+              className="flex-grow"
+            >
               Professional coordination on your event day ensuring flawless
               execution. We manage timelines, vendors, and logistics so you can
               relax and enjoy every moment of your celebration.
