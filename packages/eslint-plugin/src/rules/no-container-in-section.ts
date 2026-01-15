@@ -1,29 +1,22 @@
 import { ESLintUtils, TSESTree } from '@typescript-eslint/utils'
+import { getCanonUrl, getCanonPattern } from '../utils/canon'
 
-const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://github.com/gallop-software/canon/blob/main/patterns/002-layout-hierarchy.md`
-)
+const RULE_NAME = 'no-container-in-section'
+const pattern = getCanonPattern(RULE_NAME)
+
+const createRule = ESLintUtils.RuleCreator(() => getCanonUrl(RULE_NAME))
 
 type MessageIds = 'noContainerInSection'
 
 export default createRule<[], MessageIds>({
-  name: 'no-container-in-section',
+  name: RULE_NAME,
   meta: {
     type: 'suggestion',
     docs: {
-      description:
-        'Container should not be used inside Section. Section already provides containment via innerAlign prop.',
-      // Canon reference
-      // @ts-expect-error - custom property for Canon integration
-      canon: {
-        pattern: '002',
-        title: 'Layout Hierarchy',
-        url: 'https://github.com/gallop-software/canon/blob/main/patterns/002-layout-hierarchy.md',
-      },
+      description: pattern?.summary || 'No Container inside Section',
     },
     messages: {
-      noContainerInSection:
-        '[Canon 002] Container inside Section is redundant. Section already provides max-width containment. Use Section\'s innerAlign prop or a plain div instead.',
+      noContainerInSection: `[Canon ${pattern?.id || '002'}] Container inside Section is redundant. Section already provides max-width containment. Use Section's innerAlign prop or a plain div instead.`,
     },
     schema: [],
   },

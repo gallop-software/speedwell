@@ -1,29 +1,22 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
+import { getCanonUrl, getCanonPattern } from '../utils/canon'
 
-const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://github.com/gallop-software/canon/blob/main/patterns/001-server-first-blocks.md`
-)
+const RULE_NAME = 'no-client-blocks'
+const pattern = getCanonPattern(RULE_NAME)
+
+const createRule = ESLintUtils.RuleCreator(() => getCanonUrl(RULE_NAME))
 
 type MessageIds = 'noClientBlocks'
 
 export default createRule<[], MessageIds>({
-  name: 'no-client-blocks',
+  name: RULE_NAME,
   meta: {
     type: 'suggestion',
     docs: {
-      description:
-        'Block components in src/blocks/ should not use "use client". Extract client-side logic into separate components.',
-      // Canon reference
-      // @ts-expect-error - custom property for Canon integration
-      canon: {
-        pattern: '001',
-        title: 'Server-First Blocks',
-        url: 'https://github.com/gallop-software/canon/blob/main/patterns/001-server-first-blocks.md',
-      },
+      description: pattern?.summary || 'Blocks must be server components',
     },
     messages: {
-      noClientBlocks:
-        '[Canon 001] Block "{{blockName}}" uses \'use client\'. Extract hooks and client-side logic into a component in src/components/, then import it here. See: Server-First Blocks pattern.',
+      noClientBlocks: `[Canon ${pattern?.id || '001'}] Block "{{blockName}}" uses 'use client'. Extract hooks and client-side logic into a component in src/components/, then import it here. See: ${pattern?.title || 'Server-First Blocks'} pattern.`,
     },
     schema: [],
   },

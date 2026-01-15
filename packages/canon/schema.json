@@ -197,9 +197,9 @@
       "file": "patterns/016-client-extraction.md",
       "category": "rendering",
       "status": "stable",
-      "enforcement": "eslint",
-      "rule": "gallop/no-client-blocks",
-      "summary": "Extract hooks to components, not blocks"
+      "enforcement": "documentation",
+      "rule": null,
+      "summary": "Extract hooks to components, not blocks (see Pattern 001 for enforcement)"
     },
     {
       "id": "017",

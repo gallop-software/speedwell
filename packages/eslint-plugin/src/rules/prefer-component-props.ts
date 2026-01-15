@@ -1,8 +1,10 @@
 import { ESLintUtils, TSESTree } from '@typescript-eslint/utils'
+import { getCanonUrl, getCanonPattern } from '../utils/canon'
 
-const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://github.com/gallop-software/canon/blob/main/patterns/004-component-props.md`
-)
+const RULE_NAME = 'prefer-component-props'
+const pattern = getCanonPattern(RULE_NAME)
+
+const createRule = ESLintUtils.RuleCreator(() => getCanonUrl(RULE_NAME))
 
 type MessageIds = 'preferComponentProps'
 
@@ -40,23 +42,14 @@ const componentPropMappings: Record<string, Record<string, RegExp>> = {
 }
 
 export default createRule<[], MessageIds>({
-  name: 'prefer-component-props',
+  name: RULE_NAME,
   meta: {
     type: 'suggestion',
     docs: {
-      description:
-        'Prefer using component props (margin, color, etc.) over className for style values that have dedicated props.',
-      // Canon reference
-      // @ts-expect-error - custom property for Canon integration
-      canon: {
-        pattern: '004',
-        title: 'Component Props',
-        url: 'https://github.com/gallop-software/canon/blob/main/patterns/004-component-props.md',
-      },
+      description: pattern?.summary || 'Use props over className for supported styles',
     },
     messages: {
-      preferComponentProps:
-        '[Canon 004] "{{className}}" in className should use the "{{propName}}" prop instead. Replace className="{{className}}" with {{propName}}="{{className}}".',
+      preferComponentProps: `[Canon ${pattern?.id || '004'}] "{{className}}" in className should use the "{{propName}}" prop instead. Replace className="{{className}}" with {{propName}}="{{className}}".`,
     },
     schema: [],
   },

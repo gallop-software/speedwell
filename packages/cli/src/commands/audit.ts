@@ -41,12 +41,12 @@ const c = {
   cyan: '\x1b[36m',
 }
 
-// Map ESLint rule IDs to Canon patterns
-const ruleToPattern: Record<string, string> = {
-  'gallop/no-client-blocks': '001',
-  'gallop/no-container-in-section': '002',
-  'gallop/prefer-typography-components': '003',
-  'gallop/prefer-component-props': '004',
+// Build rule-to-pattern mapping from Canon schema (single source of truth)
+const ruleToPattern: Record<string, string> = {}
+for (const pattern of patterns) {
+  if (pattern.rule) {
+    ruleToPattern[pattern.rule] = pattern.id
+  }
 }
 
 function parseCanonFromMessage(message: string): string | null {

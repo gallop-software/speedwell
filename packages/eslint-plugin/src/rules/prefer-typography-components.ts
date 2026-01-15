@@ -1,19 +1,20 @@
 import type { Rule } from 'eslint'
+import { getCanonUrl, getCanonPattern } from '../utils/canon'
+
+const RULE_NAME = 'prefer-typography-components'
+const pattern = getCanonPattern(RULE_NAME)
 
 const rule: Rule.RuleModule = {
   meta: {
     type: 'suggestion',
     docs: {
-      description:
-        'Prefer Paragraph and Span components over raw <p> and <span> elements in blocks',
+      description: pattern?.summary || 'Use Paragraph/Span, not raw tags',
       recommended: true,
-      url: 'https://github.com/gallop-software/canon/blob/main/patterns/003-typography-components.md',
+      url: getCanonUrl(RULE_NAME),
     },
     messages: {
-      useParagraph:
-        '[Canon 003] Use the Paragraph component instead of <p>. Import: import { Paragraph } from "@/components"',
-      useSpan:
-        '[Canon 003] Use the Span component instead of <span> for text content. Import: import { Span } from "@/components"',
+      useParagraph: `[Canon ${pattern?.id || '003'}] Use the Paragraph component instead of <p>. Import: import { Paragraph } from "@/components"`,
+      useSpan: `[Canon ${pattern?.id || '003'}] Use the Span component instead of <span> for text content. Import: import { Span } from "@/components"`,
     },
     schema: [],
   },
