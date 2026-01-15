@@ -169,7 +169,7 @@ function printReport(result: AuditResult, options: AuditOptions) {
 
   // Footer
   console.log(`${c.dim}  ─────────────────────────────────────────────────────────${c.reset}`)
-  console.log(`  ${c.dim}Run with --fix to auto-fix where possible${c.reset}`)
+  console.log(`  ${c.dim}Fix violations manually following the Canon patterns${c.reset}`)
   console.log(`  ${c.dim}See: https://github.com/gallop-software/canon${c.reset}`)
   console.log('')
 }

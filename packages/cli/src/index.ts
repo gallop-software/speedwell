@@ -37,7 +37,6 @@ ${colors.bold}Commands:${colors.reset}
 ${colors.bold}Audit Options:${colors.reset}
   --strict           Exit with error code on violations
   --json             Output as JSON
-  --fix              Auto-fix violations where possible
 
 ${colors.bold}Generate Options:${colors.reset}
   --output, -o       Output file path (default: .cursorrules)
