@@ -86,8 +86,10 @@ const metadata: PageMetadata = {
 }
 
 export const generateMetadata = () => generatePageMetadata(metadata)
-export default () => (
-  <PageWrapper metadata={metadata}>
-    <Content />
-  </PageWrapper>
-)
+export default function Page() {
+  return (
+    <PageWrapper metadata={metadata}>
+      <Content />
+    </PageWrapper>
+  )
+}

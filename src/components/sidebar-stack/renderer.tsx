@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useEffect, useState, type ReactNode } from 'react'
+import React, { useRef, useEffect, useState, useCallback, type ReactNode } from 'react'
 import clsx from 'clsx'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark'
 import { Icon } from '@/components/icon'
@@ -146,7 +146,7 @@ export function SidebarStackRenderer({
     }
   }, [isOpen, shouldRender, hasClosing])
 
-  const handleClose = (id: string) => {
+  const handleClose = useCallback((id: string) => {
     setClosingIds((prev) => new Set(prev).add(id))
     setTimeout(() => {
       close(id)
@@ -156,7 +156,7 @@ export function SidebarStackRenderer({
         return next
       })
     }, 500)
-  }
+  }, [close])
 
   const handleBackdropClick = () => {
     const topItem = activeItems[activeItems.length - 1]
@@ -176,7 +176,7 @@ export function SidebarStackRenderer({
 
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen, activeItems])
+  }, [isOpen, activeItems, handleClose])
 
   if (!shouldRender) return null
 

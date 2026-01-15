@@ -10,9 +10,14 @@ export default [
     rules: {
       '@next/next/no-img-element': 'off',
       'react/no-unescaped-entities': 'off',
+      // Gallop governance rules
       'gallop/no-client-blocks': 'warn',
       'gallop/no-container-in-section': 'warn',
       'gallop/prefer-component-props': 'warn',
+      // Disable overly strict React 19 rules that flag common valid patterns
+      'react-hooks/set-state-in-effect': 'off', // setMounted(true) in useEffect is valid
+      'react-hooks/refs': 'off', // Common ref patterns are valid
+      'react-hooks/immutability': 'off', // Function hoisting is fine in components
     },
   },
 ]
