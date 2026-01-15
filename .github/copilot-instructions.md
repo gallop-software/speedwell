@@ -130,6 +130,20 @@ Use props over className for supported styles
 </Label>
 ```
 
+### 018: Layout Components
+
+Use Grid/Columns, not raw div with grid
+
+- **ESLint Rule:** `gallop/prefer-layout-components`
+- **Category:** layout
+
+### 019: Background Image Rounded
+
+Background images must have rounded="rounded-none"
+
+- **ESLint Rule:** `gallop/background-image-rounded`
+- **Category:** components
+
 ## Documentation Patterns
 
 These patterns are not enforced by ESLint but should be followed.
@@ -193,7 +207,7 @@ Following these patterns provides these guarantees:
 - **SEO Stability** (SEO_STABLE): Patterns 001, 016, 017
 - **Performance Baseline** (PERF_BASELINE): Patterns 001, 007, 010, 016
 - **Maintainability** (MAINTAIN): Patterns 004, 005, 006, 007, 013
-- **Design System Compliance** (DESIGN_SYSTEM): Patterns 003, 004, 009, 010, 011
+- **Design System Compliance** (DESIGN_SYSTEM): Patterns 003, 004, 009, 010, 011, 018, 019
 
 ## Component Quick Reference
 
