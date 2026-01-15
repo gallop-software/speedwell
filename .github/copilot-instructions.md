@@ -39,6 +39,7 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 
 - `hero-{n}` - Hero/banner sections
 - `section-{n}` - General content sections
+- `content-{n}` - Content/feature sections
 - `showcase-{n}` - Portfolio/gallery showcases
 - `cover-{n}` - Full-width image/video covers
 - `contact-{n}` - Contact forms and info
@@ -47,12 +48,21 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 - `pricing-{n}` - Pricing tables
 - `process-{n}` - Process/steps sections
 - `about-{n}` - About sections
+- `services-{n}` - Services sections
+- `call-to-action-{n}` - CTA sections
+- `partners-{n}` - Partner/logo clouds
+- `accordion-{n}` - FAQ/accordion sections
+- `archive-{n}` - Archive/listing sections
+- `application-{n}` - Job application forms
+- `business-info-{n}` - Business information
+- `sidebar-{n}` - Sidebar panels
+- `portfolio-{n}` - Portfolio grids
 
 ### Naming Conventions
 
 - Export function name should be PascalCase matching the file name
 - `hero-16.tsx` exports `function Hero16()`
-- `business-info.tsx` exports `function BusinessInfo()`
+- `call-to-action-3.tsx` exports `function CallToAction3()`
 
 ### Component Guidelines
 

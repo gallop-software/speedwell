@@ -39,6 +39,7 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 
 - `hero-{n}` - Hero/banner sections
 - `section-{n}` - General content sections
+- `content-{n}` - Content/feature sections
 - `showcase-{n}` - Portfolio/gallery showcases
 - `cover-{n}` - Full-width image/video covers
 - `contact-{n}` - Contact forms and info
@@ -47,12 +48,21 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 - `pricing-{n}` - Pricing tables
 - `process-{n}` - Process/steps sections
 - `about-{n}` - About sections
+- `services-{n}` - Services sections
+- `call-to-action-{n}` - CTA sections
+- `partners-{n}` - Partner/logo clouds
+- `accordion-{n}` - FAQ/accordion sections
+- `archive-{n}` - Archive/listing sections
+- `application-{n}` - Job application forms
+- `business-info-{n}` - Business information
+- `sidebar-{n}` - Sidebar panels
+- `portfolio-{n}` - Portfolio grids
 
 ### Naming Conventions
 
 - Export function name should be PascalCase matching the file name
 - `hero-16.tsx` exports `function Hero16()`
-- `business-info.tsx` exports `function BusinessInfo()`
+- `call-to-action-3.tsx` exports `function CallToAction3()`
 
 ### Component Guidelines
 
@@ -175,9 +185,11 @@ Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`
 This project uses `eslint-plugin-gallop` for architectural governance. Run `npm run lint` to check.
 
 ### `gallop/no-client-blocks`
+
 Blocks should not use `'use client'`. Extract client-side logic into components in `src/components/`.
 
 **Bad:**
+
 ```tsx
 // src/blocks/hero-1.tsx
 'use client'
@@ -186,6 +198,7 @@ import { useState } from 'react'
 ```
 
 **Good:**
+
 ```tsx
 // src/blocks/hero-1.tsx (server component)
 import { MyClientFeature } from '@/components/my-client-feature'
@@ -193,9 +206,11 @@ import { MyClientFeature } from '@/components/my-client-feature'
 ```
 
 ### `gallop/no-container-in-section`
+
 Don't use `Container` inside `Section` - it's redundant. Use `Section`'s `innerAlign` prop or a plain `div`.
 
 **Bad:**
+
 ```tsx
 <Section>
   <Container>
@@ -205,6 +220,7 @@ Don't use `Container` inside `Section` - it's redundant. Use `Section`'s `innerA
 ```
 
 **Good:**
+
 ```tsx
 <Section innerAlign="content">
   <Heading>...</Heading>
@@ -212,21 +228,25 @@ Don't use `Container` inside `Section` - it's redundant. Use `Section`'s `innerA
 ```
 
 ### `gallop/prefer-component-props`
+
 Use dedicated props instead of className for styling that components support.
 
 **Bad:**
+
 ```tsx
 <Heading className="text-center mb-6 text-accent">Title</Heading>
 <Paragraph className="text-lg mb-4">Text</Paragraph>
 ```
 
 **Good:**
+
 ```tsx
 <Heading textAlign="text-center" margin="mb-6" color="text-accent">Title</Heading>
 <Paragraph fontSize="text-lg" margin="mb-4">Text</Paragraph>
 ```
 
 **Supported props by component:**
+
 - `Heading`: `margin`, `color`, `textAlign`, `fontSize`, `fontWeight`
 - `Paragraph`: `margin`, `color`, `textAlign`, `fontSize`, `lineHeight`
 - `Accent`: `margin`, `color`, `textAlign`
