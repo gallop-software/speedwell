@@ -1,4 +1,4 @@
-import { Section, Heading, Grid } from '@/components'
+import { Section, Heading, Grid, Paragraph } from '@/components'
 
 interface TestimonialCardProps {
   name: string
@@ -38,12 +38,32 @@ function TestimonialCard({
       </div>
 
       {/* Review */}
-      <p className="text-body-muted mb-6 leading-relaxed flex-grow">{review}</p>
+      <Paragraph
+        color="text-body-muted"
+        margin="mb-6"
+        lineHeight="leading-relaxed"
+        className="flex-grow"
+      >
+        {review}
+      </Paragraph>
 
       {/* Author */}
       <div className="mt-auto">
-        <p className="font-semibold text-lg text-body-dark">{name}</p>
-        <p className="text-sm text-body-muted">{title}</p>
+        <Paragraph
+          fontWeight="font-semibold"
+          fontSize="text-lg"
+          color="text-body-dark"
+          margin="mb-0"
+        >
+          {name}
+        </Paragraph>
+        <Paragraph
+          fontSize="text-sm"
+          color="text-body-muted"
+          margin="mb-0"
+        >
+          {title}
+        </Paragraph>
       </div>
     </div>
   )
