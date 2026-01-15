@@ -1,6 +1,6 @@
-# Use Circle Animation
+# Circle Animation Init
 
-A React hook that adds a spinning animation class to an element when it enters the viewport.
+A client-side component that adds a spinning animation class to an element when it enters the viewport.
 
 **Tier:** Free  
 **File:** `src/hooks/use-circle-animation.tsx`
@@ -8,32 +8,27 @@ A React hook that adds a spinning animation class to an element when it enters t
 ## Usage
 
 ```tsx
-'use client'
-
-import { useId } from 'react'
-import useCircleAnimation from '@/hooks/use-circle-animation'
+import CircleAnimationInit from '@/hooks/use-circle-animation'
 
 export default function CircleText() {
-  let circleId = 'circle-' + useId()
-  circleId = circleId.replace(/:/g, '-')
-
-  useCircleAnimation(circleId)
+  const circleId = 'my-circle-text'
 
   return (
-    <div id={circleId} className="w-36 h-36">
-      {/* Circle text content */}
-    </div>
+    <>
+      <div id={circleId} className="w-36 h-36">
+        {/* Circle text content */}
+      </div>
+      <CircleAnimationInit targetId={circleId} />
+    </>
   )
 }
 ```
 
-## API
+## Props
 
-### Parameters
+- `targetId` (string, required): The DOM element ID to observe and animate
 
-- `id`: String - The DOM element ID to observe and animate
-
-### Behavior
+## Behavior
 
 - Adds `animate-spin-slow-reverse` class when element enters viewport
 - Removes the class when element leaves viewport

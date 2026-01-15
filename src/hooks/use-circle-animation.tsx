@@ -3,13 +3,17 @@
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-export default function useCircleAnimation(id: string) {
+interface CircleAnimationInitProps {
+  targetId: string
+}
+
+const CircleAnimationInit = ({ targetId }: CircleAnimationInitProps) => {
   const { ref, inView } = useInView({
     threshold: 0.01,
   })
 
   useEffect(() => {
-    const container = document.getElementById(id)
+    const container = document.getElementById(targetId)
     if (!container) return
 
     if (inView) {
@@ -17,13 +21,17 @@ export default function useCircleAnimation(id: string) {
     } else {
       container.classList.remove('animate-spin-slow-reverse')
     }
-  }, [id, inView])
+  }, [targetId, inView])
 
   // Attach ref to the target element
   useEffect(() => {
-    const container = document.getElementById(id)
+    const container = document.getElementById(targetId)
     if (container && ref) {
       ;(ref as (node: Element | null) => void)(container)
     }
-  }, [id, ref])
+  }, [targetId, ref])
+
+  return null
 }
+
+export default CircleAnimationInit
