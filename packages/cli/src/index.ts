@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { audit } from './commands/audit'
+import { generate } from './commands/generate'
 import { version } from '@gallop/canon'
 
 const args = process.argv.slice(2)
@@ -28,20 +29,25 @@ ${colors.bold}Usage:${colors.reset}
   gallop <command> [options]
 
 ${colors.bold}Commands:${colors.reset}
-  audit [path]     Check Canon compliance (default: src/blocks/)
-  version          Show version information
-  help             Show this help message
+  audit [path]       Check Canon compliance (default: src/blocks/)
+  generate [output]  Generate AI rules from Canon (default: .cursorrules)
+  version            Show version information
+  help               Show this help message
 
-${colors.bold}Options:${colors.reset}
-  --strict         Exit with error code on violations
-  --json           Output as JSON
-  --fix            Auto-fix violations where possible
+${colors.bold}Audit Options:${colors.reset}
+  --strict           Exit with error code on violations
+  --json             Output as JSON
+  --fix              Auto-fix violations where possible
+
+${colors.bold}Generate Options:${colors.reset}
+  --output, -o       Output file path (default: .cursorrules)
 
 ${colors.bold}Examples:${colors.reset}
   gallop audit
-  gallop audit src/blocks/
-  gallop audit --strict
-  gallop audit src/ --json
+  gallop audit src/blocks/ --strict
+  gallop generate
+  gallop generate .cursorrules
+  gallop generate --output .github/copilot-instructions.md
 `)
 }
 
@@ -53,13 +59,32 @@ function showVersion() {
 async function main() {
   switch (command) {
     case 'audit':
-      const path = args[1] && !args[1].startsWith('--') ? args[1] : 'src/blocks/'
-      const options = {
+      const auditPath = args[1] && !args[1].startsWith('--') ? args[1] : 'src/blocks/'
+      const auditOptions = {
         strict: args.includes('--strict'),
         json: args.includes('--json'),
         fix: args.includes('--fix'),
       }
-      await audit(path, options)
+      await audit(auditPath, auditOptions)
+      break
+
+    case 'generate':
+      // Find output path from args
+      let outputPath = '.cursorrules'
+      const outputIndex = args.indexOf('--output')
+      const outputIndexShort = args.indexOf('-o')
+      if (outputIndex !== -1 && args[outputIndex + 1]) {
+        outputPath = args[outputIndex + 1]
+      } else if (outputIndexShort !== -1 && args[outputIndexShort + 1]) {
+        outputPath = args[outputIndexShort + 1]
+      } else if (args[1] && !args[1].startsWith('--')) {
+        outputPath = args[1]
+      }
+      const generateOptions = {
+        output: outputPath,
+        format: 'cursorrules' as const,
+      }
+      await generate(generateOptions)
       break
 
     case 'version':

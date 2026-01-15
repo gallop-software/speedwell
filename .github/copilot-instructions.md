@@ -1,4 +1,7 @@
-# Speedwell Project Conventions
+# Gallop Canon v1.0.0 - AI Rules
+
+This file is auto-generated from @gallop/canon. Do not edit manually.
+Regenerate with: npm run generate:ai-rules
 
 ## Tech Stack
 
@@ -7,241 +10,17 @@
 - TypeScript
 - Tailwind CSS v4
 - clsx for conditional class names
-- Swiper.js for sliders
-- Headless UI for modals/dialogs
-- Iconify for icons
-- Luxon for date/time handling
 
-## Page Files
+## Enforced Patterns (ESLint)
 
-Page files follow this pattern:
+These patterns are enforced by `@gallop/eslint-plugin`. Violations will be flagged.
 
-- Import `PageWrapper` from `@/components/page-wrapper`
-- Import `generatePageMetadata, type PageMetadata` from `@/utils/page-helpers`
-- Import blocks with default imports from `@/blocks/`
-- Define a `Content()` function that renders blocks in fragments
-- Define a `metadata` object with PageMetadata type
-- Export `generateMetadata = () => generatePageMetadata(metadata)`
-- Export default as `() => <PageWrapper metadata={metadata}><Content /></PageWrapper>`
+### 001: Server-First Blocks
 
-Metadata properties: `title`, `description`, `keywords`, `slug`, `featuredImage`, `focusKeyword`, `readingTimeMinutes`, `publishDate`, `modifiedDate`, `alternates`, `authors`, `openGraph`, `twitter`, `structuredData`
+Blocks must be server components
 
-## Block Components
-
-### File Structure
-
-- All block components go in `src/blocks/`
-- Name files as `{block-name}.tsx` (lowercase, hyphenated)
-- Block types use sequential numbering: `hero-1.tsx`, `section-1.tsx`, etc.
-- Check existing files to find the next available number
-
-### Block Types
-
-- `hero-{n}` - Hero/banner sections
-- `section-{n}` - General content sections
-- `content-{n}` - Content/feature sections
-- `showcase-{n}` - Portfolio/gallery showcases
-- `cover-{n}` - Full-width image/video covers
-- `contact-{n}` - Contact forms and info
-- `testimonial-{n}` - Testimonials
-- `blog-{n}` - Blog-related sections
-- `pricing-{n}` - Pricing tables
-- `process-{n}` - Process/steps sections
-- `about-{n}` - About sections
-- `services-{n}` - Services sections
-- `call-to-action-{n}` - CTA sections
-- `partners-{n}` - Partner/logo clouds
-- `accordion-{n}` - FAQ/accordion sections
-- `archive-{n}` - Archive/listing sections
-- `application-{n}` - Job application forms
-- `business-info-{n}` - Business information
-- `sidebar-{n}` - Sidebar panels
-- `portfolio-{n}` - Portfolio grids
-
-### Naming Conventions
-
-- Export function name should be PascalCase matching the file name
-- `hero-16.tsx` exports `function Hero16()`
-- `call-to-action-3.tsx` exports `function CallToAction3()`
-
-### Component Guidelines
-
-- Use `'use client'` directive ONLY when needed (hooks, interactivity)
-- Most blocks do NOT need `'use client'`
-- Import shared components from `@/components` using destructured imports
-- Do not copy imports from other projects - adapt to this project
-
-## Styling
-
-### Tailwind CSS
-
-- Use Tailwind classes exclusively, not inline styles
-- Use `clsx` for conditional classes
-
-### Common Patterns
-
-- Max-width container: `mx-auto max-w-[1600px]`
-- Section padding: `py-20 md:py-30`
-- Horizontal padding: `px-6 lg:px-8`
-- Responsive columns: `grid-cols-1 lg:grid-cols-2`
-
-### Spacing Defaults
-
-- Section padding: `py-20 md:py-30`
-- Horizontal padding: `px-6 lg:px-8`
-- Heading margin: `mb-8` (all levels)
-- Paragraph margin: `mb-8`
-- Accent margin: `mb-4` above headings, `mb-0` when decorative
-- Label margin: `mb-0`
-
-### Color Tokens
-
-- Text: `text-body`, `text-contrast`, `text-accent`, `text-accent-contrast`, `text-white`
-- Background: `bg-body`, `bg-body2`, `bg-contrast`, `bg-accent`, `bg-accent2`, `bg-accent3`
-- Accent colors have contrast variants: `bg-accent` pairs with `text-accent-contrast`
-
-### Responsive Design
-
-- Mobile-first approach
-- Breakpoints: `sm:`, `md:`, `lg:`, `xl:`
-- Common patterns: `flex-col xl:flex-row`, `h-[450px] sm:h-[600px] lg:h-[800px]`
-
-## Imports
-
-### Path Aliases
-
-- Use `@/` path alias for src directory
-- Components: `import { Heading, Paragraph, Label } from '@/components'`
-- Hooks: `import CircleAnimationInit from '@/hooks/use-circle-animation'`
-- Blocks: `import Hero1 from '@/blocks/hero-1'`
-- Template: `import PageFooter from '@/template/page-footer'`
-
-### Icons
-
-- Use Iconify packages: `@iconify/icons-heroicons/`, `@iconify/icons-lucide/`
-- Common icons: `arrow-right-20-solid`, `arrow-down-20-solid`, `play-solid`, `play-circle`
-- Render with Icon component: `<Icon icon={playIcon} className="w-6 h-6" />`
-
-## Available Components
-
-### Typography
-
-- `Heading` - props: `as` (h1-h6), `color`, `className`, `textAlign`, `margin`, `fontSize`, `fontWeight`, `id`
-- `Subheading` - accent subheadings, props: `as`, `fontSize`, `color`, `margin`, `textAlign`
-- `Paragraph` - props: `variant` ("large"), `color`, `className`, `textAlign`, `margin`, `fontSize`, `lineHeight`
-- `Span` - inline text (like Paragraph but `mb-0` default), props: `variant`, `color`, `fontSize`, `margin`, `textAlign`
-- `Accent` - props: `size`, `color`, `margin`, `textAlign`, `className`
-- `Label` - uppercase text for labels, props: `variant`, `fontSize`, `color`, `margin`, `textAlign`, `fontWeight`
-- `Quote` - blockquotes, props: `variant`, `fontSize`, `color`, `margin`, `textAlign`, `fontStyle`
-- `Chip` - badge/tag with icons, props: `iconBefore`, `iconAfter`, `fontSize`, `color`, `bgColor`, `margin`
-
-### Interactive
-
-- `Button` - props: `href`, `variant` ("primary", "outline"), `icon`, `iconPlacement`, `margin`
-- `Buttons` - wrapper for button groups
-- `ButtonPlay` - video play button variant
-- `VideoPopup` - modal video player with Vimeo support
-- `Icon` - Iconify icon wrapper
-- `Accordion` - expandable content sections, props: `headingText`, `className`
-- `CountUp` - animated number counting, props: `end`, `suffix`, `delay`, `duration`
-
-### Layout
-
-- `Section` - semantic section wrapper with props: `className`
-- `Columns` - grid layout, props: `cols`, `gap`, `className`, `reverseColumns`, `align`
-- `Column` - column child, props: `className`
-- `Cover` - background image/video sections, props: `imageSrc`, `imageAlt`
-- `Container` - max-width wrapper
-- `Gradient` - gradient background wrapper
-
-### Media
-
-- `Image` - props: `src`, `alt`, `className`, `rounded`, `size` ("large"), `lazy`
-- `Video` - HTML5 video, props: `src`, `loop`, `muted`, `playsInline`, `className`
-- `VimeoAutoPlayer` - auto-playing Vimeo embed, props: `videoId`, `id`, `className`
-
-### Forms
-
-- `Form` - form wrapper
-- `FormInput` - props: `name`, `type`, `placeholder`, `label`, `required`, `hidden`
-- `FormTextArea` - props: `name`, `placeholder`, `rows`, `label`, `required`
-- `FormButton` - props: `label`
-
-### Lists
-
-- `List` - unordered list wrapper
-- `Li` - list item
-
-## Hooks & Init Components
-
-- All hooks go in `src/hooks/`
-- Name files as `use-{hook-name}.tsx`
-- `CircleAnimationInit` - client component that animates rotating text circles on scroll, props: `targetId`
-- `SwiperSliderInit` - client component that initializes Swiper sliders, props: `swiperId`, `autoHeight`
-
-## Creating New Blocks
-
-1. Check `src/blocks/` for the highest numbered file of that type
-2. Create new file with incremented number
-3. Use PascalCase function name matching file name
-4. Import components from `@/components` using destructured imports
-5. Hardcode all content (no CMS data)
-6. Use Tailwind for all styling
-7. Use `Section`, `Columns`, `Column` for layout structure
-8. Add `Image` components with `size="large"` for large images
-9. Run `npm run lint` on the new file to verify it passes all rules
-
-## Creating Blocks from Inspiration
-
-When given an inspiration image, screenshot, or verbal description to create a block:
-
-**Do NOT copy designs exactly.** Draw inspiration from the reference, but build using this template's existing components and design language. The goal is a block that fits seamlessly with the rest of the template.
-
-1. **Use existing components first** - Check `@/components` for components that match elements in the design (Heading, Paragraph, Button, Image, etc.)
-2. **Identify missing elements** - If the design has a visual element not covered by existing components, create a new reusable component
-3. **Create new components properly**:
-   - Place in `src/components/` with lowercase hyphenated filename
-   - Export from `src/components/index.ts`
-   - Use prop overrides for common Tailwind classes (margin, color, fontSize, textAlign, etc.)
-   - Follow the pattern of existing components like `Paragraph` or `Label`
-4. **Use new component in the block** - Import and use the new component in the block design
-
-### New Component Prop Pattern
-
-New components should expose props for commonly overridden styles instead of relying on className:
-
-```tsx
-interface MyComponentProps {
-  margin?: string // e.g., "mb-8"
-  color?: string // e.g., "text-accent"
-  fontSize?: string // e.g., "text-lg"
-  textAlign?: string // e.g., "text-center"
-  className?: string // for additional styling
-}
-
-export function MyComponent({
-  margin = 'mb-4', // sensible default
-  color = 'text-contrast', // sensible default
-  fontSize = 'text-base',
-  textAlign = '',
-  className = '',
-  children,
-}: MyComponentProps) {
-  return (
-    <div className={clsx(margin, color, fontSize, textAlign, className)}>
-      {children}
-    </div>
-  )
-}
-```
-
-## Gallop Lint Rules
-
-This project uses `eslint-plugin-gallop` for architectural governance. Run `npm run lint` to check.
-
-### `gallop/no-client-blocks`
-
-Blocks should not use `'use client'`. Extract client-side logic into components in `src/components/`.
+- **ESLint Rule:** `gallop/no-client-blocks`
+- **Category:** rendering
 
 **Bad:**
 
@@ -249,27 +28,43 @@ Blocks should not use `'use client'`. Extract client-side logic into components 
 // src/blocks/hero-1.tsx
 'use client'
 import { useState } from 'react'
-// ...
+
+export default function Hero1() {
+  const [isOpen, setIsOpen] = useState(false)
+  // ...
+}
 ```
 
 **Good:**
 
 ```tsx
 // src/blocks/hero-1.tsx (server component)
-import { MyClientFeature } from '@/components/my-client-feature'
-// Use <MyClientFeature /> in JSX
+import { InteractiveFeature } from '@/components/interactive-feature'
+
+export default function Hero1() {
+  return (
+    <Section>
+      <Heading>Welcome</Heading>
+      <InteractiveFeature /> {/* Client logic extracted */}
+    </Section>
+  )
+}
 ```
 
-### `gallop/no-container-in-section`
+### 002: Layout Hierarchy
 
-Don't use `Container` inside `Section` - it's redundant. Use `Section`'s `innerAlign` prop or a plain `div`.
+No Container inside Section
+
+- **ESLint Rule:** `gallop/no-container-in-section`
+- **Category:** layout
 
 **Bad:**
 
 ```tsx
 <Section>
   <Container>
-    <Heading>...</Heading>
+    <Heading>Title</Heading>
+    <Paragraph>Content here</Paragraph>
   </Container>
 </Section>
 ```
@@ -277,65 +72,158 @@ Don't use `Container` inside `Section` - it's redundant. Use `Section`'s `innerA
 **Good:**
 
 ```tsx
-<Section innerAlign="content">
-  <Heading>...</Heading>
+<Section>
+  <Heading>Title</Heading>
+  <Paragraph>Content here</Paragraph>
 </Section>
 ```
 
-### `gallop/prefer-typography-components`
+### 003: Typography Components
 
-Use `Paragraph` and `Span` components instead of raw `<p>` and `<span>` elements in blocks.
+Use Paragraph/Span, not raw tags
+
+- **ESLint Rule:** `gallop/prefer-typography-components`
+- **Category:** typography
 
 **Bad:**
 
 ```tsx
-<p className="text-sm text-gray-500">Some text</p>
-<span className="text-green-500">+28%</span>
+<p className="text-sm text-gray-500 mb-4">Some descriptive text</p>
+<span className="text-green-500 font-medium">+28%</span>
 ```
 
 **Good:**
 
 ```tsx
-<Paragraph fontSize="text-sm" color="text-gray-500">Some text</Paragraph>
-<Span fontSize="text-sm" color="text-green-500">+28%</Span>
+<Paragraph fontSize="text-sm" color="text-gray-500">
+  Some descriptive text
+</Paragraph>
+<Span color="text-green-500" fontWeight="font-medium">+28%</Span>
 ```
 
-### `gallop/prefer-component-props`
+### 004: Component Props
 
-Use dedicated props instead of className for styling that components support.
+Use props over className for supported styles
+
+- **ESLint Rule:** `gallop/prefer-component-props`
+- **Category:** typography
 
 **Bad:**
 
 ```tsx
 <Heading className="text-center mb-6 text-accent">Title</Heading>
-<Paragraph className="text-lg mb-4">Text</Paragraph>
+<Paragraph className="text-lg mb-4">Text content</Paragraph>
+<Label className="text-sm font-semibold">Category</Label>
 ```
 
 **Good:**
 
 ```tsx
-<Heading textAlign="text-center" margin="mb-6" color="text-accent">Title</Heading>
-<Paragraph fontSize="text-lg" margin="mb-4">Text</Paragraph>
+<Heading textAlign="text-center" margin="mb-6" color="text-accent">
+  Title
+</Heading>
+<Paragraph fontSize="text-lg" margin="mb-4">
+  Text content
+</Paragraph>
+<Label fontSize="text-sm" fontWeight="font-semibold">
+  Category
+</Label>
 ```
 
-**Supported props by component:**
+## Documentation Patterns
 
-- `Heading`: `margin`, `color`, `textAlign`, `fontSize`, `fontWeight`
-- `Paragraph`: `margin`, `color`, `textAlign`, `fontSize`, `lineHeight`
-- `Accent`: `margin`, `color`, `textAlign`
-- `Button`: `margin`
-- `Label`: `margin`, `color`, `textAlign`, `fontSize`
+These patterns are not enforced by ESLint but should be followed.
 
-## Post-Edit Verification
+### 005: Page Structure
 
-- After editing files, check for linter errors
-- Fix lint errors before moving to the next task
-- Run `npm run lint` to verify all rules pass
+PageWrapper, generatePageMetadata pattern
+
+### 006: Block Naming
+
+{type}-{n}.tsx naming, PascalCase exports
+
+### 007: Import Paths
+
+@/ aliases, destructured imports
+
+### 008: Tailwind Only
+
+No inline styles, use Tailwind exclusively
+
+### 009: Color Tokens
+
+Use semantic color tokens
+
+### 010: Spacing System
+
+Standard padding/margin values
+
+### 011: Responsive Mobile-First
+
+sm/md/lg/xl breakpoint usage
+
+### 012: Icon System
+
+Iconify with Icon component
+
+### 013: New Component Pattern
+
+Props for margin/color/fontSize
+
+### 014: clsx Not classnames
+
+Use clsx, never classnames package
+
+### 015: No Inline Hover Styles
+
+Tailwind for hover states
+
+### 016: Client Extraction
+
+Extract hooks to components, not blocks (see Pattern 001 for enforcement)
+
+### 017: SEO Metadata
+
+PageMetadata structure, structured data
+
+## Canon Guarantees
+
+Following these patterns provides these guarantees:
+
+- **SEO Stability** (SEO_STABLE): Patterns 001, 016, 017
+- **Performance Baseline** (PERF_BASELINE): Patterns 001, 007, 010, 016
+- **Maintainability** (MAINTAIN): Patterns 004, 005, 006, 007, 013
+- **Design System Compliance** (DESIGN_SYSTEM): Patterns 003, 004, 009, 010, 011
+
+## Component Quick Reference
+
+### Typography
+- `Heading` - props: `as`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
+- `Paragraph` - props: `color`, `margin`, `fontSize`, `lineHeight`, `textAlign`
+- `Span` - props: `color`, `margin`, `fontSize` (inline text, mb-0 default)
+- `Label` - props: `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
+
+### Layout
+- `Section` - semantic section wrapper
+- `Columns` - grid layout, props: `cols`, `gap`, `align`
+- `Column` - column child
+
+### Interactive
+- `Button` - props: `href`, `variant`, `icon`, `iconPlacement`, `margin`
+- `Icon` - Iconify icon wrapper
 
 ## Do NOT
 
+- Use `'use client'` in blocks - extract to components
+- Use raw `<p>` or `<span>` - use Paragraph/Span components
+- Use className for margin/color/fontSize when component has props
+- Use Container inside Section - Section already provides containment
 - Use `classnames` package - use `clsx` instead
-- Use inline styles for colors/backgrounds that need hover states
-- Import components from other projects without adapting them
-- Create documentation files unless explicitly requested
-- Add `'use client'` unless the component uses hooks or event handlers
+- Use inline styles for hover states - use Tailwind classes
+
+## Post-Edit Verification
+
+After editing files:
+1. Run `npm run lint` to check for errors
+2. Run `npm run audit` for Canon compliance report
+3. Fix any violations before committing

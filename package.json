@@ -39,6 +39,8 @@
     "audit": "node packages/cli/dist/index.js audit",
     "audit:strict": "node packages/cli/dist/index.js audit --strict",
     "audit:json": "node packages/cli/dist/index.js audit --json",
+    "generate:ai-rules": "node packages/cli/dist/index.js generate .cursorrules",
+    "generate:copilot": "node packages/cli/dist/index.js generate .github/copilot-instructions.md",
     "images": "node _scripts/process-images.js",
     "images:reset": "rm -rf public/images && npm run images",
     "favicon": "node _scripts/generate-favicon.js",
