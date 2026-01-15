@@ -55,8 +55,7 @@ npx gallop audit --fix
     38:15 [003] Use Paragraph component instead of <p>
 
   ─────────────────────────────────────────────────────────
-  Run with --fix to auto-fix where possible
-  See: https://github.com/gallop-software/canon
+  Fix violations manually following the Canon patterns
 ```
 
 ### JSON Output
