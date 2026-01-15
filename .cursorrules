@@ -225,5 +225,6 @@ Following these patterns provides these guarantees:
 
 After editing files:
 1. Run `npm run lint` to check for errors
-2. Run `npm run audit` for Canon compliance report
-3. Fix any violations before committing
+2. Fix any violations before committing
+
+Note: Only lint files you edited, not the entire codebase.

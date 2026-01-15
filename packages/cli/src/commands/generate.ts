@@ -172,8 +172,9 @@ function generateCursorrules(): string {
   lines.push('')
   lines.push('After editing files:')
   lines.push('1. Run `npm run lint` to check for errors')
-  lines.push('2. Run `npm run audit` for Canon compliance report')
-  lines.push('3. Fix any violations before committing')
+  lines.push('2. Fix any violations before committing')
+  lines.push('')
+  lines.push('Note: Only lint files you edited, not the entire codebase.')
   lines.push('')
 
   return lines.join('\n')
