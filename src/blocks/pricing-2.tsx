@@ -9,115 +9,124 @@ import {
   Chip,
 } from '@/components'
 import checkIcon from '@iconify/icons-heroicons/check-20-solid'
+import { clsx } from 'clsx'
+
+const pricingPlans = [
+  {
+    name: 'Essentials',
+    description: 'Perfect for intimate celebrations',
+    price: '$2,500',
+    priceColor: 'text-accent',
+    featured: false,
+    features: [
+      'Up to 50 guests',
+      'Venue recommendations',
+      'Vendor coordination (3 vendors)',
+      'Event timeline creation',
+      'Day-of coordination (6 hours)',
+    ],
+  },
+  {
+    name: 'Premier',
+    description: 'For unforgettable celebrations',
+    price: '$6,500',
+    priceColor: 'text-white',
+    featured: true,
+    features: [
+      'Up to 150 guests',
+      'Venue sourcing & negotiation',
+      'Full vendor management',
+      'Custom event design & styling',
+      'Budget management',
+      'Full day-of coordination (12 hours)',
+    ],
+  },
+  {
+    name: 'Luxury',
+    description: 'For extraordinary events',
+    price: '$12,000',
+    priceColor: 'text-accent',
+    featured: false,
+    features: [
+      'Unlimited guests',
+      'Exclusive venue access',
+      'Premium vendor curation',
+      'Bespoke event design',
+      'Custom decor & installations',
+      'Multi-day coordination',
+    ],
+  },
+]
 
 export default function Pricing2() {
   return (
-    <Section className="py-30 bg-gradient-to-b from-body to-body-light relative">
+    <Section className="py-30 bg-gradient-to-b from-body to-body-light relative overflow-hidden">
+      <div className="text-center mb-20">
+        <Heading as="h2" margin="mb-6">
+          Planning Services Tailored to You
+        </Heading>
+        <Paragraph fontSize="text-lg" className="max-w-2xl mx-auto">
+          From intimate gatherings to grand celebrations, we offer
+          comprehensive planning packages designed to make your event
+          stress-free and unforgettable.
+        </Paragraph>
+      </div>
 
-        <div className="text-center mb-20">
-          <Heading
-            as="h2"
-            margin="mb-6"
+      <Grid cols="grid-cols-1 xl:grid-cols-3" gap="gap-8" className="max-w-7xl mx-auto">
+        {pricingPlans.map((plan) => (
+          <div
+            key={plan.name}
+            className={clsx(
+              'p-8 rounded-2xl transition-all flex flex-col relative',
+              plan.featured
+                ? 'bg-gradient-to-br from-accent to-accent/90 shadow-2xl hover:shadow-3xl hover:-translate-y-2 scale-105 border-4 border-accent/20'
+                : 'bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1'
+            )}
           >
-            Planning Services Tailored to You
-          </Heading>
-          <Paragraph fontSize="text-lg" className="max-w-2xl mx-auto">
-            From intimate gatherings to grand celebrations, we offer
-            comprehensive planning packages designed to make your event
-            stress-free and unforgettable.
-          </Paragraph>
-        </div>
-
-        <Grid cols="grid-cols-1 md:grid-cols-3" gap="gap-8" className="max-w-7xl mx-auto">
-          {/* Essentials Package */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col relative z-0">
+            {plan.featured && (
+              <Chip bgColor="bg-accent-light" color="text-accent-contrast" className="absolute -top-5 left-1/2 -translate-x-1/2 shadow-lg">
+                Most Popular
+              </Chip>
+            )}
             <div className="mb-6">
-              <Heading as="h4" margin="mb-2">Essentials</Heading>
-              <Paragraph color="text-body-muted" margin="mb-4">
-                Perfect for intimate celebrations
+              <Heading
+                as="h4"
+                margin="mb-2"
+                color={plan.featured ? 'text-white' : undefined}
+              >
+                {plan.name}
+              </Heading>
+              <Paragraph
+                color={plan.featured ? 'text-white/90' : 'text-body-muted'}
+                margin="mb-4"
+              >
+                {plan.description}
               </Paragraph>
               <Heading className="flex items-baseline" margin="mb-0">
-                <span className="text-4xl font-bold text-accent2">$2,500</span>
+                <span className={clsx('text-4xl font-bold', plan.priceColor)}>
+                  {plan.price}
+                </span>
               </Heading>
             </div>
 
-            <List variant="unstyled" spacing="loose" className="mb-6 flex-grow">
-              <Li icon={checkIcon}>Up to 50 guests</Li>
-              <Li icon={checkIcon}>Venue recommendations</Li>
-              <Li icon={checkIcon}>Vendor coordination (3 vendors)</Li>
-              <Li icon={checkIcon}>Event timeline creation</Li>
-              <Li icon={checkIcon}>Day-of coordination (6 hours)</Li>
+            <List
+              variant="unstyled"
+              spacing="loose"
+              color={plan.featured ? 'text-white' : undefined}
+              className="mb-6 flex-grow"
+            >
+              {plan.features.map((feature) => (
+                <Li key={feature} icon={checkIcon}>
+                  {feature}
+                </Li>
+              ))}
             </List>
 
-            <Button
-              href="#contact"
-              variant="secondary"
-              className="w-full"
-            >
+            <Button href="#contact" variant="secondary" className="w-full">
               Get Started
             </Button>
           </div>
-
-          {/* Premier Package - Featured */}
-          <div className="bg-gradient-to-br from-accent to-accent/90 p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all hover:-translate-y-2 relative flex flex-col scale-105 border-4 border-accent/20 z-10">
-            <Chip className="absolute -top-5 left-1/2 -translate-x-1/2 shadow-lg z-100">
-              Most Popular
-            </Chip>
-            <div className="mb-6">
-              <Heading as="h4" margin="mb-2" color="text-white">Premier</Heading>
-              <Paragraph color="text-white/90" margin="mb-4">
-                For unforgettable celebrations
-              </Paragraph>
-              <Heading className="flex items-baseline" margin="mb-0">
-                <span className="text-4xl font-bold text-white">$6,500</span>
-              </Heading>
-            </div>
-
-            <List variant="unstyled" spacing="loose" color="text-white" className="mb-6 flex-grow">
-              <Li icon={checkIcon}>Up to 150 guests</Li>
-              <Li icon={checkIcon}>Venue sourcing & negotiation</Li>
-              <Li icon={checkIcon}>Full vendor management</Li>
-              <Li icon={checkIcon}>Custom event design & styling</Li>
-              <Li icon={checkIcon}>Budget management</Li>
-              <Li icon={checkIcon}>Full day-of coordination (12 hours)</Li>
-            </List>
-
-            <Button
-              href="#contact"
-              variant="secondary"
-              className="w-full"
-            >
-              Get Started
-            </Button>
-          </div>
-
-          {/* Luxury Package */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col relative z-0">
-            <div className="mb-6">
-              <Heading as="h4" margin="mb-2">Luxury</Heading>
-              <Paragraph color="text-body-muted" margin="mb-4">For extraordinary events</Paragraph>
-              <Heading className="flex items-baseline" margin="mb-0">
-                <span className="text-4xl font-bold text-accent">$12,000</span>
-              </Heading>
-            </div>
-
-            <List variant="unstyled" spacing="loose" className="mb-6 flex-grow">
-              <Li icon={checkIcon}>Unlimited guests</Li>
-              <Li icon={checkIcon}>Exclusive venue access</Li>
-              <Li icon={checkIcon}>Premium vendor curation</Li>
-              <Li icon={checkIcon}>Bespoke event design</Li>
-              <Li icon={checkIcon}>Custom decor & installations</Li>
-              <Li icon={checkIcon}>Multi-day coordination</Li>
-            </List>
-
-            <Button
-              href="#contact"
-              variant="secondary"
-              className="w-full"
-            >
-              Get Started
-            </Button>
-        </div>
+        ))}
       </Grid>
     </Section>
   )
