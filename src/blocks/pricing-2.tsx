@@ -77,7 +77,7 @@ export default function Pricing2() {
           <div
             key={plan.name}
             className={clsx(
-              'p-8 rounded-2xl transition-all flex flex-col relative',
+              'p-8 rounded-2xl transition-all duration-300 flex flex-col relative',
               plan.featured
                 ? 'bg-gradient-to-br from-accent to-accent/90 shadow-2xl hover:shadow-3xl hover:-translate-y-2 xl:scale-105 border-4 border-accent/20'
                 : 'bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1'
@@ -113,7 +113,7 @@ export default function Pricing2() {
               variant="unstyled"
               spacing="loose"
               color={plan.featured ? 'text-white' : undefined}
-              className="mb-6 flex-grow"
+              className="mb-6"
             >
               {plan.features.map((feature) => (
                 <Li key={feature} icon={checkIcon}>
@@ -122,7 +122,7 @@ export default function Pricing2() {
               ))}
             </List>
 
-            <Button href="#contact" variant="secondary" className="w-full">
+            <Button href="#contact" variant="secondary" className="w-full mt-auto">
               Get Started
             </Button>
           </div>
