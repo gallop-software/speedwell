@@ -72,14 +72,14 @@ export default function Pricing2() {
         </Paragraph>
       </div>
 
-      <Grid cols="grid-cols-1 xl:grid-cols-3" gap="gap-8" className="max-w-7xl mx-auto">
+      <Grid cols="grid-cols-1 xl:grid-cols-3" gap="gap-16 xl:gap-8" className="max-w-7xl mx-auto">
         {pricingPlans.map((plan) => (
           <div
             key={plan.name}
             className={clsx(
               'p-8 rounded-2xl transition-all flex flex-col relative',
               plan.featured
-                ? 'bg-gradient-to-br from-accent to-accent/90 shadow-2xl hover:shadow-3xl hover:-translate-y-2 scale-105 border-4 border-accent/20'
+                ? 'bg-gradient-to-br from-accent to-accent/90 shadow-2xl hover:shadow-3xl hover:-translate-y-2 xl:scale-105 border-4 border-accent/20'
                 : 'bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1'
             )}
           >
