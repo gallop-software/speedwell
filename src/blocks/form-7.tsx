@@ -12,7 +12,7 @@ import {
   FormName,
 } from '@/components'
 
-export default function Application1() {
+export default function Form7() {
   return (
     <Section className="py-20 md:py-30 bg-body2 relative">
       <Heading

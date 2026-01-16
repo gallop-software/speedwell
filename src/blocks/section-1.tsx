@@ -42,7 +42,7 @@ const contactItems = [
   },
 ]
 
-export default function BusinessInfo1() {
+export default function Section1() {
   return (
     <div className="relative bg-contrast z-1 px-6">
       <div className="mx-auto max-w-[1600px] relative flex flex-col xl:flex-row gap-6 xl:gap-0">

@@ -3,14 +3,14 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Content21 from '@/blocks/content-21'
 import Accordion1 from '@/blocks/accordion-1'
-import Application1 from '@/blocks/application-1'
+import Form7 from '@/blocks/form-7'
 
 function Content() {
   return (
     <>
       <Content21 />
       <Accordion1 />
-      <Application1 />
+      <Form7 />
     </>
   )
 }
