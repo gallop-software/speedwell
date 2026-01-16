@@ -10,6 +10,7 @@ import {
   Subheading,
   Span,
   Label,
+  BackgroundDiagonal1,
 } from '@/components'
 
 export default function Content13() {
@@ -18,56 +19,7 @@ export default function Content13() {
       id="purchase"
       className="py-24 md:py-32 relative overflow-hidden"
     >
-      {/* Gradient mesh background with diagonal clip */}
-      <div className="absolute inset-0 -z-10">
-        {/* Main gradient with diagonal clip - using template color scheme */}
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-[var(--color-body2)] via-[var(--color-accent3)] to-[var(--color-accent3-dark)]"
-          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
-        />
-
-        {/* Blur overlays for depth */}
-        <div
-          className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-accent5-dark to-transparent opacity-40 blur-3xl"
-          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
-        />
-        <div
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent3-light rounded-full opacity-30 blur-3xl"
-          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
-        />
-      </div>
-
-      {/* Diagonal dashed lines overlay */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-35"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <pattern
-            id="content13-diagonal-lines"
-            patternUnits="userSpaceOnUse"
-            width="50"
-            height="50"
-            patternTransform="rotate(-45)"
-          >
-            <line
-              x1="0"
-              y1="0"
-              x2="0"
-              y2="50"
-              stroke="var(--color-accent3-dark)"
-              strokeWidth="1"
-              strokeDasharray="6 12"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#content13-diagonal-lines)"
-        />
-      </svg>
+      <BackgroundDiagonal1 />
 
       <Columns
         cols="grid-cols-1 lg:grid-cols-2"
@@ -113,19 +65,39 @@ export default function Content13() {
           {/* Product details */}
           <div className="space-y-4 mb-10 pb-10 border-b border-body-dark/20">
             <div className="flex justify-between items-center">
-              <Span color="text-body-contrast/60">Volume</Span>
+              <Label
+                variant="large"
+                color="text-body-contrast/60"
+              >
+                Volume
+              </Label>
               <Span fontWeight="font-medium">750ml</Span>
             </div>
             <div className="flex justify-between items-center">
-              <Span color="text-body-contrast/60">Alcohol</Span>
+              <Label
+                variant="large"
+                color="text-body-contrast/60"
+              >
+                Alcohol
+              </Label>
               <Span fontWeight="font-medium">0%</Span>
             </div>
             <div className="flex justify-between items-center">
-              <Span color="text-body-contrast/60">Origin</Span>
+              <Label
+                variant="large"
+                color="text-body-contrast/60"
+              >
+                Origin
+              </Label>
               <Span fontWeight="font-medium">Scottish Highlands</Span>
             </div>
             <div className="flex justify-between items-center">
-              <Span color="text-body-contrast/60">Batch</Span>
+              <Label
+                variant="large"
+                color="text-body-contrast/60"
+              >
+                Batch
+              </Label>
               <Span fontWeight="font-medium">No. 847</Span>
             </div>
           </div>
@@ -134,7 +106,7 @@ export default function Content13() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
             <div>
               <Label
-                fontSize="text-sm"
+                variant="large"
                 color="text-body-contrast/50"
                 margin="mb-1"
               >

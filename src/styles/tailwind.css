@@ -234,3 +234,8 @@
     transform: rotate(0deg);
   }
 }
+
+/* Diagonal clip path for hero sections */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 65%);
+}
