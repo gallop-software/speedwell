@@ -1,99 +1,68 @@
 import {
   Section,
+  Heading,
+  Paragraph,
+  Quote,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
 } from '@/components'
 
 export default function Content50() {
   return (
-    <Section
-      id="features"
-      className="py-30 bg-linear-to-b from-white from-28% via-gray-50 via-70% to-gray-100 relative overflow-hidden"
-    >
-      <div className="relative">
-        <Columns
-          className="mb-8"
-          reverseColumns={true}
-        >
-          <Column>
-            <Heading
-              as="h3"
-              styleAs="h3"
-              margin="mb-2"
-              fontSize="text-3xl"
-              color="text-accent5"
-            >
-              Product Showcase
-            </Heading>
-            <Heading
-              as="h3"
-              styleAs="h2"
-            >
-              Powerful Features
-            </Heading>
-            <Paragraph>
-              Our platform combines cutting-edge technology with intuitive
-              design to deliver exceptional results. From real-time
-              collaboration to advanced analytics, every feature is built to
-              enhance productivity and streamline workflows. Experience seamless
-              integration with your existing tools, robust security, and
-              scalable infrastructure that grows with your business.
-            </Paragraph>
-          </Column>
-          <Column className="aspect-[6.75/6] relative">
-            <Image
-              src="/images/layout-2/pexels-goumbik-577195.jpg"
-              alt="Product feature demonstration"
-              className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-              size="large"
-            />
-            <Image
-              src="/images/layout-2/pexels-pixabay-38568.jpg"
-              alt="Product interface showcase"
-              className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-              rounded="rounded-b-none rounded-t-full"
-              size="large"
-            />
-          </Column>
-        </Columns>
-        <Columns reverseColumns={false}>
-          <Column>
-            <Heading as="h3">Built for Teams</Heading>
-            <Paragraph>
-              Empower your team with tools designed for collaboration. Share
-              work instantly, provide feedback in real-time, and keep everyone
-              aligned with centralized project management. Our platform
-              eliminates communication barriers and ensures every team member
-              has the context they need to do their best work.
-            </Paragraph>
-            <Paragraph>
-              With advanced permissions, version control, and audit trails, you
-              maintain complete control while enabling seamless collaboration.
-              Whether your team is remote, hybrid, or in-office, our solution
-              adapts to your workflow and scales with your organization's unique
-              needs.
-            </Paragraph>
-          </Column>
-          <Column className="aspect-15/14 relative">
-            <Image
-              src="/images/layout-2/pexels-mikhail-nilov-8284731.jpg"
-              alt="Team collaboration features"
-              className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-              size="large"
-            />
-            <Image
-              src="/images/layout-2/pexels-ranamatloob567-35203646.jpg"
-              alt="Collaborative workspace"
-              className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-              rounded="rounded-r-none rounded-l-full"
-              size="large"
-            />
-          </Column>
-        </Columns>
-      </div>
+    <Section className="bg-body2 py-30">
+      <Columns
+        reverseColumns={false}
+        align="items-start"
+        gap="gap-10 lg:gap-20"
+      >
+        <Column>
+          <Image
+            src="/images/profiles/pexels-linkedin-2182970.jpg"
+            alt="Robert Rodriguez - Residential Design Lead"
+            className="w-full object-cover max-w-lg mx-auto"
+            rounded="rounded-t-full"
+            size="large"
+          />
+        </Column>
+        <Column>
+          <Heading
+            as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Residential Design Lead
+          </Heading>
+          <Heading
+            as="h4"
+            styleAs="h2"
+          >
+            Robert Rodriguez
+          </Heading>
+          <Paragraph>
+            Robert has a gift for transforming houses into homes that truly
+            reflect his clients' personalities and lifestyles. With 10 years of
+            experience in residential design, he specializes in creating warm,
+            inviting spaces that balance aesthetics with everyday functionality.
+            His approachable style and ability to listen make him a favorite
+            among clients who want a collaborative design experience.
+          </Paragraph>
+          <Paragraph>
+            Robert graduated from Savannah College of Art and Design and has
+            worked on projects ranging from cozy apartments to sprawling
+            estates. He is passionate about sustainable design practices and
+            loves incorporating vintage finds alongside contemporary pieces to
+            create unique, layered interiors.
+          </Paragraph>
+          <Quote>
+            A home should tell your story and support how you actually live. My
+            goal is to create spaces that feel both beautiful and effortlessly
+            comfortable for daily life.
+          </Quote>
+        </Column>
+      </Columns>
     </Section>
   )
 }

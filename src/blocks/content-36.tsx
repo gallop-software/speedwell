@@ -5,50 +5,85 @@ import {
   Image,
   Heading,
   Paragraph,
+  Gallery,
+  GalleryItem,
 } from '@/components'
 
 export default function Content36() {
   return (
-    <Section className="py-30 bg-body-dark">
-      <Columns
-        reverseColumns={false}
-        gap="gap-10 lg:gap-20"
-      >
-        <Column>
+    <Section className="py-30 bg-body2">
+      <Columns reverseColumns={true}>
+        <Column className="aspect-auto relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
-            alt="24/7 midwife access for prenatal care"
+            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+            alt="Non reprehenderit laboris"
             className="object-cover"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
+            as="h2"
+            styleAs="h3"
+          >
+            Kitchen and Bath
+          </Heading>
+          <Heading
             as="h3"
             styleAs="h2"
           >
-            Nulla ipsum sunt dolore amet
+            Luxury Kitchen and Spa Bath
           </Heading>
           <Paragraph>
-            Velit exercitation reprehenderit lorem laboris est veniam esse do
-            magna irure quis dolore nostrud ullamco non culpa cupidatat eiusmod
-            dolor magna aliqua qui enim incididunt incididunt elit labore do ex
-            consequat ut
-          </Paragraph>
-          <Paragraph>
-            Aute aute tempor quis enim ad labore ea adipiscing velit laborum qui
-            eiusmod in ipsum velit aute ipsum est ea officia esse labore ea
-            cillum ex reprehenderit fugiat ut ullamco non aliquip in mollit
-            cillum excepteur sunt aliquip labore qui ea dolor aute cillum
-            cupidatat
-          </Paragraph>
-          <Paragraph>
-            Pariatur culpa cupidatat est pariatur exercitation adipiscing
-            adipiscing incididunt id enim ullamco labore officia amet cillum
-            veniam tempor mollit quis
+            This comprehensive renovation showcases mastery in functional luxury
+            featuring custom cabinetry premium countertops designer fixtures
+            innovative storage professional-grade appliances stunning tile work
+            elegant hardware sophisticated lighting ambient features spa-like
+            atmosphere creating beautiful hardworking spaces where form meets
+            function perfectly balancing aesthetics practicality durability
+            style comfort luxury
           </Paragraph>
         </Column>
       </Columns>
+      <Gallery
+        columns={3}
+        align="none"
+        className="mt-20"
+      >
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-dropshado-2251247.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+          size="large"
+        />
+      </Gallery>
     </Section>
   )
 }

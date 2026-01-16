@@ -1,114 +1,71 @@
 import {
   Section,
+  Heading,
+  Paragraph,
+  Quote,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
-  Buttons,
-  Button,
-  Gallery,
-  GalleryItem,
 } from '@/components'
-import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content48() {
   return (
-    <Section className="py-30 bg-body">
-      <Columns reverseColumns={true}>
-        <Column className="aspect-[6/8] relative">
+    <Section
+      className="bg-body py-30"
+      id="our-team"
+    >
+      <Columns
+        align="items-start"
+        gap="gap-10 lg:gap-20"
+      >
+        <Column>
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
-            alt="Occaecat duis consequat aute minim"
-            className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
-            alt="Consectetur nulla ullamco"
-            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            src="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
+            alt="James Mitchell - Principal Designer and Founder"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
-            as="h2"
+            as="h3"
             styleAs="h3"
-            color="text-gray-600"
-            margin="mb-4"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
           >
-            Whole Home Design
+            Principal Designer & Founder
           </Heading>
           <Heading
-            as="h3"
+            as="h4"
             styleAs="h2"
           >
-            Complete Home Transformation from Concept to Completion
+            James Mitchell
           </Heading>
           <Paragraph>
-            This full-service residential project exemplifies comprehensive
-            design coordination featuring cohesive color palettes custom
-            furnishings curated artwork strategic lighting layered textiles
-            architectural details refined finishes thoughtful accessories
-            seamless transitions between spaces creating unified aesthetic
-            throughout entire home reflecting client lifestyle personal taste
-            design aspirations
+            With over 15 years of experience in residential and commercial
+            design, James founded Timmerman with a vision to create spaces that
+            are both beautiful and deeply personal. His philosophy centers on
+            listening first, understanding his clients' lifestyles, and
+            translating their dreams into functional, stunning realities.
+            James's work has been featured in numerous design publications, and
+            he has earned a reputation for his attention to detail and
+            collaborative approach.
           </Paragraph>
-          <Buttons>
-            <Button
-              variant="primary"
-              href="/enim-ad"
-              icon={arrowRightIcon}
-              iconPlacement="after"
-            >
-              Schedule Consultation
-            </Button>
-          </Buttons>
+          <Paragraph>
+            James holds a degree in Interior Architecture from Rhode Island
+            School of Design and is a certified member of ASID. When he is not
+            designing, you can find him exploring antique markets, traveling for
+            design inspiration, or mentoring young designers entering the field.
+          </Paragraph>
+          <Quote>
+            Great design is not about following trends—it is about creating
+            timeless spaces that truly enhance how people live and work every
+            single day.
+          </Quote>
         </Column>
       </Columns>
-      <Gallery
-        columns={5}
-        align="none"
-        className="mt-20"
-      >
-        <GalleryItem
-          src="/images/portfolio/pexels-burst-545012.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-clickerhappy-584399.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-pixabay-269252.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-pixabay-259962.jpg"
-          size="large"
-        />
-      </Gallery>
     </Section>
   )
 }

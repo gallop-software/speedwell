@@ -2,26 +2,26 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero11 from '@/blocks/hero-11'
-import Content33 from '@/blocks/content-33'
-import Content34 from '@/blocks/content-34'
-import Content35 from '@/blocks/content-35'
-import Content36 from '@/blocks/content-36'
-import Content37 from '@/blocks/content-37'
-import Content38 from '@/blocks/content-38'
-import Content39 from '@/blocks/content-39'
+import Content22 from '@/blocks/content-22'
+import Content23 from '@/blocks/content-23'
+import Content24 from '@/blocks/content-24'
+import Content25 from '@/blocks/content-25'
+import Content26 from '@/blocks/content-26'
+import Content27 from '@/blocks/content-27'
+import Content28 from '@/blocks/content-28'
 import PageFooter from '@/template/page-footer'
 
 function Content() {
   return (
     <>
       <Hero11 />
-      <Content33 />
-      <Content34 />
-      <Content35 />
-      <Content36 />
-      <Content37 />
-      <Content38 />
-      <Content39 />
+      <Content22 />
+      <Content23 />
+      <Content24 />
+      <Content25 />
+      <Content26 />
+      <Content27 />
+      <Content28 />
       <PageFooter />
     </>
   )

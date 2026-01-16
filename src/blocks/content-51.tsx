@@ -1,89 +1,69 @@
-import { Section, Heading, Paragraph, Accent, Image } from '@/components'
+import {
+  Section,
+  Heading,
+  Paragraph,
+  Quote,
+  Columns,
+  Column,
+  Image,
+} from '@/components'
 
 export default function Content51() {
   return (
-    <Section className="py-20 md:py-30 bg-body relative overflow-hidden">
-      {/* Decorative background accent */}
-      <div className="absolute top-20 right-0 w-1/3 h-96 bg-accent/5 rounded-l-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-0 w-1/2 h-80 bg-accent2/5 rounded-r-full blur-3xl"></div>
-
-      <div className="mx-auto max-w-4xl">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Accent
-            margin="mb-4"
-            color="text-accent"
-            size="small"
-          >
-            Our Story
-          </Accent>
+    <Section className="bg-body-light py-30">
+      <Columns
+        reverseColumns
+        align="items-start"
+        gap="gap-10 lg:gap-20"
+      >
+        <Column>
+          <Image
+            src="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
+            alt="Christopher Thompson - Color and Materials Specialist"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
+            size="large"
+          />
+        </Column>
+        <Column>
           <Heading
-            as="h2"
-            margin="mb-6"
+            as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
           >
-            A Culinary Journey Rooted in Tradition
+            Color & Materials Specialist
           </Heading>
-          <Paragraph fontSize="text-lg">
-            For over two decades, we've been crafting unforgettable dining
-            experiences that celebrate the perfect marriage of time-honored
-            techniques and innovative gastronomy. Each dish tells a story, each
-            ingredient is chosen with care, and every meal becomes a memory.
+          <Heading
+            as="h4"
+            styleAs="h2"
+          >
+            Christopher Thompson
+          </Heading>
+          <Paragraph>
+            Christopher has an exceptional eye for color theory and material
+            composition. His expertise in selecting the perfect palette and
+            finishes elevates every project, creating cohesive designs that feel
+            both harmonious and dynamic. With a background in fine arts and
+            interior design, Christopher brings a unique perspective to color
+            consultation, helping clients move beyond safe choices to discover
+            palettes that truly resonate.
           </Paragraph>
-        </div>
-
-        {/* Three column features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
-              <span className="text-2xl font-serif text-accent">I</span>
-            </div>
-            <Heading
-              as="h3"
-              styleAs="h4"
-              margin="mb-3"
-            >
-              Master Chefs
-            </Heading>
-            <Paragraph fontSize="text-sm">
-              Award-winning culinary artists with decades of experience across
-              Michelin-starred kitchens worldwide
-            </Paragraph>
-          </div>
-
-          <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
-              <span className="text-2xl font-serif text-accent">II</span>
-            </div>
-            <Heading
-              as="h3"
-              styleAs="h4"
-              margin="mb-3"
-            >
-              Farm to Table
-            </Heading>
-            <Paragraph fontSize="text-sm">
-              Partnering with local farms and artisans to bring you the freshest
-              seasonal ingredients at their peak
-            </Paragraph>
-          </div>
-
-          <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
-              <span className="text-2xl font-serif text-accent">III</span>
-            </div>
-            <Heading
-              as="h3"
-              styleAs="h4"
-              margin="mb-3"
-            >
-              Artisan Approach
-            </Heading>
-            <Paragraph fontSize="text-sm">
-              Every dish is meticulously crafted with passion, precision, and an
-              unwavering commitment to excellence
-            </Paragraph>
-          </div>
-        </div>
-      </div>
+          <Paragraph>
+            He stays at the forefront of material innovation, constantly
+            researching new textiles, finishes, and sustainable options. His
+            knowledge of how materials interact with light and space ensures
+            that every selection not only looks beautiful but performs well over
+            time.
+          </Paragraph>
+          <Quote>
+            Color has the power to transform not just a space, but how you feel
+            when you are in it. The right palette can energize, calm, or inspire
+            depending on what you need.
+          </Quote>
+        </Column>
+      </Columns>
     </Section>
   )
 }

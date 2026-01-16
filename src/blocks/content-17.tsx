@@ -4,63 +4,63 @@ import {
   Column,
   Image,
   Heading,
-  Quote,
   Paragraph,
+  Quote,
 } from '@/components'
 
 export default function Content17() {
   return (
-    <Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
+    <Section className="bg-body-light py-30">
       <Columns
         reverseColumns
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
-        <Column className="aspect-[8/7] relative">
+        <Column className="relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-            alt="Luxurious bedroom design with sophisticated styling"
-            className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-            alt="Beautiful kitchen with modern amenities and design"
-            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+            alt="Construction and renovation management"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Phase 2
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            Personalized Design That Reflects Your Style
+            Construction & Procurement
           </Heading>
+          <Paragraph>
+            As construction begins, our project managers maintain constant
+            oversight, conducting regular site visits to ensure work meets our
+            exacting standards. We coordinate deliveries, manage contractor
+            schedules, and address any issues immediately. Our hands-on approach
+            means potential problems are identified and resolved before they
+            impact your timeline or budget.
+          </Paragraph>
+          <Paragraph>
+            Simultaneously, we manage all procurement activities, tracking
+            orders and coordinating deliveries to align perfectly with the
+            construction schedule. Our relationships with premium suppliers and
+            vendors ensure priority service and competitive pricing. We inspect
+            all materials upon arrival and maintain detailed records throughout
+            the process.
+          </Paragraph>
           <Quote>
-            Every home tells a story, and we're here to help you tell yours
+            Active oversight and clear communication ensure your project stays
+            on track and exceeds quality expectations
           </Quote>
-          <Paragraph>
-            At Speedwell, we believe that great design is personal. Our process
-            begins with understanding who you are, how you live, and what makes
-            you feel at home. We take the time to learn about your daily
-            routines, your aesthetic preferences, and your long-term goals for
-            your space. This deep understanding allows us to create designs that
-            aren't just beautiful, but truly functional for your unique
-            lifestyle.
-          </Paragraph>
-          <Paragraph>
-            Our designers bring years of experience and a keen eye for detail to
-            every project. We stay current with the latest trends while
-            maintaining a timeless sensibility that ensures your home will feel
-            fresh and relevant for years to come. From selecting the perfect
-            color palette to sourcing unique furnishings and accessories, we
-            handle every aspect with care and expertise.
-          </Paragraph>
-          <Paragraph>
-            Quality craftsmanship and attention to detail are at the heart of
-            everything we do.
-          </Paragraph>
         </Column>
       </Columns>
     </Section>

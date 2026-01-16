@@ -5,58 +5,62 @@ import {
   Image,
   Heading,
   Paragraph,
+  Quote,
 } from '@/components'
 
 export default function Content20() {
   return (
-    <Section className="py-30 bg-body2">
+    <Section className="bg-body-light py-30">
       <Columns
         reverseColumns={false}
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
-        <Column className="aspect-[4/5] relative">
+        <Column>
           <Image
-            src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-            alt="Cozy living space with warm and inviting atmosphere"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
-            alt="Modern bathroom with spa-like features"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+            alt="Quality assurance and inspection"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Quality Assurance
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            Award-Winning Design Excellence
+            Uncompromising Standards
           </Heading>
           <Paragraph>
-            Our commitment to excellence has earned us recognition from leading
-            industry organizations and the trust of discerning homeowners. With
-            over a decade of experience transforming residential spaces, we've
-            built a reputation for delivering designs that exceed expectations
-            while respecting timelines and budgets.
+            Quality is never compromised on our projects. We maintain rigorous
+            standards at every stage, conducting regular inspections and quality
+            checks to ensure all work meets our exacting specifications. Our
+            experienced eye catches details others might miss, and we address
+            any issues immediately to maintain project momentum and protect your
+            investment.
           </Paragraph>
           <Paragraph>
-            What sets Speedwell apart is our holistic approach to residential
-            design. We don't just focus on aesthetics – we consider how you
-            live, work, and relax in your space. Our designs enhance natural
-            light, improve flow between rooms, and create harmonious
-            environments that promote well-being. We collaborate with skilled
-            craftspeople and artisans to ensure every element, from custom
-            cabinetry to lighting fixtures, is executed to perfection.
+            We work exclusively with licensed, insured contractors and
+            craftspeople who share our commitment to excellence. Every material
+            is inspected upon delivery, every installation is scrutinized for
+            perfection, and every finished surface is evaluated against our
+            quality standards. This meticulous approach ensures your completed
+            project exceeds expectations and stands the test of time.
           </Paragraph>
-          <Paragraph>
-            Ready to transform your home? Contact us today to schedule a
-            consultation and discover how we can bring your vision to life with
-            our comprehensive residential interior design services.
-          </Paragraph>
+          <Quote>
+            Excellence in execution is our promise – we accept nothing less than
+            perfection in every detail
+          </Quote>
         </Column>
       </Columns>
     </Section>

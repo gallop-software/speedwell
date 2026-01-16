@@ -5,46 +5,69 @@ import {
   Image,
   Heading,
   Paragraph,
+  Buttons,
+  Button,
 } from '@/components'
+import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content26() {
   return (
-    <Section className="bg-body-light py-30">
-      <Columns>
+    <Section className="py-30 bg-body2">
+      <Columns
+        reverseColumns={true}
+        gap="gap-10 lg:gap-20"
+      >
         <Column className="aspect-4/5 relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
-            alt="Quality craftsmanship and attention to detail"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+            src="/images/portfolio/pexels-pixabay-161758.jpg"
+            alt="Adipiscing deserunt ea aliquip ut sint"
+            className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
-            alt="Professional contractor coordination"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-t-full"
+            src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+            alt="Ad eiusmod elit aliquip"
+            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
+            rounded="rounded-b-none rounded-t-full"
             size="large"
           />
         </Column>
-        <Column className="py-0 lg:py-10">
-          <Heading as="h2">Experience Meets Innovation</Heading>
+        <Column>
+          <Heading
+            as="h3"
+            styleAs="h2"
+          >
+            Ad ut anim id pariatur
+          </Heading>
           <Paragraph>
-            With decades of combined experience in residential and commercial
-            design, our team has the expertise to handle projects of any scale
-            and complexity. We stay current with the latest design trends,
-            materials, and technologies while honoring timeless principles of
-            beauty, function, and craftsmanship. This balance allows us to
-            create spaces that feel both fresh and enduring.
+            Cillum cupidatat officia mollit dolor laboris voluptate occaecat
+            elit veniam dolore nisi in id nulla sit aliquip minim consequat
+            mollit incididunt sed ea
           </Paragraph>
           <Paragraph>
-            From initial concepts through final installation, our collaborative
-            approach ensures every project benefits from multiple perspectives
-            and specialized knowledge. Whether you are renovating a single room
-            or designing an entire property, you will work with dedicated
-            professionals who are invested in your success and satisfaction. We
-            are not just designers, we are your partners in creating spaces that
-            enhance your life.
+            Incididunt esse duis laborum nulla labore labore sed do aliqua in in
+            cillum dolor laborum anim duis ipsum tempor magna pariatur ad
+            cupidatat sed fugiat tempor dolore laboris excepteur duis fugiat
+            aliqua minim exercitation amet sint ut incididunt fugiat nulla velit
+            duis fugiat amet incididunt pariatur qui officia in id
           </Paragraph>
+          <Paragraph>
+            Laboris nisi incididunt nostrud mollit fugiat enim fugiat ex laboris
+            do velit aliqua nulla laboris est magna ipsum ut non sint nisi
+            reprehenderit culpa consectetur excepteur aliqua est aliqua anim
+            nisi amet in adipiscing exercitation ut pariatur ex ad sunt ad irure
+            sunt exercitation cupidatat
+          </Paragraph>
+          <Buttons>
+            <Button
+              variant="primary"
+              href="https://spinningbabies.com"
+              icon={arrowRightIcon}
+              iconPlacement="after"
+            >
+              Ipsum fugiat nisi laboris
+            </Button>
+          </Buttons>
         </Column>
       </Columns>
     </Section>

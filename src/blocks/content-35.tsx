@@ -5,46 +5,84 @@ import {
   Image,
   Heading,
   Paragraph,
+  Gallery,
+  GalleryItem,
 } from '@/components'
 
 export default function Content35() {
   return (
-    <Section className="py-30 bg-body">
-      <Columns
-        reverseColumns={false}
-        gap="gap-10 lg:gap-20"
-      >
-        <Column className="aspect-12/11 relative">
+    <Section className="py-30 bg-body-dark">
+      <Columns reverseColumns={false}>
+        <Column className="aspect-auto relative">
           <Image
             src="/images/portfolio/pexels-pixabay-276724.jpg"
-            alt="Incididunt est aliqua velit"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-            alt="Sed ut elit ut ea"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            alt="Magna nostrud deserunt"
+            className="object-cover"
             size="large"
           />
         </Column>
         <Column>
           <Heading
+            as="h2"
+            styleAs="h3"
+          >
+            Commercial Excellence
+          </Heading>
+          <Heading
             as="h3"
             styleAs="h2"
           >
-            Commodo adipiscing nisi incididunt
+            Professional Office Suite Redesign
           </Heading>
           <Paragraph>
-            Ut elit aute et id reprehenderit laboris esse sit tempor voluptate
-            commodo ut nisi ipsum minim laborum aliqua consectetur veniam culpa
-            laboris anim ullamco voluptate nostrud tempor nostrud proident
-            cupidatat laborum elit esse qui id excepteur et velit nisi
-            incididunt non quis duis laborum commodo ipsum veniam
+            This commercial transformation demonstrates expertise in creating
+            productive inspiring workspaces through strategic layout
+            optimization ergonomic furniture selections sophisticated finishes
+            modern lighting solutions branded elements cohesive color schemes
+            smart storage systems flexible meeting areas collaborative zones
+            resulting professional environments that enhance employee wellbeing
+            boost productivity reflect company culture
           </Paragraph>
         </Column>
       </Columns>
+      <Gallery
+        columns={5}
+        align="none"
+        className="mt-20"
+      >
+        <GalleryItem
+          src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/jvdm/pexels-jvdm-1454804.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-clickerhappy-584399.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-burst-545012.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-mikhail-nilov-6707628.jpg"
+          size="large"
+        />
+      </Gallery>
     </Section>
   )
 }

@@ -1,132 +1,49 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Quote,
-  Accordion,
-  Li,
-  List,
-} from '@/components'
+import { Section, Heading, Paragraph } from '@/components'
 
 export default function Content43() {
   return (
-    <Section className="bg-body pt-30">
-      <Columns
-        className="mb-30"
-        align="items-start"
-        gap="gap-10 lg:gap-20"
+    <Section
+      className="bg-body py-30"
+      innerAlign="content"
+    >
+      <Heading
+        as="h2"
+        id="services"
+        textAlign="text-center"
       >
-        <Column>
-          <Image
-            src="/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg"
-            alt="Creative team collaborating on brand strategy"
-            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
-            rounded="rounded-t-full"
-            size="large"
-          />
-        </Column>
-        <Column>
-          <Heading
-            as="h3"
-            styleAs="h3"
-            margin="mb-2"
-            fontSize="text-3xl"
-            color="text-accent5"
-          >
-            Who We Are
-          </Heading>
-          <Heading
-            as="h4"
-            styleAs="h2"
-          >
-            A Creative Agency Built on Strategy
-          </Heading>
-          <Paragraph>
-            We are a team of designers, strategists, and storytellers passionate
-            about creating brands that resonate. Our approach combines creative
-            excellence with strategic thinking to deliver branding solutions
-            that not only look beautiful but also drive real business results.
-            From startups to established businesses, we partner with clients who
-            are ready to make their mark.
-          </Paragraph>
-          <Paragraph>
-            Our studio thrives on collaboration and innovation. We believe the
-            best brands emerge from deep understanding of your business,
-            audience, and market. By blending research, creativity, and
-            strategic insight, we craft brand identities that are distinctive,
-            memorable, and built to last. Every project we take on is an
-            opportunity to push boundaries and create something exceptional.
-          </Paragraph>
-          <Quote>
-            Great brands are born from the intersection of creativity, strategy,
-            and authentic storytelling
-          </Quote>
-        </Column>
-      </Columns>
-      <div className="mx-auto max-w-4xl">
-        <Heading
-          textAlign="text-center"
-          as="h2"
-        >
-          What We Do
-        </Heading>
-        <Accordion headingText="Brand Identity & Design">
-          <Heading as="h4">Our Approach</Heading>
-          <Paragraph>
-            We create visual identities that capture the essence of your brand.
-            From logo design to complete brand systems, we develop cohesive
-            visual languages that communicate your values and connect with your
-            audience.
-          </Paragraph>
-          <Heading as="h4">Services Include</Heading>
-          <List className="mb-8">
-            <Li>Logo design and brand mark development</Li>
-            <Li>Brand guidelines and style guides</Li>
-            <Li>Color palette and typography systems</Li>
-            <Li>Business card and stationery design</Li>
-            <Li>Packaging and product design</Li>
-            <Li>Brand refresh and evolution</Li>
-          </List>
-        </Accordion>
-        <Accordion headingText="Digital & Web Design">
-          <Heading as="h4">Our Approach</Heading>
-          <Paragraph>
-            We design digital experiences that are both beautiful and
-            functional. Our websites and digital products are crafted to engage
-            users, communicate your message clearly, and drive conversions.
-          </Paragraph>
-          <Heading as="h4">Services Include</Heading>
-          <List className="mb-8">
-            <Li>Website design and development</Li>
-            <Li>User experience (UX) and interface (UI) design</Li>
-            <Li>E-commerce solutions</Li>
-            <Li>Mobile app design</Li>
-            <Li>Landing page design and optimization</Li>
-            <Li>Digital marketing assets</Li>
-          </List>
-        </Accordion>
-        <Accordion headingText="Brand Strategy & Marketing">
-          <Heading as="h4">Our Approach</Heading>
-          <Paragraph>
-            We develop strategic foundations that guide all your branding
-            efforts. Through research, positioning, and messaging development,
-            we help you define who you are and how to communicate it
-            effectively.
-          </Paragraph>
-          <Heading as="h4">Services Include</Heading>
-          <List className="mb-8">
-            <Li>Brand strategy and positioning</Li>
-            <Li>Market research and competitive analysis</Li>
-            <Li>Messaging and brand voice development</Li>
-            <Li>Content strategy and creation</Li>
-            <Li>Social media strategy and management</Li>
-            <Li>Marketing campaign development</Li>
-          </List>
-        </Accordion>
-      </div>
+        Comprehensive Commercial Design Solutions
+      </Heading>
+      <Paragraph>
+        Our commercial design expertise spans multiple sectors, each with unique
+        requirements and challenges. Whether you're creating a dynamic office
+        environment, an engaging retail experience, a welcoming restaurant
+        atmosphere, or a luxurious hospitality venue, we bring industry-specific
+        knowledge and creative excellence to every project. Our designs
+        prioritize functionality, brand alignment, and user experience while
+        incorporating the latest trends in workplace innovation and commercial
+        aesthetics.
+      </Paragraph>
+      <Paragraph>
+        We understand that successful commercial spaces must balance multiple
+        objectives: enhancing employee productivity and satisfaction, creating
+        memorable customer experiences, optimizing operational efficiency, and
+        reflecting brand values. Our holistic approach considers workflow
+        patterns, customer journey mapping, building codes, accessibility
+        requirements, and long-term adaptability. We collaborate with
+        architects, engineers, and construction teams to ensure seamless
+        integration of design elements with building systems and structural
+        requirements.
+      </Paragraph>
+      <Paragraph>
+        From initial space planning and concept development through furniture
+        specification, finish selection, and final installation, we manage every
+        aspect of your commercial interior project. Our established
+        relationships with commercial furniture manufacturers, specialized
+        contractors, and technology integrators enable us to deliver
+        high-quality results on schedule and within budget. We also provide
+        ongoing support to ensure your space continues to meet your evolving
+        business needs.
+      </Paragraph>
     </Section>
   )
 }

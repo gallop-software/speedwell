@@ -7,26 +7,25 @@ import {
   Paragraph,
   Buttons,
   Button,
+  Gallery,
+  GalleryItem,
 } from '@/components'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content37() {
   return (
-    <Section className="py-30 bg-body2">
-      <Columns
-        reverseColumns={true}
-        gap="gap-10 lg:gap-20"
-      >
-        <Column className="aspect-4/5 relative">
+    <Section className="py-30 bg-body">
+      <Columns reverseColumns={true}>
+        <Column className="aspect-[6/8] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-161758.jpg"
-            alt="Adipiscing deserunt ea aliquip ut sint"
+            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+            alt="Occaecat duis consequat aute minim"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-            alt="Ad eiusmod elit aliquip"
+            src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
+            alt="Consectetur nulla ullamco"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
             size="large"
@@ -34,42 +33,82 @@ export default function Content37() {
         </Column>
         <Column>
           <Heading
+            as="h2"
+            styleAs="h3"
+            color="text-gray-600"
+            margin="mb-4"
+          >
+            Whole Home Design
+          </Heading>
+          <Heading
             as="h3"
             styleAs="h2"
           >
-            Ad ut anim id pariatur
+            Complete Home Transformation from Concept to Completion
           </Heading>
           <Paragraph>
-            Cillum cupidatat officia mollit dolor laboris voluptate occaecat
-            elit veniam dolore nisi in id nulla sit aliquip minim consequat
-            mollit incididunt sed ea
-          </Paragraph>
-          <Paragraph>
-            Incididunt esse duis laborum nulla labore labore sed do aliqua in in
-            cillum dolor laborum anim duis ipsum tempor magna pariatur ad
-            cupidatat sed fugiat tempor dolore laboris excepteur duis fugiat
-            aliqua minim exercitation amet sint ut incididunt fugiat nulla velit
-            duis fugiat amet incididunt pariatur qui officia in id
-          </Paragraph>
-          <Paragraph>
-            Laboris nisi incididunt nostrud mollit fugiat enim fugiat ex laboris
-            do velit aliqua nulla laboris est magna ipsum ut non sint nisi
-            reprehenderit culpa consectetur excepteur aliqua est aliqua anim
-            nisi amet in adipiscing exercitation ut pariatur ex ad sunt ad irure
-            sunt exercitation cupidatat
+            This full-service residential project exemplifies comprehensive
+            design coordination featuring cohesive color palettes custom
+            furnishings curated artwork strategic lighting layered textiles
+            architectural details refined finishes thoughtful accessories
+            seamless transitions between spaces creating unified aesthetic
+            throughout entire home reflecting client lifestyle personal taste
+            design aspirations
           </Paragraph>
           <Buttons>
             <Button
               variant="primary"
-              href="https://spinningbabies.com"
+              href="/enim-ad"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
-              Ipsum fugiat nisi laboris
+              Schedule Consultation
             </Button>
           </Buttons>
         </Column>
       </Columns>
+      <Gallery
+        columns={5}
+        align="none"
+        className="mt-20"
+      >
+        <GalleryItem
+          src="/images/portfolio/pexels-burst-545012.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-clickerhappy-584399.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-pixabay-269252.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-pixabay-259962.jpg"
+          size="large"
+        />
+      </Gallery>
     </Section>
   )
 }

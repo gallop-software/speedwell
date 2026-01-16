@@ -2,27 +2,27 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero10 from '@/blocks/hero-10'
-import Content25 from '@/blocks/content-25'
-import Content26 from '@/blocks/content-26'
-import Content27 from '@/blocks/content-27'
-import Content28 from '@/blocks/content-28'
-import Content29 from '@/blocks/content-29'
-import Content30 from '@/blocks/content-30'
-import Content31 from '@/blocks/content-31'
-import Content32 from '@/blocks/content-32'
+import Content14 from '@/blocks/content-14'
+import Content15 from '@/blocks/content-15'
+import Content16 from '@/blocks/content-16'
+import Content17 from '@/blocks/content-17'
+import Content18 from '@/blocks/content-18'
+import Content19 from '@/blocks/content-19'
+import Content20 from '@/blocks/content-20'
+import Content21 from '@/blocks/content-21'
 
 function Content() {
   return (
     <>
       <Hero10 />
-      <Content25 />
-      <Content26 />
-      <Content27 />
-      <Content28 />
-      <Content29 />
-      <Content30 />
-      <Content31 />
-      <Content32 />
+      <Content14 />
+      <Content15 />
+      <Content16 />
+      <Content17 />
+      <Content18 />
+      <Content19 />
+      <Content20 />
+      <Content21 />
     </>
   )
 }

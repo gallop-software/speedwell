@@ -1,89 +1,51 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Gallery,
-  GalleryItem,
-} from '@/components'
+import { Section, Heading, Paragraph, Image } from '@/components'
 
 export default function Content47() {
   return (
-    <Section className="py-30 bg-body2">
-      <Columns reverseColumns={true}>
-        <Column className="aspect-auto relative">
-          <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-            alt="Non reprehenderit laboris"
-            className="object-cover"
-            rounded="rounded-t-full"
-            size="large"
-          />
-        </Column>
-        <Column>
-          <Heading
-            as="h2"
-            styleAs="h3"
-          >
-            Kitchen and Bath
-          </Heading>
-          <Heading
-            as="h3"
-            styleAs="h2"
-          >
-            Luxury Kitchen and Spa Bath
-          </Heading>
-          <Paragraph>
-            This comprehensive renovation showcases mastery in functional luxury
-            featuring custom cabinetry premium countertops designer fixtures
-            innovative storage professional-grade appliances stunning tile work
-            elegant hardware sophisticated lighting ambient features spa-like
-            atmosphere creating beautiful hardworking spaces where form meets
-            function perfectly balancing aesthetics practicality durability
-            style comfort luxury
-          </Paragraph>
-        </Column>
-      </Columns>
-      <Gallery
-        columns={3}
-        align="none"
-        className="mt-20"
+    <Section
+      id="about"
+      className="bg-body py-30"
+      innerAlign="content"
+    >
+      <Heading
+        as="h2"
+        id="our-process"
+        textAlign="text-center"
       >
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-dropshado-2251247.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-          size="large"
-        />
-      </Gallery>
+        How We Bring Brands to Life
+      </Heading>
+      <Paragraph>
+        Great brands aren't built overnight—they're the result of thoughtful
+        strategy, creative exploration, and collaborative refinement. Our proven
+        process ensures every project receives the strategic foundation and
+        creative attention it deserves. We believe in partnership over
+        prescription, working closely with clients at every stage to ensure the
+        final outcome authentically represents your vision and resonates with
+        your audience.
+      </Paragraph>
+      <Image
+        src="/images/layout-1/pexels-thirdman-5257578.jpg"
+        alt="Collaborative creative process and strategy sessions"
+        size="large"
+        className="my-8"
+      />
+      <Paragraph>
+        We start with discovery—deep diving into your business, market,
+        competitors, and audience to understand what makes you unique. This
+        research phase informs our strategic direction, ensuring creative
+        decisions are grounded in insight. Next comes ideation, where our team
+        explores multiple creative directions, pushing boundaries while staying
+        true to your brand essence. We present concepts with clear rationale,
+        showing how each approach solves your specific challenges.
+      </Paragraph>
+      <Paragraph>
+        From there, we refine the chosen direction through iterative
+        collaboration, perfecting every detail until it's exactly right.
+        Finally, we deliver comprehensive brand assets and guidelines, ensuring
+        consistent implementation across all touchpoints. But our relationship
+        doesn't end at delivery—we provide ongoing support to help your brand
+        grow and evolve as your business scales.
+      </Paragraph>
     </Section>
   )
 }

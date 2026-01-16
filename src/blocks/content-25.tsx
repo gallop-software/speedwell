@@ -9,38 +9,43 @@ import {
 
 export default function Content25() {
   return (
-    <Section className="bg-body py-30">
-      <Columns reverseColumns>
-        <Column className="aspect-4/5 relative">
+    <Section className="py-30 bg-body-dark">
+      <Columns
+        reverseColumns={false}
+        gap="gap-10 lg:gap-20"
+      >
+        <Column>
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-            alt="Beautifully designed interior space"
-            className="absolute bottom-0 right-0 z-10 w-[75%]! object-cover"
-            lazy={false}
-          />
-          <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-            alt="Professional project coordination and planning"
-            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-            rounded="rounded-t-full"
+            src="/images/portfolio/pexels-pixabay-269218.jpg"
+            alt="24/7 midwife access for prenatal care"
+            className="object-cover"
             size="large"
           />
         </Column>
-        <Column className="py-0 lg:py-10">
+        <Column>
           <Heading
-            id="learn-more"
-            as="h2"
+            as="h3"
+            styleAs="h2"
           >
-            Passionate Designers, Exceptional Results
+            Nulla ipsum sunt dolore amet
           </Heading>
           <Paragraph>
-            Our team brings together diverse talents, perspectives, and
-            expertise to create interiors that truly transform how you live and
-            work. Each member of Speedwell contributes unique skills and
-            creative vision, united by a shared commitment to excellence and a
-            passion for thoughtful design. We believe that great design comes
-            from collaboration, listening, and understanding what makes each
-            space and client unique.
+            Velit exercitation reprehenderit lorem laboris est veniam esse do
+            magna irure quis dolore nostrud ullamco non culpa cupidatat eiusmod
+            dolor magna aliqua qui enim incididunt incididunt elit labore do ex
+            consequat ut
+          </Paragraph>
+          <Paragraph>
+            Aute aute tempor quis enim ad labore ea adipiscing velit laborum qui
+            eiusmod in ipsum velit aute ipsum est ea officia esse labore ea
+            cillum ex reprehenderit fugiat ut ullamco non aliquip in mollit
+            cillum excepteur sunt aliquip labore qui ea dolor aute cillum
+            cupidatat
+          </Paragraph>
+          <Paragraph>
+            Pariatur culpa cupidatat est pariatur exercitation adipiscing
+            adipiscing incididunt id enim ullamco labore officia amet cillum
+            veniam tempor mollit quis
           </Paragraph>
         </Column>
       </Columns>

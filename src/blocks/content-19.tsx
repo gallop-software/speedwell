@@ -5,23 +5,22 @@ import {
   Image,
   Heading,
   Paragraph,
-  Buttons,
-  Button,
+  Quote,
 } from '@/components'
-import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content19() {
   return (
-    <Section className="py-30 bg-body">
+    <Section className="bg-body py-30">
       <Columns
-        reverseColumns={true}
+        reverseColumns
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
         <Column>
           <Image
-            src="/images/portfolio/pexels-jworks1124-342800.jpg"
-            alt="Contemporary residential space with thoughtful design details"
-            className="object-cover"
+            src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+            alt="Budget management and financial control"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
             size="large"
           />
@@ -29,30 +28,39 @@ export default function Content19() {
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Budget Management
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            From Concept to Completion: Our Seamless Process
+            Transparent Financial Control
           </Heading>
           <Paragraph>
-            We've refined our design process to make your experience as smooth
-            and enjoyable as possible. Starting with an in-depth consultation,
-            we move through concept development, detailed planning, and
-            meticulous execution. Throughout the project, we maintain clear
-            communication and provide regular updates, ensuring you're involved
-            at every stage while we handle all the complex details. Our
-            established relationships with trusted contractors and suppliers
-            mean we can deliver exceptional results on time and within budget.
+            We understand that budget management is crucial to project success.
+            Our team provides detailed cost estimates upfront and maintains
+            rigorous financial tracking throughout your project. We negotiate
+            competitive pricing with vendors and contractors, maximizing value
+            without compromising quality. Regular budget updates keep you
+            informed, and we proactively identify cost-saving opportunities
+            while protecting your investment.
           </Paragraph>
-          <Buttons>
-            <Button
-              variant="primary"
-              href="/contact"
-              icon={arrowRightIcon}
-              iconPlacement="after"
-            >
-              Schedule Your Consultation
-            </Button>
-          </Buttons>
+          <Paragraph>
+            Our transparent approach means no surprises. We present all costs
+            clearly, explain pricing decisions, and seek your approval before
+            any significant expenditures. If unexpected issues arise, we provide
+            options and recommendations to keep your project on track
+            financially while maintaining the design integrity you expect.
+          </Paragraph>
+          <Quote>
+            Financial transparency and careful budget management ensure your
+            investment delivers maximum value and lasting beauty
+          </Quote>
         </Column>
       </Columns>
     </Section>

@@ -1,66 +1,47 @@
 import {
   Section,
+  Heading,
+  Paragraph,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
-  Quote,
 } from '@/components'
 
 export default function Content30() {
   return (
     <Section className="bg-body py-30">
-      <Columns
-        reverseColumns
-        align="items-start"
-        gap="gap-10 lg:gap-20"
-      >
-        <Column>
+      <Columns reverseColumns>
+        <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
-            alt="Budget management and financial control"
-            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            src="/images/portfolio/pexels-pixabay-276724.jpg"
+            alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tmp"
+            className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover aspect-[16/9]"
+            lazy={false}
+          />
+          <Image
+            src="/images/portfolio/pexels-karola-g-5942742.jpg"
+            alt="Lorem ipsum dolor sit amet consectetur adipiscing elit magna"
+            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-t-full"
             size="large"
           />
         </Column>
-        <Column>
+        <Column className="py-0 lg:py-10">
           <Heading
-            as="h3"
-            styleAs="h3"
-            margin="mb-2"
-            fontSize="text-3xl"
-            color="text-accent5"
+            id="learn-more"
+            as="h2"
           >
-            Budget Management
-          </Heading>
-          <Heading
-            as="h4"
-            styleAs="h2"
-          >
-            Transparent Financial Control
+            Passionate Designers, Exceptional Results
           </Heading>
           <Paragraph>
-            We understand that budget management is crucial to project success.
-            Our team provides detailed cost estimates upfront and maintains
-            rigorous financial tracking throughout your project. We negotiate
-            competitive pricing with vendors and contractors, maximizing value
-            without compromising quality. Regular budget updates keep you
-            informed, and we proactively identify cost-saving opportunities
-            while protecting your investment.
+            Our team brings together diverse talents, perspectives, and
+            expertise to create interiors that truly transform how you live and
+            work. Each member of Timmerman contributes unique skills and
+            creative vision, united by a shared commitment to excellence and a
+            passion for thoughtful design. We believe that great design comes
+            from collaboration, listening, and understanding what makes each
+            space and client unique.
           </Paragraph>
-          <Paragraph>
-            Our transparent approach means no surprises. We present all costs
-            clearly, explain pricing decisions, and seek your approval before
-            any significant expenditures. If unexpected issues arise, we provide
-            options and recommendations to keep your project on track
-            financially while maintaining the design integrity you expect.
-          </Paragraph>
-          <Quote>
-            Financial transparency and careful budget management ensure your
-            investment delivers maximum value and lasting beauty
-          </Quote>
         </Column>
       </Columns>
     </Section>

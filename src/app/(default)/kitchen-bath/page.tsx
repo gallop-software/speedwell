@@ -2,7 +2,7 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero9 from '@/blocks/hero-9'
-import Content56 from '@/blocks/content-56'
+import Content45 from '@/blocks/content-45'
 import CallToAction5 from '@/blocks/call-to-action-5'
 import PageFooter from '@/template/page-footer'
 
@@ -10,7 +10,7 @@ function Content() {
   return (
     <>
       <Hero9 />
-      <Content56 />
+      <Content45 />
       <CallToAction5 />
       <PageFooter />
     </>

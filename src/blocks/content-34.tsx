@@ -5,60 +5,88 @@ import {
   Image,
   Heading,
   Paragraph,
+  Gallery,
+  GalleryItem,
 } from '@/components'
 
 export default function Content34() {
   return (
-    <Section className="py-30 bg-linear-to-b from-body2 to-body-light">
-      <Columns
-        reverseColumns
-        gap="gap-10 lg:gap-20"
-      >
-        <Column className="aspect-5/5 relative">
+    <Section className="py-30 bg-gradient-to-b from-body2 to-body-light">
+      <Columns reverseColumns>
+        <Column className="aspect-[4/5] relative">
           <Image
             src="/images/portfolio/pexels-jworks1124-342800.jpg"
-            alt="Id consectetur consectetur proident dolor ad"
-            className="absolute top-0 left-0 z-10 w-[75%] object-cover"
-            rounded="rounded-t-full"
+            alt="Nulla lorem commodo"
+            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/pexels-pixabay-259962.jpg"
-            alt="Sed commodo enim nisi excepteur incididunt"
-            className="absolute bottom-0 right-0 z-0 w-[75%] object-cover shadow-2xl"
-            rounded="rounded-t-none"
+            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+            alt="Aliquip veniam nostrud"
+            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+            rounded="rounded-b-none rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
+            as="h2"
+            styleAs="h3"
+            id="birth-suites"
+          >
+            Featured Project
+          </Heading>
+          <Heading
             as="h3"
             styleAs="h2"
           >
-            Id veniam consequat consequat proident cupidatat duis sunt dolor
+            Modern Luxury Living Transformation
           </Heading>
           <Paragraph>
-            Nostrud ex consectetur et est minim qui eiusmod consectetur non non
-            excepteur consectetur dolor ut commodo amet sint in et nisi cillum
-            fugiat aliqua irure qui consequat do fugiat dolor duis deserunt
-            ipsum proident sed laboris do qui
-          </Paragraph>
-          <Paragraph>
-            Qui est excepteur excepteur laborum cupidatat velit dolore sunt
-            proident deserunt dolor officia deserunt consectetur amet sint est
-            adipiscing irure enim minim elit anim excepteur veniam aliquip
-            consectetur ipsum ipsum sit sunt officia cupidatat culpa officia
-            enim ullamco quis veniam deserunt aliquip dolore non
-          </Paragraph>
-          <Paragraph>
-            Sint sit lorem sit excepteur exercitation laboris dolore proident in
-            consequat in incididunt dolor irure anim reprehenderit consectetur
-            fugiat id ea sunt consequat culpa culpa nostrud esse laborum anim ut
-            sed sit culpa incididunt commodo nulla laboris cupidatat laboris
-            consequat deserunt nostrud cupidatat anim excepteur sed ex commodo
+            This stunning residential renovation showcases our ability to blend
+            contemporary design with classic elegance creating warm inviting
+            spaces featuring custom millwork designer lighting carefully
+            selected furnishings and rich textural elements throughout
+            complemented by neutral palettes accented with sophisticated colors
+            resulting in timeless interiors that perfectly balance form function
+            beauty practicality comfort style
           </Paragraph>
         </Column>
       </Columns>
+      <Gallery
+        columns={5}
+        align="none"
+        className="mt-20"
+      >
+        <GalleryItem
+          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-pixabay-161758.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/pexels-pixabay-279719.jpg"
+          size="large"
+        />
+        <GalleryItem
+          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
+          size="large"
+        />
+      </Gallery>
     </Section>
   )
 }

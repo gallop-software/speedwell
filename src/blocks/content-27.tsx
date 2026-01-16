@@ -5,60 +5,50 @@ import {
   Image,
   Heading,
   Paragraph,
-  Quote,
 } from '@/components'
 
 export default function Content27() {
   return (
-    <Section className="bg-body py-30">
+    <Section className="py-30 bg-body-dark">
       <Columns
-        align="items-start"
+        reverseColumns={false}
         gap="gap-10 lg:gap-20"
       >
-        <Column>
+        <Column className="aspect-4/5 relative">
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-            alt="Detailed project planning and scheduling"
-            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
-            rounded="rounded-t-full"
+            src="/images/portfolio/pexels-burst-545012.jpg"
+            alt="Occaecat elit in dolor ex elit"
+            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+            size="large"
+          />
+          <Image
+            src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+            alt="Cupidatat dolore et"
+            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+            rounded="rounded-b-none rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
-            styleAs="h3"
-            margin="mb-2"
-            fontSize="text-3xl"
-            color="text-accent5"
-          >
-            Phase 1
-          </Heading>
-          <Heading
-            as="h4"
             styleAs="h2"
           >
-            Planning & Design Development
+            Reprehenderit dolore fugiat aliqua id incididunt ullamco nisi
+            ullamco
           </Heading>
           <Paragraph>
-            Every successful project begins with thorough planning. We work
-            closely with you to refine the design concept, establish realistic
-            timelines, and create detailed budgets. Our team prepares
-            comprehensive specifications, coordinates with architects and
-            engineers, and ensures all design elements are perfectly aligned
-            before moving forward.
+            Ea tempor nulla dolore enim consectetur ad eiusmod deserunt elit
+            officia anim commodo cillum duis amet laborum elit anim officia
+            minim ad aliquip ea amet mollit laborum velit
           </Paragraph>
           <Paragraph>
-            During this phase, we finalize material selections, secure vendor
-            quotes, and develop a detailed project schedule. We obtain necessary
-            permits, coordinate with your HOA if applicable, and ensure all
-            stakeholders understand their roles and responsibilities. This
-            meticulous preparation sets the foundation for smooth execution.
+            Eiusmod culpa ipsum sunt nulla culpa laboris in id velit consequat
+            magna in enim occaecat enim anim id cillum labore consequat aliqua
+            in aliquip sint ipsum consectetur veniam cupidatat eiusmod et sunt
+            ad ullamco aliqua quis velit fugiat ut reprehenderit non quis est
+            mollit sit sunt non lorem
           </Paragraph>
-          <Quote>
-            Proper planning prevents problems – we invest time upfront to ensure
-            flawless execution throughout your project
-          </Quote>
         </Column>
       </Columns>
     </Section>

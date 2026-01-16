@@ -1,14 +1,14 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Content21 from '@/blocks/content-21'
+import Content10 from '@/blocks/content-10'
 import Accordion1 from '@/blocks/accordion-1'
 import Form7 from '@/blocks/form-7'
 
 function Content() {
   return (
     <>
-      <Content21 />
+      <Content10 />
       <Accordion1 />
       <Form7 />
     </>

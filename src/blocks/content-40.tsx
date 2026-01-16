@@ -1,58 +1,89 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Accent,
-} from '@/components'
+import { Section, Heading, Paragraph, Accent, Image } from '@/components'
 
 export default function Content40() {
   return (
-    <Section className="py-20 md:py-30 bg-body2 relative">
-      <div className="absolute w-[50%] border-r border-b border-black left-0 -top-20 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>
-      <Columns reverseColumns={false}>
-        <Column className="aspect-8/9 relative">
-          <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
-            alt="Beautiful residential interior design transformation"
-            className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
-            alt="Modern commercial office space design"
-            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
-            size="large"
-          />
+    <Section className="py-20 md:py-30 bg-body relative overflow-hidden">
+      {/* Decorative background accent */}
+      <div className="absolute top-20 right-0 w-1/3 h-96 bg-accent/5 rounded-l-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-0 w-1/2 h-80 bg-accent2/5 rounded-r-full blur-3xl"></div>
+
+      <div className="mx-auto max-w-4xl">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <Accent
-            className="absolute bottom-[35%] left-4 z-30"
-            color="text-white"
+            margin="mb-4"
+            color="text-accent"
+            size="small"
           >
-            real results
+            Our Story
           </Accent>
-        </Column>
-        <Column className="mb-10">
           <Heading
-            as="h3"
-            styleAs="h2"
+            as="h2"
+            margin="mb-6"
           >
-            Building Lasting Relationships
+            A Culinary Journey Rooted in Tradition
           </Heading>
-          <Paragraph fontStyle="italic">
-            Our greatest achievement is not just beautiful spaces, but the
-            lasting relationships we build with our clients. Many return to us
-            for additional projects, refer their friends and family, and become
-            true advocates for our work. This trust is earned through consistent
-            communication, respect for your vision and budget, and an unwavering
-            commitment to exceeding expectations. We believe that exceptional
-            design is a collaborative journey, and we are honored to be your
-            partner in creating spaces that truly enhance your life.
+          <Paragraph fontSize="text-lg">
+            For over two decades, we've been crafting unforgettable dining
+            experiences that celebrate the perfect marriage of time-honored
+            techniques and innovative gastronomy. Each dish tells a story, each
+            ingredient is chosen with care, and every meal becomes a memory.
           </Paragraph>
-        </Column>
-      </Columns>
+        </div>
+
+        {/* Three column features */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
+              <span className="text-2xl font-serif text-accent">I</span>
+            </div>
+            <Heading
+              as="h3"
+              styleAs="h4"
+              margin="mb-3"
+            >
+              Master Chefs
+            </Heading>
+            <Paragraph fontSize="text-sm">
+              Award-winning culinary artists with decades of experience across
+              Michelin-starred kitchens worldwide
+            </Paragraph>
+          </div>
+
+          <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
+              <span className="text-2xl font-serif text-accent">II</span>
+            </div>
+            <Heading
+              as="h3"
+              styleAs="h4"
+              margin="mb-3"
+            >
+              Farm to Table
+            </Heading>
+            <Paragraph fontSize="text-sm">
+              Partnering with local farms and artisans to bring you the freshest
+              seasonal ingredients at their peak
+            </Paragraph>
+          </div>
+
+          <div className="text-center p-8 bg-accent/10 rounded-lg hover:bg-accent/20 hover:shadow-lg transition-all duration-300">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-accent flex items-center justify-center">
+              <span className="text-2xl font-serif text-accent">III</span>
+            </div>
+            <Heading
+              as="h3"
+              styleAs="h4"
+              margin="mb-3"
+            >
+              Artisan Approach
+            </Heading>
+            <Paragraph fontSize="text-sm">
+              Every dish is meticulously crafted with passion, precision, and an
+              unwavering commitment to excellence
+            </Paragraph>
+          </div>
+        </div>
+      </div>
     </Section>
   )
 }

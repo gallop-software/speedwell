@@ -1,52 +1,30 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Columns,
-  Column,
-  Image,
-} from '@/components'
+import { Section, Heading, Paragraph } from '@/components'
 
 export default function Content42() {
   return (
-    <Section className="bg-body-light py-30">
-      <Columns>
-        <Column className="aspect-[4/5] relative">
-          <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
-            alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover aspect-[16/9]"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/pexels-maksgelatin-4352247.jpg"
-            alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incid"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-t-full"
-            size="large"
-          />
-        </Column>
-        <Column className="py-0 lg:py-10">
-          <Heading as="h2">Experience Meets Innovation</Heading>
-          <Paragraph>
-            With decades of combined experience in residential and commercial
-            design, our team has the expertise to handle projects of any scale
-            and complexity. We stay current with the latest design trends,
-            materials, and technologies while honoring timeless principles of
-            beauty, function, and craftsmanship. This balance allows us to
-            create spaces that feel both fresh and enduring.
-          </Paragraph>
-          <Paragraph>
-            From initial concepts through final installation, our collaborative
-            approach ensures every project benefits from multiple perspectives
-            and specialized knowledge. Whether you are renovating a single room
-            or designing an entire property, you will work with dedicated
-            professionals who are invested in your success and satisfaction. We
-            are not just designers, we are your partners in creating spaces that
-            enhance your life.
-          </Paragraph>
-        </Column>
-      </Columns>
+    <Section
+      innerAlign="content"
+      className="my-30"
+    >
+      <Heading
+        as="h2"
+        textAlign="text-center"
+      >
+        Transformations That Inspire
+      </Heading>
+      <Paragraph>
+        Every transformation begins with a vision and a conversation. We take
+        the time to understand how you use your space, what inspires you, and
+        what challenges need solving. Whether you're looking to modernize an
+        outdated interior, maximize functionality in a compact area, or create a
+        completely new aesthetic, our design process is collaborative,
+        transparent, and focused on achieving results that enhance your daily
+        life. These before and after examples represent real projects completed
+        for real clients—spaces that were once underutilized, outdated, or
+        simply not working now transformed into beautiful, functional
+        environments that our clients love coming home to or working in every
+        day.
+      </Paragraph>
     </Section>
   )
 }
