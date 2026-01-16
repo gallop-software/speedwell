@@ -18,7 +18,7 @@ export default function Section39() {
     >
       {/* Subtle background texture */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.05]"
+        className="absolute inset-0 w-full h-full opacity-[0.04]"
         aria-hidden="true"
       >
         <defs>
