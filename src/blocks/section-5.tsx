@@ -57,78 +57,76 @@ const services = [
 export default function Section5() {
   return (
     <Section className="py-30 bg-gradient-to-tl from-body via-accent2/5 to-body relative overflow-hidden">
-      <div className="relative">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <Subheading className="mb-4">What We Offer</Subheading>
-          <Heading
-            as="h2"
-            margin="mb-6"
-          >
-            Comprehensive Event Services
-          </Heading>
-          <Paragraph fontSize="text-lg">
-            From intimate gatherings to grand celebrations, we provide
-            full-service planning and design to create seamless, unforgettable
-            experiences tailored to your vision.
-          </Paragraph>
-        </div>
-
-        {/* Services Grid */}
-        <Grid
-          cols="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          gap="gap-8"
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto">
+        <Subheading className="mb-4">What We Offer</Subheading>
+        <Heading
+          as="h2"
+          margin="mb-6"
         >
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                  size="medium"
-                  rounded="rounded-none"
-                />
-                <div
-                  className={`absolute bottom-0 left-0 w-full h-1 ${
-                    service.accent === 'accent'
-                      ? 'bg-gradient-to-r from-accent to-accent2'
-                      : 'bg-gradient-to-r from-accent2 to-accent'
-                  }`}
-                ></div>
-              </div>
-              <div className="p-8 flex flex-col flex-grow">
-                <Heading
-                  as="h3"
-                  styleAs="h4"
-                  margin="mb-4"
-                >
-                  {service.title}
-                </Heading>
-                <Paragraph
-                  fontSize="text-sm"
-                  margin="mb-4"
-                  className="flex-grow"
-                >
-                  {service.description}
-                </Paragraph>
-                <Button
-                  href="#"
-                  variant="text"
-                  icon={arrowRightIcon}
-                  iconPlacement="after"
-                  className="mt-auto"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </div>
-          ))}
-        </Grid>
+          Comprehensive Event Services
+        </Heading>
+        <Paragraph>
+          FFrom intimate gatherings to grand celebrations, we provide
+          full-service planning and design to create seamless, unforgettable
+          experiences tailored to your vision.
+        </Paragraph>
       </div>
+
+      {/* Services Grid */}
+      <Grid
+        cols="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        gap="gap-8"
+      >
+        {services.map((service) => (
+          <div
+            key={service.title}
+            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+          >
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                size="medium"
+                rounded="rounded-none"
+              />
+              <div
+                className={`absolute bottom-0 left-0 w-full h-1 ${
+                  service.accent === 'accent'
+                    ? 'bg-gradient-to-r from-accent to-accent2'
+                    : 'bg-gradient-to-r from-accent2 to-accent'
+                }`}
+              ></div>
+            </div>
+            <div className="p-8 flex flex-col flex-grow">
+              <Heading
+                as="h3"
+                styleAs="h4"
+                margin="mb-4"
+              >
+                {service.title}
+              </Heading>
+              <Paragraph
+                fontSize="text-sm"
+                margin="mb-4"
+                className="flex-grow"
+              >
+                {service.description}
+              </Paragraph>
+              <Button
+                href="#"
+                variant="text"
+                icon={arrowRightIcon}
+                iconPlacement="after"
+                className="mt-auto"
+              >
+                Learn More
+              </Button>
+            </div>
+          </div>
+        ))}
+      </Grid>
     </Section>
   )
 }
