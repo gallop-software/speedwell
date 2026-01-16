@@ -2,27 +2,27 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero10 from '@/blocks/hero-10'
-import Section16 from '@/blocks/section-16'
-import Section17 from '@/blocks/section-17'
-import Section18 from '@/blocks/section-18'
-import Section19 from '@/blocks/section-19'
-import Section20 from '@/blocks/section-20'
-import Section21 from '@/blocks/section-21'
-import Section22 from '@/blocks/section-22'
-import Section23 from '@/blocks/section-23'
+import Content14 from '@/blocks/content-14'
+import Content15 from '@/blocks/content-15'
+import Content16 from '@/blocks/content-16'
+import Content17 from '@/blocks/content-17'
+import Content18 from '@/blocks/content-18'
+import Content19 from '@/blocks/content-19'
+import Content20 from '@/blocks/content-20'
+import Content21 from '@/blocks/content-21'
 
 function Content() {
   return (
     <>
       <Hero10 />
-      <Section16 />
-      <Section17 />
-      <Section18 />
-      <Section19 />
-      <Section20 />
-      <Section21 />
-      <Section22 />
-      <Section23 />
+      <Content14 />
+      <Content15 />
+      <Content16 />
+      <Content17 />
+      <Content18 />
+      <Content19 />
+      <Content20 />
+      <Content21 />
     </>
   )
 }
@@ -53,8 +53,10 @@ const metadata: PageMetadata = {
 }
 
 export const generateMetadata = () => generatePageMetadata(metadata)
-export default () => (
-  <PageWrapper metadata={metadata}>
-    <Content />
-  </PageWrapper>
-)
+export default function Page() {
+  return (
+    <PageWrapper metadata={metadata}>
+      <Content />
+    </PageWrapper>
+  )
+}

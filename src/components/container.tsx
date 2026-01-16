@@ -9,7 +9,7 @@ export function Container({
 }: {
   className?: string
   children: React.ReactNode
-  align?: 'wide' | 'none' | 'content'
+  align?: 'wide' | 'none' | 'content' | 'full'
   maxWidth?: string
   padding?: string
 }) {
@@ -17,13 +17,15 @@ export function Container({
     wide: 'max-w-2xl lg:max-w-7xl',
     content: 'max-w-4xl',
     none: '',
+    full: '',
   }
 
   // Use maxWidth prop if provided, otherwise use alignClasses
   const finalMaxWidth = maxWidth || alignClasses[align]
 
-  // Use padding prop if provided, otherwise use default padding
-  const finalPadding = padding || 'px-6 lg:px-8'
+  // Use padding prop if provided, otherwise use default (px-0 for full, px-6 lg:px-8 for others)
+  const defaultPadding = align === 'full' ? 'px-0' : 'px-6 lg:px-8'
+  const finalPadding = padding || defaultPadding
 
   return (
     <div className={clsx(className, finalPadding)}>

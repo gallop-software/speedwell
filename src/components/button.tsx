@@ -55,6 +55,20 @@ const variants = {
       'transition-colors duration-200'
     ),
   },
+  text: {
+    light: clsx(
+      'inline-flex items-center',
+      'text-accent font-semibold',
+      'hover:text-accent/80',
+      'transition-colors duration-200'
+    ),
+    dark: clsx(
+      'inline-flex items-center',
+      'text-white font-semibold',
+      'hover:text-white/80',
+      'transition-colors duration-200'
+    ),
+  },
 }
 
 const sizes = {
@@ -99,7 +113,9 @@ export function Button({
   ...props
 }: ButtonProps) {
   const variantClass = dark ? variants[variant].dark : variants[variant].light
-  className = clsx(className, variantClass, sizes[size])
+  // Text variant doesn't use size padding
+  const sizeClass = variant === 'text' ? 'text-sm' : sizes[size]
+  className = clsx(className, variantClass, sizeClass)
 
   const iconElement = icon ? (
     <Icon

@@ -6,7 +6,7 @@ export default function Section3() {
       <Heading
         as="h2"
         margin="mb-16"
-        className="text-center"
+        textAlign="text-center"
       >
         Our Services
       </Heading>

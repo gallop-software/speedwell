@@ -1,60 +1,46 @@
 import {
   Section,
-  Heading,
-  Paragraph,
-  Quote,
   Columns,
   Column,
   Image,
+  Heading,
+  Quote,
+  Paragraph,
+  List,
+  Li,
 } from '@/components'
 
 export default function Content11() {
   return (
-    <Section className="bg-body2 py-30">
-      <Columns
-        reverseColumns={false}
-        align="items-start"
-        gap="gap-10 lg:gap-20"
-      >
+    <Section className="bg-body py-30">
+      <Columns gap="gap-10 lg:gap-20">
         <Column>
           <Image
-            src="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
-            alt="Marcus Foster - Project Manager"
-            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
-            rounded="rounded-t-full"
+            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+            alt="Interior space showcasing professional color coordination"
+            className="w-full object-cover"
             size="large"
           />
         </Column>
         <Column>
           <Heading
-            as="h3"
-            styleAs="h3"
-            margin="mb-2"
-            fontSize="text-3xl"
-            color="text-accent5"
+            as="h2"
+            id="services"
           >
-            Project Manager
+            Comprehensive Color Services
           </Heading>
-          <Heading
-            as="h4"
-            styleAs="h2"
-          >
-            Marcus Foster
-          </Heading>
-          <Paragraph>
-            Marcus is the backbone of every Timmerman project, ensuring seamless
-            execution from concept to completion. With his PMP certification and
-            years of experience coordinating complex design projects, he keeps
-            timelines on track, budgets in check, and communication flowing
-            between all parties. Clients appreciate his proactive approach and
-            ability to solve problems before they become issues.
-          </Paragraph>
           <Quote>
-            Great design deserves flawless execution. My job is to handle all
-            the logistics so our clients can focus on the exciting part—watching
-            their vision come to life. Every detail matters, and I make sure
-            nothing falls through the cracks.
+            Every color tells a story – let us help you tell yours with
+            confidence and style
           </Quote>
+          <Paragraph>Our color consultation services include:</Paragraph>
+          <List>
+            <Li>Personalized color palette development for entire homes</Li>
+            <Li>Room-by-room color coordination and flow planning</Li>
+            <Li>Paint brand and finish recommendations</Li>
+            <Li>Accent color selection for décor and accessories</Li>
+            <Li>Lighting analysis and color rendering assessment</Li>
+          </List>
         </Column>
       </Columns>
     </Section>

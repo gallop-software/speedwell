@@ -22,7 +22,10 @@ export default function CallToAction4() {
         variant="large"
         textAlign="text-center"
       >
-        Let our experts curate the perfect furniture selections for your home or business. We'll handle every detail to create a beautifully furnished space that reflects your style and enhances your lifestyle. Contact us today to get started.
+        Let our experts curate the perfect furniture selections for your home or
+        business. We'll handle every detail to create a beautifully furnished
+        space that reflects your style and enhances your lifestyle. Contact us
+        today to get started.
       </Paragraph>
       <Buttons className="mt-8 justify-center">
         <Button

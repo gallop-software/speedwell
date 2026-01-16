@@ -3,25 +3,25 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import { Navbar } from '@/components'
 import Cover4 from '@/blocks/cover-4'
-import Section33 from '@/blocks/section-33'
-import Section34 from '@/blocks/section-34'
-import Content7 from '@/blocks/content-7'
-import Content8 from '@/blocks/content-8'
-import Content9 from '@/blocks/content-9'
-import Content10 from '@/blocks/content-10'
-import Content11 from '@/blocks/content-11'
+import Content30 from '@/blocks/content-30'
+import Content31 from '@/blocks/content-31'
+import Content48 from '@/blocks/content-48'
+import Content49 from '@/blocks/content-49'
+import Content50 from '@/blocks/content-50'
+import Content51 from '@/blocks/content-51'
+import Content52 from '@/blocks/content-52'
 
 function Content() {
   return (
     <>
       <Cover4 />
-      <Section33 />
-      <Section34 />
-      <Content7 />
-      <Content8 />
-      <Content9 />
-      <Content10 />
-      <Content11 />
+      <Content30 />
+      <Content31 />
+      <Content48 />
+      <Content49 />
+      <Content50 />
+      <Content51 />
+      <Content52 />
     </>
   )
 }
@@ -51,8 +51,10 @@ const metadata: PageMetadata = {
 }
 
 export const generateMetadata = () => generatePageMetadata(metadata)
-export default () => (
-  <PageWrapper metadata={metadata}>
-    <Content />
-  </PageWrapper>
-)
+export default function Page() {
+  return (
+    <PageWrapper metadata={metadata}>
+      <Content />
+    </PageWrapper>
+  )
+}

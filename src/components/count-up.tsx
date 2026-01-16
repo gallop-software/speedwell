@@ -38,25 +38,27 @@ export function CountUp({
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const value = useMotionValue(start)
-  
+
   // Convert duration to spring physics (higher duration = lower stiffness)
   const stiffness = Math.max(50, 150 / duration)
   const damping = Math.max(20, 40 / duration)
-  
+
   const spring = useSpring(value, { damping, stiffness })
-  
+
   const display = useTransform(spring, (num) => {
     const fixed = num.toFixed(decimals)
     const [intPart, decPart] = fixed.split('.')
-    
+
     // Add separator to integer part if provided
     const formattedInt = separator
       ? intPart.replace(/\B(?=(\d{3})+(?!\d))/g, separator)
       : intPart
-    
+
     // Reconstruct with custom decimal point
-    const formatted = decPart ? `${formattedInt}${decimal}${decPart}` : formattedInt
-    
+    const formatted = decPart
+      ? `${formattedInt}${decimal}${decPart}`
+      : formattedInt
+
     return `${prefix}${formatted}${suffix}`
   })
 
@@ -69,5 +71,12 @@ export function CountUp({
     }
   }, [isInView, end, delay, value])
 
-  return <motion.span ref={ref} className={className}>{display}</motion.span>
+  return (
+    <motion.span
+      ref={ref}
+      className={className}
+    >
+      {display}
+    </motion.span>
+  )
 }

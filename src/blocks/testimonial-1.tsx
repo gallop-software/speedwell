@@ -2,7 +2,7 @@ import {
   Section,
   FancyHeading,
   Swiper,
-  Testimonial1 as Testimonial1Component,
+  CardTestimonial1,
   Quote,
 } from '@/components'
 
@@ -14,7 +14,7 @@ export default function Testimonial1() {
         accent="what our clients say"
       />
       <Swiper>
-        <Testimonial1Component
+        <CardTestimonial1
           img="/images/profiles/pexels-linkedin-2182970.jpg"
           cite="Jennifer Martinez"
         >
@@ -33,8 +33,8 @@ export default function Testimonial1() {
             visits. Highly recommend their services to anyone seeking
             professional interior design expertise.
           </Quote>
-        </Testimonial1Component>
-        <Testimonial1Component
+        </CardTestimonial1>
+        <CardTestimonial1
           img="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
           cite="Michael Thompson"
         >
@@ -57,8 +57,8 @@ export default function Testimonial1() {
             ongoing support post-project completion truly stand behind their
             work maintaining lasting relationships with clients.
           </Quote>
-        </Testimonial1Component>
-        <Testimonial1Component
+        </CardTestimonial1>
+        <CardTestimonial1
           img="/images/profiles/pexels-maide-arslan-128712163-31750456.jpg"
           cite="Sarah Anderson"
         >
@@ -76,8 +76,8 @@ export default function Testimonial1() {
             result beyond standard renovation. We love our beautiful new spaces
             and appreciate the lasting value added to our home.
           </Quote>
-        </Testimonial1Component>
-        <Testimonial1Component
+        </CardTestimonial1>
+        <CardTestimonial1
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
           cite="David Chen"
         >
@@ -96,7 +96,7 @@ export default function Testimonial1() {
             results highly recommend their services to anyone seeking
             professional interior design expertise.
           </Quote>
-        </Testimonial1Component>
+        </CardTestimonial1>
       </Swiper>
     </Section>
   )

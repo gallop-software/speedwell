@@ -2,7 +2,7 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero8 from '@/blocks/hero-8'
-import Content3 from '@/blocks/content-3'
+import Content44 from '@/blocks/content-44'
 import CallToAction4 from '@/blocks/call-to-action-4'
 import PageFooter from '@/template/page-footer'
 
@@ -10,7 +10,7 @@ function Content() {
   return (
     <>
       <Hero8 />
-      <Content3 />
+      <Content44 />
       <CallToAction4 />
       <PageFooter />
     </>
@@ -69,4 +69,10 @@ const metadata: PageMetadata = {
 }
 
 export const generateMetadata = () => generatePageMetadata(metadata)
-export default () => (<PageWrapper metadata={metadata}><Content /></PageWrapper>)
+export default function Page() {
+  return (
+    <PageWrapper metadata={metadata}>
+      <Content />
+    </PageWrapper>
+  )
+}

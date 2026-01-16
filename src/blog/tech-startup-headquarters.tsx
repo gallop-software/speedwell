@@ -13,7 +13,16 @@ function Details() {
       />
 
       <P>
-        This historic boutique hotel needed a rebrand that honored its heritage while attracting modern travelers. We crafted an elegant visual identity that blends classic sophistication with contemporary luxury. The logo features refined typography with custom letterforms, while the color palette draws from the hotel's architectural details. Brand collateral includes guest room directories, restaurant menus, key cards, and signage that create a cohesive luxury experience. Digital applications maintain the elegant aesthetic across the website and social media, positioning the hotel as a destination for discerning travelers seeking authentic local experiences.
+        This historic boutique hotel needed a rebrand that honored its heritage
+        while attracting modern travelers. We crafted an elegant visual identity
+        that blends classic sophistication with contemporary luxury. The logo
+        features refined typography with custom letterforms, while the color
+        palette draws from the hotel's architectural details. Brand collateral
+        includes guest room directories, restaurant menus, key cards, and
+        signage that create a cohesive luxury experience. Digital applications
+        maintain the elegant aesthetic across the website and social media,
+        positioning the hotel as a destination for discerning travelers seeking
+        authentic local experiences.
       </P>
 
       <Button

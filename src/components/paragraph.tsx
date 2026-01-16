@@ -39,7 +39,7 @@ export function Paragraph({
 }: ParagraphProps) {
   // Define font size presets for variants
   const variantFontSizes = {
-    default: 'text-lg',
+    default: 'text-base',
     large: 'text-lg md:text-xl',
     small: 'text-sm',
   }

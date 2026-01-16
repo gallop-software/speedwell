@@ -28,6 +28,60 @@ export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => {
     { slides: Slide[]; open: boolean; index: number; galleryIndex: number }[]
   >([])
 
+  const createSlide = (
+    el: Element,
+    galleryIndex: number,
+    imageIndex: number
+  ): Slide | null => {
+    const anchorElement = el.querySelector(':scope > a')
+    const imgElement = el.querySelector('img')
+
+    if (!anchorElement || !imgElement) {
+      return null
+    }
+
+    const src = anchorElement.getAttribute('href') || ''
+    const srcset = imgElement.getAttribute('srcset') || ''
+    const srcSet = srcset
+      ? srcset.split(',').map((entry) => {
+          const [url, size] = entry.trim().split(' ')
+          return {
+            src: url,
+            width: parseInt(size, 10),
+            height: parseInt(size, 10),
+          }
+        })
+      : undefined
+
+    const width = imgElement.getAttribute('width')
+      ? parseInt(imgElement.getAttribute('width') || '', 10)
+      : undefined
+    const height = imgElement.getAttribute('height')
+      ? parseInt(imgElement.getAttribute('height') || '', 10)
+      : undefined
+
+    const figcaption = el.querySelector('figcaption')
+    const description = figcaption ? figcaption.textContent?.trim() || '' : ''
+
+    const thumbnail =
+      srcSet && srcSet.length
+        ? srcSet.reduce((smallest, current) => {
+            return current.width < smallest.width ? current : smallest
+          }).src
+        : src
+
+    return {
+      src,
+      width,
+      height,
+      alt: description,
+      srcSet,
+      imageFit: 'contain',
+      thumbnail,
+      description,
+    }
+  }
+
   useEffect(() => {
     const container = containerRef?.current || document
     const galleryElements = container.querySelectorAll(`.lightbox-gallery`)
@@ -128,60 +182,6 @@ export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => {
       removeAllListeners()
     }
   }, [containerRef, pathname]) // Rerun when container or pathname changes
-
-  const createSlide = (
-    el: Element,
-    galleryIndex: number,
-    imageIndex: number
-  ): Slide | null => {
-    const anchorElement = el.querySelector(':scope > a')
-    const imgElement = el.querySelector('img')
-
-    if (!anchorElement || !imgElement) {
-      return null
-    }
-
-    const src = anchorElement.getAttribute('href') || ''
-    const srcset = imgElement.getAttribute('srcset') || ''
-    const srcSet = srcset
-      ? srcset.split(',').map((entry) => {
-          const [url, size] = entry.trim().split(' ')
-          return {
-            src: url,
-            width: parseInt(size, 10),
-            height: parseInt(size, 10),
-          }
-        })
-      : undefined
-
-    const width = imgElement.getAttribute('width')
-      ? parseInt(imgElement.getAttribute('width') || '', 10)
-      : undefined
-    const height = imgElement.getAttribute('height')
-      ? parseInt(imgElement.getAttribute('height') || '', 10)
-      : undefined
-
-    const figcaption = el.querySelector('figcaption')
-    const description = figcaption ? figcaption.textContent?.trim() || '' : ''
-
-    const thumbnail =
-      srcSet && srcSet.length
-        ? srcSet.reduce((smallest, current) => {
-            return current.width < smallest.width ? current : smallest
-          }).src
-        : src
-
-    return {
-      src,
-      width,
-      height,
-      alt: description,
-      srcSet,
-      imageFit: 'contain',
-      thumbnail,
-      description,
-    }
-  }
 
   const closeLightbox = (galleryIndex: number) => {
     setGalleries((prevGalleries) =>

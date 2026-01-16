@@ -27,12 +27,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Principal Designer & Founder
           </Heading>
           <Paragraph textAlign="text-center">
-            With over 15 years of experience, Sarah leads our design vision with creativity and strategic insight
+            With over 15 years of experience, Sarah leads our design vision with
+            creativity and strategic insight
           </Paragraph>
           <IconText
             className="uppercase"
@@ -59,12 +60,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Senior Commercial Designer
           </Heading>
           <Paragraph textAlign="text-center">
-            Specializing in office and retail spaces, Michael creates functional environments that inspire productivity
+            Specializing in office and retail spaces, Michael creates functional
+            environments that inspire productivity
           </Paragraph>
           <IconText
             className="uppercase"
@@ -91,12 +93,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Residential Design Lead
           </Heading>
           <Paragraph textAlign="text-center">
-            Robert brings warmth and personality to every home with his thoughtful approach to residential design
+            Robert brings warmth and personality to every home with his
+            thoughtful approach to residential design
           </Paragraph>
           <IconText
             className="uppercase"
@@ -123,12 +126,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Color & Materials Specialist
           </Heading>
           <Paragraph textAlign="text-center">
-            David has an exceptional eye for color theory and material selection, elevating every project
+            David has an exceptional eye for color theory and material
+            selection, elevating every project
           </Paragraph>
           <IconText
             className="uppercase"
@@ -155,12 +159,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Kitchen & Bath Designer
           </Heading>
           <Paragraph textAlign="text-center">
-            Ryan specializes in creating beautiful, functional kitchens and bathrooms that stand the test of time
+            Ryan specializes in creating beautiful, functional kitchens and
+            bathrooms that stand the test of time
           </Paragraph>
           <IconText
             className="uppercase"
@@ -187,12 +192,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Space Planning Expert
           </Heading>
           <Paragraph textAlign="text-center">
-            Lucas transforms challenging layouts into optimized, flowing spaces that maximize function and beauty
+            Lucas transforms challenging layouts into optimized, flowing spaces
+            that maximize function and beauty
           </Paragraph>
           <IconText
             className="uppercase"
@@ -219,12 +225,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Project Manager
           </Heading>
           <Paragraph textAlign="text-center">
-            Amanda ensures every project runs smoothly from concept to completion with expert coordination
+            Amanda ensures every project runs smoothly from concept to
+            completion with expert coordination
           </Paragraph>
           <IconText
             className="uppercase"
@@ -251,12 +258,13 @@ export default function About2() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            className="text-accent mb-3"
+            color="text-accent" margin="mb-3"
           >
             Furniture & Styling Consultant
           </Heading>
           <Paragraph textAlign="text-center">
-            Robert curates perfect furniture selections and styling details that complete every design vision
+            Robert curates perfect furniture selections and styling details that
+            complete every design vision
           </Paragraph>
           <IconText
             className="uppercase"

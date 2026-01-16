@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: 'Speedwell | Lubbock Midwives & Birthing Center',
+    default: 'Speedwell | Next.js Website Template',
     template: '%s | Speedwell',
   },
   openGraph: {

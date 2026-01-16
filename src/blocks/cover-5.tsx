@@ -1,10 +1,20 @@
-import { ProBlock } from '@/components'
+import { Cover, Accent } from '@/components'
 
 export default function Cover5() {
   return (
-    <ProBlock
-      blockSlug="cover-5"
-      blockName="Cover 5"
-    />
+    <Cover
+      imageSrc="/images/layout-1/pexels-ivan-s-8117415.jpg"
+      imageAlt="Creative workspace with design materials"
+      imageClassName=""
+      parallax={true}
+    >
+      <Accent
+        textAlign="text-center"
+        color="text-white"
+        size="medium"
+      >
+        Strategy Meets Creativity
+      </Accent>
+    </Cover>
   )
 }

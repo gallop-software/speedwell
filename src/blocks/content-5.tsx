@@ -1,27 +1,63 @@
-import { Section, Heading, Paragraph } from '@/components'
+import {
+  Section,
+  Columns,
+  Column,
+  Image,
+  Heading,
+  Paragraph,
+  Buttons,
+  Button,
+} from '@/components'
+import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content5() {
   return (
-    <Section
-      className="bg-body py-30"
-      innerAlign="content"
-    >
-      <Heading
-        as="h2"
-        id="services"
-        className="text-center"
-      >
-        Transform Your Space with Expert Planning
-      </Heading>
-      <Paragraph>
-        Effective space planning is both an art and a science. Our designers combine technical expertise with creative problem-solving to develop layouts that maximize functionality while maintaining visual harmony. We consider architectural features, furniture scale, circulation patterns, and lifestyle needs to create spaces that work seamlessly for how you actually live. From determining the optimal furniture arrangement to reimagining entire floor plans, we ensure every decision serves both form and function.
-      </Paragraph>
-      <Paragraph>
-        Our comprehensive space planning process begins with understanding your needs, preferences, and daily routines. We measure and document your space, analyze its strengths and challenges, and explore multiple layout options. Using professional design software, we create detailed floor plans that show furniture placement, traffic flow, and spatial relationships. This allows you to visualize the final result before making any purchases or commitments, saving time, money, and potential frustration.
-      </Paragraph>
-      <Paragraph>
-        Whether you're furnishing a new home, reorganizing existing spaces, or planning a renovation, our space planning services provide the strategic foundation for successful design. We help you avoid common pitfalls like furniture that's too large or too small, awkward traffic patterns, and wasted space. The result is a thoughtfully planned environment that feels spacious, functional, and perfectly suited to your lifestyle.
-      </Paragraph>
+    <Section className="bg-body py-30">
+      <Columns gap="gap-10 lg:gap-20">
+        <Column className="aspect-[4/5] relative">
+          <Image
+            src="/images/portfolio/pexels-pixabay-279719.jpg"
+            alt="Modern residential interior with stylish design elements"
+            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+            size="large"
+          />
+          <Image
+            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+            alt="Contemporary living space with elegant furnishings"
+            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
+            rounded="rounded-b-none rounded-t-full"
+            size="large"
+          />
+        </Column>
+        <Column>
+          <Heading
+            as="h2"
+            id="services"
+          >
+            Comprehensive Design Solutions for Every Room
+          </Heading>
+          <Paragraph>
+            Our full-service residential design approach covers every aspect of
+            your home. From initial concept development and space planning to
+            furniture selection and final styling, we handle it all. We
+            specialize in creating cohesive designs that flow seamlessly from
+            room to room while maintaining each space's unique character.
+            Whether you're looking to redesign a single room or transform your
+            entire home, our team works closely with you to ensure every detail
+            aligns with your lifestyle and aesthetic preferences.
+          </Paragraph>
+          <Buttons>
+            <Button
+              variant="primary"
+              href="/contact"
+              icon={arrowRightIcon}
+              iconPlacement="after"
+            >
+              Start Your Project Today
+            </Button>
+          </Buttons>
+        </Column>
+      </Columns>
     </Section>
   )
 }

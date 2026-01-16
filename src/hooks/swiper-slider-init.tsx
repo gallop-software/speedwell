@@ -130,7 +130,7 @@ const SwiperSliderInit = ({
       swiperInstanceRef.current?.destroy()
       initializedRef.current = false
     }
-  }, [swiperId])
+  }, [swiperId, autoHeight, columns, layout])
 
   return null
 }

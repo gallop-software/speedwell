@@ -287,7 +287,9 @@ export function BlogClient({
                     >
                       <Heading
                         as="h3"
-                        className=" font-semibold !mb-0 !text-xl"
+                        fontWeight="font-semibold"
+                        margin="mb-0"
+                        className="!text-xl"
                       >
                         {post.metadata.title}
                       </Heading>

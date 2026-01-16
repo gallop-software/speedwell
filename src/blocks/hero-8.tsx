@@ -26,7 +26,10 @@ export default function Hero8() {
                 rounded="rounded-none"
                 lazy={false}
               />
-              <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform text-left lg:text-right -rotate-12">
+              <Accent
+                className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 right-auto lg:-top-20 lg:-right-40 transform lg:text-right -rotate-12"
+                textAlign="text-left"
+              >
                 curated style
               </Accent>
             </Column>

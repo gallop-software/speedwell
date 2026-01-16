@@ -2,9 +2,9 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero6 from '@/blocks/hero-6'
-import Section13 from '@/blocks/section-13'
-import Section14 from '@/blocks/section-14'
-import Section15 from '@/blocks/section-15'
+import Content11 from '@/blocks/content-11'
+import Content12 from '@/blocks/content-12'
+import Content13 from '@/blocks/content-13'
 import CallToAction2 from '@/blocks/call-to-action-2'
 import PageFooter from '@/template/page-footer'
 
@@ -12,9 +12,9 @@ function Content() {
   return (
     <>
       <Hero6 />
-      <Section13 />
-      <Section14 />
-      <Section15 />
+      <Content11 />
+      <Content12 />
+      <Content13 />
       <CallToAction2 />
       <PageFooter />
     </>
@@ -24,7 +24,7 @@ function Content() {
 const metadata: PageMetadata = {
   title: 'Professional Color Consultation Services | Interior Design',
   description:
-    'Expert color consultation services to transform your space with the perfect palette. Our designers help you choose colors that enhance your home\'s beauty, reflect your personality, and create the perfect ambiance.',
+    "Expert color consultation services to transform your space with the perfect palette. Our designers help you choose colors that enhance your home's beauty, reflect your personality, and create the perfect ambiance.",
   keywords: [
     'color consultation',
     'interior color design',
@@ -73,4 +73,10 @@ const metadata: PageMetadata = {
 }
 
 export const generateMetadata = () => generatePageMetadata(metadata)
-export default () => (<PageWrapper metadata={metadata}><Content /></PageWrapper>)
+export default function Page() {
+  return (
+    <PageWrapper metadata={metadata}>
+      <Content />
+    </PageWrapper>
+  )
+}

@@ -2,7 +2,7 @@ import {
   Section,
   FancyHeading,
   Swiper,
-  Testimonial1,
+  CardTestimonial1,
   Quote,
 } from '@/components'
 
@@ -14,7 +14,7 @@ export default function Testimonial2() {
         accent="what our clients say"
       />
       <Swiper>
-        <Testimonial1
+        <CardTestimonial1
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
           cite="James Mitchell"
         >
@@ -25,8 +25,8 @@ export default function Testimonial2() {
             to understand our vision made the entire process seamless. We
             couldn't be happier with the results!
           </Quote>
-        </Testimonial1>
-        <Testimonial1
+        </CardTestimonial1>
+        <CardTestimonial1
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
           cite="Michael Chen"
         >
@@ -38,8 +38,8 @@ export default function Testimonial2() {
             commercial design expertise and project management skills were
             outstanding. Highly recommended!
           </Quote>
-        </Testimonial1>
-        <Testimonial1
+        </CardTestimonial1>
+        <CardTestimonial1
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
           cite="Jennifer Bradley"
         >
@@ -50,8 +50,8 @@ export default function Testimonial2() {
             consultation alone was worth it – our home has never felt more
             cohesive and welcoming. We've already referred them to friends!
           </Quote>
-        </Testimonial1>
-        <Testimonial1
+        </CardTestimonial1>
+        <CardTestimonial1
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
           cite="David Park"
         >
@@ -62,7 +62,7 @@ export default function Testimonial2() {
             urban condo. Their furniture selection and space planning expertise
             turned my small space into a comfortable, stylish home. Thank you!
           </Quote>
-        </Testimonial1>
+        </CardTestimonial1>
       </Swiper>
     </Section>
   )

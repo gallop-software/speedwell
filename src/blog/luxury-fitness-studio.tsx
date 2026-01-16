@@ -13,7 +13,16 @@ function Details() {
       />
 
       <P>
-        This independent brewery needed a distinctive brand to stand out in the crowded craft beer market. We developed a bold, memorable identity system featuring custom illustrations, vibrant colors, and playful typography that reflects their experimental approach to brewing. Each beer variety has its own unique label design while maintaining brand cohesion through consistent elements. The taproom experience includes branded glassware, coasters, merchandise, and environmental graphics. Social media templates and marketing materials help them engage with their passionate community of craft beer enthusiasts while attracting new customers.
+        This independent brewery needed a distinctive brand to stand out in the
+        crowded craft beer market. We developed a bold, memorable identity
+        system featuring custom illustrations, vibrant colors, and playful
+        typography that reflects their experimental approach to brewing. Each
+        beer variety has its own unique label design while maintaining brand
+        cohesion through consistent elements. The taproom experience includes
+        branded glassware, coasters, merchandise, and environmental graphics.
+        Social media templates and marketing materials help them engage with
+        their passionate community of craft beer enthusiasts while attracting
+        new customers.
       </P>
 
       <Button
@@ -53,8 +62,7 @@ export const metadata = {
   featuredImage: '/images/layout-1/pexels-elevate-1267700.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/luxury-fitness-studio',
+    canonical: 'https://speedwell.gallop.software/post/luxury-fitness-studio',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

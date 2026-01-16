@@ -1,26 +1,27 @@
 import {
   Section,
-  Heading,
-  Paragraph,
-  Quote,
   Columns,
   Column,
   Image,
+  Heading,
+  Paragraph,
+  Buttons,
+  Button,
 } from '@/components'
+import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content8() {
   return (
-    <Section className="bg-body-light py-30">
+    <Section className="py-30 bg-body">
       <Columns
-        reverseColumns
-        align="items-start"
+        reverseColumns={true}
         gap="gap-10 lg:gap-20"
       >
-        <Column className="relative">
+        <Column>
           <Image
-            src="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
-            alt="Emily Chen - Senior Commercial Designer"
-            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            src="/images/portfolio/pexels-jworks1124-342800.jpg"
+            alt="Contemporary residential space with thoughtful design details"
+            className="object-cover"
             rounded="rounded-t-full"
             size="large"
           />
@@ -28,40 +29,30 @@ export default function Content8() {
         <Column>
           <Heading
             as="h3"
-            styleAs="h3"
-            margin="mb-2"
-            fontSize="text-3xl"
-            color="text-accent5"
-          >
-            Senior Commercial Designer
-          </Heading>
-          <Heading
-            as="h4"
             styleAs="h2"
           >
-            Emily Chen
+            From Concept to Completion: Our Seamless Process
           </Heading>
           <Paragraph>
-            Emily specializes in creating innovative commercial spaces that
-            balance brand identity with employee wellbeing. With a background in
-            corporate design and workplace strategy, she has transformed
-            offices, retail spaces, and hospitality venues for clients ranging
-            from tech startups to established corporations. Her designs are
-            known for maximizing natural light, promoting collaboration, and
-            incorporating sustainable materials.
+            We've refined our design process to make your experience as smooth
+            and enjoyable as possible. Starting with an in-depth consultation,
+            we move through concept development, detailed planning, and
+            meticulous execution. Throughout the project, we maintain clear
+            communication and provide regular updates, ensuring you're involved
+            at every stage while we handle all the complex details. Our
+            established relationships with trusted contractors and suppliers
+            mean we can deliver exceptional results on time and within budget.
           </Paragraph>
-          <Paragraph>
-            A graduate of Parsons School of Design, Emily brings a strategic
-            mindset to every project. She stays current with workplace trends
-            and ergonomic research to create environments that boost
-            productivity and employee satisfaction. Her portfolio includes
-            award-winning office designs that have been featured in
-            Architectural Digest and Interior Design Magazine.
-          </Paragraph>
-          <Quote>
-            The best commercial spaces inspire people to do their best work
-            while reflecting the unique culture and values of the organization.
-          </Quote>
+          <Buttons>
+            <Button
+              variant="primary"
+              href="/contact"
+              icon={arrowRightIcon}
+              iconPlacement="after"
+            >
+              Schedule Your Consultation
+            </Button>
+          </Buttons>
         </Column>
       </Columns>
     </Section>

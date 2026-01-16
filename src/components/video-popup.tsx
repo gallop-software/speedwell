@@ -51,7 +51,10 @@ export function VideoPopup({
   return (
     <>
       {videoId && (
-        <Script id={videoId} type="application/ld+json">
+        <Script
+          id={videoId}
+          type="application/ld+json"
+        >
           {JSON.stringify(schema)}
         </Script>
       )}
@@ -78,7 +81,12 @@ export function VideoPopup({
             onClick={() => setIsOpen(false)}
             className="bg-body/50 backdrop-blur-md transition-opacity opacity-100 fixed inset-0 shadow-lg w-full max-w-full z-10 flex items-center justify-center px-4 sm:px-14"
           >
-            {embed && <VimeoPlayer embed={embed} isOpen={isOpen} />}
+            {embed && (
+              <VimeoPlayer
+                embed={embed}
+                isOpen={isOpen}
+              />
+            )}
           </div>
           <button
             type="button"
@@ -86,7 +94,10 @@ export function VideoPopup({
             onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">Close panel</span>
-            <Icon icon={xMarkIcon} className="h-10 w-10 text-contrast" />
+            <Icon
+              icon={xMarkIcon}
+              className="h-10 w-10 text-contrast"
+            />
           </button>
         </DialogPanel>
       </Dialog>
