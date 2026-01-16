@@ -1,6 +1,6 @@
 import { Section, Heading, Paragraph, Image } from '@/components'
 
-export default function Content6() {
+export default function Content58() {
   return (
     <Section
       id="about"

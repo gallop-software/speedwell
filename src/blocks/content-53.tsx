@@ -1,6 +1,6 @@
 import { Section, Heading, Paragraph } from '@/components'
 
-export default function Content1() {
+export default function Content53() {
   return (
     <Section
       innerAlign="content"

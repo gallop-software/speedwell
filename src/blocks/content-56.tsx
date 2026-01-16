@@ -1,6 +1,6 @@
 import { Section, Heading, Paragraph, Accordion } from '@/components'
 
-export default function Content4() {
+export default function Content56() {
   return (
     <Section
       className="bg-body py-30"

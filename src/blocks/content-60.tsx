@@ -8,7 +8,7 @@ import {
   Image,
 } from '@/components'
 
-export default function Content8() {
+export default function Content60() {
   return (
     <Section className="bg-body-light py-30">
       <Columns
