@@ -3,14 +3,16 @@ import {
   Heading,
   Paragraph,
   Button,
-  Icon,
-  Subheading,
+  Grid,
+  List,
+  Li,
+  Chip,
 } from '@/components'
 import checkIcon from '@iconify/icons-heroicons/check-20-solid'
 
 export default function Pricing2() {
   return (
-    <Section className="py-30 bg-gradient-to-b from-body to-body-light relative overflow-hidden">
+    <Section className="py-30 bg-gradient-to-b from-body to-body-light relative">
 
         <div className="text-center mb-20">
           <Heading
@@ -26,60 +28,26 @@ export default function Pricing2() {
           </Paragraph>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <Grid cols="grid-cols-1 md:grid-cols-3" gap="gap-8" className="max-w-7xl mx-auto">
           {/* Essentials Package */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col relative border-t-4 border-accent2">
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col relative z-0">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Essentials</h3>
-              <p className="text-body-muted mb-4">
+              <Heading as="h4" margin="mb-2">Essentials</Heading>
+              <Paragraph color="text-body-muted" margin="mb-4">
                 Perfect for intimate celebrations
-              </p>
-              <div className="flex items-baseline">
+              </Paragraph>
+              <Heading className="flex items-baseline" margin="mb-0">
                 <span className="text-4xl font-bold text-accent2">$2,500</span>
-              </div>
+              </Heading>
             </div>
 
-            <ul className="space-y-3 mb-6 flex-grow text-sm">
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent2 mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Up to 50 guests</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent2 mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Venue recommendations</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent2 mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">
-                  Vendor coordination (3 vendors)
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent2 mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Event timeline creation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent2 mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">
-                  Day-of coordination (6 hours)
-                </span>
-              </li>
-            </ul>
+            <List variant="unstyled" spacing="loose" className="mb-6 flex-grow">
+              <Li icon={checkIcon}>Up to 50 guests</Li>
+              <Li icon={checkIcon}>Venue recommendations</Li>
+              <Li icon={checkIcon}>Vendor coordination (3 vendors)</Li>
+              <Li icon={checkIcon}>Event timeline creation</Li>
+              <Li icon={checkIcon}>Day-of coordination (6 hours)</Li>
+            </List>
 
             <Button
               href="#contact"
@@ -91,68 +59,28 @@ export default function Pricing2() {
           </div>
 
           {/* Premier Package - Featured */}
-          <div className="bg-gradient-to-br from-accent to-accent/90 p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all hover:-translate-y-2 relative flex flex-col scale-105 border-4 border-accent/20">
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white text-accent px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+          <div className="bg-gradient-to-br from-accent to-accent/90 p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all hover:-translate-y-2 relative flex flex-col scale-105 border-4 border-accent/20 z-10">
+            <Chip className="absolute -top-5 left-1/2 -translate-x-1/2 shadow-lg z-100">
               Most Popular
-            </div>
+            </Chip>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2 text-white">Premier</h3>
-              <p className="text-white/90 mb-4">
+              <Heading as="h4" margin="mb-2" color="text-white">Premier</Heading>
+              <Paragraph color="text-white/90" margin="mb-4">
                 For unforgettable celebrations
-              </p>
-              <div className="flex items-baseline">
+              </Paragraph>
+              <Heading className="flex items-baseline" margin="mb-0">
                 <span className="text-4xl font-bold text-white">$6,500</span>
-              </div>
+              </Heading>
             </div>
 
-            <ul className="space-y-3 mb-6 flex-grow text-sm">
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
-                />
-                <span className="text-white">Up to 150 guests</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
-                />
-                <span className="text-white">Venue sourcing & negotiation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
-                />
-                <span className="text-white">Full vendor management</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
-                />
-                <span className="text-white">
-                  Custom event design & styling
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
-                />
-                <span className="text-white">Budget management</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
-                />
-                <span className="text-white">
-                  Full day-of coordination (12 hours)
-                </span>
-              </li>
-            </ul>
+            <List variant="unstyled" spacing="loose" color="text-white" className="mb-6 flex-grow">
+              <Li icon={checkIcon}>Up to 150 guests</Li>
+              <Li icon={checkIcon}>Venue sourcing & negotiation</Li>
+              <Li icon={checkIcon}>Full vendor management</Li>
+              <Li icon={checkIcon}>Custom event design & styling</Li>
+              <Li icon={checkIcon}>Budget management</Li>
+              <Li icon={checkIcon}>Full day-of coordination (12 hours)</Li>
+            </List>
 
             <Button
               href="#contact"
@@ -164,61 +92,23 @@ export default function Pricing2() {
           </div>
 
           {/* Luxury Package */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col relative border-t-4 border-accent">
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col relative z-0">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Luxury</h3>
-              <p className="text-body-muted mb-4">For extraordinary events</p>
-              <div className="flex items-baseline">
+              <Heading as="h4" margin="mb-2">Luxury</Heading>
+              <Paragraph color="text-body-muted" margin="mb-4">For extraordinary events</Paragraph>
+              <Heading className="flex items-baseline" margin="mb-0">
                 <span className="text-4xl font-bold text-accent">$12,000</span>
-              </div>
+              </Heading>
             </div>
 
-            <ul className="space-y-3 mb-6 flex-grow text-sm">
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Unlimited guests</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Exclusive venue access</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Premium vendor curation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Bespoke event design</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">
-                  Custom decor & installations
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon
-                  icon={checkIcon}
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                />
-                <span className="text-body-dark">Multi-day coordination</span>
-              </li>
-            </ul>
+            <List variant="unstyled" spacing="loose" className="mb-6 flex-grow">
+              <Li icon={checkIcon}>Unlimited guests</Li>
+              <Li icon={checkIcon}>Exclusive venue access</Li>
+              <Li icon={checkIcon}>Premium vendor curation</Li>
+              <Li icon={checkIcon}>Bespoke event design</Li>
+              <Li icon={checkIcon}>Custom decor & installations</Li>
+              <Li icon={checkIcon}>Multi-day coordination</Li>
+            </List>
 
             <Button
               href="#contact"
@@ -228,7 +118,7 @@ export default function Pricing2() {
               Get Started
             </Button>
         </div>
-      </div>
+      </Grid>
     </Section>
   )
 }
