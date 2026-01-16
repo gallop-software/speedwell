@@ -68,6 +68,7 @@ export default function Section40() {
       <Grid
         cols="grid-cols-1 md:grid-cols-2"
         gap="gap-0"
+        className="-mx-6 sm:-mx-0"
       >
         {ingredients.map((ingredient, index) => (
           <div
