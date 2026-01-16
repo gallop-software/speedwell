@@ -83,7 +83,7 @@ export default function Section5() {
             key={service.title}
             className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
           >
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative h-auto md:h-48 overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.title}
