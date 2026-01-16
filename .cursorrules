@@ -263,6 +263,7 @@ Following these patterns provides these guarantees:
 - `Paragraph` - props: `color`, `margin`, `fontSize`, `lineHeight`, `textAlign`
 - `Span` - props: `color`, `margin`, `fontSize` (inline text, mb-0 default)
 - `Label` - props: `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
+- `Quote` - props: `variant`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
 
 ### Layout
 - `Section` - semantic section wrapper

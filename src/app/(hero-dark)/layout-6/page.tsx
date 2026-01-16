@@ -5,7 +5,7 @@ import Hero22 from '@/blocks/hero-22'
 import Section39 from '@/blocks/section-39'
 import Section40 from '@/blocks/section-40'
 import Cover7 from '@/blocks/cover-7'
-import ProductTestimonials1 from '@/blocks/product-testimonials-1'
+import Testimonial10 from '@/blocks/testimonial-10'
 import ProductCta1 from '@/blocks/product-cta-1'
 
 function Content() {
@@ -15,7 +15,7 @@ function Content() {
       <Section39 />
       <Section40 />
       <Cover7 />
-      <ProductTestimonials1 />
+      <Testimonial10 />
       <ProductCta1 />
     </>
   )
