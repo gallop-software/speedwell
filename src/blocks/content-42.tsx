@@ -1,26 +1,26 @@
 import {
   Section,
+  Heading,
+  Paragraph,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
 } from '@/components'
 
-export default function Section17() {
+export default function Content42() {
   return (
     <Section className="bg-body-light py-30">
       <Columns>
-        <Column className="aspect-4/5 relative">
+        <Column className="aspect-[4/5] relative">
           <Image
             src="/images/portfolio/pexels-pixabay-269218.jpg"
-            alt="Quality craftsmanship and attention to detail"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+            alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
+            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover aspect-[16/9]"
             size="large"
           />
           <Image
-            src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
-            alt="Professional contractor coordination"
+            src="/images/portfolio/pexels-maksgelatin-4352247.jpg"
+            alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incid"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-t-full"
             size="large"

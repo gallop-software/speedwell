@@ -7,7 +7,7 @@ import {
   Paragraph,
 } from '@/components'
 
-export default function Section26() {
+export default function Content35() {
   return (
     <Section className="py-30 bg-body">
       <Columns

@@ -9,7 +9,7 @@ import {
   Li,
 } from '@/components'
 
-export default function Section15() {
+export default function Content24() {
   return (
     <Section className="bg-body py-30">
       <Columns gap="gap-10 lg:gap-20">

@@ -8,7 +8,7 @@ import {
   Accent,
 } from '@/components'
 
-export default function Section32() {
+export default function Content40() {
   return (
     <Section className="py-20 md:py-30 bg-body2 relative">
       <div className="absolute w-[50%] border-r border-b border-black left-0 -top-20 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>

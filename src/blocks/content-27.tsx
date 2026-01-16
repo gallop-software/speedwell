@@ -8,7 +8,7 @@ import {
   Quote,
 } from '@/components'
 
-export default function Section18() {
+export default function Content27() {
   return (
     <Section className="bg-body py-30">
       <Columns

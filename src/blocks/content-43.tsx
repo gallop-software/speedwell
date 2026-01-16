@@ -11,7 +11,7 @@ import {
   List,
 } from '@/components'
 
-export default function Section35() {
+export default function Content43() {
   return (
     <Section className="bg-body pt-30">
       <Columns

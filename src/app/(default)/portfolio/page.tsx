@@ -7,7 +7,7 @@ import Showcase2 from '@/blocks/showcase-2'
 import Showcase3 from '@/blocks/showcase-3'
 import Showcase4 from '@/blocks/showcase-4'
 import Showcase5 from '@/blocks/showcase-5'
-import Section4 from '@/blocks/section-4'
+import Content15 from '@/blocks/content-15'
 import Cover1 from '@/blocks/cover-1'
 import Testimonial1 from '@/blocks/testimonial-1'
 
@@ -20,7 +20,7 @@ function Content() {
       <Showcase3 />
       <Showcase4 />
       <Showcase5 />
-      <Section4 />
+      <Content15 />
       <Cover1 />
       <Testimonial1 />
     </>

@@ -1,6 +1,6 @@
 import { Section, Accent, Heading, Paragraph } from '@/components'
 
-export default function Section10() {
+export default function Content21() {
   return (
     <Section className="relative py-30">
       <div className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-left-top bg-[length:700px] bg-[url('/images/geometric-1400x809.jpg')]"></div>

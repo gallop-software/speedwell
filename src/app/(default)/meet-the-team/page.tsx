@@ -3,8 +3,8 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import { Navbar } from '@/components'
 import Cover4 from '@/blocks/cover-4'
-import Section33 from '@/blocks/section-33'
-import Section34 from '@/blocks/section-34'
+import Content41 from '@/blocks/content-41'
+import Content42 from '@/blocks/content-42'
 import Content7 from '@/blocks/content-7'
 import Content8 from '@/blocks/content-8'
 import Content9 from '@/blocks/content-9'
@@ -15,8 +15,8 @@ function Content() {
   return (
     <>
       <Cover4 />
-      <Section33 />
-      <Section34 />
+      <Content41 />
+      <Content42 />
       <Content7 />
       <Content8 />
       <Content9 />

@@ -9,7 +9,7 @@ import {
   GalleryItem,
 } from '@/components'
 
-export default function Section24() {
+export default function Content33() {
   return (
     <Section className="bg-body py-30">
       <Columns gap="gap-10 lg:gap-20">

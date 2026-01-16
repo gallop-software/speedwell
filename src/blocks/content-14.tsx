@@ -11,7 +11,7 @@ import {
 } from '@/components'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
-export default function Section1() {
+export default function Content14() {
   return (
     <Section className="py-20 md:py-30 lg:pb-0 bg-body2 relative">
       <div className="absolute w-[44%] border-r border-b border-black left-0 -top-30 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>

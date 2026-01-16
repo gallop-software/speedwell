@@ -10,7 +10,7 @@ import {
   Image,
 } from '@/components'
 
-export default function Section14() {
+export default function Content23() {
   return (
     <Section className="bg-body2 py-30">
       <Columns gap="gap-10 lg:gap-20">

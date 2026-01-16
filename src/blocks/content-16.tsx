@@ -10,7 +10,7 @@ import {
 } from '@/components'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
-export default function Section5() {
+export default function Content16() {
   return (
     <Section className="bg-body py-30">
       <Columns gap="gap-10 lg:gap-20">
