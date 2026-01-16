@@ -132,7 +132,7 @@ Use props over className for supported styles
 
 ### 008: Tailwind Only
 
-No inline styles, use Tailwind exclusively
+No inline styles in blocks, components allowed for dynamic values
 
 - **ESLint Rule:** `gallop/no-inline-styles`
 - **Category:** styling
