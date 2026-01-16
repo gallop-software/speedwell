@@ -6,7 +6,7 @@ import Content12 from '@/blocks/content-12'
 import Section40 from '@/blocks/section-40'
 import Cover7 from '@/blocks/cover-7'
 import Testimonial10 from '@/blocks/testimonial-10'
-import Content13 from '@/blocks/content-13'
+import Shopping1 from '@/blocks/shopping-1'
 
 function Content() {
   return (
@@ -16,7 +16,7 @@ function Content() {
       <Section40 />
       <Cover7 />
       <Testimonial10 />
-      <Content13 />
+      <Shopping1 />
     </>
   )
 }

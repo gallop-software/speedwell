@@ -14,7 +14,7 @@ import {
 } from '@/components'
 import shoppingBagIcon from '@iconify/icons-lucide/shopping-bag'
 
-export default function Content13() {
+export default function Shopping1() {
   return (
     <Section
       id="purchase"
@@ -130,8 +130,9 @@ export default function Content13() {
               <span className="hidden sm:block flex-1 border-b border-dashed border-body-dark/90" />
 
               <Button
-                href="#"
+                href="https://buy.stripe.com/test_9B6cN71Sw03VgpWdHb2Ry00"
                 variant="primary"
+                target="_blank"
                 icon={shoppingBagIcon}
                 iconPlacement="before"
                 className="w-full sm:w-auto"
