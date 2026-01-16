@@ -12,7 +12,7 @@ import starIcon from '@iconify/icons-lucide/star'
 import mapPinIcon from '@iconify/icons-lucide/map-pin'
 import printerIcon from '@iconify/icons-lucide/printer'
 
-export default function Section41() {
+export default function Section7() {
   return (
     <Section className="py-20 md:py-30 bg-accent4 relative">
       <Columns

@@ -3,13 +3,13 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import { Navbar } from '@/components'
 import Form1 from '@/blocks/form-1'
-import Section41 from '@/blocks/section-41'
+import Section7 from '@/blocks/section-7'
 
 function Content() {
   return (
     <>
       <Form1 />
-      <Section41 />
+      <Section7 />
     </>
   )
 }

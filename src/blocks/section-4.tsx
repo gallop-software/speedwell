@@ -7,7 +7,7 @@ import {
   Card3,
 } from '@/components'
 
-export default function Section12() {
+export default function Section4() {
   return (
     <Section className="py-30">
       <Columns reverseColumns={false}>

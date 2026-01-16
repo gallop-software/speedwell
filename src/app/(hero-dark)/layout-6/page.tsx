@@ -3,7 +3,7 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero22 from '@/blocks/hero-22'
 import Content12 from '@/blocks/content-12'
-import Section40 from '@/blocks/section-40'
+import Section6 from '@/blocks/section-6'
 import Cover7 from '@/blocks/cover-7'
 import Testimonial10 from '@/blocks/testimonial-10'
 import Shopping1 from '@/blocks/shopping-1'
@@ -13,7 +13,7 @@ function Content() {
     <>
       <Hero22 />
       <Content12 />
-      <Section40 />
+      <Section6 />
       <Cover7 />
       <Testimonial10 />
       <Shopping1 />

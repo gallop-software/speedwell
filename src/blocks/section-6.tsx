@@ -43,7 +43,7 @@ const ingredients = [
   },
 ]
 
-export default function Section40() {
+export default function Section6() {
   return (
     <Section className="py-24 md:py-32 bg-body2 relative">
       {/* Section Header */}

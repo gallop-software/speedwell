@@ -7,7 +7,7 @@ import {
   Column,
 } from '@/components'
 
-export default function Section36() {
+export default function Section5() {
   return (
     <Section className="py-30 bg-gradient-to-br from-body-dark via-body to-body-dark relative overflow-hidden">
       {/* Decorative elements */}
