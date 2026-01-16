@@ -1,6 +1,6 @@
 import { Section, FancyHeading, Blog } from '@/components'
 
-export default function Blog2() {
+export default function Archive2() {
   return (
     <Section
       id="showcase"

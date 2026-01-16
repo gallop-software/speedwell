@@ -8,7 +8,7 @@ import Showcase6 from '@/blocks/showcase-6'
 import Cover5 from '@/blocks/cover-5'
 import About3 from '@/blocks/about-3'
 import Process1 from '@/blocks/process-1'
-import Blog2 from '@/blocks/blog-2'
+import Archive2 from '@/blocks/archive-2'
 import Form2 from '@/blocks/form-2'
 import Form3 from '@/blocks/form-3'
 import Testimonial4 from '@/blocks/testimonial-4'
@@ -23,7 +23,7 @@ function Content() {
       <Showcase6 />
       <About3 />
       <Cover5 />
-      <Blog2 />
+      <Archive2 />
       <Testimonial4 />
       <Form2 />
       <Form3 />
