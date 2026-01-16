@@ -10,7 +10,7 @@ import {
   CountUp,
 } from '@/components'
 
-export default function Section39() {
+export default function Content12() {
   return (
     <Section
       id="discover"
