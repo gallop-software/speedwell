@@ -52,19 +52,24 @@ function generateConfetti(count: number): ConfettiPiece[] {
     color: colors[Math.floor(Math.random() * colors.length)],
     shape: shapes[Math.floor(Math.random() * shapes.length)],
     rotation: rotations[Math.floor(Math.random() * rotations.length)],
-    delay: Math.random() * 0.5, // Stagger the start
-    duration: 2 + Math.random() * 2, // 2-4 seconds to fall
+    delay: 0, // No delay - all burst at once
+    duration: 4 + Math.random() * 4, // 4-8 seconds to fall
   }))
 }
 
 export default function BackgroundConfetti() {
   const [hasPlayed, setHasPlayed] = useState(false)
-  const [confetti] = useState(() => generateConfetti(80))
+  const [confetti, setConfetti] = useState<ConfettiPiece[]>([])
 
   const { ref, inView } = useInView({
-    threshold: 0.8, // 80% visible triggers animation
+    threshold: 0.3, // 30% visible triggers animation
     triggerOnce: true, // Only trigger once
   })
+
+  // Generate confetti only on client side to avoid hydration mismatch
+  useEffect(() => {
+    setConfetti(generateConfetti(80))
+  }, [])
 
   useEffect(() => {
     if (inView && !hasPlayed) {

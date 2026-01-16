@@ -246,11 +246,12 @@
     transform: translateY(0) rotate(0deg) scale(1);
     opacity: 0;
   }
-  5% {
+  3% {
+    transform: translateY(3vh) rotate(20deg) scale(1);
     opacity: 1;
   }
-  50% {
-    opacity: 0.9;
+  70% {
+    opacity: 0.8;
   }
   100% {
     transform: translateY(120vh) rotate(720deg) scale(0.5);
