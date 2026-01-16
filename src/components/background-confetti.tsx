@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 const colors = [
   'bg-pink-400',
@@ -57,40 +58,30 @@ function generateConfetti(count: number): ConfettiPiece[] {
 }
 
 export default function BackgroundConfetti() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
   const [hasPlayed, setHasPlayed] = useState(false)
   const [confetti] = useState(() => generateConfetti(80))
 
+  const { ref, inView } = useInView({
+    threshold: 0.8, // 80% visible triggers animation
+    triggerOnce: true, // Only trigger once
+  })
+
   useEffect(() => {
-    const container = containerRef.current
-    if (!container) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Trigger when fully in view (threshold 1.0)
-        if (entry.isIntersecting && !hasPlayed) {
-          setIsVisible(true)
-          setHasPlayed(true)
-        }
-      },
-      { threshold: 0.8 } // 80% visible triggers animation
-    )
-
-    observer.observe(container)
-    return () => observer.disconnect()
-  }, [hasPlayed])
+    if (inView && !hasPlayed) {
+      setHasPlayed(true)
+    }
+  }, [inView, hasPlayed])
 
   return (
     <div
-      ref={containerRef}
+      ref={ref}
       className="absolute inset-0 z-40 pointer-events-none overflow-hidden"
     >
       {confetti.map((piece) => (
         <div
           key={piece.id}
           className={`absolute ${piece.shape.width} ${piece.shape.height} ${piece.color} ${piece.shape.rounded} ${piece.rotation} ${
-            isVisible ? 'animate-confetti-fall' : 'opacity-0'
+            hasPlayed ? 'animate-confetti-fall' : 'opacity-0'
           }`}
           style={{
             left: `${piece.left}%`,

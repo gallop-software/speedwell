@@ -195,6 +195,13 @@ Prevent runtime code from importing _data/ directly
 - **ESLint Rule:** `gallop/no-data-imports`
 - **Category:** structure
 
+### 024: React Intersection Observer
+
+Use react-intersection-observer package, not native API
+
+- **ESLint Rule:** `gallop/no-native-intersection-observer`
+- **Category:** components
+
 ## Documentation Patterns
 
 These patterns are not enforced by ESLint but should be followed.
@@ -282,6 +289,7 @@ Following these patterns provides these guarantees:
 - Use Container inside Section - Section already provides containment
 - Use `classnames` package - use `clsx` instead
 - Use inline styles for hover states - use Tailwind classes
+- Use native `IntersectionObserver` - use `react-intersection-observer` package
 
 ## File & Folder Authority
 
