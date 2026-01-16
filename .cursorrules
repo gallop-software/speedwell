@@ -209,6 +209,13 @@ Component functions must be in components folder, not blocks
 - **ESLint Rule:** `gallop/no-component-in-blocks`
 - **Category:** structure
 
+### 026: List Components
+
+Use List/Li, not raw ul/li tags
+
+- **ESLint Rule:** `gallop/prefer-list-components`
+- **Category:** components
+
 ## Documentation Patterns
 
 These patterns are not enforced by ESLint but should be followed.

@@ -11,11 +11,7 @@ import checkIcon from '@iconify/icons-heroicons/check-20-solid'
 export default function Pricing2() {
   return (
     <Section className="py-30 bg-gradient-to-b from-body to-body-light relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent2/5 rounded-full blur-3xl"></div>
 
-      <div className="relative">
         <div className="text-center mb-20">
           <Heading
             as="h2"
@@ -231,7 +227,6 @@ export default function Pricing2() {
             >
               Get Started
             </Button>
-          </div>
         </div>
       </div>
     </Section>
