@@ -1,6 +1,6 @@
 import { Section, Heading, Paragraph, Accent, Image } from '@/components'
 
-export default function About4() {
+export default function Content51() {
   return (
     <Section className="py-20 md:py-30 bg-body relative overflow-hidden">
       {/* Decorative background accent */}
