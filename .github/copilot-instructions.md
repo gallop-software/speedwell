@@ -202,6 +202,13 @@ Use react-intersection-observer package, not native API
 - **ESLint Rule:** `gallop/no-native-intersection-observer`
 - **Category:** components
 
+### 025: No Components in Blocks
+
+Component functions must be in components folder, not blocks
+
+- **ESLint Rule:** `gallop/no-component-in-blocks`
+- **Category:** structure
+
 ## Documentation Patterns
 
 These patterns are not enforced by ESLint but should be followed.

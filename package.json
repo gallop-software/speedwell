@@ -57,14 +57,12 @@
     "env:prev": "./push-env-to-vercel.sh preview",
     "fonts": "node _scripts/compress-fonts.js",
     "fonts:use": "node src/styles/fonts/useFonts.js",
-    "refresh": "rm -rf node_modules .next",
-    "refresh:install": "npm run refresh && npm install",
-    "clean": "rm -rf node_modules .next package-lock.json",
-    "clean:install": "npm run clean && npm install",
+    "refresh": "rm -rf node_modules .next && npm install",
+    "clean": "rm -rf node_modules .next package-lock.json && npm install",
     "update:check": "npx npm-check-updates",
-    "update:patch": "npx npm-check-updates -u --target patch && npm run clean:install",
-    "update:minor": "npx npm-check-updates -u --target minor && npm run clean:install",
-    "update:major": "npx npm-check-updates -u --target latest && npm run clean:install",
+    "update:patch": "npx npm-check-updates -u --target patch && npm run clean",
+    "update:minor": "npx npm-check-updates -u --target minor && npm run clean",
+    "update:major": "npx npm-check-updates -u --target latest && npm run clean",
     "update:interactive": "npx npm-check-updates -i",
     "update:doctor": "npx npm-check-updates --doctor -u",
     "update:canon": "npm update @gallop.software/canon"
@@ -95,7 +93,7 @@
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
-    "@gallop.software/canon": "^2.10.0",
+    "@gallop.software/canon": "^2.11.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
