@@ -6,7 +6,7 @@ import About4 from '@/blocks/about-4'
 import Showcase8 from '@/blocks/showcase-8'
 import Showcase9 from '@/blocks/showcase-9'
 import Testimonial7 from '@/blocks/testimonial-7'
-import Contact7 from '@/blocks/contact-7'
+import Form5 from '@/blocks/form-5'
 
 function Content() {
   return (
@@ -16,7 +16,7 @@ function Content() {
       <Showcase8 />
       <Showcase9 />
       <Testimonial7 />
-      <Contact7 />
+      <Form5 />
     </>
   )
 }

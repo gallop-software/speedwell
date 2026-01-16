@@ -9,8 +9,8 @@ import Cover5 from '@/blocks/cover-5'
 import About3 from '@/blocks/about-3'
 import Process1 from '@/blocks/process-1'
 import Blog2 from '@/blocks/blog-2'
-import Contact3 from '@/blocks/contact-3'
-import Contact4 from '@/blocks/contact-4'
+import Form2 from '@/blocks/form-2'
+import Form3 from '@/blocks/form-3'
 import Testimonial4 from '@/blocks/testimonial-4'
 
 function Content() {
@@ -25,8 +25,8 @@ function Content() {
       <Cover5 />
       <Blog2 />
       <Testimonial4 />
-      <Contact3 />
-      <Contact4 />
+      <Form2 />
+      <Form3 />
     </>
   )
 }

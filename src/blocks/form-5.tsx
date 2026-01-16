@@ -12,7 +12,7 @@ import {
   Paragraph,
 } from '@/components'
 
-export default function Contact7() {
+export default function Form5() {
   return (
     <Section className="py-20 md:py-30 bg-body relative">
       <Columns

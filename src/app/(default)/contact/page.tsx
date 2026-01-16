@@ -2,14 +2,14 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import { Navbar } from '@/components'
-import Contact1 from '@/blocks/contact-1'
-import Contact2 from '@/blocks/contact-2'
+import Form1 from '@/blocks/form-1'
+import Section41 from '@/blocks/section-41'
 
 function Content() {
   return (
     <>
-      <Contact1 />
-      <Contact2 />
+      <Form1 />
+      <Section41 />
     </>
   )
 }

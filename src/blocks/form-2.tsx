@@ -12,7 +12,7 @@ import {
   Accent,
 } from '@/components'
 
-export default function Contact3() {
+export default function Form2() {
   return (
     <Section
       id="contact"

@@ -19,7 +19,7 @@ const platforms = [
   { name: 'Pocket Casts', color: 'bg-[#F43E37]' },
 ]
 
-export default function Section38() {
+export default function Form6() {
   return (
     <Section
       id="subscribe"

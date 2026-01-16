@@ -8,7 +8,7 @@ import {
   FormButton,
 } from '@/components'
 
-export default function Contact6() {
+export default function Form4() {
   return (
     <Section className="py-20 md:py-30 bg-white">
       <div className="max-w-3xl mx-auto">

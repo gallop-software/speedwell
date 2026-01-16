@@ -10,9 +10,9 @@ import {
 import phoneIcon from '@iconify/icons-lucide/phone'
 import starIcon from '@iconify/icons-lucide/star'
 import mapPinIcon from '@iconify/icons-lucide/map-pin'
-import mailIcon from '@iconify/icons-lucide/mail'
+import printerIcon from '@iconify/icons-lucide/printer'
 
-export default function Contact4() {
+export default function Section41() {
   return (
     <Section className="py-20 md:py-30 bg-accent4 relative">
       <Columns
@@ -24,12 +24,12 @@ export default function Contact4() {
         <Column>
           <Heading as="h2">Get In Touch</Heading>
           <Paragraph>
-            We'd love to hear about your brand vision. Whether you're launching
-            a new venture or refreshing an established brand, our team is here
-            to bring your story to life. Schedule a consultation at our studio,
-            give us a call, or send us a message. We typically respond within 24
-            hours and offer complimentary initial consultations for new clients
-            to discuss your brand goals and explore how we can help.
+            We'd love to hear about your design project. Whether you're looking
+            to transform a single room or redesign your entire home, our team is
+            here to bring your vision to life. Schedule a consultation at our
+            Design District studio, give us a call, or send us a message. We
+            typically respond within 24 hours and offer complimentary initial
+            consultations for new clients.
           </Paragraph>
         </Column>
         <Column>
@@ -44,7 +44,6 @@ export default function Contact4() {
               text="(555) 123-4567"
               icon={phoneIcon}
               iconColor="text-accent bg-accent3 group-hover:bg-accent3-dark"
-              copy="5551234567"
             />
             <CardContact
               href="https://customerreviews.google.com/"
@@ -55,16 +54,14 @@ export default function Contact4() {
             <CardContact
               href="https://www.google.com/maps"
               heading="Get Directions"
-              text="123 Brand Street, Suite 400, New York, NY 10001"
+              text="Visit Our Location"
               icon={mapPinIcon}
-              copy="123 Brand Street, Suite 400, New York, NY 10001"
             />
             <CardContact
-              href="mailto:hello@yourbrand.com"
-              heading="Email"
-              text="hello@yourbrand.com"
-              icon={mailIcon}
-              copy="hello@yourbrand.com"
+              href="tel:5559876543"
+              heading="Fax"
+              text="(555) 987-6543"
+              icon={printerIcon}
             />
           </Grid>
         </Column>

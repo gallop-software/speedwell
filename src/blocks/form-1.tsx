@@ -11,7 +11,7 @@ import {
   Accent,
 } from '@/components'
 
-export default function Contact1() {
+export default function Form1() {
   return (
     <Section className="py-20 md:py-30 bg-body2 relative">
       <Columns
