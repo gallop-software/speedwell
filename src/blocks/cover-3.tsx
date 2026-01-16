@@ -8,7 +8,7 @@ import {
   Button,
 } from '@/components'
 
-export default function Showcase8() {
+export default function Cover3() {
   return (
     <Section className="relative py-0 overflow-hidden bg-body-dark px-0">
       {/* Full-width image section with parallax effect */}

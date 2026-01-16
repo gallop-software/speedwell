@@ -1,6 +1,6 @@
 import { Section, Heading, Paragraph, Image, Button } from '@/components'
 
-export default function Showcase9() {
+export default function Section9() {
   const menuItems = [
     {
       name: 'Truffle Risotto',
