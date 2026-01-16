@@ -130,6 +130,36 @@ Use props over className for supported styles
 </Label>
 ```
 
+### 008: Tailwind Only
+
+No inline styles, use Tailwind exclusively
+
+- **ESLint Rule:** `gallop/no-inline-styles`
+- **Category:** styling
+
+**Bad:**
+
+```tsx
+// Inline styles
+<div style={{ display: 'flex', padding: '24px', backgroundColor: 'white' }}>
+  <Heading>Title</Heading>
+</div>
+
+// CSS-in-JS
+const StyledDiv = styled.div`
+  display: flex;
+  padding: 24px;
+`;
+```
+
+**Good:**
+
+```tsx
+<div className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-lg">
+  <Heading className="text-2xl">Title</Heading>
+</div>
+```
+
 ### 018: Layout Components
 
 Use Grid/Columns, not raw div with grid
@@ -143,6 +173,13 @@ Background images must have rounded="rounded-none"
 
 - **ESLint Rule:** `gallop/background-image-rounded`
 - **Category:** components
+
+### 020: No Arbitrary Colors
+
+Use defined color tokens, not arbitrary color values
+
+- **ESLint Rule:** `gallop/no-arbitrary-colors`
+- **Category:** styling
 
 ## Documentation Patterns
 
@@ -159,10 +196,6 @@ PageWrapper, generatePageMetadata pattern
 ### 007: Import Paths
 
 @/ aliases, destructured imports
-
-### 008: Tailwind Only
-
-No inline styles, use Tailwind exclusively
 
 ### 009: Color Tokens
 
