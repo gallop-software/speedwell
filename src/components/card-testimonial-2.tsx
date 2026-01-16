@@ -2,7 +2,7 @@ import React from 'react'
 import { clsx } from 'clsx'
 import { Image } from './image'
 
-interface Testimonial2Props {
+interface CardTestimonial2Props {
   /** Image source URL for the testimonial author */
   img: string
   /** Name or citation for the testimonial author */
@@ -15,13 +15,13 @@ interface Testimonial2Props {
   rounded?: string
 }
 
-export function Testimonial2({
+export function CardTestimonial2({
   img,
   cite,
   children,
   aspect = 'aspect-[3/4]',
   rounded = 'rounded-t-full',
-}: Testimonial2Props) {
+}: CardTestimonial2Props) {
   return (
     <div className="flex flex-col items-center relative">
       <Image

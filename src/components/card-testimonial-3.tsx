@@ -1,6 +1,6 @@
 import { Paragraph } from '@/components'
 
-interface TestimonialCardProps {
+interface CardTestimonial3Props {
   name: string
   title: string
   review: string
@@ -22,12 +22,12 @@ function Star() {
   )
 }
 
-export function Testimonial3({
+export function CardTestimonial3({
   name,
   title,
   review,
   rating = 5,
-}: TestimonialCardProps) {
+}: CardTestimonial3Props) {
   return (
     <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
       {/* Stars */}

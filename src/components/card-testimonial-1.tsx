@@ -2,7 +2,7 @@ import React from 'react'
 import { Quote } from './quote'
 import { Image } from './image'
 
-interface Testimonial1Props {
+interface CardTestimonial1Props {
   /** Image source URL for the testimonial author */
   img: string
   /** Name or citation for the testimonial author */
@@ -11,7 +11,7 @@ interface Testimonial1Props {
   children: React.ReactNode
 }
 
-export function Testimonial1({ img, cite, children }: Testimonial1Props) {
+export function CardTestimonial1({ img, cite, children }: CardTestimonial1Props) {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex justify-center w-full [&>*]:max-w-3xl [&>*]:xl:max-w-4xl">

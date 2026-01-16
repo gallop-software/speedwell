@@ -1,7 +1,7 @@
 import {
   Section,
   Masonry,
-  Testimonial2,
+  CardTestimonial2,
   Heading,
   Paragraph,
 } from '@/components'
@@ -14,7 +14,7 @@ export default function About1() {
         gap={50}
         gapY={70}
       >
-        <Testimonial2
+        <CardTestimonial2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
           cite="Jordan Anderson"
@@ -33,8 +33,8 @@ export default function About1() {
             who we are, and we love spending time here. We have recommended
             Speedwell to all our friends and family.
           </Paragraph>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           aspect="aspect-[1/1]"
           img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
           cite="Casey Williams"
@@ -53,8 +53,8 @@ export default function About1() {
             and our clients consistently comment on how professional and
             welcoming our space feels.
           </Paragraph>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           aspect="aspect-[1/1]"
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
           cite="Ryan Martinez"
@@ -71,8 +71,8 @@ export default function About1() {
             for their contact information because the transformation is so
             dramatic and beautiful.
           </Paragraph>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           img="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
           cite="Alex Foster"
         >
@@ -89,8 +89,8 @@ export default function About1() {
             like a sanctuary after long work days. I cannot recommend them
             highly enough.
           </Paragraph>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           aspect="aspect-[4/5]"
           img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
           cite="Marcus Park"
@@ -108,7 +108,7 @@ export default function About1() {
             perfectly for how we actually live. This was money well spent, and
             we look forward to working with them again.
           </Paragraph>
-        </Testimonial2>
+        </CardTestimonial2>
       </Masonry>
     </Section>
   )

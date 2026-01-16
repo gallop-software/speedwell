@@ -2,8 +2,8 @@ import {
   Section,
   FancyHeading,
   Swiper,
-  Testimonial1,
-  Testimonial2,
+  CardTestimonial1,
+  CardTestimonial2,
   Quote,
 } from '@/components'
 
@@ -21,7 +21,7 @@ export default function Testimonial4() {
         layout="slider"
         columns={2}
       >
-        <Testimonial2
+        <CardTestimonial2
           img="/images/profiles/pexels-nkhajotia-1516680.jpg"
           cite="James Mitchell"
         >
@@ -32,8 +32,8 @@ export default function Testimonial4() {
             approach and creative execution helped us stand out in a crowded
             market. We couldn't be happier with the results!
           </Quote>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
           cite="Michael Chen"
         >
@@ -45,8 +45,8 @@ export default function Testimonial4() {
             expertise and strategic thinking were outstanding. Highly
             recommended!
           </Quote>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
           cite="Jennifer Bradley"
         >
@@ -58,8 +58,8 @@ export default function Testimonial4() {
             company has never felt more cohesive and authentic. We've already
             referred them to colleagues!
           </Quote>
-        </Testimonial2>
-        <Testimonial2
+        </CardTestimonial2>
+        <CardTestimonial2
           img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
           cite="David Park"
         >
@@ -70,7 +70,7 @@ export default function Testimonial4() {
             perfectly in our market. Their design expertise and strategic
             guidance gave me confidence to launch. Thank you!
           </Quote>
-        </Testimonial2>
+        </CardTestimonial2>
       </Swiper>
     </Section>
   )

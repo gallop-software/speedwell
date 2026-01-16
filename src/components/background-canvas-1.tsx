@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-interface CanvasBackground1Props {
+interface BackgroundCanvas1Props {
   className?: string
 }
 
@@ -23,7 +23,7 @@ interface Hexagon {
   swayAmount: number
 }
 
-export function CanvasBackground1({ className = '' }: CanvasBackground1Props) {
+export function BackgroundCanvas1({ className = '' }: BackgroundCanvas1Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const hexagonsRef = useRef<Hexagon[]>([])
   const animationFrameIdRef = useRef<number | undefined>(undefined)
