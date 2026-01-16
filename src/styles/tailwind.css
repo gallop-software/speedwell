@@ -243,24 +243,23 @@
 /* Confetti explosion and fall animation - plays once */
 @keyframes confetti-fall {
   0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0) rotate(0deg);
     opacity: 0;
   }
-  3% {
-    transform: translateY(3vh) rotate(20deg) scale(1);
+  2% {
     opacity: 1;
   }
-  70% {
-    opacity: 0.8;
+  80% {
+    opacity: 0.9;
   }
   100% {
-    transform: translateY(120vh) rotate(720deg) scale(0.5);
+    transform: translateY(120vh) rotate(540deg);
     opacity: 0;
   }
 }
 
 @layer utilities {
   .animate-confetti-fall {
-    animation: confetti-fall ease-out forwards;
+    animation: confetti-fall cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   }
 }
