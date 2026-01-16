@@ -5,8 +5,8 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 ## Overview
 
 - **Total Layouts:** 23
-- **Free Layouts:** 16
-- **Pro Layouts:** 7
+- **Free Layouts:** 14
+- **Pro Layouts:** 9
 
 ## Layouts
 
@@ -18,7 +18,7 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 **Path:** `(hero)/page.tsx`  
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -186,7 +186,7 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/residential/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -255,8 +255,8 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 <img src="../../public/layouts/layout-5.jpg" alt="Layout 5" width="350">
 
 **Slug:** `layout-5`  
-**Path:** `(default)/layout-5/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
+**Path:** `(hero)/layout-5/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Pro  
 
