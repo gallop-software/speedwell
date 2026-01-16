@@ -30,11 +30,11 @@ export default function Hero21() {
 
         {/* Blur overlays for depth */}
         <div
-          className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-[var(--color-accent3-gradient2)] to-transparent opacity-40 blur-3xl"
+          className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-accent3-dark to-transparent opacity-40 blur-3xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
         />
         <div
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-[var(--color-accent3-gradient)] rounded-full opacity-30 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent3-light rounded-full opacity-30 blur-3xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 100% 35%, 0 65%)' }}
         />
       </div>
@@ -58,7 +58,7 @@ export default function Hero21() {
               y1="0"
               x2="0"
               y2="50"
-              stroke="var(--color-accent3-gradient2)"
+              stroke="var(--color-accent3-dark)"
               strokeWidth="1"
               strokeDasharray="6 12"
             />
