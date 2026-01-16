@@ -2,7 +2,7 @@ import { Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
 import CircleAnimationInit from '@/hooks/use-circle-animation'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import playIcon from '@iconify/icons-heroicons/play-solid'
-import BusinessInfo1 from './business-info-1'
+import Section1 from './section-1'
 
 const slides = [
   {
@@ -147,7 +147,7 @@ export default function Hero19() {
       </div>
 
       {/* Business Info Section */}
-      <BusinessInfo1 />
+      <Section1 />
     </div>
   )
 }
