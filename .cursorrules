@@ -181,6 +181,20 @@ Use defined color tokens, not arbitrary color values
 - **ESLint Rule:** `gallop/no-arbitrary-colors`
 - **Category:** styling
 
+### 021: Cross-Zone Import Boundaries
+
+Enforce import boundaries between Canon zones
+
+- **ESLint Rule:** `gallop/no-cross-zone-imports`
+- **Category:** structure
+
+### 022: No Data Direct Imports
+
+Prevent runtime code from importing _data/ directly
+
+- **ESLint Rule:** `gallop/no-data-imports`
+- **Category:** structure
+
 ## Documentation Patterns
 
 These patterns are not enforced by ESLint but should be followed.
@@ -267,6 +281,81 @@ Following these patterns provides these guarantees:
 - Use Container inside Section - Section already provides containment
 - Use `classnames` package - use `clsx` instead
 - Use inline styles for hover states - use Tailwind classes
+
+## File & Folder Authority
+
+These rules govern what AI is allowed and forbidden to do when creating, moving, or modifying files and folders.
+
+### Defined `/src` Structure
+
+```
+src/
+├── app/          # Routes, layouts, metadata (Next.js App Router)
+├── blocks/       # Page-level content sections
+├── blog/         # Blog content (archive content type)
+├── components/   # Reusable UI primitives
+├── hooks/        # Custom React hooks
+├── styles/       # CSS, Tailwind, fonts
+├── template/     # Template-level components
+├── tools/        # Utility tools
+├── types/        # TypeScript types
+├── utils/        # Utility functions
+└── state.ts      # Global state
+```
+
+### App Router Structure
+
+Routes must use Next.js route groups. At minimum, `(default)` must exist:
+
+```
+src/app/
+├── (default)/        # Required - default layout group
+│   ├── layout.tsx
+│   └── {routes}/
+├── (hero)/           # Optional - hero layout variant
+├── api/              # API routes (exception - no grouping)
+├── layout.tsx        # Root layout
+└── metadata.tsx      # Shared metadata
+```
+
+- All page routes must be inside a route group (parentheses folder)
+- Never create routes directly under `src/app/` (except `api/`, root files)
+- New route groups are allowed freely when a new layout variant is needed
+
+### File Structure Rules
+
+**Blocks:**
+- Always single files directly in `src/blocks/`
+- Never create folders inside `src/blocks/`
+- Example: `src/blocks/hero-1.tsx`, `src/blocks/testimonial-3.tsx`
+
+**Components:**
+- Simple components: Single file in `src/components/`
+- Complex components: Folder with `index.tsx`
+- Use folders when component has multiple sub-files
+
+### DO - What AI IS Allowed To Do
+
+- Create files only inside existing Canon-defined zones
+- Place new files in the zone that matches their architectural role
+- Follow existing folder conventions within a zone
+- Reuse existing folders when possible
+- Create new route groups in `src/app/` when new layouts are needed
+- Create new archive content folders (like `blog/`, `portfolio/`) in `/src`
+- Create dotfiles/directories at project root (`.github/`, `.cursor/`, etc.)
+- Ask for confirmation if the correct zone is ambiguous
+
+### DO NOT - What AI Is Forbidden To Do
+
+- Create new top-level directories (except dotfiles)
+- Create new folders in `/src` (except archive content or route groups)
+- Place files outside Canon-defined zones
+- Mix responsibilities across zones (components importing blocks, etc.)
+- Reorganize or move folders without explicit instruction
+- Invent new organizational conventions
+- Create placeholder or speculative files
+- Import from `_scripts/` or `_data/` in runtime code
+- Manually edit files in `_data/` (generated only)
 
 ## Post-Edit Verification
 
