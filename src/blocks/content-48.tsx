@@ -12,7 +12,7 @@ import {
 } from '@/components'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
-export default function Showcase5() {
+export default function Content48() {
   return (
     <Section className="py-30 bg-body">
       <Columns reverseColumns={true}>

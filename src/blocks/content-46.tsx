@@ -9,7 +9,7 @@ import {
   GalleryItem,
 } from '@/components'
 
-export default function Showcase3() {
+export default function Content46() {
   return (
     <Section className="py-30 bg-body-dark">
       <Columns reverseColumns={false}>

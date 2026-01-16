@@ -9,7 +9,7 @@ import {
   GalleryItem,
 } from '@/components'
 
-export default function Showcase6() {
+export default function Content49() {
   return (
     <Section
       id="portfolio"

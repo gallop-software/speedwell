@@ -7,7 +7,7 @@ import {
   Paragraph,
 } from '@/components'
 
-export default function Showcase7() {
+export default function Content50() {
   return (
     <Section
       id="features"

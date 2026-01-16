@@ -12,7 +12,7 @@ import {
 } from '@/components'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
-export default function Showcase1() {
+export default function Content44() {
   return (
     <Section className="bg-body py-30">
       <Columns>
