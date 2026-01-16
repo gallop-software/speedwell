@@ -8,7 +8,7 @@ import {
   Label,
 } from '@/components'
 
-export default function Section37() {
+export default function Content13() {
   return (
     <Container className="my-24 md:my-32">
       <Columns
