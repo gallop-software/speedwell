@@ -17,12 +17,12 @@ const colors = [
 ]
 
 const shapes = [
-  { width: 'w-2', height: 'h-2', rounded: 'rounded-full' },
-  { width: 'w-2', height: 'h-3', rounded: 'rounded-sm' },
-  { width: 'w-3', height: 'h-2', rounded: 'rounded-sm' },
-  { width: 'w-3', height: 'h-3', rounded: 'rounded-sm' },
-  { width: 'w-2', height: 'h-4', rounded: 'rounded-sm' },
-  { width: 'w-4', height: 'h-2', rounded: 'rounded-sm' },
+  { width: 'w-2', height: 'h-1', rounded: 'rounded-none' }, // Horizontal ribbon
+  { width: 'w-3', height: 'h-1', rounded: 'rounded-none' }, // Wide ribbon
+  { width: 'w-4', height: 'h-1.5', rounded: 'rounded-none' }, // Long ribbon
+  { width: 'w-1', height: 'h-2', rounded: 'rounded-none' }, // Vertical strip
+  { width: 'w-1', height: 'h-3', rounded: 'rounded-none' }, // Tall strip
+  { width: 'w-1.5', height: 'h-3', rounded: 'rounded-none' }, // Medium strip
 ]
 
 const rotations = [

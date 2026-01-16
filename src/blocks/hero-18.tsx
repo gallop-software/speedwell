@@ -20,28 +20,25 @@ export default function Hero18() {
       <BackgroundConfetti />
       <Columns
         cols="grid-cols-1 lg:grid-cols-2"
-        gap="gap-12 lg:gap-16"
+        gap="gap-20 lg:gap-16"
         reverseColumns={false}
       >
-        <Column className="flex flex-col justify-center space-y-8">
-          <div>
-            <Heading
-              as="h1"
-              className="max-w-2xl"
-              margin="mb-6"
-            >
-              Your Dream Event, Perfectly Planned
-            </Heading>
-            <Paragraph
-              fontSize="text-lg"
-              className="max-w-xl"
-            >
-              From intimate ceremonies to grand celebrations, we bring your
-              vision to life with meticulous attention to detail, creative
-              flair, and seamless execution. Let us transform your special
-              moments into cherished memories that last a lifetime.
-            </Paragraph>
-          </div>
+        <Column>
+          <Heading
+            as="h1"
+            className="max-w-2xl"
+          >
+            Your Dream Event, Perfectly Planned
+          </Heading>
+          <Paragraph
+            fontSize="text-lg"
+            className="max-w-xl"
+          >
+            From intimate ceremonies to grand celebrations, we bring your vision
+            to life with meticulous attention to detail, creative flair, and
+            seamless execution. Let us transform your special moments into
+            cherished memories that last a lifetime.
+          </Paragraph>
 
           <Buttons className="flex-wrap">
             <Button
