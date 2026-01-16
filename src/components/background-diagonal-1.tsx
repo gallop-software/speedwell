@@ -60,7 +60,7 @@ export function BackgroundDiagonal1({
 
       {/* Diagonal dashed lines overlay */}
       <svg
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-35"
+        className="absolute inset-0 -z-10 w-full h-full pointer-events-none opacity-50"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
       >
@@ -83,7 +83,11 @@ export function BackgroundDiagonal1({
             />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill={`url(#${patternId})`} />
+        <rect
+          width="100%"
+          height="100%"
+          fill={`url(#${patternId})`}
+        />
       </svg>
     </>
   )

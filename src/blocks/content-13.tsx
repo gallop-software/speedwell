@@ -6,12 +6,13 @@ import {
   Heading,
   Paragraph,
   Button,
-  Buttons,
   Subheading,
   Span,
   Label,
   BackgroundDiagonal1,
+  Chip,
 } from '@/components'
+import shoppingBagIcon from '@iconify/icons-lucide/shopping-bag'
 
 export default function Content13() {
   return (
@@ -35,7 +36,7 @@ export default function Content13() {
             <Image
               src="/images/layout-6/pexels-roman-odintsov-5837002.jpg"
               alt="Veloria Botanical Elixir bottle"
-              className="relative z-10 max-w-2xl mx-auto w-full"
+              className="relative z-10 max-w-2xl mx-auto w-full shadow-2xl"
               size="large"
             />
           </div>
@@ -63,55 +64,60 @@ export default function Content13() {
           </Paragraph>
 
           {/* Product details */}
-          <div className="space-y-4 mb-10 pb-10 border-b border-body-dark/20">
-            <div className="flex justify-between items-center">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
               <Label
                 variant="large"
                 color="text-body-contrast/60"
               >
                 Volume
               </Label>
-              <Span fontWeight="font-medium">750ml</Span>
+              <span className="flex-1 border-b border-dashed border-body-dark/90" />
+              <Chip>750ml</Chip>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex items-center gap-3">
               <Label
                 variant="large"
                 color="text-body-contrast/60"
               >
                 Alcohol
               </Label>
-              <Span fontWeight="font-medium">0%</Span>
+              <span className="flex-1 border-b border-dashed border-body-dark/90" />
+              <Chip>0%</Chip>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex items-center gap-3">
               <Label
                 variant="large"
                 color="text-body-contrast/60"
               >
                 Origin
               </Label>
-              <Span fontWeight="font-medium">Scottish Highlands</Span>
+              <span className="flex-1 border-b border-dashed border-body-dark/90" />
+              <Chip>Scottish Highlands</Chip>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex items-center gap-3">
               <Label
                 variant="large"
                 color="text-body-contrast/60"
               >
                 Batch
               </Label>
-              <Span fontWeight="font-medium">No. 847</Span>
+              <span className="flex-1 border-b border-dashed border-body-dark/90" />
+              <Chip>No. 847</Chip>
             </div>
           </div>
 
           {/* Price and CTA */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <div>
-              <Label
-                variant="large"
-                color="text-body-contrast/50"
-                margin="mb-1"
-              >
-                Price
-              </Label>
+          <div className="mt-10">
+            <Label
+              fontWeight="font-bold"
+              variant="large"
+              color="text-accent2"
+              margin="mb-1"
+            >
+              Price
+            </Label>
+            <div className="flex items-center gap-6">
               <Heading
                 as="h3"
                 fontSize="text-4xl"
@@ -120,17 +126,19 @@ export default function Content13() {
               >
                 $89
               </Heading>
-            </div>
 
-            <Buttons className="flex-1 sm:justify-end">
+              <span className="hidden sm:block flex-1 border-b border-dashed border-body-dark/90" />
+
               <Button
                 href="#"
                 variant="primary"
+                icon={shoppingBagIcon}
+                iconPlacement="before"
                 className="w-full sm:w-auto"
               >
-                Add to Cart
+                Buy Now
               </Button>
-            </Buttons>
+            </div>
           </div>
         </Column>
       </Columns>
