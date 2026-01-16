@@ -16,7 +16,7 @@ export default function Hero22() {
       />
 
       {/* Content */}
-      <div className="relative z-20 min-h-screen flex flex-col justify-center items-center text-center px-6 pt-navbar">
+      <div className="relative z-20 min-h-screen flex flex-col justify-center items-center text-center px-6 pt-navbar mt-20 md:mt-0 mb-20">
         <div className="max-w-4xl mx-auto">
           {/* Brand accent */}
           <Paragraph
@@ -62,7 +62,10 @@ export default function Hero22() {
           </div>
 
           {/* CTA Buttons */}
-          <Buttons className="justify-center">
+          <Buttons
+            className="justify-center"
+            margin="mb-0"
+          >
             <Button
               href="#discover"
               variant="primary"
