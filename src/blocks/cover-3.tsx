@@ -1,96 +1,81 @@
 import {
   Section,
-  Container,
   Heading,
   Paragraph,
-  Accent,
   Image,
-  Button,
+  Grid,
+  Label,
 } from '@/components'
 
 export default function Cover3() {
   return (
-    <Section className="relative py-0 overflow-hidden bg-body-dark px-0">
-      {/* Full-width image section with parallax effect */}
-      <div className="relative h-[600px] md:h-[700px] lg:h-[800px] w-full">
-        {/* Background image with overlay */}
-        <div className="absolute inset-0 w-full">
-          <Image
-            src="/images/layout-4/pexels-jonathanborba-2878738.jpg"
-            alt="Signature dish"
-            className="w-full h-full object-cover"
-            size="full"
-          />
-          {/* Gradient overlay for text readability - covers full image */}
-          <div className="absolute inset-0 bg-black/70"></div>
-        </div>
-
-        {/* Content overlay */}
-        <div className="relative h-full flex items-center justify-center max-w-8xl mx-auto px-6 lg:px-10">
-          <div className="max-w-3xl py-20 md:py-24 text-center">
-            <Heading
-              as="h2"
-              color="text-white"
-              margin="mb-6"
-            >
-              Our Signature Dish
-            </Heading>
-            <Paragraph color="text-white/90" fontSize="text-lg" margin="mb-4">
-              Introducing our renowned Prime Aged Ribeye with Truffle-Infused
-              Mashed Potatoes and Roasted Seasonal Vegetables. A masterful
-              composition of premium beef, velvety potatoes, and garden-fresh
-              accompaniments that represents the pinnacle of steakhouse
-              excellence.
-            </Paragraph>
-            <Paragraph color="text-white/80" margin="mb-8">
-              Featuring 28-day dry-aged USDA Prime ribeye, hand-selected for its
-              exceptional marbling and tenderness. Our silky mashed potatoes are
-              enriched with black truffle oil and European butter, while
-              seasonal vegetables are roasted to caramelized perfection. Each
-              component showcases our dedication to quality and craftsmanship.
-            </Paragraph>
-
-            {/* Features grid */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">
-                  Preparation
-                </div>
-                <div className="text-white/80 text-xs">
-                  Wood-fired grill with butter basting technique
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">
-                  Wine Pairing
-                </div>
-                <div className="text-white/80 text-xs">
-                  2018 Napa Valley Cabernet Sauvignon
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">
-                  Chef's Note
-                </div>
-                <div className="text-white/80 text-xs">
-                  Recommended medium-rare for optimal flavor
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-white text-sm font-semibold mb-1">
-                  Accolades
-                </div>
-                <div className="text-white/80 text-xs">
-                  Best Steak Award 2024 - Culinary Excellence
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <Section className="relative py-30 overflow-hidden bg-black/70 px-0" innerAlign="content">
+      <div className="absolute inset-0 w-full -z-1">
+        <Image
+          src="/images/layout-4/pexels-jonathanborba-2878738.jpg"
+          alt="Signature dish"
+          className="w-full h-full object-cover"
+          size="full"
+        />
       </div>
+      <Heading
+        as="h2"
+        color="text-white"
+        textAlign="text-center"
+      >
+        Our Signature Dish
+      </Heading>
+      <Paragraph color="text-white/90">
+        Introducing our renowned Prime Aged Ribeye with Truffle-Infused
+        Mashed Potatoes and Roasted Seasonal Vegetables. A masterful
+        composition of premium beef, velvety potatoes, and garden-fresh
+        accompaniments that represents the pinnacle of steakhouse
+        excellence.
+      </Paragraph>
+      <Paragraph color="text-white/80">
+        Featuring 28-day dry-aged USDA Prime ribeye, hand-selected for its
+        exceptional marbling and tenderness. Our silky mashed potatoes are
+        enriched with black truffle oil and European butter, while
+        seasonal vegetables are roasted to caramelized perfection. Each
+        component showcases our dedication to quality and craftsmanship.
+      </Paragraph>
 
-      {/* Decorative bottom accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-body-dark to-transparent pointer-events-none"></div>
+      {/* Features grid */}
+      <Grid cols="grid-cols-1 md:grid-cols-2" gap="gap-4" className="mb-8">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <Label color="text-white" fontSize="text-sm" fontWeight="font-semibold" margin="mb-1">
+            Preparation
+          </Label>
+          <Paragraph color="text-white/80" fontSize="text-xs" margin="mb-0">
+            Wood-fired grill with butter basting technique
+          </Paragraph>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <Label color="text-white" fontSize="text-sm" fontWeight="font-semibold" margin="mb-1">
+            Wine Pairing
+          </Label>
+          <Paragraph color="text-white/80" fontSize="text-xs" margin="mb-0">
+            2018 Napa Valley Cabernet Sauvignon
+          </Paragraph>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <Label color="text-white" fontSize="text-sm" fontWeight="font-semibold" margin="mb-1">
+            Chef's Note
+          </Label>
+          <Paragraph color="text-white/80" fontSize="text-xs" margin="mb-0">
+            Recommended medium-rare for optimal flavor
+          </Paragraph>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <Label color="text-white" fontSize="text-sm" fontWeight="font-semibold" margin="mb-1">
+            Accolades
+          </Label>
+          <Paragraph color="text-white/80" fontSize="text-xs" margin="mb-0">
+            Best Steak Award 2024 - Culinary Excellence
+          </Paragraph>
+        </div>
+      </Grid>
+
     </Section>
   )
 }
