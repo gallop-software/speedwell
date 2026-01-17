@@ -5,7 +5,7 @@ const features = [
     numeral: 'I',
     title: 'Master Chefs',
     description: 'Award-winning culinary artists with decades of experience across Michelin-starred kitchens worldwide',
-    image: '/images/layout-4/pexels-jonathanborba-2878738.jpg',
+    image: '/images/layout-4/pexels-metin-mutlu-3305420-8585881.jpg',
   },
   {
     numeral: 'II',

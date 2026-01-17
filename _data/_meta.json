@@ -1089,6 +1089,28 @@
       "file": "/images/layout-4/pexels-jonathanborba-2878738.jpg"
     }
   },
+  "/images/layout-4/pexels-metin-mutlu-3305420-8585881.jpg": {
+    "small": {
+      "width": 300,
+      "height": 200,
+      "file": "/images/layout-4/pexels-metin-mutlu-3305420-8585881-300x200.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 467,
+      "file": "/images/layout-4/pexels-metin-mutlu-3305420-8585881-700x467.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 933,
+      "file": "/images/layout-4/pexels-metin-mutlu-3305420-8585881-1400x933.jpg"
+    },
+    "full": {
+      "width": 2200,
+      "height": 1467,
+      "file": "/images/layout-4/pexels-metin-mutlu-3305420-8585881.jpg"
+    }
+  },
   "/images/layout-4/pexels-minchephoto-7491887.jpg": {
     "small": {
       "width": 300,
