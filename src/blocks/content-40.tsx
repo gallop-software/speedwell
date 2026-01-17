@@ -1,4 +1,4 @@
-import { Section, Heading, Paragraph, Accent, Image, Grid, Span } from '@/components'
+import { Section, Heading, Paragraph, Accent, Image, Grid, Span, BackgroundGeometry } from '@/components'
 
 const features = [
   {
@@ -24,7 +24,9 @@ const features = [
 export default function Content40() {
   return (
     <Section className="py-20 md:py-30 bg-body relative overflow-hidden" innerAlign="content">
-      <div className="text-center max-w-4xl mx-auto mb-16">
+      <BackgroundGeometry className="top-120 lg:top-130" />
+
+      <div className="relative z-10 text-center max-w-4xl mx-auto mb-16">
         <Accent
           color="text-accent"
           size="small"
@@ -45,7 +47,7 @@ export default function Content40() {
       </div>
 
       {/* Three column features */}
-      <Grid cols="grid-cols-1 md:grid-cols-3" gap="gap-8" className="mb-20">
+      <Grid cols="grid-cols-1 md:grid-cols-3" gap="gap-8" className="relative z-10 mb-20">
         {features.map((feature) => (
           <div
             key={feature.numeral}
