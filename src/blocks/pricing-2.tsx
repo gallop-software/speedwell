@@ -61,16 +61,16 @@ const pricingPlans = [
 export default function Pricing2() {
   return (
     <Section className="py-30 bg-gradient-to-b from-body to-body-light relative overflow-hidden">
-      <div className="text-center mb-20">
+        <div className="text-center mb-20">
         <Heading as="h2" margin="mb-6">
-          Planning Services Tailored to You
-        </Heading>
-        <Paragraph fontSize="text-lg" className="max-w-2xl mx-auto">
-          From intimate gatherings to grand celebrations, we offer
-          comprehensive planning packages designed to make your event
-          stress-free and unforgettable.
-        </Paragraph>
-      </div>
+            Planning Services Tailored to You
+          </Heading>
+          <Paragraph fontSize="text-lg" className="max-w-2xl mx-auto">
+            From intimate gatherings to grand celebrations, we offer
+            comprehensive planning packages designed to make your event
+            stress-free and unforgettable.
+          </Paragraph>
+        </div>
 
       <Grid cols="grid-cols-1 xl:grid-cols-3" gap="gap-16 xl:gap-8" className="max-w-7xl mx-auto">
         {pricingPlans.map((plan) => (
