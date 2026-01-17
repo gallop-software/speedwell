@@ -1,11 +1,11 @@
 # Speedwell Blocks
 
-A collection of 128 pre-built UI blocks for the Speedwell template.
+A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ## Overview
 
-- **Total Blocks:** 128
-- **Free Blocks:** 107
+- **Total Blocks:** 127
+- **Free Blocks:** 106
 - **Pro Blocks:** 21
 
 ## Categories
@@ -20,7 +20,6 @@ A collection of 128 pre-built UI blocks for the Speedwell template.
 - **Accordion:** 1 blocks
 - **Archive:** 3 blocks
 - **Form:** 7 blocks
-- **Podcast Hero:** 1 blocks
 - **Portfolio:** 1 blocks
 - **Pricing:** 2 blocks
 - **Process:** 1 blocks
@@ -1126,17 +1125,6 @@ A collection of 128 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/form-7.jpg" alt="Form 7" width="350">
 
 **Slug:** `form-7`  
-**Tier:** Free  
-
----
-
-### Podcast Hero
-
-#### Podcast Hero 1
-
-<img src="../../public/blocks/podcast-hero-1.jpg" alt="Podcast Hero 1" width="350">
-
-**Slug:** `podcast-hero-1`  
 **Tier:** Free  
 
 ---

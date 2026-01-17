@@ -1,8 +1,12 @@
 import puppeteer from 'puppeteer'
-import { readdir, readFile, writeFile, mkdir, stat } from 'fs/promises'
+import { readdir, readFile, writeFile, mkdir, stat, unlink, access } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import { exec } from 'child_process'
+import { promisify } from 'util'
+
+const execAsync = promisify(exec)
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -416,12 +420,65 @@ async function captureScreenshot(browser, slug, outputDir) {
 async function imageExists(slug, outputDir) {
   try {
     const imagePath = join(outputDir, `${slug}.jpg`)
-    const { access } = await import('fs/promises')
     await access(imagePath)
     return true
   } catch {
     return false
   }
+}
+
+async function cleanupOrphanedScreenshots(currentLayoutSlugs, outputDir) {
+  const orphanedSlugs = []
+  let deletedCount = 0
+
+  // Read all files in the output directory
+  let screenshotFiles = []
+  try {
+    screenshotFiles = await readdir(outputDir)
+  } catch {
+    // Output directory doesn't exist yet
+    return { orphanedSlugs, deletedCount }
+  }
+
+  // Get unique slugs from screenshot files (remove -md suffix and .jpg extension)
+  const screenshotSlugs = new Set()
+  for (const file of screenshotFiles) {
+    if (file.endsWith('.jpg')) {
+      const slug = file.replace('-md.jpg', '.jpg').replace('.jpg', '')
+      screenshotSlugs.add(slug)
+    }
+  }
+
+  // Find orphaned screenshots (exist as images but no corresponding layout)
+  for (const slug of screenshotSlugs) {
+    if (!currentLayoutSlugs.has(slug)) {
+      orphanedSlugs.push(slug)
+
+      // Delete both large and medium screenshots
+      const largePath = join(outputDir, `${slug}.jpg`)
+      const mediumPath = join(outputDir, `${slug}-md.jpg`)
+
+      try {
+        await access(largePath)
+        await unlink(largePath)
+        console.log(`✓ Deleted orphaned screenshot: ${slug}.jpg`)
+        deletedCount++
+      } catch {
+        // File doesn't exist
+      }
+
+      try {
+        await access(mediumPath)
+        await unlink(mediumPath)
+        console.log(`✓ Deleted orphaned screenshot: ${slug}-md.jpg`)
+        deletedCount++
+      } catch {
+        // File doesn't exist
+      }
+    }
+  }
+
+  return { orphanedSlugs, deletedCount }
 }
 
 async function generateLayoutsCatalog(
@@ -518,6 +575,33 @@ async function generateLayoutsCatalog(
     const totalNew = layouts.length - existingReadmeLayouts.length
     if (totalNew > 0) {
       console.log(`Found ${totalNew} new layouts\n`)
+    }
+
+    // Check for orphaned screenshots (images without corresponding layout pages)
+    const currentLayoutSlugs = new Set(layouts.map((l) => l.slug))
+    const { orphanedSlugs, deletedCount } = await cleanupOrphanedScreenshots(
+      currentLayoutSlugs,
+      OUTPUT_DIR
+    )
+
+    if (orphanedSlugs.length > 0) {
+      console.log(
+        `\nCleaned up ${orphanedSlugs.length} orphaned layouts: ${orphanedSlugs.join(', ')}`
+      )
+
+      if (deletedCount > 0) {
+        console.log(`Deleted ${deletedCount} orphaned screenshot files`)
+        console.log('\nRunning npm run images to update processed images...')
+        try {
+          const { stdout, stderr } = await execAsync('npm run images', {
+            cwd: join(__dirname, '..'),
+          })
+          if (stdout) console.log(stdout)
+          console.log('✓ Image processing complete\n')
+        } catch (error) {
+          console.error('Warning: npm run images failed:', error.message)
+        }
+      }
     }
 
     // Determine which layouts need screenshots
