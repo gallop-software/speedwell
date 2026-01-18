@@ -13,6 +13,7 @@ interface CoverProps {
   className?: string
   innerAlign?: 'wide' | 'none' | 'content'
   parallax?: boolean
+  id?: string
 }
 
 export function Cover({
@@ -26,9 +27,11 @@ export function Cover({
   className,
   innerAlign,
   parallax = false,
+  id,
 }: CoverProps) {
   return (
     <div
+      id={id}
       className={clsx(
         backgroundColor || 'bg-body2',
         className,

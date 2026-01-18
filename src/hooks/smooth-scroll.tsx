@@ -20,9 +20,13 @@ const SmoothScroll = () => {
           state.lockScrollDirection = false
         }, { once: true })
 
+        // No offset for div/section elements
+        const tagName = targetElement.tagName.toLowerCase()
+        const scrollOffset = (tagName === 'div' || tagName === 'section') ? 0 : offset
+
         window.scrollTo({
           top:
-            targetElement.getBoundingClientRect().top + window.scrollY - offset,
+            targetElement.getBoundingClientRect().top + window.scrollY - scrollOffset,
           behavior: 'smooth',
         })
 
