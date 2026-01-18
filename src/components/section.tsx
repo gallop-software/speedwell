@@ -10,7 +10,6 @@ interface SectionProps {
   imageAlt?: string
   imageClassName?: string
   overlayColor?: string
-  backgroundColor?: string
   id?: string
 }
 
@@ -22,7 +21,6 @@ export function Section({
   imageAlt,
   imageClassName,
   overlayColor,
-  backgroundColor,
   id,
 }: SectionProps) {
   return (
