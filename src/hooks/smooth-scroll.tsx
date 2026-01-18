@@ -16,7 +16,7 @@ const SmoothScroll = () => {
 
       const targetElement = document.querySelector(hash)
       if (targetElement) {
-        event.preventDefault()
+        //event.preventDefault()
         state.scrollingDirection = 'down'
         state.lockScrollDirection = true
 
