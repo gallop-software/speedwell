@@ -70,7 +70,7 @@ const menuCategories = [
 
 export default function Section9() {
   return (
-    <Section className="py-30" innerAlign="wide">
+    <Section className="py-30 relative" innerAlign="wide">
       {menuCategories.map((category) => (
         <div key={category.id} id={category.id}>
           {/* Category Header */}
@@ -82,7 +82,7 @@ export default function Section9() {
               rounded="rounded-none"
             />
             <div className="absolute inset-0 bg-black/70" />
-            <div className="relative z-10 text-center">
+            <div className="relative text-center">
               <Heading as="h2" color="text-white" margin="mb-2">
                 {category.name}
               </Heading>
@@ -140,28 +140,29 @@ export default function Section9() {
       ))}
 
       {/* Sticky Bottom Navigation */}
-      <div className="sticky bottom-0 z-50 bg-black/95 backdrop-blur-sm border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <nav className="hidden md:flex items-center gap-8">
+      <div className="sticky bottom-6 z-1 flex w-full justify-center">
+        <div className="bg-white/70 backdrop-blur-xl rounded-full px-4 py-3 border border-white/10 shadow-2xl flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 mr-20">
             {menuCategories.map((category) => (
               <a
                 key={category.id}
                 href={`#${category.id}`}
-                className="text-white/70 hover:text-white text-xs uppercase tracking-wider transition-colors"
+                className="text-contrast/70 hover:text-contrast transition-colors whitespace-nowrap"
               >
-                <Span color="text-accent" className="mr-1">
+                <Span color="text-inherit" className="mr-1" fontSize="text-xs">
                   {category.number}
                 </Span>
-                {category.name}
+                <Span color="text-inherit" fontSize="text-sm">{category.name}</Span>
               </a>
             ))}
           </nav>
           <Button
+            size="small"
             href="#"
             variant="primary"
-            className="uppercase tracking-wider text-xs"
+            className="rounded-full"
           >
-            Download PDF Menu
+            Download Menu
           </Button>
         </div>
       </div>

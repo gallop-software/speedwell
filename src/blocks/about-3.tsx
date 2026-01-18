@@ -13,7 +13,7 @@ import xIcon from '@iconify/icons-simple-icons/x'
 
 export default function About3() {
   return (
-    <Section className="mb-30 mt-30">
+    <Section className="mb-30 mt-30 overflow-hidden">
       <FancyHeading
         text="Meet Our Team"
         accent="creative minds"

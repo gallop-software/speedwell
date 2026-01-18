@@ -72,6 +72,7 @@ const variants = {
 }
 
 const sizes = {
+  small: clsx('px-4 py-[calc(--spacing(1.5)-1px)]', 'text-sm font-medium'),
   default: clsx('px-6 py-[calc(--spacing(2)-1px)]', 'text-base font-medium'),
   medium: clsx(
     'px-6 lg:px-8 py-[calc(--spacing(2)-1px)] lg:py-[calc(--spacing(3)-1px)]',
@@ -93,11 +94,11 @@ type ButtonProps = {
   dark?: boolean
   target?: '_self' | '_blank'
 } & (
-  | React.ComponentPropsWithoutRef<typeof Link>
-  | (React.ComponentPropsWithoutRef<typeof HeadlessButton> & {
+    | React.ComponentPropsWithoutRef<typeof Link>
+    | (React.ComponentPropsWithoutRef<typeof HeadlessButton> & {
       href?: undefined
     })
-)
+  )
 
 export function Button({
   variant = 'primary',
