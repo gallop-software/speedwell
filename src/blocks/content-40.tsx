@@ -36,7 +36,7 @@ export default function Content40() {
         <Heading
           as="h2"
         >
-          A Culinary Journey Rooted in Tradition
+          A <a href="#starters" target="_self">Culinary</a> Journey Rooted in Tradition
         </Heading>
         <Paragraph>
           For over two decades, we've been crafting unforgettable dining

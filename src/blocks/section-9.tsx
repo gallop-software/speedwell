@@ -64,7 +64,7 @@ const menuCategories = [
 
 export default function Section9() {
   return (
-    <Section className="py-30 relative" innerAlign="wide">
+    <Section className="pt-30 pb-20 lg:pb-30 relative" innerAlign="wide">
       {menuCategories.map((category) => (
         <div key={category.id}>
           {/* Category Header */}
@@ -134,14 +134,14 @@ export default function Section9() {
       ))}
 
       {/* Sticky Bottom Navigation */}
-      <div className="sticky bottom-6 z-1 flex w-full justify-center mt-10">
-        <div className="bg-white/70 backdrop-blur-xl rounded-full px-4 py-3 ring-1 ring-gray-100 shadow-2xl flex items-center gap-6">
+      <div className="hidden sticky bottom-6 z-1 lg:flex w-full justify-center mt-10">
+        <div className="bg-white/70 backdrop-blur-xl rounded-lg px-4 py-3 ring-1 ring-gray-100 shadow-2xl flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6 ml-4 mr-20">
             {menuCategories.map((category) => (
               <a
                 key={category.id}
                 href={`#${category.id}`}
-                className="text-contrast/70 hover:text-contrast transition-colors whitespace-nowrap"
+                className="text-contrast/70 hover:text-contrast transition-colors whitespace-nowrap anchor-scroll"
               >
                 <Span color="text-inherit" fontWeight="font-medium" fontSize="text-sm">
                   <Span color="text-inherit" fontWeight="font-medium" className="mr-1" fontSize="text-xs">
