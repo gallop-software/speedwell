@@ -87,8 +87,8 @@ function Calendar({ selectedDate, onSelect, viewDate, onViewDateChange }: Calend
               !day && 'invisible',
               day && isPast(day) && 'text-contrast/30 cursor-not-allowed',
               day && !isPast(day) && !isSelected(day) && 'text-contrast hover:bg-contrast/10 cursor-pointer',
-              isSelected(day) && 'bg-contrast text-body font-semibold hover:bg-contrast/80 cursor-pointer',
-              isToday(day) && !isSelected(day) && 'ring-1 ring-contrast'
+              day && isSelected(day) && 'bg-contrast text-body font-semibold hover:bg-contrast/80 cursor-pointer',
+              day && isToday(day) && !isSelected(day) && 'ring-1 ring-contrast'
             )}
           >
             {day}
