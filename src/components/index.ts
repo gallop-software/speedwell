@@ -54,6 +54,7 @@ export {
   FormName,
 } from './form'
 export { CardTestimonial2 } from './card-testimonial-2'
+export { CardTestimonial3 } from './card-testimonial-3'
 export { Profile1 } from './profile-1'
 export { Profile2 } from './profile-2'
 export { Masonry } from './masonry'
