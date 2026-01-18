@@ -5,8 +5,14 @@ import { Button } from './button'
 import { Paragraph } from './paragraph'
 import clsx from 'clsx'
 import arrowPathIcon from '@iconify/icons-heroicons/arrow-path'
+import calendarIcon from '@iconify/icons-heroicons/calendar'
+import clockIcon from '@iconify/icons-heroicons/clock'
+import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
+import chevronLeftIcon from '@iconify/icons-heroicons/chevron-left'
+import chevronRightIcon from '@iconify/icons-heroicons/chevron-right'
 import { Icon } from './icon'
 import React, { Children, isValidElement } from 'react'
+import { Dialog, DialogPanel, DialogBackdrop, Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/react'
 
 function Form({
   classname,
@@ -152,6 +158,339 @@ function Form({
   )
 }
 
+// Calendar utilities
+const DAYS = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+function getDaysInMonth(year: number, month: number) {
+  return new Date(year, month + 1, 0).getDate()
+}
+
+function getFirstDayOfMonth(year: number, month: number) {
+  return new Date(year, month, 1).getDay()
+}
+
+function formatDate(date: Date | null) {
+  if (!date) return ''
+  return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
+}
+
+function formatDateValue(date: Date | null) {
+  if (!date) return ''
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function formatTime(hour: number, minute: number) {
+  const period = hour >= 12 ? 'PM' : 'AM'
+  const displayHour = hour % 12 || 12
+  const displayMinute = String(minute).padStart(2, '0')
+  return `${displayHour}:${displayMinute} ${period}`
+}
+
+function formatTimeValue(hour: number, minute: number) {
+  return `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`
+}
+
+// Calendar Component
+function Calendar({
+  selectedDate,
+  onSelect,
+  viewDate,
+  onViewDateChange,
+}: {
+  selectedDate: Date | null
+  onSelect: (date: Date) => void
+  viewDate: Date
+  onViewDateChange: (date: Date) => void
+}) {
+  const year = viewDate.getFullYear()
+  const month = viewDate.getMonth()
+  const daysInMonth = getDaysInMonth(year, month)
+  const firstDay = getFirstDayOfMonth(year, month)
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+
+  const days: (number | null)[] = []
+  for (let i = 0; i < firstDay; i++) days.push(null)
+  for (let i = 1; i <= daysInMonth; i++) days.push(i)
+  // Pad to always have 42 cells (6 rows × 7 days) for consistent height
+  while (days.length < 42) days.push(null)
+
+  const prevMonth = () => {
+    onViewDateChange(new Date(year, month - 1, 1))
+  }
+
+  const nextMonth = () => {
+    onViewDateChange(new Date(year, month + 1, 1))
+  }
+
+  const isSelected = (day: number) => {
+    if (!selectedDate || !day) return false
+    return selectedDate.getFullYear() === year && selectedDate.getMonth() === month && selectedDate.getDate() === day
+  }
+
+  const isToday = (day: number) => {
+    if (!day) return false
+    return today.getFullYear() === year && today.getMonth() === month && today.getDate() === day
+  }
+
+  const isPast = (day: number) => {
+    if (!day) return false
+    const date = new Date(year, month, day)
+    return date < today
+  }
+
+  return (
+    <div className="w-80 lg:w-96">
+      <div className="grid grid-cols-7 gap-1 mb-4">
+        {DAYS.map((day) => (
+          <div key={day} className="text-center text-sm text-contrast/50 font-semibold py-2">
+            {day}
+          </div>
+        ))}
+      </div>
+      <div className="grid grid-cols-7 gap-1">
+        {days.map((day, i) => (
+          <button
+            key={i}
+            type="button"
+            disabled={!day || isPast(day)}
+            onClick={() => day && onSelect(new Date(year, month, day))}
+            className={clsx(
+              'w-10 h-10 lg:w-12 lg:h-12 mx-auto flex items-center justify-center text-base rounded-full transition-colors',
+              !day && 'invisible',
+              day && isPast(day) && 'text-contrast/30 cursor-not-allowed',
+              day && !isPast(day) && !isSelected(day) && 'text-contrast hover:bg-contrast/10 cursor-pointer',
+              isSelected(day) && 'bg-contrast text-body font-semibold hover:bg-contrast/80 cursor-pointer',
+              isToday(day) && !isSelected(day) && 'ring-1 ring-contrast'
+            )}
+          >
+            {day}
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// DatePicker Component
+function DatePickerInput({
+  name,
+  placeholder = 'Select date',
+  required,
+  defaultValue,
+  label = '',
+  className = '',
+}: {
+  name: string
+  placeholder?: string
+  required?: boolean
+  defaultValue?: string
+  label?: string
+  className?: string
+}) {
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectedDate, setSelectedDate] = useState<Date | null>(
+    defaultValue ? new Date(defaultValue) : null
+  )
+  const [viewDate, setViewDate] = useState(selectedDate || new Date())
+  const [viewDate2, setViewDate2] = useState(() => {
+    const d = new Date(viewDate)
+    d.setMonth(d.getMonth() + 1)
+    return d
+  })
+
+  const handleSelect = (date: Date) => {
+    setSelectedDate(date)
+    setIsOpen(false)
+  }
+
+  // Sync second calendar to be month after first
+  useEffect(() => {
+    const d = new Date(viewDate)
+    d.setMonth(d.getMonth() + 1)
+    setViewDate2(d)
+  }, [viewDate])
+
+  return (
+    <>
+      <input
+        type="hidden"
+        name={name}
+        value={formatDateValue(selectedDate)}
+        data-label={label}
+        required={required}
+      />
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        className={clsx(
+          'w-full flex items-center gap-3 rounded-lg bg-body2 px-4 py-3 text-contrast font-medium',
+          'outline outline-2 -outline-offset-1 outline-accent2/25',
+          'hover:outline-accent2/50 transition-colors cursor-pointer',
+          className
+        )}
+      >
+        <Icon icon={calendarIcon} className="w-5 h-5 text-contrast/70 shrink-0" />
+        <span className={clsx('flex-1 text-left', !selectedDate && 'text-contrast/50')}>
+          {selectedDate ? formatDate(selectedDate) : placeholder}
+        </span>
+        <Icon icon={chevronDownIcon} className="w-5 h-5 text-contrast/50 shrink-0" />
+      </button>
+
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+        <DialogBackdrop className="fixed inset-0 bg-black/30" />
+        <div className="fixed inset-0 flex items-end lg:items-center justify-center p-0 lg:p-4">
+          <DialogPanel className="w-full lg:w-auto bg-body rounded-t-2xl lg:rounded-2xl shadow-xl max-h-[90vh] overflow-auto">
+            <div className="p-6 lg:p-8">
+              {/* Header with navigation */}
+              <div className="flex items-center justify-between mb-6">
+                <button
+                  type="button"
+                  onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1))}
+                  className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer"
+                >
+                  <Icon icon={chevronLeftIcon} className="w-6 h-6 text-contrast" />
+                </button>
+                <div className="flex gap-8 lg:gap-32">
+                  <div className="flex gap-4 text-lg font-semibold text-contrast">
+                    <span>{MONTHS[viewDate.getMonth()]}</span>
+                    <span className="text-contrast/50">{viewDate.getFullYear()}</span>
+                  </div>
+                  <div className="hidden lg:flex gap-4 text-lg font-semibold text-contrast">
+                    <span>{MONTHS[viewDate2.getMonth()]}</span>
+                    <span className="text-contrast/50">{viewDate2.getFullYear()}</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1))}
+                  className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer"
+                >
+                  <Icon icon={chevronRightIcon} className="w-6 h-6 text-contrast" />
+                </button>
+              </div>
+              {/* Calendars */}
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                <Calendar
+                  selectedDate={selectedDate}
+                  onSelect={handleSelect}
+                  viewDate={viewDate}
+                  onViewDateChange={setViewDate}
+                />
+                <div className="hidden lg:block">
+                  <Calendar
+                    selectedDate={selectedDate}
+                    onSelect={handleSelect}
+                    viewDate={viewDate2}
+                    onViewDateChange={(d) => {
+                      const first = new Date(d)
+                      first.setMonth(first.getMonth() - 1)
+                      setViewDate(first)
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
+    </>
+  )
+}
+
+// Generate time slots in 10-minute increments
+function generateTimeSlots() {
+  const slots: { hour: number; minute: number; label: string; value: string }[] = []
+  for (let h = 0; h < 24; h++) {
+    for (let m = 0; m < 60; m += 10) {
+      const period = h >= 12 ? 'PM' : 'AM'
+      const displayHour = h % 12 || 12
+      const displayMinute = String(m).padStart(2, '0')
+      slots.push({
+        hour: h,
+        minute: m,
+        label: `${displayHour}:${displayMinute} ${period}`,
+        value: `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`,
+      })
+    }
+  }
+  return slots
+}
+
+const TIME_SLOTS = generateTimeSlots()
+
+// TimePicker Component
+function TimePickerInput({
+  name,
+  placeholder = 'Select time',
+  required,
+  defaultValue,
+  label = '',
+  className = '',
+}: {
+  name: string
+  placeholder?: string
+  required?: boolean
+  defaultValue?: string
+  label?: string
+  className?: string
+}) {
+  const [selectedTime, setSelectedTime] = useState<string | null>(defaultValue || null)
+
+  const selectedSlot = TIME_SLOTS.find((s) => s.value === selectedTime)
+
+  return (
+    <Listbox value={selectedTime} onChange={setSelectedTime}>
+      <div className="relative">
+        <input
+          type="hidden"
+          name={name}
+          value={selectedTime || ''}
+          data-label={label}
+          required={required}
+        />
+        <ListboxButton
+          className={clsx(
+            'w-full flex items-center gap-3 rounded-lg bg-body2 px-4 py-3 text-contrast font-medium',
+            'outline outline-2 -outline-offset-1 outline-accent2/25',
+            'hover:outline-accent2/50 transition-colors cursor-pointer',
+            className
+          )}
+        >
+          <Icon icon={clockIcon} className="w-5 h-5 text-contrast/70 shrink-0" />
+          <span className={clsx('flex-1 text-left', !selectedTime && 'text-contrast/50')}>
+            {selectedSlot ? selectedSlot.label : placeholder}
+          </span>
+          <Icon icon={chevronDownIcon} className="w-5 h-5 text-contrast/50 shrink-0" />
+        </ListboxButton>
+
+        <ListboxOptions className="absolute left-0 right-0 top-full mt-2 z-50 bg-body rounded-xl shadow-xl border border-contrast/10 max-h-60 overflow-y-auto focus:outline-none">
+          {TIME_SLOTS.map((slot) => (
+            <ListboxOption
+              key={slot.value}
+              value={slot.value}
+              className={({ active, selected }) =>
+                clsx(
+                  'w-full px-4 py-3 text-left text-base transition-colors cursor-pointer',
+                  selected && 'bg-contrast/10 font-semibold text-contrast',
+                  active && !selected && 'bg-contrast/5',
+                  !active && !selected && 'text-contrast'
+                )
+              }
+            >
+              {slot.label}
+            </ListboxOption>
+          ))}
+        </ListboxOptions>
+      </div>
+    </Listbox>
+  )
+}
+
 type FormInputProps = {
   id?: string
   name: string
@@ -176,21 +515,51 @@ const FormInput = ({
   defaultValue,
   className = '',
   label = '',
-}: FormInputProps) => (
-  <input
-    id={id ?? name}
-    name={name}
-    type={type}
-    placeholder={placeholder}
-    autoComplete={autoComplete}
-    required={required}
-    hidden={hidden}
-    defaultValue={defaultValue}
-    data-label={label}
-    className={`w-full rounded-lg bg-body2 p-4 text-contrast font-medium outline outline-2 -outline-offset-1 outline-accent2/25 
-      placeholder:text-contrast/50 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-accent2/80 focus:ring-0 ${className}`}
-  />
-)
+}: FormInputProps) => {
+  // Use custom date picker for date type
+  if (type === 'date') {
+    return (
+      <DatePickerInput
+        name={name}
+        placeholder={placeholder}
+        required={required}
+        defaultValue={defaultValue}
+        label={label}
+        className={className}
+      />
+    )
+  }
+
+  // Use custom time picker for time type
+  if (type === 'time') {
+    return (
+      <TimePickerInput
+        name={name}
+        placeholder={placeholder}
+        required={required}
+        defaultValue={defaultValue}
+        label={label}
+        className={className}
+      />
+    )
+  }
+
+  return (
+    <input
+      id={id ?? name}
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      autoComplete={autoComplete}
+      required={required}
+      hidden={hidden}
+      defaultValue={defaultValue}
+      data-label={label}
+      className={`w-full rounded-lg bg-body2 p-4 text-contrast font-medium outline outline-2 -outline-offset-1 outline-accent2/25 
+        placeholder:text-contrast/50 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-accent2/80 focus:ring-0 ${className}`}
+    />
+  )
+}
 
 type FormTextAreaProps = {
   id?: string
