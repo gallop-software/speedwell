@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { state } from '@/state'
 
 const SmoothScroll = () => {
   const offset = 40
@@ -16,6 +17,13 @@ const SmoothScroll = () => {
       const targetElement = document.querySelector(hash)
       if (targetElement) {
         event.preventDefault()
+        state.scrollingDirection = 'down'
+        state.lockScrollDirection = true
+
+        // Unlock after scroll completes
+        window.addEventListener('scrollend', () => {
+          state.lockScrollDirection = false
+        }, { once: true })
 
         window.scrollTo({
           top:

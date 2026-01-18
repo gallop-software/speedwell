@@ -9,6 +9,7 @@ const state = proxy({
   dialogOpen: false,
   scrollingDirection: 'down',
   lastScrollingDirection: 'down',
+  lockScrollDirection: false,
 })
 
 export { state, useSnapshot, subscribe, proxy }
