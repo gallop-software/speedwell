@@ -17,6 +17,14 @@ export type FormInputProps = {
   defaultValue?: string
   className?: string
   label?: string
+  /** DatePicker: Disable navigating to past months */
+  disablePastMonths?: boolean
+  /** TimePicker: Minimum hour (0-23), inclusive */
+  minHour?: number
+  /** TimePicker: Maximum hour (0-23), inclusive */
+  maxHour?: number
+  /** TimePicker: Maximum minute for the max hour (0-50). Default: 50 */
+  maxMinute?: number
 }
 
 export function FormInput({
@@ -30,6 +38,10 @@ export function FormInput({
   defaultValue,
   className = '',
   label = '',
+  disablePastMonths,
+  minHour,
+  maxHour,
+  maxMinute,
 }: FormInputProps) {
   // Use custom date picker for date type
   if (type === 'date') {
@@ -41,6 +53,7 @@ export function FormInput({
         defaultValue={defaultValue}
         label={label}
         className={className}
+        disablePastMonths={disablePastMonths}
       />
     )
   }
@@ -55,6 +68,9 @@ export function FormInput({
         defaultValue={defaultValue}
         label={label}
         className={className}
+        minHour={minHour}
+        maxHour={maxHour}
+        maxMinute={maxMinute}
       />
     )
   }

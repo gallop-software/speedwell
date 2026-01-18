@@ -91,6 +91,9 @@ export default function Form5() {
                 placeholder="Preferred Time*"
                 label="Time"
                 required
+                minHour={15}
+                maxHour={22}
+                maxMinute={0}
               />
             </Grid>
             <FormInput

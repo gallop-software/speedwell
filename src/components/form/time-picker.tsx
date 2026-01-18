@@ -6,7 +6,7 @@ import clockIcon from '@iconify/icons-heroicons/clock'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 import { Icon } from '../icon'
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/react'
-import { TIME_SLOTS, triggerButtonStyles } from './utils'
+import { TIME_SLOTS, triggerButtonStyles, type TimeSlot } from './utils'
 
 // ============================================================================
 // TimePicker Input Component
@@ -19,6 +19,12 @@ type TimePickerProps = {
   defaultValue?: string
   label?: string
   className?: string
+  /** Minimum hour (0-23), inclusive. Default: 0 */
+  minHour?: number
+  /** Maximum hour (0-23), inclusive. Default: 23 */
+  maxHour?: number
+  /** Maximum minute for the max hour (0-50 in 10-min increments). Default: 50 */
+  maxMinute?: number
 }
 
 export function TimePickerInput({
@@ -28,10 +34,21 @@ export function TimePickerInput({
   defaultValue,
   label = '',
   className = '',
+  minHour = 0,
+  maxHour = 23,
+  maxMinute = 50,
 }: TimePickerProps) {
   const [selectedTime, setSelectedTime] = useState<string | null>(defaultValue || null)
 
-  const selectedSlot = TIME_SLOTS.find((s) => s.value === selectedTime)
+  // Filter time slots based on min/max hours and max minute
+  const filteredSlots = TIME_SLOTS.filter((slot) => {
+    if (slot.hour < minHour) return false
+    if (slot.hour > maxHour) return false
+    if (slot.hour === maxHour && slot.minute > maxMinute) return false
+    return true
+  })
+
+  const selectedSlot = filteredSlots.find((s) => s.value === selectedTime)
 
   return (
     <Listbox value={selectedTime} onChange={setSelectedTime}>
@@ -55,7 +72,7 @@ export function TimePickerInput({
 
         {/* Dropdown options */}
         <ListboxOptions className="absolute left-0 right-0 top-full mt-2 z-50 bg-body rounded-xl shadow-xl border border-contrast/10 max-h-60 overflow-y-auto focus:outline-none">
-          {TIME_SLOTS.map((slot) => (
+          {filteredSlots.map((slot) => (
             <ListboxOption
               key={slot.value}
               value={slot.value}

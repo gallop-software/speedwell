@@ -110,6 +110,8 @@ type DatePickerProps = {
   defaultValue?: string
   label?: string
   className?: string
+  /** Disable navigating to months before the current month */
+  disablePastMonths?: boolean
 }
 
 export function DatePickerInput({
@@ -119,6 +121,7 @@ export function DatePickerInput({
   defaultValue,
   label = '',
   className = '',
+  disablePastMonths = true,
 }: DatePickerProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedDate, setSelectedDate] = useState<Date | null>(
@@ -174,13 +177,25 @@ export function DatePickerInput({
             <div className="p-6 lg:p-8">
               {/* Header with navigation */}
               <div className="flex items-center justify-between mb-6">
-                <button
-                  type="button"
-                  onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1))}
-                  className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer"
-                >
-                  <Icon icon={chevronLeftIcon} className="w-6 h-6 text-contrast" />
-                </button>
+                {(() => {
+                  const today = new Date()
+                  const isCurrentMonth = viewDate.getFullYear() === today.getFullYear() && viewDate.getMonth() === today.getMonth()
+                  const disabled = disablePastMonths && isCurrentMonth
+
+                  return (
+                    <button
+                      type="button"
+                      disabled={disabled}
+                      onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1))}
+                      className={clsx(
+                        'p-2 rounded-full transition-colors',
+                        disabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-contrast/5 cursor-pointer'
+                      )}
+                    >
+                      <Icon icon={chevronLeftIcon} className="w-6 h-6 text-contrast" />
+                    </button>
+                  )
+                })()}
                 <div className="flex gap-8 lg:gap-32">
                   <div className="flex gap-4 text-lg font-semibold text-contrast">
                     <span>{MONTHS[viewDate.getMonth()]}</span>
