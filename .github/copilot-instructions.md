@@ -268,6 +268,10 @@ Extract hooks to components, not blocks (see Pattern 001 for enforcement)
 
 PageMetadata structure, structured data
 
+### 027: Luxon for Dates
+
+Use Luxon DateTime, not native JavaScript Date
+
 ## Canon Guarantees
 
 Following these patterns provides these guarantees:
