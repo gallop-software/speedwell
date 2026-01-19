@@ -63,7 +63,7 @@ export function formatTimeValue(hour: number, minute: number) {
   return `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`
 }
 
-// Generate time slots in 10-minute increments
+// Generate time slots in 5-minute increments (filtered by interval prop)
 export type TimeSlot = {
   hour: number
   minute: number
@@ -74,7 +74,7 @@ export type TimeSlot = {
 function generateTimeSlots(): TimeSlot[] {
   const slots: TimeSlot[] = []
   for (let h = 0; h < 24; h++) {
-    for (let m = 0; m < 60; m += 10) {
+    for (let m = 0; m < 60; m += 5) {
       const period = h >= 12 ? 'PM' : 'AM'
       const displayHour = h % 12 || 12
       const displayMinute = String(m).padStart(2, '0')

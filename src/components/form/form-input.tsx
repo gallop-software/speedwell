@@ -25,6 +25,8 @@ export type FormInputProps = {
   maxHour?: number
   /** TimePicker: Maximum minute for the max hour (0-50). Default: 50 */
   maxMinute?: number
+  /** TimePicker: Time interval in minutes (5, 10, 15, 30, 60). Default: 10 */
+  interval?: 5 | 10 | 15 | 30 | 60
 }
 
 export function FormInput({
@@ -42,6 +44,7 @@ export function FormInput({
   minHour,
   maxHour,
   maxMinute,
+  interval,
 }: FormInputProps) {
   // Use custom date picker for date type
   if (type === 'date') {
@@ -71,6 +74,7 @@ export function FormInput({
         minHour={minHour}
         maxHour={maxHour}
         maxMinute={maxMinute}
+        interval={interval}
       />
     )
   }

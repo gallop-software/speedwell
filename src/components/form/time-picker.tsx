@@ -25,6 +25,8 @@ type TimePickerProps = {
   maxHour?: number
   /** Maximum minute for the max hour (0-50 in 10-min increments). Default: 50 */
   maxMinute?: number
+  /** Time interval in minutes (5, 10, 15, 30, 60). Default: 10 */
+  interval?: 5 | 10 | 15 | 30 | 60
 }
 
 export function TimePickerInput({
@@ -37,14 +39,17 @@ export function TimePickerInput({
   minHour = 0,
   maxHour = 23,
   maxMinute = 50,
+  interval = 10,
 }: TimePickerProps) {
   const [selectedTime, setSelectedTime] = useState<string | null>(defaultValue || null)
 
-  // Filter time slots based on min/max hours and max minute
+  // Filter time slots based on min/max hours, max minute, and interval
   const filteredSlots = TIME_SLOTS.filter((slot) => {
     if (slot.hour < minHour) return false
     if (slot.hour > maxHour) return false
     if (slot.hour === maxHour && slot.minute > maxMinute) return false
+    // Filter by interval (only include minutes divisible by interval)
+    if (slot.minute % interval !== 0) return false
     return true
   })
 
