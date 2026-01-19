@@ -176,55 +176,69 @@ export function DatePickerInput({
         <div className="fixed inset-0 flex items-end lg:items-center justify-center p-0 lg:p-4">
           <DialogPanel className="w-full lg:w-auto bg-body rounded-t-2xl lg:rounded-2xl shadow-xl max-h-[90vh] overflow-auto">
             <div className="p-6 lg:p-8">
-              {/* Header with navigation */}
-              <div className="flex items-center justify-between mb-6">
-                {(() => {
-                  const today = new Date()
-                  const isCurrentMonth = viewDate.getFullYear() === today.getFullYear() && viewDate.getMonth() === today.getMonth()
-                  const disabled = disablePastMonths && isCurrentMonth
+              {/* Calendars with headers */}
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                {/* First calendar */}
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    {(() => {
+                      const today = new Date()
+                      const isCurrentMonth = viewDate.getFullYear() === today.getFullYear() && viewDate.getMonth() === today.getMonth()
+                      const disabled = disablePastMonths && isCurrentMonth
 
-                  return (
+                      return (
+                        <button
+                          type="button"
+                          disabled={disabled}
+                          onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1))}
+                          className={clsx(
+                            'p-2 rounded-full transition-colors',
+                            disabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-contrast/5 cursor-pointer'
+                          )}
+                        >
+                          <Icon icon={chevronLeftIcon} className="w-6 h-6 text-contrast" />
+                        </button>
+                      )
+                    })()}
+                    <div className="flex gap-4 text-lg font-semibold text-contrast">
+                      <span>{MONTHS[viewDate.getMonth()]}</span>
+                      <span className="text-contrast/50">{viewDate.getFullYear()}</span>
+                    </div>
+                    {/* Spacer on mobile, hidden on desktop */}
                     <button
                       type="button"
-                      disabled={disabled}
-                      onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1))}
-                      className={clsx(
-                        'p-2 rounded-full transition-colors',
-                        disabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-contrast/5 cursor-pointer'
-                      )}
+                      onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1))}
+                      className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer lg:invisible"
                     >
-                      <Icon icon={chevronLeftIcon} className="w-6 h-6 text-contrast" />
+                      <Icon icon={chevronRightIcon} className="w-6 h-6 text-contrast" />
                     </button>
-                  )
-                })()}
-                <div className="flex gap-8 lg:gap-82">
-                  <div className="flex gap-4 text-lg font-semibold text-contrast">
-                    <span>{MONTHS[viewDate.getMonth()]}</span>
-                    <span className="text-contrast/50">{viewDate.getFullYear()}</span>
                   </div>
-                  <div className="hidden lg:flex gap-4 text-lg font-semibold text-contrast">
-                    <span>{MONTHS[viewDate2.getMonth()]}</span>
-                    <span className="text-contrast/50">{viewDate2.getFullYear()}</span>
-                  </div>
+                  <Calendar
+                    selectedDate={selectedDate}
+                    onSelect={handleSelect}
+                    viewDate={viewDate}
+                    onViewDateChange={setViewDate}
+                  />
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1))}
-                  className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer"
-                >
-                  <Icon icon={chevronRightIcon} className="w-6 h-6 text-contrast" />
-                </button>
-              </div>
 
-              {/* Calendars */}
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-                <Calendar
-                  selectedDate={selectedDate}
-                  onSelect={handleSelect}
-                  viewDate={viewDate}
-                  onViewDateChange={setViewDate}
-                />
+                {/* Second calendar (desktop only) */}
                 <div className="hidden lg:block">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="p-2 invisible">
+                      <Icon icon={chevronLeftIcon} className="w-6 h-6" />
+                    </div>
+                    <div className="flex gap-4 text-lg font-semibold text-contrast">
+                      <span>{MONTHS[viewDate2.getMonth()]}</span>
+                      <span className="text-contrast/50">{viewDate2.getFullYear()}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1))}
+                      className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer"
+                    >
+                      <Icon icon={chevronRightIcon} className="w-6 h-6 text-contrast" />
+                    </button>
+                  </div>
                   <Calendar
                     selectedDate={selectedDate}
                     onSelect={handleSelect}
