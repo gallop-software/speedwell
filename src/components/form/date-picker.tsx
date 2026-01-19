@@ -64,7 +64,7 @@ function Calendar({ selectedDate, onSelect, viewDate, onViewDateChange }: Calend
   }
 
   return (
-    <div className="w-80 lg:w-96">
+    <div className="w-full lg:w-96">
       {/* Day headers */}
       <div className="grid grid-cols-7 gap-1 mb-4">
         {DAYS.map((day) => (
@@ -75,24 +75,25 @@ function Calendar({ selectedDate, onSelect, viewDate, onViewDateChange }: Calend
       </div>
 
       {/* Day buttons */}
-      <div className="grid grid-cols-7 gap-1">
+      <div className="grid grid-cols-7 gap-y-1">
         {days.map((day, i) => (
-          <button
-            key={i}
-            type="button"
-            disabled={!day || isPast(day)}
-            onClick={() => day && onSelect(new Date(year, month, day))}
-            className={clsx(
-              'w-10 h-10 lg:w-12 lg:h-12 mx-auto flex items-center justify-center text-base rounded-full transition-colors',
-              !day && 'invisible',
-              day && isPast(day) && 'text-contrast/30 cursor-not-allowed',
-              day && !isPast(day) && !isSelected(day) && 'text-contrast hover:bg-contrast/10 cursor-pointer',
-              day && isSelected(day) && 'bg-contrast text-body font-semibold hover:bg-contrast/80 cursor-pointer',
-              day && isToday(day) && !isSelected(day) && 'ring-1 ring-contrast'
-            )}
-          >
-            {day}
-          </button>
+          <div key={i} className="flex justify-center">
+            <button
+              type="button"
+              disabled={!day || isPast(day)}
+              onClick={() => day && onSelect(new Date(year, month, day))}
+              className={clsx(
+                'w-12 h-12 flex items-center justify-center text-base rounded-full transition-colors',
+                !day && 'invisible',
+                day && isPast(day) && 'text-contrast/30 cursor-not-allowed',
+                day && !isPast(day) && !isSelected(day) && 'text-contrast hover:bg-contrast/10 cursor-pointer',
+                day && isSelected(day) && 'bg-contrast text-body font-semibold hover:bg-contrast/80 cursor-pointer',
+                day && isToday(day) && !isSelected(day) && 'ring-1 ring-contrast'
+              )}
+            >
+              {day}
+            </button>
+          </div>
         ))}
       </div>
     </div>
@@ -196,7 +197,7 @@ export function DatePickerInput({
                     </button>
                   )
                 })()}
-                <div className="flex gap-8 lg:gap-32">
+                <div className="flex gap-8 lg:gap-82">
                   <div className="flex gap-4 text-lg font-semibold text-contrast">
                     <span>{MONTHS[viewDate.getMonth()]}</span>
                     <span className="text-contrast/50">{viewDate.getFullYear()}</span>

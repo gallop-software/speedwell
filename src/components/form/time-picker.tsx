@@ -71,7 +71,10 @@ export function TimePickerInput({
         </ListboxButton>
 
         {/* Dropdown options */}
-        <ListboxOptions className="absolute left-0 right-0 top-full mt-2 z-50 bg-body rounded-xl shadow-xl border border-contrast/10 max-h-60 overflow-y-auto focus:outline-none">
+        <ListboxOptions
+          modal={false}
+          className="absolute left-0 right-0 top-full mt-2 z-50 bg-body rounded-xl shadow-xl border border-contrast/10 max-h-60 overflow-y-auto focus:outline-none"
+        >
           {filteredSlots.map((slot) => (
             <ListboxOption
               key={slot.value}
