@@ -8,6 +8,13 @@ alwaysApply: false
 
 When asked to add, update, or fix a Canon ESLint rule, follow these steps:
 
+## When to Use ESLint vs Documentation
+
+- **ESLint enforcement (preferred):** Always create an ESLint rule unless technically impossible to detect. Enforced patterns catch violations automatically.
+- **Documentation only:** Only use when ESLint cannot reasonably detect the violation (e.g., semantic naming conventions, architectural decisions that span multiple files).
+
+When in doubt, create an ESLint rule.
+
 ## 1. Update Schema (if new rule)
 
 Edit `/Users/chrisb/Sites/canon/canon/schema.json`:
