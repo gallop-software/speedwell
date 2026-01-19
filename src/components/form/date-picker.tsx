@@ -16,6 +16,10 @@ import {
   formatDate,
   formatDateValue,
   triggerButtonStyles,
+  isDatePast,
+  isDateToday,
+  isCurrentOrPastMonth,
+  DEFAULT_TIMEZONE,
 } from './utils'
 
 // ============================================================================
@@ -27,15 +31,14 @@ type CalendarProps = {
   onSelect: (date: Date) => void
   viewDate: Date
   onViewDateChange: (date: Date) => void
+  timezone: string
 }
 
-function Calendar({ selectedDate, onSelect, viewDate, onViewDateChange }: CalendarProps) {
+function Calendar({ selectedDate, onSelect, viewDate, onViewDateChange, timezone }: CalendarProps) {
   const year = viewDate.getFullYear()
   const month = viewDate.getMonth()
   const daysInMonth = getDaysInMonth(year, month)
   const firstDay = getFirstDayOfMonth(year, month)
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
 
   // Build days array with padding for consistent 6-row height
   const days: (number | null)[] = []
@@ -54,13 +57,12 @@ function Calendar({ selectedDate, onSelect, viewDate, onViewDateChange }: Calend
 
   const isToday = (day: number) => {
     if (!day) return false
-    return today.getFullYear() === year && today.getMonth() === month && today.getDate() === day
+    return isDateToday(year, month, day, timezone)
   }
 
   const isPast = (day: number) => {
     if (!day) return false
-    const date = new Date(year, month, day)
-    return date < today
+    return isDatePast(year, month, day, timezone)
   }
 
   return (
@@ -113,6 +115,8 @@ type DatePickerProps = {
   className?: string
   /** Disable navigating to months before the current month */
   disablePastMonths?: boolean
+  /** Timezone for date calculations (e.g., "America/New_York"). Default: America/New_York */
+  timezone?: string
 }
 
 export function DatePickerInput({
@@ -123,6 +127,7 @@ export function DatePickerInput({
   label = '',
   className = '',
   disablePastMonths = true,
+  timezone = DEFAULT_TIMEZONE,
 }: DatePickerProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedDate, setSelectedDate] = useState<Date | null>(
@@ -182,8 +187,7 @@ export function DatePickerInput({
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     {(() => {
-                      const today = new Date()
-                      const isCurrentMonth = viewDate.getFullYear() === today.getFullYear() && viewDate.getMonth() === today.getMonth()
+                      const isCurrentMonth = isCurrentOrPastMonth(viewDate.getFullYear(), viewDate.getMonth(), timezone)
                       const disabled = disablePastMonths && isCurrentMonth
 
                       return (
@@ -218,6 +222,7 @@ export function DatePickerInput({
                     onSelect={handleSelect}
                     viewDate={viewDate}
                     onViewDateChange={setViewDate}
+                    timezone={timezone}
                   />
                 </div>
 
@@ -248,6 +253,7 @@ export function DatePickerInput({
                       first.setMonth(first.getMonth() - 1)
                       setViewDate(first)
                     }}
+                    timezone={timezone}
                   />
                 </div>
               </div>

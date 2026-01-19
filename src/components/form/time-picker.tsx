@@ -6,7 +6,7 @@ import clockIcon from '@iconify/icons-heroicons/clock'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 import { Icon } from '../icon'
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/react'
-import { TIME_SLOTS, triggerButtonStyles, type TimeSlot } from './utils'
+import { TIME_SLOTS, triggerButtonStyles, DEFAULT_TIMEZONE, type TimeSlot } from './utils'
 
 // ============================================================================
 // TimePicker Input Component
@@ -27,6 +27,8 @@ type TimePickerProps = {
   maxMinute?: number
   /** Time interval in minutes (5, 10, 15, 30, 60). Default: 10 */
   interval?: 5 | 10 | 15 | 30 | 60
+  /** Timezone for time calculations (e.g., "America/New_York"). Default: America/New_York */
+  timezone?: string
 }
 
 export function TimePickerInput({
@@ -40,6 +42,7 @@ export function TimePickerInput({
   maxHour = 23,
   maxMinute = 50,
   interval = 10,
+  timezone = DEFAULT_TIMEZONE,
 }: TimePickerProps) {
   const [selectedTime, setSelectedTime] = useState<string | null>(defaultValue || null)
 

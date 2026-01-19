@@ -27,6 +27,8 @@ export type FormInputProps = {
   maxMinute?: number
   /** TimePicker: Time interval in minutes (5, 10, 15, 30, 60). Default: 10 */
   interval?: 5 | 10 | 15 | 30 | 60
+  /** Timezone for date/time calculations (e.g., "America/New_York"). Default: America/New_York */
+  timezone?: string
 }
 
 export function FormInput({
@@ -45,6 +47,7 @@ export function FormInput({
   maxHour,
   maxMinute,
   interval,
+  timezone,
 }: FormInputProps) {
   // Use custom date picker for date type
   if (type === 'date') {
@@ -57,6 +60,7 @@ export function FormInput({
         label={label}
         className={className}
         disablePastMonths={disablePastMonths}
+        timezone={timezone}
       />
     )
   }
@@ -75,6 +79,7 @@ export function FormInput({
         maxHour={maxHour}
         maxMinute={maxMinute}
         interval={interval}
+        timezone={timezone}
       />
     )
   }

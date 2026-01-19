@@ -84,6 +84,7 @@ export default function Form5() {
                 placeholder="Reservation Date*"
                 label="Date"
                 required
+                timezone="America/Chicago"
               />
               <FormInput
                 name="time"
@@ -94,6 +95,7 @@ export default function Form5() {
                 minHour={15}
                 maxHour={22}
                 maxMinute={0}
+                timezone="America/Chicago"
               />
             </Grid>
             <FormInput
