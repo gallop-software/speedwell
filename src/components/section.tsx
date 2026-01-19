@@ -5,7 +5,7 @@ import { Container } from './container'
 interface SectionProps {
   children: React.ReactNode
   className?: string
-  innerAlign?: 'wide' | 'content' | 'none' | 'full'
+  innerAlign?: 'wide' | 'content' | 'none' | 'full' | 'navbar'
   imageSrc?: string
   imageAlt?: string
   imageClassName?: string

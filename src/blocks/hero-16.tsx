@@ -1,4 +1,4 @@
-import { Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
+import { Section, Image, Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import CircleAnimationInit from '@/hooks/use-circle-animation'
 import playIcon from '@iconify/icons-heroicons/play-solid'
@@ -31,17 +31,16 @@ const circleTextId = 'hero-16-circle-text'
 
 export default function Hero16() {
   return (
-    <div
-      className="relative px-6 bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('/images/layout-3/pexels-plann-2999237-4549411.jpg')",
-      }}
-    >
-      {/* Overlay */}
+    <Section className="relative" innerAlign="navbar">
+      <Image
+        src="/images/layout-3/pexels-plann-2999237-4549411.jpg"
+        alt="Photography hero background"
+        className="absolute inset-0 object-cover"
+        rounded="rounded-none"
+      />
       <div className="absolute inset-0 bg-contrast/60" />
 
-      <div className="mx-auto max-w-[1600px] relative flex flex-col xl:flex-row gap-12 xl:gap-0 pt-40 pb-40">
+      <div className="relative flex flex-col xl:flex-row gap-12 xl:gap-0 pt-40 pb-40">
         {/* Left side - Swiper slider */}
         <div className="w-full xl:w-7/12 flex justify-center">
           <div
@@ -142,6 +141,6 @@ export default function Hero16() {
           </VideoPopup>
         </div>
       </div>
-    </div>
+    </Section>
   )
 }

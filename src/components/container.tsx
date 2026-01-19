@@ -9,7 +9,7 @@ export function Container({
 }: {
   className?: string
   children: React.ReactNode
-  align?: 'wide' | 'none' | 'content' | 'full'
+  align?: 'wide' | 'none' | 'content' | 'full' | 'navbar'
   maxWidth?: string
   padding?: string
 }) {
@@ -18,6 +18,7 @@ export function Container({
     content: 'max-w-4xl',
     none: '',
     full: '',
+    navbar: 'max-w-[1740px] px-6',
   }
 
   // Use maxWidth prop if provided, otherwise use alignClasses
