@@ -18,7 +18,7 @@ export function Container({
     content: 'max-w-4xl',
     none: '',
     full: '',
-    navbar: 'max-w-[1740px] px-6',
+    navbar: 'max-w-[1740px]',
   }
 
   // Use maxWidth prop if provided, otherwise use alignClasses
