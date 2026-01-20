@@ -8,7 +8,7 @@ import {
   Column,
 } from '@/components'
 
-export default function Section10() {
+export default function Content53() {
   return (
     <Section className="pt-30 pb-30 lg:pb-42 bg-body relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 relative">
