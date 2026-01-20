@@ -114,6 +114,7 @@ Use props over className for supported styles
 <Heading className="text-center mb-6 text-accent">Title</Heading>
 <Paragraph className="text-lg mb-4">Text content</Paragraph>
 <Label className="text-sm font-semibold">Category</Label>
+<Image src="/photo.jpg" className="rounded-lg aspect-4/5" />
 ```
 
 **Good:**
@@ -128,6 +129,7 @@ Use props over className for supported styles
 <Label fontSize="text-sm" fontWeight="font-semibold">
   Category
 </Label>
+<Image src="/photo.jpg" rounded="rounded-lg" aspect="aspect-4/5" />
 ```
 
 ### 008: Tailwind Only

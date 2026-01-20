@@ -35,7 +35,7 @@ export default function Hero16() {
       <Image
         src="/images/layout-3/pexels-plann-2999237-4549411.jpg"
         alt="Photography hero background"
-        className="absolute inset-0 object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         rounded="rounded-none"
       />
       <div className="absolute inset-0 bg-contrast/60" />
