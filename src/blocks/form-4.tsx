@@ -5,12 +5,15 @@ import {
   Form,
   FormInput,
   FormTextArea,
+  FormRadioGroup,
   FormButton,
+  DatePickerInput,
+  TimePickerInput,
 } from '@/components'
 
 export default function Form4() {
   return (
-    <Section className="py-20 md:py-30 bg-white">
+    <Section className="py-30 bg-white">
       <div className="max-w-3xl mx-auto">
         <Heading
           as="h2"
@@ -30,22 +33,51 @@ export default function Form4() {
             label="Email Subject"
             hidden
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <FormInput
-              name="name"
-              type="text"
-              placeholder="Name *"
-              label="Name"
+          <FormInput
+            name="name"
+            type="text"
+            placeholder="Name *"
+            label="Name"
+            required
+            className="bg-accent/5!"
+          />
+          <FormInput
+            name="email"
+            type="email"
+            placeholder="Email *"
+            label="Email"
+            required
+            className="bg-accent/5!"
+          />
+          <FormRadioGroup
+            heading="Select a Package"
+            name="package"
+            label="Package"
+            options={[
+              'Essential - $299 (1-hour session, 10 photos)',
+              'Professional - $599 (3-hour session, 40 photos)',
+              'Premium - $1,499 (Full day, 150+ photos)',
+            ]}
+            defaultValue="Professional - $599 (3-hour session, 40 photos)"
+            required
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <DatePickerInput
+              name="preferredDate"
+              placeholder="Select a date"
+              label="Preferred Date"
               required
-              className="!bg-accent/5"
+              className="bg-accent/5!"
             />
-            <FormInput
-              name="email"
-              type="email"
-              placeholder="Email *"
-              label="Email"
+            <TimePickerInput
+              name="preferredTime"
+              placeholder="Select a time"
+              label="Preferred Time"
+              minHour={9}
+              maxHour={17}
+              interval={30}
               required
-              className="!bg-accent/5"
+              className="bg-accent/5!"
             />
           </div>
           <FormTextArea
@@ -54,10 +86,10 @@ export default function Form4() {
             rows={6}
             label="Message"
             required
-            className="!bg-accent/5"
+            className="bg-accent/5!"
           />
           <div className="flex justify-center mt-8">
-            <FormButton label="Send message" />
+            <FormButton className="w-full" label="Send message" />
           </div>
         </Form>
       </div>

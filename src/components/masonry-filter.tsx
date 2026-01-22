@@ -44,7 +44,7 @@ export function MasonryFilter({
     <>
       {/* Filter nav - glass style */}
       <div className="flex justify-center mb-12">
-        <div className="inline-flex gap-1 md:gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+        <div className="inline-flex flex-wrap justify-center gap-1 md:gap-2 px-4 py-2 rounded-2xl md:rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
           {categories.map((category) => (
             <button
               key={category}

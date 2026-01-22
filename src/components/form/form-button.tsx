@@ -1,4 +1,5 @@
 import arrowPathIcon from '@iconify/icons-heroicons/arrow-path'
+import clsx from 'clsx'
 import { Button } from '../button'
 import { Icon } from '../icon'
 
@@ -10,16 +11,18 @@ export type FormButtonProps = {
   label: string
   isLoading?: boolean
   submitMessage?: string
+  className?: string
 }
 
 export function FormButton({
   label,
   isLoading,
   submitMessage = 'Message sent. Thank you.',
+  className,
 }: FormButtonProps) {
   return (
     <Button
-      className={isLoading ? 'opacity-70 cursor-not-allowed' : ''}
+      className={clsx(isLoading && 'opacity-70 cursor-not-allowed', className)}
       type="submit"
       data-message={submitMessage}
     >

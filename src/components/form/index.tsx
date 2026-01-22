@@ -11,6 +11,8 @@ import { FormRadioGroup } from './form-radio'
 import { FormCheckboxGroup } from './form-checkbox'
 import { FormName, FormFirstName, FormLastName } from './form-name'
 import { FormButton, type FormButtonProps } from './form-button'
+import { DatePickerInput } from './date-picker'
+import { TimePickerInput } from './time-picker'
 
 // ============================================================================
 // Main Form Component
@@ -171,4 +173,6 @@ export {
   FormName,
   FormFirstName,
   FormLastName,
+  DatePickerInput,
+  TimePickerInput,
 }
