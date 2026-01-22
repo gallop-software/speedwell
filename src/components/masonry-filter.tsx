@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Masonry } from './masonry'
 import { Image } from './image'
+import { Span } from './span'
 
 interface MasonryFilterItem {
   id: number
@@ -43,19 +44,22 @@ export function MasonryFilter({
     <>
       {/* Filter nav - glass style */}
       <div className="flex justify-center mb-12">
-        <div className="inline-flex gap-1 md:gap-2 px-2 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+        <div className="inline-flex gap-1 md:gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className="px-4 py-2 text-sm tracking-wide transition-colors"
+              className="px-4 py-2 text-sm tracking-wide transition-colors cursor-pointer"
             >
-              <span
-                className={`relative inline-block transition-colors duration-200 ${
+              <Span
+                variant="small"
+                color={
                   activeFilter === category
-                    ? 'text-accent font-semibold'
-                    : 'text-body-contrast/60 hover:text-body-contrast'
-                }`}
+                    ? 'text-accent'
+                    : 'text-body-contrast/60'
+                }
+                fontWeight={activeFilter === category ? 'font-semibold' : ''}
+                className="relative inline-block transition-colors duration-200 hover:text-body-contrast"
               >
                 {category}
                 {activeFilter === category && (
@@ -65,7 +69,7 @@ export function MasonryFilter({
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
-              </span>
+              </Span>
             </button>
           ))}
         </div>
