@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { Masonry } from './masonry'
 import { Image } from './image'
 import { Span } from './span'
-import { GalleryPopup } from './lightbox/gallery-popup'
+import { GalleryPopupDynamic } from './lightbox/gallery-popup'
 
 interface MasonryFilterItem {
   id: number
@@ -80,7 +80,7 @@ export function MasonryFilter({
 
       {/* Masonry grid with filtered items */}
       <div ref={containerRef}>
-        <Masonry gap={gap} breakpoints={breakpoints} className={clsx('lightbox-gallery', className)}>
+        <Masonry gap={gap} breakpoints={breakpoints} className={clsx('lightbox-gallery-dynamic', className)}>
           {filteredItems.map((item) => (
             <motion.div
               key={item.id}
@@ -100,7 +100,7 @@ export function MasonryFilter({
             </motion.div>
           ))}
         </Masonry>
-        <GalleryPopup key={activeFilter} containerRef={containerRef} />
+        <GalleryPopupDynamic key={activeFilter} containerRef={containerRef} />
       </div>
     </>
   )
