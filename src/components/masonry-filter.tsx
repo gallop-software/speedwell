@@ -41,21 +41,34 @@ export function MasonryFilter({
 
   return (
     <>
-      {/* Filter chips */}
-      <div className="flex justify-center gap-4 md:gap-8 mb-12 flex-wrap">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveFilter(category)}
-            className={`text-sm tracking-wider transition-colors ${
-              activeFilter === category
-                ? 'text-accent font-semibold'
-                : 'text-body-contrast/60 hover:text-body-contrast'
-            }`}
-          >
-            {category}
-          </button>
-        ))}
+      {/* Filter nav - glass style */}
+      <div className="flex justify-center mb-12">
+        <div className="inline-flex gap-1 md:gap-2 px-2 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className="px-4 py-2 text-sm tracking-wide transition-colors"
+            >
+              <span
+                className={`relative inline-block transition-colors duration-200 ${
+                  activeFilter === category
+                    ? 'text-accent font-semibold'
+                    : 'text-body-contrast/60 hover:text-body-contrast'
+                }`}
+              >
+                {category}
+                {activeFilter === category && (
+                  <motion.div
+                    layoutId="filter-underline"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent rounded-full"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Masonry grid with filtered items */}
@@ -63,8 +76,8 @@ export function MasonryFilter({
         {filteredItems.map((item) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="overflow-hidden rounded-lg group cursor-pointer"
           >
