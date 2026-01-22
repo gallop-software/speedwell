@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Masonry } from './masonry'
 import { Image } from './image'
 
@@ -31,10 +32,10 @@ export function MasonryFilter({
   breakpoints = { default: 3, lg: 3, md: 2, sm: 1 },
   className,
 }: MasonryFilterProps) {
-  const [activeFilter, setActiveFilter] = useState('ALL')
+  const [activeFilter, setActiveFilter] = useState('All')
 
   const filteredItems =
-    activeFilter === 'ALL'
+    activeFilter === 'All'
       ? items
       : items.filter((item) => item.category === activeFilter)
 
@@ -60,8 +61,11 @@ export function MasonryFilter({
       {/* Masonry grid with filtered items */}
       <Masonry gap={gap} breakpoints={breakpoints} className={className}>
         {filteredItems.map((item) => (
-          <div
+          <motion.div
             key={item.id}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className="overflow-hidden rounded-lg group cursor-pointer"
           >
             <Image
@@ -70,7 +74,7 @@ export function MasonryFilter({
               size="large"
               className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-102"
             />
-          </div>
+          </motion.div>
         ))}
       </Masonry>
     </>
