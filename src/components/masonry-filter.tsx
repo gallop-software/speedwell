@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
 import { Masonry } from './masonry'
 import { Image } from './image'
 import { Span } from './span'
+import { GalleryPopup } from './lightbox/gallery-popup'
 
 interface MasonryFilterItem {
   id: number
@@ -35,6 +36,7 @@ export function MasonryFilter({
   className,
 }: MasonryFilterProps) {
   const [activeFilter, setActiveFilter] = useState('All')
+  const containerRef = useRef<HTMLDivElement>(null)
 
   const filteredItems =
     activeFilter === 'All'
@@ -77,26 +79,29 @@ export function MasonryFilter({
       </div>
 
       {/* Masonry grid with filtered items */}
-      <Masonry gap={gap} breakpoints={breakpoints} className={clsx('lightbox-gallery', className)}>
-        {filteredItems.map((item) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="overflow-hidden rounded-lg group cursor-pointer"
-          >
-            <Image
-              src={item.image}
-              alt={item.alt}
-              size="large"
-              href={item.image}
-              mediaLink
-              className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-102"
-            />
-          </motion.div>
-        ))}
-      </Masonry>
+      <div ref={containerRef}>
+        <Masonry gap={gap} breakpoints={breakpoints} className={clsx('lightbox-gallery', className)}>
+          {filteredItems.map((item) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="overflow-hidden rounded-lg group cursor-pointer"
+            >
+              <Image
+                src={item.image}
+                alt={item.alt}
+                size="large"
+                href={item.image}
+                mediaLink
+                className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-102"
+              />
+            </motion.div>
+          ))}
+        </Masonry>
+        <GalleryPopup key={activeFilter} containerRef={containerRef} />
+      </div>
     </>
   )
 }
