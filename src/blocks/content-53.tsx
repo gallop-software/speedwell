@@ -6,7 +6,9 @@ import {
   Grid,
   Columns,
   Column,
+  Button,
 } from '@/components'
+import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
 export default function Content53() {
   return (
@@ -15,15 +17,16 @@ export default function Content53() {
         <Columns
           cols="grid-cols-1 lg:grid-cols-2"
           gap="gap-24 lg:gap-12"
-          align="items-start"
+          align="items-center"
         >
           {/* Left side - Image Grid */}
           <Column>
             <Grid
-              cols="grid-cols-2"
-              gap="gap-6"
+              cols="grid-cols-3"
+              gap="gap-4"
+              className="-ml-6 -mr-6 lg:-ml-20 lg:mr-0"
             >
-              {/* Top left */}
+              {/* Column 1 - Top */}
               <Image
                 src="/images/layout-3/pexels-olly-774909.jpg"
                 alt="Portrait photography"
@@ -32,16 +35,25 @@ export default function Content53() {
                 className="object-cover"
               />
 
-              {/* Top right (offset down) */}
+              {/* Column 2 - Top (offset down) */}
               <Image
                 src="/images/layout-3/pexels-pixabay-462162.jpg"
                 alt="Landscape and nature photography"
                 size="large"
                 aspect="aspect-4/5"
-                className="object-cover relative top-12"
+                className="object-cover relative top-8"
               />
 
-              {/* Bottom left */}
+              {/* Column 3 - Top */}
+              <Image
+                src="/images/layout-3/pexels-forgottenluix-2922450.jpg"
+                alt="Fashion photography"
+                size="large"
+                aspect="aspect-4/5"
+                className="object-cover"
+              />
+
+              {/* Column 1 - Bottom */}
               <Image
                 src="/images/layout-3/pexels-2149489342-35218938.jpg"
                 alt="Abstract photography"
@@ -50,13 +62,22 @@ export default function Content53() {
                 className="object-cover"
               />
 
-              {/* Bottom right (offset down) */}
+              {/* Column 2 - Bottom (offset down) */}
               <Image
                 src="/images/layout-1/pexels-shattha-pilabut-38930-135620.jpg"
                 alt="Commercial photography"
                 size="large"
                 aspect="aspect-4/5"
-                className="object-cover relative top-12"
+                className="object-cover relative top-8"
+              />
+
+              {/* Column 3 - Bottom */}
+              <Image
+                src="/images/layout-3/pexels-jonaorle-4029925.jpg"
+                alt="Creative photography"
+                size="large"
+                aspect="aspect-4/5"
+                className="object-cover"
               />
             </Grid>
           </Column>
@@ -84,6 +105,15 @@ export default function Content53() {
               post-processing. Each photograph is crafted with attention to
               detail and a dedication to capturing moments that matter.
             </Paragraph>
+            <Button
+              href="#portfolio-section"
+              variant="primary"
+              icon={arrowDownIcon}
+              iconPlacement="after"
+              className="self-start"
+            >
+              Learn More
+            </Button>
           </Column>
         </Columns>
       </div>
