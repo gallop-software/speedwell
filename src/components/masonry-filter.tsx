@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import clsx from 'clsx'
 import { Masonry } from './masonry'
 import { Image } from './image'
 import { Span } from './span'
@@ -76,7 +77,7 @@ export function MasonryFilter({
       </div>
 
       {/* Masonry grid with filtered items */}
-      <Masonry gap={gap} breakpoints={breakpoints} className={className}>
+      <Masonry gap={gap} breakpoints={breakpoints} className={clsx('lightbox-gallery', className)}>
         {filteredItems.map((item) => (
           <motion.div
             key={item.id}
@@ -89,6 +90,8 @@ export function MasonryFilter({
               src={item.image}
               alt={item.alt}
               size="large"
+              href={item.image}
+              mediaLink
               className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-102"
             />
           </motion.div>
