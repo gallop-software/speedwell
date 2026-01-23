@@ -1,7 +1,7 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Hero22 from '@/blocks/hero-22'
+import Hero21 from '@/blocks/hero-21'
 import Content1 from '@/blocks/content-1'
 import Section6 from '@/blocks/section-6'
 import Cover7 from '@/blocks/cover-7'
@@ -11,7 +11,7 @@ import Shopping1 from '@/blocks/shopping-1'
 function Content() {
   return (
     <>
-      <Hero22 />
+      <Hero21 />
       <Content1 />
       <Section6 />
       <Cover7 />
