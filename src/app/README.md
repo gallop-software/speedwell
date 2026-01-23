@@ -10,6 +10,42 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 
 ## Layouts
 
+#### Index
+
+<img src="../../public/layouts/index.jpg" alt="Index" width="350">
+
+**Slug:** `index`  
+**Path:** `(hero)/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Layout 2
+
+<img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
+
+**Slug:** `layout-2`  
+**Path:** `(alternate)/layout-2/page.tsx`  
+**Layout:** `(alternate)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Pro  
+
+---
+
+#### Layout 3
+
+<img src="../../public/layouts/layout-3.jpg" alt="Layout 3" width="350">
+
+**Slug:** `layout-3`  
+**Path:** `(default)/layout-3/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Pro  
+
+---
+
 #### Before After
 
 <img src="../../public/layouts/before-after.jpg" alt="Before After" width="350">
@@ -70,18 +106,6 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Index
-
-<img src="../../public/layouts/index.jpg" alt="Index" width="350">
-
-**Slug:** `index`  
-**Path:** `(hero)/page.tsx`  
-**Layout:** `(hero)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
 #### Join Our Team
 
 <img src="../../public/layouts/join-our-team.jpg" alt="Join Our Team" width="350">
@@ -115,30 +139,6 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Layout:** `(one-page-site)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
-
----
-
-#### Layout 2
-
-<img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
-
-**Slug:** `layout-2`  
-**Path:** `(alternate)/layout-2/page.tsx`  
-**Layout:** `(alternate)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
-
-#### Layout 3
-
-<img src="../../public/layouts/layout-3.jpg" alt="Layout 3" width="350">
-
-**Slug:** `layout-3`  
-**Path:** `(default)/layout-3/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
 
 ---
 
@@ -271,6 +271,3 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
-
----
-
