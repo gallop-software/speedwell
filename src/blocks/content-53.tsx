@@ -347,7 +347,7 @@ const panels = {
   demo6: <Demo6 />,
 }
 
-export default function Content53() {
+export default function Sidebar1() {
   return (
     <SidebarStackProvider>
       <SidebarClickHandler>
