@@ -9,6 +9,8 @@ export interface OpenSidebarButtonProps {
   componentId: string
   title: string
   className?: string
+  icon?: { body: string; width?: number; height?: number }
+  iconPlacement?: 'before' | 'after'
 }
 
 /**
@@ -20,6 +22,8 @@ export function OpenSidebarButton({
   componentId,
   title,
   className,
+  icon,
+  iconPlacement,
 }: OpenSidebarButtonProps) {
   const { push } = useSidebarStack()
 
@@ -31,6 +35,8 @@ export function OpenSidebarButton({
     <Button
       onClick={handleClick}
       className={className}
+      icon={icon}
+      iconPlacement={iconPlacement}
     >
       {children}
     </Button>

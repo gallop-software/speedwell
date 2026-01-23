@@ -11,8 +11,8 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 ## Categories
 
 - **Hero:** 22 blocks
-- **Section:** 9 blocks
-- **Content:** 52 blocks
+- **Section:** 10 blocks
+- **Content:** 53 blocks
 - **Call To Action:** 7 blocks
 - **Testimonial:** 9 blocks
 - **About:** 3 blocks
@@ -20,10 +20,8 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 - **Accordion:** 1 blocks
 - **Archive:** 3 blocks
 - **Form:** 7 blocks
-- **Portfolio:** 1 blocks
 - **Pricing:** 2 blocks
 - **Process:** 1 blocks
-- **Services:** 1 blocks
 - **Shopping:** 1 blocks
 - **Sidebar:** 1 blocks
 
@@ -308,6 +306,15 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/section-9.jpg" alt="Section 9" width="350">
 
 **Slug:** `section-9`  
+**Tier:** Free  
+
+---
+
+#### Section 10
+
+<img src="../../public/blocks/section-10.jpg" alt="Section 10" width="350">
+
+**Slug:** `section-10`  
 **Tier:** Free  
 
 ---
@@ -782,6 +789,15 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Content 53
+
+<img src="../../public/blocks/content-53.jpg" alt="Content 53" width="350">
+
+**Slug:** `content-53`  
+**Tier:** Free  
+
+---
+
 ### Call To Action
 
 #### Call To Action 1
@@ -1129,17 +1145,6 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Portfolio
-
-#### Portfolio 1
-
-<img src="../../public/blocks/portfolio-1.jpg" alt="Portfolio 1" width="350">
-
-**Slug:** `portfolio-1`  
-**Tier:** Free  
-
----
-
 ### Pricing
 
 #### Pricing 1
@@ -1168,17 +1173,6 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 **Slug:** `process-1`  
 **Tier:** Pro  
-
----
-
-### Services
-
-#### Services 1
-
-<img src="../../public/blocks/services-1.jpg" alt="Services 1" width="350">
-
-**Slug:** `services-1`  
-**Tier:** Free  
 
 ---
 
