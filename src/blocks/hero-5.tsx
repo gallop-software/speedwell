@@ -5,7 +5,7 @@ import {
   BackgroundGeometry2,
 } from '@/components'
 
-export default function Hero5() {
+export default function Content() {
   return (
     <>
       <Section className="relative py-30">
