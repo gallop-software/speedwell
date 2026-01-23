@@ -1,6 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
+import type { IconifyIcon } from '@iconify/react'
 import { Button } from '@/components'
 import { useSidebarStack } from './context'
 
@@ -9,6 +10,8 @@ export interface OpenSidebarButtonProps {
   componentId: string
   title: string
   className?: string
+  icon?: IconifyIcon
+  iconPlacement?: 'before' | 'after'
 }
 
 /**
@@ -20,6 +23,8 @@ export function OpenSidebarButton({
   componentId,
   title,
   className,
+  icon,
+  iconPlacement,
 }: OpenSidebarButtonProps) {
   const { push } = useSidebarStack()
 
@@ -31,6 +36,8 @@ export function OpenSidebarButton({
     <Button
       onClick={handleClick}
       className={className}
+      icon={icon}
+      iconPlacement={iconPlacement}
     >
       {children}
     </Button>
