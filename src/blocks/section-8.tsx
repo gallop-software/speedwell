@@ -3,7 +3,7 @@ import { Section, Heading, Grid, Card3 } from '@/components'
 export default function Section8() {
   return (
     <Section className="relative py-30">
-      <Heading as="h2">Non deserunt</Heading>
+      <Heading as="h2">Furniture & Upholstery</Heading>
       <Grid
         cols="grid-cols-3"
         className="mb-30"
@@ -11,41 +11,41 @@ export default function Section8() {
         <Card3
           id="1"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-          alt="Sed mollit anim commodo"
+          alt="Evergreen Upholstery Co."
           size="large"
           href="#"
         />
         <Card3
           id="2"
           image="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
-          alt="Tempor ipsum ut"
+          alt="Monarch Furniture Studio"
           size="large"
           href="#"
         />
         <Card3
           id="3"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-          alt="Ullamco nulla lorem voluptate"
+          alt="Heritage Seating"
           size="large"
           href="#"
         />
         <Card3
           id="4"
           image="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
-          alt="Incididunt excepteur non"
+          alt="Luxe Leather Works"
           size="large"
           href="#"
         />
         <Card3
           id="5"
           image="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
-          alt="Quis minim adipiscing cupidatat enim"
+          alt="Bespoke Sofas Ltd."
           size="large"
           href="#"
         />
       </Grid>
 
-      <Heading as="h2">Ad consequat fugiat</Heading>
+      <Heading as="h2">Lighting & Fixtures</Heading>
       <Grid
         cols="grid-cols-3"
         className="mb-30"
@@ -53,48 +53,48 @@ export default function Section8() {
         <Card3
           id="6"
           image="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
-          alt="Duis aliqua aute"
+          alt="Lumière Atelier"
           size="large"
           href="#"
         />
         <Card3
           id="7"
           image="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
-          alt="Id qui esse duis"
+          alt="Radiant Designs"
           size="large"
           href="#"
         />
         <Card3
           id="8"
           image="/images/portfolio/jvdm/pexels-jvdm-1454804.jpg"
-          alt="Esse reprehenderit aute ea"
+          alt="Chandelier House"
           size="large"
           href="#"
         />
         <Card3
           id="9"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-          alt="Deserunt in minim veniam"
+          alt="Edison & Co."
           size="large"
           href="#"
         />
         <Card3
           id="10"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
-          alt="Consequat voluptate nostrud excepteur"
+          alt="Ambient Lighting Studio"
           size="large"
           href="#"
         />
         <Card3
           id="11"
           image="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-          alt="Exercitation aliqua"
+          alt="Sconce & Shade"
           size="large"
           href="#"
         />
       </Grid>
 
-      <Heading as="h2">Proident excepteur</Heading>
+      <Heading as="h2">Flooring & Tile</Heading>
       <Grid
         cols="grid-cols-3"
         className="mb-30"
@@ -102,48 +102,48 @@ export default function Section8() {
         <Card3
           id="12"
           image="/images/portfolio/pexels-mikhail-nilov-6707628.jpg"
-          alt="Mollit anim ad mollit"
+          alt="Stone & Terra"
           size="large"
           href="#"
         />
         <Card3
           id="13"
           image="/images/portfolio/pexels-clickerhappy-584399.jpg"
-          alt="Ex lorem"
+          alt="Mosaic Masters"
           size="large"
           href="#"
         />
         <Card3
           id="14"
           image="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
-          alt="Aliquip excepteur fugiat id"
+          alt="Hardwood Heritage"
           size="large"
           href="#"
         />
         <Card3
           id="15"
           image="/images/portfolio/pexels-pixabay-279719.jpg"
-          alt="Qui aliquip"
+          alt="Marble & Granite Co."
           size="large"
           href="#"
         />
         <Card3
           id="16"
           image="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-          alt="Consectetur magna sint"
+          alt="Reclaimed Wood Floors"
           size="large"
           href="#"
         />
         <Card3
           id="17"
           image="/images/portfolio/pexels-pixabay-269218.jpg"
-          alt="Adipiscing sint magna magna"
+          alt="Porcelain & Ceramic Studio"
           size="large"
           href="#"
         />
       </Grid>
 
-      <Heading as="h2">Reprehenderit enim</Heading>
+      <Heading as="h2">Textiles & Drapery</Heading>
       <Grid
         cols="grid-cols-3"
         className="mb-30"
@@ -151,41 +151,41 @@ export default function Section8() {
         <Card3
           id="18"
           image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-          alt="Sed sit reprehenderit"
+          alt="Silk Road Fabrics"
           size="large"
           href="#"
         />
         <Card3
           id="19"
           image="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-          alt="Laborum est nulla commodo et"
+          alt="Velvet & Linen Co."
           size="large"
           href="#"
         />
         <Card3
           id="20"
           image="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-          alt="Ullamco sit reprehenderit"
+          alt="Custom Drapery House"
           size="large"
           href="#"
         />
         <Card3
           id="21"
           image="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-          alt="Grace Health System - Dr. Brinker"
+          alt="Woven Wonders"
           size="large"
           href="#"
         />
         <Card3
           id="22"
           image="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-          alt="Velit sunt"
+          alt="Artisan Rugs & Carpets"
           size="large"
           href="#"
         />
       </Grid>
 
-      <Heading as="h2">Exercitation nostrud sunt culpa dolor</Heading>
+      <Heading as="h2">Specialty Artisans</Heading>
       <Grid
         cols="grid-cols-3"
         gap="gap-6"
@@ -194,14 +194,14 @@ export default function Section8() {
         <Card3
           id="23"
           image="/images/portfolio/pexels-dropshado-2251247.jpg"
-          alt="Sunt commodo elit"
+          alt="Ironwork & Metalcraft"
           size="large"
           href="#"
         />
         <Card3
           id="24"
           image="/images/portfolio/pexels-pixabay-276724.jpg"
-          alt="Commodo eiusmod minim consequat cillum"
+          alt="Glass & Mirror Studio"
           size="large"
           href="#"
         />
