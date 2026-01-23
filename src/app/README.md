@@ -5,46 +5,10 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 ## Overview
 
 - **Total Layouts:** 23
-- **Free Layouts:** 14
-- **Pro Layouts:** 9
+- **Free Layouts:** 17
+- **Pro Layouts:** 6
 
 ## Layouts
-
-#### Index
-
-<img src="../../public/layouts/index.jpg" alt="Index" width="350">
-
-**Slug:** `index`  
-**Path:** `(hero)/page.tsx`  
-**Layout:** `(hero)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
-
-#### Layout 1
-
-<img src="../../public/layouts/layout-1.jpg" alt="Layout 1" width="350">
-
-**Slug:** `layout-1`  
-**Path:** `(one-page-site)/layout-1/page.tsx`  
-**Layout:** `(one-page-site)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
-
-#### Layout 2
-
-<img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
-
-**Slug:** `layout-2`  
-**Path:** `(alternate)/layout-2/page.tsx`  
-**Layout:** `(alternate)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
 
 #### Before After
 
@@ -118,6 +82,18 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 ---
 
+#### Index
+
+<img src="../../public/layouts/index.jpg" alt="Index" width="350">
+
+**Slug:** `index`  
+**Path:** `(hero)/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
 #### Join Our Team
 
 <img src="../../public/layouts/join-our-team.jpg" alt="Join Our Team" width="350">
@@ -142,85 +118,25 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Meet The Team
+#### Layout 1
 
-<img src="../../public/layouts/meet-the-team.jpg" alt="Meet The Team" width="350">
+<img src="../../public/layouts/layout-1.jpg" alt="Layout 1" width="350">
 
-**Slug:** `meet-the-team`  
-**Path:** `(default)/meet-the-team/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
+**Slug:** `layout-1`  
+**Path:** `(one-page-site)/layout-1/page.tsx`  
+**Layout:** `(one-page-site)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
 
 ---
 
-#### Portfolio
+#### Layout 2
 
-<img src="../../public/layouts/portfolio.jpg" alt="Portfolio" width="350">
+<img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
 
-**Slug:** `portfolio`  
-**Path:** `(default)/portfolio/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Project Management
-
-<img src="../../public/layouts/project-management.jpg" alt="Project Management" width="350">
-
-**Slug:** `project-management`  
-**Path:** `(default)/project-management/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Residential
-
-<img src="../../public/layouts/residential.jpg" alt="Residential" width="350">
-
-**Slug:** `residential`  
-**Path:** `(default)/residential/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
-
-#### Services
-
-<img src="../../public/layouts/services.jpg" alt="Services" width="350">
-
-**Slug:** `services`  
-**Path:** `(default)/services/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Space Planning
-
-<img src="../../public/layouts/space-planning.jpg" alt="Space Planning" width="350">
-
-**Slug:** `space-planning`  
-**Path:** `(default)/space-planning/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Testimonials
-
-<img src="../../public/layouts/testimonials.jpg" alt="Testimonials" width="350">
-
-**Slug:** `testimonials`  
-**Path:** `(hero)/testimonials/page.tsx`  
-**Layout:** `(hero)/layout.tsx`  
+**Slug:** `layout-2`  
+**Path:** `(alternate)/layout-2/page.tsx`  
+**Layout:** `(alternate)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Pro  
 
@@ -270,7 +186,7 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-6/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -283,6 +199,90 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Pro  
+
+---
+
+#### Meet The Team
+
+<img src="../../public/layouts/meet-the-team.jpg" alt="Meet The Team" width="350">
+
+**Slug:** `meet-the-team`  
+**Path:** `(default)/meet-the-team/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Portfolio
+
+<img src="../../public/layouts/portfolio.jpg" alt="Portfolio" width="350">
+
+**Slug:** `portfolio`  
+**Path:** `(default)/portfolio/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Project Management
+
+<img src="../../public/layouts/project-management.jpg" alt="Project Management" width="350">
+
+**Slug:** `project-management`  
+**Path:** `(default)/project-management/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Residential
+
+<img src="../../public/layouts/residential.jpg" alt="Residential" width="350">
+
+**Slug:** `residential`  
+**Path:** `(default)/residential/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Services
+
+<img src="../../public/layouts/services.jpg" alt="Services" width="350">
+
+**Slug:** `services`  
+**Path:** `(default)/services/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Space Planning
+
+<img src="../../public/layouts/space-planning.jpg" alt="Space Planning" width="350">
+
+**Slug:** `space-planning`  
+**Path:** `(default)/space-planning/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Testimonials
+
+<img src="../../public/layouts/testimonials.jpg" alt="Testimonials" width="350">
+
+**Slug:** `testimonials`  
+**Path:** `(hero)/testimonials/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
 
 ---
 
