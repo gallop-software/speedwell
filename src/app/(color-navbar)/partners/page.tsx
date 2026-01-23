@@ -19,14 +19,14 @@ const metadata: PageMetadata = {
   title: 'Voluptate non deserunt veniam',
   description:
     'Eiusmod eiusmod sint dolor anim minim id sint reprehenderit ullamco pariatur nostrud sit aliquip laboris velit consequat eiusmod duis non labore non ut voluptate',
-  slug: 'case-studies',
+  slug: 'partners',
   featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
   focusKeyword: 'aenean commodo resources',
   readingTimeMinutes: 3,
   publishDate: '2025-10-13T00:00:00Z',
   modifiedDate: '2025-10-13T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/case-studies',
+    canonical: 'https://speedwell.gallop.software/partners',
   },
   openGraph: {
     title: 'Amet ut non fugiat',
