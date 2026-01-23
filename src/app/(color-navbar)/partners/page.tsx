@@ -1,14 +1,14 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Content54 from '@/blocks/content-54'
+import Content55 from '@/blocks/content-55'
 import Section4 from '@/blocks/section-4'
 import Section8 from '@/blocks/section-8'
 
 function Content() {
   return (
     <>
-      <Content54 />
+      <Content55 />
       <Section4 />
       <Section8 />
     </>
