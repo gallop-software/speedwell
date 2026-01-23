@@ -34,7 +34,7 @@ const testimonials = [
   },
 ]
 
-export default function Testimonial10() {
+export default function Testimonial5() {
   return (
     <Section className="py-24 md:py-32 bg-contrast relative overflow-hidden">
       {/* Decorative elements */}

@@ -9,7 +9,7 @@ import {
   VideoBackground,
 } from '@/components'
 
-export default function Hero20() {
+export default function Hero11() {
   return (
     <div className="relative bg-contrast overflow-hidden pt-navbar min-h-0 flex items-center justify-center">
       <VideoBackground

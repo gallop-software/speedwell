@@ -1,6 +1,6 @@
 import { Image, Heading, Paragraph, Span, Button, Buttons } from '@/components'
 
-export default function Hero21() {
+export default function Hero5() {
   return (
     <div className="relative h-screen max-h-[1200px] min-h-[900px] overflow-hidden">
       {/* Background gradient overlay */}
