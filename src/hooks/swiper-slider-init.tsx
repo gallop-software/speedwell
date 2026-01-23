@@ -42,10 +42,21 @@ const SwiperSliderInit = ({
   }, [swiperId, ref])
 
   useEffect(() => {
+    const swiper = swiperInstanceRef.current
+    if (!swiper) return
+
     if (inView) {
-      swiperInstanceRef.current?.autoplay?.start()
+      // Configure and start autoplay when in view
+      if (swiper.params) {
+        swiper.params.autoplay = {
+          delay: 4500,
+          pauseOnMouseEnter: false,
+          disableOnInteraction: true,
+        }
+      }
+      swiper.autoplay?.start()
     } else {
-      swiperInstanceRef.current?.autoplay?.stop()
+      swiper.autoplay?.stop()
     }
   }, [inView])
 
@@ -67,11 +78,7 @@ const SwiperSliderInit = ({
         enabled: true,
         onlyInViewport: true,
       },
-      autoplay: {
-        delay: 4500,
-        pauseOnMouseEnter: false,
-        disableOnInteraction: true,
-      },
+      autoplay: false, // Autoplay enabled only when in view
       on: {
         init: function () {
           // Fade in swiper after initialization

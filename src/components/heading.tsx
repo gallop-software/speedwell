@@ -32,6 +32,8 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   margin?: string
   /** Text alignment override */
   textAlign?: string
+  /** Disable automatic ID generation */
+  disableId?: boolean
 }
 
 export function Heading({
@@ -49,6 +51,7 @@ export function Heading({
   color = '',
   margin = '',
   textAlign = '',
+  disableId = false,
   ...props
 }: HeadingProps) {
   // Define base styles for different heading levels
@@ -149,8 +152,8 @@ export function Heading({
   const finalMargin = margin || defaults.margin
   const finalTextAlign = textAlign
 
-  // Generate ID from children if not provided
-  const headingId = id || generateIdFromChildren(children)
+  // Generate ID from children if not provided (unless disabled)
+  const headingId = disableId ? undefined : (id || generateIdFromChildren(children))
 
   return (
     <Element

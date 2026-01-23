@@ -5,12 +5,11 @@ import { Container } from './container'
 interface SectionProps {
   children: React.ReactNode
   className?: string
-  innerAlign?: 'wide' | 'content' | 'none' | 'full'
+  innerAlign?: 'wide' | 'content' | 'none' | 'full' | 'navbar'
   imageSrc?: string
   imageAlt?: string
   imageClassName?: string
   overlayColor?: string
-  backgroundColor?: string
   id?: string
 }
 
@@ -22,7 +21,6 @@ export function Section({
   imageAlt,
   imageClassName,
   overlayColor,
-  backgroundColor,
   id,
 }: SectionProps) {
   return (

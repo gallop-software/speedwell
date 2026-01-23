@@ -59,7 +59,7 @@ export default function RootLayout({
       style={rootStyle}
     >
       <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
-        <div className="overflow-hidden">{children}</div>
+        <div>{children}</div>
         <GalleryPopup />
         <SmoothScroll />
         {process.env.NODE_ENV === 'production' && <Analytics />}

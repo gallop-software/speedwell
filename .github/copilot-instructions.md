@@ -114,6 +114,7 @@ Use props over className for supported styles
 <Heading className="text-center mb-6 text-accent">Title</Heading>
 <Paragraph className="text-lg mb-4">Text content</Paragraph>
 <Label className="text-sm font-semibold">Category</Label>
+<Image src="/photo.jpg" className="rounded-lg aspect-4/5" />
 ```
 
 **Good:**
@@ -128,6 +129,7 @@ Use props over className for supported styles
 <Label fontSize="text-sm" fontWeight="font-semibold">
   Category
 </Label>
+<Image src="/photo.jpg" rounded="rounded-lg" aspect="aspect-4/5" />
 ```
 
 ### 008: Tailwind Only
@@ -215,6 +217,49 @@ Use List/Li, not raw ul/li tags
 
 - **ESLint Rule:** `gallop/prefer-list-components`
 - **Category:** components
+
+### 027: Luxon for Dates
+
+Use Luxon DateTime, not native JavaScript Date
+
+- **ESLint Rule:** `gallop/no-native-date`
+- **Category:** components
+
+**Bad:**
+
+```tsx
+// Native Date uses user's local timezone
+const today = new Date()
+today.setHours(0, 0, 0, 0) // Still in user's timezone!
+
+// This will be wrong for users in different timezones
+const selectedDate = new Date(2026, 0, 19)
+if (selectedDate < today) {
+  console.log('This comparison is timezone-dependent!')
+}
+```
+
+**Good:**
+
+```tsx
+import { DateTime } from 'luxon'
+
+// Business timezone from config/props
+const BUSINESS_TIMEZONE = 'America/Chicago'
+
+// Get "today" in business timezone
+const today = DateTime.now().setZone(BUSINESS_TIMEZONE).startOf('day')
+
+// Check if user-selected date is valid
+const selectedDate = DateTime.fromObject(
+  { year: 2026, month: 1, day: 19 },
+  { zone: BUSINESS_TIMEZONE }
+)
+
+if (selectedDate < today) {
+  console.log('Cannot select a date in the past')
+}
+```
 
 ## Documentation Patterns
 

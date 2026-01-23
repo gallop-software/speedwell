@@ -11,12 +11,14 @@ export default function useOffsetTop(top?: number) {
       state.lastScrollingDirection = state.scrollingDirection
       state.lastOffsetTop = state.offsetTop
       state.offsetTop = window.scrollY
-      if (state.offsetTop > state.lastOffsetTop) {
-        state.scrollingDirection = 'down'
-      } else if (state.offsetTop < state.lastOffsetTop) {
-        state.scrollingDirection = 'up'
-      } else {
-        state.scrollingDirection = 'none'
+      if (!state.lockScrollDirection) {
+        if (state.offsetTop > state.lastOffsetTop) {
+          state.scrollingDirection = 'down'
+        } else if (state.offsetTop < state.lastOffsetTop) {
+          state.scrollingDirection = 'up'
+        } else {
+          state.scrollingDirection = 'none'
+        }
       }
 
       if (state.dialogOpen === false) {

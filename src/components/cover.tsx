@@ -11,8 +11,9 @@ interface CoverProps {
   backgroundColor?: string
   height?: string
   className?: string
-  innerAlign?: 'wide' | 'none' | 'content'
+  innerAlign?: 'wide' | 'none' | 'content' | 'full' | 'navbar'
   parallax?: boolean
+  id?: string
 }
 
 export function Cover({
@@ -26,9 +27,11 @@ export function Cover({
   className,
   innerAlign,
   parallax = false,
+  id,
 }: CoverProps) {
   return (
     <div
+      id={id}
       className={clsx(
         backgroundColor || 'bg-body2',
         className,
@@ -40,18 +43,30 @@ export function Cover({
       {imageSrc && (
         <>
           {parallax ? (
-            <div
-              className={clsx(
-                'absolute inset-0 w-full h-full bg-fixed bg-top bg-no-repeat',
-                imageClassName
-              )}
-              style={{
-                backgroundImage: `url(${imageSrc})`,
-                backgroundSize: '100vw auto',
-              }}
-              role="img"
-              aria-label={imageAlt || ''}
-            />
+            <>
+              {/* Parallax background - only on lg+ */}
+              <div
+                className={clsx(
+                  'absolute inset-0 w-full h-full bg-fixed bg-center bg-no-repeat bg-cover hidden lg:block',
+                  imageClassName
+                )}
+                style={{
+                  backgroundImage: `url(${imageSrc})`,
+                }}
+                role="img"
+                aria-label={imageAlt || ''}
+              />
+              {/* Static image fallback - under lg */}
+              <Image
+                src={imageSrc}
+                size="full"
+                alt={imageAlt || ''}
+                className={clsx(
+                  'object-cover object-center absolute inset-0 w-full h-full lg:hidden',
+                  imageClassName
+                )}
+              />
+            </>
           ) : (
             <Image
               src={imageSrc}

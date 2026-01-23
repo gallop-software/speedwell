@@ -8,6 +8,7 @@ import {
   Label,
   Grid,
   CountUp,
+  BackgroundWallpaper1,
 } from '@/components'
 
 export default function Content1() {
@@ -16,34 +17,12 @@ export default function Content1() {
       id="discover"
       className="py-24 md:py-32 bg-body relative overflow-hidden"
     >
-      {/* Subtle background texture */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-[0.04]"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="cross-pattern"
-            width="60"
-            height="60"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#cross-pattern)"
-        />
-      </svg>
+      <BackgroundWallpaper1 />
 
       <Columns
         cols="grid-cols-1 lg:grid-cols-2"
         gap="gap-16 lg:gap-24"
+        className="relative"
         reverseColumns={false}
       >
         {/* Image Column */}

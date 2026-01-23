@@ -2,7 +2,7 @@ import { Section, Accent, Heading, Paragraph } from '@/components'
 
 export default function Content10() {
   return (
-    <Section className="relative py-30">
+    <Section className="relative py-30 overflow-hidden">
       <div className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-left-top bg-[length:700px] bg-[url('/images/geometric-1400x809.jpg')]"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent [background-image:linear-gradient(to_right,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_100%),linear-gradient(to_bottom,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_100%),linear-gradient(to_top,rgb(255_255_255)_0%,rgb(255_255_255_/_0%)_70%)]"></div>
       <Accent

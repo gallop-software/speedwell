@@ -30,6 +30,7 @@ The hook updates the following properties in the global `state` object:
 - `state.scrollingDirection`: Current direction ('up', 'down', or 'none')
 - `state.lastScrollingDirection`: Previous scroll direction
 - `state.isScrolling`: Boolean indicating if scrolled past the threshold (only when `state.dialogOpen` is false)
+- `state.lockScrollDirection`: When `true`, prevents direction updates (used during smooth scroll)
 
 ## Features
 
@@ -37,6 +38,7 @@ The hook updates the following properties in the global `state` object:
 - Detects scroll direction (up, down, or none)
 - Provides threshold-based scrolling state
 - Respects dialog open state (won't update `isScrolling` when dialog is open)
+- Respects `lockScrollDirection` flag (won't update direction when locked)
 - Uses passive event listener for better performance
 - Automatically cleans up event listeners on unmount
 

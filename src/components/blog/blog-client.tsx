@@ -295,7 +295,7 @@ export function BlogClient({
                       </Heading>
                     </Link>
                     {post.metadata.date && (
-                      <span className="font-medium text-accent !mb-0">
+                      <span className="font-medium text-accent mb-0!">
                         {new Date(post.metadata.date).toLocaleDateString(
                           'en-US',
                           {

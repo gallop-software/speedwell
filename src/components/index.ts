@@ -19,6 +19,8 @@ export { Navbar2 } from './navbar-2/index'
 export { Navbar3 } from './navbar-3/index'
 export { Gradient } from './gradient'
 export { BackgroundDiagonal1 } from './background-diagonal-1'
+export { BackgroundGeometry } from './background-geometry'
+export { default as BackgroundWallpaper1 } from './background-wallpaper-1'
 export { PageHeader } from './page-header'
 export { Accent } from './accent'
 export { Button } from './button'
@@ -51,11 +53,17 @@ export {
   FormCheckboxGroup,
   FormButton,
   FormName,
+  FormFirstName,
+  FormLastName,
+  DatePickerInput,
+  TimePickerInput,
 } from './form'
 export { CardTestimonial2 } from './card-testimonial-2'
+export { CardTestimonial3 } from './card-testimonial-3'
 export { Profile1 } from './profile-1'
 export { Profile2 } from './profile-2'
 export { Masonry } from './masonry'
+export { MasonryFilter } from './masonry-filter'
 export { BackgroundCanvas1 } from './background-canvas-1'
 export { ColorAnimation } from './color-animation'
 export { BackgroundCanvas2 } from './background-canvas-2'

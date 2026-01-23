@@ -2,24 +2,31 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { state } from '@/state'
 
 const SmoothScroll = () => {
   const offset = 40
   const pathname = usePathname()
 
   useEffect(() => {
-    const handleAnchorClick = (event: MouseEvent) => {
-      const anchor = event.currentTarget as HTMLAnchorElement
-      const hash = anchor.hash
-      if (!hash) return
-
+    const smoothScroll = (hash: string) => {
       const targetElement = document.querySelector(hash)
       if (targetElement) {
-        event.preventDefault()
+        state.scrollingDirection = 'down'
+        state.lockScrollDirection = true
+
+        // Unlock after scroll completes
+        window.addEventListener('scrollend', () => {
+          state.lockScrollDirection = false
+        }, { once: true })
+
+        // No offset for div/section elements
+        const tagName = targetElement.tagName.toLowerCase()
+        const scrollOffset = (tagName === 'div' || tagName === 'section') ? 0 : offset
 
         window.scrollTo({
           top:
-            targetElement.getBoundingClientRect().top + window.scrollY - offset,
+            targetElement.getBoundingClientRect().top + window.scrollY - scrollOffset,
           behavior: 'smooth',
         })
 
@@ -27,15 +34,46 @@ const SmoothScroll = () => {
       }
     }
 
+    // Main links: preventDefault for smooth scroll
+    const handleMainClick = (event: MouseEvent) => {
+      const anchor = event.currentTarget as HTMLAnchorElement
+      const hash = anchor.hash
+      if (!hash) return
+
+      const targetElement = document.querySelector(hash)
+      if (targetElement) {
+        event.preventDefault()
+        smoothScroll(hash)
+      }
+    }
+
+    // Header links: no preventDefault (allows CloseButton to work)
+    const handleHeaderClick = (event: MouseEvent) => {
+      const anchor = event.currentTarget as HTMLAnchorElement
+      const hash = anchor.hash
+      if (!hash) return
+
+      smoothScroll(hash)
+    }
+
     const attachListeners = () => {
-      const links = document.querySelectorAll<HTMLAnchorElement>(
-        'body a[href^="#"]:not(.no-anchor-scroll)'
+      const mainLinks = document.querySelectorAll<HTMLAnchorElement>(
+        'body main a[href^="#"]:not(.no-anchor-scroll)'
+      )
+      const headerLinks = document.querySelectorAll<HTMLAnchorElement>(
+        'body header a[href^="#"]:not(.no-anchor-scroll)'
       )
 
-      links.forEach((link) => {
-        // Avoid duplicate listeners by checking a data attribute
+      mainLinks.forEach((link) => {
         if (!link.dataset.smoothScrollAttached) {
-          link.addEventListener('click', handleAnchorClick)
+          link.addEventListener('click', handleMainClick)
+          link.dataset.smoothScrollAttached = 'true'
+        }
+      })
+
+      headerLinks.forEach((link) => {
+        if (!link.dataset.smoothScrollAttached) {
+          link.addEventListener('click', handleHeaderClick)
           link.dataset.smoothScrollAttached = 'true'
         }
       })
@@ -61,13 +99,23 @@ const SmoothScroll = () => {
       observer.disconnect()
 
       // Clean up listeners
-      const links = document.querySelectorAll<HTMLAnchorElement>(
-        'body a[href^="#"]:not(.no-anchor-scroll)'
+      const mainLinks = document.querySelectorAll<HTMLAnchorElement>(
+        'body main a[href^="#"]:not(.no-anchor-scroll)'
+      )
+      const headerLinks = document.querySelectorAll<HTMLAnchorElement>(
+        'body header a[href^="#"]:not(.no-anchor-scroll)'
       )
 
-      links.forEach((link) => {
+      mainLinks.forEach((link) => {
         if (link.dataset.smoothScrollAttached) {
-          link.removeEventListener('click', handleAnchorClick)
+          link.removeEventListener('click', handleMainClick)
+          delete link.dataset.smoothScrollAttached
+        }
+      })
+
+      headerLinks.forEach((link) => {
+        if (link.dataset.smoothScrollAttached) {
+          link.removeEventListener('click', handleHeaderClick)
           delete link.dataset.smoothScrollAttached
         }
       })

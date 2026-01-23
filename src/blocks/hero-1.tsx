@@ -78,7 +78,7 @@ export default function Hero1() {
           </Columns>
         </div>
       </Gradient>
-      <Section className="relative py-30">
+      <Section className="relative py-30 overflow-hidden">
         <div className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-top-left bg-size-[700px] bg-[url('/images/geometric-1400x809.jpg')]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%),linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%),linear-gradient(to_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_70%)]"></div>
         <Accent
