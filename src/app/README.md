@@ -1,50 +1,14 @@
 # Speedwell Layouts
 
-A collection of 23 pre-built page layouts for the Speedwell template.
+A collection of 22 pre-built page layouts for the Speedwell template.
 
 ## Overview
 
-- **Total Layouts:** 23
-- **Free Layouts:** 17
+- **Total Layouts:** 22
+- **Free Layouts:** 16
 - **Pro Layouts:** 6
 
 ## Layouts
-
-#### Index
-
-<img src="../../public/layouts/index.jpg" alt="Index" width="350">
-
-**Slug:** `index`  
-**Path:** `(hero)/page.tsx`  
-**Layout:** `(hero)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Layout 2
-
-<img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
-
-**Slug:** `layout-2`  
-**Path:** `(alternate)/layout-2/page.tsx`  
-**Layout:** `(alternate)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
-
-#### Layout 3
-
-<img src="../../public/layouts/layout-3.jpg" alt="Layout 3" width="350">
-
-**Slug:** `layout-3`  
-**Path:** `(default)/layout-3/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
 
 #### Before After
 
@@ -52,18 +16,6 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 **Slug:** `before-after`  
 **Path:** `(default)/before-after/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Case Studies
-
-<img src="../../public/layouts/case-studies.jpg" alt="Case Studies" width="350">
-
-**Slug:** `case-studies`  
-**Path:** `(default)/case-studies/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
@@ -118,6 +70,18 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 ---
 
+#### Index
+
+<img src="../../public/layouts/index.jpg" alt="Index" width="350">
+
+**Slug:** `index`  
+**Path:** `(hero)/page.tsx`  
+**Layout:** `(hero)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
 #### Join Our Team
 
 <img src="../../public/layouts/join-our-team.jpg" alt="Join Our Team" width="350">
@@ -151,6 +115,30 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 **Layout:** `(one-page-site)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
+
+---
+
+#### Layout 2
+
+<img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
+
+**Slug:** `layout-2`  
+**Path:** `(alternate)/layout-2/page.tsx`  
+**Layout:** `(alternate)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Pro  
+
+---
+
+#### Layout 3
+
+<img src="../../public/layouts/layout-3.jpg" alt="Layout 3" width="350">
+
+**Slug:** `layout-3`  
+**Path:** `(default)/layout-3/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Pro  
 
 ---
 
@@ -214,6 +202,18 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 ---
 
+#### Partners
+
+<img src="../../public/layouts/partners.jpg" alt="Partners" width="350">
+
+**Slug:** `partners`  
+**Path:** `(color-navbar)/partners/page.tsx`  
+**Layout:** `(color-navbar)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
 #### Portfolio
 
 <img src="../../public/layouts/portfolio.jpg" alt="Portfolio" width="350">
@@ -244,18 +244,6 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 **Slug:** `residential`  
 **Path:** `(default)/residential/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Services
-
-<img src="../../public/layouts/services.jpg" alt="Services" width="350">
-
-**Slug:** `services`  
-**Path:** `(default)/services/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
