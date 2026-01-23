@@ -1,10 +1,13 @@
-import { ProBlock } from '@/components'
+import { Section, FancyHeading, Blog } from '@/components'
 
 export default function Archive1() {
   return (
-    <ProBlock
-      blockSlug="archive-1"
-      blockName="Archive 1"
-    />
+    <Section className="bg-body2 py-20">
+      <FancyHeading
+        text="Latest Projects"
+        accent="explore our portfolio"
+      />
+      <Blog categoriesExclude={['Portfolio']} />
+    </Section>
   )
 }
