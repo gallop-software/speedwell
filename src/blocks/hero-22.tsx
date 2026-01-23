@@ -2,7 +2,7 @@ import { Image, Heading, Paragraph, Span, Button, Buttons } from '@/components'
 
 export default function Hero22() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative h-screen max-h-[1200px] min-h-[900px] overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 z-10"></div>
 
@@ -16,7 +16,7 @@ export default function Hero22() {
       />
 
       {/* Content */}
-      <div className="relative z-20 min-h-screen flex flex-col justify-center items-center text-center px-6 pt-navbar mt-20 md:mt-0 mb-20">
+      <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6 pt-navbar">
         <div className="max-w-4xl mx-auto">
           {/* Brand accent */}
           <Paragraph
