@@ -22,6 +22,18 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 
 ---
 
+#### Layout 1
+
+<img src="../../public/layouts/layout-1.jpg" alt="Layout 1" width="350">
+
+**Slug:** `layout-1`  
+**Path:** `(one-page-site)/layout-1/page.tsx`  
+**Layout:** `(one-page-site)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
 #### Layout 2
 
 <img src="../../public/layouts/layout-2.jpg" alt="Layout 2" width="350">
@@ -29,18 +41,6 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Slug:** `layout-2`  
 **Path:** `(alternate)/layout-2/page.tsx`  
 **Layout:** `(alternate)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Pro  
-
----
-
-#### Layout 3
-
-<img src="../../public/layouts/layout-3.jpg" alt="Layout 3" width="350">
-
-**Slug:** `layout-3`  
-**Path:** `(default)/layout-3/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Pro  
 
@@ -130,15 +130,15 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Layout 1
+#### Layout 3
 
-<img src="../../public/layouts/layout-1.jpg" alt="Layout 1" width="350">
+<img src="../../public/layouts/layout-3.jpg" alt="Layout 3" width="350">
 
-**Slug:** `layout-1`  
-**Path:** `(one-page-site)/layout-1/page.tsx`  
-**Layout:** `(one-page-site)/layout.tsx`  
+**Slug:** `layout-3`  
+**Path:** `(default)/layout-3/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
