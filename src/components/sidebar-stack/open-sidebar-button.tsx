@@ -1,7 +1,6 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import type { IconifyIcon } from '@iconify/react'
 import { Button } from '@/components'
 import { useSidebarStack } from './context'
 
@@ -10,7 +9,7 @@ export interface OpenSidebarButtonProps {
   componentId: string
   title: string
   className?: string
-  icon?: IconifyIcon
+  icon?: { body: string; width?: number; height?: number }
   iconPlacement?: 'before' | 'after'
 }
 
