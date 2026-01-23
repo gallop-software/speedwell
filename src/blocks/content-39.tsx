@@ -11,7 +11,7 @@ export default function Content39() {
   return (
     <Section
       id="features"
-      className="py-30 bg-linear-to-b from-white from-28% via-gray-50 via-70% to-gray-100 relative overflow-hidden"
+      className="py-30 relative overflow-hidden"
     >
       <div className="relative">
         <Columns

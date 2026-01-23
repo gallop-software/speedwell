@@ -50,11 +50,11 @@ export default function Hero15() {
               </Paragraph>
               <Buttons className="">
                 <Button
-                  href="#features"
+                  href="#pricing"
                   icon={arrowDownIcon}
                   iconPlacement="after"
                 >
-                  Explore Features
+                  Explore Pricing
                 </Button>
               </Buttons>
             </Column>
