@@ -5,11 +5,11 @@ import { Navbar } from '@/components'
 import Cover4 from '@/blocks/cover-4'
 import Content30 from '@/blocks/content-30'
 import Content31 from '@/blocks/content-31'
-import Content48 from '@/blocks/content-48'
-import Content49 from '@/blocks/content-49'
-import Content50 from '@/blocks/content-50'
-import Content51 from '@/blocks/content-51'
-import Content52 from '@/blocks/content-52'
+import Content27 from '@/blocks/content-27'
+import Content26 from '@/blocks/content-26'
+import Content25 from '@/blocks/content-25'
+import Content24 from '@/blocks/content-24'
+import Content23 from '@/blocks/content-23'
 
 function Content() {
   return (
@@ -17,11 +17,11 @@ function Content() {
       <Cover4 />
       <Content30 />
       <Content31 />
-      <Content48 />
-      <Content49 />
-      <Content50 />
-      <Content51 />
-      <Content52 />
+      <Content27 />
+      <Content26 />
+      <Content25 />
+      <Content24 />
+      <Content23 />
     </>
   )
 }

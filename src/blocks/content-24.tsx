@@ -1,48 +1,67 @@
 import {
   Section,
+  Heading,
+  Paragraph,
+  Quote,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
 } from '@/components'
 
 export default function Content24() {
   return (
-    <Section className="py-30 bg-body">
+    <Section className="bg-body-light py-30">
       <Columns
-        reverseColumns={false}
+        reverseColumns
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
-        <Column className="aspect-12/11 relative">
+        <Column>
           <Image
-            src="/images/portfolio/pexels-pixabay-276724.jpg"
-            alt="Incididunt est aliqua velit"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
-            alt="Sed ut elit ut ea"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            src="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
+            alt="Christopher Thompson - Color and Materials Specialist"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Color & Materials Specialist
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            Commodo adipiscing nisi incididunt
+            Christopher Thompson
           </Heading>
           <Paragraph>
-            Ut elit aute et id reprehenderit laboris esse sit tempor voluptate
-            commodo ut nisi ipsum minim laborum aliqua consectetur veniam culpa
-            laboris anim ullamco voluptate nostrud tempor nostrud proident
-            cupidatat laborum elit esse qui id excepteur et velit nisi
-            incididunt non quis duis laborum commodo ipsum veniam
+            Christopher has an exceptional eye for color theory and material
+            composition. His expertise in selecting the perfect palette and
+            finishes elevates every project, creating cohesive designs that feel
+            both harmonious and dynamic. With a background in fine arts and
+            interior design, Christopher brings a unique perspective to color
+            consultation, helping clients move beyond safe choices to discover
+            palettes that truly resonate.
           </Paragraph>
+          <Paragraph>
+            He stays at the forefront of material innovation, constantly
+            researching new textiles, finishes, and sustainable options. His
+            knowledge of how materials interact with light and space ensures
+            that every selection not only looks beautiful but performs well over
+            time.
+          </Paragraph>
+          <Quote>
+            Color has the power to transform not just a space, but how you feel
+            when you are in it. The right palette can energize, calm, or inspire
+            depending on what you need.
+          </Quote>
         </Column>
       </Columns>
     </Section>

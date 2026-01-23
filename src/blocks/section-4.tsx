@@ -12,22 +12,23 @@ export default function Section4() {
     <Section className="py-30">
       <Columns reverseColumns={false}>
         <Column>
-          <Heading as="h2">Voluptate labore</Heading>
+          <Heading as="h2">Artisan Woodworks</Heading>
           <Paragraph className="max-w-4xl">
-            Sunt anim ipsum elit veniam pariatur cupidatat mollit laborum
-            reprehenderit dolor nisi ad elit in tempor occaecat quis voluptate
-            sunt cillum ex pariatur incididunt consectetur laboris elit duis
-            veniam aute velit et aliqua excepteur et esse laborum sit sed sit
-            exercitation pariatur officia consectetur duis non minim excepteur
-            velit id anim minim
+            Founded in 1987, Artisan Woodworks specializes in custom cabinetry
+            and millwork for luxury residential projects. Their master
+            craftsmen bring generations of expertise to every piece, from
+            hand-carved mantels to precision-fitted built-ins. We have
+            partnered with them on over 50 projects, and their commitment to
+            sustainable sourcing and flawless execution makes them our go-to
+            for bespoke wood elements.
           </Paragraph>
         </Column>
         <Column>
           <Card3
             id="case-study-1"
             image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
-            alt="Anim consequat mollit aliqua et fugiat fugiat sint ea excepteur pariatur id duis"
-            href="https://napiermidwiferybilling.com/contact/"
+            alt="Custom cabinetry by Artisan Woodworks"
+            href="#"
           />
         </Column>
       </Columns>

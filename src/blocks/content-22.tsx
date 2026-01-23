@@ -1,88 +1,31 @@
 import {
   Section,
-  Columns,
-  Column,
-  Image,
   Heading,
   Paragraph,
-  Gallery,
-  GalleryItem,
+  BackgroundGeometry2,
 } from '@/components'
 
 export default function Content22() {
   return (
-    <Section className="bg-body py-30">
-      <Columns gap="gap-10 lg:gap-20">
-        <Column className="aspect-4/5 relative">
-          <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
-            alt="Qui do cupidatat non aute nulla"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-            alt="Pariatur elit tempor"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
-            size="large"
-          />
-        </Column>
-        <Column>
+    <>
+      <Section className="relative py-30">
+        <BackgroundGeometry2>designers</BackgroundGeometry2>
+        <div className="relative">
           <Heading
-            as="h2"
-            id="services"
+            id="learn-more"
+            as="h1"
+            className="max-w-2xl"
           >
-            Sed reprehenderit pariatur
+            Our Trusted Design Partners
           </Heading>
-          <Paragraph>
-            Ut ex amet ea minim sint anim anim ipsum dolor aute adipiscing
-            deserunt ea aliquip anim ut qui sit ea fugiat pariatur commodo ut
-            cillum id consequat deserunt cillum consectetur nulla non ea laborum
-            et consequat ullamco enim sed deserunt occaecat qui reprehenderit
-            cillum mollit aliquip magna qui enim est culpa elit sunt irure et ut
-            sint enim aliqua qui voluptate et
+          <Paragraph className="max-w-lg">
+            We believe exceptional interiors are built through collaboration.
+            Our network of skilled artisans, premium suppliers, and specialty
+            craftsmen share our commitment to quality and attention to detail.
+            Together, we bring your vision to life.
           </Paragraph>
-        </Column>
-      </Columns>
-      <Gallery
-        columns={5}
-        align="none"
-        className="mt-10 lg:mt-20"
-      >
-        <GalleryItem
-          src="/images/portfolio/pexels-pixabay-269252.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/pexels-dropshado-2251247.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-          size="large"
-        />
-        <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
-          size="large"
-        />
-      </Gallery>
-    </Section>
+        </div>
+      </Section>
+    </>
   )
 }

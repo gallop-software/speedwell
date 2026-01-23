@@ -6,7 +6,8 @@ import Content11 from '@/blocks/content-11'
 import Content12 from '@/blocks/content-12'
 import Content13 from '@/blocks/content-13'
 import CallToAction2 from '@/blocks/call-to-action-2'
-import PageFooter from '@/template/page-footer'
+import Cover2 from '@/blocks/cover-2'
+import Testimonial2 from '@/blocks/testimonial-2'
 
 function Content() {
   return (
@@ -16,7 +17,8 @@ function Content() {
       <Content12 />
       <Content13 />
       <CallToAction2 />
-      <PageFooter />
+      <Cover2 />
+      <Testimonial2 />
     </>
   )
 }

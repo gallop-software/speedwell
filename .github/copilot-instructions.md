@@ -132,6 +132,33 @@ Use props over className for supported styles
 <Image src="/photo.jpg" rounded="rounded-lg" aspect="aspect-4/5" />
 ```
 
+### 006: Block Naming
+
+{type}-{n}.tsx naming, PascalCase exports
+
+- **ESLint Rule:** `gallop/block-naming-convention`
+- **Category:** structure
+
+**Bad:**
+
+```
+src/blocks/
+├── Hero.tsx            ❌ No number
+├── hero_1.tsx          ❌ Underscore instead of hyphen
+├── HeroSection.tsx     ❌ Wrong naming pattern
+├── cta-1.tsx           ❌ Abbreviation not in type list
+```
+
+**Good:**
+
+```
+src/blocks/
+├── hero-1.tsx          → export default function Hero1()
+├── hero-2.tsx          → export default function Hero2()
+├── section-1.tsx       → export default function Section1()
+├── call-to-action-1.tsx → export default function CallToAction1()
+```
+
 ### 008: Tailwind Only
 
 No inline styles in blocks, components allowed for dynamic values
@@ -206,7 +233,7 @@ Use react-intersection-observer package, not native API
 
 ### 025: No Components in Blocks
 
-Component functions must be in components folder, not blocks
+Exported component functions must be in components folder; non-exported content components are allowed in blocks
 
 - **ESLint Rule:** `gallop/no-component-in-blocks`
 - **Category:** structure
@@ -268,10 +295,6 @@ These patterns are not enforced by ESLint but should be followed.
 ### 005: Page Structure
 
 PageWrapper, generatePageMetadata pattern
-
-### 006: Block Naming
-
-{type}-{n}.tsx naming, PascalCase exports
 
 ### 007: Import Paths
 

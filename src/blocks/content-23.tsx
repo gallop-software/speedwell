@@ -1,62 +1,60 @@
 import {
   Section,
+  Heading,
+  Paragraph,
+  Quote,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
 } from '@/components'
 
 export default function Content23() {
   return (
-    <Section className="py-30 bg-linear-to-b from-body2 to-body-light">
+    <Section className="bg-body2 py-30">
       <Columns
-        reverseColumns
+        reverseColumns={false}
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
-        <Column className="aspect-5/5 relative">
+        <Column>
           <Image
-            src="/images/portfolio/pexels-jworks1124-342800.jpg"
-            alt="Id consectetur consectetur proident dolor ad"
-            className="absolute top-0 left-0 z-10 w-[75%] object-cover"
+            src="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
+            alt="Marcus Foster - Project Manager"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/pexels-pixabay-259962.jpg"
-            alt="Sed commodo enim nisi excepteur incididunt"
-            className="absolute bottom-0 right-0 z-0 w-[75%] object-cover shadow-2xl"
-            rounded="rounded-t-none"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Project Manager
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            Id veniam consequat consequat proident cupidatat duis sunt dolor
+            Marcus Foster
           </Heading>
           <Paragraph>
-            Nostrud ex consectetur et est minim qui eiusmod consectetur non non
-            excepteur consectetur dolor ut commodo amet sint in et nisi cillum
-            fugiat aliqua irure qui consequat do fugiat dolor duis deserunt
-            ipsum proident sed laboris do qui
+            Marcus is the backbone of every Timmerman project, ensuring seamless
+            execution from concept to completion. With his PMP certification and
+            years of experience coordinating complex design projects, he keeps
+            timelines on track, budgets in check, and communication flowing
+            between all parties. Clients appreciate his proactive approach and
+            ability to solve problems before they become issues.
           </Paragraph>
-          <Paragraph>
-            Qui est excepteur excepteur laborum cupidatat velit dolore sunt
-            proident deserunt dolor officia deserunt consectetur amet sint est
-            adipiscing irure enim minim elit anim excepteur veniam aliquip
-            consectetur ipsum ipsum sit sunt officia cupidatat culpa officia
-            enim ullamco quis veniam deserunt aliquip dolore non
-          </Paragraph>
-          <Paragraph>
-            Sint sit lorem sit excepteur exercitation laboris dolore proident in
-            consequat in incididunt dolor irure anim reprehenderit consectetur
-            fugiat id ea sunt consequat culpa culpa nostrud esse laborum anim ut
-            sed sit culpa incididunt commodo nulla laboris cupidatat laboris
-            consequat deserunt nostrud cupidatat anim excepteur sed ex commodo
-          </Paragraph>
+          <Quote>
+            Great design deserves flawless execution. My job is to handle all
+            the logistics so our clients can focus on the exciting part—watching
+            their vision come to life. Every detail matters, and I make sure
+            nothing falls through the cracks.
+          </Quote>
         </Column>
       </Columns>
     </Section>

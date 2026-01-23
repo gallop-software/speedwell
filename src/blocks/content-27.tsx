@@ -1,54 +1,69 @@
 import {
   Section,
+  Heading,
+  Paragraph,
+  Quote,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
 } from '@/components'
 
 export default function Content27() {
   return (
-    <Section className="py-30 bg-body-dark">
+    <Section
+      className="bg-body py-30"
+      id="our-team"
+    >
       <Columns
-        reverseColumns={false}
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
-        <Column className="aspect-4/5 relative">
+        <Column>
           <Image
-            src="/images/portfolio/pexels-burst-545012.jpg"
-            alt="Occaecat elit in dolor ex elit"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-            alt="Cupidatat dolore et"
-            className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            src="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
+            alt="James Mitchell - Principal Designer and Founder"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Principal Designer & Founder
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            Reprehenderit dolore fugiat aliqua id incididunt ullamco nisi
-            ullamco
+            James Mitchell
           </Heading>
           <Paragraph>
-            Ea tempor nulla dolore enim consectetur ad eiusmod deserunt elit
-            officia anim commodo cillum duis amet laborum elit anim officia
-            minim ad aliquip ea amet mollit laborum velit
+            With over 15 years of experience in residential and commercial
+            design, James founded Timmerman with a vision to create spaces that
+            are both beautiful and deeply personal. His philosophy centers on
+            listening first, understanding his clients' lifestyles, and
+            translating their dreams into functional, stunning realities.
+            James's work has been featured in numerous design publications, and
+            he has earned a reputation for his attention to detail and
+            collaborative approach.
           </Paragraph>
           <Paragraph>
-            Eiusmod culpa ipsum sunt nulla culpa laboris in id velit consequat
-            magna in enim occaecat enim anim id cillum labore consequat aliqua
-            in aliquip sint ipsum consectetur veniam cupidatat eiusmod et sunt
-            ad ullamco aliqua quis velit fugiat ut reprehenderit non quis est
-            mollit sit sunt non lorem
+            James holds a degree in Interior Architecture from Rhode Island
+            School of Design and is a certified member of ASID. When he is not
+            designing, you can find him exploring antique markets, traveling for
+            design inspiration, or mentoring young designers entering the field.
           </Paragraph>
+          <Quote>
+            Great design is not about following trends—it is about creating
+            timeless spaces that truly enhance how people live and work every
+            single day.
+          </Quote>
         </Column>
       </Columns>
     </Section>

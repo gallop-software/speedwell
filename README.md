@@ -76,7 +76,6 @@ speedwell/
 │   │   ├── (default)/         # Default layout route group
 │   │   │   ├── layout.tsx     # Default navbar layout
 │   │   │   ├── category/      # Category pages
-│   │   │   ├── services/      # Service pages
 │   │   │   └── .../           # Other page routes
 │   │   ├── (hero)/            # Hero layout route group
 │   │   │   ├── layout.tsx     # Hero navbar layout
@@ -102,19 +101,18 @@ speedwell/
 │   │   └── *.png, *.ico       # App icons and favicon
 │   ├── blog/                  # Blog post content (TSX files)
 │   ├── blocks/                # Reusable content blocks
-│   │   ├── hero-*.tsx         # Hero sections (1-15)
-│   │   ├── content-*.tsx      # Content sections (1-11)
-│   │   ├── call-to-action-*.tsx  # CTAs (1-6)
-│   │   ├── contact-*.tsx      # Contact sections (1-4)
-│   │   ├── cover-*.tsx        # Cover sections
-│   │   ├── profile-*.tsx      # Profile sections
-│   │   ├── testimonial-*.tsx  # Testimonials
-│   │   ├── about-*.tsx        # About sections
-│   │   ├── accordion-1.tsx    # Accordion component
-│   │   ├── application-1.tsx  # Application section
-│   │   ├── blog-*.tsx         # Blog listing
-│   │   ├── partners-1.tsx     # Partners section
-│   │   ├── pricing-1.tsx      # Pricing section
+│   │   ├── hero-*.tsx         # Hero sections (1-19)
+│   │   ├── content-*.tsx      # Content sections (1-46)
+│   │   ├── section-*.tsx      # Section layouts (1-10)
+│   │   ├── call-to-action-*.tsx  # CTAs (1-7)
+│   │   ├── testimonial-*.tsx  # Testimonials (1-9)
+│   │   ├── form-*.tsx         # Form sections (1-7)
+│   │   ├── cover-*.tsx        # Cover sections (1-7)
+│   │   ├── archive-*.tsx      # Archive layouts (1-3)
+│   │   ├── about-*.tsx        # About sections (1-3)
+│   │   ├── pricing-*.tsx      # Pricing sections (1-2)
+│   │   ├── process-*.tsx      # Process sections (1)
+│   │   ├── sidebar-*.tsx      # Sidebar sections (1)
 │   │   └── README.md          # Blocks documentation
 │   ├── components/            # React components
 │   │   ├── navbar/           # Main navigation
@@ -139,7 +137,6 @@ speedwell/
 │   ├── styles/               # Global styles & fonts
 │   │   ├── fonts/           # Font files & management
 │   │   └── globals.css
-│   ├── template/             # Page templates
 │   ├── tools/                # Utility tools
 │   ├── types/                # TypeScript types
 │   ├── utils/                # Helper functions

@@ -1,73 +1,67 @@
 import {
   Section,
+  Heading,
+  Paragraph,
+  Quote,
   Columns,
   Column,
   Image,
-  Heading,
-  Paragraph,
-  Buttons,
-  Button,
 } from '@/components'
-import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content26() {
   return (
-    <Section className="py-30 bg-body2">
+    <Section className="bg-body-light py-30">
       <Columns
-        reverseColumns={true}
+        reverseColumns
+        align="items-start"
         gap="gap-10 lg:gap-20"
       >
-        <Column className="aspect-4/5 relative">
+        <Column className="relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-161758.jpg"
-            alt="Adipiscing deserunt ea aliquip ut sint"
-            className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-            size="large"
-          />
-          <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-            alt="Ad eiusmod elit aliquip"
-            className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
-            rounded="rounded-b-none rounded-t-full"
+            src="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
+            alt="Emily Chen - Senior Commercial Designer"
+            className="w-full object-cover shadow-2xl max-w-lg mx-auto"
+            rounded="rounded-t-full"
             size="large"
           />
         </Column>
         <Column>
           <Heading
             as="h3"
+            styleAs="h3"
+            margin="mb-2"
+            fontSize="text-3xl"
+            color="text-accent5"
+          >
+            Senior Commercial Designer
+          </Heading>
+          <Heading
+            as="h4"
             styleAs="h2"
           >
-            Ad ut anim id pariatur
+            Emily Chen
           </Heading>
           <Paragraph>
-            Cillum cupidatat officia mollit dolor laboris voluptate occaecat
-            elit veniam dolore nisi in id nulla sit aliquip minim consequat
-            mollit incididunt sed ea
+            Emily specializes in creating innovative commercial spaces that
+            balance brand identity with employee wellbeing. With a background in
+            corporate design and workplace strategy, she has transformed
+            offices, retail spaces, and hospitality venues for clients ranging
+            from tech startups to established corporations. Her designs are
+            known for maximizing natural light, promoting collaboration, and
+            incorporating sustainable materials.
           </Paragraph>
           <Paragraph>
-            Incididunt esse duis laborum nulla labore labore sed do aliqua in in
-            cillum dolor laborum anim duis ipsum tempor magna pariatur ad
-            cupidatat sed fugiat tempor dolore laboris excepteur duis fugiat
-            aliqua minim exercitation amet sint ut incididunt fugiat nulla velit
-            duis fugiat amet incididunt pariatur qui officia in id
+            A graduate of Parsons School of Design, Emily brings a strategic
+            mindset to every project. She stays current with workplace trends
+            and ergonomic research to create environments that boost
+            productivity and employee satisfaction. Her portfolio includes
+            award-winning office designs that have been featured in
+            Architectural Digest and Interior Design Magazine.
           </Paragraph>
-          <Paragraph>
-            Laboris nisi incididunt nostrud mollit fugiat enim fugiat ex laboris
-            do velit aliqua nulla laboris est magna ipsum ut non sint nisi
-            reprehenderit culpa consectetur excepteur aliqua est aliqua anim
-            nisi amet in adipiscing exercitation ut pariatur ex ad sunt ad irure
-            sunt exercitation cupidatat
-          </Paragraph>
-          <Buttons>
-            <Button
-              variant="primary"
-              href="https://spinningbabies.com"
-              icon={arrowRightIcon}
-              iconPlacement="after"
-            >
-              Ipsum fugiat nisi laboris
-            </Button>
-          </Buttons>
+          <Quote>
+            The best commercial spaces inspire people to do their best work
+            while reflecting the unique culture and values of the organization.
+          </Quote>
         </Column>
       </Columns>
     </Section>

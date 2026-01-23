@@ -1,11 +1,11 @@
 # Speedwell Layouts
 
-A collection of 23 pre-built page layouts for the Speedwell template.
+A collection of 22 pre-built page layouts for the Speedwell template.
 
 ## Overview
 
-- **Total Layouts:** 23
-- **Free Layouts:** 17
+- **Total Layouts:** 22
+- **Free Layouts:** 16
 - **Pro Layouts:** 6
 
 ## Layouts
@@ -52,18 +52,6 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 **Slug:** `before-after`  
 **Path:** `(default)/before-after/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
-#### Case Studies
-
-<img src="../../public/layouts/case-studies.jpg" alt="Case Studies" width="350">
-
-**Slug:** `case-studies`  
-**Path:** `(default)/case-studies/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
@@ -214,6 +202,18 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 ---
 
+#### Partners
+
+<img src="../../public/layouts/partners.jpg" alt="Partners" width="350">
+
+**Slug:** `partners`  
+**Path:** `(color-navbar)/partners/page.tsx`  
+**Layout:** `(color-navbar)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
 #### Portfolio
 
 <img src="../../public/layouts/portfolio.jpg" alt="Portfolio" width="350">
@@ -250,18 +250,6 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Services
-
-<img src="../../public/layouts/services.jpg" alt="Services" width="350">
-
-**Slug:** `services`  
-**Path:** `(default)/services/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free  
-
----
-
 #### Space Planning
 
 <img src="../../public/layouts/space-planning.jpg" alt="Space Planning" width="350">
@@ -283,6 +271,3 @@ A collection of 23 pre-built page layouts for the Speedwell template.
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
 **Tier:** Free  
-
----
-
