@@ -4,7 +4,8 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import Hero12 from '@/blocks/hero-12'
 import Content46 from '@/blocks/content-46'
 import CallToAction6 from '@/blocks/call-to-action-6'
-import PageFooter from '@/template/page-footer'
+import Cover2 from '@/blocks/cover-2'
+import Testimonial2 from '@/blocks/testimonial-2'
 
 function Content() {
   return (
@@ -12,7 +13,8 @@ function Content() {
       <Hero12 />
       <Content46 />
       <CallToAction6 />
-      <PageFooter />
+      <Cover2 />
+      <Testimonial2 />
     </>
   )
 }

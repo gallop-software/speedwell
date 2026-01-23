@@ -7,7 +7,8 @@ import Content6 from '@/blocks/content-6'
 import Content7 from '@/blocks/content-7'
 import Content8 from '@/blocks/content-8'
 import Content9 from '@/blocks/content-9'
-import PageFooter from '@/template/page-footer'
+import Cover2 from '@/blocks/cover-2'
+import Testimonial2 from '@/blocks/testimonial-2'
 
 function Content() {
   return (
@@ -18,7 +19,8 @@ function Content() {
       <Content7 />
       <Content8 />
       <Content9 />
-      <PageFooter />
+      <Cover2 />
+      <Testimonial2 />
     </>
   )
 }
