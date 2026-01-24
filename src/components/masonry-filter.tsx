@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import clsx from 'clsx'
 import { Masonry } from '@/components/masonry'
 import { Image } from '@/components/image'
 import { Span } from '@/components/span'
@@ -83,7 +82,7 @@ export function MasonryFilter({
         <Masonry
           gap={gap}
           breakpoints={breakpoints}
-          className={className}
+          className={className ?? ''}
         >
           {filteredItems.map((item) => (
             <motion.div
