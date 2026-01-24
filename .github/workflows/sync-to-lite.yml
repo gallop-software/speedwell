@@ -35,8 +35,8 @@ jobs:
 
       - name: Sync files from Pro to Lite
         run: |
-          # Copy all files except .git
-          rsync -av --exclude='.git' --exclude='node_modules' pro/ lite/
+          # Copy all files except .git, node_modules, and workflow files
+          rsync -av --exclude='.git' --exclude='node_modules' --exclude='.github/workflows/sync-to-lite.yml' pro/ lite/
 
       - name: Install dependencies and run blocks:lite
         working-directory: lite
