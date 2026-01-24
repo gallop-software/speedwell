@@ -11,7 +11,6 @@ import clsx from 'clsx'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark'
 import { Icon } from '@/components/icon'
 import { useSidebarStack, type SidebarItem } from './context'
-import { LightboxHandler } from '@/components/lightbox/lightbox-handler'
 
 /** Lock body scroll when sidebar is open */
 function useBodyScrollLock(isLocked: boolean) {
@@ -78,7 +77,6 @@ function AsyncSidebarPanel({
   onClose,
 }: AsyncSidebarPanelProps) {
   const panelRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [content, setContent] = useState<ReactNode>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -146,7 +144,7 @@ function AsyncSidebarPanel({
       e.preventDefault()
       e.stopPropagation()
       const title = link.getAttribute('data-sidebar-title') || ''
-      push({ title, componentId: sidebarComponent })
+      push({ title, componentId: sidebarComponent, headerContent: item.headerContent })
       return
     }
 
@@ -158,7 +156,7 @@ function AsyncSidebarPanel({
       const slug = blogPostMatch[1]
       // Try to get title from link text or use slug
       const title = link.textContent?.trim() || slug
-      push({ title, componentId: slug })
+      push({ title, componentId: slug, headerContent: item.headerContent })
       return
     }
 
@@ -192,9 +190,13 @@ function AsyncSidebarPanel({
         {/* Header */}
         <div className="sticky top-0 z-10 bg-body/95 backdrop-blur-sm border-b border-gray-200">
           <div className="flex items-center justify-between px-4 md:px-8 py-4">
-            <h2 className="text-lg font-semibold text-gray-900 truncate">
-              {item.title}
-            </h2>
+            {item.headerContent ? (
+              <div className="flex-1 min-w-0">{item.headerContent}</div>
+            ) : (
+              <h2 className="text-lg font-semibold text-gray-900 truncate">
+                {item.title}
+              </h2>
+            )}
             <button
               type="button"
               className="rounded-full h-10 w-10 flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors shrink-0"
@@ -222,10 +224,7 @@ function AsyncSidebarPanel({
           ) : error ? (
             <ErrorDisplay message={error} />
           ) : (
-            <div ref={contentRef}>
-              {content}
-              <LightboxHandler containerRef={contentRef} />
-            </div>
+            <div>{content}</div>
           )}
         </div>
       </div>
