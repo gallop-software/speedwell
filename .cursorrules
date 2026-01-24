@@ -291,7 +291,7 @@ PageWrapper, generatePageMetadata pattern
 
 ### 007: Import Paths
 
-@/ aliases, destructured imports
+@/ aliases, direct file imports
 
 ### 009: Color Tokens
 
