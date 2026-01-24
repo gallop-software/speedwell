@@ -4,7 +4,7 @@ export default {
   entry: [
     'src/app/**/page.tsx',
     'src/app/**/layout.tsx',
-    'src/components/index.ts',
+    // 'src/components/index.ts', // Removed to detect unused component exports
     'src/blog/**/*.tsx', // Blog posts are dynamically loaded
   ],
 
@@ -37,9 +37,8 @@ export default {
   // Binaries used via npx (not installed as dependencies)
   ignoreBinaries: ['npm-check-updates'],
 
-  // Disable checks for unused exports (components may be exported for external use)
+  // Disable checks for unused types (often exported for external use)
   rules: {
-    exports: 'off',
     types: 'off',
   },
 }
