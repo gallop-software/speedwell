@@ -10,7 +10,7 @@ import About3 from '@/blocks/about-3'
 import Process1 from '@/blocks/process-1'
 import Archive2 from '@/blocks/archive-2'
 import Form2 from '@/blocks/form-2'
-import Form3 from '@/blocks/form-3'
+import Section11 from '@/blocks/section-11'
 import Testimonial4 from '@/blocks/testimonial-4'
 
 function Content() {
@@ -26,7 +26,7 @@ function Content() {
       <Archive2 />
       <Testimonial4 />
       <Form2 />
-      <Form3 />
+      <Section11 />
     </>
   )
 }

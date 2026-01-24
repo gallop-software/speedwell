@@ -1012,9 +1012,9 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 
 #### Form 3
 
-<img src="../../public/blocks/form-3.jpg" alt="Form 3" width="350">
+<img src="../../public/blocks/section-11.jpg" alt="Section 11" width="350">
 
-**Slug:** `form-3`  
+**Slug:** `section-11`  
 **Tier:** Pro
 
 ---
@@ -1048,9 +1048,9 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 
 #### Form 7
 
-<img src="../../public/blocks/form-7.jpg" alt="Form 7" width="350">
+<img src="../../public/blocks/form-3.jpg" alt="Form 3" width="350">
 
-**Slug:** `form-7`  
+**Slug:** `form-3`  
 **Tier:** Free
 
 ---
