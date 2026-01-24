@@ -66,7 +66,10 @@ export default function Form4() {
             defaultValue="Professional - $599 (3-hour session, 40 photos)"
             required
           />
-          <Grid cols="grid-cols-1 md:grid-cols-2" gap="gap-6">
+          <Grid
+            cols="grid-cols-1 md:grid-cols-2"
+            gap="gap-6"
+          >
             <DatePickerInput
               name="preferredDate"
               placeholder="Select a date"
