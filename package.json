@@ -67,7 +67,8 @@
     "update:interactive": "npx npm-check-updates -i",
     "update:doctor": "npx npm-check-updates --doctor -u",
     "update:canon": "npm update @gallop.software/canon",
-    "unused": "knip"
+    "unused": "knip",
+    "check": "npm run lint && npm run ts && npm run unused"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",
