@@ -1,7 +1,7 @@
 import { readdirSync } from 'fs'
 import path from 'path'
 import { notFound } from 'next/navigation'
-import { GalleryClient } from '@/components/gallery-client'
+import { LightboxClient } from '@/components/lightbox-client'
 import clsx from 'clsx'
 
 interface PageProps {
@@ -95,9 +95,9 @@ export default async function Page({ params }: PageProps) {
             shouldAddBottomPadding && 'pb-30'
           )}
         >
-          <GalleryClient>
+          <LightboxClient>
             <Content />
-          </GalleryClient>
+          </LightboxClient>
         </main>
       </div>
     )

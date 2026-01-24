@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React, { Children, isValidElement } from 'react'
 import imageMeta from '@/../_data/_meta.json'
-import { GalleryClient } from '@/components/gallery-client'
+import { LightboxClient } from '@/components/lightbox-client'
 
 export interface GalleryProps {
   columns?: number
@@ -200,7 +200,7 @@ export function Gallery({
           : ''
 
   return (
-    <GalleryClient>
+    <LightboxClient>
       <div
         className={clsx(
           'relative isolate mb-7 !columns-auto',
@@ -210,6 +210,6 @@ export function Gallery({
       >
         {rows}
       </div>
-    </GalleryClient>
+    </LightboxClient>
   )
 }

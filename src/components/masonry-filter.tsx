@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { Masonry } from '@/components/masonry'
 import { Image } from '@/components/image'
 import { Span } from '@/components/span'
-import { GalleryLightbox } from '@/components/lightbox/gallery-lightbox'
+import { LightboxWrapper } from '@/components/lightbox/lightbox-wrapper'
 
 interface MasonryFilterItem {
   id: number
@@ -104,7 +104,7 @@ export function MasonryFilter({
             </motion.div>
           ))}
         </Masonry>
-        <GalleryLightbox key={activeFilter} containerRef={containerRef} />
+        <LightboxWrapper key={activeFilter} containerRef={containerRef} />
       </div>
     </>
   )

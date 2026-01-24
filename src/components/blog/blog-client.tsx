@@ -5,7 +5,7 @@ import { Button } from '@/components/button'
 import { Heading } from '@/components/heading'
 import { Image } from '@/components/image'
 import DynamicSidebar from '@/components/dynamic-sidebar'
-import { GalleryLightbox } from '@/components/lightbox/gallery-lightbox'
+import { LightboxWrapper } from '@/components/lightbox/lightbox-wrapper'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'
@@ -323,7 +323,7 @@ export function BlogClient({
         ) : (
           <div ref={sidebarContentRef}>
             {content}
-            <GalleryLightbox containerRef={sidebarContentRef} />
+            <LightboxWrapper containerRef={sidebarContentRef} />
           </div>
         )}
       </DynamicSidebar>
