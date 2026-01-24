@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -28,18 +28,18 @@ function Details() {
       <P>
         The ensuite bathroom features a freestanding soaking tub positioned
         beneath a statement chandelier, a spacious walk-in shower with body
-        jets, and dual vanities with backlit mirrors. Heated marble floors, a
-        built-in sound system, and automated lighting complete the spa-like
-        atmosphere. The adjoining walk-in closet offers custom organization
-        systems and a dedicated dressing area.
+        jets, and dual vanities with backlit mirrors. For more bathroom
+        inspiration, explore our{' '}
+        <Link href="/post/spa-bathroom-retreat" prefetch={true}>
+          Spa Bathroom Retreat
+        </Link>
+        . Heated marble floors, a built-in sound system, and automated lighting
+        complete the spa-like atmosphere. See also our{' '}
+        <Link href="/post/bohemian-bedroom-design" prefetch={true}>
+          Bohemian Bedroom Design
+        </Link>{' '}
+        for a different aesthetic approach.
       </P>
-
-      <Button
-        href="/post/luxury-master-suite"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

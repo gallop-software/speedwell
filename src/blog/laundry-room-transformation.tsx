@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -37,15 +37,11 @@ function Details() {
         walls painted in soft gray, and brass hardware. Under-cabinet lighting
         and a pretty pendant fixture brighten the windowless space. This
         transformation proves that utility rooms can be both hardworking and
-        beautiful.
+        beautiful—see how we applied similar principles in our{' '}
+        <Link href="/post/mudroom-organization" prefetch={true}>
+          mudroom organization project
+        </Link>.
       </P>
-
-      <Button
-        href="/post/laundry-room-transformation"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

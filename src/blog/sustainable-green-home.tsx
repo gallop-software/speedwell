@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -43,19 +43,19 @@ function Details() {
         Natural materials including cork, bamboo, and organic textiles create a
         healthy indoor environment while reducing the home's carbon footprint.
         We incorporated abundant natural light, strategic cross-ventilation, and
-        a living plant wall that improves air quality. The design demonstrates
-        that environmental responsibility and beautiful, livable interiors are
-        not mutually exclusive. Every material and system was selected to
-        minimize environmental impact while maximizing longevity and
-        performance.
+        a living plant wall that improves air quality. These principles also
+        guided our{' '}
+        <Link href="/post/contemporary-family-home" prefetch={true}>
+          contemporary family home
+        </Link>{' '}
+        project. The design demonstrates that environmental responsibility and
+        beautiful, livable interiors are not mutually exclusive. For another
+        example of thoughtful material selection, see our{' '}
+        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+          minimalist kitchen redesign
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/sustainable-green-home"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

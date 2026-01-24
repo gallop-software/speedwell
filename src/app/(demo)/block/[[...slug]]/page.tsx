@@ -1,7 +1,7 @@
 import { readdirSync } from 'fs'
 import path from 'path'
 import { notFound } from 'next/navigation'
-import { GalleryPopup } from '@/components/lightbox/gallery-popup'
+import { LightboxWrapper } from '@/components/lightbox-wrapper'
 import clsx from 'clsx'
 
 interface PageProps {
@@ -95,8 +95,9 @@ export default async function Page({ params }: PageProps) {
             shouldAddBottomPadding && 'pb-30'
           )}
         >
-          <Content />
-          <GalleryPopup />
+          <LightboxWrapper>
+            <Content />
+          </LightboxWrapper>
         </main>
       </div>
     )

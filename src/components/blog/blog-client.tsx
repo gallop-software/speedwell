@@ -4,8 +4,12 @@ import { useState, useEffect, useRef, useCallback, type ReactNode } from 'react'
 import { Button } from '@/components/button'
 import { Heading } from '@/components/heading'
 import { Image } from '@/components/image'
-import DynamicSidebar from '@/components/dynamic-sidebar'
-import { GalleryPopup } from '@/components/lightbox/gallery-popup'
+import {
+  SidebarStackProvider,
+  useSidebarStack,
+  AsyncSidebarRenderer,
+  type ContentLoader,
+} from '@/components/sidebar-stack'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'
@@ -32,27 +36,50 @@ interface BlogPost {
   }
 }
 
-export function BlogClient({
-  allPosts = [],
-  perPage = 9,
-  loadMoreText = 'Load More Posts',
-}: {
-  allPosts?: BlogPost[]
-  perPage?: number
-  className?: string | undefined
-  loadMoreText?: string
-}) {
+// Content loader for blog posts - dynamically imports blog content
+const blogContentLoader: ContentLoader = async (
+  componentId: string
+): Promise<ReactNode> => {
+  if (!componentId) {
+    console.error('No componentId provided to blog content loader')
+    return <div className="text-red-500">Error: No post ID provided</div>
+  }
+  try {
+    const postModule = await import(`../../blog/${componentId}.tsx`)
+    const Component = postModule.BlogContent || postModule.default
+    return <Component />
+  } catch (error) {
+    console.error(`Failed to load blog post: ${componentId}`, error)
+    return <div className="text-red-500">Error: Post not found</div>
+  }
+}
+
+interface BlogClientInnerProps {
+  allPosts: BlogPost[]
+  perPage: number
+  loadMoreText: string
+}
+
+// Inner component that uses the sidebar stack context
+function BlogClientInner({
+  allPosts,
+  perPage,
+  loadMoreText,
+}: BlogClientInnerProps) {
   const [displayedCount, setDisplayedCount] = useState(perPage)
   const containerRef = useRef<HTMLDivElement>(null)
   const itemRefs = useRef<(HTMLDivElement | null)[]>([])
   const [columns, setColumns] = useState(3)
   const [isMasonryEnabled, setIsMasonryEnabled] = useState(true)
   const [containerHeight, setContainerHeight] = useState(0)
-  const [layoutKey, setLayoutKey] = useState(0) // Force layout recalculation
-  const [isOpen, setIsOpen] = useState(false)
-  const [content, setContent] = useState<ReactNode>(<></>)
-  const [isLoading, setIsLoading] = useState(false)
-  const sidebarContentRef = useRef<HTMLDivElement>(null)
+  const [layoutKey, setLayoutKey] = useState(0)
+
+  const { push, setContentLoader } = useSidebarStack()
+
+  // Set the content loader on mount
+  useEffect(() => {
+    setContentLoader(blogContentLoader)
+  }, [setContentLoader])
 
   // Posts are already filtered and sorted on server, just slice for pagination
   const currentPosts = allPosts.slice(0, displayedCount)
@@ -83,7 +110,6 @@ export function BlogClient({
       clearTimeout(resizeTimeout)
       resizeTimeout = setTimeout(() => {
         updateColumns()
-        // Force layout recalculation by updating key
         setLayoutKey((prev) => prev + 1)
       }, 150)
     }
@@ -103,7 +129,6 @@ export function BlogClient({
     const containerWidth = container.offsetWidth
 
     if (!isMasonryEnabled) {
-      // Simple single column layout
       itemRefs.current.forEach((item) => {
         if (!item) return
 
@@ -115,13 +140,11 @@ export function BlogClient({
         item.style.marginBottom = '32px'
       })
 
-      // For single column, let the natural document flow handle height
       setContainerHeight(0)
       return
     }
 
-    // Masonry layout for multi-column
-    const gap = 32 // 2rem gap
+    const gap = 32
     const availableWidth = Math.max(
       containerWidth - gap * (columns - 1),
       columns * 200
@@ -132,12 +155,10 @@ export function BlogClient({
     itemRefs.current.forEach((item) => {
       if (!item) return
 
-      // Find the shortest column
       const shortestColumnIndex = columnHeights.indexOf(
         Math.min(...columnHeights)
       )
 
-      // Position the item
       const x = shortestColumnIndex * (columnWidth + gap)
       const y = columnHeights[shortestColumnIndex]
 
@@ -148,11 +169,9 @@ export function BlogClient({
       item.style.maxWidth = '100%'
       item.style.marginBottom = '0'
 
-      // Update column height
       columnHeights[shortestColumnIndex] += item.offsetHeight + gap
     })
 
-    // Set container height for masonry
     setContainerHeight(Math.max(...columnHeights))
   }, [columns, isMasonryEnabled])
 
@@ -160,7 +179,7 @@ export function BlogClient({
   useEffect(() => {
     const timer = setTimeout(() => {
       calculateLayout()
-    }, 100) // Small delay to ensure images are loaded
+    }, 100)
 
     return () => clearTimeout(timer)
   }, [currentPosts, calculateLayout, columns, layoutKey, isMasonryEnabled])
@@ -169,22 +188,8 @@ export function BlogClient({
     setDisplayedCount((prev) => prev + perPage)
   }
 
-  const openSidebar = async (slug: string) => {
-    // Open sidebar immediately with loading state
-    setIsOpen(true)
-    setIsLoading(true)
-    setContent(<></>)
-
-    // Dynamically import the post component
-    try {
-      const postModule = await import(`../../blog/${slug}.tsx`)
-      const Component = postModule.BlogContent || postModule.default
-      setContent(<Component />)
-      setIsLoading(false)
-    } catch (error) {
-      console.error(`Failed to load post ${slug}:`, error)
-      setIsLoading(false)
-    }
+  const openSidebar = (slug: string, title: string) => {
+    push({ title, componentId: slug })
   }
 
   return (
@@ -205,7 +210,6 @@ export function BlogClient({
                 ref={(el) => {
                   itemRefs.current[index] = el
                   if (el && el.offsetHeight > 0 && isMasonryEnabled) {
-                    // Only recalculate layout for masonry
                     setTimeout(() => calculateLayout(), 50)
                   }
                 }}
@@ -216,7 +220,9 @@ export function BlogClient({
                     relative: !isMasonryEnabled,
                   }
                 )}
-                onClick={() => openSidebar(post.slug)}
+                onClick={() =>
+                  openSidebar(post.slug, post.metadata.title || '')
+                }
               >
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   {post.metadata.featuredImage && (
@@ -225,10 +231,7 @@ export function BlogClient({
                         href={`/post/${post.slug}`}
                         scroll={true}
                         prefetch={false}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          openSidebar(post.slug)
-                        }}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <Image
                           src={post.metadata.featuredImage}
@@ -237,7 +240,6 @@ export function BlogClient({
                           className="w-full h-auto block"
                           rounded="rounded-none"
                           onLoad={() => {
-                            // Only recalculate layout for masonry
                             if (isMasonryEnabled) {
                               setTimeout(() => calculateLayout(), 10)
                             }
@@ -256,10 +258,7 @@ export function BlogClient({
                                 key={idx}
                                 className="bg-gray-100 text-contrast text-xs px-3 py-[1px] rounded-full outline-0"
                                 href={`/category/${getSlug(category)}`}
-                                onClick={(e) => {
-                                  e.preventDefault()
-                                  openSidebar(post.slug)
-                                }}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 {decodeHtmlEntities(category)}
                               </Link>
@@ -271,10 +270,7 @@ export function BlogClient({
                       href={`/post/${post.slug}`}
                       scroll={true}
                       prefetch={false}
-                      onClick={(e) => {
-                        e.preventDefault()
-                        openSidebar(post.slug)
-                      }}
+                      onClick={(e) => e.preventDefault()}
                       className="hover:text-accent transition-colors duration-300"
                     >
                       <Heading
@@ -312,21 +308,30 @@ export function BlogClient({
           </Button>
         </div>
       )}
-      <DynamicSidebar
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-      >
-        {isLoading ? (
-          <div className="flex items-center justify-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
-          </div>
-        ) : (
-          <div ref={sidebarContentRef}>
-            {content}
-            <GalleryPopup containerRef={sidebarContentRef} />
-          </div>
-        )}
-      </DynamicSidebar>
+
+      <AsyncSidebarRenderer />
     </>
+  )
+}
+
+// Main exported component with provider wrapper
+export function BlogClient({
+  allPosts = [],
+  perPage = 9,
+  loadMoreText = 'Load More Posts',
+}: {
+  allPosts?: BlogPost[]
+  perPage?: number
+  className?: string | undefined
+  loadMoreText?: string
+}) {
+  return (
+    <SidebarStackProvider>
+      <BlogClientInner
+        allPosts={allPosts}
+        perPage={perPage}
+        loadMoreText={loadMoreText}
+      />
+    </SidebarStackProvider>
   )
 }

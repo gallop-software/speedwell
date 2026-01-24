@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -37,15 +37,17 @@ function Details() {
         light-filled space that feels generous yet intimate. Floor-to-ceiling
         windows and glass doors were added to enhance the indoor-outdoor
         connection. Strategic built-in storage and concealed utility areas keep
-        the open space organized and clutter-free.
+        the open space organized and clutter-free. For more whole-home
+        transformations, explore our{' '}
+        <Link href="/post/contemporary-family-home" prefetch={true}>
+          contemporary family home
+        </Link>{' '}
+        and{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          modern loft transformation
+        </Link>{' '}
+        projects.
       </P>
-
-      <Button
-        href="/post/open-concept-living"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

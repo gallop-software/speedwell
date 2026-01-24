@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -38,19 +38,20 @@ function Details() {
         Custom furniture pieces feature the bold geometric patterns and
         luxurious materials characteristic of the era, including lacquered wood,
         velvet upholstery, and mirrored surfaces. We sourced vintage light
-        fixtures and commissioned reproductions of iconic Art Deco designs.
-        Modern conveniences like updated plumbing, electrical, and HVAC were
+        fixtures and commissioned reproductions of iconic Art Deco designs. For
+        more historic preservation work, see our{' '}
+        <Link href="/post/historic-brownstone-revival" prefetch={true}>
+          Historic Brownstone Revival
+        </Link>
+        . Modern conveniences like updated plumbing, electrical, and HVAC were
         seamlessly integrated behind the restored architecture. The result is a
         stunning example of period design that functions beautifully for
-        contemporary living.
+        contemporary living. Our{' '}
+        <Link href="/post/boutique-hotel-design" prefetch={true}>
+          Boutique Hotel Design
+        </Link>{' '}
+        showcases similar attention to historic detail in a commercial setting.
       </P>
-
-      <Button
-        href="/post/art-deco-restoration"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -36,16 +36,22 @@ function Details() {
         projects authority and confidence. We incorporated proper task lighting,
         acoustic panels disguised as art, and a curated backdrop perfect for
         video calls. A separate seating area with lounge chairs facilitates
-        informal meetings or focused reading. Smart home integration allows
-        seamless control of lighting, temperature, and privacy shades.
+        informal meetings or focused reading. For more workspace inspiration,
+        explore our{' '}
+        <Link href="/post/creative-agency-workspace" prefetch={true}>
+          Creative Agency Workspace
+        </Link>{' '}
+        or the expansive{' '}
+        <Link href="/post/tech-startup-headquarters" prefetch={true}>
+          Tech Startup Headquarters
+        </Link>
+        . Smart home integration allows seamless control of lighting,
+        temperature, and privacy shades.{' '}
+        <Link href="/contact" prefetch={true}>
+          Contact us
+        </Link>{' '}
+        to discuss your home office project.
       </P>
-
-      <Button
-        href="/post/executive-workspace"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

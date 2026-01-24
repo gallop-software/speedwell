@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -38,18 +38,20 @@ function Details() {
         Multi-functional furniture pieces, including a murphy bed and expandable
         dining table, provide flexibility for daily living and entertaining.
         Large mirrors strategically placed throughout amplify natural light,
-        while houseplants bring life and texture. The minimalist approach
-        extends to carefully curated decorative objects that are both beautiful
-        and purposeful, embodying the Scandinavian concept of "lagom" - just the
-        right amount.
+        while houseplants bring life and texture. This approach shares
+        philosophies with our{' '}
+        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+          Japanese zen retreat
+        </Link>{' '}
+        project. The minimalist approach extends to carefully curated decorative
+        objects that are both beautiful and purposeful, embodying the
+        Scandinavian concept of "lagom" - just the right amount. For another
+        take on timeless design, explore our{' '}
+        <Link href="/post/midcentury-modern-refresh" prefetch={true}>
+          midcentury modern refresh
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/scandinavian-apartment"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

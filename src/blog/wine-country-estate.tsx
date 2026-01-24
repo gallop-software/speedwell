@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -36,20 +36,24 @@ function Details() {
 
       <P>
         A chef's kitchen features professional appliances, a large island for
-        casual dining, and a separate butler's pantry. The wine cellar was
-        custom-designed with climate control and display storage for an
-        extensive collection. Throughout the home, we balanced the grandeur of
-        the architecture with intimate gathering spaces. Natural materials,
-        earth-toned palette, and thoughtful details create a seamless connection
-        to the surrounding landscape and agricultural heritage.
+        casual dining, and a separate butler's pantry—similar to our{' '}
+        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+          Farmhouse Kitchen Remodel
+        </Link>
+        . The wine cellar was custom-designed with climate control and display
+        storage for an extensive collection. Throughout the home, we balanced
+        the grandeur of the architecture with intimate gathering spaces. For
+        another rustic luxury project, explore our{' '}
+        <Link href="/post/mountain-chalet-interior" prefetch={true}>
+          Mountain Chalet Interior
+        </Link>
+        .         Natural materials, earth-toned palette, and thoughtful details create
+        a seamless connection to the surrounding landscape. See more of our{' '}
+        <Link href="/residential" prefetch={true}>
+          Residential Design
+        </Link>{' '}
+        projects.
       </P>
-
-      <Button
-        href="/post/wine-country-estate"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import React, { Children, isValidElement } from 'react'
 import imageMeta from '@/../_data/_meta.json'
+import { LightboxWrapper } from '@/components/lightbox-wrapper'
 
 export interface GalleryProps {
   columns?: number
@@ -198,18 +199,17 @@ export function Gallery({
           ? 'content-wrapper'
           : ''
 
-  const galleryContent = (
-    <div
-      className={clsx(
-        'relative isolate mb-7 !columns-auto',
-        'lightbox-gallery',
-        maxWidthClass,
-        className
-      )}
-    >
-      {rows}
-    </div>
+  return (
+    <LightboxWrapper>
+      <div
+        className={clsx(
+          'relative isolate mb-7 !columns-auto',
+          maxWidthClass,
+          className
+        )}
+      >
+        {rows}
+      </div>
+    </LightboxWrapper>
   )
-
-  return galleryContent
 }

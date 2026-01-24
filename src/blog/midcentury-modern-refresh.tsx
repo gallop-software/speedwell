@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -32,15 +32,17 @@ function Details() {
         patterns. The open floor plan was enhanced with new built-in storage and
         a reconstructed fireplace feature wall. Iconic furniture pieces from
         Eames, Saarinen, and Wegner complete the authentic midcentury feel while
-        providing comfortable, functional living spaces.
+        providing comfortable, functional living spaces. For more examples of
+        clean, timeless design, explore our{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian apartment
+        </Link>{' '}
+        and{' '}
+        <Link href="/post/contemporary-family-home" prefetch={true}>
+          contemporary family home
+        </Link>{' '}
+        projects.
       </P>
-
-      <Button
-        href="/post/midcentury-modern-refresh"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

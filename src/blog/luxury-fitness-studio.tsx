@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -23,18 +23,17 @@ function Details() {
         typography that reflects their experimental approach to brewing. Each
         beer variety has its own unique label design while maintaining brand
         cohesion through consistent elements. The taproom experience includes
-        branded glassware, coasters, merchandise, and environmental graphics.
-        Social media templates and marketing materials help them engage with
-        their passionate community of craft beer enthusiasts while attracting
-        new customers.
+        branded glassware, coasters, merchandise, and environmental graphics
+        designed with the same attention to wellness we brought to our{' '}
+        <Link href="/post/private-yoga-studio" prefetch={true}>
+          private yoga studio
+        </Link>{' '}
+        and{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          wellness spa design
+        </Link>{' '}
+        projects.
       </P>
-
-      <Button
-        href="/post/luxury-fitness-studio"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

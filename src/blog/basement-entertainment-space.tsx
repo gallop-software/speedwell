@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -22,26 +22,23 @@ function Details() {
         designed distinct zones including a home theater with tiered seating, a
         game area with pool table and bar, and a cozy lounge with sectional
         seating. Dark painted ceilings help conceal mechanicals while enhancing
-        the theater atmosphere, and recessed lighting with dimmer controls sets
-        the perfect mood.
+        the theater atmosphere.
       </P>
 
       <P>
         Careful attention to acoustics ensures great sound without disturbing
-        the main floor. We used moisture-resistant materials throughout and
-        added a full bathroom for convenience. Built-in storage keeps games,
-        media, and bar supplies organized. The industrial-inspired design with
-        exposed ductwork, concrete floors with area rugs, and leather
-        furnishings creates a stylish, masculine space that's both practical and
-        inviting.
+        the main floor. The industrial-inspired design with exposed ductwork,
+        concrete floors with area rugs, and leather furnishings creates a
+        stylish space. For more industrial design inspiration, check out our{' '}
+        <Link href="/post/industrial-office-conversion" prefetch={true}>
+          Industrial Office Conversion
+        </Link>
+        . If you're interested in fitness spaces, see our{' '}
+        <Link href="/post/luxury-fitness-studio" prefetch={true}>
+          Luxury Fitness Studio
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/basement-entertainment-space"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

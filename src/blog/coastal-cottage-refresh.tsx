@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -28,20 +28,21 @@ function Details() {
 
       <P>
         Shiplap accent walls, beadboard ceilings, and nautical-inspired details
-        honor the cottage's heritage while feeling fresh and current. We
-        maximized natural light with sheer curtains and added coastal touches
-        like rope accents, weathered wood frames, and sea glass colors. The
-        result is a comfortable, inviting retreat that feels authentically
+        honor the cottage's heritage while feeling fresh and current. For a
+        larger coastal project, see our{' '}
+        <Link href="/post/coastal-home-renovation" prefetch={true}>
+          Coastal Home Renovation
+        </Link>
+        . We maximized natural light with sheer curtains and added coastal
+        touches like rope accents, weathered wood frames, and sea glass colors.
+        The result is a comfortable, inviting retreat that feels authentically
         beachy without clichés, perfectly suited for lazy summer days and family
-        gatherings.
+        gatherings. You might also appreciate our{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian Apartment
+        </Link>{' '}
+        for similar light-filled design inspiration.
       </P>
-
-      <Button
-        href="/post/coastal-cottage-refresh"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

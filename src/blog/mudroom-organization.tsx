@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -39,17 +39,12 @@ function Details() {
         before entering the main house. Closed cabinets conceal cleaning
         supplies and seasonal items, while a magnetic chalkboard panel tracks
         schedules and messages. The cheerful design with navy blue lockers and
-        brass hooks proves that functional spaces can be stylish. This organized
-        entry system has eliminated morning chaos and created a smooth
-        transition between outdoors and home.
+        brass hooks proves that functional spaces can be stylish—similar to our{' '}
+        <Link href="/post/laundry-room-transformation" prefetch={true}>
+          laundry room transformation
+        </Link>{' '}
+        where we created another beautiful, hardworking utility space.
       </P>
-
-      <Button
-        href="/post/mudroom-organization"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

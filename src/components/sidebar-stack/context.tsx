@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
   useCallback,
+  useRef,
   type ReactNode,
 } from 'react'
 
@@ -13,6 +14,9 @@ export interface SidebarItem {
   title: string
   componentId: string
 }
+
+/** Function that loads content for a given componentId */
+export type ContentLoader = (componentId: string) => Promise<ReactNode>
 
 interface SidebarStackContextType {
   /** Array of open sidebars in order */
@@ -25,6 +29,14 @@ interface SidebarStackContextType {
   closeAll: () => void
   /** Check if any sidebar is open */
   isOpen: boolean
+  /** Content loader for async loading */
+  contentLoader: ContentLoader | null
+  /** Set the content loader */
+  setContentLoader: (loader: ContentLoader) => void
+  /** Cache of loaded content */
+  contentCache: Map<string, ReactNode>
+  /** Set cached content */
+  setCachedContent: (componentId: string, content: ReactNode) => void
 }
 
 const SidebarStackContext = createContext<SidebarStackContextType | null>(null)
@@ -34,8 +46,21 @@ function generateId(): string {
   return `sidebar-${++idCounter}`
 }
 
-export function SidebarStackProvider({ children }: { children: ReactNode }) {
+interface SidebarStackProviderProps {
+  children: ReactNode
+  /** Optional content loader for async loading */
+  contentLoader?: ContentLoader
+}
+
+export function SidebarStackProvider({
+  children,
+  contentLoader: initialLoader,
+}: SidebarStackProviderProps) {
   const [stack, setStack] = useState<SidebarItem[]>([])
+  const [contentLoader, setContentLoaderState] = useState<ContentLoader | null>(
+    initialLoader ?? null
+  )
+  const contentCacheRef = useRef<Map<string, ReactNode>>(new Map())
 
   const push = useCallback((item: Omit<SidebarItem, 'id'>): string => {
     const id = generateId()
@@ -52,11 +77,32 @@ export function SidebarStackProvider({ children }: { children: ReactNode }) {
     setStack([])
   }, [])
 
+  const setContentLoader = useCallback((loader: ContentLoader) => {
+    setContentLoaderState(() => loader)
+  }, [])
+
+  const setCachedContent = useCallback(
+    (componentId: string, content: ReactNode) => {
+      contentCacheRef.current.set(componentId, content)
+    },
+    []
+  )
+
   const isOpen = stack.length > 0
 
   return (
     <SidebarStackContext.Provider
-      value={{ stack, push, close, closeAll, isOpen }}
+      value={{
+        stack,
+        push,
+        close,
+        closeAll,
+        isOpen,
+        contentLoader,
+        setContentLoader,
+        contentCache: contentCacheRef.current,
+        setCachedContent,
+      }}
     >
       {children}
     </SidebarStackContext.Provider>

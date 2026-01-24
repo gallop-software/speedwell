@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -22,18 +22,19 @@ function Details() {
         inviting identity featuring hand-lettered typography, seasonal color
         palettes, and illustrations celebrating regional ingredients. The menu
         design showcases farmer partnerships with beautiful photography and
-        storytelling. From signage to staff uniforms, every brand element
-        reinforces the restaurant's commitment to sustainability and community.
-        The cohesive visual system creates a memorable dining experience that
-        has customers returning and sharing on social media.
+        storytelling.         From signage to staff uniforms, every brand element reinforces the
+        restaurant's commitment to sustainability and community. This project
+        shares design philosophies with our{' '}
+        <Link href="/post/restaurant-interior-design" prefetch={true}>
+          restaurant interior design
+        </Link>{' '}
+        work. The cohesive visual system creates a memorable dining experience
+        that has customers returning and sharing on social media, similar to our{' '}
+        <Link href="/post/boutique-retail-design" prefetch={true}>
+          boutique retail design
+        </Link>{' '}
+        approach.
       </P>
-
-      <Button
-        href="/post/urban-coffee-house"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

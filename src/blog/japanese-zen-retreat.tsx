@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -33,21 +33,21 @@ function Details() {
 
       <P>
         The layout emphasizes flow and transition between spaces, with sliding
-        doors that reconfigure rooms as needed. A small interior garden visible
-        from multiple rooms brings nature inside and serves as a meditation
-        focal point. The muted color palette of blacks, whites, and natural wood
-        tones creates serenity. Every object has purpose and place, embodying
-        the Japanese concept of "ma" - the space between things. This thoughtful
-        approach to design fosters calm, clarity, and contemplation in daily
-        life.
+        doors that reconfigure rooms as needed, much like our{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian apartment
+        </Link>{' '}
+        project. A small interior garden visible from multiple rooms brings
+        nature inside and serves as a meditation focal point. The muted color
+        palette of blacks, whites, and natural wood tones creates serenity.
+        Every object has purpose and place, embodying the Japanese concept of
+        "ma"—the space between things. This thoughtful approach to design
+        fosters calm, clarity, and contemplation, sharing philosophy with our{' '}
+        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+          minimalist kitchen redesign
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/japanese-zen-retreat"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

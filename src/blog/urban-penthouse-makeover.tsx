@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -27,7 +27,12 @@ function Details() {
         We opened up the floor plan by removing non-structural walls, creating
         sweeping sight lines from the entrance through to the floor-to-ceiling
         windows. A neutral palette of grays, blacks, and warm whites provides a
-        refined backdrop for the owner's contemporary art collection.
+        refined backdrop for the owner's contemporary art collection. For
+        similar open-concept urban living, explore our{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          Modern Loft Transformation
+        </Link>{' '}
+        project.
       </P>
 
       <P>
@@ -36,15 +41,13 @@ function Details() {
         professional-grade appliances. We incorporated motorized window
         treatments, integrated lighting controls, and a whole-home audio system.
         The master suite includes a spa-inspired bathroom with city views from
-        the soaking tub.
+        the soaking tub. See how we extended these design principles to outdoor
+        spaces in our{' '}
+        <Link href="/post/rooftop-terrace-design" prefetch={true}>
+          Rooftop Terrace Design
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/urban-penthouse-makeover"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

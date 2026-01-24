@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -28,19 +28,20 @@ function Details() {
 
       <P>
         The open-plan workspace includes flexible collaboration areas, phone
-        booths for privacy, and a central kitchen that serves as the social hub.
-        Industrial-style pendant lighting, metal accents, and reclaimed wood
+        booths for privacy, and a central kitchen that serves as the social
+        hub—similar to the transformation in our{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          modern loft transformation
+        </Link>
+        . Industrial-style pendant lighting, metal accents, and reclaimed wood
         furniture reinforce the aesthetic. We incorporated biophilic design
         elements with living plant walls and natural materials to balance the
-        hard industrial surfaces.
+        hard industrial surfaces, an approach that also influenced our{' '}
+        <Link href="/post/creative-coworking-space" prefetch={true}>
+          creative coworking space
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/industrial-office-conversion"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

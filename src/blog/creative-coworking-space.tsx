@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -18,22 +18,23 @@ function Details() {
 
       <P>
         This innovative coworking space for creatives needed a brand that
-        fostered community and inspired collaboration. We developed a dynamic
-        visual identity featuring bold colors, geometric patterns, and versatile
-        typography that reflects the diverse creative community. The brand
-        system includes wayfinding signage, member materials, event collateral,
-        and digital platforms. Custom illustrations celebrate different creative
-        disciplines while maintaining brand unity. From the reception area to
-        private studios, every brand element reinforces the space's mission to
-        connect creative professionals and spark meaningful partnerships.
+        fostered community and inspired collaboration, much like our{' '}
+        <Link href="/post/industrial-office-conversion" prefetch={true}>
+          industrial office conversion
+        </Link>{' '}
+        project. We developed a dynamic visual identity featuring bold colors,
+        geometric patterns, and versatile typography that reflects the diverse
+        creative community. The brand system includes wayfinding signage, member
+        materials, event collateral, and digital platforms. Custom illustrations
+        celebrate different creative disciplines while maintaining brand unity.
+        From the reception area to private studios, every brand element
+        reinforces the space's mission to connect creative professionals and
+        spark meaningful partnerships—an approach that also informed our{' '}
+        <Link href="/post/creative-agency-workspace" prefetch={true}>
+          creative agency workspace
+        </Link>{' '}
+        design.
       </P>
-
-      <Button
-        href="/post/creative-coworking-space"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

@@ -2,11 +2,10 @@
 
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import clsx from 'clsx'
 import { Masonry } from '@/components/masonry'
 import { Image } from '@/components/image'
 import { Span } from '@/components/span'
-import { GalleryPopupDynamic } from '@/components/lightbox/gallery-popup'
+import { LightboxHandler } from '@/components/lightbox/lightbox-handler'
 
 interface MasonryFilterItem {
   id: number
@@ -83,7 +82,7 @@ export function MasonryFilter({
         <Masonry
           gap={gap}
           breakpoints={breakpoints}
-          className={clsx('lightbox-gallery-dynamic', className)}
+          className={className ?? ''}
         >
           {filteredItems.map((item) => (
             <motion.div
@@ -104,10 +103,7 @@ export function MasonryFilter({
             </motion.div>
           ))}
         </Masonry>
-        <GalleryPopupDynamic
-          key={activeFilter}
-          containerRef={containerRef}
-        />
+        <LightboxHandler key={activeFilter} containerRef={containerRef} />
       </div>
     </>
   )

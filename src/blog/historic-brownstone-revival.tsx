@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -33,15 +33,16 @@ function Details() {
         Every room tells a story of thoughtful restoration, from the grand
         entrance foyer with its restored staircase to the chef's kitchen that
         respects the home's character while providing state-of-the-art
-        functionality.
+        functionality. The preservation techniques echo those in our{' '}
+        <Link href="/post/art-deco-restoration" prefetch={true}>
+          art deco restoration
+        </Link>{' '}
+        project, while the curated interiors share sensibilities with our{' '}
+        <Link href="/post/library-study-design" prefetch={true}>
+          library study design
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/historic-brownstone-revival"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -42,17 +42,19 @@ function Details() {
         Thoughtful hospitality details include a luggage rack, full-length
         mirror, empty drawer and closet space, and a beverage station with
         kettle and refreshments. The ensuite bathroom received fresh paint, new
-        fixtures, fluffy towels, and quality toiletries. The neutral palette
-        with soft blue accents creates a serene atmosphere that makes guests
-        feel truly pampered and welcome.
+        fixtures, fluffy towels, and quality toiletries—drawing on the same
+        attention to detail we brought to our{' '}
+        <Link href="/post/luxury-master-suite" prefetch={true}>
+          luxury master suite
+        </Link>
+        . The neutral palette with soft blue accents creates a serene atmosphere
+        that makes guests feel truly pampered and welcome, echoing the cozy
+        ambiance of our{' '}
+        <Link href="/post/bohemian-bedroom-design" prefetch={true}>
+          bohemian bedroom design
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/guest-suite-makeover"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

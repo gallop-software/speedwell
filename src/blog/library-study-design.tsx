@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -22,26 +22,23 @@ function Details() {
         display an extensive book collection while providing concealed storage
         for office supplies. A rolling library ladder adds both function and
         classic elegance. The room centers around a leather Chesterfield sofa
-        positioned before a marble fireplace, creating the quintessential
-        reading nook.
+        positioned before a marble fireplace.
       </P>
 
       <P>
         Layered lighting includes table lamps, wall sconces, and discreet LED
-        strips that illuminate bookshelves without glare. A substantial desk
-        with green banker's lamp provides a dedicated workspace. The color
-        palette of deep greens, burgundy, and warm wood tones creates a
-        cocoon-like atmosphere that encourages hours of lost-in-a-book
-        contentment. Persian rugs, leather-bound volumes, and carefully selected
-        accessories complete this timeless, scholarly retreat.
+        strips that illuminate bookshelves without glare. The color palette of
+        deep greens, burgundy, and warm wood tones creates a cocoon-like
+        atmosphere. For a more modern take on home offices, see our{' '}
+        <Link href="/post/executive-workspace" prefetch={true}>
+          Executive Workspace
+        </Link>{' '}
+        project. If you're interested in traditional design, explore our{' '}
+        <Link href="/post/historic-brownstone-revival" prefetch={true}>
+          Historic Brownstone Revival
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/library-study-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

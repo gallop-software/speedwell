@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -30,18 +30,19 @@ function Details() {
         Strategic lighting design allows mood adjustment throughout service
         periods, while acoustic treatments ensure comfortable conversation
         despite full capacity. The color palette of deep greens, brass accents,
-        and warm neutrals complements the seasonal menu concept. We collaborated
-        closely with the chef and operations team to ensure the front-of-house
-        design supports back-of-house workflow while creating memorable guest
-        experiences.
+        and warm neutrals complements the seasonal menu concept. This attention
+        to hospitality design is also reflected in our{' '}
+        <Link href="/post/boutique-hotel-design" prefetch={true}>
+          boutique hotel design
+        </Link>{' '}
+        work. We collaborated closely with the chef and operations team to
+        ensure the front-of-house design supports back-of-house workflow while
+        creating memorable guest experiences, much like our approach with the{' '}
+        <Link href="/post/urban-coffee-house" prefetch={true}>
+          urban coffee house
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/restaurant-interior-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

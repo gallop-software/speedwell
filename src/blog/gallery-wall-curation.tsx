@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -42,18 +42,19 @@ function Details() {
         We began with a paper template layout on the floor to perfect the
         composition before installation, ensuring proper balance between large
         anchor pieces and smaller works. The arrangement extends from floor to
-        ceiling, drawing the eye upward and making the room feel more spacious.
-        Layered picture lights add drama and highlight favorite pieces. The
-        result is a personal, museum-quality display that evolves as the
-        collection grows.
+        ceiling, drawing the eye upward and making the room feel more spacious,
+        much like the approach in our{' '}
+        <Link href="/post/art-deco-restoration" prefetch={true}>
+          art deco restoration
+        </Link>{' '}
+        project. Layered picture lights add drama and highlight favorite pieces.
+        The result is a personal, museum-quality display that evolves as the
+        collection grows—reminiscent of the curated collections in our{' '}
+        <Link href="/post/library-study-design" prefetch={true}>
+          library study design
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/gallery-wall-curation"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }
