@@ -6,6 +6,7 @@ import {
   Accent,
   Icon,
   Chip,
+  Label,
 } from '@/components'
 import playIcon from '@iconify/icons-heroicons/play-solid'
 import clockIcon from '@iconify/icons-heroicons/clock-20-solid'
@@ -94,9 +95,13 @@ export default function Archive3() {
                     className="w-6 h-6 text-body ml-1"
                   />
                 </div>
-                <div className="text-sm font-mono text-body-contrast/40 md:text-center">
+                <Label
+                  fontSize="text-sm"
+                  color="text-body-contrast/40"
+                  className="font-mono md:text-center"
+                >
                   #{episode.number}
-                </div>
+                </Label>
               </div>
 
               {/* Content */}

@@ -6,6 +6,7 @@ import {
   Columns,
   Column,
   Card4,
+  Span,
 } from '@/components'
 
 const WhimsicalArrow = () => (
@@ -35,9 +36,9 @@ export default function Process1() {
       >
         <Column className="relative">
           <Card4>
-            <span className="font-accent text-6xl leading-0 w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-8">
-              <span className="relative -top-3">1</span>
-            </span>
+            <Span className="font-accent text-6xl leading-0 w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-8">
+              <Span className="relative -top-3">1</Span>
+            </Span>
             <Heading
               as="h3"
               styleAs="h4"
@@ -54,9 +55,9 @@ export default function Process1() {
         </Column>
         <Column className="relative">
           <Card4>
-            <span className="font-accent text-6xl leading-0 w-20 h-20 rounded-full bg-accent2/10 flex items-center justify-center mb-8">
-              <span className="relative -top-3">2</span>
-            </span>
+            <Span className="font-accent text-6xl leading-0 w-20 h-20 rounded-full bg-accent2/10 flex items-center justify-center mb-8">
+              <Span className="relative -top-3">2</Span>
+            </Span>
             <Heading
               as="h3"
               styleAs="h4"
@@ -73,9 +74,9 @@ export default function Process1() {
         </Column>
         <Column className="relative">
           <Card4>
-            <span className="font-accent text-6xl leading-0 w-20 h-20 rounded-full bg-accent2/10 flex items-center justify-center mb-8">
-              <span className="relative -top-3">3</span>
-            </span>
+            <Span className="font-accent text-6xl leading-0 w-20 h-20 rounded-full bg-accent2/10 flex items-center justify-center mb-8">
+              <Span className="relative -top-3">3</Span>
+            </Span>
             <Heading
               as="h3"
               styleAs="h4"

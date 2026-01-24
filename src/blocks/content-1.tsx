@@ -33,7 +33,8 @@ export default function Content1() {
               <Image
                 src="/images/layout-6/pexels-daka-12360528.jpg"
                 alt="Veloria Botanical Elixir bottle"
-                className="w-full object-cover rounded-sm"
+                className="w-full object-cover"
+                rounded="rounded-sm"
                 size="large"
               />
             </div>

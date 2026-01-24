@@ -25,7 +25,8 @@ export default function Form5() {
             <Image
               src="/images/layout-4/pexels-reneterp-1581384.jpg"
               alt="Elegant restaurant interior dining space"
-              className="object-cover w-full h-full rounded-2xl"
+              className="object-cover w-full h-full"
+              rounded="rounded-2xl"
               size="large"
               lazy={false}
             />

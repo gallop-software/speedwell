@@ -9,6 +9,7 @@ import {
   FormButton,
   DatePickerInput,
   TimePickerInput,
+  Grid,
 } from '@/components'
 
 export default function Form4() {
@@ -65,7 +66,7 @@ export default function Form4() {
             defaultValue="Professional - $599 (3-hour session, 40 photos)"
             required
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Grid cols="grid-cols-1 md:grid-cols-2" gap="gap-6">
             <DatePickerInput
               name="preferredDate"
               placeholder="Select a date"
@@ -83,7 +84,7 @@ export default function Form4() {
               required
               className="bg-accent/5!"
             />
-          </div>
+          </Grid>
           <FormTextArea
             name="message"
             placeholder="Message *"
