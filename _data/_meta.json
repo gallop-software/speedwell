@@ -1353,6 +1353,28 @@
       "file": "/images/layout-4/herb-roasted-chicken.jpg"
     }
   },
+  "/images/layout-4/hero-layout-4.jpg": {
+    "small": {
+      "width": 300,
+      "height": 225,
+      "file": "/images/layout-4/hero-layout-4-300x225.jpg"
+    },
+    "medium": {
+      "width": 700,
+      "height": 525,
+      "file": "/images/layout-4/hero-layout-4-700x525.jpg"
+    },
+    "large": {
+      "width": 1400,
+      "height": 1050,
+      "file": "/images/layout-4/hero-layout-4-1400x1050.jpg"
+    },
+    "full": {
+      "width": 2000,
+      "height": 1500,
+      "file": "/images/layout-4/hero-layout-4.jpg"
+    }
+  },
   "/images/layout-4/lamb-rack.jpg": {
     "small": {
       "width": 200,
