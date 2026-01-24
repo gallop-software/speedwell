@@ -5,8 +5,18 @@ import clsx from 'clsx'
 import clockIcon from '@iconify/icons-heroicons/clock'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 import { Icon } from '../icon'
-import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/react'
-import { TIME_SLOTS, triggerButtonStyles, DEFAULT_TIMEZONE, type TimeSlot } from './utils'
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOptions,
+  ListboxOption,
+} from '@headlessui/react'
+import {
+  TIME_SLOTS,
+  triggerButtonStyles,
+  DEFAULT_TIMEZONE,
+  type TimeSlot,
+} from './utils'
 
 // ============================================================================
 // TimePicker Input Component
@@ -44,7 +54,9 @@ export function TimePickerInput({
   interval = 10,
   timezone = DEFAULT_TIMEZONE,
 }: TimePickerProps) {
-  const [selectedTime, setSelectedTime] = useState<string | null>(defaultValue || null)
+  const [selectedTime, setSelectedTime] = useState<string | null>(
+    defaultValue || null
+  )
 
   // Filter time slots based on min/max hours, max minute, and interval
   const filteredSlots = TIME_SLOTS.filter((slot) => {
@@ -59,7 +71,10 @@ export function TimePickerInput({
   const selectedSlot = filteredSlots.find((s) => s.value === selectedTime)
 
   return (
-    <Listbox value={selectedTime} onChange={setSelectedTime}>
+    <Listbox
+      value={selectedTime}
+      onChange={setSelectedTime}
+    >
       <div className="relative">
         <input
           type="hidden"
@@ -71,11 +86,22 @@ export function TimePickerInput({
 
         {/* Trigger button */}
         <ListboxButton className={clsx(triggerButtonStyles, className)}>
-          <Icon icon={clockIcon} className="w-5 h-5 text-contrast/70 shrink-0" />
-          <span className={clsx('flex-1 text-left', !selectedTime && 'text-contrast/50')}>
+          <Icon
+            icon={clockIcon}
+            className="w-5 h-5 text-contrast/70 shrink-0"
+          />
+          <span
+            className={clsx(
+              'flex-1 text-left',
+              !selectedTime && 'text-contrast/50'
+            )}
+          >
             {selectedSlot ? selectedSlot.label : placeholder}
           </span>
-          <Icon icon={chevronDownIcon} className="w-5 h-5 text-contrast/50 shrink-0" />
+          <Icon
+            icon={chevronDownIcon}
+            className="w-5 h-5 text-contrast/50 shrink-0"
+          />
         </ListboxButton>
 
         {/* Dropdown options */}

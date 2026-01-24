@@ -122,9 +122,7 @@ src/components/navbar-2/
 
 The navbar supports a `dark` prop for use on dark backgrounds:
 
-\`\`\`tsx
-<Navbar2 dark={true} />
-\`\`\`
+\`\`\`tsx <Navbar2 dark={true} /> \`\`\`
 
 When `dark={true}`:
 
@@ -137,9 +135,7 @@ When `dark={true}`:
 
 The navbar supports a `hero` prop for overlaying content:
 
-\`\`\`tsx
-<Navbar2 hero={true} />
-\`\`\`
+\`\`\`tsx <Navbar2 hero={true} /> \`\`\`
 
 When `hero={true}`:
 
@@ -164,12 +160,7 @@ Mobile menu closes when:
 
 All navigation data is centralized in `config.ts`. Components import directly from this file:
 
-\`\`\`
-config.ts
-├── homeLink → index.tsx, sticky-navbar.tsx
-├── links → desktop-nav.tsx, mobile-nav.tsx
-└── socialLinks → social-media-nav.tsx, mobile-nav.tsx
-\`\`\`
+\`\`\` config.ts ├── homeLink → index.tsx, sticky-navbar.tsx ├── links → desktop-nav.tsx, mobile-nav.tsx └── socialLinks → social-media-nav.tsx, mobile-nav.tsx \`\`\`
 
 ## Benefits of This Architecture
 

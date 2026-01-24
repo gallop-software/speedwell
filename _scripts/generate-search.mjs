@@ -13,7 +13,7 @@ function getPostSlugs() {
     console.warn('Blog directory not found: src/blog')
     return []
   }
-  
+
   const files = fs.readdirSync(blogDir).filter((file) => file.endsWith('.tsx'))
   return files.map((file) => `post/${file.replace(/\.tsx$/, '')}`)
 }
@@ -25,19 +25,22 @@ function getCategorySlugs() {
     console.warn('Blog data not found: _data/_blog.json')
     return []
   }
-  
+
   try {
     const content = fs.readFileSync(blogJsonPath, 'utf8')
     const posts = JSON.parse(content)
-    
+
     // Extract unique categories
     const categories = new Set()
     for (const post of posts) {
       const cats = post.metadata?.categories
       if (cats) {
-        const catArray = Array.isArray(cats) 
-          ? cats 
-          : cats.split(/[,|/]/).map((s) => s.trim()).filter(Boolean)
+        const catArray = Array.isArray(cats)
+          ? cats
+          : cats
+              .split(/[,|/]/)
+              .map((s) => s.trim())
+              .filter(Boolean)
         catArray.forEach((cat) => {
           // Convert to slug format (lowercase, hyphenated)
           const slug = cat.toLowerCase().replace(/\s+/g, '-')
@@ -45,7 +48,7 @@ function getCategorySlugs() {
         })
       }
     }
-    
+
     return Array.from(categories)
   } catch (error) {
     console.error('Failed to read blog data:', error.message)
@@ -56,30 +59,30 @@ function getCategorySlugs() {
 // Get all slug paths from Next.js App Router pages
 function getSlugPaths(dir, basePath = '') {
   const out = []
-  
+
   if (!fs.existsSync(dir)) {
     console.warn(`Directory not found: ${dir}`)
     return out
   }
-  
+
   const entries = fs.readdirSync(dir, { withFileTypes: true })
 
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name)
-    
+
     if (entry.isDirectory()) {
       // Skip dynamic route segments (folders with brackets like [slug] or [[...slug]])
       // These are handled separately via getPostSlugs() and getCategorySlugs()
       if (entry.name.includes('[') && entry.name.includes(']')) {
         continue
       }
-      
+
       // Skip specific routes
       if (entry.name === 'block') {
         console.log(`Skipping route: ${basePath}/${entry.name}`)
         continue
       }
-      
+
       // Skip route groups (folders starting with parentheses) but traverse into them
       if (entry.name.startsWith('(') && entry.name.endsWith(')')) {
         // Route group - traverse but don't add to path
@@ -230,14 +233,14 @@ async function crawlAndGenerateIndex() {
   console.log('🔍 Crawling local site to generate search index...\n')
 
   const baseDir = path.resolve(__dirname, '../src/app')
-  
+
   // Get static pages
   const staticPaths = getSlugPaths(baseDir)
-  
+
   // Get dynamic route slugs
   const postSlugs = getPostSlugs()
   const categorySlugs = getCategorySlugs()
-  
+
   // Combine all paths
   const slugPaths = [...staticPaths, ...postSlugs, ...categorySlugs]
   const baseUrl = 'http://localhost:3000'

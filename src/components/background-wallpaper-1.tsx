@@ -4,10 +4,15 @@ interface BackgroundWallpaper1Props {
   className?: string
 }
 
-export default function BackgroundWallpaper1({ className }: BackgroundWallpaper1Props) {
+export default function BackgroundWallpaper1({
+  className,
+}: BackgroundWallpaper1Props) {
   return (
     <svg
-      className={clsx('absolute inset-0 w-full h-full opacity-[0.04] z-0', className)}
+      className={clsx(
+        'absolute inset-0 w-full h-full opacity-[0.04] z-0',
+        className
+      )}
       aria-hidden="true"
     >
       <defs>

@@ -18,21 +18,41 @@ export function getToday(timezone: string = DEFAULT_TIMEZONE) {
 }
 
 // Check if a date is in the past (compared to timezone's today)
-export function isDatePast(year: number, month: number, day: number, timezone: string = DEFAULT_TIMEZONE) {
-  const date = DateTime.fromObject({ year, month: month + 1, day }, { zone: timezone }).startOf('day')
+export function isDatePast(
+  year: number,
+  month: number,
+  day: number,
+  timezone: string = DEFAULT_TIMEZONE
+) {
+  const date = DateTime.fromObject(
+    { year, month: month + 1, day },
+    { zone: timezone }
+  ).startOf('day')
   const today = getToday(timezone)
   return date < today
 }
 
 // Check if a date is today in a specific timezone
-export function isDateToday(year: number, month: number, day: number, timezone: string = DEFAULT_TIMEZONE) {
-  const date = DateTime.fromObject({ year, month: month + 1, day }, { zone: timezone }).startOf('day')
+export function isDateToday(
+  year: number,
+  month: number,
+  day: number,
+  timezone: string = DEFAULT_TIMEZONE
+) {
+  const date = DateTime.fromObject(
+    { year, month: month + 1, day },
+    { zone: timezone }
+  ).startOf('day')
   const today = getToday(timezone)
   return date.equals(today)
 }
 
 // Check if a month is current or past (for disabling navigation)
-export function isCurrentOrPastMonth(year: number, month: number, timezone: string = DEFAULT_TIMEZONE) {
+export function isCurrentOrPastMonth(
+  year: number,
+  month: number,
+  timezone: string = DEFAULT_TIMEZONE
+) {
   const now = getNow(timezone)
   return year < now.year || (year === now.year && month <= now.month - 1)
 }

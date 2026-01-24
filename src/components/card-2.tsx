@@ -40,7 +40,8 @@ export function Card2({
           as="h3"
           color="text-contrast"
           textAlign="text-center"
-          margin="m-0" className="w-full px-8 whitespace-normal break-words"
+          margin="m-0"
+          className="w-full px-8 whitespace-normal break-words"
         >
           {name}
         </Heading>

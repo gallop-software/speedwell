@@ -11,7 +11,11 @@ interface CardTestimonial1Props {
   children: React.ReactNode
 }
 
-export function CardTestimonial1({ img, cite, children }: CardTestimonial1Props) {
+export function CardTestimonial1({
+  img,
+  cite,
+  children,
+}: CardTestimonial1Props) {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex justify-center w-full [&>*]:max-w-3xl [&>*]:xl:max-w-4xl">

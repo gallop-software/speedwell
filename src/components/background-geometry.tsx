@@ -6,7 +6,12 @@ export interface BackgroundGeometryProps {
 
 export function BackgroundGeometry({ className }: BackgroundGeometryProps) {
   return (
-    <div className={clsx('absolute left-1/2 -translate-x-1/2 opacity-20', className)}>
+    <div
+      className={clsx(
+        'absolute left-1/2 -translate-x-1/2 opacity-20',
+        className
+      )}
+    >
       {/* Concentric dotted circles */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-dashed border-contrast" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-dashed border-contrast" />

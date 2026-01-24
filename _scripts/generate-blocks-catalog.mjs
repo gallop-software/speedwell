@@ -1,5 +1,12 @@
 import puppeteer from 'puppeteer'
-import { readdir, readFile, writeFile, mkdir, unlink, access } from 'fs/promises'
+import {
+  readdir,
+  readFile,
+  writeFile,
+  mkdir,
+  unlink,
+  access,
+} from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'

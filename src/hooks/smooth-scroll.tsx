@@ -16,17 +16,24 @@ const SmoothScroll = () => {
         state.lockScrollDirection = true
 
         // Unlock after scroll completes
-        window.addEventListener('scrollend', () => {
-          state.lockScrollDirection = false
-        }, { once: true })
+        window.addEventListener(
+          'scrollend',
+          () => {
+            state.lockScrollDirection = false
+          },
+          { once: true }
+        )
 
         // No offset for div/section elements
         const tagName = targetElement.tagName.toLowerCase()
-        const scrollOffset = (tagName === 'div' || tagName === 'section') ? 0 : offset
+        const scrollOffset =
+          tagName === 'div' || tagName === 'section' ? 0 : offset
 
         window.scrollTo({
           top:
-            targetElement.getBoundingClientRect().top + window.scrollY - scrollOffset,
+            targetElement.getBoundingClientRect().top +
+            window.scrollY -
+            scrollOffset,
           behavior: 'smooth',
         })
 

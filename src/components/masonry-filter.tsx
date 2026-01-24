@@ -80,7 +80,11 @@ export function MasonryFilter({
 
       {/* Masonry grid with filtered items */}
       <div ref={containerRef}>
-        <Masonry gap={gap} breakpoints={breakpoints} className={clsx('lightbox-gallery-dynamic', className)}>
+        <Masonry
+          gap={gap}
+          breakpoints={breakpoints}
+          className={clsx('lightbox-gallery-dynamic', className)}
+        >
           {filteredItems.map((item) => (
             <motion.div
               key={item.id}
@@ -100,7 +104,10 @@ export function MasonryFilter({
             </motion.div>
           ))}
         </Masonry>
-        <GalleryPopupDynamic key={activeFilter} containerRef={containerRef} />
+        <GalleryPopupDynamic
+          key={activeFilter}
+          containerRef={containerRef}
+        />
       </div>
     </>
   )
