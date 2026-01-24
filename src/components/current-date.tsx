@@ -1,6 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { DateTime } from 'luxon'
+
+const TIMEZONE = 'America/Chicago'
 
 export default function CurrentDate({ dayString }: { dayString: string }) {
   const [formattedDate, setFormattedDate] = useState<string | null>(null)
@@ -18,12 +21,9 @@ export default function CurrentDate({ dayString }: { dayString: string }) {
         'sunday',
       ]
 
-      const currentDate = new Date()
-      const options = { timeZone: 'America/Chicago' }
-      const currentCSTDate = new Date(
-        currentDate.toLocaleString('en-US', options)
-      )
-      const currentDayIndex = (currentCSTDate.getDay() + 6) % 7 // Adjusting so week starts on Monday
+      const now = DateTime.now().setZone(TIMEZONE)
+      // Luxon weekday: 1=Monday, 7=Sunday; our array is 0=Monday, 6=Sunday
+      const currentDayIndex = now.weekday - 1
       const targetDayIndex = daysOfWeek.indexOf(dayString.toLowerCase())
 
       if (targetDayIndex === -1) {
@@ -31,23 +31,11 @@ export default function CurrentDate({ dayString }: { dayString: string }) {
       }
 
       // Calculate the number of days difference
-      let daysUntilTarget = targetDayIndex - currentDayIndex
+      const daysUntilTarget = targetDayIndex - currentDayIndex
 
-      // Adjust logic:
-      // - If daysUntilTarget is negative, it means the target day was earlier in the week, so it should stay in this week.
-      // - If daysUntilTarget is positive, it means the target day is later in the week, so use it as is.
-      // - If daysUntilTarget is zero, it is today, so no adjustment needed.
-      if (daysUntilTarget < 0) {
-        // Calculate the past occurrence (this week's occurrence)
-        const targetDate = new Date(currentCSTDate)
-        targetDate.setDate(currentCSTDate.getDate() + daysUntilTarget)
-        return `${targetDate.getMonth() + 1}/${targetDate.getDate()}`
-      } else {
-        // Calculate the upcoming occurrence
-        const targetDate = new Date(currentCSTDate)
-        targetDate.setDate(currentCSTDate.getDate() + daysUntilTarget)
-        return `${targetDate.getMonth() + 1}/${targetDate.getDate()}`
-      }
+      // Calculate the target date
+      const targetDate = now.plus({ days: daysUntilTarget })
+      return `${targetDate.month}/${targetDate.day}`
     }
 
     // Calculate and set the formatted date

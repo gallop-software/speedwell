@@ -50,8 +50,8 @@ export function Card3({
           width={width}
           height={height}
           size={size}
-          className="rounded-lg shadow-lg"
-          rounded=""
+          className="shadow-lg"
+          rounded="rounded-lg"
         />
       </div>
     </a>

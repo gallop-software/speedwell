@@ -216,13 +216,6 @@ Enforce import boundaries between Canon zones
 - **ESLint Rule:** `gallop/no-cross-zone-imports`
 - **Category:** structure
 
-### 022: No Data Direct Imports
-
-Prevent runtime code from importing \_data/ directly
-
-- **ESLint Rule:** `gallop/no-data-imports`
-- **Category:** structure
-
 ### 024: React Intersection Observer
 
 Use react-intersection-observer package, not native API

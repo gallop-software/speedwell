@@ -10,6 +10,7 @@ import heartIcon from '@iconify/icons-heroicons/heart-solid'
 import { Icon } from './icon'
 import { Paragraph } from './paragraph'
 import { Heading } from './heading'
+import { DateTime } from 'luxon'
 
 interface FooterLink {
   href: string
@@ -117,7 +118,7 @@ function Copyright() {
       margin="mb-0"
       textAlign="text-center lg:text-left"
     >
-      &copy; {new Date().getFullYear()} Timmerman Interior Designer
+      &copy; {DateTime.now().year} Timmerman Interior Designer
     </Paragraph>
   )
 }

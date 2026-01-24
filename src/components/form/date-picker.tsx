@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import clsx from 'clsx'
+import { DateTime } from 'luxon'
 import calendarIcon from '@iconify/icons-heroicons/calendar'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 import chevronLeftIcon from '@iconify/icons-heroicons/chevron-left'
@@ -27,10 +28,10 @@ import {
 // ============================================================================
 
 type CalendarProps = {
-  selectedDate: Date | null
-  onSelect: (date: Date) => void
-  viewDate: Date
-  onViewDateChange: (date: Date) => void
+  selectedDate: DateTime | null
+  onSelect: (date: DateTime) => void
+  viewDate: DateTime
+  onViewDateChange: (date: DateTime) => void
   timezone: string
 }
 
@@ -41,8 +42,8 @@ function Calendar({
   onViewDateChange,
   timezone,
 }: CalendarProps) {
-  const year = viewDate.getFullYear()
-  const month = viewDate.getMonth()
+  const year = viewDate.year
+  const month = viewDate.month - 1 // Convert to 0-indexed for utility functions
   const daysInMonth = getDaysInMonth(year, month)
   const firstDay = getFirstDayOfMonth(year, month)
 
@@ -55,9 +56,9 @@ function Calendar({
   const isSelected = (day: number) => {
     if (!selectedDate || !day) return false
     return (
-      selectedDate.getFullYear() === year &&
-      selectedDate.getMonth() === month &&
-      selectedDate.getDate() === day
+      selectedDate.year === year &&
+      selectedDate.month - 1 === month &&
+      selectedDate.day === day
     )
   }
 
@@ -95,7 +96,15 @@ function Calendar({
             <button
               type="button"
               disabled={!day || isPast(day)}
-              onClick={() => day && onSelect(new Date(year, month, day))}
+              onClick={() =>
+                day &&
+                onSelect(
+                  DateTime.fromObject(
+                    { year, month: month + 1, day },
+                    { zone: timezone }
+                  )
+                )
+              }
               className={clsx(
                 'w-12 h-12 flex items-center justify-center text-base rounded-full transition-colors',
                 !day && 'invisible',
@@ -150,26 +159,22 @@ export function DatePickerInput({
   timezone = DEFAULT_TIMEZONE,
 }: DatePickerProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedDate, setSelectedDate] = useState<Date | null>(
-    defaultValue ? new Date(defaultValue) : null
+  const [selectedDate, setSelectedDate] = useState<DateTime | null>(
+    defaultValue ? DateTime.fromISO(defaultValue, { zone: timezone }) : null
   )
-  const [viewDate, setViewDate] = useState(selectedDate || new Date())
-  const [viewDate2, setViewDate2] = useState(() => {
-    const d = new Date(viewDate)
-    d.setMonth(d.getMonth() + 1)
-    return d
-  })
+  const [viewDate, setViewDate] = useState(
+    selectedDate || DateTime.now().setZone(timezone)
+  )
+  const [viewDate2, setViewDate2] = useState(() => viewDate.plus({ months: 1 }))
 
-  const handleSelect = (date: Date) => {
+  const handleSelect = (date: DateTime) => {
     setSelectedDate(date)
     setIsOpen(false)
   }
 
   // Sync second calendar to be month after first
   useEffect(() => {
-    const d = new Date(viewDate)
-    d.setMonth(d.getMonth() + 1)
-    setViewDate2(d)
+    setViewDate2(viewDate.plus({ months: 1 }))
   }, [viewDate])
 
   return (
@@ -223,8 +228,8 @@ export function DatePickerInput({
                   <div className="flex items-center justify-between mb-6">
                     {(() => {
                       const isCurrentMonth = isCurrentOrPastMonth(
-                        viewDate.getFullYear(),
-                        viewDate.getMonth(),
+                        viewDate.year,
+                        viewDate.month - 1,
                         timezone
                       )
                       const disabled = disablePastMonths && isCurrentMonth
@@ -234,13 +239,7 @@ export function DatePickerInput({
                           type="button"
                           disabled={disabled}
                           onClick={() =>
-                            setViewDate(
-                              new Date(
-                                viewDate.getFullYear(),
-                                viewDate.getMonth() - 1,
-                                1
-                              )
-                            )
+                            setViewDate(viewDate.minus({ months: 1 }))
                           }
                           className={clsx(
                             'p-2 rounded-full transition-colors',
@@ -257,23 +256,13 @@ export function DatePickerInput({
                       )
                     })()}
                     <div className="flex gap-4 text-lg font-semibold text-contrast">
-                      <span>{MONTHS[viewDate.getMonth()]}</span>
-                      <span className="text-contrast/50">
-                        {viewDate.getFullYear()}
-                      </span>
+                      <span>{MONTHS[viewDate.month - 1]}</span>
+                      <span className="text-contrast/50">{viewDate.year}</span>
                     </div>
                     {/* Spacer on mobile, hidden on desktop */}
                     <button
                       type="button"
-                      onClick={() =>
-                        setViewDate(
-                          new Date(
-                            viewDate.getFullYear(),
-                            viewDate.getMonth() + 1,
-                            1
-                          )
-                        )
-                      }
+                      onClick={() => setViewDate(viewDate.plus({ months: 1 }))}
                       className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer lg:invisible"
                     >
                       <Icon
@@ -301,22 +290,12 @@ export function DatePickerInput({
                       />
                     </div>
                     <div className="flex gap-4 text-lg font-semibold text-contrast">
-                      <span>{MONTHS[viewDate2.getMonth()]}</span>
-                      <span className="text-contrast/50">
-                        {viewDate2.getFullYear()}
-                      </span>
+                      <span>{MONTHS[viewDate2.month - 1]}</span>
+                      <span className="text-contrast/50">{viewDate2.year}</span>
                     </div>
                     <button
                       type="button"
-                      onClick={() =>
-                        setViewDate(
-                          new Date(
-                            viewDate.getFullYear(),
-                            viewDate.getMonth() + 1,
-                            1
-                          )
-                        )
-                      }
+                      onClick={() => setViewDate(viewDate.plus({ months: 1 }))}
                       className="p-2 hover:bg-contrast/5 rounded-full transition-colors cursor-pointer"
                     >
                       <Icon
@@ -329,11 +308,9 @@ export function DatePickerInput({
                     selectedDate={selectedDate}
                     onSelect={handleSelect}
                     viewDate={viewDate2}
-                    onViewDateChange={(d) => {
-                      const first = new Date(d)
-                      first.setMonth(first.getMonth() - 1)
-                      setViewDate(first)
-                    }}
+                    onViewDateChange={(d) =>
+                      setViewDate(d.minus({ months: 1 }))
+                    }
                     timezone={timezone}
                   />
                 </div>

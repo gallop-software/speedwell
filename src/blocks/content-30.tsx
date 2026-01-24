@@ -15,7 +15,8 @@ export default function Content30() {
           <Image
             src="/images/portfolio/pexels-pixabay-276724.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tmp"
-            className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover aspect-[16/9]"
+            className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover"
+            aspect="aspect-[16/9]"
             lazy={false}
           />
           <Image

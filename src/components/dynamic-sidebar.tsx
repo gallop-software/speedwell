@@ -51,7 +51,8 @@ function SidebarHeader({ closeModal }: any) {
                     src={image.src}
                     size="small"
                     alt={image.alt}
-                    className="inline-block h-10 w-10 ring-2 ring-white object-cover aspect-square"
+                    className="inline-block h-10 w-10 ring-2 ring-white object-cover"
+                    aspect="aspect-square"
                     rounded="rounded-full"
                   />
                 )}

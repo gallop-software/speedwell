@@ -31,7 +31,7 @@ const SidebarStackContext = createContext<SidebarStackContextType | null>(null)
 
 let idCounter = 0
 function generateId(): string {
-  return `sidebar-${++idCounter}-${Date.now()}`
+  return `sidebar-${++idCounter}`
 }
 
 export function SidebarStackProvider({ children }: { children: ReactNode }) {

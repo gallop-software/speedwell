@@ -17,6 +17,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
+import { DateTime } from 'luxon'
 
 // Helper function to decode HTML entities
 const decodeHtmlEntities = (str: string): string => {
@@ -296,15 +297,9 @@ export function BlogClient({
                     </Link>
                     {post.metadata.date && (
                       <span className="font-medium text-accent mb-0!">
-                        {new Date(post.metadata.date).toLocaleDateString(
-                          'en-US',
-                          {
-                            year: 'numeric',
-                            month: '2-digit',
-                            day: '2-digit',
-                            timeZone: 'UTC',
-                          }
-                        )}
+                        {DateTime.fromISO(post.metadata.date, {
+                          zone: 'utc',
+                        }).toFormat('MM/dd/yyyy')}
                       </span>
                     )}
                   </div>

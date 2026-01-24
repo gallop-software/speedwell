@@ -15,7 +15,8 @@ export default function Content31() {
           <Image
             src="/images/portfolio/pexels-pixabay-269218.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
-            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover aspect-[16/9]"
+            className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
+            aspect="aspect-[16/9]"
             size="large"
           />
           <Image
