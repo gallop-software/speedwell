@@ -308,7 +308,9 @@ export function DatePickerInput({
                     selectedDate={selectedDate}
                     onSelect={handleSelect}
                     viewDate={viewDate2}
-                    onViewDateChange={(d) => setViewDate(d.minus({ months: 1 }))}
+                    onViewDateChange={(d) =>
+                      setViewDate(d.minus({ months: 1 }))
+                    }
                     timezone={timezone}
                   />
                 </div>
