@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import { Heading } from './heading'
 
@@ -19,9 +18,7 @@ interface Card2Props {
 
 export function Card2({
   name,
-  description,
   href,
-  icon,
   backgroundClass = 'bg-body2',
 }: Card2Props) {
   return (

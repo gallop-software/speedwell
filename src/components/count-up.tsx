@@ -47,7 +47,7 @@ export function CountUp({
 
   const display = useTransform(spring, (num) => {
     const fixed = num.toFixed(decimals)
-    const [intPart, decPart] = fixed.split('.')
+    const [intPart = '0', decPart] = fixed.split('.')
 
     // Add separator to integer part if provided
     const formattedInt = separator
@@ -63,12 +63,11 @@ export function CountUp({
   })
 
   useEffect(() => {
-    if (isInView) {
-      const timeout = setTimeout(() => {
-        value.set(end)
-      }, delay * 1000)
-      return () => clearTimeout(timeout)
-    }
+    if (!isInView) return
+    const timeout = setTimeout(() => {
+      value.set(end)
+    }, delay * 1000)
+    return () => clearTimeout(timeout)
   }, [isInView, end, delay, value])
 
   return (

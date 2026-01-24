@@ -7,7 +7,6 @@ import {
   Paragraph,
   Button,
   Subheading,
-  Span,
   Label,
   BackgroundDiagonal1,
   Chip,

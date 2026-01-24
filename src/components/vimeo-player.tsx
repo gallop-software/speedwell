@@ -32,7 +32,7 @@ function getAspectRatioPadding(className?: string): string | undefined {
   // Try to match aspect ratio patterns in className
   const match = className.match(/aspect[-_]?(?:ratio[-_]?)?(\d+)[-_/](\d+)/i)
   if (match) {
-    const [, width, height] = match
+    const [, width = '16', height = '9'] = match
     const key = `${width}-${height}`
     if (aspectRatios[key]) {
       return aspectRatios[key]
@@ -44,7 +44,7 @@ function getAspectRatioPadding(className?: string): string | undefined {
   return undefined
 }
 
-export function VimeoPlayer({ embed, isOpen }: VimeoPlayerProps) {
+export function VimeoPlayer({ embed, isOpen: _isOpen }: VimeoPlayerProps) {
   const playerRef = useRef<HTMLIFrameElement>(null)
 
   const iframe = embed?.wpBlockEmbedWrapper?.iframe || undefined

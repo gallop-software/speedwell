@@ -18,7 +18,7 @@ import 'swiper/css/navigation'
 interface SwiperSliderInitProps {
   swiperId: string
   layout?: 'slider' | 'carousel'
-  columns?: 2 | 3
+  columns?: 2 | 3 | undefined
   autoHeight?: boolean
 }
 

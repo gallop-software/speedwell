@@ -23,8 +23,8 @@ export function DesktopNav({
   forceCloseOnHide,
   dark = false,
 }: {
-  isScrolling?: boolean
-  forceCloseOnHide?: boolean
+  isScrolling?: boolean | undefined
+  forceCloseOnHide?: boolean | undefined
   dark?: boolean
 } = {}): ReactElement {
   return (

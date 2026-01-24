@@ -20,7 +20,7 @@ export function StickyNavbar({
   isScrolling,
   scrollingDirection,
 }: {
-  isScrolling?: boolean
+  isScrolling?: boolean | undefined
   scrollingDirection?: string
 } = {}): ReactElement {
   const shouldShow = isScrolling && scrollingDirection === 'up'

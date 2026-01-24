@@ -1,4 +1,3 @@
-import React from 'react'
 import { readdirSync } from 'fs'
 import path from 'path'
 import { notFound } from 'next/navigation'
@@ -83,7 +82,7 @@ export default async function Page({ params }: PageProps) {
   const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
   try {
-    const { default: Content, metadata } = await import(
+    const { default: Content } = await import(
       `@/blocks/${slugPath}.tsx`
     )
 

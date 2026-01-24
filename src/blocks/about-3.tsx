@@ -1,6 +1,5 @@
 import {
   Section,
-  Grid,
   Swiper,
   Profile2,
   Heading,

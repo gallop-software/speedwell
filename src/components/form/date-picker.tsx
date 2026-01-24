@@ -39,7 +39,7 @@ function Calendar({
   selectedDate,
   onSelect,
   viewDate,
-  onViewDateChange,
+  onViewDateChange: _onViewDateChange,
   timezone,
 }: CalendarProps) {
   const year = viewDate.year
@@ -137,15 +137,15 @@ function Calendar({
 
 type DatePickerProps = {
   name: string
-  placeholder?: string
-  required?: boolean
-  defaultValue?: string
+  placeholder?: string | undefined
+  required?: boolean | undefined
+  defaultValue?: string | undefined
   label?: string
   className?: string
   /** Disable navigating to months before the current month */
-  disablePastMonths?: boolean
+  disablePastMonths?: boolean | undefined
   /** Timezone for date calculations (e.g., "America/New_York"). Default: America/New_York */
-  timezone?: string
+  timezone?: string | undefined
 }
 
 export function DatePickerInput({

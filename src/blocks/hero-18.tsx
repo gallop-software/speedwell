@@ -3,7 +3,6 @@ import {
   Columns,
   Column,
   Image,
-  Accent,
   Heading,
   Paragraph,
   Buttons,

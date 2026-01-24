@@ -2,7 +2,6 @@ import {
   Section,
   FancyHeading,
   Swiper,
-  CardTestimonial1,
   CardTestimonial2,
   Quote,
 } from '@/components'

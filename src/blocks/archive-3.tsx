@@ -80,7 +80,7 @@ export default function Archive3() {
 
       {/* Episodes List */}
       <div className="space-y-6">
-        {episodes.map((episode, index) => (
+        {episodes.map((episode) => (
           <a
             key={episode.number}
             href="#"

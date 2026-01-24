@@ -32,7 +32,7 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
         {links.map(
           (
             { href, label, dropdown, callToAction }: NavLink,
-            linkIndex: number
+            _linkIndex: number
           ) => (
             <div key={href}>
               {dropdown ? (

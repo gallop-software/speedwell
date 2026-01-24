@@ -11,7 +11,7 @@ export interface ListProps extends React.ComponentPropsWithoutRef<'ul'> {
   /** Font size override */
   fontSize?: string
   /** Text color override */
-  color?: string
+  color?: string | undefined
   /** Font family override */
   fontFamily?: string
   /** Font weight override */

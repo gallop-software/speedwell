@@ -46,9 +46,9 @@ export function ButtonPlay({
   return (
     <Button
       variant={variant}
-      href={href}
-      icon={icon}
-      iconPlacement={iconPlacement}
+      {...(href && { href })}
+      {...(icon && { icon })}
+      {...(iconPlacement && { iconPlacement })}
       onClick={handlePlayVideo}
       className={clsx('no-anchor-scroll', className)}
     >

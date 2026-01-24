@@ -1,7 +1,6 @@
 import { Accent } from './accent'
 import { Container } from './container'
 import { Heading } from './heading'
-import { Paragraph } from './paragraph'
 import { ContactForm } from './contact-form'
 
 export function Contact1() {

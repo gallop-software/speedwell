@@ -8,8 +8,6 @@ import {
   FormName,
   FormRadioGroup,
   FormCheckboxGroup,
-  Image,
-  Accent,
 } from '@/components'
 
 export default function Form2() {

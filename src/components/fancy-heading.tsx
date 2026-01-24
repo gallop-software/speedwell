@@ -1,4 +1,3 @@
-import React from 'react'
 import { Heading } from './heading'
 import { Accent } from './accent'
 import clsx from 'clsx'

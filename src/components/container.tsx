@@ -9,7 +9,7 @@ export function Container({
 }: {
   className?: string
   children: React.ReactNode
-  align?: 'wide' | 'none' | 'content' | 'full' | 'navbar'
+  align?: 'wide' | 'none' | 'content' | 'full' | 'navbar' | undefined
   maxWidth?: string
   padding?: string
 }) {

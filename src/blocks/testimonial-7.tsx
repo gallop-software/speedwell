@@ -4,7 +4,6 @@ import {
   Accent,
   Paragraph,
   Swiper,
-  Grid,
   CardTestimonial3,
 } from '@/components'
 

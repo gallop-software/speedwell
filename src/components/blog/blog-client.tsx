@@ -1,11 +1,10 @@
 'use client'
 
-import React, {
+import {
   useState,
   useEffect,
   useRef,
   useCallback,
-  useMemo,
   type ReactNode,
 } from 'react'
 import { Button } from '../button'
@@ -42,12 +41,11 @@ interface BlogPost {
 export function BlogClient({
   allPosts = [],
   perPage = 9,
-  className,
   loadMoreText = 'Load More Posts',
 }: {
   allPosts?: BlogPost[]
   perPage?: number
-  className?: string
+  className?: string | undefined
   loadMoreText?: string
 }) {
   const [displayedCount, setDisplayedCount] = useState(perPage)
@@ -112,8 +110,7 @@ export function BlogClient({
 
     if (!isMasonryEnabled) {
       // Simple single column layout
-      let currentHeight = 0
-      itemRefs.current.forEach((item, index) => {
+      itemRefs.current.forEach((item) => {
         if (!item) return
 
         item.style.position = 'relative'
@@ -138,7 +135,7 @@ export function BlogClient({
     const columnWidth = availableWidth / columns
     const columnHeights = new Array(columns).fill(0)
 
-    itemRefs.current.forEach((item, index) => {
+    itemRefs.current.forEach((item) => {
       if (!item) return
 
       // Find the shortest column

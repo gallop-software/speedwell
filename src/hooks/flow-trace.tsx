@@ -92,7 +92,7 @@ const takeInteractionDelta = (): number => {
 }
 
 // path utils
-type PathEntry = { path: string; ts: string; spentMs: number; source?: string }
+type PathEntry = { path: string; ts: string; spentMs: number; source?: string | undefined }
 
 const readPath = (): PathEntry[] => {
   const prev = safeGet(PATH_KEY)
@@ -112,7 +112,10 @@ const addDeltaToLastPathEntry = (deltaMs: number) => {
   if (deltaMs <= 0) return
   const arr = readPath()
   if (arr.length === 0) return
-  arr[arr.length - 1].spentMs = (arr[arr.length - 1].spentMs ?? 0) + deltaMs
+  const lastEntry = arr[arr.length - 1]
+  if (lastEntry) {
+    lastEntry.spentMs = (lastEntry.spentMs ?? 0) + deltaMs
+  }
   safeSet(PATH_KEY, JSON.stringify(arr))
 }
 

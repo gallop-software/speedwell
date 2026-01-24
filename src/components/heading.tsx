@@ -27,7 +27,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   /** Font family override */
   fontFamily?: string
   /** Text color override */
-  color?: string
+  color?: string | undefined
   /** Margin override */
   margin?: string
   /** Text alignment override */

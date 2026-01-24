@@ -1,4 +1,4 @@
-import { useId, Fragment } from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import Highlighter from 'react-highlight-words'
 import {
@@ -80,8 +80,6 @@ export function SearchResults({
   collection: AutocompleteCollection<Result>
   onResultClick: () => void
 }) {
-  let id = useId()
-
   if (!collection || collection.items.length === 0) {
     return (
       <div className="px-4 py-10 bg-body2 text-contrast text-center">
