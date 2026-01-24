@@ -76,8 +76,8 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  const slugsWithTopPadding = ['section-1', 'accordion-1', 'business-info-1']
-  const slugsWithBottomPadding = ['section-1', 'business-info-1']
+  const slugsWithTopPadding = ['section-1', 'accordion-1']
+  const slugsWithBottomPadding = ['section-1']
   const shouldAddTopPadding = slugsWithTopPadding.includes(slugPath)
   const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
