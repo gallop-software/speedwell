@@ -52,6 +52,18 @@ function Details() {
         </Link>{' '}
         showcases similar attention to historic detail in a commercial setting.
       </P>
+
+      <P>
+        Restoration projects like this one require extensive research into
+        period-appropriate materials, techniques, and design vocabulary. We
+        consulted historical archives, worked with specialty craftspeople, and
+        sourced vintage pieces from estate sales and antique dealers. This same
+        dedication to authenticity and curated collecting informed our{' '}
+        <Link href="/post/library-study-design" prefetch={true}>
+          library study design
+        </Link>
+        , where every detail contributes to a cohesive, timeless atmosphere.
+      </P>
     </>
   )
 }

@@ -52,6 +52,18 @@ function Details() {
         </Link>{' '}
         to discuss your home office project.
       </P>
+
+      <P>
+        The principles of thoughtful workspace design extend beyond the
+        traditional home office into how we approach living spaces as a whole.
+        Creating dedicated zones for focus, collaboration, and relaxation helps
+        homeowners achieve better work-life balance. Our{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          Modern Loft Transformation
+        </Link>{' '}
+        showcases how open floor plans can be designed to support both
+        productivity and comfortable living.
+      </P>
     </>
   )
 }

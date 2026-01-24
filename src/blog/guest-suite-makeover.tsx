@@ -55,6 +55,18 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Creating a spa-like retreat within your home extends beyond the bedroom
+        to encompass the entire guest experience. The same attention to sensory
+        details—soft textures, calming colors, and thoughtful amenities—can
+        transform any space into a sanctuary. Discover how we applied these
+        principles on a larger scale in our{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          wellness spa design
+        </Link>{' '}
+        project, where relaxation and rejuvenation guide every design decision.
+      </P>
     </>
   )
 }

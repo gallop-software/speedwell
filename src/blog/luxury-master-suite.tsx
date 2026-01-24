@@ -40,6 +40,19 @@ function Details() {
         </Link>{' '}
         for a different aesthetic approach.
       </P>
+
+      <P>
+        Creating a truly luxurious retreat requires the same attention to detail
+        found in the finest hospitality spaces. Our approach draws inspiration
+        from high-end hotel design, incorporating layered textures, thoughtful
+        amenities, and seamless technology integration. To see how we translate
+        these principles into commercial settings, explore our{' '}
+        <Link href="/post/boutique-hotel-design" prefetch={true}>
+          Boutique Hotel Design
+        </Link>{' '}
+        project, which showcases the sophisticated hospitality aesthetic that
+        influences our residential work.
+      </P>
     </>
   )
 }

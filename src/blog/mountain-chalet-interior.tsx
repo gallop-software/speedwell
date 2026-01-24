@@ -47,6 +47,19 @@ function Details() {
           farmhouse kitchen remodel
         </Link>.
       </P>
+
+      <P>
+        The tranquil atmosphere of this mountain retreat shares design
+        philosophies with vacation homes that embrace their natural
+        surroundings. Both require careful consideration of how light, texture,
+        and comfort work together to create an escape from everyday life. For
+        another example of retreat-style design that celebrates its location,
+        explore our{' '}
+        <Link href="/post/coastal-cottage-refresh" prefetch={true}>
+          coastal cottage refresh
+        </Link>{' '}
+        which brings similar principles to a seaside setting.
+      </P>
     </>
   )
 }

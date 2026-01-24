@@ -39,6 +39,19 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        Living in an open loft requires thoughtful consideration of how sound
+        travels and how privacy can be achieved without sacrificing the airy
+        feel. We incorporated acoustic panels disguised as art installations and
+        used floor-to-ceiling drapes to create flexible room divisions when
+        needed. This balance of openness and intimacy is something we also
+        achieved in our{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian apartment
+        </Link>{' '}
+        project, where minimalism meets warmth.
+      </P>
     </>
   )
 }

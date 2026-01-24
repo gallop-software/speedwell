@@ -42,6 +42,18 @@ function Details() {
         showcases how we create child-friendly spaces with sophisticated
         aesthetics.
       </P>
+
+      <P>
+        The kitchen became the heart of this family home, featuring an
+        expansive island for homework, meal prep, and casual gatherings. If
+        you're considering a kitchen renovation that balances functionality
+        with warmth, explore our{' '}
+        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+          farmhouse kitchen remodel
+        </Link>{' '}
+        for inspiration on creating welcoming spaces that bring families
+        together while accommodating the demands of modern life.
+      </P>
     </>
   )
 }

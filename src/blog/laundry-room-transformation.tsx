@@ -42,6 +42,17 @@ function Details() {
           mudroom organization project
         </Link>.
       </P>
+
+      <P>
+        Thoughtful design in utility spaces contributes to the overall flow and
+        functionality of your home. When every room—including the laundry—is
+        designed with intention, daily routines become more efficient and less
+        stressful. Learn more about how we approach whole-home design on our{' '}
+        <Link href="/residential" prefetch={true}>
+          residential services
+        </Link>{' '}
+        page.
+      </P>
     </>
   )
 }

@@ -39,6 +39,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        The principles of thoughtful library design—curated collections,
+        comfortable seating, and ambient lighting—extend beyond urban studies to
+        country estates where reading rooms become treasured retreats. In rural
+        settings, these spaces often connect to wine cellars or tasting rooms
+        that share the same appreciation for craftsmanship and leisure. See how
+        we created such harmonious spaces in our{' '}
+        <Link href="/post/wine-country-estate" prefetch={true}>
+          Wine Country Estate
+        </Link>{' '}
+        project, where traditional elegance meets relaxed sophistication.
+      </P>
     </>
   )
 }

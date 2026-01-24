@@ -43,6 +43,19 @@ function Details() {
         </Link>{' '}
         for similar light-filled design inspiration.
       </P>
+
+      <P>
+        Sustainability was woven throughout this refresh, with low-VOC paints,
+        reclaimed materials, and energy-efficient lighting that honor the
+        natural coastal environment. If you're drawn to eco-conscious design
+        principles, our{' '}
+        <Link href="/post/sustainable-green-home" prefetch={true}>
+          sustainable green home
+        </Link>{' '}
+        project demonstrates how environmental responsibility and beautiful
+        design work hand in hand to create spaces that are gentle on both
+        inhabitants and the planet.
+      </P>
     </>
   )
 }

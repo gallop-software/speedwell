@@ -35,6 +35,18 @@ function Details() {
         </Link>{' '}
         design.
       </P>
+
+      <P>
+        The success of any coworking space hinges on creating an environment
+        where people want to spend their days. Beyond aesthetics, we focused on
+        acoustics, lighting quality, and ergonomic furniture to support
+        productivity and well-being. These same principles guided our work on
+        the{' '}
+        <Link href="/post/tech-startup-headquarters" prefetch={true}>
+          tech startup headquarters
+        </Link>
+        , where employee comfort directly impacts innovation and retention.
+      </P>
     </>
   )
 }

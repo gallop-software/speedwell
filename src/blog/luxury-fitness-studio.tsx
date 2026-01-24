@@ -34,6 +34,19 @@ function Details() {
         </Link>{' '}
         projects.
       </P>
+
+      <P>
+        Creating a memorable brand identity requires understanding both the
+        product and the audience. For this brewery, we immersed ourselves in
+        their brewing process, tasted every variety, and spent time with their
+        community to capture the spirit of experimentation that defines their
+        craft. If you're ready to develop a distinctive identity for your
+        business,{' '}
+        <Link href="/contact" prefetch={true}>
+          get in touch
+        </Link>{' '}
+        to start the conversation.
+      </P>
     </>
   )
 }

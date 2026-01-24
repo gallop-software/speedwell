@@ -48,6 +48,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        The master suite became a particular focus, with custom closets,
+        integrated charging stations, and a reading nook that capitalizes on
+        the stunning cityscape. For clients seeking similar luxury bedroom
+        transformations, our{' '}
+        <Link href="/post/luxury-master-suite" prefetch={true}>
+          luxury master suite
+        </Link>{' '}
+        project showcases how we create serene, sophisticated retreats within
+        urban residences. Every detail is considered to elevate daily living
+        into an exceptional experience.
+      </P>
     </>
   )
 }

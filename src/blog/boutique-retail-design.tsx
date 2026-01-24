@@ -35,6 +35,19 @@ function Details() {
         </Link>{' '}
         interior design project.
       </P>
+
+      <P>
+        Creating a cohesive brand identity requires understanding how visual
+        elements translate across different retail environments and customer
+        touchpoints. The success of this coffee brand demonstrates how
+        thoughtful design can communicate values and build lasting customer
+        connections—principles we also applied in our{' '}
+        <Link href="/post/fashion-boutique-rebrand" prefetch={true}>
+          fashion boutique rebrand
+        </Link>{' '}
+        where we helped a clothing retailer refresh their visual identity while
+        honoring their established customer base.
+      </P>
     </>
   )
 }

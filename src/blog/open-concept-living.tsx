@@ -48,6 +48,18 @@ function Details() {
         </Link>{' '}
         projects.
       </P>
+
+      <P>
+        The kitchen anchors this open layout with a streamlined design that
+        complements the flowing spaces. Clean lines, integrated appliances, and
+        thoughtful storage ensure the cooking area feels part of the living
+        space rather than separate from it. Our{' '}
+        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+          minimalist kitchen redesign
+        </Link>{' '}
+        offers additional inspiration for creating kitchens that embrace
+        simplicity while maximizing functionality in open floor plans.
+      </P>
     </>
   )
 }

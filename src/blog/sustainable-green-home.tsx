@@ -56,6 +56,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Sustainable design principles translate beautifully across different
+        architectural styles and settings. Whether adapting historic structures
+        or building new, the same commitment to eco-conscious materials and
+        energy efficiency can guide every decision. See how we applied these
+        values in a coastal setting with our{' '}
+        <Link href="/post/coastal-cottage-refresh" prefetch={true}>
+          coastal cottage refresh
+        </Link>{' '}
+        project, where natural ventilation and locally-sourced materials created
+        a home in harmony with its environment.
+      </P>
     </>
   )
 }

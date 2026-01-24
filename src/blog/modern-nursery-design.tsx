@@ -41,6 +41,18 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        Designing spaces for growing families requires balancing practicality
+        with beauty, ensuring rooms can adapt as children develop. If you're
+        planning updates throughout your home to accommodate your family's
+        needs, our team specializes in creating cohesive designs that flow from
+        room to room. Visit our{' '}
+        <Link href="/residential" prefetch={true}>
+          residential design services
+        </Link>{' '}
+        page to learn more about how we can help transform your entire home.
+      </P>
     </>
   )
 }

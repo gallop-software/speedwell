@@ -35,6 +35,18 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        Creating a memorable retail experience requires attention to every
+        customer touchpoint, from the storefront to the shopping bag they carry
+        home. The visual identity extends into the physical space, informing
+        fixture design, lighting choices, and product display strategies. Our{' '}
+        <Link href="/post/urban-coffee-house" prefetch={true}>
+          Urban Coffee House
+        </Link>{' '}
+        project demonstrates how cohesive branding transforms commercial spaces
+        into destinations that customers want to revisit.
+      </P>
     </>
   )
 }

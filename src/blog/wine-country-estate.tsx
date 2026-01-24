@@ -54,6 +54,19 @@ function Details() {
         </Link>{' '}
         projects.
       </P>
+
+      <P>
+        Sustainability played an important role in our material selections and
+        design decisions throughout this estate. We sourced reclaimed wood for
+        accent walls, specified locally quarried stone, and integrated
+        energy-efficient systems that reduce the home's environmental footprint.
+        For a deeper exploration of environmentally conscious luxury living, see
+        our{' '}
+        <Link href="/post/sustainable-green-home" prefetch={true}>
+          Sustainable Green Home
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

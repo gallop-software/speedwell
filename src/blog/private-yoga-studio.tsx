@@ -48,6 +48,19 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        Creating a dedicated wellness space at home has become increasingly
+        important for maintaining balance in busy lives. Whether you're
+        interested in yoga, meditation, or simply need a quiet retreat, we can
+        help design a space tailored to your practice. If sustainability is
+        also a priority, our{' '}
+        <Link href="/post/sustainable-green-home" prefetch={true}>
+          sustainable green home
+        </Link>{' '}
+        project demonstrates how eco-friendly materials and biophilic design
+        principles enhance both wellness and environmental consciousness.
+      </P>
     </>
   )
 }
