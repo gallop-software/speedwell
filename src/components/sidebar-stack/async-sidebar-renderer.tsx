@@ -170,7 +170,8 @@ function AsyncSidebarPanel({
     if (blogPostMatch) {
       e.preventDefault()
       e.stopPropagation()
-      const slug = blogPostMatch[1]
+      const slug = blogPostMatch[1] ?? ''
+      if (!slug) return
       // Try to get title from link text or use slug
       const title = link.textContent?.trim() || slug
       push({ title, componentId: slug })
