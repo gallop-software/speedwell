@@ -1,6 +1,7 @@
 import { clsx } from 'clsx'
 import { Image } from './image'
 import { Container } from './container'
+import { Parallax, type ParallaxSpeed } from './parallax'
 
 interface CoverProps {
   imageSrc?: string
@@ -12,7 +13,7 @@ interface CoverProps {
   height?: string
   className?: string
   innerAlign?: 'wide' | 'none' | 'content' | 'full' | 'navbar'
-  parallax?: boolean
+  parallax?: boolean | ParallaxSpeed
   id?: string
 }
 
@@ -29,6 +30,9 @@ export function Cover({
   parallax = false,
   id,
 }: CoverProps) {
+  const parallaxSpeed: ParallaxSpeed =
+    typeof parallax === 'string' ? parallax : 'medium'
+
   return (
     <div
       id={id}
@@ -43,30 +47,15 @@ export function Cover({
       {imageSrc && (
         <>
           {parallax ? (
-            <>
-              {/* Parallax background - only on lg+ */}
-              <div
-                className={clsx(
-                  'absolute inset-0 w-full h-full bg-fixed bg-center bg-no-repeat bg-cover hidden lg:block',
-                  imageClassName
-                )}
-                style={{
-                  backgroundImage: `url(${imageSrc})`,
-                }}
-                role="img"
-                aria-label={imageAlt || ''}
-              />
-              {/* Static image fallback - under lg */}
+            <Parallax speed={parallaxSpeed} className="absolute inset-0">
               <Image
                 src={imageSrc}
                 size="full"
                 alt={imageAlt || ''}
-                className={clsx(
-                  'object-cover object-center absolute inset-0 w-full h-full lg:hidden',
-                  imageClassName
-                )}
+                rounded="rounded-none"
+                className={clsx('object-center', imageClassName)}
               />
-            </>
+            </Parallax>
           ) : (
             <Image
               src={imageSrc}
