@@ -82,9 +82,7 @@ export default async function Page({ params }: PageProps) {
   const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
   try {
-    const { default: Content } = await import(
-      `@/blocks/${slugPath}.tsx`
-    )
+    const { default: Content } = await import(`@/blocks/${slugPath}.tsx`)
 
     return (
       <div className="overflow-hidden">

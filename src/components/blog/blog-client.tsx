@@ -1,12 +1,6 @@
 'use client'
 
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  type ReactNode,
-} from 'react'
+import { useState, useEffect, useRef, useCallback, type ReactNode } from 'react'
 import { Button } from '../button'
 import { Heading } from '../heading'
 import { Image } from '../image'

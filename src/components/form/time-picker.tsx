@@ -11,11 +11,7 @@ import {
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/react'
-import {
-  TIME_SLOTS,
-  triggerButtonStyles,
-  DEFAULT_TIMEZONE,
-} from './utils'
+import { TIME_SLOTS, triggerButtonStyles, DEFAULT_TIMEZONE } from './utils'
 
 // ============================================================================
 // TimePicker Input Component

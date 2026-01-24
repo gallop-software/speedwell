@@ -3,17 +3,12 @@
 import { Suspense, useCallback, useEffect, useRef } from 'react'
 import { type AutocompleteApi } from '@algolia/autocomplete-core'
 import { usePathname, useSearchParams } from 'next/navigation'
-import {
-  Dialog,
-  DialogPanel,
-  DialogBackdrop,
-} from '@headlessui/react'
+import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
 
 import { SearchResults } from './search-results'
 import { useAutocomplete } from './use-autocomplete'
 import { SearchInput } from './search-input'
 import { type Result } from './search-client'
-
 
 type Autocomplete = AutocompleteApi<
   Result,

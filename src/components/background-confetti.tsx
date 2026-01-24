@@ -51,7 +51,8 @@ function generateConfetti(count: number): ConfettiPiece[] {
     top: Math.random() * 40, // Start in top 40% of container
     color: colors[Math.floor(Math.random() * colors.length)] ?? 'bg-pink-400',
     shape: shapes[Math.floor(Math.random() * shapes.length)] ?? shapes[0]!,
-    rotation: rotations[Math.floor(Math.random() * rotations.length)] ?? 'rotate-0',
+    rotation:
+      rotations[Math.floor(Math.random() * rotations.length)] ?? 'rotate-0',
     delay: 0, // No delay - all burst at once
     duration: 4 + Math.random() * 4, // 4-8 seconds to fall
   }))

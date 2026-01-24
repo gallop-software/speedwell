@@ -92,7 +92,12 @@ const takeInteractionDelta = (): number => {
 }
 
 // path utils
-type PathEntry = { path: string; ts: string; spentMs: number; source?: string | undefined }
+type PathEntry = {
+  path: string
+  ts: string
+  spentMs: number
+  source?: string | undefined
+}
 
 const readPath = (): PathEntry[] => {
   const prev = safeGet(PATH_KEY)

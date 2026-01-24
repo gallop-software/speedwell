@@ -81,9 +81,7 @@ export function VideoPopup({
             onClick={() => setIsOpen(false)}
             className="bg-body/50 backdrop-blur-md transition-opacity opacity-100 fixed inset-0 shadow-lg w-full max-w-full z-10 flex items-center justify-center px-4 sm:px-14"
           >
-            {embed && (
-              <VimeoPlayer embed={embed} />
-            )}
+            {embed && <VimeoPlayer embed={embed} />}
           </div>
           <button
             type="button"
