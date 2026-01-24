@@ -81,6 +81,7 @@ function AsyncSidebarPanel({
   const [content, setContent] = useState<ReactNode>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [titleOpacity, setTitleOpacity] = useState(0)
 
   const { contentLoader, contentCache, setCachedContent, push } =
     useSidebarStack()
@@ -126,6 +127,22 @@ function AsyncSidebarPanel({
 
   useEffect(() => {
     requestAnimationFrame(() => setIsVisible(true))
+  }, [])
+
+  // Track scroll position to fade in title
+  useEffect(() => {
+    const panel = panelRef.current
+    if (!panel) return
+
+    const handleScroll = () => {
+      const scrollTop = panel.scrollTop
+      // Hidden until 50px, then fade from 0 to 1 between 51-100px
+      const opacity = scrollTop <= 50 ? 0 : Math.min((scrollTop - 50) / 50, 1)
+      setTitleOpacity(opacity)
+    }
+
+    panel.addEventListener('scroll', handleScroll, { passive: true })
+    return () => panel.removeEventListener('scroll', handleScroll)
   }, [])
 
   // Handle clicks on links within content
@@ -190,7 +207,10 @@ function AsyncSidebarPanel({
         {/* Header */}
         <div className="sticky top-0 z-10 bg-body/95 backdrop-blur-sm border-b border-gray-200">
           <div className="flex items-center justify-between px-4 md:px-8 py-4">
-            <h2 className="text-lg font-semibold text-gray-900 truncate">
+            <h2
+              className="text-lg font-semibold text-gray-900 truncate transition-opacity duration-150"
+              style={{ opacity: titleOpacity }}
+            >
               {item.title}
             </h2>
             <button
