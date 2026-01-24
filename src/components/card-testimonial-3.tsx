@@ -19,7 +19,11 @@ export function CardTestimonial3({
       {/* Stars */}
       <div className="flex gap-1 mb-6">
         {[...Array(rating)].map((_, i) => (
-          <Icon key={i} icon={starIcon} className="text-accent text-xl" />
+          <Icon
+            key={i}
+            icon={starIcon}
+            className="text-accent text-xl"
+          />
         ))}
       </div>
 
@@ -35,7 +39,14 @@ export function CardTestimonial3({
 
       {/* Author */}
       <div className="mt-auto">
-        <Heading as="h4" fontSize='text-lg' color='text-accent1' margin="mb-2">{name}</Heading>
+        <Heading
+          as="h4"
+          fontSize="text-lg"
+          color="text-accent1"
+          margin="mb-2"
+        >
+          {name}
+        </Heading>
         <Label>{title}</Label>
       </div>
     </div>

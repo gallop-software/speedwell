@@ -47,7 +47,10 @@ export function Cover({
       {imageSrc && (
         <>
           {parallax ? (
-            <Parallax speed={parallaxSpeed} className="absolute inset-0">
+            <Parallax
+              speed={parallaxSpeed}
+              className="absolute inset-0"
+            >
               <Image
                 src={imageSrc}
                 size="full"

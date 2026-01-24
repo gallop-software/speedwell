@@ -153,7 +153,9 @@ export function Heading({
   const finalTextAlign = textAlign
 
   // Generate ID from children if not provided (unless disabled)
-  const headingId = disableId ? undefined : (id || generateIdFromChildren(children))
+  const headingId = disableId
+    ? undefined
+    : id || generateIdFromChildren(children)
 
   return (
     <Element

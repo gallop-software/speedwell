@@ -1,7 +1,6 @@
 # Gallop Canon v1.0.0 - AI Rules
 
-This file is auto-generated from @gallop.software/canon. Do not edit manually.
-Regenerate with: npm run generate:ai-rules
+This file is auto-generated from @gallop.software/canon. Do not edit manually. Regenerate with: npm run generate:ai-rules
 
 ## Tech Stack
 
@@ -170,7 +169,7 @@ No inline styles in blocks, components allowed for dynamic values
 
 ```tsx
 // Inline styles
-<div style={{ display: 'flex', padding: '24px', backgroundColor: 'white' }}>
+;<div style={{ display: 'flex', padding: '24px', backgroundColor: 'white' }}>
   <Heading>Title</Heading>
 </div>
 
@@ -178,7 +177,7 @@ No inline styles in blocks, components allowed for dynamic values
 const StyledDiv = styled.div`
   display: flex;
   padding: 24px;
-`;
+`
 ```
 
 **Good:**
@@ -219,7 +218,7 @@ Enforce import boundaries between Canon zones
 
 ### 022: No Data Direct Imports
 
-Prevent runtime code from importing _data/ directly
+Prevent runtime code from importing \_data/ directly
 
 - **ESLint Rule:** `gallop/no-data-imports`
 - **Category:** structure
@@ -348,6 +347,7 @@ Following these patterns provides these guarantees:
 ## Component Quick Reference
 
 ### Typography
+
 - `Heading` - props: `as`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
 - `Paragraph` - props: `color`, `margin`, `fontSize`, `lineHeight`, `textAlign`
 - `Span` - props: `color`, `margin`, `fontSize` (inline text, mb-0 default)
@@ -355,11 +355,13 @@ Following these patterns provides these guarantees:
 - `Quote` - props: `variant`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
 
 ### Layout
+
 - `Section` - semantic section wrapper
 - `Columns` - grid layout, props: `cols`, `gap`, `align`
 - `Column` - column child
 
 ### Interactive
+
 - `Button` - props: `href`, `variant`, `icon`, `iconPlacement`, `margin`
 - `Icon` - Iconify icon wrapper
 
@@ -416,11 +418,13 @@ src/app/
 ### File Structure Rules
 
 **Blocks:**
+
 - Always single files directly in `src/blocks/`
 - Never create folders inside `src/blocks/`
 - Example: `src/blocks/hero-1.tsx`, `src/blocks/testimonial-3.tsx`
 
 **Components:**
+
 - Simple components: Single file in `src/components/`
 - Complex components: Folder with `index.tsx`
 - Use folders when component has multiple sub-files
@@ -451,6 +455,7 @@ src/app/
 ## Post-Edit Verification
 
 After editing files:
+
 1. Run `npm run lint` to check for errors
 2. Fix any violations before committing
 

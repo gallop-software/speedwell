@@ -1,4 +1,12 @@
-import { Section, Image, Heading, Paragraph, Accent, VideoPopup, Icon } from '@/components'
+import {
+  Section,
+  Image,
+  Heading,
+  Paragraph,
+  Accent,
+  VideoPopup,
+  Icon,
+} from '@/components'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import CircleAnimationInit from '@/hooks/use-circle-animation'
 import playIcon from '@iconify/icons-heroicons/play-solid'
@@ -31,7 +39,10 @@ const circleTextId = 'hero-16-circle-text'
 
 export default function Hero16() {
   return (
-    <Section className="relative" innerAlign="navbar">
+    <Section
+      className="relative"
+      innerAlign="navbar"
+    >
       <Image
         src="/images/layout-3/pexels-plann-2999237-4549411.jpg"
         alt="Photography hero background"

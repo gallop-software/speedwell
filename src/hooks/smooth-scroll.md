@@ -56,6 +56,7 @@ To exclude specific links from smooth scrolling, add the `no-anchor-scroll` clas
 ## Navbar Integration
 
 When an anchor link is clicked, the hook:
+
 1. Sets `state.scrollingDirection` to `'down'`
 2. Sets `state.lockScrollDirection` to `true`
 

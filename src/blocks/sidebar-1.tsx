@@ -428,17 +428,17 @@ export default function Sidebar1() {
                 Explore Details of Each Project
               </Heading>
               <Paragraph>
-                Photography is my passion and I love to turn ideas into beautiful
-                things. Whether capturing intimate portraits, stunning landscapes,
-                creative abstracts, or professional commercial work, I bring a
-                unique artistic vision to every project.
+                Photography is my passion and I love to turn ideas into
+                beautiful things. Whether capturing intimate portraits, stunning
+                landscapes, creative abstracts, or professional commercial work,
+                I bring a unique artistic vision to every project.
               </Paragraph>
               <Paragraph>
                 With years of experience and a commitment to excellence, I
                 specialize in creating images that tell compelling stories and
-                evoke emotion. From concept to final delivery, I work closely with
-                my clients to understand their vision and bring it to life through
-                thoughtful composition, expert lighting, and creative
+                evoke emotion. From concept to final delivery, I work closely
+                with my clients to understand their vision and bring it to life
+                through thoughtful composition, expert lighting, and creative
                 post-processing. Each photograph is crafted with attention to
                 detail and a dedication to capturing moments that matter.
               </Paragraph>

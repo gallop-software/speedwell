@@ -25,7 +25,12 @@ type FormProps = {
   flexDirection?: string
 }
 
-function Form({ classname, children, gap = 'gap-8', flexDirection = 'flex-col' }: FormProps) {
+function Form({
+  classname,
+  children,
+  gap = 'gap-8',
+  flexDirection = 'flex-col',
+}: FormProps) {
   const [status, setStatus] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
@@ -119,9 +124,11 @@ function Form({ classname, children, gap = 'gap-8', flexDirection = 'flex-col' }
 
     if (response.ok) {
       form.reset()
-      form.querySelectorAll<HTMLInputElement>('input[type="file"]').forEach((input) => {
-        input.value = ''
-      })
+      form
+        .querySelectorAll<HTMLInputElement>('input[type="file"]')
+        .forEach((input) => {
+          input.value = ''
+        })
       form.dispatchEvent(new Event('form-cleared', { bubbles: true }))
     } else {
       submitMessage = 'An error occurred.'
@@ -133,16 +140,26 @@ function Form({ classname, children, gap = 'gap-8', flexDirection = 'flex-col' }
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={clsx('flex', flexDirection, gap, classname)}>
+      <form
+        onSubmit={handleSubmit}
+        className={clsx('flex', flexDirection, gap, classname)}
+      >
         {Children.map(children, (child) => {
-          if (isValidElement(child) && (child.props as any)?.name === 'submit') {
+          if (
+            isValidElement(child) &&
+            (child.props as any)?.name === 'submit'
+          ) {
             const btn = child as React.ReactElement<FormButtonProps>
             return React.cloneElement<FormButtonProps>(btn, { isLoading })
           }
           return child
         })}
       </form>
-      {status && <p className="text-center text-sm font-medium text-gray-700 mt-4">{status}</p>}
+      {status && (
+        <p className="text-center text-sm font-medium text-gray-700 mt-4">
+          {status}
+        </p>
+      )}
     </>
   )
 }

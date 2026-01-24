@@ -61,18 +61,28 @@ const pricingPlans = [
 export default function Pricing2() {
   return (
     <Section className="py-30 bg-gradient-to-b from-body to-body-light relative overflow-hidden">
-        <div className="text-center mb-20">
-        <Heading as="h2" margin="mb-6">
-            Planning Services Tailored to You
-          </Heading>
-          <Paragraph fontSize="text-lg" className="max-w-2xl mx-auto">
-            From intimate gatherings to grand celebrations, we offer
-            comprehensive planning packages designed to make your event
-            stress-free and unforgettable.
-          </Paragraph>
-        </div>
+      <div className="text-center mb-20">
+        <Heading
+          as="h2"
+          margin="mb-6"
+        >
+          Planning Services Tailored to You
+        </Heading>
+        <Paragraph
+          fontSize="text-lg"
+          className="max-w-2xl mx-auto"
+        >
+          From intimate gatherings to grand celebrations, we offer comprehensive
+          planning packages designed to make your event stress-free and
+          unforgettable.
+        </Paragraph>
+      </div>
 
-      <Grid cols="grid-cols-1 xl:grid-cols-3" gap="gap-16 xl:gap-8" className="max-w-7xl mx-auto">
+      <Grid
+        cols="grid-cols-1 xl:grid-cols-3"
+        gap="gap-16 xl:gap-8"
+        className="max-w-7xl mx-auto"
+      >
         {pricingPlans.map((plan) => (
           <div
             key={plan.name}
@@ -84,7 +94,11 @@ export default function Pricing2() {
             )}
           >
             {plan.featured && (
-              <Chip bgColor="bg-accent-light" color="text-accent-contrast" className="absolute -top-5 left-1/2 -translate-x-1/2 shadow-lg">
+              <Chip
+                bgColor="bg-accent-light"
+                color="text-accent-contrast"
+                className="absolute -top-5 left-1/2 -translate-x-1/2 shadow-lg"
+              >
                 Most Popular
               </Chip>
             )}
@@ -102,7 +116,10 @@ export default function Pricing2() {
               >
                 {plan.description}
               </Paragraph>
-              <Heading className="flex items-baseline" margin="mb-0">
+              <Heading
+                className="flex items-baseline"
+                margin="mb-0"
+              >
                 <span className={clsx('text-4xl font-bold', plan.priceColor)}>
                   {plan.price}
                 </span>
@@ -116,13 +133,20 @@ export default function Pricing2() {
               className="mb-6"
             >
               {plan.features.map((feature) => (
-                <Li key={feature} icon={checkIcon}>
+                <Li
+                  key={feature}
+                  icon={checkIcon}
+                >
                   {feature}
                 </Li>
               ))}
             </List>
 
-            <Button href="#contact" variant="secondary" className="w-full mt-auto">
+            <Button
+              href="#contact"
+              variant="secondary"
+              className="w-full mt-auto"
+            >
               Get Started
             </Button>
           </div>

@@ -22,7 +22,11 @@ export default function Form4() {
         >
           Request Photography Pricing
         </Heading>
-        <Paragraph textAlign="text-center" color="text-body-muted" margin="mb-12">
+        <Paragraph
+          textAlign="text-center"
+          color="text-body-muted"
+          margin="mb-12"
+        >
           For more information please get in touch using the form below:
         </Paragraph>
 
@@ -89,7 +93,10 @@ export default function Form4() {
             className="bg-accent/5!"
           />
           <div className="flex justify-center mt-8">
-            <FormButton className="w-full" label="Send message" />
+            <FormButton
+              className="w-full"
+              label="Send message"
+            />
           </div>
         </Form>
       </div>

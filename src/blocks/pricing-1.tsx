@@ -13,7 +13,10 @@ import checkIcon from '@iconify/icons-heroicons/check-20-solid'
 
 export default function Pricing1() {
   return (
-    <Section id="pricing" className="py-30 bg-body relative overflow-hidden">
+    <Section
+      id="pricing"
+      className="py-30 bg-body relative overflow-hidden"
+    >
       <div className="relative">
         <div className="text-center mb-16">
           <Heading

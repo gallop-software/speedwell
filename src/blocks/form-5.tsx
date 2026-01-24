@@ -39,11 +39,7 @@ export default function Form5() {
           </div>
         </Column>
         <Column>
-          <Heading
-            as="h2"
-          >
-            Make a Reservation
-          </Heading>
+          <Heading as="h2">Make a Reservation</Heading>
           <Paragraph>
             Experience exceptional dining in our thoughtfully designed space.
             Book your table today and let us create an unforgettable culinary
@@ -77,7 +73,10 @@ export default function Form5() {
               label="Phone"
               required
             />
-            <Grid cols="grid-cols-1 md:grid-cols-2" gap="gap-2">
+            <Grid
+              cols="grid-cols-1 md:grid-cols-2"
+              gap="gap-2"
+            >
               <FormInput
                 name="date"
                 type="date"

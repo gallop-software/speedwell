@@ -94,11 +94,11 @@ type ButtonProps = {
   dark?: boolean
   target?: '_self' | '_blank'
 } & (
-    | React.ComponentPropsWithoutRef<typeof Link>
-    | (React.ComponentPropsWithoutRef<typeof HeadlessButton> & {
+  | React.ComponentPropsWithoutRef<typeof Link>
+  | (React.ComponentPropsWithoutRef<typeof HeadlessButton> & {
       href?: undefined
     })
-  )
+)
 
 export function Button({
   variant = 'primary',

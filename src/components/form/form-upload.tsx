@@ -90,7 +90,8 @@ export function FormUpload({
     }
 
     formElement.addEventListener('form-cleared', handleFormCleared)
-    return () => formElement.removeEventListener('form-cleared', handleFormCleared)
+    return () =>
+      formElement.removeEventListener('form-cleared', handleFormCleared)
   }, [])
 
   // Sync files to FormData
@@ -107,7 +108,8 @@ export function FormUpload({
     }
 
     form.addEventListener('formdata', onFormData as EventListener)
-    return () => form.removeEventListener('formdata', onFormData as EventListener)
+    return () =>
+      form.removeEventListener('formdata', onFormData as EventListener)
   }, [files])
 
   const atLimit = files.length >= maxFiles
@@ -122,7 +124,9 @@ export function FormUpload({
       aria-label="File uploader"
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && inputRef.current?.click()}
+      onKeyDown={(e) =>
+        (e.key === 'Enter' || e.key === ' ') && inputRef.current?.click()
+      }
     >
       <input
         ref={inputRef}
@@ -138,23 +142,35 @@ export function FormUpload({
       />
 
       <p className="text-contrast text-base font-medium">
-        <span className="font-semibold">{atLimit ? 'File limit reached' : 'Click to upload'}</span>
+        <span className="font-semibold">
+          {atLimit ? 'File limit reached' : 'Click to upload'}
+        </span>
         {!atLimit && ' or drag and drop'}
       </p>
       <p className="text-sm font-medium text-contrast/70 mt-1">
         You can upload up to {maxFiles} {maxFiles === 1 ? 'file' : 'files'}
       </p>
-      <p className="text-xs font-medium text-contrast/50 mt-1">PDF, DOC, DOCX files accepted</p>
+      <p className="text-xs font-medium text-contrast/50 mt-1">
+        PDF, DOC, DOCX files accepted
+      </p>
 
-      {error && <p className="mt-3 text-sm font-medium text-red-500">{error}</p>}
+      {error && (
+        <p className="mt-3 text-sm font-medium text-red-500">{error}</p>
+      )}
 
       {files.length > 0 && (
         <div className="mt-4 w-full text-left">
           <p className="text-sm font-semibold text-accent2">Uploaded Files:</p>
           <ul className="mt-2 space-y-2 text-sm text-contrast">
             {files.map((file, i) => (
-              <li key={keyOf(file)} className="flex items-center justify-between gap-3">
-                <span className="truncate font-medium" title={file.name}>
+              <li
+                key={keyOf(file)}
+                className="flex items-center justify-between gap-3"
+              >
+                <span
+                  className="truncate font-medium"
+                  title={file.name}
+                >
                   {file.name}
                 </span>
                 <button

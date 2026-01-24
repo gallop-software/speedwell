@@ -1,4 +1,12 @@
-import { Section, Heading, Accent, Paragraph, Swiper, Grid, CardTestimonial3 } from '@/components'
+import {
+  Section,
+  Heading,
+  Accent,
+  Paragraph,
+  Swiper,
+  Grid,
+  CardTestimonial3,
+} from '@/components'
 
 export default function Testimonial7() {
   return (
@@ -15,11 +23,7 @@ export default function Testimonial7() {
           >
             Dining Excellence
           </Accent>
-          <Heading
-            as="h2"
-          >
-            What Our Guests Are Saying
-          </Heading>
+          <Heading as="h2">What Our Guests Are Saying</Heading>
           <Paragraph>
             Don't just take our word for it – hear from the diners who have
             experienced our unique blend of culinary artistry and thoughtful
@@ -27,7 +31,10 @@ export default function Testimonial7() {
           </Paragraph>
         </div>
 
-        <Swiper layout="carousel" columns={2}>
+        <Swiper
+          layout="carousel"
+          columns={2}
+        >
           <CardTestimonial3
             name="Maria Santos"
             title="Food Critic"

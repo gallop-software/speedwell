@@ -31,11 +31,9 @@ interface GalleryPopupProps {
 // Shared lightbox styles
 const lightboxStyles = {
   root: {
-    '--yarl__slide_description_color':
-      'var(--color--gallery-contrast,#000000)',
+    '--yarl__slide_description_color': 'var(--color--gallery-contrast,#000000)',
     '--yarl__slide_captions_container_background': 'none',
-    '--yarl__color_button_active':
-      'var(--color--gallery-contrast,#000000)',
+    '--yarl__color_button_active': 'var(--color--gallery-contrast,#000000)',
     '--yarl__button_filter': 'none',
     '--yarl__counter_filter': 'none',
     '--yarl__color_button': 'var(--color--gallery-contrast,#000000)',
@@ -77,13 +75,13 @@ const createSlide = (el: Element): Slide | null => {
   const srcset = imgElement.getAttribute('srcset') || ''
   const srcSet = srcset
     ? srcset.split(',').map((entry) => {
-      const [url, size] = entry.trim().split(' ')
-      return {
-        src: url,
-        width: parseInt(size, 10),
-        height: parseInt(size, 10),
-      }
-    })
+        const [url, size] = entry.trim().split(' ')
+        return {
+          src: url,
+          width: parseInt(size, 10),
+          height: parseInt(size, 10),
+        }
+      })
     : undefined
 
   const width = imgElement.getAttribute('width')
@@ -99,8 +97,8 @@ const createSlide = (el: Element): Slide | null => {
   const thumbnail =
     srcSet && srcSet.length
       ? srcSet.reduce((smallest, current) => {
-        return current.width < smallest.width ? current : smallest
-      }).src
+          return current.width < smallest.width ? current : smallest
+        }).src
       : src
 
   return {
@@ -268,7 +266,9 @@ export const GalleryPopup = ({ containerRef }: GalleryPopupProps = {}) => (
 
 // Dynamic GalleryPopup - uses .lightbox-gallery-dynamic and .lightbox-single-dynamic
 // Use this for content that changes dynamically (filters, tabs, etc.)
-export const GalleryPopupDynamic = ({ containerRef }: GalleryPopupProps = {}) => (
+export const GalleryPopupDynamic = ({
+  containerRef,
+}: GalleryPopupProps = {}) => (
   <BaseGalleryPopup
     containerRef={containerRef}
     galleryClass="lightbox-gallery-dynamic"

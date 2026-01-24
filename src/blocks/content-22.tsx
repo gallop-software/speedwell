@@ -1,9 +1,4 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  BackgroundGeometry2,
-} from '@/components'
+import { Section, Heading, Paragraph, BackgroundGeometry2 } from '@/components'
 
 export default function Content22() {
   return (

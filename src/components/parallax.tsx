@@ -66,7 +66,10 @@ export function Parallax({
   const topOffset = -parallaxAmount
 
   return (
-    <div ref={containerRef} className={className}>
+    <div
+      ref={containerRef}
+      className={className}
+    >
       {isLargeScreen ? (
         <motion.div
           className="absolute inset-x-0 *:absolute *:inset-0 *:w-full *:h-full *:object-cover"

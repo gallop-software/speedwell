@@ -15,7 +15,10 @@ export default function CircleText() {
 
   return (
     <>
-      <div id={circleId} className="w-36 h-36">
+      <div
+        id={circleId}
+        className="w-36 h-36"
+      >
         {/* Circle text content */}
       </div>
       <CircleAnimationInit targetId={circleId} />

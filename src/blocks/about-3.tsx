@@ -39,7 +39,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Creative Director & Founder
           </Heading>
@@ -68,7 +69,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Brand Strategist
           </Heading>
@@ -97,7 +99,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Lead Visual Designer
           </Heading>
@@ -126,7 +129,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Typography & Color Specialist
           </Heading>
@@ -155,7 +159,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Digital Designer
           </Heading>
@@ -184,7 +189,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             UX/UI Designer
           </Heading>
@@ -213,7 +219,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Account Director
           </Heading>
@@ -242,7 +249,8 @@ export default function About3() {
           <Heading
             as="h4"
             fontSize="text-lg"
-            color="text-accent" margin="mb-3"
+            color="text-accent"
+            margin="mb-3"
           >
             Copywriter & Content Strategist
           </Heading>

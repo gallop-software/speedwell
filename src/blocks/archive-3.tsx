@@ -112,7 +112,10 @@ export default function Archive3() {
                   </Heading>
                 </div>
 
-                <Paragraph margin="mb-4" color="text-body-contrast/70">
+                <Paragraph
+                  margin="mb-4"
+                  color="text-body-contrast/70"
+                >
                   {episode.description}
                 </Paragraph>
 

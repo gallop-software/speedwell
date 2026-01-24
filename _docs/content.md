@@ -112,7 +112,6 @@ Blocks are reusable content components in `src/blocks/`:
 
 ```tsx
 import Hero1 from '@/blocks/hero-1'
-
 ;<Hero1
   title="Page Title"
   subtitle="Subtitle text"
