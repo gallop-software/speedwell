@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Heading } from './heading'
+import { Heading } from '@/components/heading'
 
 export interface CardLink2Data {
   name: string

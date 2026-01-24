@@ -9,7 +9,7 @@ import Link from 'next/link'
 import type { ReactElement } from 'react'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
 import clsx from 'clsx'
-import { Icon } from '../icon'
+import { Icon } from '@/components/icon'
 import { links } from './config'
 import type { NavLink, DropdownItem } from './types'
 

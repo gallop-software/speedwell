@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Image } from './image'
+import { Image } from '@/components/image'
 
 const logos = [
   { alt: 'Next.js', src: '/images/nextjs.png', href: 'https://nextjs.org' },

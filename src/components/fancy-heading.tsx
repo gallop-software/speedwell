@@ -1,5 +1,5 @@
-import { Heading } from './heading'
-import { Accent } from './accent'
+import { Heading } from '@/components/heading'
+import { Accent } from '@/components/accent'
 import clsx from 'clsx'
 
 interface FancyHeadingProps {

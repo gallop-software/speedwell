@@ -1,7 +1,7 @@
-import { Accent } from './accent'
-import { Container } from './container'
-import { Heading } from './heading'
-import { ContactForm } from './contact-form'
+import { Accent } from '@/components/accent'
+import { Container } from '@/components/container'
+import { Heading } from '@/components/heading'
+import { ContactForm } from '@/components/contact-form'
 
 export function Contact1() {
   return (

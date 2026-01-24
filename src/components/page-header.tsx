@@ -1,4 +1,4 @@
-import { Heading } from './heading'
+import { Heading } from '@/components/heading'
 import { clsx } from 'clsx'
 import type { ReactNode } from 'react'
 

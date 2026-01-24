@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import { clsx } from 'clsx'
-import { Icon } from './icon'
-import { Heading } from './heading'
-import { Paragraph } from './paragraph'
+import { Icon } from '@/components/icon'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
 import clipboardIcon from '@iconify/icons-lucide/clipboard'
 
 interface CardContactProps {

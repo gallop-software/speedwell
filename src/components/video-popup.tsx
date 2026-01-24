@@ -5,8 +5,8 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import Script from 'next/script'
 import clsx from 'clsx'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark-20-solid'
-import { Icon } from './icon'
-import { VimeoPlayer } from './vimeo-player'
+import { Icon } from '@/components/icon'
+import { VimeoPlayer } from '@/components/vimeo-player'
 
 function getVideoId(url?: string): string | undefined {
   if (!url) return undefined

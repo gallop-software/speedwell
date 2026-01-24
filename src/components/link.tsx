@@ -1,6 +1,6 @@
 import NextLink, { type LinkProps } from 'next/link'
 import { forwardRef } from 'react'
-import { Icon } from './icon'
+import { Icon } from '@/components/icon'
 import { clsx } from 'clsx'
 
 type LinkWithIconProps = LinkProps &

@@ -7,7 +7,7 @@ import calendarIcon from '@iconify/icons-heroicons/calendar'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
 import chevronLeftIcon from '@iconify/icons-heroicons/chevron-left'
 import chevronRightIcon from '@iconify/icons-heroicons/chevron-right'
-import { Icon } from '../icon'
+import { Icon } from '@/components/icon'
 import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
 import {
   DAYS,

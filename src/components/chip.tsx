@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Icon } from './icon'
+import { Icon } from '@/components/icon'
 
 type IconData = { body: string; width?: number; height?: number }
 

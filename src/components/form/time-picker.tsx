@@ -4,7 +4,7 @@ import { useState } from 'react'
 import clsx from 'clsx'
 import clockIcon from '@iconify/icons-heroicons/clock'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
-import { Icon } from '../icon'
+import { Icon } from '@/components/icon'
 import {
   Listbox,
   ListboxButton,

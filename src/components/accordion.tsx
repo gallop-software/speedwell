@@ -2,14 +2,14 @@
 
 import React from 'react'
 import { clsx } from 'clsx'
-import { Heading } from './heading'
+import { Heading } from '@/components/heading'
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down'
-import { Icon } from './icon'
+import { Icon } from '@/components/icon'
 import { motion } from 'framer-motion'
 
 interface AccordionProps {

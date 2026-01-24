@@ -1,4 +1,4 @@
-import { Paragraph } from '../paragraph'
+import { Paragraph } from '@/components/paragraph'
 
 // ============================================================================
 // FormRadioGroup Component

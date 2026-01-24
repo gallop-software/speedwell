@@ -1,8 +1,8 @@
-import { Paragraph } from './paragraph'
+import { Paragraph } from '@/components/paragraph'
 import { Button as HeadlessButton } from '@headlessui/react'
 import { clsx } from 'clsx'
-import { Link } from './link'
-import { Icon } from './icon'
+import { Link } from '@/components/link'
+import { Icon } from '@/components/icon'
 
 const variants = {
   primary: {

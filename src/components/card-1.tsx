@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Heading } from './heading'
-import { Image } from './image'
+import { Heading } from '@/components/heading'
+import { Image } from '@/components/image'
 
 export interface CardLinkData {
   id: string

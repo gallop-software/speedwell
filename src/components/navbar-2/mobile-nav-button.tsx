@@ -8,7 +8,7 @@ import { useState, type ReactElement } from 'react'
 import clsx from 'clsx'
 import bars2Icon from '@iconify/icons-heroicons/bars-2-20-solid'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark-20-solid'
-import { Icon } from '../icon'
+import { Icon } from '@/components/icon'
 import { MobileNav } from './mobile-nav'
 
 interface MobileNavButtonProps {

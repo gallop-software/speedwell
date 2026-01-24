@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
-import { Image } from './image'
-import { Container } from './container'
-import { Parallax, type ParallaxSpeed } from './parallax'
+import { Image } from '@/components/image'
+import { Container } from '@/components/container'
+import { Parallax, type ParallaxSpeed } from '@/components/parallax'
 
 interface CoverProps {
   imageSrc?: string

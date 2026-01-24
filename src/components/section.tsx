@@ -1,6 +1,6 @@
 import React from 'react'
 import { clsx } from 'clsx'
-import { Container } from './container'
+import { Container } from '@/components/container'
 
 interface SectionProps {
   children: React.ReactNode
