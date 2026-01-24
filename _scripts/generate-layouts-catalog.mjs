@@ -580,6 +580,25 @@ async function generateLayoutsCatalog(
     newLayouts.sort(naturalSort)
     layouts.push(...newLayouts)
 
+    // Ensure priority order: index first, then all layout-* pages, then the rest
+    const indexLayout = layouts.find((l) => l.displayName === 'Index')
+    const numberedLayouts = layouts.filter((l) =>
+      l.displayName.toLowerCase().startsWith('layout ')
+    )
+    const otherLayouts = layouts.filter(
+      (l) =>
+        l.displayName !== 'Index' &&
+        !l.displayName.toLowerCase().startsWith('layout ')
+    )
+
+    // Sort numbered layouts naturally (layout-1, layout-2, ..., layout-10)
+    numberedLayouts.sort(naturalSort)
+
+    // Replace layouts with priority ordering: index, layouts, rest
+    layouts.length = 0
+    if (indexLayout) layouts.push(indexLayout)
+    layouts.push(...numberedLayouts, ...otherLayouts)
+
     const totalNew = layouts.length - existingReadmeLayouts.length
     if (totalNew > 0) {
       console.log(`Found ${totalNew} new layouts\n`)

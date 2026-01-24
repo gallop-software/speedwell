@@ -5,8 +5,8 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 ## Overview
 
 - **Total Layouts:** 22
-- **Free Layouts:** 16
-- **Pro Layouts:** 6
+- **Free Layouts:** 15
+- **Pro Layouts:** 7
 
 ## Layouts
 
@@ -18,7 +18,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero)/page.tsx`  
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -30,7 +30,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(one-page-site)/layout-1/page.tsx`  
 **Layout:** `(one-page-site)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Pro  
 
 ---
 
@@ -42,91 +42,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(alternate)/layout-2/page.tsx`  
 **Layout:** `(alternate)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
-
----
-
-#### Before After
-
-<img src="../../public/layouts/before-after.jpg" alt="Before After" width="350">
-
-**Slug:** `before-after`  
-**Path:** `(default)/before-after/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
-
----
-
-#### Color Consultation
-
-<img src="../../public/layouts/color-consultation.jpg" alt="Color Consultation" width="350">
-
-**Slug:** `color-consultation`  
-**Path:** `(default)/color-consultation/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
-
----
-
-#### Commercial
-
-<img src="../../public/layouts/commercial.jpg" alt="Commercial" width="350">
-
-**Slug:** `commercial`  
-**Path:** `(default)/commercial/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
-
----
-
-#### Contact
-
-<img src="../../public/layouts/contact.jpg" alt="Contact" width="350">
-
-**Slug:** `contact`  
-**Path:** `(default)/contact/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
-
----
-
-#### Furniture
-
-<img src="../../public/layouts/furniture.jpg" alt="Furniture" width="350">
-
-**Slug:** `furniture`  
-**Path:** `(default)/furniture/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
-
----
-
-#### Join Our Team
-
-<img src="../../public/layouts/join-our-team.jpg" alt="Join Our Team" width="350">
-
-**Slug:** `join-our-team`  
-**Path:** `(color-navbar)/join-our-team/page.tsx`  
-**Layout:** `(color-navbar)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
-
----
-
-#### Kitchen Bath
-
-<img src="../../public/layouts/kitchen-bath.jpg" alt="Kitchen Bath" width="350">
-
-**Slug:** `kitchen-bath`  
-**Path:** `(default)/kitchen-bath/page.tsx`  
-**Layout:** `(default)/layout.tsx`  
-**Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Pro  
 
 ---
 
@@ -138,7 +54,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/layout-3/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Pro  
 
 ---
 
@@ -150,7 +66,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-4/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Pro  
 
 ---
 
@@ -162,7 +78,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero)/layout-5/page.tsx`  
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Pro  
 
 ---
 
@@ -174,7 +90,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-6/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Pro  
 
 ---
 
@@ -186,7 +102,91 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-7/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Pro  
+
+---
+
+#### Before After
+
+<img src="../../public/layouts/before-after.jpg" alt="Before After" width="350">
+
+**Slug:** `before-after`  
+**Path:** `(default)/before-after/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Color Consultation
+
+<img src="../../public/layouts/color-consultation.jpg" alt="Color Consultation" width="350">
+
+**Slug:** `color-consultation`  
+**Path:** `(default)/color-consultation/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Commercial
+
+<img src="../../public/layouts/commercial.jpg" alt="Commercial" width="350">
+
+**Slug:** `commercial`  
+**Path:** `(default)/commercial/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Contact
+
+<img src="../../public/layouts/contact.jpg" alt="Contact" width="350">
+
+**Slug:** `contact`  
+**Path:** `(default)/contact/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Furniture
+
+<img src="../../public/layouts/furniture.jpg" alt="Furniture" width="350">
+
+**Slug:** `furniture`  
+**Path:** `(default)/furniture/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Join Our Team
+
+<img src="../../public/layouts/join-our-team.jpg" alt="Join Our Team" width="350">
+
+**Slug:** `join-our-team`  
+**Path:** `(color-navbar)/join-our-team/page.tsx`  
+**Layout:** `(color-navbar)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
+
+---
+
+#### Kitchen Bath
+
+<img src="../../public/layouts/kitchen-bath.jpg" alt="Kitchen Bath" width="350">
+
+**Slug:** `kitchen-bath`  
+**Path:** `(default)/kitchen-bath/page.tsx`  
+**Layout:** `(default)/layout.tsx`  
+**Layout:** `layout.tsx`  
+**Tier:** Free  
 
 ---
 
@@ -198,7 +198,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/meet-the-team/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -210,7 +210,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(color-navbar)/partners/page.tsx`  
 **Layout:** `(color-navbar)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -222,7 +222,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/portfolio/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -234,7 +234,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/project-management/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -246,7 +246,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/residential/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -258,7 +258,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/space-planning/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
 
 ---
 
@@ -270,4 +270,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero)/testimonials/page.tsx`  
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Free  
+
+---
+
