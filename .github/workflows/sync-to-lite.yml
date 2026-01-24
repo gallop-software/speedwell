@@ -1,3 +1,4 @@
+# Syncs pro repo to lite repo and runs blocks:lite conversion
 name: Sync Pro to Lite
 
 on:
