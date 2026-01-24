@@ -31,7 +31,6 @@ type CalendarProps = {
   selectedDate: DateTime | null
   onSelect: (date: DateTime) => void
   viewDate: DateTime
-  onViewDateChange: (date: DateTime) => void
   timezone: string
 }
 
@@ -39,7 +38,6 @@ function Calendar({
   selectedDate,
   onSelect,
   viewDate,
-  onViewDateChange: _onViewDateChange,
   timezone,
 }: CalendarProps) {
   const year = viewDate.year
@@ -275,7 +273,6 @@ export function DatePickerInput({
                     selectedDate={selectedDate}
                     onSelect={handleSelect}
                     viewDate={viewDate}
-                    onViewDateChange={setViewDate}
                     timezone={timezone}
                   />
                 </div>
@@ -308,9 +305,6 @@ export function DatePickerInput({
                     selectedDate={selectedDate}
                     onSelect={handleSelect}
                     viewDate={viewDate2}
-                    onViewDateChange={(d) =>
-                      setViewDate(d.minus({ months: 1 }))
-                    }
                     timezone={timezone}
                   />
                 </div>

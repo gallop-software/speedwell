@@ -4,7 +4,6 @@ import { useRef } from 'react'
 
 interface VimeoPlayerProps {
   embed: any
-  isOpen: boolean
 }
 
 /**
@@ -44,7 +43,7 @@ function getAspectRatioPadding(className?: string): string | undefined {
   return undefined
 }
 
-export function VimeoPlayer({ embed, isOpen: _isOpen }: VimeoPlayerProps) {
+export function VimeoPlayer({ embed }: VimeoPlayerProps) {
   const playerRef = useRef<HTMLIFrameElement>(null)
 
   const iframe = embed?.wpBlockEmbedWrapper?.iframe || undefined
