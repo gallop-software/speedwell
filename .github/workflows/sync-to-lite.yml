@@ -3,7 +3,7 @@ name: Sync Pro to Lite
 on:
   push:
     branches:
-      - pro
+      - main
 
 jobs:
   sync:
