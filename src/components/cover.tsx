@@ -12,7 +12,7 @@ interface CoverProps {
   backgroundColor?: string
   height?: string
   className?: string
-  innerAlign?: 'wide' | 'none' | 'content' | 'full' | 'navbar'
+  innerAlign?: 'wide' | 'none' | 'content' | 'full' | 'navbar' | undefined
   parallax?: boolean | ParallaxSpeed
   id?: string
 }

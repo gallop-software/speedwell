@@ -1,4 +1,3 @@
-import React from 'react'
 import { BlogClient } from '@/components/blog/blog-client'
 import { FancyHeading, PageWrapper, Section } from '@/components'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'

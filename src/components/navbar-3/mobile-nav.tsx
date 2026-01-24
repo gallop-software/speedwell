@@ -31,8 +31,7 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
       <div className="flex flex-col gap-3 py-8">
         {links.map(
           (
-            { href, label, dropdown, callToAction }: NavLink,
-            linkIndex: number
+            { href, label, dropdown, callToAction }: NavLink
           ) => (
             <div key={href}>
               {dropdown ? (

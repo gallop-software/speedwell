@@ -1,7 +1,6 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import { Navbar } from '@/components'
 import Cover4 from '@/blocks/cover-4'
 import Content30 from '@/blocks/content-30'
 import Content31 from '@/blocks/content-31'

@@ -1,6 +1,5 @@
 'use server'
 
-import React from 'react'
 import { BlogClient } from './blog-client'
 import fs from 'fs'
 import path from 'path'

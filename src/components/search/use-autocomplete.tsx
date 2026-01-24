@@ -76,7 +76,9 @@ export function useAutocomplete({
             getItemUrl({ item }) {
               return item.url
             },
-            onSelect: navigate,
+            onSelect({ item }) {
+              navigate({ itemUrl: item.url })
+            },
           },
         ])
       },

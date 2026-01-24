@@ -87,8 +87,8 @@ const sizes = {
 type ButtonProps = {
   variant?: keyof typeof variants
   size?: keyof typeof sizes
-  icon?: { body: string; width?: number; height?: number }
-  iconPlacement?: 'before' | 'after'
+  icon?: { body: string; width?: number; height?: number } | undefined
+  iconPlacement?: 'before' | 'after' | undefined
   iconSize?: string
   wrap?: boolean
   dark?: boolean

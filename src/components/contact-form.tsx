@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
-import { clsx } from 'clsx'
+import { useState } from 'react'
 import { Button } from './button'
 
 export function ContactForm() {

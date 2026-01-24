@@ -1,6 +1,3 @@
-import React from 'react'
-import Link from 'next/link'
-import { Heading } from './heading'
 import { Image } from './image'
 
 export interface CardLinkData {
@@ -8,8 +5,8 @@ export interface CardLinkData {
   image: string
   href: string
   alt: string
-  width?: number
-  height?: number
+  width?: number | undefined
+  height?: number | undefined
   /** Image size variant to use from metadata - defaults to 'large' */
   size?: 'small' | 'medium' | 'large' | 'full'
 }
@@ -19,8 +16,8 @@ interface Card3Props {
   image: string
   href: string
   alt: string
-  width?: number
-  height?: number
+  width?: number | undefined
+  height?: number | undefined
   /** Image size variant to use from metadata - defaults to 'large' */
   size?: 'small' | 'medium' | 'large' | 'full'
 }

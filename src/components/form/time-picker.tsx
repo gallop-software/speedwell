@@ -15,7 +15,6 @@ import {
   TIME_SLOTS,
   triggerButtonStyles,
   DEFAULT_TIMEZONE,
-  type TimeSlot,
 } from './utils'
 
 // ============================================================================
@@ -24,21 +23,21 @@ import {
 
 type TimePickerProps = {
   name: string
-  placeholder?: string
-  required?: boolean
-  defaultValue?: string
+  placeholder?: string | undefined
+  required?: boolean | undefined
+  defaultValue?: string | undefined
   label?: string
   className?: string
   /** Minimum hour (0-23), inclusive. Default: 0 */
-  minHour?: number
+  minHour?: number | undefined
   /** Maximum hour (0-23), inclusive. Default: 23 */
-  maxHour?: number
+  maxHour?: number | undefined
   /** Maximum minute for the max hour (0-50 in 10-min increments). Default: 50 */
-  maxMinute?: number
+  maxMinute?: number | undefined
   /** Time interval in minutes (5, 10, 15, 30, 60). Default: 10 */
-  interval?: 5 | 10 | 15 | 30 | 60
+  interval?: 5 | 10 | 15 | 30 | 60 | undefined
   /** Timezone for time calculations (e.g., "America/New_York"). Default: America/New_York */
-  timezone?: string
+  timezone?: string | undefined
 }
 
 export function TimePickerInput({
@@ -52,7 +51,7 @@ export function TimePickerInput({
   maxHour = 23,
   maxMinute = 50,
   interval = 10,
-  timezone = DEFAULT_TIMEZONE,
+  timezone: _timezone = DEFAULT_TIMEZONE,
 }: TimePickerProps) {
   const [selectedTime, setSelectedTime] = useState<string | null>(
     defaultValue || null

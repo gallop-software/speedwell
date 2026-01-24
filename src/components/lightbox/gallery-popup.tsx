@@ -19,13 +19,13 @@ interface Slide extends SlideImage {
 }
 
 interface BaseGalleryPopupProps {
-  containerRef?: React.RefObject<HTMLElement | null>
+  containerRef?: React.RefObject<HTMLElement | null> | undefined
   galleryClass: string
   singleClass: string
 }
 
 interface GalleryPopupProps {
-  containerRef?: React.RefObject<HTMLElement | null>
+  containerRef?: React.RefObject<HTMLElement | null> | undefined
 }
 
 // Shared lightbox styles
@@ -75,7 +75,7 @@ const createSlide = (el: Element): Slide | null => {
   const srcset = imgElement.getAttribute('srcset') || ''
   const srcSet = srcset
     ? srcset.split(',').map((entry) => {
-        const [url, size] = entry.trim().split(' ')
+        const [url = '', size = '0'] = entry.trim().split(' ')
         return {
           src: url,
           width: parseInt(size, 10),
@@ -103,10 +103,10 @@ const createSlide = (el: Element): Slide | null => {
 
   return {
     src,
-    width,
-    height,
+    ...(width !== undefined && { width }),
+    ...(height !== undefined && { height }),
     alt: description,
-    srcSet,
+    ...(srcSet && { srcSet }),
     imageFit: 'contain',
     thumbnail,
     description,

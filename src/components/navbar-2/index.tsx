@@ -50,7 +50,7 @@ export function Navbar2({
           className
         )}
       >
-        {({ open }) => (
+        {() => (
           <>
             <div className="mx-auto max-w-[1800px] px-6 lg:px-8">
               <div className="relative flex items-center">

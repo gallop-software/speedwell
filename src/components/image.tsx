@@ -35,11 +35,11 @@ export interface ImageProps extends Omit<
   /** Whether to wrap the image in paragraph containers - default is true */
   wrap?: boolean
   /** Additional CSS classes */
-  className?: string
+  className?: string | undefined
   /** Image width - uses natural width if not provided */
-  width?: number
+  width?: number | undefined
   /** Image height - uses natural height if not provided */
-  height?: number
+  height?: number | undefined
   /** Link href - if provided and is an image file, enables media lightbox */
   href?: string
   /** Image size variant to use from metadata - 'small', 'medium', 'large', or 'full' */
@@ -69,7 +69,6 @@ export function Image({
   aspect,
   mediaLink = false,
   lazy = true,
-  ...props
 }: ImageProps) {
   const defaultRounded = 'rounded-lg'
 

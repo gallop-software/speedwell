@@ -6,7 +6,6 @@ import type { ReactElement } from 'react'
 import clsx from 'clsx'
 import { Logo } from '../logo'
 import { DesktopNav } from './desktop-nav'
-import { MobileNav } from './mobile-nav'
 import { SearchButton } from './search-button'
 import { SocialMediaNav } from './social-media-nav'
 import { MobileNavButton } from './mobile-nav-button'
@@ -51,7 +50,7 @@ export function Navbar({
           className
         )}
       >
-        {({ open }) => (
+        {() => (
           <>
             <div className="mx-auto max-w-[1800px] px-6 lg:px-8">
               <div className="relative flex items-center">

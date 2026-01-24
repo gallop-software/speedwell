@@ -7,17 +7,13 @@ import {
   Dialog,
   DialogPanel,
   DialogBackdrop,
-  Disclosure,
-  DisclosurePanel,
 } from '@headlessui/react'
-import clsx from 'clsx'
 
 import { SearchResults } from './search-results'
 import { useAutocomplete } from './use-autocomplete'
 import { SearchInput } from './search-input'
 import { type Result } from './search-client'
 
-type EmptyObject = Record<string, never>
 
 type Autocomplete = AutocompleteApi<
   Result,
@@ -103,7 +99,8 @@ export function Search({
                   {...autocomplete.getPanelProps({})}
                 >
                   {'isOpen' in autocompleteState &&
-                    autocompleteState.isOpen && (
+                    autocompleteState.isOpen &&
+                    autocompleteState.collections[0] && (
                       <SearchResults
                         autocomplete={autocomplete}
                         query={autocompleteState.query}
