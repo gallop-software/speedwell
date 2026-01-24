@@ -1,4 +1,4 @@
-import { ProBlock } from '@/components'
+import { ProBlock } from '@/components/pro-block'
 
 export default function About3() {
   return (

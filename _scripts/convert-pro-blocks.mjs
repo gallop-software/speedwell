@@ -66,7 +66,7 @@ async function findProBlocks() {
 
 // Generate ProBlock component content
 function generateProBlockContent(blockName, blockSlug) {
-  return `import { ProBlock } from '@/components'
+  return `import { ProBlock } from '@/components/pro-block'
 
 export default function ${toPascalCase(blockSlug)}() {
   return (

@@ -1,4 +1,4 @@
-import { ProBlock } from '@/components'
+import { ProBlock } from '@/components/pro-block'
 
 export default function Archive3() {
   return (
