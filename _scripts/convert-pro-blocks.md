@@ -28,7 +28,7 @@ node _scripts/convert-pro-blocks.mjs
 The script converts Pro blocks to this format:
 
 ```tsx
-import { ProBlock } from '@/components'
+import { ProBlock } from '@/components/pro-block'
 
 export default function Hero11() {
   return (
