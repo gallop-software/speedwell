@@ -47,7 +47,7 @@ export default function Section1() {
     <div className="relative bg-contrast z-1 px-6">
       <div className="mx-auto max-w-[1600px] relative flex flex-col xl:flex-row gap-6 xl:gap-0">
         {/* Hours Section */}
-        <div className="pt-14 pb-10 px-8 w-full xl:w-4/12 -mt-20 xl:-mb-20 relative rounded-md xl:rounded-b-md xl:rounded-t-md overflow-hidden shadow-lg bg-accent3">
+        <div className="pt-14 pb-10 px-8 w-full xl:w-4/12 -mt-20 xl:-mb-20 relative rounded-md xl:rounded-b-md xl:rounded-t-md overflow-hidden shadow-lg bg-body2">
           <Heading
             as="h3"
             color="text-accent3-contrast"
@@ -86,15 +86,14 @@ export default function Section1() {
             <Link
               key={index}
               href={item.href}
-              className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${
-                index === 0
-                  ? 'bg-body/3'
-                  : index === 1
-                    ? 'bg-body/6'
-                    : 'bg-body/9'
-              }`}
+              className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${index === 0
+                ? 'bg-body/3'
+                : index === 1
+                  ? 'bg-body/6'
+                  : 'bg-body/9'
+                }`}
             >
-              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-accent-contrast">
+              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white">
                 <Icon
                   icon={item.icon}
                   className="w-10 h-10 text-accent"

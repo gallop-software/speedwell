@@ -204,7 +204,7 @@ const menuCategories = [
 export default function Section9() {
   return (
     <Section
-      className="pt-30 pb-20 lg:pb-30 relative"
+      className="pt-30 pb-40 lg:pb-50 relative"
       innerAlign="wide"
     >
       {menuCategories.map((category) => (
