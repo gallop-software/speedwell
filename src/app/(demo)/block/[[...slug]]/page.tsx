@@ -1,7 +1,7 @@
 import { readdirSync } from 'fs'
 import path from 'path'
 import { notFound } from 'next/navigation'
-import { LightboxClient } from '@/components/lightbox-client'
+import { LightboxWrapper } from '@/components/lightbox-wrapper'
 import clsx from 'clsx'
 
 interface PageProps {
@@ -95,9 +95,9 @@ export default async function Page({ params }: PageProps) {
             shouldAddBottomPadding && 'pb-30'
           )}
         >
-          <LightboxClient>
+          <LightboxWrapper>
             <Content />
-          </LightboxClient>
+          </LightboxWrapper>
         </main>
       </div>
     )

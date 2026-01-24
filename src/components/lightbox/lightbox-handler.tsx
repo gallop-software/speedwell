@@ -17,7 +17,7 @@ interface Slide extends SlideImage {
   thumbnail?: string
 }
 
-interface LightboxWrapperProps {
+interface LightboxHandlerProps {
   containerRef: React.RefObject<HTMLElement | null>
 }
 
@@ -104,7 +104,7 @@ const createSlide = (el: Element): Slide | null => {
   }
 }
 
-export function LightboxWrapper({ containerRef }: LightboxWrapperProps) {
+export function LightboxHandler({ containerRef }: LightboxHandlerProps) {
   const [slides, setSlides] = useState<Slide[]>([])
   const [open, setOpen] = useState(false)
   const [index, setIndex] = useState(0)
