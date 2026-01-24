@@ -18,7 +18,7 @@ type VimeoAutoPlayerProps = {
   controls?: boolean // Show/hide player controls (default: true)
 }
 
-export default function VimeoAutoPlayer({
+export function VimeoAutoPlayer({
   videoId,
   className,
   id,

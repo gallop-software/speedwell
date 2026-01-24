@@ -75,3 +75,6 @@ export function Paragraph({
     </p>
   )
 }
+
+/** Alias for Paragraph */
+export { Paragraph as P }

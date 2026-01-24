@@ -1,12 +1,9 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Image,
-  Grid,
-  Columns,
-  Column,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Image } from '@/components/image'
+import { Grid } from '@/components/grid'
+import { Columns, Column } from '@/components/columns'
 import {
   SidebarStackProvider,
   SidebarPanels,

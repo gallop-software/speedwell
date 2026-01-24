@@ -1,12 +1,9 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Heading,
-  Paragraph,
-  Grid,
-  CardContact,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Grid } from '@/components/grid'
+import { CardContact } from '@/components/card-contact'
 import phoneIcon from '@iconify/icons-lucide/phone'
 import starIcon from '@iconify/icons-lucide/star'
 import mapPinIcon from '@iconify/icons-lucide/map-pin'

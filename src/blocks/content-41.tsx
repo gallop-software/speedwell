@@ -1,11 +1,9 @@
-import {
-  Section,
-  Subheading,
-  Heading,
-  Paragraph,
-  Image,
-  Grid,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Subheading } from '@/components/subheading'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Image } from '@/components/image'
+import { Grid } from '@/components/grid'
 
 export default function Content41() {
   return (

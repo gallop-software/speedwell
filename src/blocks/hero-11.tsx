@@ -1,13 +1,11 @@
-import {
-  Heading,
-  Paragraph,
-  Accent,
-  Button,
-  Buttons,
-  CountUp,
-  Label,
-  VideoBackground,
-} from '@/components'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Accent } from '@/components/accent'
+import { Button } from '@/components/button'
+import { Buttons } from '@/components/buttons'
+import { CountUp } from '@/components/count-up'
+import { Label } from '@/components/label'
+import { VideoBackground } from '@/components/video-background'
 
 export default function Hero11() {
   return (

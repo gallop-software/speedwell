@@ -1,4 +1,9 @@
-import { Section, Heading, Paragraph, Image, Grid, Label } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Image } from '@/components/image'
+import { Grid } from '@/components/grid'
+import { Label } from '@/components/label'
 
 export default function Cover3() {
   return (

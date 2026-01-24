@@ -1,11 +1,9 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Grid,
-  Label,
-  Subheading,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Grid } from '@/components/grid'
+import { Label } from '@/components/label'
+import { Subheading } from '@/components/subheading'
 import clsx from 'clsx'
 
 // Subtle background opacities for checker effect

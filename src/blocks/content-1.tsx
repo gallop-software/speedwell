@@ -1,15 +1,12 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Label,
-  Grid,
-  CountUp,
-  BackgroundWallpaper1,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Label } from '@/components/label'
+import { Grid } from '@/components/grid'
+import { CountUp } from '@/components/count-up'
+import { BackgroundWallpaper1 } from '@/components/background-wallpaper-1'
 
 export default function Content1() {
   return (

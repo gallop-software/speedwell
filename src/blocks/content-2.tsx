@@ -1,13 +1,10 @@
-import {
-  Container,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Label,
-  Span,
-} from '@/components'
+import { Container } from '@/components/container'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Label } from '@/components/label'
+import { Span } from '@/components/span'
 
 export default function Content2() {
   return (

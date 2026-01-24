@@ -1,12 +1,10 @@
-import {
-  Section,
-  Subheading,
-  Heading,
-  Paragraph,
-  Grid,
-  Image,
-  Button,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Subheading } from '@/components/subheading'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Grid } from '@/components/grid'
+import { Image } from '@/components/image'
+import { Button } from '@/components/button'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 const services = [

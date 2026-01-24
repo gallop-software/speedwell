@@ -1,4 +1,7 @@
-import { Section, Heading, Accordion, List, Li } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Accordion } from '@/components/accordion'
+import { List, Li } from '@/components/list'
 
 export default function Accordion1() {
   return (

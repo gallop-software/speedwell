@@ -1,13 +1,10 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Button,
-  Grid,
-  List,
-  Li,
-  Chip,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
+import { Grid } from '@/components/grid'
+import { List, Li } from '@/components/list'
+import { Chip } from '@/components/chip'
 import checkIcon from '@iconify/icons-heroicons/check-20-solid'
 import { clsx } from 'clsx'
 

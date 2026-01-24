@@ -5,7 +5,7 @@ import { DateTime } from 'luxon'
 
 const TIMEZONE = 'America/Chicago'
 
-export default function CurrentDate({ dayString }: { dayString: string }) {
+export function CurrentDate({ dayString }: { dayString: string }) {
   const [formattedDate, setFormattedDate] = useState<string | null>(null)
 
   useEffect(() => {

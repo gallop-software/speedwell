@@ -1,4 +1,7 @@
-import { Section, Heading, Grid, CardTestimonial3 } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Grid } from '@/components/grid'
+import { CardTestimonial3 } from '@/components/card-testimonial-3'
 
 export default function Testimonial6() {
   return (

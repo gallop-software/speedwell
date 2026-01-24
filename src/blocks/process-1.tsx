@@ -1,13 +1,10 @@
-import {
-  Section,
-  Subheading,
-  Heading,
-  Paragraph,
-  Columns,
-  Column,
-  Card4,
-  Span,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Subheading } from '@/components/subheading'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Columns, Column } from '@/components/columns'
+import { Card4 } from '@/components/card-4'
+import { Span } from '@/components/span'
 
 const WhimsicalArrow = () => (
   <svg

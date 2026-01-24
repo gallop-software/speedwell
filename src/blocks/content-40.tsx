@@ -1,13 +1,11 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Accent,
-  Image,
-  Grid,
-  Span,
-  BackgroundGeometry,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Accent } from '@/components/accent'
+import { Image } from '@/components/image'
+import { Grid } from '@/components/grid'
+import { Span } from '@/components/span'
+import { BackgroundGeometry } from '@/components/background-geometry'
 
 const features = [
   {

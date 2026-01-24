@@ -1,14 +1,10 @@
-import {
-  Columns,
-  Column,
-  Card4,
-  Section,
-  Heading,
-  Paragraph,
-  Button,
-  List,
-  Li,
-} from '@/components'
+import { Columns, Column } from '@/components/columns'
+import { Card4 } from '@/components/card-4'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
+import { List, Li } from '@/components/list'
 import checkIcon from '@iconify/icons-heroicons/check-20-solid'
 
 export default function Pricing1() {

@@ -1,13 +1,11 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Button,
-  Accent,
-  Icon,
-  Chip,
-  Label,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
+import { Accent } from '@/components/accent'
+import { Icon } from '@/components/icon'
+import { Chip } from '@/components/chip'
+import { Label } from '@/components/label'
 import playIcon from '@iconify/icons-heroicons/play-solid'
 import clockIcon from '@iconify/icons-heroicons/clock-20-solid'
 import calendarIcon from '@iconify/icons-heroicons/calendar-20-solid'

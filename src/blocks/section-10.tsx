@@ -1,4 +1,6 @@
-import { Section, Heading, MasonryFilter } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { MasonryFilter } from '@/components/masonry-filter'
 
 const categories = ['All', 'Portrait', 'Landscape', 'Abstract', 'Commercial']
 

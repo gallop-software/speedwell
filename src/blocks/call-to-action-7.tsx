@@ -1,15 +1,12 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Heading,
-  Paragraph,
-  Button,
-  Buttons,
-  Accent,
-  Icon,
-  OrbitStats,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
+import { Buttons } from '@/components/buttons'
+import { Accent } from '@/components/accent'
+import { Icon } from '@/components/icon'
+import { OrbitStats } from '@/components/orbit-stats'
 import clsx from 'clsx'
 import chatBubbleLeftRightIcon from '@iconify/icons-heroicons/chat-bubble-left-right-solid'
 import videoCameraIcon from '@iconify/icons-heroicons/video-camera-solid'

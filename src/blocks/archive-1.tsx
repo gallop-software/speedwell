@@ -1,4 +1,6 @@
-import { Section, FancyHeading, Blog } from '@/components'
+import { Section } from '@/components/section'
+import { FancyHeading } from '@/components/fancy-heading'
+import { Blog } from '@/components/blog'
 
 export default function Archive1() {
   return (

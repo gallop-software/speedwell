@@ -1,12 +1,9 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Quote,
-  Paragraph,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Quote } from '@/components/quote'
+import { Paragraph } from '@/components/paragraph'
 
 export default function Content6() {
   return (

@@ -1,4 +1,7 @@
-import { Section, Heading, Grid, Card2 } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Grid } from '@/components/grid'
+import { Card2 } from '@/components/card-2'
 
 export default function Section3() {
   return (

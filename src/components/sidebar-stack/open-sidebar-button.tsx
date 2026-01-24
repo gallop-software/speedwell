@@ -1,7 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import { Button } from '@/components'
+import { Button } from '@/components/button'
 import { useSidebarStack } from './context'
 
 export interface OpenSidebarButtonProps {

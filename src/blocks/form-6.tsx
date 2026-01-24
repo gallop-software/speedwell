@@ -1,13 +1,9 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Accent,
-  Grid,
-  Form,
-  FormInput,
-  FormButton,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Accent } from '@/components/accent'
+import { Grid } from '@/components/grid'
+import { Form, FormInput, FormButton } from '@/components/form'
 import clsx from 'clsx'
 
 const platforms = [

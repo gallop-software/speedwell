@@ -1,11 +1,9 @@
-import {
-  Section,
-  Heading,
-  Accent,
-  Paragraph,
-  Swiper,
-  CardTestimonial3,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Accent } from '@/components/accent'
+import { Paragraph } from '@/components/paragraph'
+import { Swiper } from '@/components/swiper'
+import { CardTestimonial3 } from '@/components/card-testimonial-3'
 
 export default function Testimonial7() {
   return (

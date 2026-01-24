@@ -1,13 +1,10 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Gallery,
-  GalleryItem,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Gallery } from '@/components/gallery'
+import { GalleryItem } from '@/components/gallery-item'
 
 export default function Content35() {
   return (

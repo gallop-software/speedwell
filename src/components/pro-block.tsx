@@ -1,4 +1,6 @@
-import { Heading, Paragraph, Button } from '@/components'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 interface ProBlockProps {

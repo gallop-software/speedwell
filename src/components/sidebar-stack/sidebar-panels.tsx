@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react'
 import { SidebarStackRenderer } from './renderer'
 import { useSidebarStack } from './context'
-import { Paragraph } from '@/components'
+import { Paragraph } from '@/components/paragraph'
 
 export interface SidebarPanelsProps {
   panels: Record<string, ReactNode>

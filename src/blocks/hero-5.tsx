@@ -1,4 +1,9 @@
-import { Image, Heading, Paragraph, Span, Button, Buttons } from '@/components'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Span } from '@/components/span'
+import { Button } from '@/components/button'
+import { Buttons } from '@/components/buttons'
 
 export default function Hero5() {
   return (

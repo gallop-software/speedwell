@@ -4,7 +4,7 @@ interface BackgroundWallpaper1Props {
   className?: string
 }
 
-export default function BackgroundWallpaper1({
+export function BackgroundWallpaper1({
   className,
 }: BackgroundWallpaper1Props) {
   return (

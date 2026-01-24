@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { clsx } from 'clsx'
-import { Image } from '@/components'
+import { Image } from '@/components/image'
 
 export interface VideoBackgroundProps {
   /** Vimeo video ID */

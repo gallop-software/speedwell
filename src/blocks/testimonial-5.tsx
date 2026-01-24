@@ -1,13 +1,11 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Grid,
-  Subheading,
-  Label,
-  Icon,
-  Quote,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Grid } from '@/components/grid'
+import { Subheading } from '@/components/subheading'
+import { Label } from '@/components/label'
+import { Icon } from '@/components/icon'
+import { Quote } from '@/components/quote'
 import quoteIcon from '@iconify/icons-mdi/format-quote-open'
 
 const testimonials = [

@@ -1,4 +1,5 @@
-import { Footer, Navbar } from '@/components'
+import { Footer } from '@/components/footer'
+import { Navbar } from '@/components/navbar'
 
 export default function HeroLayout({
   children,

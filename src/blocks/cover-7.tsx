@@ -1,4 +1,8 @@
-import { Section, Image, Heading, Grid, Subheading } from '@/components'
+import { Section } from '@/components/section'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Grid } from '@/components/grid'
+import { Subheading } from '@/components/subheading'
 
 export default function Cover7() {
   return (

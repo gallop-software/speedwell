@@ -1,16 +1,13 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Button,
-  Subheading,
-  Label,
-  BackgroundDiagonal1,
-  Chip,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
+import { Subheading } from '@/components/subheading'
+import { Label } from '@/components/label'
+import { BackgroundDiagonal1 } from '@/components/background-diagonal-1'
+import { Chip } from '@/components/chip'
 import shoppingBagIcon from '@iconify/icons-lucide/shopping-bag'
 
 export default function Shopping1() {

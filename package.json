@@ -67,7 +67,9 @@
     "update:interactive": "npx npm-check-updates -i",
     "update:doctor": "npx npm-check-updates --doctor -u",
     "update:canon": "npm update @gallop.software/canon",
-    "unused": "knip"
+    "unused": "knip",
+    "refactor:imports": "node _scripts/refactor-barrel-imports.mjs",
+    "refactor:imports:write": "node _scripts/refactor-barrel-imports.mjs --write"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",

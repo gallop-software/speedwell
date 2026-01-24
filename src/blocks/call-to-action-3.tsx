@@ -1,4 +1,8 @@
-import { Cover, Heading, Paragraph, Buttons, Button } from '@/components'
+import { Cover } from '@/components/cover'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Buttons } from '@/components/buttons'
+import { Button } from '@/components/button'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function CallToAction3() {

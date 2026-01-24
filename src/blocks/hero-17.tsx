@@ -1,4 +1,7 @@
-import { Image, Section, Heading, Accent } from '@/components'
+import { Image } from '@/components/image'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Accent } from '@/components/accent'
 
 export default function Hero17() {
   return (

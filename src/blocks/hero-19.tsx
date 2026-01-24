@@ -1,13 +1,11 @@
 import Link from 'next/link'
-import {
-  Heading,
-  Paragraph,
-  Accent,
-  VideoPopup,
-  Icon,
-  CurrentDate,
-  CurrentTime,
-} from '@/components'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Accent } from '@/components/accent'
+import { VideoPopup } from '@/components/video-popup'
+import { Icon } from '@/components/icon'
+import { CurrentDate } from '@/components/current-date'
+import { CurrentTime } from '@/components/current-time'
 import CircleAnimationInit from '@/hooks/use-circle-animation'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import playIcon from '@iconify/icons-heroicons/play-solid'

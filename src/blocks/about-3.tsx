@@ -1,11 +1,9 @@
-import {
-  Section,
-  Swiper,
-  Profile2,
-  Heading,
-  Paragraph,
-  FancyHeading,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Swiper } from '@/components/swiper'
+import { Profile2 } from '@/components/profile-2'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { FancyHeading } from '@/components/fancy-heading'
 import facebookIcon from '@iconify/icons-simple-icons/facebook'
 import dribbbleIcon from '@iconify/icons-simple-icons/dribbble'
 import xIcon from '@iconify/icons-simple-icons/x'

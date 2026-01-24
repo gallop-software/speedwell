@@ -1,4 +1,7 @@
-import { Section, Heading, Paragraph, Image } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Image } from '@/components/image'
 
 export default function Content28() {
   return (

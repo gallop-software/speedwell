@@ -1,4 +1,7 @@
-import { Section, Accent, Heading, Paragraph } from '@/components'
+import { Section } from '@/components/section'
+import { Accent } from '@/components/accent'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
 
 export default function Content10() {
   return (

@@ -1,12 +1,10 @@
-import {
-  Section,
-  Image,
-  Heading,
-  Paragraph,
-  Accent,
-  VideoPopup,
-  Icon,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Accent } from '@/components/accent'
+import { VideoPopup } from '@/components/video-popup'
+import { Icon } from '@/components/icon'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import CircleAnimationInit from '@/hooks/use-circle-animation'
 import playIcon from '@iconify/icons-heroicons/play-solid'

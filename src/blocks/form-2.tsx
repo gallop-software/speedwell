@@ -1,14 +1,6 @@
-import {
-  Section,
-  Heading,
-  Form,
-  FormInput,
-  FormTextArea,
-  FormButton,
-  FormName,
-  FormRadioGroup,
-  FormCheckboxGroup,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Form, FormInput, FormTextArea, FormButton, FormName, FormRadioGroup, FormCheckboxGroup } from '@/components/form'
 
 export default function Form2() {
   return (

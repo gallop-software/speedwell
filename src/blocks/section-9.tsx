@@ -1,13 +1,11 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Image,
-  Button,
-  Grid,
-  Label,
-  Span,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Image } from '@/components/image'
+import { Button } from '@/components/button'
+import { Grid } from '@/components/grid'
+import { Label } from '@/components/label'
+import { Span } from '@/components/span'
 import clsx from 'clsx'
 import arrowDownTrayIcon from '@iconify/icons-heroicons/arrow-down-tray'
 

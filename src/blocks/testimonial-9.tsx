@@ -1,14 +1,12 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  CountUp,
-  Accent,
-  Label,
-  Icon,
-  Image,
-  Grid,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { CountUp } from '@/components/count-up'
+import { Accent } from '@/components/accent'
+import { Label } from '@/components/label'
+import { Icon } from '@/components/icon'
+import { Image } from '@/components/image'
+import { Grid } from '@/components/grid'
 import starIcon from '@iconify/icons-heroicons/star-solid'
 import chatBubbleIcon from '@iconify/icons-heroicons/chat-bubble-bottom-center-text-solid'
 

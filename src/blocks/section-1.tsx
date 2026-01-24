@@ -1,11 +1,9 @@
 import Link from 'next/link'
-import {
-  Heading,
-  Paragraph,
-  Icon,
-  CurrentDate,
-  CurrentTime,
-} from '@/components'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Icon } from '@/components/icon'
+import { CurrentDate } from '@/components/current-date'
+import { CurrentTime } from '@/components/current-time'
 import phoneIcon from '@iconify/icons-heroicons/phone-20-solid'
 import envelopeIcon from '@iconify/icons-heroicons/envelope-20-solid'
 import buildingOfficeIcon from '@iconify/icons-heroicons/building-office-20-solid'

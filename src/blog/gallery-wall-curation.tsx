@@ -1,11 +1,9 @@
-import {
-  Button,
-  Gallery,
-  GalleryItem,
-  PageHeader,
-  P,
-  Heading,
-} from '@/components'
+import { Button } from '@/components/button'
+import { Gallery } from '@/components/gallery'
+import { GalleryItem } from '@/components/gallery-item'
+import { PageHeader } from '@/components/page-header'
+import { P } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
 
 const TITLE = 'Gallery Wall Curation'
 

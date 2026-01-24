@@ -1,4 +1,5 @@
-import { Cover, Accent } from '@/components'
+import { Cover } from '@/components/cover'
+import { Accent } from '@/components/accent'
 
 export default function Cover6() {
   return (

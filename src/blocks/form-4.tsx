@@ -1,16 +1,8 @@
-import {
-  Section,
-  Heading,
-  Paragraph,
-  Form,
-  FormInput,
-  FormTextArea,
-  FormRadioGroup,
-  FormButton,
-  DatePickerInput,
-  TimePickerInput,
-  Grid,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Form, FormInput, FormTextArea, FormRadioGroup, FormButton, DatePickerInput, TimePickerInput } from '@/components/form'
+import { Grid } from '@/components/grid'
 
 export default function Form4() {
   return (

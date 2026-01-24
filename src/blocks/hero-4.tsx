@@ -1,11 +1,8 @@
-import {
-  Columns,
-  Column,
-  Image,
-  Accent,
-  Heading,
-  Paragraph,
-} from '@/components'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Accent } from '@/components/accent'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
 
 export default function Hero4() {
   return (

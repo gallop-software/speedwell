@@ -1,4 +1,7 @@
-import { Paragraph, Heading, Label, Icon } from '@/components'
+import { Paragraph } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
+import { Label } from '@/components/label'
+import { Icon } from '@/components/icon'
 import starIcon from '@iconify/icons-heroicons/star-solid'
 
 interface CardTestimonial3Props {
