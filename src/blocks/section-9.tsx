@@ -241,10 +241,7 @@ export default function Section9() {
           </div>
 
           {/* Menu Items */}
-          <Container
-            padding="py-10 px-0"
-            align="content"
-          >
+          <div className="max-w-4xl mx-auto">
             <Grid
               cols="grid-cols-1 md:grid-cols-2"
               gap="gap-x-16 gap-y-0"
@@ -300,7 +297,7 @@ export default function Section9() {
                 )
               })}
             </Grid>
-          </Container>
+          </div>
         </div>
       ))}
 
