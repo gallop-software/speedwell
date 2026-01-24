@@ -5,6 +5,8 @@ export interface SidebarLinkProps {
   componentId: string
   title: string
   className?: string
+  /** Show title immediately instead of fading in on scroll */
+  showTitleImmediately?: boolean
 }
 
 /**
@@ -16,6 +18,7 @@ export function SidebarLink({
   componentId,
   title,
   className = '',
+  showTitleImmediately,
 }: SidebarLinkProps) {
   // Note: onClick is handled by SidebarClickHandler via event delegation
   // The href uses a dash separator to avoid CSS selector issues with colons
@@ -24,6 +27,7 @@ export function SidebarLink({
       href={`#sidebar-panel-${componentId}`}
       data-sidebar-title={title}
       data-sidebar-component={componentId}
+      data-sidebar-show-title={showTitleImmediately ? 'true' : undefined}
       className={className}
     >
       {children}

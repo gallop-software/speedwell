@@ -27,14 +27,14 @@ function Demo1() {
         Interior design is the art and science of enhancing the interior of a
         space to achieve a healthier and more aesthetically pleasing
         environment. Learn more about{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo2"
           title="Modern Style"
         >
           Modern Style
         </SidebarLink>{' '}
         and{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo3"
           title="Color Theory"
         >
@@ -47,7 +47,7 @@ function Demo1() {
         The fundamental principles include balance, rhythm, emphasis, and
         harmony. These concepts work together to create spaces that are both
         functional and beautiful. Explore{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo4"
           title="Space Planning"
         >
@@ -57,14 +57,14 @@ function Demo1() {
       </Paragraph>
       <Paragraph>
         Whether you prefer{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo5"
           title="Minimalist Design"
         >
           Minimalist Design
         </SidebarLink>{' '}
         or{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo6"
           title="Bohemian Style"
         >
@@ -91,7 +91,7 @@ function Demo2() {
         Modern style emphasizes clean lines, minimal ornamentation, and a focus
         on function. It emerged in the early 20th century and continues to
         influence{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo1"
           title="Interior Design"
         >
@@ -103,7 +103,7 @@ function Demo2() {
       <Paragraph>
         Key features include open floor plans, neutral color palettes, and the
         use of materials like glass, steel, and concrete. See how{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo3"
           title="Color Theory"
         >
@@ -113,7 +113,7 @@ function Demo2() {
       </Paragraph>
       <Paragraph>
         Modern style often overlaps with{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo5"
           title="Minimalist Design"
         >
@@ -138,7 +138,7 @@ function Demo3() {
       <Heading as="h2">Color Theory in Design</Heading>
       <Paragraph>
         Color theory is essential to{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo1"
           title="Interior Design"
         >
@@ -152,7 +152,7 @@ function Demo3() {
         Warm colors (reds, oranges, yellows) create energy and intimacy, while
         cool colors (blues, greens, purples) evoke calm and spaciousness. This
         is crucial for{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo4"
           title="Space Planning"
         >
@@ -161,14 +161,14 @@ function Demo3() {
         .
       </Paragraph>
       <Paragraph>
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo2"
           title="Modern Style"
         >
           Modern Style
         </SidebarLink>{' '}
         typically uses neutral palettes, while{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo6"
           title="Bohemian Style"
         >
@@ -192,7 +192,7 @@ function Demo4() {
       <Heading as="h2">Space Planning Fundamentals</Heading>
       <Paragraph>
         Space planning is the first step in any{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo1"
           title="Interior Design"
         >
@@ -206,14 +206,14 @@ function Demo4() {
         Good space planning considers how people move through a room. Clear
         pathways and logical furniture groupings are essential, whether
         following{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo2"
           title="Modern Style"
         >
           Modern Style
         </SidebarLink>{' '}
         or{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo6"
           title="Bohemian Style"
         >
@@ -223,7 +223,7 @@ function Demo4() {
       </Paragraph>
       <Paragraph>
         Apply{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo3"
           title="Color Theory"
         >
@@ -253,7 +253,7 @@ function Demo5() {
       <Heading as="h3">Core Principles</Heading>
       <Paragraph>
         Every item must have purpose.{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo3"
           title="Color Theory"
         >
@@ -263,14 +263,14 @@ function Demo5() {
       </Paragraph>
       <Paragraph>
         While related to{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo2"
           title="Modern Style"
         >
           Modern Style
         </SidebarLink>
         , minimalism is more extreme in its reduction. Compare with{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo6"
           title="Bohemian Style"
         >
@@ -299,7 +299,7 @@ function Demo6() {
       <Heading as="h3">Key Elements</Heading>
       <Paragraph>
         Layer textiles, mix patterns, and embrace maximalism.{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo3"
           title="Color Theory"
         >
@@ -309,21 +309,21 @@ function Demo6() {
       </Paragraph>
       <Paragraph>
         The opposite of{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo5"
           title="Minimalist Design"
         >
           Minimalist Design
         </SidebarLink>
         , bohemian style breaks the rules of{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo2"
           title="Modern Style"
         >
           Modern Style
         </SidebarLink>{' '}
         intentionally. Good{' '}
-        <SidebarLink
+        <SidebarLink showTitleImmediately
           componentId="demo4"
           title="Space Planning"
         >
@@ -445,6 +445,7 @@ export default function Sidebar1() {
                 icon={sidebarIcon}
                 iconPlacement="after"
                 className="self-start"
+                showTitleImmediately
               >
                 Open Stackable Sidebar Content
               </OpenSidebarButton>

@@ -81,7 +81,9 @@ function AsyncSidebarPanel({
   const [content, setContent] = useState<ReactNode>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [titleOpacity, setTitleOpacity] = useState(0)
+  const [titleOpacity, setTitleOpacity] = useState(
+    item.showTitleImmediately ? 1 : 0
+  )
 
   const { contentLoader, contentCache, setCachedContent, push } =
     useSidebarStack()
@@ -129,8 +131,10 @@ function AsyncSidebarPanel({
     requestAnimationFrame(() => setIsVisible(true))
   }, [])
 
-  // Track scroll position to fade in title
+  // Track scroll position to fade in title (skip if showTitleImmediately)
   useEffect(() => {
+    if (item.showTitleImmediately) return
+
     const panel = panelRef.current
     if (!panel) return
 
@@ -143,7 +147,7 @@ function AsyncSidebarPanel({
 
     panel.addEventListener('scroll', handleScroll, { passive: true })
     return () => panel.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [item.showTitleImmediately])
 
   // Handle clicks on links within content
   const handleContentClick = (e: React.MouseEvent) => {

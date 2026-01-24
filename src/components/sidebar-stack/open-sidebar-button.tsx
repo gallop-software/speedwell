@@ -11,6 +11,8 @@ export interface OpenSidebarButtonProps {
   className?: string
   icon?: { body: string; width?: number; height?: number }
   iconPlacement?: 'before' | 'after'
+  /** Show title immediately instead of fading in on scroll */
+  showTitleImmediately?: boolean
 }
 
 /**
@@ -24,11 +26,12 @@ export function OpenSidebarButton({
   className,
   icon,
   iconPlacement,
+  showTitleImmediately,
 }: OpenSidebarButtonProps) {
   const { push } = useSidebarStack()
 
   const handleClick = () => {
-    push({ title, componentId })
+    push({ title, componentId, showTitleImmediately })
   }
 
   return (
