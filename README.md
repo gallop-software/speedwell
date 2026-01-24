@@ -125,7 +125,6 @@ speedwell/
 │   │   ├── accordion.tsx
 │   │   ├── button.tsx
 │   │   ├── card-*.tsx
-│   │   ├── contact-form.tsx
 │   │   ├── footer.tsx
 │   │   ├── gallery.tsx
 │   │   ├── heading.tsx
@@ -181,6 +180,7 @@ speedwell/
 ├── tsconfig.json            # TypeScript config
 ├── postcss.config.js        # PostCSS config
 ├── package.json             # Dependencies & scripts
+├── knip.config.js           # Unused file detection config
 ├── .prettierrc              # Prettier config
 ├── .eslintrc.json           # ESLint config
 └── push-env-to-vercel.sh    # Environment sync script
@@ -200,6 +200,8 @@ speedwell/
 - **`npm run lint:gallop`** - Run Gallop Canon lint rules on blocks
 - **`npm run ts`** - TypeScript type checking without emitting
 - **`npm run prettier`** - Format all files with Prettier
+- **`npm run unused`** - Find unused files with knip
+- **`npm run check`** - Run lint, TypeScript, and unused checks
 
 ### Gallop Canon
 
