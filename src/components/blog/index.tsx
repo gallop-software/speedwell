@@ -4,6 +4,7 @@ import React from 'react'
 import { BlogClient } from './blog-client'
 import fs from 'fs'
 import path from 'path'
+import { DateTime } from 'luxon'
 
 export async function Blog({
   className,
@@ -47,8 +48,8 @@ export async function Blog({
       // Sort by date, newest first
       allPosts.sort(
         (a: any, b: any) =>
-          new Date(b.metadata.date || '').getTime() -
-          new Date(a.metadata.date || '').getTime()
+          DateTime.fromISO(b.metadata.date || '').toMillis() -
+          DateTime.fromISO(a.metadata.date || '').toMillis()
       )
     }
   } catch (error) {
