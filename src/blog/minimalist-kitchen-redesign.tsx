@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -31,15 +31,15 @@ function Details() {
         palette is warmed by natural oak flooring and accented with black
         fixtures for subtle contrast. Every element was carefully selected to
         eliminate visual clutter while ensuring maximum functionality for daily
-        cooking and entertaining.
+        cooking and entertaining. For more kitchen inspiration, see our{' '}
+        <Link href="/post/chef-kitchen-upgrade" prefetch={true}>
+          chef kitchen upgrade
+        </Link>, or discover how we apply minimalist principles throughout a
+        home in our{' '}
+        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+          Japanese zen retreat
+        </Link>.
       </P>
-
-      <Button
-        href="/post/minimalist-kitchen-redesign"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

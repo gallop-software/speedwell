@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -29,18 +29,21 @@ function Details() {
         Professional-grade refrigeration, a pot-filler faucet at the range, and
         a dedicated spice drawer near the cooktop enhance workflow. Open
         shelving displays copper pots and frequently-used items, while deep
-        drawers accommodate large cookware. Durable quartz countertops and
-        commercial-style faucets withstand heavy use. The design balances
-        restaurant functionality with residential comfort, creating a kitchen
-        that inspires culinary creativity.
+        drawers accommodate large cookware. For more kitchen inspiration, see
+        our{' '}
+        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+          Farmhouse Kitchen Remodel
+        </Link>{' '}
+        or the sleek{' '}
+        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+          Minimalist Kitchen Redesign
+        </Link>
+        . Explore our{' '}
+        <Link href="/kitchen-bath" prefetch={true}>
+          Kitchen & Bath services
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/chef-kitchen-upgrade"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

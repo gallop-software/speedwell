@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -27,18 +27,21 @@ function Details() {
 
       <P>
         The color palette features warm neutrals accented with bold pops of
-        color in artwork and textiles. Large-format tiles, natural oak flooring,
-        and sleek fixtures contribute to the modern feel. We incorporated smart
-        home technology, energy-efficient lighting, and durable, family-friendly
-        materials that don't sacrifice style.
+        color in artwork and textiles. For similar open-plan concepts, explore
+        our{' '}
+        <Link href="/post/open-concept-living" prefetch={true}>
+          Open Concept Living
+        </Link>{' '}
+        project. Large-format tiles, natural oak flooring, and sleek fixtures
+        contribute to the modern feel. We incorporated smart home technology,
+        energy-efficient lighting, and durable, family-friendly materials that
+        don't sacrifice style. Our{' '}
+        <Link href="/post/modern-nursery-design" prefetch={true}>
+          Modern Nursery Design
+        </Link>{' '}
+        showcases how we create child-friendly spaces with sophisticated
+        aesthetics.
       </P>
-
-      <Button
-        href="/post/contemporary-family-home"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

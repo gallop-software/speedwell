@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -32,16 +32,15 @@ function Details() {
         incorporated non-toxic paints, organic textiles, and sustainable
         materials for a healthy environment. Whimsical touches like a cloud
         mobile and illustrated prints add personality without overwhelming the
-        peaceful atmosphere. Ample storage solutions keep necessities organized
-        and hidden from view.
+        peaceful atmosphere. For more bedroom inspiration, explore our{' '}
+        <Link href="/post/bohemian-bedroom-design" prefetch={true}>
+          bohemian bedroom design
+        </Link>, or see how we approach family-focused spaces in our{' '}
+        <Link href="/post/contemporary-family-home" prefetch={true}>
+          contemporary family home
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/modern-nursery-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

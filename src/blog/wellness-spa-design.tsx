@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -34,20 +34,21 @@ function Details() {
       <P>
         The design incorporates separate zones for different services: massage
         therapy rooms with heated tables, an infrared sauna, a meditation
-        lounge, and a tea bar with healthy refreshments. A calming color palette
-        of sage, sand, and soft whites combined with organic textures creates a
-        restorative atmosphere. Thoughtful details like aromatherapy, soft
-        robes, and comfortable waiting areas ensure guests feel pampered from
-        arrival to departure. The space demonstrates how interior design can
-        actively contribute to wellness and healing.
+        lounge, and a tea bar with healthy refreshments. For a more intimate
+        wellness space, see our{' '}
+        <Link href="/post/private-yoga-studio" prefetch={true}>
+          Private Yoga Studio
+        </Link>{' '}
+        project. A calming color palette of sage, sand, and soft whites combined
+        with organic textures creates a restorative atmosphere. Thoughtful
+        details like aromatherapy, soft robes, and comfortable waiting areas
+        ensure guests feel pampered from arrival to departure. You might also
+        enjoy our{' '}
+        <Link href="/post/spa-bathroom-retreat" prefetch={true}>
+          Spa Bathroom Retreat
+        </Link>{' '}
+        for residential wellness inspiration.
       </P>
-
-      <Button
-        href="/post/wellness-spa-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

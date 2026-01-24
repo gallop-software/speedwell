@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -23,22 +23,24 @@ function Details() {
         textures. The renovation included opening up the main living areas to
         capture ocean views, installing custom built-in cabinetry for seamless
         storage, and selecting durable yet elegant materials that can withstand
-        the coastal climate. Shiplap walls, whitewashed oak floors, and linen
-        furnishings create a relaxed sophistication perfect for seaside living.
+        the coastal climate.
       </P>
 
       <P>
-        Our design incorporated sustainable materials and energy-efficient
-        systems while maintaining the home's timeless appeal. Every detail was
-        considered to enhance the connection between indoor and outdoor spaces.
+        Shiplap walls, whitewashed oak floors, and linen furnishings create a
+        relaxed sophistication perfect for seaside living. Our design
+        incorporated sustainable materials and energy-efficient systems while
+        maintaining the home's timeless appeal. For similar relaxed aesthetics,
+        explore our{' '}
+        <Link href="/post/coastal-cottage-refresh" prefetch={true}>
+          Coastal Cottage Refresh
+        </Link>{' '}
+        or see how we approached a{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian Apartment
+        </Link>{' '}
+        with the same light and airy philosophy.
       </P>
-
-      <Button
-        href="/post/coastal-home-renovation"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

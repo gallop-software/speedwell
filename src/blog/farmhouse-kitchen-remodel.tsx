@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -33,20 +33,21 @@ function Details() {
 
       <P>
         A vintage-inspired range with professional capabilities serves as the
-        kitchen's focal point. We added a generous center island with seating
-        for casual dining and baking projects. Brass fixtures, glass-front upper
-        cabinets, and open shelving displaying curated dishware complete the
-        welcoming country aesthetic. Modern appliances are cleverly integrated
-        to maintain the traditional feel while ensuring contemporary
-        functionality.
+        kitchen's focal point, similar to the approach in our{' '}
+        <Link href="/post/chef-kitchen-upgrade" prefetch={true}>
+          chef kitchen upgrade
+        </Link>
+        . We added a generous center island with seating for casual dining and
+        baking projects. Brass fixtures, glass-front upper cabinets, and open
+        shelving displaying curated dishware complete the welcoming country
+        aesthetic. Modern appliances are cleverly integrated to maintain the
+        traditional feel while ensuring contemporary functionality—a philosophy
+        we also embraced in our{' '}
+        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+          minimalist kitchen redesign
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/farmhouse-kitchen-remodel"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

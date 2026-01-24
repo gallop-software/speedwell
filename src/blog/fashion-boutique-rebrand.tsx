@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -18,22 +18,23 @@ function Details() {
 
       <P>
         This independent fashion boutique needed a rebrand that captured their
-        curated aesthetic and commitment to sustainable fashion. We designed a
-        sophisticated visual identity that balances timeless elegance with
-        contemporary edge. The logo features refined letterforms with
-        fashion-forward styling, while the color palette evokes luxury and
+        curated aesthetic and commitment to sustainable fashion, inspired by the
+        principles we applied in our{' '}
+        <Link href="/post/boutique-retail-design" prefetch={true}>
+          boutique retail design
+        </Link>{' '}
+        work. We designed a sophisticated visual identity that balances timeless
+        elegance with contemporary edge. The logo features refined letterforms
+        with fashion-forward styling, while the color palette evokes luxury and
         sustainability. Brand applications span from shopping bags and tags to
         window displays and social media templates. The cohesive system
         positions the boutique as a destination for conscious consumers seeking
-        unique, high-quality pieces that stand the test of time.
+        unique, high-quality pieces—an approach that shares DNA with our{' '}
+        <Link href="/post/wellness-brand-identity" prefetch={true}>
+          wellness brand identity
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/fashion-boutique-rebrand"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

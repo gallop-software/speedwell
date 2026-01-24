@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -28,19 +28,19 @@ function Details() {
       <P>
         Key updates included opening the kitchen to the dining room, updating
         all bathrooms with classic subway tile and modern fixtures, and creating
-        a finished basement family room. We mixed traditional elements like
-        tufted upholstery and oriental rugs with contemporary art and sleek
-        accessories. The result balances the charm of historic architecture with
-        the comfort and functionality today's families need, creating timeless
-        interiors that won't feel dated.
+        a finished basement family room. This approach is similar to our{' '}
+        <Link href="/post/contemporary-family-home" prefetch={true}>
+          contemporary family home
+        </Link>{' '}
+        project. We mixed traditional elements like tufted upholstery and
+        oriental rugs with contemporary art and sleek accessories. The result
+        balances the charm of historic architecture with the comfort and
+        functionality today's families need, much like our{' '}
+        <Link href="/post/historic-brownstone-revival" prefetch={true}>
+          historic brownstone revival
+        </Link>
+        , creating timeless interiors that won't feel dated.
       </P>
-
-      <Button
-        href="/post/transitional-townhouse"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

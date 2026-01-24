@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -38,15 +38,15 @@ function Details() {
         modern conveniences including radiant floor heating and a
         state-of-the-art entertainment system. The warm color palette of deep
         reds, forest greens, and natural wood tones complements the spectacular
-        mountain setting.
+        mountain setting. For more retreat-style interiors, see our{' '}
+        <Link href="/post/wine-country-estate" prefetch={true}>
+          wine country estate
+        </Link>{' '}
+        or discover the rustic warmth of our{' '}
+        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+          farmhouse kitchen remodel
+        </Link>.
       </P>
-
-      <Button
-        href="/post/mountain-chalet-interior"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

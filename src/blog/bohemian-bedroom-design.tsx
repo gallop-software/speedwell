@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -30,18 +30,19 @@ function Details() {
         Rattan furniture pieces, floor cushions, and poufs create flexible
         seating areas perfect for reading or meditation. We incorporated
         abundant plants in hanging planters and vintage ceramic pots to bring
-        life and organic form. String lights and lanterns provide ambient
-        lighting, while layered window treatments filter natural light
-        beautifully. The space celebrates personal expression and cultural
-        appreciation through thoughtfully curated objects that tell a story.
+        life and organic form. For other bedroom transformations, explore our{' '}
+        <Link href="/post/modern-nursery-design" prefetch={true}>
+          Modern Nursery Design
+        </Link>{' '}
+        or the serene{' '}
+        <Link href="/post/guest-suite-makeover" prefetch={true}>
+          Guest Suite Makeover
+        </Link>
+        . String lights and lanterns provide ambient lighting, while layered
+        window treatments filter natural light beautifully. The space celebrates
+        personal expression and cultural appreciation through thoughtfully
+        curated objects that tell a story.
       </P>
-
-      <Button
-        href="/post/bohemian-bedroom-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

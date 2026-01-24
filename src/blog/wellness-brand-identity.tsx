@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -20,20 +20,23 @@ function Details() {
         This holistic wellness studio required a brand that embodied tranquility
         and modern mindfulness. We created a serene visual identity featuring
         soft color palettes, organic shapes, and minimalist typography that
-        reflects their approach to wellness. The brand system includes studio
-        signage, class schedules, promotional materials, and a cohesive digital
-        presence. Custom icons represent different wellness practices from yoga
-        to meditation. Every touchpoint was designed to create a calm, welcoming
-        atmosphere that resonates with clients seeking balance and wellbeing in
-        their busy lives.
+        reflects their approach to wellness. For another example of brand
+        transformation in the lifestyle space, see our{' '}
+        <Link href="/post/fashion-boutique-rebrand" prefetch={true}>
+          Fashion Boutique Rebrand
+        </Link>{' '}
+        project. The brand system includes studio signage, class schedules,
+        promotional materials, and a cohesive digital presence. Custom icons
+        represent different wellness practices from yoga to meditation. Every
+        touchpoint was designed to create a calm, welcoming atmosphere that
+        resonates with clients seeking balance and wellbeing in their busy
+        lives. To see how we translated similar wellness principles into
+        physical space design, explore our{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          Wellness Spa Design
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/wellness-brand-identity"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -23,17 +23,17 @@ function Details() {
         patterns, and modern typography. The brand system scales seamlessly
         across digital and print applications, from website to investor
         presentations. Custom iconography and illustrations communicate complex
-        technical concepts with clarity and personality. The result is a
-        confident, forward-thinking brand that resonates with both enterprise
-        clients and startup culture.
+        technical concepts with clarity and personality—similar to the
+        professional environments we created in our{' '}
+        <Link href="/post/executive-workspace" prefetch={true}>
+          executive workspace
+        </Link>{' '}
+        and{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          wellness spa design
+        </Link>{' '}
+        projects.
       </P>
-
-      <Button
-        href="/post/modern-medical-office"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

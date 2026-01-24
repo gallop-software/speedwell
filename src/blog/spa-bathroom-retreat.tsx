@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -28,20 +28,21 @@ function Details() {
 
       <P>
         Heated marble floors, towel warmers, and a steam function in the shower
-        elevate the daily routine into a wellness ritual. The neutral color
-        palette of soft grays and warm whites creates serenity, while brass
-        fixtures add warmth and sophistication. Thoughtful storage solutions
-        keep counters clutter-free, and dimmable lighting allows for
-        customizable ambiance from energizing morning light to relaxing evening
-        glow.
+        elevate the daily routine into a wellness ritual. This bathroom pairs
+        beautifully with our{' '}
+        <Link href="/post/luxury-master-suite" prefetch={true}>
+          luxury master suite
+        </Link>{' '}
+        designs. The neutral color palette of soft grays and warm whites creates
+        serenity, while brass fixtures add warmth and sophistication. Thoughtful
+        storage solutions keep counters clutter-free, and dimmable lighting
+        allows for customizable ambiance from energizing morning light to
+        relaxing evening glow. For similar wellness-focused design, see our{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          wellness spa design
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/spa-bathroom-retreat"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

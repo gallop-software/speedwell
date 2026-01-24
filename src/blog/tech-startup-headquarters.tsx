@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -23,18 +23,19 @@ function Details() {
         features refined typography with custom letterforms, while the color
         palette draws from the hotel's architectural details. Brand collateral
         includes guest room directories, restaurant menus, key cards, and
-        signage that create a cohesive luxury experience. Digital applications
-        maintain the elegant aesthetic across the website and social media,
-        positioning the hotel as a destination for discerning travelers seeking
-        authentic local experiences.
+        signage that create a cohesive luxury experience.         Digital applications maintain the elegant aesthetic across the website
+        and social media, positioning the hotel as a destination for discerning
+        travelers seeking authentic local experiences. For similar workspace
+        branding projects, explore our{' '}
+        <Link href="/post/creative-agency-workspace" prefetch={true}>
+          creative agency workspace
+        </Link>{' '}
+        and{' '}
+        <Link href="/post/executive-workspace" prefetch={true}>
+          executive workspace
+        </Link>{' '}
+        designs.
       </P>
-
-      <Button
-        href="/post/tech-startup-headquarters"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

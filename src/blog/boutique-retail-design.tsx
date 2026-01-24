@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -20,19 +20,21 @@ function Details() {
         We crafted a complete brand identity for this specialty coffee roaster
         that honors their commitment to sustainability and craft. The visual
         system features earthy tones, hand-drawn illustrations, and custom
-        typography that evokes warmth and authenticity. The packaging design
-        showcases each coffee's origin story through unique color coding and
-        illustrated maps. From business cards to bags, every touchpoint
-        reinforces the brand's artisanal approach and environmental values,
-        helping them stand out in the competitive specialty coffee market.
+        typography that evokes warmth and authenticity. For related retail
+        branding, explore our{' '}
+        <Link href="/post/fashion-boutique-rebrand" prefetch={true}>
+          Fashion Boutique Rebrand
+        </Link>
+        . The packaging design showcases each coffee's origin story through
+        unique color coding and illustrated maps. From business cards to bags,
+        every touchpoint reinforces the brand's artisanal approach and
+        environmental values, helping them stand out in the competitive
+        specialty coffee market. See also our{' '}
+        <Link href="/post/urban-coffee-house" prefetch={true}>
+          Urban Coffee House
+        </Link>{' '}
+        interior design project.
       </P>
-
-      <Button
-        href="/post/boutique-retail-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

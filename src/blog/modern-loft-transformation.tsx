@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -22,18 +22,23 @@ function Details() {
         foot raw space into a sophisticated urban oasis featuring exposed brick,
         custom steel framing, and carefully curated furnishings. The open floor
         plan maximizes natural light while defining distinct living zones
-        through strategic furniture placement and area rugs. A neutral color
-        palette with warm wood accents creates an inviting atmosphere, while
-        statement lighting fixtures add dramatic focal points throughout the
-        space.
+        through strategic furniture placement and area rugs.
       </P>
 
-      <Button
-        href="/post/modern-loft-transformation"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
+      <P>
+        A neutral color palette with warm wood accents creates an inviting
+        atmosphere, while statement lighting fixtures add dramatic focal points
+        throughout the space. For a similar approach in a penthouse setting, see
+        our{' '}
+        <Link href="/post/urban-penthouse-makeover" prefetch={true}>
+          Urban Penthouse Makeover
+        </Link>
+        . If you're interested in industrial office spaces, check out our{' '}
+        <Link href="/post/industrial-office-conversion" prefetch={true}>
+          Industrial Office Conversion
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

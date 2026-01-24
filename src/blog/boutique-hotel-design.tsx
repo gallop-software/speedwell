@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Image } from '@/components/image'
 import { PageHeader } from '@/components/page-header'
 import { P } from '@/components/paragraph'
@@ -29,19 +29,21 @@ function Details() {
       <P>
         Public areas include a cozy lobby lounge with a curated library, an
         intimate cocktail bar with custom millwork, and a breakfast room that
-        opens to a private courtyard garden. We selected durable, high-quality
-        materials that will age gracefully while maintaining a residential feel.
-        Attention to acoustics, lighting controls, and thoughtful amenities
-        ensure guest comfort. The design celebrates the property's heritage
-        while establishing a contemporary boutique hotel identity.
+        opens to a private courtyard garden. For similar hospitality work, see
+        our{' '}
+        <Link href="/post/restaurant-interior-design" prefetch={true}>
+          Restaurant Interior Design
+        </Link>{' '}
+        project. We selected durable, high-quality materials that will age
+        gracefully while maintaining a residential feel. Attention to acoustics,
+        lighting controls, and thoughtful amenities ensure guest comfort. The
+        design celebrates the property's heritage while establishing a
+        contemporary boutique hotel identity. Our{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          Wellness Spa Design
+        </Link>{' '}
+        demonstrates similar attention to guest experience.
       </P>
-
-      <Button
-        href="/post/boutique-hotel-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

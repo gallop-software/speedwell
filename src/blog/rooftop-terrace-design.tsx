@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -34,18 +34,19 @@ function Details() {
         Container gardens with native plants add greenery and privacy screening
         without requiring extensive infrastructure. String lights and lanterns
         create magical evening ambiance, while a portable fire feature extends
-        the usable season. Weatherproof storage benches conceal cushions and
-        accessories when not in use. The design maximizes every square foot of
-        this premium outdoor space while addressing wind, sun exposure, and
-        building regulations.
+        the usable season. This project shares design sensibilities with our{' '}
+        <Link href="/post/urban-penthouse-makeover" prefetch={true}>
+          urban penthouse makeover
+        </Link>
+        . Weatherproof storage benches conceal cushions and accessories when not
+        in use. The design maximizes every square foot of this premium outdoor
+        space while addressing wind, sun exposure, and building regulations,
+        complementing the indoor living concepts explored in our{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          modern loft transformation
+        </Link>
+        .
       </P>
-
-      <Button
-        href="/post/rooftop-terrace-design"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }

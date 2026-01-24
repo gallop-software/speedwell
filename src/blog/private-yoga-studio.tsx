@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import Link from 'next/link'
 import { Gallery } from '@/components/gallery'
 import { GalleryItem } from '@/components/gallery-item'
 import { PageHeader } from '@/components/page-header'
@@ -35,17 +35,19 @@ function Details() {
         cushions, and sound healing instruments. A compact sound system plays
         guided meditations and ambient music. The minimalist design in natural
         materials and a palette of soft greens and warm woods promotes
-        tranquility. Blackout shades provide darkness for restorative practices,
+        tranquility, similar to our{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          wellness spa design
+        </Link>{' '}
+        approach. Blackout shades provide darkness for restorative practices,
         while sheer curtains filter natural light beautifully during morning sun
-        salutations.
+        salutations. For clients seeking a more active home wellness space, see
+        our{' '}
+        <Link href="/post/luxury-fitness-studio" prefetch={true}>
+          luxury fitness studio
+        </Link>{' '}
+        project.
       </P>
-
-      <Button
-        href="/post/private-yoga-studio"
-        wrap={true}
-      >
-        View Full Project
-      </Button>
     </>
   )
 }
