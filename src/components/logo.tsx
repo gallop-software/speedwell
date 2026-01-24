@@ -1,4 +1,4 @@
-import { Image } from '@/components'
+import { Image } from '@/components/image'
 
 interface LogoProps {
   className?: string

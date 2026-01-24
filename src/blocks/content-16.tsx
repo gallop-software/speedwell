@@ -1,12 +1,9 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Quote,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Quote } from '@/components/quote'
 
 export default function Content16() {
   return (

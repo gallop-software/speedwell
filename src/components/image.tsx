@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import Link from 'next/link'
-import { Paragraph } from './paragraph'
+import { Paragraph } from '@/components/paragraph'
 import type { ComponentProps } from 'react'
 import imageMeta from '@/../_data/_meta.json'
 

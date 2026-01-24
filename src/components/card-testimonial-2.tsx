@@ -1,6 +1,6 @@
 import React from 'react'
 import { clsx } from 'clsx'
-import { Image } from './image'
+import { Image } from '@/components/image'
 
 interface CardTestimonial2Props {
   /** Image source URL for the testimonial author */

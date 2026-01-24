@@ -1,4 +1,8 @@
-import { Button, Image, PageHeader, P, Heading } from '@/components'
+import { Button } from '@/components/button'
+import { Image } from '@/components/image'
+import { PageHeader } from '@/components/page-header'
+import { P } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
 
 const TITLE = 'Bohemian Bedroom Design'
 

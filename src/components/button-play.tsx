@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from './button'
+import { Button } from '@/components/button'
 import { state } from '@/state'
 import { clsx } from 'clsx'
 

@@ -1,13 +1,10 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Image,
-  Heading,
-  Paragraph,
-  Buttons,
-  Button,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Buttons } from '@/components/buttons'
+import { Button } from '@/components/button'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 export default function Content5() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { clsx } from 'clsx'
-import { Image } from './image'
-import { Icon } from './icon'
+import { Image } from '@/components/image'
+import { Icon } from '@/components/icon'
 
 interface ContactLink {
   /** Iconify icon object */

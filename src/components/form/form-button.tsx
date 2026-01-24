@@ -1,7 +1,7 @@
 import arrowPathIcon from '@iconify/icons-heroicons/arrow-path'
 import clsx from 'clsx'
-import { Button } from '../button'
-import { Icon } from '../icon'
+import { Button } from '@/components/button'
+import { Icon } from '@/components/icon'
 
 // ============================================================================
 // FormButton Component

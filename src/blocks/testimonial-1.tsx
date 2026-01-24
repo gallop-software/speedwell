@@ -1,10 +1,8 @@
-import {
-  Section,
-  FancyHeading,
-  Swiper,
-  CardTestimonial1,
-  Quote,
-} from '@/components'
+import { Section } from '@/components/section'
+import { FancyHeading } from '@/components/fancy-heading'
+import { Swiper } from '@/components/swiper'
+import { CardTestimonial1 } from '@/components/card-testimonial-1'
+import { Quote } from '@/components/quote'
 
 export default function Testimonial1() {
   return (

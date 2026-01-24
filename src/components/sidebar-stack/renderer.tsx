@@ -1,12 +1,6 @@
 'use client'
 
-import {
-  useRef,
-  useEffect,
-  useState,
-  useCallback,
-  type ReactNode,
-} from 'react'
+import { useRef, useEffect, useState, useCallback, type ReactNode } from 'react'
 import clsx from 'clsx'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark'
 import { Icon } from '@/components/icon'

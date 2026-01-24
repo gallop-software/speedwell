@@ -4,9 +4,7 @@ interface BackgroundWallpaper1Props {
   className?: string
 }
 
-export default function BackgroundWallpaper1({
-  className,
-}: BackgroundWallpaper1Props) {
+export function BackgroundWallpaper1({ className }: BackgroundWallpaper1Props) {
   return (
     <svg
       className={clsx(

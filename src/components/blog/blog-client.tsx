@@ -1,17 +1,11 @@
 'use client'
 
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  type ReactNode,
-} from 'react'
-import { Button } from '../button'
-import { Heading } from '../heading'
-import { Image } from '../image'
-import DynamicSidebar from '../dynamic-sidebar'
-import { GalleryPopup } from '../lightbox/gallery-popup'
+import { useState, useEffect, useRef, useCallback, type ReactNode } from 'react'
+import { Button } from '@/components/button'
+import { Heading } from '@/components/heading'
+import { Image } from '@/components/image'
+import DynamicSidebar from '@/components/dynamic-sidebar'
+import { GalleryPopup } from '@/components/lightbox/gallery-popup'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { getSlug } from '@/tools/get-slug'

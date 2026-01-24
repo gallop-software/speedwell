@@ -3,10 +3,10 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
-import { Masonry } from './masonry'
-import { Image } from './image'
-import { Span } from './span'
-import { GalleryPopupDynamic } from './lightbox/gallery-popup'
+import { Masonry } from '@/components/masonry'
+import { Image } from '@/components/image'
+import { Span } from '@/components/span'
+import { GalleryPopupDynamic } from '@/components/lightbox/gallery-popup'
 
 interface MasonryFilterItem {
   id: number

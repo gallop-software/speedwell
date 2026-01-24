@@ -2,7 +2,10 @@
 
 import clsx from 'clsx'
 import { useInView } from 'react-intersection-observer'
-import { Heading, Label, Icon, CountUp } from '@/components'
+import { Heading } from '@/components/heading'
+import { Label } from '@/components/label'
+import { Icon } from '@/components/icon'
+import { CountUp } from '@/components/count-up'
 
 interface OrbitStatsProps {
   /** The stat number to display */

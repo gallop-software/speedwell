@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Accent } from '@/components'
+import { Accent } from '@/components/accent'
 
 export interface BackgroundGeometry2Props {
   children?: ReactNode

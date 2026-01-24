@@ -1,4 +1,7 @@
-import { Section, Heading, Paragraph, Accordion } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Accordion } from '@/components/accordion'
 
 export default function Content45() {
   return (

@@ -9,8 +9,8 @@ import { useState, type ReactElement } from 'react'
 import chevronDownIcon from '@iconify/icons-heroicons/chevron-down-20-solid'
 import searchIcon from '@iconify/icons-lucide/search'
 import clsx from 'clsx'
-import { Icon } from '../icon'
-import { Search } from '../search'
+import { Icon } from '@/components/icon'
+import { Search } from '@/components/search'
 import { links, socialLinks } from './config'
 import type { NavLink, DropdownItem, SocialLink } from './types'
 
@@ -29,111 +29,107 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
       static={false}
     >
       <div className="flex flex-col gap-3 py-8">
-        {links.map(
-          (
-            { href, label, dropdown, callToAction }: NavLink
-          ) => (
-            <div key={href}>
-              {dropdown ? (
-                <Disclosure>
-                  {({ open }) => (
-                    <motion.div
-                      initial={{ opacity: 0, rotateX: -90 }}
-                      animate={{ opacity: 1, rotateX: 0 }}
-                      transition={{
-                        duration: 0.1,
-                        ease: 'easeInOut',
-                      }}
-                    >
-                      <DisclosureButton
-                        className={clsx(
-                          callToAction
-                            ? clsx(
-                                'inline-flex items-center justify-center w-full',
-                                'rounded-full border border-transparent shadow-md',
-                                'pl-6 pr-4 py-2 text-base font-medium',
-                                'bg-gray-950 text-white hover:bg-gray-800',
-                                'transition-colors duration-200 cursor-pointer',
-                                'focus:outline-none'
-                              )
-                            : 'flex w-full items-center justify-between text-lg font-body font-medium text-contrast focus:outline-none py-2 cursor-pointer pr-2'
-                        )}
-                      >
-                        {label}
-                        <Icon
-                          icon={chevronDownIcon}
-                          className={`h-6 w-6 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-                          aria-hidden="true"
-                        />
-                      </DisclosureButton>
-                      <DisclosurePanel className="mt-2">
-                        <div className="flex flex-col gap-2">
-                          {dropdown.items.map((item: DropdownItem) => (
-                            <div
-                              key={item.name}
-                              className="group relative flex gap-x-4 py-3 cursor-pointer"
-                            >
-                              <div className="mt-1 flex size-10 flex-none items-center justify-center rounded-full bg-body-light">
-                                <Icon
-                                  icon={item.icon}
-                                  aria-hidden={true}
-                                  className="size-5 text-accent"
-                                />
-                              </div>
-                              <div className="flex-1">
-                                <Link
-                                  prefetch={true}
-                                  scroll={true}
-                                  href={item.href}
-                                  onClick={close}
-                                  className="font-body font-medium text-contrast text-base"
-                                >
-                                  {item.name}
-                                  <span className="absolute inset-0" />
-                                </Link>
-                                <p className="mt-1 text-sm text-contrast-light">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </DisclosurePanel>
-                    </motion.div>
-                  )}
-                </Disclosure>
-              ) : (
-                <motion.div
-                  initial={{ opacity: 0, rotateX: -90 }}
-                  animate={{ opacity: 1, rotateX: 0 }}
-                  transition={{
-                    duration: 0.1,
-                    ease: 'easeInOut',
-                  }}
-                >
-                  <Link
-                    href={href}
-                    onClick={close}
-                    className={clsx(
-                      callToAction
-                        ? clsx(
-                            'inline-flex items-center justify-center',
-                            'rounded-full border border-transparent shadow-md',
-                            'px-6 py-2 text-base font-medium',
-                            'bg-gray-950 text-white hover:bg-gray-800',
-                            'transition-colors duration-200',
-                            'focus:outline-none'
-                          )
-                        : 'text-lg block font-body font-medium text-contrast py-2 px-0'
-                    )}
+        {links.map(({ href, label, dropdown, callToAction }: NavLink) => (
+          <div key={href}>
+            {dropdown ? (
+              <Disclosure>
+                {({ open }) => (
+                  <motion.div
+                    initial={{ opacity: 0, rotateX: -90 }}
+                    animate={{ opacity: 1, rotateX: 0 }}
+                    transition={{
+                      duration: 0.1,
+                      ease: 'easeInOut',
+                    }}
                   >
-                    {label}
-                  </Link>
-                </motion.div>
-              )}
-            </div>
-          )
-        )}
+                    <DisclosureButton
+                      className={clsx(
+                        callToAction
+                          ? clsx(
+                              'inline-flex items-center justify-center w-full',
+                              'rounded-full border border-transparent shadow-md',
+                              'pl-6 pr-4 py-2 text-base font-medium',
+                              'bg-gray-950 text-white hover:bg-gray-800',
+                              'transition-colors duration-200 cursor-pointer',
+                              'focus:outline-none'
+                            )
+                          : 'flex w-full items-center justify-between text-lg font-body font-medium text-contrast focus:outline-none py-2 cursor-pointer pr-2'
+                      )}
+                    >
+                      {label}
+                      <Icon
+                        icon={chevronDownIcon}
+                        className={`h-6 w-6 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                        aria-hidden="true"
+                      />
+                    </DisclosureButton>
+                    <DisclosurePanel className="mt-2">
+                      <div className="flex flex-col gap-2">
+                        {dropdown.items.map((item: DropdownItem) => (
+                          <div
+                            key={item.name}
+                            className="group relative flex gap-x-4 py-3 cursor-pointer"
+                          >
+                            <div className="mt-1 flex size-10 flex-none items-center justify-center rounded-full bg-body-light">
+                              <Icon
+                                icon={item.icon}
+                                aria-hidden={true}
+                                className="size-5 text-accent"
+                              />
+                            </div>
+                            <div className="flex-1">
+                              <Link
+                                prefetch={true}
+                                scroll={true}
+                                href={item.href}
+                                onClick={close}
+                                className="font-body font-medium text-contrast text-base"
+                              >
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </Link>
+                              <p className="mt-1 text-sm text-contrast-light">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </DisclosurePanel>
+                  </motion.div>
+                )}
+              </Disclosure>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, rotateX: -90 }}
+                animate={{ opacity: 1, rotateX: 0 }}
+                transition={{
+                  duration: 0.1,
+                  ease: 'easeInOut',
+                }}
+              >
+                <Link
+                  href={href}
+                  onClick={close}
+                  className={clsx(
+                    callToAction
+                      ? clsx(
+                          'inline-flex items-center justify-center',
+                          'rounded-full border border-transparent shadow-md',
+                          'px-6 py-2 text-base font-medium',
+                          'bg-gray-950 text-white hover:bg-gray-800',
+                          'transition-colors duration-200',
+                          'focus:outline-none'
+                        )
+                      : 'text-lg block font-body font-medium text-contrast py-2 px-0'
+                  )}
+                >
+                  {label}
+                </Link>
+              </motion.div>
+            )}
+          </div>
+        ))}
         {/* Mobile Search Button */}
         <button
           type="button"

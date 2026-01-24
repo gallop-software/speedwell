@@ -1,6 +1,6 @@
 import React from 'react'
-import { Quote } from './quote'
-import { Image } from './image'
+import { Quote } from '@/components/quote'
+import { Image } from '@/components/image'
 
 interface CardTestimonial1Props {
   /** Image source URL for the testimonial author */

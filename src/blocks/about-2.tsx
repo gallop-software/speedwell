@@ -1,11 +1,9 @@
-import {
-  Section,
-  Grid,
-  Profile1,
-  Heading,
-  Paragraph,
-  IconText,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Grid } from '@/components/grid'
+import { Profile1 } from '@/components/profile-1'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { IconText } from '@/components/icon-text'
 import mapPinIcon from '@iconify/icons-heroicons/map-pin'
 import academicCapIcon from '@iconify/icons-heroicons/academic-cap'
 

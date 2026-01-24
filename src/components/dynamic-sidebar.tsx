@@ -8,9 +8,9 @@ import {
   DialogTitle,
 } from '@headlessui/react'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark'
-import { Icon } from './icon'
+import { Icon } from '@/components/icon'
 import type { ReactNode } from 'react'
-import { Image } from './image'
+import { Image } from '@/components/image'
 
 const images = [
   {

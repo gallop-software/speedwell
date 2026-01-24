@@ -1,8 +1,8 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import searchIcon from '@iconify/icons-lucide/search'
 import clsx from 'clsx'
-import { Icon } from '../icon'
-import { Search } from '../search'
+import { Icon } from '@/components/icon'
+import { Search } from '@/components/search'
 
 /**
  * Search button component with dropdown

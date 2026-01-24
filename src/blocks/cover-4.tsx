@@ -1,4 +1,6 @@
-import { Cover, Heading, Accent } from '@/components'
+import { Cover } from '@/components/cover'
+import { Heading } from '@/components/heading'
+import { Accent } from '@/components/accent'
 
 export default function Cover4() {
   return (

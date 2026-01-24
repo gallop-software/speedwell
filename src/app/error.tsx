@@ -1,6 +1,10 @@
 'use client'
 
-import { Section, Heading, Button, Navbar, Footer } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Button } from '@/components/button'
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 
 export default function NotFound() {
   return (

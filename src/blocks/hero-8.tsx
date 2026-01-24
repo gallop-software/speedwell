@@ -1,13 +1,10 @@
-import {
-  Columns,
-  Column,
-  Image,
-  Accent,
-  Heading,
-  Paragraph,
-  Buttons,
-  Button,
-} from '@/components'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import { Accent } from '@/components/accent'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Buttons } from '@/components/buttons'
+import { Button } from '@/components/button'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 
 export default function Hero8() {

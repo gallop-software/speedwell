@@ -23,7 +23,7 @@ function getDayId(dayName: string): number | undefined {
   return days[normalized as keyof typeof days]
 }
 
-export default function CurrentTime({
+export function CurrentTime({
   dayOfWeek,
   timeRange,
   openColor = 'text-accent',

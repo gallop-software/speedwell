@@ -1,10 +1,8 @@
-import {
-  Section,
-  Masonry,
-  CardTestimonial2,
-  Heading,
-  Paragraph,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Masonry } from '@/components/masonry'
+import { CardTestimonial2 } from '@/components/card-testimonial-2'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
 
 export default function About1() {
   return (

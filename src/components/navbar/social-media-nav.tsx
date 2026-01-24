@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import clsx from 'clsx'
-import { Icon } from '../icon'
+import { Icon } from '@/components/icon'
 import { socialLinks } from './config'
 import type { SocialLink } from './types'
 

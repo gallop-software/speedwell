@@ -6,7 +6,7 @@ import {
 import searchIcon from '@iconify/icons-lucide/search'
 import clsx from 'clsx'
 
-import { Icon } from '../icon'
+import { Icon } from '@/components/icon'
 import { LoadingIcon } from './loading-icon'
 import { type Result } from './search-client'
 

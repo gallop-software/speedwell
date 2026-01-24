@@ -1,4 +1,6 @@
-import { Section, Heading, Paragraph } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
 
 export default function Content44() {
   return (

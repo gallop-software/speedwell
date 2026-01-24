@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Button } from './button'
+import { Button } from '@/components/button'
 
 export function ContactForm() {
   const [status, setStatus] = useState('')

@@ -1,15 +1,9 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Heading,
-  Form,
-  FormInput,
-  FormTextArea,
-  FormButton,
-  Image,
-  Accent,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Heading } from '@/components/heading'
+import { Form, FormInput, FormTextArea, FormButton } from '@/components/form'
+import { Image } from '@/components/image'
+import { Accent } from '@/components/accent'
 
 export default function Form1() {
   return (

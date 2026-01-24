@@ -1,7 +1,7 @@
 import { useId, Children } from 'react'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import clsx from 'clsx'
-import { Icon } from './icon'
+import { Icon } from '@/components/icon'
 import arrowLongRightIcon from '@iconify/icons-heroicons/arrow-long-right-20-solid'
 import arrowLongLeftIcon from '@iconify/icons-heroicons/arrow-long-left-20-solid'
 

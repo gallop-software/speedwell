@@ -1,17 +1,14 @@
-import {
-  Paragraph,
-  Heading,
-  Button,
-  ButtonPlay,
-  Buttons,
-  Accent,
-  Gradient,
-  Section,
-  Columns,
-  Column,
-  VimeoAutoPlayer,
-  Video,
-} from '@/components'
+import { Paragraph } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
+import { Button } from '@/components/button'
+import { ButtonPlay } from '@/components/button-play'
+import { Buttons } from '@/components/buttons'
+import { Accent } from '@/components/accent'
+import { Gradient } from '@/components/gradient'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { VimeoAutoPlayer } from '@/components/vimeo-auto-player'
+import { Video } from '@/components/video'
 import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 import playCircleIcon from '@iconify/icons-lucide/play-circle'
 

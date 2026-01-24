@@ -1,4 +1,7 @@
-import { Section, Heading, Paragraph, BackgroundGeometry2 } from '@/components'
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { BackgroundGeometry2 } from '@/components/background-geometry-2'
 
 export default function Content22() {
   return (

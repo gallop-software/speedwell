@@ -1,4 +1,6 @@
-import { Section, Grid, Card1 } from '@/components'
+import { Section } from '@/components/section'
+import { Grid } from '@/components/grid'
+import { Card1 } from '@/components/card-1'
 
 export default function Section2() {
   return (

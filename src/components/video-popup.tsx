@@ -5,8 +5,8 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import Script from 'next/script'
 import clsx from 'clsx'
 import xMarkIcon from '@iconify/icons-heroicons/x-mark-20-solid'
-import { Icon } from './icon'
-import { VimeoPlayer } from './vimeo-player'
+import { Icon } from '@/components/icon'
+import { VimeoPlayer } from '@/components/vimeo-player'
 
 function getVideoId(url?: string): string | undefined {
   if (!url) return undefined
@@ -81,9 +81,7 @@ export function VideoPopup({
             onClick={() => setIsOpen(false)}
             className="bg-body/50 backdrop-blur-md transition-opacity opacity-100 fixed inset-0 shadow-lg w-full max-w-full z-10 flex items-center justify-center px-4 sm:px-14"
           >
-            {embed && (
-              <VimeoPlayer embed={embed} />
-            )}
+            {embed && <VimeoPlayer embed={embed} />}
           </div>
           <button
             type="button"

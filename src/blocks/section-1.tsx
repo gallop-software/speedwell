@@ -1,11 +1,9 @@
 import Link from 'next/link'
-import {
-  Heading,
-  Paragraph,
-  Icon,
-  CurrentDate,
-  CurrentTime,
-} from '@/components'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Icon } from '@/components/icon'
+import { CurrentDate } from '@/components/current-date'
+import { CurrentTime } from '@/components/current-time'
 import phoneIcon from '@iconify/icons-heroicons/phone-20-solid'
 import envelopeIcon from '@iconify/icons-heroicons/envelope-20-solid'
 import buildingOfficeIcon from '@iconify/icons-heroicons/building-office-20-solid'
@@ -86,12 +84,13 @@ export default function Section1() {
             <Link
               key={index}
               href={item.href}
-              className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${index === 0
-                ? 'bg-body/3'
-                : index === 1
-                  ? 'bg-body/6'
-                  : 'bg-body/9'
-                }`}
+              className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${
+                index === 0
+                  ? 'bg-body/3'
+                  : index === 1
+                    ? 'bg-body/6'
+                    : 'bg-body/9'
+              }`}
             >
               <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white">
                 <Icon

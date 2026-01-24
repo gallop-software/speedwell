@@ -1,4 +1,5 @@
-import { Footer, Navbar } from '@/components'
+import { Footer } from '@/components/footer'
+import { Navbar } from '@/components/navbar'
 import { GradientBackground } from '@/components/gradient'
 
 export default function PostLayout({

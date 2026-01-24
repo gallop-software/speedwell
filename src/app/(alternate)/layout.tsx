@@ -1,4 +1,5 @@
-import { Footer2, Navbar3 } from '@/components'
+import { Footer2 } from '@/components/footer-2'
+import { Navbar3 } from '@/components/navbar-3'
 
 export default function AlternateLayout({
   children,

@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Icon } from './icon'
+import { Icon } from '@/components/icon'
 
 export interface ListProps extends React.ComponentPropsWithoutRef<'ul'> {
   /** Variant of the list - controls default styling */

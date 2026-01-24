@@ -1,5 +1,7 @@
 import { BlogClient } from '@/components/blog/blog-client'
-import { FancyHeading, PageWrapper, Section } from '@/components'
+import { FancyHeading } from '@/components/fancy-heading'
+import { PageWrapper } from '@/components/page-wrapper'
+import { Section } from '@/components/section'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { getSlug } from '@/tools/get-slug'
 import { getTitle } from '@/tools/get-title'

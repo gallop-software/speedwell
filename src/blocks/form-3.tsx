@@ -1,7 +1,7 @@
+import { Section } from '@/components/section'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
 import {
-  Section,
-  Heading,
-  Paragraph,
   Form,
   FormInput,
   FormTextArea,
@@ -10,7 +10,7 @@ import {
   FormCheckboxGroup,
   FormButton,
   FormName,
-} from '@/components'
+} from '@/components/form'
 
 export default function Form3() {
   return (

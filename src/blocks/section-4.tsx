@@ -1,11 +1,8 @@
-import {
-  Section,
-  Columns,
-  Column,
-  Heading,
-  Paragraph,
-  Card3,
-} from '@/components'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Card3 } from '@/components/card-3'
 
 export default function Section4() {
   return (

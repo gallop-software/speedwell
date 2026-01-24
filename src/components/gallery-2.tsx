@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import type { ReactNode } from 'react'
-import { Container } from './container'
+import { Container } from '@/components/container'
 
 export interface Gallery2Props {
   /** Gallery content - typically Item components */
