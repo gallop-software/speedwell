@@ -37,6 +37,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Brand identity in the wellness sector must communicate authenticity and
+        intention at every touchpoint. The visual language we develop draws from
+        the same design philosophies that inform serene physical spaces:
+        balanced compositions, natural color palettes, and thoughtful negative
+        space. For an inspiring example of how these principles manifest in
+        interior design, see our{' '}
+        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+          Japanese zen retreat
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

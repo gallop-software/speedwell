@@ -36,6 +36,18 @@ function Details() {
         </Link>{' '}
         designs.
       </P>
+
+      <P>
+        The hospitality sector increasingly demands cohesive brand experiences
+        that extend from digital platforms to physical spaces. Our expertise in
+        creating unified visual languages helps hotels differentiate themselves
+        in competitive markets. For insights into how we apply similar branding
+        principles to collaborative workspaces, explore our{' '}
+        <Link href="/post/creative-coworking-space" prefetch={true}>
+          creative coworking space
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

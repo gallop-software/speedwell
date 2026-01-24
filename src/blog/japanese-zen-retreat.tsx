@@ -48,6 +48,18 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        The principles of Japanese design extend naturally into wellness
+        spaces, where tranquility and mindfulness are paramount. For clients
+        seeking to create dedicated areas for relaxation and self-care, our{' '}
+        <Link href="/post/wellness-spa-design" prefetch={true}>
+          wellness spa design
+        </Link>{' '}
+        project applies similar philosophies of natural materials, soft
+        lighting, and intentional simplicity to craft spaces that nurture both
+        body and spirit.
+      </P>
     </>
   )
 }

@@ -40,6 +40,18 @@ function Details() {
           Japanese zen retreat
         </Link>.
       </P>
+
+      <P>
+        The minimalist approach we applied here extends naturally into other
+        living spaces, creating a cohesive aesthetic throughout the home. Clean
+        lines, thoughtful storage solutions, and a restrained material palette
+        work together to promote calm and clarity. See how we applied similar
+        principles in our{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian Apartment
+        </Link>{' '}
+        project, where functional beauty defines every room.
+      </P>
     </>
   )
 }

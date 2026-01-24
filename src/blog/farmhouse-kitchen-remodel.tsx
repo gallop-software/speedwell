@@ -48,6 +48,18 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Whether you're dreaming of a classic farmhouse aesthetic or something
+        more contemporary, a well-designed kitchen becomes the heart of your
+        home. We specialize in creating spaces that balance beauty with
+        durability, using materials that stand up to daily use while aging
+        gracefully. Explore our full range of{' '}
+        <Link href="/kitchen-bath" prefetch={true}>
+          kitchen and bath services
+        </Link>{' '}
+        to see how we can transform your space.
+      </P>
     </>
   )
 }

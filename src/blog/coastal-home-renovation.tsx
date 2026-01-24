@@ -41,6 +41,19 @@ function Details() {
         </Link>{' '}
         with the same light and airy philosophy.
       </P>
+
+      <P>
+        Coastal design principles translate beautifully to modern urban spaces
+        that crave the same sense of openness and natural light. The emphasis on
+        clean lines, neutral palettes, and uncluttered spaces creates
+        environments that feel both serene and contemporary. To see how we
+        achieve similar airiness in city settings, explore our{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          Modern Loft Transformation
+        </Link>{' '}
+        project, where industrial architecture meets light-filled living through
+        thoughtful design.
+      </P>
     </>
   )
 }

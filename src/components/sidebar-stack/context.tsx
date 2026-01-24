@@ -13,6 +13,8 @@ export interface SidebarItem {
   id: string
   title: string
   componentId: string
+  /** Whether to show title immediately or fade in on scroll. Default is false (hidden initially) */
+  showTitleImmediately?: boolean
 }
 
 /** Function that loads content for a given componentId */

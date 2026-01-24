@@ -55,6 +55,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Gallery walls work beautifully in a variety of interior styles, from
+        maximalist rooms bursting with color to understated spaces where art
+        becomes the primary visual interest. For clients who prefer a more
+        restrained aesthetic, we often suggest larger, fewer pieces with ample
+        white space between them—an approach that pairs perfectly with the clean
+        lines showcased in our{' '}
+        <Link href="/post/scandinavian-apartment" prefetch={true}>
+          Scandinavian apartment
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

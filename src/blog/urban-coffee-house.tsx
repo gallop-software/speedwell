@@ -35,6 +35,20 @@ function Details() {
         </Link>{' '}
         approach.
       </P>
+
+      <P>
+        The farm-to-table philosophy that guides this restaurant's identity also
+        inspires residential kitchens designed for home cooks who value fresh,
+        local ingredients. The same warmth, natural materials, and connection to
+        the land that define this brand translate beautifully to domestic
+        spaces. For homeowners looking to bring this aesthetic into their own
+        kitchens, our{' '}
+        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+          Farmhouse Kitchen Remodel
+        </Link>{' '}
+        showcases how rustic charm and modern functionality create inviting
+        spaces for preparing and sharing meals.
+      </P>
     </>
   )
 }

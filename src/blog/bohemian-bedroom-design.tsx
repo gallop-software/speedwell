@@ -43,6 +43,19 @@ function Details() {
         personal expression and cultural appreciation through thoughtfully
         curated objects that tell a story.
       </P>
+
+      <P>
+        While bohemian style embraces eclecticism, the most successful bedrooms
+        balance visual richness with restful comfort. Layering textures and
+        patterns requires a discerning eye to avoid overwhelming the senses. For
+        a different approach to creating a serene sleeping sanctuary, explore
+        our{' '}
+        <Link href="/post/luxury-master-suite" prefetch={true}>
+          Luxury Master Suite
+        </Link>{' '}
+        project, which achieves tranquility through refined simplicity and
+        premium materials.
+      </P>
     </>
   )
 }

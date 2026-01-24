@@ -43,6 +43,19 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        Creating a spa-like bathroom retreat requires thoughtful consideration
+        of all the senses: the warmth of heated surfaces underfoot, the gentle
+        sound of water, and the visual calm of uncluttered surfaces. This
+        philosophy of mindful, sensory design connects deeply with Eastern
+        aesthetics. Discover how we embraced similar principles of tranquility
+        and intentional simplicity in our{' '}
+        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+          Japanese zen retreat
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

@@ -43,6 +43,17 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Historic properties require designers who understand both the technical
+        demands of preservation and the vision to create spaces that feel
+        relevant today. This brownstone's primary suite exemplifies how period
+        details can coexist with modern luxury—an approach we also bring to our{' '}
+        <Link href="/post/luxury-master-suite" prefetch={true}>
+          luxury master suite
+        </Link>{' '}
+        projects where comfort and elegance are paramount.
+      </P>
     </>
   )
 }

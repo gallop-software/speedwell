@@ -47,6 +47,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        Rooftop terraces offer a unique opportunity to blur the boundaries
+        between indoor and outdoor living, creating seamless transitions that
+        extend the home's footprint into the sky. The principles of durable
+        materials, weather-conscious planning, and multi-functional spaces apply
+        equally to ground-level outdoor projects. For a different take on
+        creating inviting outdoor environments,{' '}
+        <Link href="/contact" prefetch={true}>
+          contact us
+        </Link>{' '}
+        to discuss your project vision.
+      </P>
     </>
   )
 }

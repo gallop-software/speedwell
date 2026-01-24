@@ -45,6 +45,18 @@ function Details() {
         </Link>{' '}
         where we created another beautiful, hardworking utility space.
       </P>
+
+      <P>
+        Smart organization extends throughout the home, and the mudroom often
+        sets the tone for what lies beyond. When paired with a well-designed
+        kitchen, these functional spaces create a seamless flow for busy
+        families. See how we balanced practicality with character in our{' '}
+        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+          farmhouse kitchen remodel
+        </Link>
+        , which shares the same commitment to durable materials and thoughtful
+        storage solutions that make daily routines easier.
+      </P>
     </>
   )
 }

@@ -43,6 +43,19 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        The restaurant industry continues to evolve, with diners seeking
+        experiences that engage all senses beyond just the culinary. Thoughtful
+        interior design creates the stage for memorable moments, from first
+        impressions at the entrance to the comfort of a well-designed seat. We
+        bring this same attention to atmosphere and functionality to all
+        commercial spaces, including our{' '}
+        <Link href="/post/creative-coworking-space" prefetch={true}>
+          creative coworking space
+        </Link>{' '}
+        where design supports both productivity and community.
+      </P>
     </>
   )
 }

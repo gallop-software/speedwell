@@ -36,6 +36,18 @@ function Details() {
         </Link>{' '}
         branding.
       </P>
+
+      <P>
+        Rebranding an established product line requires balancing respect for
+        existing customer loyalty with the need to attract new audiences. We
+        worked closely with the skincare company's team to evolve—not
+        erase—their heritage while positioning them competitively in the clean
+        beauty space. Ready to refresh your brand?{' '}
+        <Link href="/contact" prefetch={true}>
+          Contact us
+        </Link>{' '}
+        to discuss your vision.
+      </P>
     </>
   )
 }

@@ -43,6 +43,19 @@ function Details() {
         </Link>{' '}
         projects.
       </P>
+
+      <P>
+        One of the hallmarks of midcentury modern design is its seamless
+        connection between indoor and outdoor spaces. In this project, we
+        restored the original sliding glass doors and created a cohesive
+        transition to the newly landscaped patio, extending the living area
+        beyond the home's footprint. This indoor-outdoor flow is something we
+        also explored in our{' '}
+        <Link href="/post/urban-penthouse-makeover" prefetch={true}>
+          urban penthouse makeover
+        </Link>
+        , where terrace integration was essential to the design.
+      </P>
     </>
   )
 }

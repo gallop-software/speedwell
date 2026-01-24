@@ -42,6 +42,19 @@ function Details() {
         </Link>{' '}
         project.
       </P>
+
+      <P>
+        Adaptive reuse projects like this warehouse conversion demonstrate how
+        existing structures can be reimagined for modern work styles while
+        retaining the character that makes each space unique. Companies seeking
+        to create inspiring environments for their teams can find additional
+        inspiration in our{' '}
+        <Link href="/post/tech-startup-headquarters" prefetch={true}>
+          tech startup headquarters
+        </Link>{' '}
+        project, where we designed a space that fosters innovation and
+        collaboration.
+      </P>
     </>
   )
 }

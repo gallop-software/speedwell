@@ -44,6 +44,18 @@ function Details() {
         </Link>{' '}
         demonstrates similar attention to guest experience.
       </P>
+
+      <P>
+        The guest suites draw inspiration from the finest residential design
+        principles, with each room offering a private sanctuary that feels like
+        a home away from home. Custom headboards, premium bedding, and
+        thoughtfully appointed bathrooms elevate the overnight experience. For
+        insights into crafting luxurious bedroom environments, explore our{' '}
+        <Link href="/post/luxury-master-suite" prefetch={true}>
+          Luxury Master Suite
+        </Link>{' '}
+        project, which showcases similar attention to comfort and refinement.
+      </P>
     </>
   )
 }

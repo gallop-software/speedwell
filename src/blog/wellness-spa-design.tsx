@@ -49,6 +49,18 @@ function Details() {
         </Link>{' '}
         for residential wellness inspiration.
       </P>
+
+      <P>
+        The design philosophy behind this spa draws heavily from Eastern
+        wellness traditions, emphasizing balance, natural elements, and mindful
+        space planning. Water features, carefully placed greenery, and
+        uncluttered circulation paths guide guests through a journey of
+        relaxation. For a residential interpretation of these principles, our{' '}
+        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+          Japanese Zen Retreat
+        </Link>{' '}
+        demonstrates how tranquility can be woven into everyday living spaces.
+      </P>
     </>
   )
 }

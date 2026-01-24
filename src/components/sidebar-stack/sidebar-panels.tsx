@@ -27,9 +27,11 @@ export function SidebarPanels({ panels }: SidebarPanelsProps) {
       e.stopPropagation()
       const componentId = link.getAttribute('data-sidebar-component')
       const title = link.getAttribute('data-sidebar-title') || ''
+      const showTitleImmediately =
+        link.getAttribute('data-sidebar-show-title') === 'true'
 
       if (componentId) {
-        push({ title, componentId })
+        push({ title, componentId, showTitleImmediately })
       }
     }
   }

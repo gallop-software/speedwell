@@ -52,6 +52,19 @@ function Details() {
         </Link>
         .
       </P>
+
+      <P>
+        The Scandinavian emphasis on light and openness translates remarkably
+        well to urban loft conversions, where industrial bones meet refined
+        Nordic sensibilities. Both styles celebrate honest materials and reject
+        unnecessary ornamentation. To see how we balanced raw architectural
+        elements with warm, livable design in a larger open-plan space, explore
+        our{' '}
+        <Link href="/post/modern-loft-transformation" prefetch={true}>
+          modern loft transformation
+        </Link>{' '}
+        project.
+      </P>
     </>
   )
 }

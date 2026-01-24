@@ -56,10 +56,31 @@ function SidebarPanel({
 }: SidebarPanelProps) {
   const panelRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [titleOpacity, setTitleOpacity] = useState(
+    item.showTitleImmediately ? 1 : 0
+  )
 
   useEffect(() => {
     requestAnimationFrame(() => setIsVisible(true))
   }, [])
+
+  // Track scroll position to fade in title (skip if showTitleImmediately)
+  useEffect(() => {
+    if (item.showTitleImmediately) return
+
+    const panel = panelRef.current
+    if (!panel) return
+
+    const handleScroll = () => {
+      const scrollTop = panel.scrollTop
+      // Hidden until 50px, then fade from 0 to 1 between 51-100px
+      const opacity = scrollTop <= 50 ? 0 : Math.min((scrollTop - 50) / 50, 1)
+      setTitleOpacity(opacity)
+    }
+
+    panel.addEventListener('scroll', handleScroll, { passive: true })
+    return () => panel.removeEventListener('scroll', handleScroll)
+  }, [item.showTitleImmediately])
 
   const clampedLevel = Math.min(level, 4)
 
@@ -88,7 +109,10 @@ function SidebarPanel({
         {/* Header */}
         <div className="sticky top-0 z-10 bg-body/95 backdrop-blur-sm border-b border-gray-200">
           <div className="flex items-center justify-between px-4 md:px-8 py-4">
-            <h2 className="text-lg font-semibold text-gray-900 truncate">
+            <h2
+              className="text-lg font-semibold text-gray-900 truncate transition-opacity duration-150"
+              style={{ opacity: titleOpacity }}
+            >
               {item.title}
             </h2>
             <button
