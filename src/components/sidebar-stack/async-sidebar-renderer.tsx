@@ -130,21 +130,39 @@ function AsyncSidebarPanel({
     requestAnimationFrame(() => setIsVisible(true))
   }, [])
 
-  // Handle clicks on sidebar links within content
+  // Handle clicks on links within content
   const handleContentClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement
-    const link = target.closest('a[data-sidebar-component]')
+    const link = target.closest('a')
 
-    if (link) {
+    if (!link) return
+
+    const href = link.getAttribute('href')
+    if (!href) return
+
+    // Check for explicit sidebar component attribute
+    const sidebarComponent = link.getAttribute('data-sidebar-component')
+    if (sidebarComponent) {
       e.preventDefault()
       e.stopPropagation()
-      const componentId = link.getAttribute('data-sidebar-component')
       const title = link.getAttribute('data-sidebar-title') || ''
-
-      if (componentId) {
-        push({ title, componentId })
-      }
+      push({ title, componentId: sidebarComponent })
+      return
     }
+
+    // Check for blog post links (/post/slug)
+    const blogPostMatch = href.match(/^\/post\/([^\/\?#]+)/)
+    if (blogPostMatch) {
+      e.preventDefault()
+      e.stopPropagation()
+      const slug = blogPostMatch[1]
+      // Try to get title from link text or use slug
+      const title = link.textContent?.trim() || slug
+      push({ title, componentId: slug })
+      return
+    }
+
+    // Allow all other links (external, other internal pages) to navigate normally
   }
 
   const clampedLevel = Math.min(level, 4)
@@ -197,7 +215,7 @@ function AsyncSidebarPanel({
         {/* Content */}
         <div
           className="px-4 md:px-8 py-6"
-          onClick={handleContentClick}
+          onClickCapture={handleContentClick}
         >
           {isLoading ? (
             <LoadingSpinner />
