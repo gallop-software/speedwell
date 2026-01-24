@@ -27,8 +27,8 @@ Gallop templates are trusted by professionals achieving #1 Google rankings in co
 
 ## Features
 
-- 🚀 **Next.js 16.0** with App Router
-- ⚛️ **React 19.2** for cutting-edge performance
+- 🚀 **Next.js 16.1** with App Router
+- ⚛️ **React 19** for cutting-edge performance
 - 🎨 **Tailwind CSS 4.1** for pixel-perfect design
 - 📝 **TSX-powered content** - No CMS required
 - 🖼️ **Image processing** with automatic optimization
@@ -195,7 +195,18 @@ speedwell/
 - **`npm run dev`** - Start development server at http://localhost:3000
 - **`npm run build`** - Build for production (runs blog metadata first)
 - **`npm run start`** - Start production server
-- **`npm run lint`** - Run ESLint checks
+- **`npm run lint`** - Run ESLint on all source files
+- **`npm run lint:file`** - Run ESLint on a specific file
+- **`npm run lint:gallop`** - Run Gallop Canon lint rules on blocks
+- **`npm run ts`** - TypeScript type checking without emitting
+- **`npm run prettier`** - Format all files with Prettier
+
+### Gallop Canon
+
+- **`npm run audit`** - Audit codebase with Gallop Canon
+- **`npm run audit:strict`** - Strict audit mode
+- **`npm run audit:json`** - Output audit results as JSON
+- **`npm run generate:ai-rules`** - Generate AI rules for Cursor and Copilot
 
 ### Content & Assets
 
@@ -232,11 +243,12 @@ speedwell/
 - **`npm run update:major`** - Update to latest major versions
 - **`npm run update:interactive`** - Interactively choose updates
 - **`npm run update:doctor`** - Update and test changes incrementally
+- **`npm run update:canon`** - Update Gallop Canon package
 
 ### Maintenance
 
-- **`npm run clean`** - Remove node_modules, .next, and package-lock.json
-- **`npm run clean:install`** - Clean and reinstall all dependencies
+- **`npm run refresh`** - Remove node_modules and .next, then reinstall
+- **`npm run clean`** - Remove node_modules, .next, and package-lock.json, then reinstall
 
 ---
 
@@ -263,27 +275,27 @@ vercel --prod
 
 Every dependency is battle-tested in production and chosen for stability, performance, and long-term maintainability.
 
-- **Next.js** `16.0.7` - React framework with App Router
+- **Next.js** `16.1.4` - React framework with App Router
 - **React** `19` - UI library
-- **Tailwind CSS** `4.1.17` - Utility-first CSS framework
+- **Tailwind CSS** `4.1.18` - Utility-first CSS framework
 - **Headless UI** `2.2.9` - Unstyled accessible components
-- **Valtio** `2.2.0` - State management
+- **Valtio** `2.3.0` - State management
 - **Swiper** `12.0.3` - Modern slider/carousel
-- **Yet Another React Lightbox** `3.25.0` - Image gallery
+- **Yet Another React Lightbox** `3.28.0` - Image gallery
 - **FlexSearch** `0.8.212` - Full-text search
 - **Algolia Autocomplete** `1.19.4` - Search autocomplete
 - **Vimeo Player** `2.30.1` - Video player integration
-- **Framer Motion** `12.23.25` - Animation library
+- **Framer Motion** `12.29.0` - Animation library
 - **DayJS** `1.11.19` - Date formatting
 - **Luxon** `3.7.2` - DateTime library
-- **React Intersection Observer** `10.0.0` - Scroll-based animations and lazy loading
+- **React Intersection Observer** `10.0.2` - Scroll-based animations and lazy loading
 - **React Highlight Words** `0.21.0` - Text highlighting
 - **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design)
 - **clsx** `2.1.1` - Conditional className utility
 - **Sindresorhus Slugify** `3.0.0` - URL-friendly slugs
-- **React DOM** `19.2.1` - React rendering
+- **React DOM** `19.2.3` - React rendering
 - **Vercel Analytics** `1.6.1` - Analytics integration
-- **Next Third Parties** `16.0.7` - Third-party script optimization
+- **Next Third Parties** `16.1.4` - Third-party script optimization
 
 ### Development
 
@@ -291,19 +303,20 @@ Tools for building and developing the site:
 
 - **TypeScript** `5` - Type safety and IntelliSense
 - **ESLint** `9` - Code linting
-- **Prettier** `3.7.4` - Code formatting
+- **Prettier** `3.8.1` - Code formatting
 - **Prettier Plugin Organize Imports** `4.3.0` - Auto-organize imports
 - **Prettier Plugin Tailwindcss** `0.7.2` - Sort Tailwind classes
 - **PostCSS** `8.5.6` - CSS transformations
+- **Gallop Canon** `2.16.1` - ESLint rules and AI rules generator
 
 ### Scripts & Processing
 
 Build-time tools for content and asset generation:
 
 - **Sharp** `0.34.5` - Image processing and optimization
-- **Puppeteer** `24.32.0` - Screenshot generation (featured images)
+- **Puppeteer** `24.36.0` - Screenshot generation (featured images)
 - **ttf2woff2** `8.0.0` - Font compression
-- **jsdom** `27.2.0` - HTML parsing for search indexing
+- **jsdom** `27.4.0` - HTML parsing for search indexing
 - **xml2js** `0.6.2` - XML/RSS feed generation
 
 ---
