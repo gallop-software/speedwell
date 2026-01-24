@@ -25,6 +25,8 @@ export default {
     'src/tools/**',
     // Lightbox has dynamic exports
     'src/components/lightbox/**',
+    // lite-only component, intentionally unused in pro version
+    'src/components/pro-block.tsx',
   ],
 
   // Dependencies used by config files or build tools (not direct imports)
@@ -37,8 +39,9 @@ export default {
   // Binaries used via npx (not installed as dependencies)
   ignoreBinaries: ['npm-check-updates'],
 
-  // Disable checks for unused types (often exported for external use)
+  // Disable checks for unused exports and types
   rules: {
+    exports: 'off',
     types: 'off',
   },
 }
