@@ -15,7 +15,7 @@ export function SidebarLink({
   children,
   componentId,
   title,
-  className = 'text-blue-600 underline cursor-pointer hover:text-blue-800',
+  className = '',
 }: SidebarLinkProps) {
   // Note: onClick is handled by SidebarClickHandler via event delegation
   // The href uses a dash separator to avoid CSS selector issues with colons
