@@ -4,7 +4,7 @@ export default function Hero17() {
   return (
     <Section className="relative w-full overflow-hidden z-0 bg-body2 pt-navbar h-auto lg:h-screen lg:max-h-[900px] flex items-center justify-center">
       <Image
-        src="/images/layout-4/pexels-pixabay-260922.jpg"
+        src="/images/layout-4/hero-layout-4.jpg"
         size="full"
         alt="Layout 4 hero image"
         rounded="rounded-none"
