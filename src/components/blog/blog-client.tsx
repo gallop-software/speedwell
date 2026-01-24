@@ -26,53 +26,6 @@ const decodeHtmlEntities = (str: string): string => {
     .replace(/&#39;/g, "'")
 }
 
-// Header images for the sidebar
-const headerImages = [
-  {
-    src: '/images/profiles/pexels-anna-nekrashevich-6801642-200x300.jpg',
-    alt: 'Team member',
-  },
-  {
-    src: '/images/profiles/pexels-dxaxoxfz-17555273-200x300.jpg',
-    alt: 'Team member',
-  },
-  {
-    src: '/images/profiles/pexels-ekaterina-bolovtsova-5393594-200x300.jpg',
-    alt: 'Team member',
-  },
-  {
-    src: '/images/profiles/pexels-linkedin-2182970-200x300.jpg',
-    alt: 'Team member',
-  },
-  {
-    src: '/images/profiles/pexels-nkhajotia-1516680-200x300.jpg',
-    alt: 'Team member',
-  },
-]
-
-// Header content component with team member avatars
-function SidebarHeaderContent() {
-  return (
-    <div className="flex -space-x-2">
-      {headerImages.map((image, index) => (
-        <figure
-          key={`header-image-${index}`}
-          className="h-10 w-10"
-        >
-          <Image
-            src={image.src}
-            size="small"
-            alt={image.alt}
-            className="inline-block h-10 w-10 ring-2 ring-white object-cover"
-            aspect="aspect-square"
-            rounded="rounded-full"
-          />
-        </figure>
-      ))}
-    </div>
-  )
-}
-
 interface BlogPost {
   slug: string
   metadata: {
@@ -236,11 +189,7 @@ function BlogClientInner({
   }
 
   const openSidebar = (slug: string, title: string) => {
-    push({
-      title,
-      componentId: slug,
-      headerContent: <SidebarHeaderContent />,
-    })
+    push({ title, componentId: slug })
   }
 
   return (

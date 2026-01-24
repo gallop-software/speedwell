@@ -13,8 +13,6 @@ export interface SidebarItem {
   id: string
   title: string
   componentId: string
-  /** Optional custom header content to display instead of title */
-  headerContent?: ReactNode
 }
 
 /** Function that loads content for a given componentId */
