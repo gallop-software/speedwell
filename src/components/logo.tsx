@@ -25,25 +25,3 @@ export function Logo({
     />
   )
 }
-
-// Keep Mark component for backward compatibility if needed elsewhere
-export function Mark({
-  className,
-  width,
-  height,
-}: {
-  className?: string
-  width?: number
-  height?: number
-}) {
-  return (
-    <Image
-      src="/images/logo.png"
-      size="medium"
-      alt="Logo Mark"
-      {...(width && { width })}
-      {...(height && { height })}
-      className={className}
-    />
-  )
-}

@@ -27,7 +27,19 @@ export default {
     'src/components/lightbox/**',
   ],
 
-  // Blocks are standalone - each block is its own entry point
-  // They're imported dynamically by pages
-  ignoreDependencies: [],
+  // Dependencies used by config files or build tools (not direct imports)
+  ignoreDependencies: [
+    'tailwindcss',
+    'prettier-plugin-organize-imports',
+    'prettier-plugin-tailwindcss',
+  ],
+
+  // Binaries used via npx (not installed as dependencies)
+  ignoreBinaries: ['npm-check-updates'],
+
+  // Disable checks for unused exports (components may be exported for external use)
+  rules: {
+    exports: 'off',
+    types: 'off',
+  },
 }
