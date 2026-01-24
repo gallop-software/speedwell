@@ -5,8 +5,8 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 ## Overview
 
 - **Total Blocks:** 117
-- **Free Blocks:** 84
-- **Pro Blocks:** 33
+- **Free Blocks:** 73
+- **Pro Blocks:** 44
 
 ## Categories
 
@@ -151,7 +151,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/hero-14.jpg" alt="Hero 14" width="350">
 
 **Slug:** `hero-14`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -542,7 +542,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/content-28.jpg" alt="Content 28" width="350">
 
 **Slug:** `content-28`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -578,7 +578,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/content-32.jpg" alt="Content 32" width="350">
 
 **Slug:** `content-32`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -632,7 +632,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/content-38.jpg" alt="Content 38" width="350">
 
 **Slug:** `content-38`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -807,7 +807,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/testimonial-4.jpg" alt="Testimonial 4" width="350">
 
 **Slug:** `testimonial-4`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -881,7 +881,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/about-3.jpg" alt="About 3" width="350">
 
 **Slug:** `about-3`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -928,7 +928,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/cover-5.jpg" alt="Cover 5" width="350">
 
 **Slug:** `cover-5`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -977,7 +977,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/archive-2.jpg" alt="Archive 2" width="350">
 
 **Slug:** `archive-2`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -1006,7 +1006,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/form-2.jpg" alt="Form 2" width="350">
 
 **Slug:** `form-2`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -1015,7 +1015,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/form-3.jpg" alt="Form 3" width="350">
 
 **Slug:** `form-3`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
@@ -1082,7 +1082,7 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 <img src="../../public/blocks/process-1.jpg" alt="Process 1" width="350">
 
 **Slug:** `process-1`  
-**Tier:** Free  
+**Tier:** Pro  
 
 ---
 
