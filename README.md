@@ -90,17 +90,19 @@ Claude will walk you through every step. When you're done, your site will be liv
 
 If you're comfortable with Git:
 
-1. **Create your own repository** from the Speedwell template:
+#### Step 1: Create Your Repository
 
-   [![Speedwell Lite (Free)](https://img.shields.io/badge/Speedwell_Lite_(Free)-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate) [![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
+[![Speedwell Lite (Free)](https://img.shields.io/badge/Speedwell_Lite_(Free)-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate) [![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
 
-2. **Clone your new repository** to your computer. Ask Claude AI:
+#### Step 2: Clone Your Repository
 
-   ```
-   Help me clone my new GitHub repository and run it locally
-   ```
+Ask Claude AI:
 
-   Or run these commands in your terminal:
+```
+Help me clone my new GitHub repository and run it locally
+```
+
+Or run these commands in your terminal:
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
@@ -109,11 +111,11 @@ npm install
 npm run dev
 ```
 
-3. **Deploy to Vercel:**
+#### Step 3: Deploy to Vercel
 
-   [![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new)
 
-   Select your repository, and Vercel will automatically deploy whenever you push changes.
+Select your repository, and Vercel will automatically deploy whenever you push changes.
 
 Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
 
