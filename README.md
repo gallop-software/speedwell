@@ -13,6 +13,97 @@ Just chat with Claude AI inside <a href="https://cursor.com" target="_blank">Cur
 
 ---
 
+## Getting Started
+
+New to this? No problem. You'll have Claude AI guiding you the entire way.
+
+### Step 1: Install Cursor
+
+<a href="https://cursor.com" target="_blank">Download Cursor</a> for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site.
+
+### Step 2: Download This Template
+
+Click the green **Code** button at the top of this page, then click **Download ZIP**. Unzip the folder somewhere easy to find (like your Desktop).
+
+### Step 3: Open in Cursor
+
+1. Open Cursor
+2. Click **File → Open Folder**
+3. Select the unzipped `speedwell` folder
+4. Click **Open**
+
+### Step 4: Ask Claude AI for Help
+
+Press `Cmd+L` (Mac) or `Ctrl+L` (Windows) to open the chat panel. Now just ask:
+
+> _"I'm new to this. Help me get this website running on my computer."_
+
+Claude will walk you through everything, including installing any tools you need. Just follow along and ask questions whenever you're stuck.
+
+### Step 5: Start Building
+
+Once your site is running, you can describe any changes you want:
+
+- _"Change the homepage heading to Welcome to My Bakery"_
+- _"Make the accent color pink"_
+- _"Add a new page called Services"_
+- _"Optimize the SEO on my homepage"_
+
+### Join the Community
+
+Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
+
+<a href="https://gallop-software.slack.com/" target="_blank"><img src="https://img.shields.io/badge/Join%20Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Join Slack"></a>
+
+---
+
+## Put Your Site Online
+
+When you're ready to share your site with the world, you'll need a free <a href="https://github.com" target="_blank">GitHub</a> account to store your code and a free <a href="https://vercel.com" target="_blank">Vercel</a> account to host your site.
+
+### The Easy Way
+
+Just ask Claude AI:
+
+> _"Help me create a GitHub account, push this project to GitHub, and deploy to Vercel"_
+
+Claude will walk you through every step. When you're done, your site will be live with a URL you can share.
+
+### For Technical Users
+
+If you're comfortable with Git:
+
+1. **Create your own repository** from the Speedwell template:
+
+   [![Use this template](https://img.shields.io/badge/Use_this_template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
+
+2. **Clone your new repository** to your computer. Ask Claude AI:
+
+   > _"Help me clone my new GitHub repository and run it locally"_
+
+   Or run these commands in your terminal:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
+npm install
+npm run dev
+```
+
+3. **Deploy to Vercel:**
+
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+   Select your repository, and Vercel will automatically deploy whenever you push changes.
+
+Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See <a href="https://vercel.com/docs/projects/domains" target="_blank">Vercel's domain setup guide</a>.
+
+### Speedwell Pro
+
+Want access to all 117 blocks including premium designs? <a href="https://gallop.software/code/speedwell/blocks#pricing" target="_blank">Purchase Speedwell Pro</a> and clone from the Pro repository, which includes all Pro blocks ready to use.
+
+---
+
 ## About Gallop Templates
 
 Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, designed specifically to work seamlessly with AI assistants like GitHub Copilot, Claude, and ChatGPT. Built with an opinionated codebase optimized for AI efficiency, Gallop templates enable you to:
@@ -170,6 +261,7 @@ speedwell/
 │   ├── generate-blocks-catalog.mjs
 │   ├── generate-favicon.js
 │   ├── generate-featured-image.js
+│   ├── push-env-to-vercel.sh # Push env vars to Vercel
 │   ├── generate-search.mjs
 │   ├── generate-search.sh
 │   ├── compress-fonts.js
@@ -184,8 +276,7 @@ speedwell/
 ├── package.json             # Dependencies & scripts
 ├── knip.config.js           # Unused file detection config
 ├── .prettierrc              # Prettier config
-├── .eslintrc.json           # ESLint config
-└── push-env-to-vercel.sh    # Environment sync script
+└── .eslintrc.json           # ESLint config
 ```
 
 ---
@@ -235,7 +326,7 @@ speedwell/
 
 ### Environment
 
-- **`npm run env`** - Push local `.env.local` to Vercel
+- **`npm run env`** - Push `.env.production` to Vercel → [docs](./_scripts/push-env-to-vercel.md)
 - **`npm run env:prod`** - Push to production environment
 - **`npm run env:prev`** - Push to preview environment
 
@@ -253,23 +344,6 @@ speedwell/
 
 - **`npm run refresh`** - Remove node_modules and .next, then reinstall
 - **`npm run clean`** - Remove node_modules, .next, and package-lock.json, then reinstall
-
----
-
-## Deployment
-
-Deploy to Vercel with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gallop-software/speedwell)
-
-Or manually:
-
-```bash
-npm run build
-vercel --prod
-```
-
-**See [Deployment Guide](./_docs/deployment.md) for other platforms and configuration.**
 
 ---
 
