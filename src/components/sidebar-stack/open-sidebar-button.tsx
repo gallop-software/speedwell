@@ -31,7 +31,11 @@ export function OpenSidebarButton({
   const { push } = useSidebarStack()
 
   const handleClick = () => {
-    push({ title, componentId, showTitleImmediately })
+    push({
+      title,
+      componentId,
+      ...(showTitleImmediately && { showTitleImmediately }),
+    })
   }
 
   return (
