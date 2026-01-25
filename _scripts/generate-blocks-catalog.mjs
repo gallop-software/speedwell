@@ -273,13 +273,29 @@ async function cleanupOrphanedScreenshots(currentBlockSlugs, outputDir) {
   return { orphanedSlugs, deletedCount }
 }
 
-async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
+async function generateBlocksCatalog(
+  mode = 'smart',
+  ignoreSavedOrder = false,
+  filterBlock = null
+) {
   try {
     console.log('Starting blocks catalog generation...\n')
 
     // Read all files from blocks directory
     const files = await readdir(BLOCKS_DIR)
-    const blockFiles = files.filter((f) => f.endsWith('.tsx'))
+    let blockFiles = files.filter((f) => f.endsWith('.tsx'))
+
+    // Filter to single block if specified
+    if (filterBlock) {
+      blockFiles = blockFiles.filter(
+        (f) => f.replace('.tsx', '') === filterBlock
+      )
+      if (blockFiles.length === 0) {
+        console.error(`Error: Block "${filterBlock}" not found`)
+        process.exit(1)
+      }
+      console.log(`Filtering to single block: ${filterBlock}\n`)
+    }
 
     console.log(`Found ${blockFiles.length} block files\n`)
 
@@ -392,29 +408,31 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
       console.log(`Found ${totalNew} new blocks\n`)
     }
 
-    // Check for orphaned screenshots (images without corresponding block files)
-    const currentBlockSlugs = new Set(blocks.map((b) => b.slug))
-    const { orphanedSlugs, deletedCount } = await cleanupOrphanedScreenshots(
-      currentBlockSlugs,
-      OUTPUT_DIR
-    )
-
-    if (orphanedSlugs.length > 0) {
-      console.log(
-        `\nCleaned up ${orphanedSlugs.length} orphaned blocks: ${orphanedSlugs.join(', ')}`
+    // Check for orphaned screenshots (skip when filtering to single block)
+    if (!filterBlock) {
+      const currentBlockSlugs = new Set(blocks.map((b) => b.slug))
+      const { orphanedSlugs, deletedCount } = await cleanupOrphanedScreenshots(
+        currentBlockSlugs,
+        OUTPUT_DIR
       )
 
-      if (deletedCount > 0) {
-        console.log(`Deleted ${deletedCount} orphaned screenshot files`)
-        console.log('\nRunning npm run images to update processed images...')
-        try {
-          const { stdout, stderr } = await execAsync('npm run images', {
-            cwd: join(__dirname, '..'),
-          })
-          if (stdout) console.log(stdout)
-          console.log('✓ Image processing complete\n')
-        } catch (error) {
-          console.error('Warning: npm run images failed:', error.message)
+      if (orphanedSlugs.length > 0) {
+        console.log(
+          `\nCleaned up ${orphanedSlugs.length} orphaned blocks: ${orphanedSlugs.join(', ')}`
+        )
+
+        if (deletedCount > 0) {
+          console.log(`Deleted ${deletedCount} orphaned screenshot files`)
+          console.log('\nRunning npm run images to update processed images...')
+          try {
+            const { stdout, stderr } = await execAsync('npm run images', {
+              cwd: join(__dirname, '..'),
+            })
+            if (stdout) console.log(stdout)
+            console.log('✓ Image processing complete\n')
+          } catch (error) {
+            console.error('Warning: npm run images failed:', error.message)
+          }
         }
       }
     }
@@ -486,14 +504,15 @@ async function generateBlocksCatalog(mode = 'smart', ignoreSavedOrder = false) {
       console.log(`Total captured: ${blocksToCapture.length}\n`)
     }
 
-    // Generate README
-    console.log('Generating README...')
-    const readme = generateReadme(blocks)
-    await writeFile(README_PATH, readme, 'utf8')
-    console.log(`✓ README saved to ${README_PATH}\n`)
+    // Generate README (skip when filtering to single block)
+    if (!filterBlock) {
+      console.log('Generating README...')
+      const readme = generateReadme(blocks)
+      await writeFile(README_PATH, readme, 'utf8')
+      console.log(`✓ README saved to ${README_PATH}\n`)
+    }
 
     console.log('=== Blocks Catalog Generation Complete ===')
-    console.log(`\nView README at: ${README_PATH}`)
   } catch (error) {
     console.error('Fatal error:', error)
     process.exit(1)
@@ -565,6 +584,7 @@ function generateReadme(blocks) {
 // Run the script
 let mode = 'smart' // Default: only capture missing images
 let ignoreSavedOrder = false
+let filterBlock = null
 
 if (process.argv.includes('--screenshots')) {
   mode = 'force' // Force overwrite all images
@@ -576,4 +596,10 @@ if (process.argv.includes('--sort')) {
   ignoreSavedOrder = true // Ignore saved order, sort naturally
 }
 
-generateBlocksCatalog(mode, ignoreSavedOrder)
+// Parse --block=name argument to filter to a single block
+const blockArg = process.argv.find((arg) => arg.startsWith('--block='))
+if (blockArg) {
+  filterBlock = blockArg.split('=')[1]
+}
+
+generateBlocksCatalog(mode, ignoreSavedOrder, filterBlock)
