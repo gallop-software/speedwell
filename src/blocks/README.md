@@ -766,6 +766,8 @@ A collection of 117 pre-built UI blocks for the Speedwell template.
 
 #### Call To Action 6
 
+<img src="../../public/blocks/call-to-action-6.jpg" alt="Call To Action 6" width="350">
+
 **Slug:** `call-to-action-6`  
 **Tier:** Free  
 
