@@ -152,11 +152,12 @@ Think of Canon as training wheels that never come off. Claude stays within prove
 
 This template was crafted from the ground up to get your business website ranked #1 on Google and mentioned by AI assistants like ChatGPT and Google's Gemini. The software architecture, semantic HTML structure, metadata system, and structured data are optimized for both search engine crawlers and AI models that recommend businesses to users.
 
-AI mentions are becoming more important than traditional SEO. When someone asks an AI assistant for recommendations, you want your business in that answer. Gallop templates are built with the structured data and semantic markup that AI models rely on to understand and recommend your business. This is a proven foundation that delivers real traffic and real customers.
+AI mentions are becoming more important than traditional SEO. When someone asks an AI assistant for recommendations, you want your business in that answer. Gallop templates are built with the structured data and semantic markup that AI models rely on to understand and recommend your business. Businesses using this template are already ranking on Google and getting discovered by AI assistants.
 
 ### What You Can Build
 
 - **Build websites with AI** - Let AI do the technical heavy lifting while you provide instructions
+- **Skip the boring work** - Let AI help write your content, optimize your SEO, and handle tedious text updates
 - **Pixel-perfect design** - TailwindCSS integration for rapid development without leaving component files
 - **Automate workflows** - AI-powered scripts for sitewide SEO and AI discoverability improvements, image regeneration, and content updates
 - **Get found online** - Battle-tested foundation with structured data for search engines and AI assistants that recommend businesses
