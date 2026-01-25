@@ -2,7 +2,7 @@
 
 Push environment variables from `.env.production` to your Vercel project using the Vercel REST API. Variables are stored as encrypted secrets.
 
-**Tier:** Pro  
+**Tier:** Free  
 **File:** `_scripts/push-env-to-vercel.sh`
 
 ---
