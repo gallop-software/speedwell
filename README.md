@@ -13,6 +13,23 @@ Just chat with Claude AI inside <a href="https://cursor.com" target="_blank">Cur
 
 ---
 
+## Deployment
+
+Deploy to Vercel with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gallop-software/speedwell)
+
+Or manually:
+
+```bash
+npm run build
+vercel --prod
+```
+
+**See [Deployment Guide](./_docs/deployment.md) for other platforms and configuration.**
+
+---
+
 ## About Gallop Templates
 
 Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, designed specifically to work seamlessly with AI assistants like GitHub Copilot, Claude, and ChatGPT. Built with an opinionated codebase optimized for AI efficiency, Gallop templates enable you to:
@@ -253,23 +270,6 @@ speedwell/
 
 - **`npm run refresh`** - Remove node_modules and .next, then reinstall
 - **`npm run clean`** - Remove node_modules, .next, and package-lock.json, then reinstall
-
----
-
-## Deployment
-
-Deploy to Vercel with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gallop-software/speedwell)
-
-Or manually:
-
-```bash
-npm run build
-vercel --prod
-```
-
-**See [Deployment Guide](./_docs/deployment.md) for other platforms and configuration.**
 
 ---
 
