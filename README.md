@@ -92,7 +92,7 @@ If you're comfortable with Git:
 
 1. **Create your own repository** from the Speedwell template:
 
-   [![Use this template](https://img.shields.io/badge/Use_this_template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
+   [![Speedwell Lite (Free)](https://img.shields.io/badge/Speedwell_Lite_(Free)-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate) [![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
 
 2. **Clone your new repository** to your computer. Ask Claude AI:
 
