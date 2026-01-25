@@ -3,8 +3,9 @@ set -euo pipefail
 
 # Push env vars from .env.production to Vercel using REST API upsert (encrypted)
 # Usage:
-#   ./push-env-to-vercel.sh
-#   ./push-env-to-vercel.sh "preview,production"
+#   npm run env
+#   npm run env:prod
+#   npm run env:prev
 
 TARGETS_CSV="${1:-production}"           # development,preview,production (comma-separated)
 ENV_FILE=".env.production"
