@@ -15,6 +15,8 @@ The premier feminine website template for women-owned businesses who want to bui
 
 Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our [Gallop community](https://gallop-software.slack.com/). Go live in minutes.
 
+---
+
 ## Features
 
 - 🚀 **Next.js 16.1** with App Router
