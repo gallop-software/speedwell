@@ -2,7 +2,7 @@
 
 [![Speedwell Theme](./public/speedwell.jpg)](https://speedwell.gallop.software)
 
-A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.
+The premier feminine website template for women-owned businesses ready to stand out online and rank #1 on Google. Build your site at the speed of thought by talking to Claude AI. Describe what you want, and it writes the code. No CMS, no page builders, no limitations. Build fun and cute custom layouts, add smooth animations, create exactly what you envision. Go live in minutes.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
