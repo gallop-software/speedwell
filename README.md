@@ -4,7 +4,7 @@
 
 The premier feminine website template for women-owned businesses who want to build at the speed of thought, look more professional than the competition, and rank #1 on Google.
 
-Just chat with Claude AI inside <a href="https://cursor.com" target="_blank">Cursor</a> text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO instantly, expand endlessly, and get prompting tips from our Gallop community. Go live in minutes.
+Just chat with Claude AI inside <a href="https://cursor.com" target="_blank">Cursor</a> text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our Gallop community. Go live in minutes.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
@@ -106,15 +106,34 @@ Want access to all 117 blocks including premium designs? <a href="https://gallop
 
 ## About Gallop Templates
 
-Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, designed specifically to work seamlessly with AI assistants like GitHub Copilot, Claude, and ChatGPT. Built with an opinionated codebase optimized for AI efficiency, Gallop templates enable you to:
+Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for <a href="https://cursor.com" target="_blank">Cursor</a> and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. VSCode works too, but Cursor's native Claude integration makes development faster and more intuitive.
+
+**Why Claude?** Claude is the premier coding AI agent. It understands context better, writes cleaner code, and handles complex multi-file changes that other AI models struggle with. When you chat with Claude in Cursor, you're working with the best AI pair programmer available.
+
+### Gallop Canon: AI Guardrails
+
+Every Gallop template includes `@gallop.software/canon`, a system of ESLint rules and AI instructions that keep Claude on track. Canon ensures:
+
+- **Consistent architecture** - Claude follows the same patterns across your entire codebase
+- **No breaking changes** - Guardrails prevent AI from introducing common mistakes
+- **Faster development** - Claude already knows the project structure, components, and conventions
+- **Quality code** - Enforced best practices for performance, SEO, AI discoverability, and maintainability
+
+Think of Canon as training wheels that never come off. Claude stays within proven patterns, so you get reliable results every time.
+
+### Built for SEO and AI Discoverability
+
+This template was crafted from the ground up to get your business website ranked #1 on Google and mentioned by AI assistants like ChatGPT and Google's Gemini. The software architecture, semantic HTML structure, metadata system, and structured data are optimized for both search engine crawlers and AI models that recommend businesses to users.
+
+AI mentions are becoming more important than traditional SEO. When someone asks an AI assistant for recommendations, you want your business in that answer. Gallop templates are built with the structured data and semantic markup that AI models rely on to understand and recommend your business. This is a proven foundation that delivers real traffic and real customers.
+
+### What You Can Build
 
 - **Build websites with AI** - Let AI do the technical heavy lifting while you provide instructions
 - **Pixel-perfect design** - TailwindCSS integration for rapid development without leaving component files
-- **Automate workflows** - AI-powered scripts for sitewide SEO improvements, image regeneration, and content updates
-- **Get found online** - Battle-tested SEO foundation with structured data for search engines and AI models
+- **Automate workflows** - AI-powered scripts for sitewide SEO and AI discoverability improvements, image regeneration, and content updates
+- **Get found online** - Battle-tested foundation with structured data for search engines and AI assistants that recommend businesses
 - **Deploy instantly** - Next.js architecture on Vercel for cheap, fast hosting
-
-Gallop templates are trusted by professionals achieving #1 Google rankings in competitive search terms like "dallas architects," "lubbock attorneys," and "birth center."
 
 ---
 
@@ -129,7 +148,7 @@ Gallop templates are trusted by professionals achieving #1 Google rankings in co
 - 📱 **Fully responsive** and mobile-optimized
 - ⚡ **Lightning-fast** performance
 - 🎭 **Framer Motion** animations
-- 🎯 **SEO-optimized** with structured data
+- 🎯 **SEO and AI optimized** with structured data
 - 🤖 **AI-friendly** codebase structure
 - 📊 **Vercel Analytics** integration
 
