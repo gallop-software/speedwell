@@ -286,9 +286,6 @@ speedwell/
 │   ├── compress-fonts.js
 │   ├── convert-pro-blocks.mjs
 │   └── *.md                 # Script documentation
-├── _docs/                    # Documentation
-│   ├── content.md
-│   └── deployment.md
 ├── next.config.mjs          # Next.js configuration
 ├── tsconfig.json            # TypeScript config
 ├── postcss.config.js        # PostCSS config

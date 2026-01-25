@@ -89,9 +89,3 @@ Instead of dynamically importing every blog post to list them, this script pre-g
 - Quick category filtering
 - Better build performance
 
----
-
-**See also:**
-
-- [Content Guide](../_docs/content.md) - Complete content management documentation
-- [Blog Structure](../_docs/content.md#blog-posts) - Blog post formatting and features
