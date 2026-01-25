@@ -19,7 +19,7 @@ New to this? No problem. You'll have Claude AI guiding you the entire way.
 
 ### Step 1: Install Cursor
 
-[Download Cursor](https://cursor.com) for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site.
+[Download Cursor](https://cursor.com) for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site. [VSCode](https://code.visualstudio.com) with the Claude extension also works if you prefer.
 
 ### Step 2: Download This Template
 
