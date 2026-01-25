@@ -19,7 +19,7 @@ New to this? No problem. You'll have Claude AI guiding you the entire way.
 
 ### Step 1: Install Cursor
 
-[Download Cursor](https://cursor.com)
+[![Download Cursor](https://img.shields.io/badge/Download_Cursor-00A0DC?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com)
 
 Available for Mac and Windows. This is where you'll chat with Claude AI to build your site. [VSCode](https://code.visualstudio.com) with the Claude extension also works if you prefer.
 
@@ -68,7 +68,7 @@ Optimize the SEO on my homepage
 
 Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
 
-[Join the Gallop Slack](https://gallop-software.slack.com/)
+[![Join Slack](https://img.shields.io/badge/Join_Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://gallop-software.slack.com/)
 
 ---
 
@@ -92,7 +92,7 @@ If you're comfortable with Git:
 
 1. **Create your own repository** from the Speedwell template:
 
-   [Use this template on GitHub](https://github.com/gallop-software/speedwell/generate)
+   [![Use this template](https://img.shields.io/badge/Use_this_template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
 
 2. **Clone your new repository** to your computer. Ask Claude AI:
 
@@ -111,7 +111,7 @@ npm run dev
 
 3. **Deploy to Vercel:**
 
-   [Deploy with Vercel](https://vercel.com/new)
+   [![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new)
 
    Select your repository, and Vercel will automatically deploy whenever you push changes.
 
