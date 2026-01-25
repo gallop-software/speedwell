@@ -2,7 +2,7 @@
 
 [![Speedwell Theme](./public/speedwell.jpg)](https://speedwell.gallop.software)
 
-The premier feminine website template for women-owned businesses who want to build at the speed of thought, look more professional than the competition, and rank #1 on Google.
+The premier feminine website template for women-owned businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
 Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our Gallop community. Go live in minutes.
 
@@ -157,7 +157,7 @@ AI mentions are becoming more important than traditional SEO. When someone asks 
 ### What You Can Build
 
 - **Build websites with AI** - Let AI do the technical heavy lifting while you provide instructions
-- **Skip the boring work** - Let AI help write your content, optimize your SEO, and handle tedious text updates
+- **Skip the boring work** - Let AI help write your content, optimize your SEO, and handle tedious page updates
 - **Pixel-perfect design** - TailwindCSS integration for rapid development without leaving component files
 - **Automate workflows** - AI-powered scripts for sitewide SEO and AI discoverability improvements, image regeneration, and content updates
 - **Get found online** - Battle-tested foundation with structured data for search engines and AI assistants that recommend businesses
