@@ -19,7 +19,7 @@ New to this? No problem. You'll have Claude AI guiding you the entire way.
 
 ### Step 1: Install Cursor
 
-[Download Cursor](https://cursor.com) for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site.
+[Download Cursor](https://cursor.com) for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site. [VSCode](https://code.visualstudio.com) with the Claude extension also works if you prefer.
 
 ### Step 2: Download This Template
 
@@ -36,7 +36,9 @@ Click the green **Code** button at the top of this page, then click **Download Z
 
 Press `Cmd+L` (Mac) or `Ctrl+L` (Windows) to open the chat panel. Now just ask:
 
-> _"I'm new to this. Help me get this website running on my computer."_
+```
+I'm new to this. Help me get this website running on my computer.
+```
 
 Claude will walk you through everything, including installing any tools you need. Just follow along and ask questions whenever you're stuck.
 
@@ -44,10 +46,21 @@ Claude will walk you through everything, including installing any tools you need
 
 Once your site is running, you can describe any changes you want:
 
-- _"Change the homepage heading to Welcome to My Bakery"_
-- _"Make the accent color pink"_
-- _"Add a new page called Services"_
-- _"Optimize the SEO on my homepage"_
+```
+Change the homepage heading to Welcome to My Bakery
+```
+
+```
+Make the accent color pink
+```
+
+```
+Add a new page called Services
+```
+
+```
+Optimize the SEO on my homepage
+```
 
 ### Join the Community
 
@@ -65,7 +78,9 @@ When you're ready to share your site with the world, you'll need a free [GitHub]
 
 Just ask Claude AI:
 
-> _"Help me create a GitHub account, push this project to GitHub, and deploy to Vercel"_
+```
+Help me create a GitHub account, push this project to GitHub, and deploy to Vercel
+```
 
 Claude will walk you through every step. When you're done, your site will be live with a URL you can share.
 
@@ -79,7 +94,9 @@ If you're comfortable with Git:
 
 2. **Clone your new repository** to your computer. Ask Claude AI:
 
-   > _"Help me clone my new GitHub repository and run it locally"_
+   ```
+   Help me clone my new GitHub repository and run it locally
+   ```
 
    Or run these commands in your terminal:
 
