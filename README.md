@@ -21,7 +21,7 @@ New to this? No problem. You'll have Claude AI guiding you the entire way.
 
 [![Download Cursor](https://img.shields.io/badge/Download_Cursor-00A0DC?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com)
 
-Available for Mac and Windows. This is where you'll chat with Claude AI to build your site. [VSCode](https://code.visualstudio.com) with the Claude extension also works if you prefer.
+Available for Mac and Windows. This is where you'll chat with Claude AI to build your site. [VSCode](https://code.visualstudio.com) with the Github CoPilot also works if you prefer. We recommend Claude AI as the AI model of choice.
 
 ### Step 2: Download This Template
 
@@ -92,7 +92,7 @@ If you're comfortable with Git:
 
 #### Step 1: Create Your Repository
 
-[![Speedwell Lite (Free)](https://img.shields.io/badge/Speedwell_Lite_(Free)-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate) [![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
+[![Speedwell Lite (Free)](<https://img.shields.io/badge/Speedwell_Lite_(Free)-238636?style=for-the-badge&logo=github&logoColor=white>)](https://github.com/gallop-software/speedwell/generate) [![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
 
 #### Step 2: Clone Your Repository
 
