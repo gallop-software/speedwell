@@ -142,6 +142,12 @@ Every Gallop template includes `@gallop.software/canon`, a system of ESLint rule
 
 Think of Canon as training wheels that never come off. Claude stays within proven patterns, so you get reliable results every time.
 
+**Canon Commands:**
+
+- `npm run check` - Run lint, TypeScript, and unused checks together
+- `npm run generate:ai-rules` - Regenerate AI rules from Canon
+- `npm run update:canon` - Update to latest Canon version
+
 ### Built for SEO and AI Discoverability
 
 This template was crafted from the ground up to get your business website ranked #1 on Google and mentioned by AI assistants like ChatGPT and Google's Gemini. The software architecture, semantic HTML structure, metadata system, and structured data are optimized for both search engine crawlers and AI models that recommend businesses to users.
