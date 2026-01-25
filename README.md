@@ -53,7 +53,7 @@ Once your site is running, you can describe any changes you want:
 
 Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
 
-<a href="https://gallop-software.slack.com/" target="_blank"><img src="https://img.shields.io/badge/Join%20Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Join Slack"></a>
+[Join the Gallop Slack](https://gallop-software.slack.com/)
 
 ---
 
@@ -75,7 +75,7 @@ If you're comfortable with Git:
 
 1. **Create your own repository** from the Speedwell template:
 
-   [![Use this template](https://img.shields.io/badge/Use_this_template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
+   [Use this template on GitHub](https://github.com/gallop-software/speedwell/generate)
 
 2. **Clone your new repository** to your computer. Ask Claude AI:
 
@@ -92,7 +92,7 @@ npm run dev
 
 3. **Deploy to Vercel:**
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+   [Deploy with Vercel](https://vercel.com/new)
 
    Select your repository, and Vercel will automatically deploy whenever you push changes.
 
