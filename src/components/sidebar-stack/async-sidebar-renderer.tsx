@@ -191,7 +191,7 @@ function AsyncSidebarPanel({
     <div
       className={clsx(
         'fixed inset-y-0 right-0 flex flex-col',
-        'max-w-[86%] md:max-w-[77%] lg:max-w-[67%] xl:max-w-[900px] w-full',
+        'max-w-[86%] md:max-w-[77%] lg:max-w-[67%] xl:max-w-[700px] w-full',
         'transition-transform duration-500 ease-out',
         Z_INDEX_CLASSES[clampedLevel],
         isClosing
