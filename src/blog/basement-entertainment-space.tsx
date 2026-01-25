@@ -30,11 +30,17 @@ function Details() {
         the main floor. The industrial-inspired design with exposed ductwork,
         concrete floors with area rugs, and leather furnishings creates a
         stylish space. For more industrial design inspiration, check out our{' '}
-        <Link href="/post/industrial-office-conversion" prefetch={true}>
+        <Link
+          href="/post/industrial-office-conversion"
+          prefetch={true}
+        >
           Industrial Office Conversion
         </Link>
         . If you're interested in fitness spaces, see our{' '}
-        <Link href="/post/luxury-fitness-studio" prefetch={true}>
+        <Link
+          href="/post/luxury-fitness-studio"
+          prefetch={true}
+        >
           Luxury Fitness Studio
         </Link>{' '}
         project.
@@ -46,7 +52,10 @@ function Details() {
         barriers between living areas creates a sense of openness that extends
         from the main floor down to the lower level. For insights on creating
         seamless transitions between spaces, see our{' '}
-        <Link href="/post/open-concept-living" prefetch={true}>
+        <Link
+          href="/post/open-concept-living"
+          prefetch={true}
+        >
           Open Concept Living
         </Link>{' '}
         project, which demonstrates how thoughtful floor plans enhance both

@@ -34,11 +34,17 @@ function Details() {
         Eames, Saarinen, and Wegner complete the authentic midcentury feel while
         providing comfortable, functional living spaces. For more examples of
         clean, timeless design, explore our{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian apartment
         </Link>{' '}
         and{' '}
-        <Link href="/post/contemporary-family-home" prefetch={true}>
+        <Link
+          href="/post/contemporary-family-home"
+          prefetch={true}
+        >
           contemporary family home
         </Link>{' '}
         projects.
@@ -51,7 +57,10 @@ function Details() {
         transition to the newly landscaped patio, extending the living area
         beyond the home's footprint. This indoor-outdoor flow is something we
         also explored in our{' '}
-        <Link href="/post/urban-penthouse-makeover" prefetch={true}>
+        <Link
+          href="/post/urban-penthouse-makeover"
+          prefetch={true}
+        >
           urban penthouse makeover
         </Link>
         , where terrace integration was essential to the design.

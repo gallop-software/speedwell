@@ -34,7 +34,10 @@ function Details() {
       <P>
         A vintage-inspired range with professional capabilities serves as the
         kitchen's focal point, similar to the approach in our{' '}
-        <Link href="/post/chef-kitchen-upgrade" prefetch={true}>
+        <Link
+          href="/post/chef-kitchen-upgrade"
+          prefetch={true}
+        >
           chef kitchen upgrade
         </Link>
         . We added a generous center island with seating for casual dining and
@@ -43,7 +46,10 @@ function Details() {
         aesthetic. Modern appliances are cleverly integrated to maintain the
         traditional feel while ensuring contemporary functionality—a philosophy
         we also embraced in our{' '}
-        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+        <Link
+          href="/post/minimalist-kitchen-redesign"
+          prefetch={true}
+        >
           minimalist kitchen redesign
         </Link>
         .
@@ -55,7 +61,10 @@ function Details() {
         home. We specialize in creating spaces that balance beauty with
         durability, using materials that stand up to daily use while aging
         gracefully. Explore our full range of{' '}
-        <Link href="/kitchen-bath" prefetch={true}>
+        <Link
+          href="/kitchen-bath"
+          prefetch={true}
+        >
           kitchen and bath services
         </Link>{' '}
         to see how we can transform your space.

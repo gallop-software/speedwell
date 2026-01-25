@@ -44,13 +44,19 @@ function Details() {
         anchor pieces and smaller works. The arrangement extends from floor to
         ceiling, drawing the eye upward and making the room feel more spacious,
         much like the approach in our{' '}
-        <Link href="/post/art-deco-restoration" prefetch={true}>
+        <Link
+          href="/post/art-deco-restoration"
+          prefetch={true}
+        >
           art deco restoration
         </Link>{' '}
         project. Layered picture lights add drama and highlight favorite pieces.
         The result is a personal, museum-quality display that evolves as the
         collection grows—reminiscent of the curated collections in our{' '}
-        <Link href="/post/library-study-design" prefetch={true}>
+        <Link
+          href="/post/library-study-design"
+          prefetch={true}
+        >
           library study design
         </Link>
         .
@@ -63,7 +69,10 @@ function Details() {
         restrained aesthetic, we often suggest larger, fewer pieces with ample
         white space between them—an approach that pairs perfectly with the clean
         lines showcased in our{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian apartment
         </Link>{' '}
         project.

@@ -37,19 +37,28 @@ function Details() {
       <P>
         A chef's kitchen features professional appliances, a large island for
         casual dining, and a separate butler's pantry—similar to our{' '}
-        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+        <Link
+          href="/post/farmhouse-kitchen-remodel"
+          prefetch={true}
+        >
           Farmhouse Kitchen Remodel
         </Link>
         . The wine cellar was custom-designed with climate control and display
         storage for an extensive collection. Throughout the home, we balanced
         the grandeur of the architecture with intimate gathering spaces. For
         another rustic luxury project, explore our{' '}
-        <Link href="/post/mountain-chalet-interior" prefetch={true}>
+        <Link
+          href="/post/mountain-chalet-interior"
+          prefetch={true}
+        >
           Mountain Chalet Interior
         </Link>
-        .         Natural materials, earth-toned palette, and thoughtful details create
+        . Natural materials, earth-toned palette, and thoughtful details create
         a seamless connection to the surrounding landscape. See more of our{' '}
-        <Link href="/residential" prefetch={true}>
+        <Link
+          href="/residential"
+          prefetch={true}
+        >
           Residential Design
         </Link>{' '}
         projects.
@@ -62,7 +71,10 @@ function Details() {
         energy-efficient systems that reduce the home's environmental footprint.
         For a deeper exploration of environmentally conscious luxury living, see
         our{' '}
-        <Link href="/post/sustainable-green-home" prefetch={true}>
+        <Link
+          href="/post/sustainable-green-home"
+          prefetch={true}
+        >
           Sustainable Green Home
         </Link>{' '}
         project.

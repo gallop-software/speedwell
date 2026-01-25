@@ -19,7 +19,10 @@ function Details() {
       <P>
         This innovative coworking space for creatives needed a brand that
         fostered community and inspired collaboration, much like our{' '}
-        <Link href="/post/industrial-office-conversion" prefetch={true}>
+        <Link
+          href="/post/industrial-office-conversion"
+          prefetch={true}
+        >
           industrial office conversion
         </Link>{' '}
         project. We developed a dynamic visual identity featuring bold colors,
@@ -30,7 +33,10 @@ function Details() {
         From the reception area to private studios, every brand element
         reinforces the space's mission to connect creative professionals and
         spark meaningful partnerships—an approach that also informed our{' '}
-        <Link href="/post/creative-agency-workspace" prefetch={true}>
+        <Link
+          href="/post/creative-agency-workspace"
+          prefetch={true}
+        >
           creative agency workspace
         </Link>{' '}
         design.
@@ -42,7 +48,10 @@ function Details() {
         acoustics, lighting quality, and ergonomic furniture to support
         productivity and well-being. These same principles guided our work on
         the{' '}
-        <Link href="/post/tech-startup-headquarters" prefetch={true}>
+        <Link
+          href="/post/tech-startup-headquarters"
+          prefetch={true}
+        >
           tech startup headquarters
         </Link>
         , where employee comfort directly impacts innovation and retention.

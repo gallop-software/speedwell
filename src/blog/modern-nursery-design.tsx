@@ -33,10 +33,17 @@ function Details() {
         materials for a healthy environment. Whimsical touches like a cloud
         mobile and illustrated prints add personality without overwhelming the
         peaceful atmosphere. For more bedroom inspiration, explore our{' '}
-        <Link href="/post/bohemian-bedroom-design" prefetch={true}>
+        <Link
+          href="/post/bohemian-bedroom-design"
+          prefetch={true}
+        >
           bohemian bedroom design
-        </Link>, or see how we approach family-focused spaces in our{' '}
-        <Link href="/post/contemporary-family-home" prefetch={true}>
+        </Link>
+        , or see how we approach family-focused spaces in our{' '}
+        <Link
+          href="/post/contemporary-family-home"
+          prefetch={true}
+        >
           contemporary family home
         </Link>{' '}
         project.
@@ -48,7 +55,10 @@ function Details() {
         planning updates throughout your home to accommodate your family's
         needs, our team specializes in creating cohesive designs that flow from
         room to room. Visit our{' '}
-        <Link href="/residential" prefetch={true}>
+        <Link
+          href="/residential"
+          prefetch={true}
+        >
           residential design services
         </Link>{' '}
         page to learn more about how we can help transform your entire home.

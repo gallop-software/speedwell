@@ -31,7 +31,10 @@ function Details() {
         intimate cocktail bar with custom millwork, and a breakfast room that
         opens to a private courtyard garden. For similar hospitality work, see
         our{' '}
-        <Link href="/post/restaurant-interior-design" prefetch={true}>
+        <Link
+          href="/post/restaurant-interior-design"
+          prefetch={true}
+        >
           Restaurant Interior Design
         </Link>{' '}
         project. We selected durable, high-quality materials that will age
@@ -39,7 +42,10 @@ function Details() {
         lighting controls, and thoughtful amenities ensure guest comfort. The
         design celebrates the property's heritage while establishing a
         contemporary boutique hotel identity. Our{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           Wellness Spa Design
         </Link>{' '}
         demonstrates similar attention to guest experience.
@@ -51,7 +57,10 @@ function Details() {
         a home away from home. Custom headboards, premium bedding, and
         thoughtfully appointed bathrooms elevate the overnight experience. For
         insights into crafting luxurious bedroom environments, explore our{' '}
-        <Link href="/post/luxury-master-suite" prefetch={true}>
+        <Link
+          href="/post/luxury-master-suite"
+          prefetch={true}
+        >
           Luxury Master Suite
         </Link>{' '}
         project, which showcases similar attention to comfort and refinement.

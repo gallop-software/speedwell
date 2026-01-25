@@ -32,11 +32,17 @@ function Details() {
         incorporated sustainable materials and energy-efficient systems while
         maintaining the home's timeless appeal. For similar relaxed aesthetics,
         explore our{' '}
-        <Link href="/post/coastal-cottage-refresh" prefetch={true}>
+        <Link
+          href="/post/coastal-cottage-refresh"
+          prefetch={true}
+        >
           Coastal Cottage Refresh
         </Link>{' '}
         or see how we approached a{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian Apartment
         </Link>{' '}
         with the same light and airy philosophy.
@@ -48,7 +54,10 @@ function Details() {
         clean lines, neutral palettes, and uncluttered spaces creates
         environments that feel both serene and contemporary. To see how we
         achieve similar airiness in city settings, explore our{' '}
-        <Link href="/post/modern-loft-transformation" prefetch={true}>
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
           Modern Loft Transformation
         </Link>{' '}
         project, where industrial architecture meets light-filled living through

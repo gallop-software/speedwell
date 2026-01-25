@@ -34,7 +34,10 @@ function Details() {
       <P>
         The layout emphasizes flow and transition between spaces, with sliding
         doors that reconfigure rooms as needed, much like our{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian apartment
         </Link>{' '}
         project. A small interior garden visible from multiple rooms brings
@@ -43,17 +46,23 @@ function Details() {
         Every object has purpose and place, embodying the Japanese concept of
         "ma"—the space between things. This thoughtful approach to design
         fosters calm, clarity, and contemplation, sharing philosophy with our{' '}
-        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+        <Link
+          href="/post/minimalist-kitchen-redesign"
+          prefetch={true}
+        >
           minimalist kitchen redesign
         </Link>
         .
       </P>
 
       <P>
-        The principles of Japanese design extend naturally into wellness
-        spaces, where tranquility and mindfulness are paramount. For clients
-        seeking to create dedicated areas for relaxation and self-care, our{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        The principles of Japanese design extend naturally into wellness spaces,
+        where tranquility and mindfulness are paramount. For clients seeking to
+        create dedicated areas for relaxation and self-care, our{' '}
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           wellness spa design
         </Link>{' '}
         project applies similar philosophies of natural materials, soft

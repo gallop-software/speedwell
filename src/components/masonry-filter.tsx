@@ -103,7 +103,10 @@ export function MasonryFilter({
             </motion.div>
           ))}
         </Masonry>
-        <LightboxHandler key={activeFilter} containerRef={containerRef} />
+        <LightboxHandler
+          key={activeFilter}
+          containerRef={containerRef}
+        />
       </div>
     </>
   )

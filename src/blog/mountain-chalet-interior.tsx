@@ -39,13 +39,20 @@ function Details() {
         state-of-the-art entertainment system. The warm color palette of deep
         reds, forest greens, and natural wood tones complements the spectacular
         mountain setting. For more retreat-style interiors, see our{' '}
-        <Link href="/post/wine-country-estate" prefetch={true}>
+        <Link
+          href="/post/wine-country-estate"
+          prefetch={true}
+        >
           wine country estate
         </Link>{' '}
         or discover the rustic warmth of our{' '}
-        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+        <Link
+          href="/post/farmhouse-kitchen-remodel"
+          prefetch={true}
+        >
           farmhouse kitchen remodel
-        </Link>.
+        </Link>
+        .
       </P>
 
       <P>
@@ -55,7 +62,10 @@ function Details() {
         and comfort work together to create an escape from everyday life. For
         another example of retreat-style design that celebrates its location,
         explore our{' '}
-        <Link href="/post/coastal-cottage-refresh" prefetch={true}>
+        <Link
+          href="/post/coastal-cottage-refresh"
+          prefetch={true}
+        >
           coastal cottage refresh
         </Link>{' '}
         which brings similar principles to a seaside setting.

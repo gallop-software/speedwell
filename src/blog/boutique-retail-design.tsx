@@ -22,7 +22,10 @@ function Details() {
         system features earthy tones, hand-drawn illustrations, and custom
         typography that evokes warmth and authenticity. For related retail
         branding, explore our{' '}
-        <Link href="/post/fashion-boutique-rebrand" prefetch={true}>
+        <Link
+          href="/post/fashion-boutique-rebrand"
+          prefetch={true}
+        >
           Fashion Boutique Rebrand
         </Link>
         . The packaging design showcases each coffee's origin story through
@@ -30,7 +33,10 @@ function Details() {
         every touchpoint reinforces the brand's artisanal approach and
         environmental values, helping them stand out in the competitive
         specialty coffee market. See also our{' '}
-        <Link href="/post/urban-coffee-house" prefetch={true}>
+        <Link
+          href="/post/urban-coffee-house"
+          prefetch={true}
+        >
           Urban Coffee House
         </Link>{' '}
         interior design project.
@@ -42,7 +48,10 @@ function Details() {
         touchpoints. The success of this coffee brand demonstrates how
         thoughtful design can communicate values and build lasting customer
         connections—principles we also applied in our{' '}
-        <Link href="/post/fashion-boutique-rebrand" prefetch={true}>
+        <Link
+          href="/post/fashion-boutique-rebrand"
+          prefetch={true}
+        >
           fashion boutique rebrand
         </Link>{' '}
         where we helped a clothing retailer refresh their visual identity while

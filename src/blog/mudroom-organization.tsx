@@ -40,7 +40,10 @@ function Details() {
         supplies and seasonal items, while a magnetic chalkboard panel tracks
         schedules and messages. The cheerful design with navy blue lockers and
         brass hooks proves that functional spaces can be stylish—similar to our{' '}
-        <Link href="/post/laundry-room-transformation" prefetch={true}>
+        <Link
+          href="/post/laundry-room-transformation"
+          prefetch={true}
+        >
           laundry room transformation
         </Link>{' '}
         where we created another beautiful, hardworking utility space.
@@ -51,7 +54,10 @@ function Details() {
         sets the tone for what lies beyond. When paired with a well-designed
         kitchen, these functional spaces create a seamless flow for busy
         families. See how we balanced practicality with character in our{' '}
-        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+        <Link
+          href="/post/farmhouse-kitchen-remodel"
+          prefetch={true}
+        >
           farmhouse kitchen remodel
         </Link>
         , which shares the same commitment to durable materials and thoughtful

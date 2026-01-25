@@ -35,14 +35,20 @@ function Details() {
         without requiring extensive infrastructure. String lights and lanterns
         create magical evening ambiance, while a portable fire feature extends
         the usable season. This project shares design sensibilities with our{' '}
-        <Link href="/post/urban-penthouse-makeover" prefetch={true}>
+        <Link
+          href="/post/urban-penthouse-makeover"
+          prefetch={true}
+        >
           urban penthouse makeover
         </Link>
         . Weatherproof storage benches conceal cushions and accessories when not
         in use. The design maximizes every square foot of this premium outdoor
         space while addressing wind, sun exposure, and building regulations,
         complementing the indoor living concepts explored in our{' '}
-        <Link href="/post/modern-loft-transformation" prefetch={true}>
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
           modern loft transformation
         </Link>
         .
@@ -55,7 +61,10 @@ function Details() {
         materials, weather-conscious planning, and multi-functional spaces apply
         equally to ground-level outdoor projects. For a different take on
         creating inviting outdoor environments,{' '}
-        <Link href="/contact" prefetch={true}>
+        <Link
+          href="/contact"
+          prefetch={true}
+        >
           contact us
         </Link>{' '}
         to discuss your project vision.

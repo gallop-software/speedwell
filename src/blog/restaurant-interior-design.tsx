@@ -32,13 +32,19 @@ function Details() {
         despite full capacity. The color palette of deep greens, brass accents,
         and warm neutrals complements the seasonal menu concept. This attention
         to hospitality design is also reflected in our{' '}
-        <Link href="/post/boutique-hotel-design" prefetch={true}>
+        <Link
+          href="/post/boutique-hotel-design"
+          prefetch={true}
+        >
           boutique hotel design
         </Link>{' '}
         work. We collaborated closely with the chef and operations team to
         ensure the front-of-house design supports back-of-house workflow while
         creating memorable guest experiences, much like our approach with the{' '}
-        <Link href="/post/urban-coffee-house" prefetch={true}>
+        <Link
+          href="/post/urban-coffee-house"
+          prefetch={true}
+        >
           urban coffee house
         </Link>{' '}
         project.
@@ -51,7 +57,10 @@ function Details() {
         impressions at the entrance to the comfort of a well-designed seat. We
         bring this same attention to atmosphere and functionality to all
         commercial spaces, including our{' '}
-        <Link href="/post/creative-coworking-space" prefetch={true}>
+        <Link
+          href="/post/creative-coworking-space"
+          prefetch={true}
+        >
           creative coworking space
         </Link>{' '}
         where design supports both productivity and community.

@@ -25,11 +25,17 @@ function Details() {
         cohesion through consistent elements. The taproom experience includes
         branded glassware, coasters, merchandise, and environmental graphics
         designed with the same attention to wellness we brought to our{' '}
-        <Link href="/post/private-yoga-studio" prefetch={true}>
+        <Link
+          href="/post/private-yoga-studio"
+          prefetch={true}
+        >
           private yoga studio
         </Link>{' '}
         and{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           wellness spa design
         </Link>{' '}
         projects.
@@ -42,7 +48,10 @@ function Details() {
         community to capture the spirit of experimentation that defines their
         craft. If you're ready to develop a distinctive identity for your
         business,{' '}
-        <Link href="/contact" prefetch={true}>
+        <Link
+          href="/contact"
+          prefetch={true}
+        >
           get in touch
         </Link>{' '}
         to start the conversation.

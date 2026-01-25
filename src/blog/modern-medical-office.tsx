@@ -25,11 +25,17 @@ function Details() {
         presentations. Custom iconography and illustrations communicate complex
         technical concepts with clarity and personality—similar to the
         professional environments we created in our{' '}
-        <Link href="/post/executive-workspace" prefetch={true}>
+        <Link
+          href="/post/executive-workspace"
+          prefetch={true}
+        >
           executive workspace
         </Link>{' '}
         and{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           wellness spa design
         </Link>{' '}
         projects.
@@ -41,7 +47,10 @@ function Details() {
         channel and touchpoint. For companies ready to complement their brand
         with a physical workspace that reflects their culture, see how we
         designed a{' '}
-        <Link href="/post/creative-agency-workspace" prefetch={true}>
+        <Link
+          href="/post/creative-agency-workspace"
+          prefetch={true}
+        >
           creative agency workspace
         </Link>{' '}
         that brings brand values to life in the built environment.

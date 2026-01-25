@@ -30,11 +30,17 @@ function Details() {
         atmosphere, while statement lighting fixtures add dramatic focal points
         throughout the space. For a similar approach in a penthouse setting, see
         our{' '}
-        <Link href="/post/urban-penthouse-makeover" prefetch={true}>
+        <Link
+          href="/post/urban-penthouse-makeover"
+          prefetch={true}
+        >
           Urban Penthouse Makeover
         </Link>
         . If you're interested in industrial office spaces, check out our{' '}
-        <Link href="/post/industrial-office-conversion" prefetch={true}>
+        <Link
+          href="/post/industrial-office-conversion"
+          prefetch={true}
+        >
           Industrial Office Conversion
         </Link>{' '}
         project.
@@ -47,7 +53,10 @@ function Details() {
         used floor-to-ceiling drapes to create flexible room divisions when
         needed. This balance of openness and intimacy is something we also
         achieved in our{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian apartment
         </Link>{' '}
         project, where minimalism meets warmth.

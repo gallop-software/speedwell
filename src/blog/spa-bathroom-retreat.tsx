@@ -30,7 +30,10 @@ function Details() {
         Heated marble floors, towel warmers, and a steam function in the shower
         elevate the daily routine into a wellness ritual. This bathroom pairs
         beautifully with our{' '}
-        <Link href="/post/luxury-master-suite" prefetch={true}>
+        <Link
+          href="/post/luxury-master-suite"
+          prefetch={true}
+        >
           luxury master suite
         </Link>{' '}
         designs. The neutral color palette of soft grays and warm whites creates
@@ -38,7 +41,10 @@ function Details() {
         storage solutions keep counters clutter-free, and dimmable lighting
         allows for customizable ambiance from energizing morning light to
         relaxing evening glow. For similar wellness-focused design, see our{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           wellness spa design
         </Link>{' '}
         project.
@@ -51,7 +57,10 @@ function Details() {
         philosophy of mindful, sensory design connects deeply with Eastern
         aesthetics. Discover how we embraced similar principles of tranquility
         and intentional simplicity in our{' '}
-        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+        <Link
+          href="/post/japanese-zen-retreat"
+          prefetch={true}
+        >
           Japanese zen retreat
         </Link>{' '}
         project.

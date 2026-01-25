@@ -40,14 +40,20 @@ function Details() {
         velvet upholstery, and mirrored surfaces. We sourced vintage light
         fixtures and commissioned reproductions of iconic Art Deco designs. For
         more historic preservation work, see our{' '}
-        <Link href="/post/historic-brownstone-revival" prefetch={true}>
+        <Link
+          href="/post/historic-brownstone-revival"
+          prefetch={true}
+        >
           Historic Brownstone Revival
         </Link>
         . Modern conveniences like updated plumbing, electrical, and HVAC were
         seamlessly integrated behind the restored architecture. The result is a
         stunning example of period design that functions beautifully for
         contemporary living. Our{' '}
-        <Link href="/post/boutique-hotel-design" prefetch={true}>
+        <Link
+          href="/post/boutique-hotel-design"
+          prefetch={true}
+        >
           Boutique Hotel Design
         </Link>{' '}
         showcases similar attention to historic detail in a commercial setting.
@@ -59,7 +65,10 @@ function Details() {
         consulted historical archives, worked with specialty craftspeople, and
         sourced vintage pieces from estate sales and antique dealers. This same
         dedication to authenticity and curated collecting informed our{' '}
-        <Link href="/post/library-study-design" prefetch={true}>
+        <Link
+          href="/post/library-study-design"
+          prefetch={true}
+        >
           library study design
         </Link>
         , where every detail contributes to a cohesive, timeless atmosphere.

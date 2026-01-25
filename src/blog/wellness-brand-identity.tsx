@@ -22,7 +22,10 @@ function Details() {
         soft color palettes, organic shapes, and minimalist typography that
         reflects their approach to wellness. For another example of brand
         transformation in the lifestyle space, see our{' '}
-        <Link href="/post/fashion-boutique-rebrand" prefetch={true}>
+        <Link
+          href="/post/fashion-boutique-rebrand"
+          prefetch={true}
+        >
           Fashion Boutique Rebrand
         </Link>{' '}
         project. The brand system includes studio signage, class schedules,
@@ -32,7 +35,10 @@ function Details() {
         resonates with clients seeking balance and wellbeing in their busy
         lives. To see how we translated similar wellness principles into
         physical space design, explore our{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           Wellness Spa Design
         </Link>
         .
@@ -45,7 +51,10 @@ function Details() {
         balanced compositions, natural color palettes, and thoughtful negative
         space. For an inspiring example of how these principles manifest in
         interior design, see our{' '}
-        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+        <Link
+          href="/post/japanese-zen-retreat"
+          prefetch={true}
+        >
           Japanese zen retreat
         </Link>{' '}
         project.
