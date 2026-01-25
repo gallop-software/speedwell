@@ -50,7 +50,7 @@ export function CardTestimonial3({
           <Image
             src={image}
             alt={name}
-            size="thumbnail"
+            size="small"
             aspect="aspect-square"
             rounded="rounded-full"
             className="w-14 h-14 shrink-0 object-cover"
