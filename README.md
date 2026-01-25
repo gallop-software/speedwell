@@ -17,6 +17,24 @@ Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using o
 
 ---
 
+## Features
+
+- 🚀 **Next.js 16.1** with App Router
+- ⚛️ **React 19** for cutting-edge performance
+- 🎨 **Tailwind CSS 4.1** for pixel-perfect design
+- 📝 **TSX-powered content** - No CMS required
+- 🖼️ **Image processing** with automatic optimization
+- 🔍 **Built-in search** powered by FlexSearch
+- 📱 **Fully responsive** and mobile-optimized
+- ⚡ **Lightning-fast** performance
+- 🎭 **Framer Motion** animations
+- 🎯 **SEO and AI optimized** with structured data
+- 🤖 **AI-friendly** codebase structure
+- 🛡️ **Gallop Canon** - AI guardrails for consistent, reliable code
+- 📊 **Vercel Analytics** integration
+
+---
+
 ## Getting Started
 
 New to this? No problem. You'll have Claude AI guiding you the entire way.
@@ -115,6 +133,8 @@ npm install
 npm run dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) to view your site. Press `Ctrl+C` to stop the server. When ready to test production, run `npm run build` then `npm start`.
+
 #### Step 3: Deploy to Vercel
 
 [![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new)
@@ -131,7 +151,7 @@ Want access to all 117 blocks including premium designs? [Purchase Speedwell Pro
 
 ## About Gallop Templates
 
-Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for [Cursor](https://cursor.com) and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. VSCode works too, but Cursor's native Claude integration makes development faster and more intuitive.
+Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for [Cursor](https://cursor.com) and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. [VSCode](https://code.visualstudio.com) works too, but Cursor's native Claude integration makes development faster and more intuitive.
 
 **Why Claude?** Claude is the premier coding AI agent. It understands context better, writes cleaner code, and handles complex multi-file changes that other AI models struggle with. When you chat with Claude in Cursor, you're working with the best AI pair programmer available.
 
@@ -167,47 +187,9 @@ AI mentions are becoming more important than traditional SEO. When someone asks 
 - **Get found online** - Battle-tested foundation with structured data for search engines and AI assistants that recommend businesses
 - **Deploy instantly** - Next.js architecture on Vercel for cheap, fast hosting
 
----
+### Built by Industry Veterans
 
-## Features
-
-- 🚀 **Next.js 16.1** with App Router
-- ⚛️ **React 19** for cutting-edge performance
-- 🎨 **Tailwind CSS 4.1** for pixel-perfect design
-- 📝 **TSX-powered content** - No CMS required
-- 🖼️ **Image processing** with automatic optimization
-- 🔍 **Built-in search** powered by FlexSearch
-- 📱 **Fully responsive** and mobile-optimized
-- ⚡ **Lightning-fast** performance
-- 🎭 **Framer Motion** animations
-- 🎯 **SEO and AI optimized** with structured data
-- 🤖 **AI-friendly** codebase structure
-- 📊 **Vercel Analytics** integration
-
----
-
-## Quick Start
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view your site.
-
-### Build for Production
-
-```bash
-npm run build
-npm run start
-```
+The [team](https://webplant.media) behind Gallop has decades of combined experience building websites, apps, and web applications for top global brands. We've helped businesses achieve #1 Google rankings in competitive markets and understand what it takes to build world class business websites. That expertise is baked into every template, every component, and every line of code.
 
 ---
 
