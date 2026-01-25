@@ -386,7 +386,6 @@ Every dependency is battle-tested in production and chosen for stability, perfor
 - **React Highlight Words** `0.21.0` - Text highlighting
 - **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design)
 - **clsx** `2.1.1` - Conditional className utility
-- **Sindresorhus Slugify** `3.0.0` - URL-friendly slugs
 - **React DOM** `19.2.3` - React rendering
 - **Vercel Analytics** `1.6.1` - Analytics integration
 - **Next Third Parties** `16.1.4` - Third-party script optimization
@@ -410,7 +409,8 @@ Build-time tools for content and asset generation:
 - **Sharp** `0.34.5` - Image processing and optimization
 - **Puppeteer** `24.36.0` - Screenshot generation (featured images)
 - **ttf2woff2** `8.0.0` - Font compression
-- **jsdom** `27.4.0` - HTML parsing for search indexing
+- **jsdom** `27.4.0` - DOM parsing for search index generation
+- **@sindresorhus/slugify** `3.0.0` - URL-friendly slugs for search indexing
 - **xml2js** `0.6.2` - XML/RSS feed generation
 
 ---
