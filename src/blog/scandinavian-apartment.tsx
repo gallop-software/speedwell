@@ -40,14 +40,20 @@ function Details() {
         Large mirrors strategically placed throughout amplify natural light,
         while houseplants bring life and texture. This approach shares
         philosophies with our{' '}
-        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+        <Link
+          href="/post/japanese-zen-retreat"
+          prefetch={true}
+        >
           Japanese zen retreat
         </Link>{' '}
         project. The minimalist approach extends to carefully curated decorative
         objects that are both beautiful and purposeful, embodying the
         Scandinavian concept of "lagom" - just the right amount. For another
         take on timeless design, explore our{' '}
-        <Link href="/post/midcentury-modern-refresh" prefetch={true}>
+        <Link
+          href="/post/midcentury-modern-refresh"
+          prefetch={true}
+        >
           midcentury modern refresh
         </Link>
         .
@@ -60,7 +66,10 @@ function Details() {
         unnecessary ornamentation. To see how we balanced raw architectural
         elements with warm, livable design in a larger open-plan space, explore
         our{' '}
-        <Link href="/post/modern-loft-transformation" prefetch={true}>
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
           modern loft transformation
         </Link>{' '}
         project.

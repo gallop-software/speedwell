@@ -22,15 +22,21 @@ function Details() {
         inviting identity featuring hand-lettered typography, seasonal color
         palettes, and illustrations celebrating regional ingredients. The menu
         design showcases farmer partnerships with beautiful photography and
-        storytelling.         From signage to staff uniforms, every brand element reinforces the
-        restaurant's commitment to sustainability and community. This project
-        shares design philosophies with our{' '}
-        <Link href="/post/restaurant-interior-design" prefetch={true}>
+        storytelling. From signage to staff uniforms, every brand element
+        reinforces the restaurant's commitment to sustainability and community.
+        This project shares design philosophies with our{' '}
+        <Link
+          href="/post/restaurant-interior-design"
+          prefetch={true}
+        >
           restaurant interior design
         </Link>{' '}
         work. The cohesive visual system creates a memorable dining experience
         that has customers returning and sharing on social media, similar to our{' '}
-        <Link href="/post/boutique-retail-design" prefetch={true}>
+        <Link
+          href="/post/boutique-retail-design"
+          prefetch={true}
+        >
           boutique retail design
         </Link>{' '}
         approach.
@@ -43,7 +49,10 @@ function Details() {
         the land that define this brand translate beautifully to domestic
         spaces. For homeowners looking to bring this aesthetic into their own
         kitchens, our{' '}
-        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+        <Link
+          href="/post/farmhouse-kitchen-remodel"
+          prefetch={true}
+        >
           Farmhouse Kitchen Remodel
         </Link>{' '}
         showcases how rustic charm and modern functionality create inviting

@@ -30,11 +30,17 @@ function Details() {
         strips that illuminate bookshelves without glare. The color palette of
         deep greens, burgundy, and warm wood tones creates a cocoon-like
         atmosphere. For a more modern take on home offices, see our{' '}
-        <Link href="/post/executive-workspace" prefetch={true}>
+        <Link
+          href="/post/executive-workspace"
+          prefetch={true}
+        >
           Executive Workspace
         </Link>{' '}
         project. If you're interested in traditional design, explore our{' '}
-        <Link href="/post/historic-brownstone-revival" prefetch={true}>
+        <Link
+          href="/post/historic-brownstone-revival"
+          prefetch={true}
+        >
           Historic Brownstone Revival
         </Link>
         .
@@ -47,7 +53,10 @@ function Details() {
         settings, these spaces often connect to wine cellars or tasting rooms
         that share the same appreciation for craftsmanship and leisure. See how
         we created such harmonious spaces in our{' '}
-        <Link href="/post/wine-country-estate" prefetch={true}>
+        <Link
+          href="/post/wine-country-estate"
+          prefetch={true}
+        >
           Wine Country Estate
         </Link>{' '}
         project, where traditional elegance meets relaxed sophistication.

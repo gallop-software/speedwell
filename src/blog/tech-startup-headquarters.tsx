@@ -23,15 +23,22 @@ function Details() {
         features refined typography with custom letterforms, while the color
         palette draws from the hotel's architectural details. Brand collateral
         includes guest room directories, restaurant menus, key cards, and
-        signage that create a cohesive luxury experience.         Digital applications maintain the elegant aesthetic across the website
-        and social media, positioning the hotel as a destination for discerning
-        travelers seeking authentic local experiences. For similar workspace
-        branding projects, explore our{' '}
-        <Link href="/post/creative-agency-workspace" prefetch={true}>
+        signage that create a cohesive luxury experience. Digital applications
+        maintain the elegant aesthetic across the website and social media,
+        positioning the hotel as a destination for discerning travelers seeking
+        authentic local experiences. For similar workspace branding projects,
+        explore our{' '}
+        <Link
+          href="/post/creative-agency-workspace"
+          prefetch={true}
+        >
           creative agency workspace
         </Link>{' '}
         and{' '}
-        <Link href="/post/executive-workspace" prefetch={true}>
+        <Link
+          href="/post/executive-workspace"
+          prefetch={true}
+        >
           executive workspace
         </Link>{' '}
         designs.
@@ -43,7 +50,10 @@ function Details() {
         creating unified visual languages helps hotels differentiate themselves
         in competitive markets. For insights into how we apply similar branding
         principles to collaborative workspaces, explore our{' '}
-        <Link href="/post/creative-coworking-space" prefetch={true}>
+        <Link
+          href="/post/creative-coworking-space"
+          prefetch={true}
+        >
           creative coworking space
         </Link>{' '}
         project.

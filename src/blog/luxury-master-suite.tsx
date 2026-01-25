@@ -30,12 +30,18 @@ function Details() {
         beneath a statement chandelier, a spacious walk-in shower with body
         jets, and dual vanities with backlit mirrors. For more bathroom
         inspiration, explore our{' '}
-        <Link href="/post/spa-bathroom-retreat" prefetch={true}>
+        <Link
+          href="/post/spa-bathroom-retreat"
+          prefetch={true}
+        >
           Spa Bathroom Retreat
         </Link>
         . Heated marble floors, a built-in sound system, and automated lighting
         complete the spa-like atmosphere. See also our{' '}
-        <Link href="/post/bohemian-bedroom-design" prefetch={true}>
+        <Link
+          href="/post/bohemian-bedroom-design"
+          prefetch={true}
+        >
           Bohemian Bedroom Design
         </Link>{' '}
         for a different aesthetic approach.
@@ -47,7 +53,10 @@ function Details() {
         from high-end hotel design, incorporating layered textures, thoughtful
         amenities, and seamless technology integration. To see how we translate
         these principles into commercial settings, explore our{' '}
-        <Link href="/post/boutique-hotel-design" prefetch={true}>
+        <Link
+          href="/post/boutique-hotel-design"
+          prefetch={true}
+        >
           Boutique Hotel Design
         </Link>{' '}
         project, which showcases the sophisticated hospitality aesthetic that

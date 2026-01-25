@@ -20,7 +20,10 @@ function Details() {
         This independent fashion boutique needed a rebrand that captured their
         curated aesthetic and commitment to sustainable fashion, inspired by the
         principles we applied in our{' '}
-        <Link href="/post/boutique-retail-design" prefetch={true}>
+        <Link
+          href="/post/boutique-retail-design"
+          prefetch={true}
+        >
           boutique retail design
         </Link>{' '}
         work. We designed a sophisticated visual identity that balances timeless
@@ -30,7 +33,10 @@ function Details() {
         window displays and social media templates. The cohesive system
         positions the boutique as a destination for conscious consumers seeking
         unique, high-quality pieces—an approach that shares DNA with our{' '}
-        <Link href="/post/wellness-brand-identity" prefetch={true}>
+        <Link
+          href="/post/wellness-brand-identity"
+          prefetch={true}
+        >
           wellness brand identity
         </Link>{' '}
         project.
@@ -41,7 +47,10 @@ function Details() {
         customer touchpoint, from the storefront to the shopping bag they carry
         home. The visual identity extends into the physical space, informing
         fixture design, lighting choices, and product display strategies. Our{' '}
-        <Link href="/post/urban-coffee-house" prefetch={true}>
+        <Link
+          href="/post/urban-coffee-house"
+          prefetch={true}
+        >
           Urban Coffee House
         </Link>{' '}
         project demonstrates how cohesive branding transforms commercial spaces

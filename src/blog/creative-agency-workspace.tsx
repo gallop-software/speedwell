@@ -21,7 +21,10 @@ function Details() {
         growing clean beauty market. We created a sophisticated, minimalist
         brand identity that emphasizes purity and transparency, drawing
         inspiration from our{' '}
-        <Link href="/post/executive-workspace" prefetch={true}>
+        <Link
+          href="/post/executive-workspace"
+          prefetch={true}
+        >
           executive workspace
         </Link>{' '}
         project. The design features soft botanical illustrations, a calming
@@ -31,7 +34,10 @@ function Details() {
         guidelines include photography direction, social media templates, and
         retail display standards that maintain consistency across all customer
         touchpoints—similar to the cohesive approach we took with our{' '}
-        <Link href="/post/tech-startup-headquarters" prefetch={true}>
+        <Link
+          href="/post/tech-startup-headquarters"
+          prefetch={true}
+        >
           tech startup headquarters
         </Link>{' '}
         branding.
@@ -43,7 +49,10 @@ function Details() {
         worked closely with the skincare company's team to evolve—not
         erase—their heritage while positioning them competitively in the clean
         beauty space. Ready to refresh your brand?{' '}
-        <Link href="/contact" prefetch={true}>
+        <Link
+          href="/contact"
+          prefetch={true}
+        >
           Contact us
         </Link>{' '}
         to discuss your vision.

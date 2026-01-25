@@ -30,7 +30,10 @@ function Details() {
         Shiplap accent walls, beadboard ceilings, and nautical-inspired details
         honor the cottage's heritage while feeling fresh and current. For a
         larger coastal project, see our{' '}
-        <Link href="/post/coastal-home-renovation" prefetch={true}>
+        <Link
+          href="/post/coastal-home-renovation"
+          prefetch={true}
+        >
           Coastal Home Renovation
         </Link>
         . We maximized natural light with sheer curtains and added coastal
@@ -38,7 +41,10 @@ function Details() {
         The result is a comfortable, inviting retreat that feels authentically
         beachy without clichés, perfectly suited for lazy summer days and family
         gatherings. You might also appreciate our{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian Apartment
         </Link>{' '}
         for similar light-filled design inspiration.
@@ -49,7 +55,10 @@ function Details() {
         reclaimed materials, and energy-efficient lighting that honor the
         natural coastal environment. If you're drawn to eco-conscious design
         principles, our{' '}
-        <Link href="/post/sustainable-green-home" prefetch={true}>
+        <Link
+          href="/post/sustainable-green-home"
+          prefetch={true}
+        >
           sustainable green home
         </Link>{' '}
         project demonstrates how environmental responsibility and beautiful

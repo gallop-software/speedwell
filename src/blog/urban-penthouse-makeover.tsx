@@ -29,7 +29,10 @@ function Details() {
         windows. A neutral palette of grays, blacks, and warm whites provides a
         refined backdrop for the owner's contemporary art collection. For
         similar open-concept urban living, explore our{' '}
-        <Link href="/post/modern-loft-transformation" prefetch={true}>
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
           Modern Loft Transformation
         </Link>{' '}
         project.
@@ -43,7 +46,10 @@ function Details() {
         The master suite includes a spa-inspired bathroom with city views from
         the soaking tub. See how we extended these design principles to outdoor
         spaces in our{' '}
-        <Link href="/post/rooftop-terrace-design" prefetch={true}>
+        <Link
+          href="/post/rooftop-terrace-design"
+          prefetch={true}
+        >
           Rooftop Terrace Design
         </Link>
         .
@@ -51,10 +57,13 @@ function Details() {
 
       <P>
         The master suite became a particular focus, with custom closets,
-        integrated charging stations, and a reading nook that capitalizes on
-        the stunning cityscape. For clients seeking similar luxury bedroom
+        integrated charging stations, and a reading nook that capitalizes on the
+        stunning cityscape. For clients seeking similar luxury bedroom
         transformations, our{' '}
-        <Link href="/post/luxury-master-suite" prefetch={true}>
+        <Link
+          href="/post/luxury-master-suite"
+          prefetch={true}
+        >
           luxury master suite
         </Link>{' '}
         project showcases how we create serene, sophisticated retreats within

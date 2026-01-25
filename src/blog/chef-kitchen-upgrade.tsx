@@ -31,15 +31,24 @@ function Details() {
         shelving displays copper pots and frequently-used items, while deep
         drawers accommodate large cookware. For more kitchen inspiration, see
         our{' '}
-        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+        <Link
+          href="/post/farmhouse-kitchen-remodel"
+          prefetch={true}
+        >
           Farmhouse Kitchen Remodel
         </Link>{' '}
         or the sleek{' '}
-        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+        <Link
+          href="/post/minimalist-kitchen-redesign"
+          prefetch={true}
+        >
           Minimalist Kitchen Redesign
         </Link>
         . Explore our{' '}
-        <Link href="/kitchen-bath" prefetch={true}>
+        <Link
+          href="/kitchen-bath"
+          prefetch={true}
+        >
           Kitchen & Bath services
         </Link>
         .
@@ -52,7 +61,10 @@ function Details() {
         kitchens—strategic station placement, durable materials, and efficient
         ventilation—translate beautifully to residential settings. Discover how
         we apply these concepts in commercial hospitality in our{' '}
-        <Link href="/post/restaurant-interior-design" prefetch={true}>
+        <Link
+          href="/post/restaurant-interior-design"
+          prefetch={true}
+        >
           Restaurant Interior Design
         </Link>{' '}
         project, where function and aesthetics unite to create exceptional

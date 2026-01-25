@@ -31,11 +31,17 @@ function Details() {
         seating areas perfect for reading or meditation. We incorporated
         abundant plants in hanging planters and vintage ceramic pots to bring
         life and organic form. For other bedroom transformations, explore our{' '}
-        <Link href="/post/modern-nursery-design" prefetch={true}>
+        <Link
+          href="/post/modern-nursery-design"
+          prefetch={true}
+        >
           Modern Nursery Design
         </Link>{' '}
         or the serene{' '}
-        <Link href="/post/guest-suite-makeover" prefetch={true}>
+        <Link
+          href="/post/guest-suite-makeover"
+          prefetch={true}
+        >
           Guest Suite Makeover
         </Link>
         . String lights and lanterns provide ambient lighting, while layered
@@ -50,7 +56,10 @@ function Details() {
         patterns requires a discerning eye to avoid overwhelming the senses. For
         a different approach to creating a serene sleeping sanctuary, explore
         our{' '}
-        <Link href="/post/luxury-master-suite" prefetch={true}>
+        <Link
+          href="/post/luxury-master-suite"
+          prefetch={true}
+        >
           Luxury Master Suite
         </Link>{' '}
         project, which achieves tranquility through refined simplicity and

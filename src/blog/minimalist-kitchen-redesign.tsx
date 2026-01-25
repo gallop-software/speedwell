@@ -32,13 +32,21 @@ function Details() {
         fixtures for subtle contrast. Every element was carefully selected to
         eliminate visual clutter while ensuring maximum functionality for daily
         cooking and entertaining. For more kitchen inspiration, see our{' '}
-        <Link href="/post/chef-kitchen-upgrade" prefetch={true}>
+        <Link
+          href="/post/chef-kitchen-upgrade"
+          prefetch={true}
+        >
           chef kitchen upgrade
-        </Link>, or discover how we apply minimalist principles throughout a
-        home in our{' '}
-        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+        </Link>
+        , or discover how we apply minimalist principles throughout a home in
+        our{' '}
+        <Link
+          href="/post/japanese-zen-retreat"
+          prefetch={true}
+        >
           Japanese zen retreat
-        </Link>.
+        </Link>
+        .
       </P>
 
       <P>
@@ -47,7 +55,10 @@ function Details() {
         lines, thoughtful storage solutions, and a restrained material palette
         work together to promote calm and clarity. See how we applied similar
         principles in our{' '}
-        <Link href="/post/scandinavian-apartment" prefetch={true}>
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
           Scandinavian Apartment
         </Link>{' '}
         project, where functional beauty defines every room.

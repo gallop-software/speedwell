@@ -36,7 +36,10 @@ function Details() {
         therapy rooms with heated tables, an infrared sauna, a meditation
         lounge, and a tea bar with healthy refreshments. For a more intimate
         wellness space, see our{' '}
-        <Link href="/post/private-yoga-studio" prefetch={true}>
+        <Link
+          href="/post/private-yoga-studio"
+          prefetch={true}
+        >
           Private Yoga Studio
         </Link>{' '}
         project. A calming color palette of sage, sand, and soft whites combined
@@ -44,7 +47,10 @@ function Details() {
         details like aromatherapy, soft robes, and comfortable waiting areas
         ensure guests feel pampered from arrival to departure. You might also
         enjoy our{' '}
-        <Link href="/post/spa-bathroom-retreat" prefetch={true}>
+        <Link
+          href="/post/spa-bathroom-retreat"
+          prefetch={true}
+        >
           Spa Bathroom Retreat
         </Link>{' '}
         for residential wellness inspiration.
@@ -56,7 +62,10 @@ function Details() {
         space planning. Water features, carefully placed greenery, and
         uncluttered circulation paths guide guests through a journey of
         relaxation. For a residential interpretation of these principles, our{' '}
-        <Link href="/post/japanese-zen-retreat" prefetch={true}>
+        <Link
+          href="/post/japanese-zen-retreat"
+          prefetch={true}
+        >
           Japanese Zen Retreat
         </Link>{' '}
         demonstrates how tranquility can be woven into everyday living spaces.

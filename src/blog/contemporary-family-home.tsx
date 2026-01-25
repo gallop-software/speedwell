@@ -29,14 +29,20 @@ function Details() {
         The color palette features warm neutrals accented with bold pops of
         color in artwork and textiles. For similar open-plan concepts, explore
         our{' '}
-        <Link href="/post/open-concept-living" prefetch={true}>
+        <Link
+          href="/post/open-concept-living"
+          prefetch={true}
+        >
           Open Concept Living
         </Link>{' '}
         project. Large-format tiles, natural oak flooring, and sleek fixtures
         contribute to the modern feel. We incorporated smart home technology,
         energy-efficient lighting, and durable, family-friendly materials that
         don't sacrifice style. Our{' '}
-        <Link href="/post/modern-nursery-design" prefetch={true}>
+        <Link
+          href="/post/modern-nursery-design"
+          prefetch={true}
+        >
           Modern Nursery Design
         </Link>{' '}
         showcases how we create child-friendly spaces with sophisticated
@@ -44,11 +50,14 @@ function Details() {
       </P>
 
       <P>
-        The kitchen became the heart of this family home, featuring an
-        expansive island for homework, meal prep, and casual gatherings. If
-        you're considering a kitchen renovation that balances functionality
-        with warmth, explore our{' '}
-        <Link href="/post/farmhouse-kitchen-remodel" prefetch={true}>
+        The kitchen became the heart of this family home, featuring an expansive
+        island for homework, meal prep, and casual gatherings. If you're
+        considering a kitchen renovation that balances functionality with
+        warmth, explore our{' '}
+        <Link
+          href="/post/farmhouse-kitchen-remodel"
+          prefetch={true}
+        >
           farmhouse kitchen remodel
         </Link>{' '}
         for inspiration on creating welcoming spaces that bring families

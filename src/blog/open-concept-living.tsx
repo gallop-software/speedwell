@@ -39,11 +39,17 @@ function Details() {
         connection. Strategic built-in storage and concealed utility areas keep
         the open space organized and clutter-free. For more whole-home
         transformations, explore our{' '}
-        <Link href="/post/contemporary-family-home" prefetch={true}>
+        <Link
+          href="/post/contemporary-family-home"
+          prefetch={true}
+        >
           contemporary family home
         </Link>{' '}
         and{' '}
-        <Link href="/post/modern-loft-transformation" prefetch={true}>
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
           modern loft transformation
         </Link>{' '}
         projects.
@@ -54,7 +60,10 @@ function Details() {
         complements the flowing spaces. Clean lines, integrated appliances, and
         thoughtful storage ensure the cooking area feels part of the living
         space rather than separate from it. Our{' '}
-        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+        <Link
+          href="/post/minimalist-kitchen-redesign"
+          prefetch={true}
+        >
           minimalist kitchen redesign
         </Link>{' '}
         offers additional inspiration for creating kitchens that embrace

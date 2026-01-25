@@ -29,14 +29,20 @@ function Details() {
         Key updates included opening the kitchen to the dining room, updating
         all bathrooms with classic subway tile and modern fixtures, and creating
         a finished basement family room. This approach is similar to our{' '}
-        <Link href="/post/contemporary-family-home" prefetch={true}>
+        <Link
+          href="/post/contemporary-family-home"
+          prefetch={true}
+        >
           contemporary family home
         </Link>{' '}
         project. We mixed traditional elements like tufted upholstery and
         oriental rugs with contemporary art and sleek accessories. The result
         balances the charm of historic architecture with the comfort and
         functionality today's families need, much like our{' '}
-        <Link href="/post/historic-brownstone-revival" prefetch={true}>
+        <Link
+          href="/post/historic-brownstone-revival"
+          prefetch={true}
+        >
           historic brownstone revival
         </Link>
         , creating timeless interiors that won't feel dated.
@@ -49,7 +55,10 @@ function Details() {
         elements—their clean lines and organic forms complement traditional
         architecture while adding contemporary flair. For those drawn to this
         aesthetic, our{' '}
-        <Link href="/post/midcentury-modern-refresh" prefetch={true}>
+        <Link
+          href="/post/midcentury-modern-refresh"
+          prefetch={true}
+        >
           Midcentury Modern Refresh
         </Link>{' '}
         demonstrates how iconic design from the 1950s and 60s can feel fresh and

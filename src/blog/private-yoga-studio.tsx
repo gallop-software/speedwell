@@ -36,14 +36,20 @@ function Details() {
         guided meditations and ambient music. The minimalist design in natural
         materials and a palette of soft greens and warm woods promotes
         tranquility, similar to our{' '}
-        <Link href="/post/wellness-spa-design" prefetch={true}>
+        <Link
+          href="/post/wellness-spa-design"
+          prefetch={true}
+        >
           wellness spa design
         </Link>{' '}
         approach. Blackout shades provide darkness for restorative practices,
         while sheer curtains filter natural light beautifully during morning sun
         salutations. For clients seeking a more active home wellness space, see
         our{' '}
-        <Link href="/post/luxury-fitness-studio" prefetch={true}>
+        <Link
+          href="/post/luxury-fitness-studio"
+          prefetch={true}
+        >
           luxury fitness studio
         </Link>{' '}
         project.
@@ -53,9 +59,12 @@ function Details() {
         Creating a dedicated wellness space at home has become increasingly
         important for maintaining balance in busy lives. Whether you're
         interested in yoga, meditation, or simply need a quiet retreat, we can
-        help design a space tailored to your practice. If sustainability is
-        also a priority, our{' '}
-        <Link href="/post/sustainable-green-home" prefetch={true}>
+        help design a space tailored to your practice. If sustainability is also
+        a priority, our{' '}
+        <Link
+          href="/post/sustainable-green-home"
+          prefetch={true}
+        >
           sustainable green home
         </Link>{' '}
         project demonstrates how eco-friendly materials and biophilic design

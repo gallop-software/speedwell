@@ -34,11 +34,17 @@ function Details() {
         entrance foyer with its restored staircase to the chef's kitchen that
         respects the home's character while providing state-of-the-art
         functionality. The preservation techniques echo those in our{' '}
-        <Link href="/post/art-deco-restoration" prefetch={true}>
+        <Link
+          href="/post/art-deco-restoration"
+          prefetch={true}
+        >
           art deco restoration
         </Link>{' '}
         project, while the curated interiors share sensibilities with our{' '}
-        <Link href="/post/library-study-design" prefetch={true}>
+        <Link
+          href="/post/library-study-design"
+          prefetch={true}
+        >
           library study design
         </Link>
         .
@@ -49,7 +55,10 @@ function Details() {
         demands of preservation and the vision to create spaces that feel
         relevant today. This brownstone's primary suite exemplifies how period
         details can coexist with modern luxury—an approach we also bring to our{' '}
-        <Link href="/post/luxury-master-suite" prefetch={true}>
+        <Link
+          href="/post/luxury-master-suite"
+          prefetch={true}
+        >
           luxury master suite
         </Link>{' '}
         projects where comfort and elegance are paramount.

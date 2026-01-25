@@ -45,13 +45,19 @@ function Details() {
         We incorporated abundant natural light, strategic cross-ventilation, and
         a living plant wall that improves air quality. These principles also
         guided our{' '}
-        <Link href="/post/contemporary-family-home" prefetch={true}>
+        <Link
+          href="/post/contemporary-family-home"
+          prefetch={true}
+        >
           contemporary family home
         </Link>{' '}
         project. The design demonstrates that environmental responsibility and
         beautiful, livable interiors are not mutually exclusive. For another
         example of thoughtful material selection, see our{' '}
-        <Link href="/post/minimalist-kitchen-redesign" prefetch={true}>
+        <Link
+          href="/post/minimalist-kitchen-redesign"
+          prefetch={true}
+        >
           minimalist kitchen redesign
         </Link>
         .
@@ -63,7 +69,10 @@ function Details() {
         or building new, the same commitment to eco-conscious materials and
         energy efficiency can guide every decision. See how we applied these
         values in a coastal setting with our{' '}
-        <Link href="/post/coastal-cottage-refresh" prefetch={true}>
+        <Link
+          href="/post/coastal-cottage-refresh"
+          prefetch={true}
+        >
           coastal cottage refresh
         </Link>{' '}
         project, where natural ventilation and locally-sourced materials created

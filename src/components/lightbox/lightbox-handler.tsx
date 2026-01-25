@@ -159,7 +159,9 @@ export function LightboxHandler({ containerRef }: LightboxHandlerProps) {
       open={open}
       close={() => setOpen(false)}
       slides={slides as SlideImage[]}
-      plugins={slides.length <= 1 ? [Captions] : [Captions, Thumbnails, Counter]}
+      plugins={
+        slides.length <= 1 ? [Captions] : [Captions, Thumbnails, Counter]
+      }
       thumbnails={{ position: 'bottom', showToggle: true }}
       captions={{ showToggle: true, descriptionMaxLines: 8 }}
       controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}

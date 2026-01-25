@@ -38,9 +38,13 @@ function Details() {
         and a pretty pendant fixture brighten the windowless space. This
         transformation proves that utility rooms can be both hardworking and
         beautiful—see how we applied similar principles in our{' '}
-        <Link href="/post/mudroom-organization" prefetch={true}>
+        <Link
+          href="/post/mudroom-organization"
+          prefetch={true}
+        >
           mudroom organization project
-        </Link>.
+        </Link>
+        .
       </P>
 
       <P>
@@ -48,7 +52,10 @@ function Details() {
         functionality of your home. When every room—including the laundry—is
         designed with intention, daily routines become more efficient and less
         stressful. Learn more about how we approach whole-home design on our{' '}
-        <Link href="/residential" prefetch={true}>
+        <Link
+          href="/residential"
+          prefetch={true}
+        >
           residential services
         </Link>{' '}
         page.
