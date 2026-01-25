@@ -15,7 +15,6 @@ export default {
   ignore: [
     '_scripts/**',
     '_data/**',
-    '_docs/**',
     // Config files that are used by tools
     'src/components/**/config.ts',
     'src/components/**/types.ts',
