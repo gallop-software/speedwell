@@ -4,7 +4,7 @@
 
 The premier feminine website template for women-owned businesses who want to build at the speed of thought, look more professional than the competition, and rank #1 on Google.
 
-Just chat with Claude AI inside <a href="https://cursor.com" target="_blank">Cursor</a> text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our Gallop community. Go live in minutes.
+Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our Gallop community. Go live in minutes.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
@@ -19,7 +19,7 @@ New to this? No problem. You'll have Claude AI guiding you the entire way.
 
 ### Step 1: Install Cursor
 
-<a href="https://cursor.com" target="_blank">Download Cursor</a> for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site.
+[Download Cursor](https://cursor.com) for your computer (Mac or Windows). This is where you'll chat with Claude AI to build your site.
 
 ### Step 2: Download This Template
 
@@ -53,13 +53,13 @@ Once your site is running, you can describe any changes you want:
 
 Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
 
-<a href="https://gallop-software.slack.com/" target="_blank"><img src="https://img.shields.io/badge/Join%20Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Join Slack"></a>
+[Join the Gallop Slack](https://gallop-software.slack.com/)
 
 ---
 
 ## Put Your Site Online
 
-When you're ready to share your site with the world, you'll need a free <a href="https://github.com" target="_blank">GitHub</a> account to store your code and a free <a href="https://vercel.com" target="_blank">Vercel</a> account to host your site.
+When you're ready to share your site with the world, you'll need a free [GitHub](https://github.com) account to store your code and a free [Vercel](https://vercel.com) account to host your site.
 
 ### The Easy Way
 
@@ -75,7 +75,7 @@ If you're comfortable with Git:
 
 1. **Create your own repository** from the Speedwell template:
 
-   [![Use this template](https://img.shields.io/badge/Use_this_template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
+   [Use this template on GitHub](https://github.com/gallop-software/speedwell/generate)
 
 2. **Clone your new repository** to your computer. Ask Claude AI:
 
@@ -92,21 +92,21 @@ npm run dev
 
 3. **Deploy to Vercel:**
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+   [Deploy with Vercel](https://vercel.com/new)
 
    Select your repository, and Vercel will automatically deploy whenever you push changes.
 
-Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See <a href="https://vercel.com/docs/projects/domains" target="_blank">Vercel's domain setup guide</a>.
+Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
 
 ### Speedwell Pro
 
-Want access to all 117 blocks including premium designs? <a href="https://gallop.software/code/speedwell/blocks#pricing" target="_blank">Purchase Speedwell Pro</a> and clone from the Pro repository, which includes all Pro blocks ready to use.
+Want access to all 117 blocks including premium designs? [Purchase Speedwell Pro](https://gallop.software/code/speedwell/blocks#pricing) and clone from the Pro repository, which includes all Pro blocks ready to use.
 
 ---
 
 ## About Gallop Templates
 
-Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for <a href="https://cursor.com" target="_blank">Cursor</a> and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. VSCode works too, but Cursor's native Claude integration makes development faster and more intuitive.
+Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for [Cursor](https://cursor.com) and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. VSCode works too, but Cursor's native Claude integration makes development faster and more intuitive.
 
 **Why Claude?** Claude is the premier coding AI agent. It understands context better, writes cleaner code, and handles complex multi-file changes that other AI models struggle with. When you chat with Claude in Cursor, you're working with the best AI pair programmer available.
 
