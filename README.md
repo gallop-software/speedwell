@@ -2,7 +2,9 @@
 
 [![Speedwell Theme](./public/speedwell.jpg)](https://speedwell.gallop.software)
 
-The premier feminine website template for women-owned businesses ready to stand out online and rank #1 on Google. Build your site at the speed of thought by chatting with Claude AI inside <a href="https://cursor.com" target="_blank">Cursor</a>. Describe what you want, and it writes the code. No CMS, no page builders, no limitations. Build fun and cute custom layouts, add smooth animations, and have AI configure your SEO instantly. Go live in minutes.
+The premier feminine website template for women-owned businesses who want to build at the speed of thought, look more professional than the competition, and rank #1 on Google.
+
+Just chat with Claude AI inside <a href="https://cursor.com" target="_blank">Cursor</a> text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO instantly, expand endlessly, and get prompting tips from our Gallop community. Go live in minutes.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
