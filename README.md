@@ -49,6 +49,12 @@ Once your site is running, you can describe any changes you want:
 - _"Add a new page called Services"_
 - _"Optimize the SEO on my homepage"_
 
+### Join the Community
+
+Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
+
+<a href="https://gallop-software.slack.com/" target="_blank"><img src="https://img.shields.io/badge/Join%20Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Join Slack"></a>
+
 ---
 
 ## Put Your Site Online
