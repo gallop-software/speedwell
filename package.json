@@ -27,7 +27,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "postinstall": "node _scripts/track-install.mjs || true",
+    "postinstall": "node _scripts/telemetry.mjs || true",
     "dev": "next dev",
     "build": "npm run blog && next build",
     "start": "next start",
