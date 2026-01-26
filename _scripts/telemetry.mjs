@@ -1,4 +1,5 @@
 import { readFile, writeFile, access } from 'fs/promises'
+import { randomUUID } from 'crypto'
 
 const MARKER_FILE = '.telemetry'
 
@@ -15,6 +16,7 @@ const timeout = setTimeout(() => controller.abort(), 5000)
 
 try {
   const pkg = JSON.parse(await readFile('./package.json', 'utf8'))
+  const machineId = randomUUID()
 
   const res = await fetch('https://gallop.software/api/telemetry', {
     method: 'POST',
@@ -26,12 +28,13 @@ try {
       tier: pkg.name.includes('pro') ? 'pro' : 'lite',
       node: process.version,
       environment: process.env.CI ? 'ci' : process.env.VERCEL ? 'vercel' : 'local',
+      machineId,
       timestamp: new Date().toISOString()
     })
   })
 
   if (res.ok) {
-    await writeFile(MARKER_FILE, new Date().toISOString())
+    await writeFile(MARKER_FILE, machineId)
   }
 } catch {
   // Silent fail - don't block installation
