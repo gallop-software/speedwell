@@ -1,6 +1,6 @@
 import { readFile, writeFile, access } from 'fs/promises'
 
-const MARKER_FILE = '.telemetry-sent'
+const MARKER_FILE = '.telemetry'
 
 // Check if already sent
 try {
