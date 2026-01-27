@@ -65,7 +65,7 @@ export function StickyNavbar({
                   </div>
 
                   {/* Right Side - Nav, Social Media Icons and Mobile Button */}
-                  <div className="flex items-center ml-auto gap-6">
+                  <div className="flex items-center ml-auto gap-2">
                     <SearchButton enableShortcut={false} />
                     <DesktopNav
                       isScrolling={isScrolling}

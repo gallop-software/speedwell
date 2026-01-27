@@ -80,7 +80,7 @@ export function Navbar({
                 </div>
 
                 {/* Right Side - Nav (at lg only), Social Media Icons and Mobile Button */}
-                <div className="flex items-center ml-auto gap-6">
+                <div className="flex items-center ml-auto gap-2">
                   <div className="hidden lg:block xl:hidden">
                     <DesktopNav
                       isScrolling={isScrolling}
