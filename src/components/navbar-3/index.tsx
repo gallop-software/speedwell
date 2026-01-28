@@ -60,8 +60,8 @@ export function Navbar3({
                   </Link>
                 </div>
 
-                {/* Right Side - Social Media Icons and Mobile Button */}
-                <div className="flex items-center ml-auto space-x-0 xl:space-x-1">
+                {/* Right Side - Nav, Social Media Icons and Mobile Button */}
+                <div className="flex items-center ml-auto gap-2">
                   <SearchButton
                     enableShortcut={true}
                     dark={dark}
