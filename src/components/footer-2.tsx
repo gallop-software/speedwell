@@ -128,7 +128,7 @@ export function Footer2() {
     <footer className="">
       <Gradient className="relative">
         <div className="absolute inset-2 rounded-4xl bg-white/50 z-0" />
-        <Container className="pt-16 pb-8 z-10 relative">
+        <Container className="pt-16 pb-0 z-10 relative">
           {/* Main footer content - 4 columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[35%_1fr_1fr_1fr] gap-12 lg:gap-12 pb-12">
             {/* Column 1: Logo and Description */}
@@ -232,8 +232,8 @@ export function Footer2() {
           </div>
 
           {/* Bottom bar with copyright and webmaster */}
-          <div className="border-t border-accent/10 pt-6">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+          <div className="border-t border-accent/10 py-8">
+            <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-4">
               <Copyright />
               <WebMaster />
             </div>
