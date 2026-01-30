@@ -2,22 +2,30 @@ import { clsx } from 'clsx'
 import Link from 'next/link'
 import { Paragraph } from '@/components/paragraph'
 import type { ComponentProps } from 'react'
-import imageMeta from '@/../_data/_meta.json'
+import leanMeta from '@/../_data/_meta.json'
 
-type ImageSize = 'small' | 'medium' | 'large' | 'full'
-
-type ImageSizeData = {
-  width: number
-  height: number
-  file: string
+type LeanImageEntry = {
+  w: number
+  h: number
+  blur: string
+  s?: 1
 }
 
-type ImageMetadata = {
-  [size in ImageSize]?: ImageSizeData
+type LeanMeta = Record<string, LeanImageEntry>
+
+// Map size prop to thumbnail suffix
+const SIZE_SUFFIX: Record<string, string> = {
+  small: '-sm',
+  medium: '-md',
+  large: '-lg',
 }
 
-type ImageMetaData = {
-  [key: string]: ImageMetadata
+// Get thumbnail path from original path
+function getThumbnailPath(originalPath: string, size: 'small' | 'medium' | 'large'): string {
+  const ext = originalPath.match(/\.\w+$/)?.[0] || '.jpg'
+  const base = originalPath.replace(/\.\w+$/, '')
+  const outputExt = ext.toLowerCase() === '.png' ? '.png' : '.jpg'
+  return `/images${base}${SIZE_SUFFIX[size]}${outputExt}`
 }
 
 export interface ImageProps extends Omit<
@@ -82,24 +90,23 @@ export function Image({
   let resolvedHeight: number | 'auto' | undefined = height
 
   if (size) {
-    // Look up the image metadata using src directly
-    const metaData = imageMeta as ImageMetaData
-    const metadata = metaData[src]
-    if (metadata) {
-      // Try to get the requested size, fall back to 'full' if it doesn't exist
-      let sizeData = metadata[size]
-      if (!sizeData && size !== 'full') {
-        // If requested size doesn't exist, fall back to full size
-        sizeData = metadata['full']
+    // Normalize src to have leading slash for lookup
+    const lookupKey = src.startsWith('/') ? src : `/${src}`
+    const meta = leanMeta as LeanMeta
+    const entry = meta[lookupKey]
+    
+    if (entry) {
+      if (size === 'full') {
+        // Use original image
+        resolvedSrc = src
+      } else {
+        // Use thumbnail
+        resolvedSrc = getThumbnailPath(lookupKey, size)
       }
-
-      if (sizeData) {
-        resolvedSrc = sizeData.file
-        // Only use metadata dimensions if user didn't explicitly provide them
-        if (!hasExplicitWidth && !hasExplicitHeight) {
-          resolvedWidth = sizeData.width
-          resolvedHeight = sizeData.height
-        }
+      // Only use metadata dimensions if user didn't explicitly provide them
+      if (!hasExplicitWidth && !hasExplicitHeight) {
+        resolvedWidth = entry.w
+        resolvedHeight = entry.h
       }
     }
   }
@@ -120,23 +127,15 @@ export function Image({
     mediaLinkHref = href
     isMediaLink = true
   }
-  // If href is not set but mediaLink is true, look up full-size image in metadata
+  // If href is not set but mediaLink is true, use original image for lightbox
   else if (!href && mediaLink) {
-    const metaData = imageMeta as ImageMetaData
-    const metadata = metaData[src]
-    if (metadata) {
-      // Try to find the best available size for lightbox, prioritizing full > large > medium > small
-      const sizePreference: ImageSize[] = ['full', 'large', 'medium', 'small']
-      for (const preferredSize of sizePreference) {
-        if (metadata[preferredSize]) {
-          const sizeData = metadata[preferredSize]
-          if (sizeData) {
-            mediaLinkHref = sizeData.file
-            isMediaLink = true
-            break
-          }
-        }
-      }
+    const lookupKey = src.startsWith('/') ? src : `/${src}`
+    const meta = leanMeta as LeanMeta
+    const entry = meta[lookupKey]
+    if (entry) {
+      // Use original image for lightbox (best quality)
+      mediaLinkHref = src
+      isMediaLink = true
     }
   }
 
