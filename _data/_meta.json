@@ -2,7 +2,8 @@
   "_cdns": [
     "https://architecturallysignificant.dougnewby.com",
     "",
-    "http://test.com"
+    "http://test.com",
+    "https://pub-b11225b418214a90925fbef377b6de87.r2.dev"
   ],
   "/banner.jpg": {
     "w": 2000,
@@ -1604,6 +1605,6 @@
     "w": 2560,
     "h": 1440,
     "b": "UCEMX7-qtkt3vu?XWGNH4;9G%1t7TS9GaLt8",
-    "c": 0
+    "c": 3
   }
 }
