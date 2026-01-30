@@ -1,7 +1,7 @@
 {
   "$schema": "https://gallop.software/schemas/studio-meta.json",
   "version": 1,
-  "generatedAt": "2026-01-30T00:23:37.309Z",
+  "generatedAt": "2026-01-30T05:42:40.642Z",
   "images": {
     "banner.jpg": {
       "original": {
@@ -5908,39 +5908,6 @@
       },
       "blurhash": "ULL|*~InO8RO-i~q_2xUktRknnM{tmD%MyW?",
       "dominantColor": "#f8f8f8",
-      "cdn": null
-    },
-    "test-image.jpg": {
-      "original": {
-        "path": "/test-image.jpg",
-        "width": 100,
-        "height": 100,
-        "fileSize": 415
-      },
-      "sizes": {
-        "full": {
-          "path": "/images/test-image.jpg",
-          "width": 100,
-          "height": 100
-        },
-        "large": {
-          "path": "/images/test-image.jpg",
-          "width": 100,
-          "height": 100
-        },
-        "medium": {
-          "path": "/images/test-image.jpg",
-          "width": 100,
-          "height": 100
-        },
-        "small": {
-          "path": "/images/test-image.jpg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "blurhash": "U90035fZfQfZfZfSfQfSfQfQfQfQfZfSfQfS",
-      "dominantColor": "#0808f8",
       "cdn": null
     },
     "blocks/about-1.jpg": {
