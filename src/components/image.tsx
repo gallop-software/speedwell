@@ -2,14 +2,27 @@ import { clsx } from 'clsx'
 import Link from 'next/link'
 import { Paragraph } from '@/components/paragraph'
 import type { ComponentProps } from 'react'
-import leanMeta from '@/../_data/_meta.json'
+import leanMeta from '@/../_data/_studio.json'
+
+interface Dimensions {
+  w: number
+  h: number
+}
 
 type LeanImageEntry = {
-  w?: number
-  h?: number
-  b?: string   // blurhash
-  p?: 1        // processed (has thumbnails)
-  c?: number   // CDN index into _cdns array
+  o?: Dimensions   // original dimensions {w, h}
+  b?: string       // blurhash
+  sm?: Dimensions  // small thumbnail (300px width)
+  md?: Dimensions  // medium thumbnail (700px width)
+  lg?: Dimensions  // large thumbnail (1400px width)
+  f?: Dimensions   // full size (capped at 2560px width)
+  c?: number       // CDN index into _cdns array
+}
+
+// Check if an image entry is processed (has any thumbnail dimensions)
+function isProcessed(entry: LeanImageEntry | undefined): boolean {
+  if (!entry) return false
+  return !!(entry.f || entry.lg || entry.md || entry.sm)
 }
 
 interface FullMeta {
@@ -124,9 +137,9 @@ export function Image({
     if (entry) {
       // Get CDN URL from _cdns array if image has a CDN index
       const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
-      const isProcessed = entry.p === 1
+      const entryIsProcessed = isProcessed(entry)
       
-      if (size === 'full' || !isProcessed) {
+      if (size === 'full' || !entryIsProcessed) {
         // Use original image if full size requested OR if not processed (no thumbnails exist)
         resolvedSrc = cdnUrl ? `${cdnUrl}${lookupKey}` : src
       } else {
@@ -135,8 +148,13 @@ export function Image({
       }
       // Only use metadata dimensions if user didn't explicitly provide them
       if (!hasExplicitWidth && !hasExplicitHeight) {
-        resolvedWidth = entry.w
-        resolvedHeight = entry.h
+        // Use thumbnail dimensions if available for that size, otherwise original
+        const sizeKey = size === 'small' ? 'sm' : size === 'medium' ? 'md' : size === 'large' ? 'lg' : 'f'
+        const dims = entry[sizeKey] || entry.o
+        if (dims) {
+          resolvedWidth = dims.w
+          resolvedHeight = dims.h
+        }
       }
     }
   }

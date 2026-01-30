@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",
-    "@gallop.software/studio": "^0.1.116",
+    "@gallop.software/studio": "^1.2.0",
     "@headlessui/react": "^2.2.9",
     "@iconify/icons-heroicons": "^1.2.9",
     "@iconify/icons-lucide": "^1.2.135",
