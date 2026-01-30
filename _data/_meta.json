@@ -1,1 +1,1609 @@
-{}
+{
+  "/banner.jpg": {
+    "w": 2000,
+    "h": 1200,
+    "b": "UkR,x3?*TI%0--S}n$j[s:j?WCa|-VkAa{j["
+  },
+  "/blocks/about-1.jpg": {
+    "w": 770,
+    "h": 1399,
+    "b": "URQ,H[?b~q?HM{M{xu%2%MtRRjM{oftQxaM{"
+  },
+  "/blocks/about-2.jpg": {
+    "w": 1073,
+    "h": 1400,
+    "b": "UJRW0a-:~q_3adxuxuM{t8ofjZj?xuRjt7xu"
+  },
+  "/blocks/about-3.jpg": {
+    "w": 1400,
+    "h": 750,
+    "b": "ULSF*4?v%M?b_3f7s:of_NRPRkWA~XkBa}t6"
+  },
+  "/blocks/accordion-1.jpg": {
+    "w": 1400,
+    "h": 490,
+    "b": "UTS$ifxutR-;~qayjst7x]j[V@fk~qofj[j["
+  },
+  "/blocks/archive-1.jpg": {
+    "w": 1207,
+    "h": 1400,
+    "b": "UFQ0Bf?b~q-;i^M{xuxu?baKM{o#_3t7RPf7"
+  },
+  "/blocks/archive-2.jpg": {
+    "w": 1399,
+    "h": 1304,
+    "b": "URP?p@%M~W-:t6jsWBWC-;jYD%R+%2WVxut7"
+  },
+  "/blocks/archive-3.jpg": {
+    "w": 1400,
+    "h": 1120,
+    "b": "UBR._f?brW~q_2oLt7j[R5oftRRj~Wj[f6of"
+  },
+  "/blocks/call-to-action-1.jpg": {
+    "w": 1400,
+    "h": 513,
+    "b": "UJN+-I%2%M%2^+j[t7ofxujsR*a}~WoLWBj["
+  },
+  "/blocks/call-to-action-2.jpg": {
+    "w": 1400,
+    "h": 667,
+    "b": "UDNcB5^+^+?G~Co0s:ax%LbHIofl~CogWqof"
+  },
+  "/blocks/call-to-action-3.jpg": {
+    "w": 1399,
+    "h": 588,
+    "b": "UHOCgV-p?H-p~Vf6ofofxuaeNGof~VoLa}j["
+  },
+  "/blocks/call-to-action-4.jpg": {
+    "w": 1400,
+    "h": 562,
+    "b": "UIN+;Oxb-p-p~Ws:WBof-payM{R%^kayofoL"
+  },
+  "/blocks/call-to-action-5.jpg": {
+    "w": 1400,
+    "h": 667,
+    "b": "UHOCdM-p?H-p^*t7j@f6-;WBIoa}~WWAfkof"
+  },
+  "/blocks/call-to-action-6.jpg": {
+    "w": 1400,
+    "h": 516,
+    "b": "UKOM1_-p%M%2^*t7a|ay-paeIobH~WWBoLoL"
+  },
+  "/blocks/call-to-action-7.jpg": {
+    "w": 1400,
+    "h": 687,
+    "b": "UMSs1^xtt6?c~qt7oea#%La$Rkt2~qn,WCoe"
+  },
+  "/blocks/content-1.jpg": {
+    "w": 1400,
+    "h": 791,
+    "b": "UnPs#C9G?b~q%MayoLj[-;xaM{NG%MWBj[t7"
+  },
+  "/blocks/content-10.jpg": {
+    "w": 1399,
+    "h": 599,
+    "b": "UNSs4~xboz_3~qf6j[ozxvt7axRj~qofayj["
+  },
+  "/blocks/content-11.jpg": {
+    "w": 1399,
+    "h": 540,
+    "b": "UaQ]$mIT?b_N?boLofbH?v%MM{IT?bayoft6"
+  },
+  "/blocks/content-12.jpg": {
+    "w": 1399,
+    "h": 513,
+    "b": "UMQ9vF_3?bIo~qWBayt7~qE1E1?b~pt7ofWB"
+  },
+  "/blocks/content-13.jpg": {
+    "w": 1400,
+    "h": 503,
+    "b": "UYRC;{Mw?b_N_3j@WCWC?c%MM{IU_3j[oft7"
+  },
+  "/blocks/content-14.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "USRMYs_3_ND$?vRjt8of?ca{IUt7?bxuWBRj"
+  },
+  "/blocks/content-15.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "UORV,^t6?b_3~qxuofRk.8ofIURj?bRjjsxa"
+  },
+  "/blocks/content-16.jpg": {
+    "w": 1399,
+    "h": 734,
+    "b": "UYRfa,RO.8_4?bozoLWB-=t8M{M{?af5a#of"
+  },
+  "/blocks/content-17.jpg": {
+    "w": 1400,
+    "h": 735,
+    "b": "ULQvj[~q_39Z~qRjRjxu~WM{IU-p?axut8M{"
+  },
+  "/blocks/content-18.jpg": {
+    "w": 1399,
+    "h": 734,
+    "b": "UJQcPBax-;~X~qxvjsMx-;s:NGR+^+M{j]%M"
+  },
+  "/blocks/content-19.jpg": {
+    "w": 1400,
+    "h": 735,
+    "b": "UORV^I_4_4IS~pRkWBxt.9adM_o#?bt7s:Rj"
+  },
+  "/blocks/content-2.jpg": {
+    "w": 1400,
+    "h": 655,
+    "b": "UORysfbE?b_3_3j[ofoM~q%MIUIT~qofWVbF"
+  },
+  "/blocks/content-20.jpg": {
+    "w": 1399,
+    "h": 699,
+    "b": "UZQS;#IU?b~q%MWBt7t7_3%MM{IU?bofWBWC"
+  },
+  "/blocks/content-21.jpg": {
+    "w": 1400,
+    "h": 556,
+    "b": "UMQ02G_3_3D$~qa}ayoL~qM{D%-;~Wt6kCj["
+  },
+  "/blocks/content-22.jpg": {
+    "w": 1400,
+    "h": 453,
+    "b": "UZS$lmt7of-;_3ayj[t7xuozaxRj~qofayay"
+  },
+  "/blocks/content-23.jpg": {
+    "w": 1400,
+    "h": 642,
+    "b": "UPQ9s7M{-;~q_3t7WWRk-=t7RiRi?bWBoexa"
+  },
+  "/blocks/content-24.jpg": {
+    "w": 1400,
+    "h": 735,
+    "b": "UUPsny~q~q4n?bWBa}t7_3M{IU%M.8t6oeRk"
+  },
+  "/blocks/content-25.jpg": {
+    "w": 1400,
+    "h": 735,
+    "b": "UUP%3ANG?b~W?bt7WBNG-;t7M{NG-;Rkofxt"
+  },
+  "/blocks/content-26.jpg": {
+    "w": 1400,
+    "h": 735,
+    "b": "UPQJTD~q~q4n-;t7t7RP_NM{IA%M_3axV@oz"
+  },
+  "/blocks/content-27.jpg": {
+    "w": 1400,
+    "h": 735,
+    "b": "UTRV|SM{?b~q?boekCbI-;t7M{Rj_3ofaejY"
+  },
+  "/blocks/content-28.jpg": {
+    "w": 1400,
+    "h": 1044,
+    "b": "UZRMYt%M~qxu-;j[axay_3WBD%t7xuayt7of"
+  },
+  "/blocks/content-29.jpg": {
+    "w": 1400,
+    "h": 667,
+    "b": "UKQJJ=NG-;~p~qkDV@V@_2xtM{Rk~Woeogt7"
+  },
+  "/blocks/content-3.jpg": {
+    "w": 1399,
+    "h": 521,
+    "b": "UWPP+ND%-;_3~qt7M{M{-;xuofWV_3j[WVjZ"
+  },
+  "/blocks/content-30.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "UPRfh2_4_3D%~qM{ofxu_3axITtR?bxuflM{"
+  },
+  "/blocks/content-31.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "UMR3K5kC_3~p~qxut6WB?bofD%Rj?bRjbIxu"
+  },
+  "/blocks/content-32.jpg": {
+    "w": 1400,
+    "h": 1049,
+    "b": "USRp5xWA?b_4t7Rjs:t7%NxuRjM{~qxuRPRi"
+  },
+  "/blocks/content-33.jpg": {
+    "w": 1400,
+    "h": 1331,
+    "b": "ULRV|S%L~q-;-;W;t8t7adITof-=.8t7WAWB"
+  },
+  "/blocks/content-34.jpg": {
+    "w": 1400,
+    "h": 1318,
+    "b": "UOPi|--;~qt7^,xvIUMx-qjYM{t7xZM{t8%2"
+  },
+  "/blocks/content-35.jpg": {
+    "w": 1400,
+    "h": 968,
+    "b": "UFNAVQs-~W_3-pRPt6%L-;ofR*j[.7oyjbRj"
+  },
+  "/blocks/content-36.jpg": {
+    "w": 1350,
+    "h": 1400,
+    "b": "UXODLOxt~qxv?ct6M{Rk?bt7IURjjYayt7ay"
+  },
+  "/blocks/content-37.jpg": {
+    "w": 1400,
+    "h": 1134,
+    "b": "UPQvtJ?a~qRk_3s:jYRj-;M|Rjxu-:ofa~of"
+  },
+  "/blocks/content-38.jpg": {
+    "w": 1190,
+    "h": 1399,
+    "b": "UEN,lA_3_4-o_3NGWB-pT1oIxXbxxWt6j]Rk"
+  },
+  "/blocks/content-39.jpg": {
+    "w": 1400,
+    "h": 995,
+    "b": "UMRMYs%M~q-;?bD%of?b-=t7RPoz^+%Mt8IA"
+  },
+  "/blocks/content-4.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "ULQm0H~q?cIA~qt7RPfk_3RiM{xu^+ogtRV@"
+  },
+  "/blocks/content-40.jpg": {
+    "w": 1400,
+    "h": 710,
+    "b": "UgQ]+wxu_N%M~qofIUay%gj[M_aeWBay%Mof"
+  },
+  "/blocks/content-41.jpg": {
+    "w": 1400,
+    "h": 1052,
+    "b": "UkO|U,tR~q%2_3ofNFoe?cV[IUt7t7t6ofRj"
+  },
+  "/blocks/content-42.jpg": {
+    "w": 1399,
+    "h": 392,
+    "b": "UbSidIxu-;%M_Nofofof%Mj[M{ay~qofayof"
+  },
+  "/blocks/content-43.jpg": {
+    "w": 1400,
+    "h": 716,
+    "b": "UISY]i-;_N?v~qoft6oe%MofM{WB~qj[t7of"
+  },
+  "/blocks/content-44.jpg": {
+    "w": 1400,
+    "h": 546,
+    "b": "UPSY{q%M?b-;~qofs:ofxvkCRPWB~qj[ofof"
+  },
+  "/blocks/content-45.jpg": {
+    "w": 1400,
+    "h": 1270,
+    "b": "UHSY]i-;~q_3?bj[s:kCt7j[WBWB?bofoLfP"
+  },
+  "/blocks/content-46.jpg": {
+    "w": 1400,
+    "h": 696,
+    "b": "UJSidI-;_3?b~qoft7j[%MofM{WB~qj[ofof"
+  },
+  "/blocks/content-5.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "UXRC-=Ri_3_N^+xaozWX.8ogIURi-;Rjays:"
+  },
+  "/blocks/content-6.jpg": {
+    "w": 1400,
+    "h": 729,
+    "b": "UER37v^+_3x[^+Rjt7xa~qIVD%-;~qt7RPa$"
+  },
+  "/blocks/content-7.jpg": {
+    "w": 1400,
+    "h": 923,
+    "b": "UDN^C^%L?b?b~qxuWBM{.8xuRiIU%0Mxt7%N"
+  },
+  "/blocks/content-8.jpg": {
+    "w": 1400,
+    "h": 595,
+    "b": "URRC[5?b?bV@~qWVWCt6~qMxD%%N?bt7t6Rk"
+  },
+  "/blocks/content-9.jpg": {
+    "w": 1400,
+    "h": 722,
+    "b": "ULQ9s7oy_3~W_3xut7WB^+t7D%Io^+WBWCof"
+  },
+  "/blocks/cover-1.jpg": {
+    "w": 1399,
+    "h": 583,
+    "b": "U8E2^A%i00IT~TxBItf,ERoIbHs:?bJDn~jX"
+  },
+  "/blocks/cover-2.jpg": {
+    "w": 1399,
+    "h": 583,
+    "b": "UEDJFmIoo#-;~qxuMxt7-pRjWBM{aeR%j[WB"
+  },
+  "/blocks/cover-3.jpg": {
+    "w": 1400,
+    "h": 576,
+    "b": "U06tm=~V004p^%?GS*s;0K-o^+xG~qVt4n%2"
+  },
+  "/blocks/cover-4.jpg": {
+    "w": 1400,
+    "h": 438,
+    "b": "UQP?ju%2of%M~pWBfRofxuayRjj[~poLWBj["
+  },
+  "/blocks/cover-5.jpg": {
+    "w": 1399,
+    "h": 583,
+    "b": "UCB{_j~V57S%~po#NHt8tRt7xtxZ%N%2oeWV"
+  },
+  "/blocks/cover-6.jpg": {
+    "w": 1399,
+    "h": 583,
+    "b": "UBEg8er;%MVq?^kCWAae%gV?H?oz.8jYoead"
+  },
+  "/blocks/cover-7.jpg": {
+    "w": 1400,
+    "h": 933,
+    "b": "UDC~r4KkD*i{~BTe^*xanNo#%MofE2Rj%2of"
+  },
+  "/blocks/form-1.jpg": {
+    "w": 1400,
+    "h": 732,
+    "b": "UHQ0Eo~W~WI;~qt6oeNH?bD*IU?a^+oft7jZ"
+  },
+  "/blocks/form-2.jpg": {
+    "w": 1304,
+    "h": 1400,
+    "b": "UBRfLR?b-;~q~WofRkj[IUof%MV@~WoLRkj["
+  },
+  "/blocks/form-3.jpg": {
+    "w": 873,
+    "h": 1400,
+    "b": "UGRo,1_3%M~p?bofRjj[NGayt7j[?boeWBj["
+  },
+  "/blocks/form-4.jpg": {
+    "w": 1400,
+    "h": 876,
+    "b": "UKSs1]-;?b?b~qofRjj[M{j[xaWB_3ofa{jt"
+  },
+  "/blocks/form-5.jpg": {
+    "w": 1400,
+    "h": 833,
+    "b": "UcP?w9_4~q9E-;t7oLRj.8IUIU-;-;ofj[ay"
+  },
+  "/blocks/form-6.jpg": {
+    "w": 1399,
+    "h": 914,
+    "b": "UJSia9-;_N?b~qkCRjoLx]j[RPa#?boLt7kC"
+  },
+  "/blocks/hero-1.jpg": {
+    "w": 1057,
+    "h": 1399,
+    "b": "UTRMPSoN%M_3DOM{t7t7xat7WBRj~qxuM{WB"
+  },
+  "/blocks/hero-10.jpg": {
+    "w": 1400,
+    "h": 438,
+    "b": "UTQ9l.-ptRxu^+t7j[jsxuayRij[~qaxWBj["
+  },
+  "/blocks/hero-11.jpg": {
+    "w": 1400,
+    "h": 661,
+    "b": "UB9Z_[^-Rps;?J-rxcoMR7s=t8Rjxbs;ofj["
+  },
+  "/blocks/hero-12.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UJN,rSxa?vI9_NRPjZo#?bRjofof-ptRt7RP"
+  },
+  "/blocks/hero-13.jpg": {
+    "w": 1400,
+    "h": 788,
+    "b": "UjO|93D%-;?b~p%MM{RjtQoLaeay%Mofj[Rj"
+  },
+  "/blocks/hero-14.jpg": {
+    "w": 1400,
+    "h": 572,
+    "b": "UMQS*k^+%MRO~WjZofoe.8slRjo#~qxbada}"
+  },
+  "/blocks/hero-15.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UXOz3:~W%g9F?bRjs:t7_3M{WV%2-;ozWBWB"
+  },
+  "/blocks/hero-16.jpg": {
+    "w": 1400,
+    "h": 596,
+    "b": "U9CY,h^+%2xv~WRjWBt7M{V@NGNGV[t7oeR+"
+  },
+  "/blocks/hero-17.jpg": {
+    "w": 1399,
+    "h": 656,
+    "b": "U29Gs@00xW=__2$xxukq00O@M{sn00%gIUV["
+  },
+  "/blocks/hero-18.jpg": {
+    "w": 1399,
+    "h": 742,
+    "b": "UPR3ND?v?bMx_3xuRjoe_NM{IU%N_3WAtRof"
+  },
+  "/blocks/hero-19.jpg": {
+    "w": 1400,
+    "h": 998,
+    "b": "UIEf1q~px]IV004oM{xu?bRjWBofM_-;t7M{"
+  },
+  "/blocks/hero-2.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UROpuo~U_34n_3Rit7j@_3NGIo%2-;xaRjay"
+  },
+  "/blocks/hero-3.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UMN0^{Jn?H~W_3t7M{M{_3-;tRoz-;of%L%M"
+  },
+  "/blocks/hero-4.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "ULPseX~X?vD$^+j]WCoe_4RiRjt8?Hxut7Rj"
+  },
+  "/blocks/hero-5.jpg": {
+    "w": 1400,
+    "h": 788,
+    "b": "U46@=*xt4=a*?wt7V@ogT2afxYR*-?ozoeM{"
+  },
+  "/blocks/hero-6.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UOP6s#~p.8Dh?bo0a}t6_3M_Rkt8-;tQofRQ"
+  },
+  "/blocks/hero-7.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UXODa.~V?v9F-:s:t6WB?HW;NGs:%3t7j]Rj"
+  },
+  "/blocks/hero-8.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UQO:ty9Z?b~q?Gaeflog_3%MRjWB-=WCoft7"
+  },
+  "/blocks/hero-9.jpg": {
+    "w": 1399,
+    "h": 723,
+    "b": "UMPi@p^,?cD#^+s:j[bH~qM{NGxu?bbHj[ay"
+  },
+  "/blocks/pricing-1.jpg": {
+    "w": 1400,
+    "h": 724,
+    "b": "URS6GN%M?b%M~qj[WBofx]kCadfk-;fQt7of"
+  },
+  "/blocks/pricing-2.jpg": {
+    "w": 1400,
+    "h": 738,
+    "b": "UeR3NFxu~q%M?vj[RjfR-;ofIUWB%Mj[t7j]"
+  },
+  "/blocks/process-1.jpg": {
+    "w": 1400,
+    "h": 678,
+    "b": "UMR:B1x].8-;_Nj[s.oftSj@V@fk^+j[W=az"
+  },
+  "/blocks/section-1.jpg": {
+    "w": 1400,
+    "h": 519,
+    "b": "U%Lgw.?at7Rjxuofj[ay~qM{WBt7-;j[j[j["
+  },
+  "/blocks/section-10.jpg": {
+    "w": 894,
+    "h": 1400,
+    "b": "UlMQbP%L~qxuXAWBoet7?HWWM{oL%2ofj]ay"
+  },
+  "/blocks/section-11.jpg": {
+    "w": 1399,
+    "h": 532,
+    "b": "UOR34ki^Mx_3_3WBaet7adtRogRP~pt6ayay"
+  },
+  "/blocks/section-2.jpg": {
+    "w": 1400,
+    "h": 875,
+    "b": "UTP%CXxZ~q%N_3t7WBRj_3j]Mxof?cWBf6t8"
+  },
+  "/blocks/section-3.jpg": {
+    "w": 1400,
+    "h": 729,
+    "b": "UMSPLi-;%M-;_Nt7t7ay%hV@V@tR~qfkV[of"
+  },
+  "/blocks/section-4.jpg": {
+    "w": 1400,
+    "h": 613,
+    "b": "USRysg_3?bM{_3ofoLj[~qM{D%-;~pofayj["
+  },
+  "/blocks/section-5.jpg": {
+    "w": 1400,
+    "h": 1101,
+    "b": "UMQvqA%M~q-;?Ht7t7t6_4ofIUfRt7oLxuj["
+  },
+  "/blocks/section-6.jpg": {
+    "w": 1400,
+    "h": 869,
+    "b": "UFRClE?a.7?H~qj[j[of%MjuV@of^+j[ofj["
+  },
+  "/blocks/section-7.jpg": {
+    "w": 1399,
+    "h": 532,
+    "b": "UPR37ri_Mx_3_3WBayt7V@t8ogRP~pt6WBay"
+  },
+  "/blocks/section-8.jpg": {
+    "w": 475,
+    "h": 1398,
+    "b": "UXSF-C_2%N~qM_WBxuofWBj[ofay-;t7aeax"
+  },
+  "/blocks/section-9.jpg": {
+    "w": 893,
+    "h": 1400,
+    "b": "UYP%Lz%M~q-;M{aexuof%MofRjayRPaytRj["
+  },
+  "/blocks/shopping-1.jpg": {
+    "w": 1399,
+    "h": 613,
+    "b": "UOQS;z_3_3D$#kRQV@j]_3D%D%?b~pogkCad"
+  },
+  "/blocks/sidebar-1.jpg": {
+    "w": 1399,
+    "h": 631,
+    "b": "UYQ0R0D$_3_N-;WBofxa_3%MM{IU?bs:ofRk"
+  },
+  "/blocks/testimonial-1.jpg": {
+    "w": 1400,
+    "h": 747,
+    "b": "UHRM9;-;?b?b_3j[t7of%Mj]M{ax~qj[aes:"
+  },
+  "/blocks/testimonial-2.jpg": {
+    "w": 1400,
+    "h": 563,
+    "b": "ULRVwr%M%M?H~Wj[t6oft8fkRjfP~qj[jtt7"
+  },
+  "/blocks/testimonial-3.jpg": {
+    "w": 1400,
+    "h": 674,
+    "b": "UMRp5w%M?b?b~qj[tRofxvWBRPWV_3axf6t7"
+  },
+  "/blocks/testimonial-4.jpg": {
+    "w": 1400,
+    "h": 1074,
+    "b": "UQOz3+x[^+%MtQayt7og~WjZD%t6^+jGRjt6"
+  },
+  "/blocks/testimonial-5.jpg": {
+    "w": 1400,
+    "h": 761,
+    "b": "U05p:y-U0yni^6j[IpWV9tR*xZoLwIjts:j["
+  },
+  "/blocks/testimonial-6.jpg": {
+    "w": 1400,
+    "h": 913,
+    "b": "UHR{od-;xY?H~qofozofs,j[kCj[_3ofj@of"
+  },
+  "/blocks/testimonial-7.jpg": {
+    "w": 1400,
+    "h": 736,
+    "b": "UHR:1u?H%M?H_3WBt7xuMdWVkCaz~qoLV@oL"
+  },
+  "/blocks/testimonial-8.jpg": {
+    "w": 1400,
+    "h": 980,
+    "b": "UER{od?b$%?b~qj[tRofxGofflf6~qofoLj["
+  },
+  "/blocks/testimonial-9.jpg": {
+    "w": 1400,
+    "h": 886,
+    "b": "USQl?_%2~q-;-;j[ofj[?Hof9FV@?Hj[ayj["
+  },
+  "/favicon.png": {
+    "w": 410,
+    "h": 410,
+    "b": "UA6M0~uMXZq8yoj[X3XOtqoajQbby,kUbbbY"
+  },
+  "/flowers.png": {
+    "w": 1200,
+    "h": 1445,
+    "b": "UDLqe9~q00IU%M009Ft7009F_3t7j[M{%M%M"
+  },
+  "/geometric.jpg": {
+    "w": 5096,
+    "h": 2943,
+    "b": "UGR{lO?aj[?a~poffkofj[fQjufR~poej[of"
+  },
+  "/hero-bg.png": {
+    "w": 1728,
+    "h": 2304,
+    "b": "UOOLcZ?H^ixaAl_N-UM{^,xbEgIp?cX8M{xG"
+  },
+  "/layout-1/pexels-alesiakozik-7797453.jpg": {
+    "w": 3000,
+    "h": 4500,
+    "b": "UDJjO^%L?F~T?Fs.NHNG$zxZ9bIWM|Rk%1xt"
+  },
+  "/layout-1/pexels-anna-nekrashevich-7552446.jpg": {
+    "w": 4160,
+    "h": 6240,
+    "b": "UWO:qn?b.T-;-;t8V@j[t-ogMda}nhj]kCt7"
+  },
+  "/layout-1/pexels-blanca-isela-2156722885-35240180.jpg": {
+    "w": 6772,
+    "h": 4515,
+    "b": "UBJHEZ9F00b_.l%2vNn#zA%gt:rqD6M{t+Sj"
+  },
+  "/layout-1/pexels-cottonbro-4154192.jpg": {
+    "w": 3922,
+    "h": 5883,
+    "b": "U8B:W[00?^9aJWIT%Me.0LEM^kMd^j?GE1WU"
+  },
+  "/layout-1/pexels-cottonbro-5379175.jpg": {
+    "w": 2333,
+    "h": 3500,
+    "b": "UQG8TAxWs.%2~VjYWWj[4:R+ofRjV@s.j]oe"
+  },
+  "/layout-1/pexels-cottonbro-9745332.jpg": {
+    "w": 5304,
+    "h": 7952,
+    "b": "UCMr*$8w-;^j}@IpM_-p0KtS9tIp}@j?g3E1"
+  },
+  "/layout-1/pexels-diva-plavalaguna-6937932.jpg": {
+    "w": 5260,
+    "h": 3507,
+    "b": "U~N14K~qM{RPxtoffPofofaxWBkCt7ofoeWB"
+  },
+  "/layout-1/pexels-divinetechygirl-1181311.jpg": {
+    "w": 6016,
+    "h": 4016,
+    "b": "UVR34m~qI:-;_2X8e-nix[Rjt7R%?bRQt7WB"
+  },
+  "/layout-1/pexels-edmond-dantes-4344617.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UwL|.Q%LIUV@_NNGRjof?bRiRjxuxuWBxufR"
+  },
+  "/layout-1/pexels-ekrulila-27467420.jpg": {
+    "w": 4672,
+    "h": 7008,
+    "b": "UPO:2=xtkq%2?vWXM{Rj~qoeV@t7-:s:%L%L"
+  },
+  "/layout-1/pexels-elevate-1267700.jpg": {
+    "w": 2824,
+    "h": 4228,
+    "b": "UTJk7QtRSi%17%tSs:j[xV%gt6V@4oSiNeRj"
+  },
+  "/layout-1/pexels-enginakyurt-1435894.jpg": {
+    "w": 7576,
+    "h": 5053,
+    "b": "USIW7y}]-rxHxDWCe:WCV@t7M{OA$*ofjGkC"
+  },
+  "/layout-1/pexels-goumbik-669610.jpg": {
+    "w": 4928,
+    "h": 3264,
+    "b": "UEJRQ}uP00V@00$MkUIV4T4:^*n#S~ni.8-="
+  },
+  "/layout-1/pexels-ivan-s-8117415.jpg": {
+    "w": 4700,
+    "h": 3135,
+    "b": "UWHn+?~WE2Nb?bRkR+tR-;ozs:oIogj[t6ae"
+  },
+  "/layout-1/pexels-leeloothefirst-7598022.jpg": {
+    "w": 6016,
+    "h": 4016,
+    "b": "USHoE~_49ED$%MxvtRbHWAogo#WBs:s;ayM{"
+  },
+  "/layout-1/pexels-mareklevak-2265482.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UsL#5[_NIT-pt7xuRjoJtRofafRkxut8f6R*"
+  },
+  "/layout-1/pexels-pavel-danilyuk-6925321-1.jpg": {
+    "w": 3654,
+    "h": 5474,
+    "b": "UKKKyZx]D%_3%hoNxuoz~qtQjYt8D%xuV@ax"
+  },
+  "/layout-1/pexels-pixabay-221185.jpg": {
+    "w": 2592,
+    "h": 1728,
+    "b": "UPJ[Fu%M-:x[~qozt6D%_3IUxuay-;xuIUbI"
+  },
+  "/layout-1/pexels-rachel-claire-5490970.jpg": {
+    "w": 5472,
+    "h": 3648,
+    "b": "UkM?*bD*IUbw?wxYWAoJ-=%1s+oe?aozWBoy"
+  },
+  "/layout-1/pexels-ron-lach-8760891.jpg": {
+    "w": 4117,
+    "h": 6175,
+    "b": "UGOM{b_3yE?uQ,RiyDoIRnbwNeWE?wM~IVo$"
+  },
+  "/layout-1/pexels-shattha-pilabut-38930-135620.jpg": {
+    "w": 4000,
+    "h": 2761,
+    "b": "UOLyx[?Gae?Z=_RjIUbH~Ut6xZjb^%%1ods."
+  },
+  "/layout-1/pexels-thirdman-5257578.jpg": {
+    "w": 6360,
+    "h": 4240,
+    "b": "UpKUWZ?vRkt7~qofRjae-;WBRPof%Lf6Rjoz"
+  },
+  "/layout-1/pexels-tranmautritam-326518.jpg": {
+    "w": 5184,
+    "h": 3456,
+    "b": "UQG[{4xuRjog%NWBj[t6~p9FIURjbID%M{WB"
+  },
+  "/layout-2/pexels-goumbik-577195.jpg": {
+    "w": 6144,
+    "h": 4069,
+    "b": "UAF~jj_400D#BF?b8_00QkIARO.8004n?v~q"
+  },
+  "/layout-2/pexels-mikhail-nilov-8284731.jpg": {
+    "w": 6016,
+    "h": 4016,
+    "b": "UkK1tGDiIA-;~Wi^emjYM_%M%MRjx[Rkoea{"
+  },
+  "/layout-2/pexels-pixabay-38568.jpg": {
+    "w": 4209,
+    "h": 2796,
+    "b": "U9Fr;W~q00t89}8_00M{R5xu~qof4nt7~qof"
+  },
+  "/layout-2/pexels-ranamatloob567-35203646.jpg": {
+    "w": 4000,
+    "h": 2856,
+    "b": "UVHULFwb%1xZ~Asmaes:ozNHkCW:xut8bbWV"
+  },
+  "/layout-2/pexels-thirdman-5257759.jpg": {
+    "w": 6594,
+    "h": 4396,
+    "b": "URH_Y@o|-TS1~q9ZMxoft7IAD*M{?uWBR*M{"
+  },
+  "/layout-3/pexels-2149489342-35218938.jpg": {
+    "w": 7008,
+    "h": 4672,
+    "b": "U7Eyb[IU009F~q%M4nWBD%_3RjIU-;WBIUWB"
+  },
+  "/layout-3/pexels-akos-szabo-145938-440731.jpg": {
+    "w": 4831,
+    "h": 2548,
+    "b": "Uv8s;jkXR4kCNla#ngf8R3jYofayxsj]WBa|"
+  },
+  "/layout-3/pexels-alan7502-35244055.jpg": {
+    "w": 2992,
+    "h": 2992,
+    "b": "UPF{;joM63ni}ZspI;e.7doMwJWU2rW;sCS2"
+  },
+  "/layout-3/pexels-bri-schneiter-28802-346529.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UR8?2Yp0R4oz%$kDWAkC%%V@kCozyFWWaykD"
+  },
+  "/layout-3/pexels-cesar-o-neill-26650613-35240283.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UfJv7|Z~V?n$.TtSozozIAa#WBbIx]V?V@j]"
+  },
+  "/layout-3/pexels-forgottenluix-2922450.jpg": {
+    "w": 3456,
+    "h": 5184,
+    "b": "U67-Te_39GE04n4nD*_3~q?bayD%00Mx-pof"
+  },
+  "/layout-3/pexels-jonaorle-4029925.jpg": {
+    "w": 3648,
+    "h": 5472,
+    "b": "UA9P=yJBB;-o~WShpdxt7hxa~VN_GbxZ~VNe"
+  },
+  "/layout-3/pexels-minoa-film-112544374-35241220.jpg": {
+    "w": 3804,
+    "h": 6612,
+    "b": "U6CGS+xuM{WB%M-;%Mt700xu-;%M~q-;t7-;"
+  },
+  "/layout-3/pexels-olly-774909.jpg": {
+    "w": 3840,
+    "h": 5760,
+    "b": "UgJH,K?b.7x]~Caet7kC%#X8RPsmxut7WBoe"
+  },
+  "/layout-3/pexels-pixabay-355465.jpg": {
+    "w": 2000,
+    "h": 1086,
+    "b": "U43ln5;Z%4t8EoIpR.WBQ*T5R$V??H-Oxat7"
+  },
+  "/layout-3/pexels-pixabay-462162.jpg": {
+    "w": 2000,
+    "h": 1123,
+    "b": "UmH.4j~p?G%K^jn#RjWB-TRiNHof?abbWBae"
+  },
+  "/layout-3/pexels-plann-2999237-4549411.jpg": {
+    "w": 6720,
+    "h": 4480,
+    "b": "UdL#CD.8%2tS_4RjoIt8RkROWARjM{tRt7Rk"
+  },
+  "/layout-3/pexels-sebastian-palomino-933481-1955134.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UbE:0oxuRis:~qt7WBkC%hkCR+kC%Mofjsof"
+  },
+  "/layout-3/pexels-shotbyrain-6507483.jpg": {
+    "w": 3484,
+    "h": 4549,
+    "b": "UYDTt*JCcs-;?^s9Osxu9a#+VrNHJBoJ$%Iq"
+  },
+  "/layout-3/pexels-simon-robben-55958-614810.jpg": {
+    "w": 4684,
+    "h": 4000,
+    "b": "UDC%22~q1P0gs.aKWXRj9GM{xD%1XTWWxut7"
+  },
+  "/layout-3/pexels-the-iop-86002042-35241787.jpg": {
+    "w": 6809,
+    "h": 4539,
+    "b": "U2C6+99F00_3_3_39F0000_30000WB9FWB_3"
+  },
+  "/layout-4/apple-tarte.jpg": {
+    "w": 5807,
+    "h": 3871,
+    "b": "UEG+gtGJ-mKnR4$|IVsmIWxuQk+=wJs:RQM_"
+  },
+  "/layout-4/beef-carpaccio.jpg": {
+    "w": 3165,
+    "h": 4224,
+    "b": "UEHeI500.9rr.7WUkCR*?wida1x^x]R*aeoJ"
+  },
+  "/layout-4/burratta-caprese.jpg": {
+    "w": 4608,
+    "h": 3073,
+    "b": "U9FP7#?s8|~W-xE0={Q,s;tkZ~8__Ko|x^.l"
+  },
+  "/layout-4/cabernet.jpg": {
+    "w": 3907,
+    "h": 3836,
+    "b": "U6BMi8~q#QVXE2NGt7t7@qrp?a?b7hT1M|M{"
+  },
+  "/layout-4/calamari.jpg": {
+    "w": 6720,
+    "h": 4480,
+    "b": "UGD044N44??F~UIWIpxt03NF%IV]IEX4tQxW"
+  },
+  "/layout-4/cappucino-image.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "U89Z}.9G01t6~VIUNHjY9GWA_2IU9HWB?aRi"
+  },
+  "/layout-4/chocolate-lava-cake.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UUJ[CY$%_3xt?wtR%NkC~qo#a1oz_3nhofR*"
+  },
+  "/layout-4/creme-brulee.jpg": {
+    "w": 8192,
+    "h": 6144,
+    "b": "UAG8M,:+02xopdTdo|I[0gwb_MKik9jG%Nxu"
+  },
+  "/layout-4/duck-confit.jpg": {
+    "w": 4480,
+    "h": 6720,
+    "b": "UhL;Q#-qTKxax]xba}WXpyR%VYR*%NNGt7s."
+  },
+  "/layout-4/espresso-martini.jpg": {
+    "w": 5196,
+    "h": 6495,
+    "b": "U4A]pTpI004o0f9ZS6~q0R={xXE101Iq_2?F"
+  },
+  "/layout-4/french-75.jpg": {
+    "w": 3213,
+    "h": 5712,
+    "b": "UIF=K#-V-paf7g9_X9oz~C$ixuoz?vENniod"
+  },
+  "/layout-4/french-onion-soup.jpg": {
+    "w": 3456,
+    "h": 5184,
+    "b": "UgK^Wyi_x]xt_NM|X9t7?c%2x[ozXAozWXbI"
+  },
+  "/layout-4/herb-roasted-chicken.jpg": {
+    "w": 8192,
+    "h": 6144,
+    "b": "U5A+?7X*~VWT}?KPVto}E1%z;1-TIXD*$*IB"
+  },
+  "/layout-4/hero-layout-4.jpg": {
+    "w": 2000,
+    "h": 1500,
+    "b": "U5E_%700%L}rO[-5?b9w4TK7D+s902JCn~D%"
+  },
+  "/layout-4/lamb-rack.jpg": {
+    "w": 3541,
+    "h": 5304,
+    "b": "UXP6jX_Nxw%2-hWCNGkB.SahIUt7Q,%g%3xu"
+  },
+  "/layout-4/lemonade.jpg": {
+    "w": 4160,
+    "h": 6240,
+    "b": "UNLNI=~UoixD_Nbxx]S59%xuxoRiwZjDM{s,"
+  },
+  "/layout-4/lobster-linguine.jpg": {
+    "w": 3024,
+    "h": 4032,
+    "b": "UDJ@OK?bt-~p-:RP9GtRx]%2%gtQ_2MxH?s:"
+  },
+  "/layout-4/new-york-cheesecake.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UZO|91%Mo}-;%NadWXj[.TkDR5WCVrofozWA"
+  },
+  "/layout-4/old-fashioned.jpg": {
+    "w": 2732,
+    "h": 3850,
+    "b": "U7CidVr;00JD0V0f=qJV~VS#$cR+}?Ne9GWE"
+  },
+  "/layout-4/oysters.jpg": {
+    "w": 3004,
+    "h": 4500,
+    "b": "UZI=75-;%2xu_3bIayof~Xt7t7oMtRWXRjt6"
+  },
+  "/layout-4/panna-cotta.jpg": {
+    "w": 4160,
+    "h": 6240,
+    "b": "U9IrHH0K0;R3XFxvn3t800-O]{%g;ag3JWRP"
+  },
+  "/layout-4/pexels-jonathanborba-2878738.jpg": {
+    "w": 3648,
+    "h": 5472,
+    "b": "U6FqwA}@4:nn%z^3D*xG00Mx-A%0nNNH={I:"
+  },
+  "/layout-4/pexels-metin-mutlu-3305420-8585881.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UJK1XU?u57%M9FV?H?NeNJ%MDhV?~qW-tlRj"
+  },
+  "/layout-4/pexels-minchephoto-7491887.jpg": {
+    "w": 5616,
+    "h": 3744,
+    "b": "UJNJ{|9E.9IT~VR4D%Rksl00D%bcrVRj%gkD"
+  },
+  "/layout-4/pexels-nadin-sh-78971847-12918197.jpg": {
+    "w": 3705,
+    "h": 4940,
+    "b": "UUKKZvxWtSxuW?WYV@WByZSiMxX8H=oeWBbF"
+  },
+  "/layout-4/pexels-peps-silvestro-180443212-18229216.jpg": {
+    "w": 2048,
+    "h": 2048,
+    "b": "UXNmfz~qWY?HV[o0axRjt7ofIoRjx[WBV[of"
+  },
+  "/layout-4/pexels-pixabay-260922.jpg": {
+    "w": 2200,
+    "h": 1238,
+    "b": "U28:Lq^i0*0T=_^OJBs,0h-8$z$e^$-TjF5T"
+  },
+  "/layout-4/pexels-reneterp-1581384.jpg": {
+    "w": 3024,
+    "h": 4032,
+    "b": "U7B_^m0j^OIq};5W-TNK9bR*$$S5IpxYIqoe"
+  },
+  "/layout-4/pexels-valeriya-9266842.jpg": {
+    "w": 4480,
+    "h": 6720,
+    "b": "UhL;Q#-qTKxax]xba}WXpyR%VYR*%NNGt7s."
+  },
+  "/layout-4/ribeye.jpg": {
+    "w": 5498,
+    "h": 3665,
+    "b": "U4B2W1^4AD-ooNEkEf5R02xa}rIpAF-9s:^P"
+  },
+  "/layout-4/salmon.jpg": {
+    "w": 5054,
+    "h": 3370,
+    "b": "UJG*ye^j5RyEE1RjRjof0LE2iHMd~WazIpoz"
+  },
+  "/layout-4/short-ribs.jpg": {
+    "w": 3522,
+    "h": 5283,
+    "b": "UIN,uZH[D%?b^,4nMxIA*0%NDixu?HI9_Nxu"
+  },
+  "/layout-4/tiramisu.jpg": {
+    "w": 5464,
+    "h": 8192,
+    "b": "UaMP:z-;NGt700nhxuNG9txaM{M{_Nofniad"
+  },
+  "/layout-4/tuna-tartare.jpg": {
+    "w": 3456,
+    "h": 5184,
+    "b": "U6CQ3uID01~8p1xnxsNf00Kk?HOq9H.7wIDk"
+  },
+  "/layout-5/pexels-bendix-251808.jpg": {
+    "w": 5184,
+    "h": 3456,
+    "b": "U48gg7NF01%M~mX9E3nh_2aLMybu~URkE2oz"
+  },
+  "/layout-5/pexels-bohlemedia-1114425.jpg": {
+    "w": 3888,
+    "h": 5184,
+    "b": "UCHdaY]f00~Xs{1bO]tQQRtS^,ng=xbvxDNY"
+  },
+  "/layout-5/pexels-jeremy-wong-382920-1035665.jpg": {
+    "w": 5472,
+    "h": 3648,
+    "b": "UQNv@__NXT-;_4NHj@ae-;WBozWXnhWBozo0"
+  },
+  "/layout-5/pexels-jeremy-wong-382920-1082024.jpg": {
+    "w": 5472,
+    "h": 3648,
+    "b": "USLNuj_3M|t79u?bogIUI;%Ns;bH~qt7oeRj"
+  },
+  "/layout-5/pexels-mat-brown-150387-1395967.jpg": {
+    "w": 3648,
+    "h": 5472,
+    "b": "UFJHQ.~WXAS$%g-=jbsolAxbr=Io={tSR:g3"
+  },
+  "/layout-5/pexels-panditwiguna-2788488.jpg": {
+    "w": 3944,
+    "h": 4863,
+    "b": "UhFiV,t5D*Wr~WofRkbI?bbHoeof.9WXoIs:"
+  },
+  "/layout-5/pexels-pavel-danilyuk-6405768.jpg": {
+    "w": 5192,
+    "h": 3466,
+    "b": "UHC6fL~qNHMw_3tSNGV?S$ofw]WAWXoft7W="
+  },
+  "/layout-5/pexels-pixabay-265947.jpg": {
+    "w": 4608,
+    "h": 3456,
+    "b": "U8Jas0Mc00~W]L?w_NxaNMRiWAM|?aD%IBtR"
+  },
+  "/layout-5/pexels-thatguycraig000-2306281.jpg": {
+    "w": 5472,
+    "h": 3648,
+    "b": "UDJHjo_N00xZ00n$t8ayyY?bMyWBi_jYM{IV"
+  },
+  "/layout-6/pexels-daka-12360528.jpg": {
+    "w": 2705,
+    "h": 3787,
+    "b": "U7AmoD?b4;H?~qMwE-Mw9En2xWOGMa%MnhIp"
+  },
+  "/layout-6/pexels-ertabbt-150087708-14210586.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "USCGS*t7D%t7~qt7IUt7ozofWBofIoa{t7WV"
+  },
+  "/layout-6/pexels-larissafarber-34190188.jpg": {
+    "w": 3732,
+    "h": 5609,
+    "b": "UFLLs_}qAa-B~ppIWBX,KQyXR5jI-pxuM{i{"
+  },
+  "/layout-6/pexels-nano-erdozain-120534369-28180071.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UBE2k5@?4.}[0zB.u3Eg8y%gRm$%EfS~%MS4"
+  },
+  "/layout-6/pexels-roman-odintsov-5837002.jpg": {
+    "w": 5426,
+    "h": 3617,
+    "b": "UMFh^sxt5Boi.Tt8ROoLK7afxCNG%OogtQRP"
+  },
+  "/layout-6/pexels-yankrukov-5480235.jpg": {
+    "w": 3577,
+    "h": 5365,
+    "b": "UeINpp?aR*xtIVV@WBWqxWslRjfk~Bxabbs:"
+  },
+  "/layout-7/pexels-karola-g-6919956.jpg": {
+    "w": 6493,
+    "h": 4329,
+    "b": "UJKK[=Djp_%M.msUx]bFtlIUn$sp-;oeRPj@"
+  },
+  "/layout-7/video-image.png": {
+    "w": 3840,
+    "h": 2160,
+    "b": "UGKB8m?w5S%M.8~q%2RP00xtx]D%?baeaKxu"
+  },
+  "/layouts/before-after.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UTQ,Bw?H?bt6xDs;RjRit8WBWBof_NWBaexu"
+  },
+  "/layouts/color-consultation.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UXQJQ4%L-;xtxtxtWCM{xut7V@Rj_NIUWU-;"
+  },
+  "/layouts/commercial.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UfQcet-:-;a}R*xZofM{s9WVRjof_NR+WBxu"
+  },
+  "/layouts/contact.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UIQ]pF?H-o.8x]xtxuIo?cogkCWB~qM{D%-p"
+  },
+  "/layouts/furniture.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UlQS*lbHx]-;x]Rjj[t7ROoeWBWB_NxaayWB"
+  },
+  "/layouts/index.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UTRC#sjc%M_3DOM{xut7%2t7RjNG~qxaM{R*"
+  },
+  "/layouts/join-our-team.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UHSFw:-;xu~p_NWBWBt7IAoLV@WB-Vt7kBRj"
+  },
+  "/layouts/kitchen-bath.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UWRV;3-;-;xtMws;WCM{%MayWAog_NWBaxxu"
+  },
+  "/layouts/layout-1.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UGRV@B-p_3~q$i%3M{D%?bxuM{M{.8IUt8-="
+  },
+  "/layouts/layout-2.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UgLNus%Lxuxu00ofM{M|_NIoa#xt~qs:j@og"
+  },
+  "/layouts/layout-3.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UnM%+df5%M%M9FofRjRjt7t7WBRj~qRjkCt7"
+  },
+  "/layouts/layout-4.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UII=DRt7_3-p9FRjMxWB00RiDiM{~qoe?bt8"
+  },
+  "/layouts/layout-5.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UZP%Fh%N~qxt~qt8IARiD%ofofWBs:t7t7of"
+  },
+  "/layouts/layout-6.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UOKBK~D%-;~q00xuIUD%IAxuM{IU?cIU%M-;"
+  },
+  "/layouts/layout-7.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UDN0}4-;-;_300ohRmIU00%3IUIU~qo3xvxu"
+  },
+  "/layouts/meet-the-team.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UERMSa~q_N-p-:V@IUbbs8IUM_-=~q%MWVIU"
+  },
+  "/layouts/partners.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "ULRymO?b?b%M~qWCIUt7MdM{bHxu?bofRjae"
+  },
+  "/layouts/portfolio.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UUQchz?H_3RkjEoIWBRj-;ofRjWA~qIoWB-;"
+  },
+  "/layouts/project-management.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UHRMPS~W_Nxu%2azM{oIxDM{IU-;_4xuWBM{"
+  },
+  "/layouts/residential.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UVP%FiX8-=_3M{kWRiRj-;ofM{Rj~qxZtRoz"
+  },
+  "/layouts/space-planning.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UmQS;$xax]t6R*aefkRjs:f6V@kC_Nj[oLt8"
+  },
+  "/layouts/testimonials.jpg": {
+    "w": 1120,
+    "h": 1400,
+    "b": "UVQJQ2RP-;_3VrRPoft7s+oyRPV@~q%MRjRj"
+  },
+  "/leaf1.jpg": {
+    "w": 2305,
+    "h": 4096,
+    "b": "UiS5Rd-mRP%0.TR*azoMRNjDogbc$xV?V@oe"
+  },
+  "/leaf2.jpg": {
+    "w": 2305,
+    "h": 4096,
+    "b": "UGQlRH~qXm_2_2r]j]t6sko}bIRi,maexuQ,"
+  },
+  "/logo-white.png": {
+    "w": 704,
+    "h": 416,
+    "b": "UJNdO8~q00-;00WB00D%9FM{9FIUt7Rj-;ay"
+  },
+  "/logo.png": {
+    "w": 704,
+    "h": 416,
+    "b": "U4AugL}X0#$i0iWW9^I;%Jaf9^NuMzWCxZS3"
+  },
+  "/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UWJH,U?vxu%M~qkDkWof-pRjMxayD$W;ayRj"
+  },
+  "/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg": {
+    "w": 3893,
+    "h": 5839,
+    "b": "UiJao{k9Ri%2_NM{RioLM{j[t7ayITafj[R*"
+  },
+  "/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UTGIAbjX9a$$~pWBWCs,D%f6t7aeMwoef,Rk"
+  },
+  "/portfolio/falling4utah/pexels-falling4utah-1080696.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UQLW^P$yt8tP~VVsM|W=02V=RjV@V?kDayWB"
+  },
+  "/portfolio/falling4utah/pexels-falling4utah-1080721.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UbLXY$~qWXxu~Wt7RjRjM{WEt8j]%MRlWWay"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg": {
+    "w": 3400,
+    "h": 2270,
+    "b": "UXK-IF%0S%xu?wozoIozROadR,s:kDM|offk"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg": {
+    "w": 3400,
+    "h": 2270,
+    "b": "UcK-LMs*NGx^?wfioeR*s8WBayjYNJWAbbWB"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg": {
+    "w": 3400,
+    "h": 2186,
+    "b": "UEJk7VtmXoxv~q-oRPoc%Owb%Mxa%1nixujE"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg": {
+    "w": 3352,
+    "h": 2238,
+    "b": "UGL4sW$~E1%h~qadWAWXx^xuayMx.8oetQbI"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg": {
+    "w": 3264,
+    "h": 2179,
+    "b": "URK1wUxU%gxu~qnhIoRjjGa$Rjozj^s.WVR."
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg": {
+    "w": 3500,
+    "h": 2336,
+    "b": "UEJj}4U^DN?w~qo~X9nN-;o}t7VrbxWXNIbw"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg": {
+    "w": 3400,
+    "h": 2270,
+    "b": "UTG[yiNHbcRP_4ognhjYtSRjoIWBx^a#WARj"
+  },
+  "/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg": {
+    "w": 3400,
+    "h": 2270,
+    "b": "UCIhQxX:Z#x^~TjEtSoI%hoztRa~%NaJtSe."
+  },
+  "/portfolio/houzlook/pexels-houzlook-3356416.jpg": {
+    "w": 3333,
+    "h": 4188,
+    "b": "UHDI|000_3D$M|-:oLV@~pM{Rkt7S5xuodWB"
+  },
+  "/portfolio/houzlook/pexels-houzlook-3797991.jpg": {
+    "w": 3200,
+    "h": 2400,
+    "b": "UXK^$#i^?G%1~p9Gt6xt-p?aIVNHxuWBNGae"
+  },
+  "/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg": {
+    "w": 2996,
+    "h": 2996,
+    "b": "UHHnWwxuE1x[^*XS-:t7~Us-NGxG%2V@E1WV"
+  },
+  "/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg": {
+    "w": 3648,
+    "h": 5472,
+    "b": "UgOf.4%M%gxt_N%MRjM{bHt8WBf5RPaejYj]"
+  },
+  "/portfolio/jvdm/pexels-jvdm-1454804.jpg": {
+    "w": 4368,
+    "h": 2741,
+    "b": "UCK26V00%L-=~qx]ogj]4TemM|WA.8M{xt9F"
+  },
+  "/portfolio/jvdm/pexels-jvdm-1457844.jpg": {
+    "w": 2912,
+    "h": 4368,
+    "b": "USJ*^[of_3xuxvRjofxu_4t7ITRj-=ofWBkC"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg": {
+    "w": 2670,
+    "h": 4000,
+    "b": "UgMQeVM_WWae?wt7RjogI9aeofofX9RjoffQ"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg": {
+    "w": 2670,
+    "h": 4000,
+    "b": "UHH-[J-ou6$*Y89a.9x]DOxCNHMxH;M{IAM{"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg": {
+    "w": 3600,
+    "h": 2403,
+    "b": "UTGIcXtRE1_2_Nt6oIxv%2ozRjadIUWBt7WW"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg": {
+    "w": 2670,
+    "h": 4000,
+    "b": "UAH2J?I857j;9X%MDibI8_aK~qxY00%NbHxu"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg": {
+    "w": 2537,
+    "h": 3800,
+    "b": "UIJtbZ~p-oxD-poMNHj]t7s,WBt7xZM|xuoz"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg": {
+    "w": 2670,
+    "h": 4000,
+    "b": "UILW@HngWB%L*0tRazt7-4xajZt6x^WCRjRj"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-6021895.jpg": {
+    "w": 2403,
+    "h": 3600,
+    "b": "UPK^~V.8-o.8~qxuozof?a-=oLay-:s.Mxt7"
+  },
+  "/portfolio/kseniachernaya/pexels-kseniachernaya-7120030.jpg": {
+    "w": 2397,
+    "h": 3591,
+    "b": "UEIX:BDi%y.700%MIBIUjIRjxut7~pWBIoof"
+  },
+  "/portfolio/pexels-alex-qian-1180283-2343465.jpg": {
+    "w": 5458,
+    "h": 3639,
+    "b": "USIYLU8^%M.8~qDiRjt8t7x]j[M{.8t6t7RP"
+  },
+  "/portfolio/pexels-amelia-hallsworth-5461644.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UZK1j*-=oM%2~qj[ogxuM{V?Rja#xZRjxus:"
+  },
+  "/portfolio/pexels-bemistermister-2442904.jpg": {
+    "w": 3024,
+    "h": 4032,
+    "b": "U39Zv400Kj9^56s;ofxt4T.mrWs:0L-:ogR5"
+  },
+  "/portfolio/pexels-burst-545012.jpg": {
+    "w": 4460,
+    "h": 2973,
+    "b": "UQNAhw=_NGj[?a%hkWRP_4D$IAt7_NM_oLt7"
+  },
+  "/portfolio/pexels-clickerhappy-584399.jpg": {
+    "w": 5633,
+    "h": 3726,
+    "b": "UFJt^+9ZNK?b_M-;M{xu~VjEIUIUDOIox]Rj"
+  },
+  "/portfolio/pexels-dropshado-2251247.jpg": {
+    "w": 5184,
+    "h": 3456,
+    "b": "UFG[G$^%4:~V01M|xtof-:R-xZV@S4R*WBxa"
+  },
+  "/portfolio/pexels-emrecan-2079249.jpg": {
+    "w": 3456,
+    "h": 5184,
+    "b": "URGt$m~VkqkX~Bt7R+S5WUslWBRjNGR+s:xZ"
+  },
+  "/portfolio/pexels-frans-van-heerden-201846-633269.jpg": {
+    "w": 3652,
+    "h": 5271,
+    "b": "UVIE;9M{IUWB_Ns9Rja|MztQRkofr?Wrj?s:"
+  },
+  "/portfolio/pexels-heyho-6794934.jpg": {
+    "w": 7337,
+    "h": 4898,
+    "b": "U9E|0i004;?w~p9Gxuf500~T-qNZ00%Lxvax"
+  },
+  "/portfolio/pexels-jworks1124-342800.jpg": {
+    "w": 2561,
+    "h": 2000,
+    "b": "UYIhT,tSDiad~VjYM|ofIVWAbIt7%MR.adoe"
+  },
+  "/portfolio/pexels-karola-g-5942742.jpg": {
+    "w": 4480,
+    "h": 6720,
+    "b": "UZL4sY_NRixu.8ogayt7tRMwWBWBVsbHxuWB"
+  },
+  "/portfolio/pexels-lamiko-3754699.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UUF62zI9D%~q%LRjxu%2IUozogM_s:WAWAoe"
+  },
+  "/portfolio/pexels-leah-newhouse-50725-6480707.jpg": {
+    "w": 5301,
+    "h": 3534,
+    "b": "UYKnh:%MRjoe_NozV@kCM{V@j[WBROofozj["
+  },
+  "/portfolio/pexels-maksgelatin-4352247.jpg": {
+    "w": 3648,
+    "h": 5472,
+    "b": "UcLEE1?bt8%M_NRjV@jZI9V@ayWARPt7ofkC"
+  },
+  "/portfolio/pexels-medhat-ayad-122846-447592.jpg": {
+    "w": 2099,
+    "h": 2623,
+    "b": "UlKKi-.8ofxu~pkDaykCM}M|ofWWt7j@ofog"
+  },
+  "/portfolio/pexels-mikhail-nilov-6707628.jpg": {
+    "w": 6000,
+    "h": 4000,
+    "b": "UHMQt{?^?b-;?vM_%Nt8?vVsf,x]-;t7WCWB"
+  },
+  "/portfolio/pexels-orlovamaria-4906249.jpg": {
+    "w": 3000,
+    "h": 4500,
+    "b": "UCGRPBWn^,~Vq[E2IURP00~VNFIpIoI9xuRj"
+  },
+  "/portfolio/pexels-pixabay-161758.jpg": {
+    "w": 2201,
+    "h": 1467,
+    "b": "U8HnNW=_Im${_JS$.8xtQ8xtx^S6o%Rk9tIq"
+  },
+  "/portfolio/pexels-pixabay-259962.jpg": {
+    "w": 4288,
+    "h": 2848,
+    "b": "UpN0*fr;Rkxu?wX9adjsaKt6Rja#jbaxjsj]"
+  },
+  "/portfolio/pexels-pixabay-269218.jpg": {
+    "w": 5760,
+    "h": 3240,
+    "b": "UTJb8PIUD%%M_NM{WBt6ogM{Rjs:xut7oeof"
+  },
+  "/portfolio/pexels-pixabay-269252.jpg": {
+    "w": 3386,
+    "h": 2677,
+    "b": "UEKeAo0000_3~qofR*M{00Rjt8V@?bofoMj?"
+  },
+  "/portfolio/pexels-pixabay-276724.jpg": {
+    "w": 1920,
+    "h": 1080,
+    "b": "UYGuE;~V%Nt6WBRjt7V@RjWXR*ozt7bvNGt8"
+  },
+  "/portfolio/pexels-pixabay-279719.jpg": {
+    "w": 1920,
+    "h": 1200,
+    "b": "URG[[[?b-;%M~q%MofV@_3xuM|M|xtWBIVM|"
+  },
+  "/portfolio/pexels-pixabay-37347.jpg": {
+    "w": 5669,
+    "h": 3785,
+    "b": "UTI#ru%NRjRj~p%gjuM|D$MxoekDITRPa}oe"
+  },
+  "/portfolio/pexels-pixabay-53464.jpg": {
+    "w": 1556,
+    "h": 2000,
+    "b": "UGH,kg^O0Mn+aHaKozWW~Bofr=xFniRjoJs."
+  },
+  "/portfolio/pexels-tatianasyrikova-3932930.jpg": {
+    "w": 3721,
+    "h": 5581,
+    "b": "UKMG#C.8R*-pJ.xuofkD_NRQWBWAMJoff+oI"
+  },
+  "/portfolio/pexels-toulouse-3457292.jpg": {
+    "w": 5184,
+    "h": 3456,
+    "b": "U9Bpa{E100%M00ax^+Ri8_t7W;R*_NofM_j]"
+  },
+  "/portfolio/pexels-vazhnik-7563521.jpg": {
+    "w": 3938,
+    "h": 5907,
+    "b": "UjMtBWV@fkx[_Nj[ayoz%gWBj[bHRPofayae"
+  },
+  "/portfolio/pexels-vika-glitter-392079-1648768.jpg": {
+    "w": 3001,
+    "h": 2539,
+    "b": "UgLN*~-;M{S4~qxuj@WVnzt7ofs:s:Rkj?s:"
+  },
+  "/portfolio/pexels-vince-2227832.jpg": {
+    "w": 2636,
+    "h": 3280,
+    "b": "UsLNoVn$NHax?wR*oft6-pofWpoMR,floKkC"
+  },
+  "/portfolio/pexels-zvolskiy-2062426.jpg": {
+    "w": 7226,
+    "h": 4823,
+    "b": "UILgqlx^WB~p^*xubI%MI9R,%M%2-oIoj@Rj"
+  },
+  "/portfolio/rachel-claire/pexels-rachel-claire-4825713.jpg": {
+    "w": 2598,
+    "h": 3851,
+    "b": "U8Gbek00~pnh-:-;IU%M00?aE2D%00WV?b?H"
+  },
+  "/portfolio/rachel-claire/pexels-rachel-claire-4846437.jpg": {
+    "w": 1824,
+    "h": 2736,
+    "b": "UYHC1ERPNHR%?]NGRPj[-oR*s:smxu%2R*R*"
+  },
+  "/portfolio/rachel-claire/pexels-rachel-claire-4993081.jpg": {
+    "w": 1728,
+    "h": 2592,
+    "b": "UYLz?X~qjrxa?vxvM{kCfRD%xuof?Ha#WqWC"
+  },
+  "/portfolio/rachel-claire/pexels-rachel-claire-5490336.jpg": {
+    "w": 1851,
+    "h": 2592,
+    "b": "UTGIP|wGt6-:_4Vqs+o#oMROM{RktRNeRkae"
+  },
+  "/portfolio/rachel-claire/pexels-rachel-claire-5490341.jpg": {
+    "w": 1850,
+    "h": 2592,
+    "b": "UqLqU*M_ozay_NofWBt7M{kCkCjst7jYWBWB"
+  },
+  "/portfolio/rachel-claire/pexels-rachel-claire-5490356.jpg": {
+    "w": 1728,
+    "h": 2592,
+    "b": "UCHU^AK5Nb4n5QrV_NM|S1IpMxs.$KIoRQxu"
+  },
+  "/profiles/pexels-anna-nekrashevich-6801642.jpg": {
+    "w": 4480,
+    "h": 6720,
+    "b": "UQK-a$RjoI?b#%Rj?a%2DiofIAax~qt7t8WB"
+  },
+  "/profiles/pexels-dxaxoxfz-17555273.jpg": {
+    "w": 3648,
+    "h": 5472,
+    "b": "UmFs3;awoyRj~qfOM{WA?vs.WBkC%Mt7oLoz"
+  },
+  "/profiles/pexels-ekaterina-bolovtsova-5393594.jpg": {
+    "w": 4480,
+    "h": 6720,
+    "b": "UJE.z=%M57Io00RPNGj[?^bI$%xa9Gof?HV@"
+  },
+  "/profiles/pexels-italo-melo-881954-2379005.jpg": {
+    "w": 2400,
+    "h": 3000,
+    "b": "UVK1dqIA.S?b~VRkoft70LxtMdM{?at7s:n$"
+  },
+  "/profiles/pexels-linkedin-2182970.jpg": {
+    "w": 4480,
+    "h": 6720,
+    "b": "UbI5Y.?v%gW=~qRPtQt7IoM{slt7bwxuaJaz"
+  },
+  "/profiles/pexels-maide-arslan-128712163-31750448.jpg": {
+    "w": 3389,
+    "h": 5083,
+    "b": "U97^f5%201D*~Cs:4:M{9aNG-o%10LRj~C-p"
+  },
+  "/profiles/pexels-maide-arslan-128712163-31750456.jpg": {
+    "w": 4160,
+    "h": 6240,
+    "b": "U77nRRxu00D%4nRjIUxu~qofM{M{00ay?bxu"
+  },
+  "/profiles/pexels-moose-photos-170195-1587009.jpg": {
+    "w": 3744,
+    "h": 5616,
+    "b": "UqMGbR-o.Roy~pofafRkTJNGnOsTwIxaNGoz"
+  },
+  "/profiles/pexels-nkhajotia-1516680.jpg": {
+    "w": 4000,
+    "h": 6000,
+    "b": "UiG+pmGH.QyB_KFex[tQwHV@i_slD+n$R6V["
+  },
+  "/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg": {
+    "w": 3208,
+    "h": 4010,
+    "b": "UDE.;K~q004:00D%.9%M00bb%LD%?vt7i^%M"
+  },
+  "/profiles/pexels-skildring-12871464.jpg": {
+    "w": 4472,
+    "h": 6500,
+    "b": "ULL|*~InO8RO-i~q_2xUktRknnM{tmD%MyW?"
+  },
+  "/speedwell.jpg": {
+    "w": 4000,
+    "h": 2000,
+    "b": "UhPGHcM|-;?b~qxaM{Rkt8ofadWA%MkDa}WA"
+  },
+  "/videos/hero-op.mp4": {},
+  "_cdns": [
+    "https://architecturallysignificant.dougnewby.com",
+    "",
+    "http://test.com"
+  ],
+  "/wp-content/uploads/2024/06/4400-Belfort-IMG_2411-edited-scaled.jpg": {
+    "w": 2560,
+    "h": 1440,
+    "b": "UCEMX7-qtkt3vu?XWGNH4;9G%1t7TS9GaLt8",
+    "c": 0
+  }
+}

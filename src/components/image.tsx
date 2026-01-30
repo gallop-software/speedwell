@@ -5,13 +5,21 @@ import type { ComponentProps } from 'react'
 import leanMeta from '@/../_data/_meta.json'
 
 type LeanImageEntry = {
-  w: number
-  h: number
-  blur: string
-  s?: 1
+  w?: number
+  h?: number
+  b?: string   // blurhash
+  p?: 1        // processed (has thumbnails)
+  c?: number   // CDN index into _cdns array
 }
 
-type LeanMeta = Record<string, LeanImageEntry>
+interface FullMeta {
+  _cdns?: string[]
+  [key: string]: LeanImageEntry | string[] | undefined
+}
+
+// Get CDN URLs from meta
+const meta = leanMeta as FullMeta
+const cdnUrls = meta._cdns || []
 
 // Map size prop to thumbnail suffix
 const SIZE_SUFFIX: Record<string, string> = {
@@ -20,12 +28,31 @@ const SIZE_SUFFIX: Record<string, string> = {
   large: '-lg',
 }
 
-// Get thumbnail path from original path
-function getThumbnailPath(originalPath: string, size: 'small' | 'medium' | 'large'): string {
+// Get thumbnail path from original path, using CDN if available
+function getThumbnailPath(
+  originalPath: string,
+  size: 'small' | 'medium' | 'large',
+  cdnUrl?: string
+): string {
   const ext = originalPath.match(/\.\w+$/)?.[0] || '.jpg'
   const base = originalPath.replace(/\.\w+$/, '')
   const outputExt = ext.toLowerCase() === '.png' ? '.png' : '.jpg'
-  return `/images${base}${SIZE_SUFFIX[size]}${outputExt}`
+  const localPath = `/images${base}${SIZE_SUFFIX[size]}${outputExt}`
+  
+  // Use CDN URL if available
+  if (cdnUrl) {
+    return `${cdnUrl}${localPath}`
+  }
+  
+  return localPath
+}
+
+// Helper to get entry from meta (excludes _cdns)
+function getMetaEntry(key: string): LeanImageEntry | undefined {
+  if (key.startsWith('_')) return undefined
+  const value = meta[key]
+  if (Array.isArray(value)) return undefined
+  return value as LeanImageEntry | undefined
 }
 
 export interface ImageProps extends Omit<
@@ -92,16 +119,19 @@ export function Image({
   if (size) {
     // Normalize src to have leading slash for lookup
     const lookupKey = src.startsWith('/') ? src : `/${src}`
-    const meta = leanMeta as LeanMeta
-    const entry = meta[lookupKey]
+    const entry = getMetaEntry(lookupKey)
     
     if (entry) {
-      if (size === 'full') {
-        // Use original image
-        resolvedSrc = src
+      // Get CDN URL from _cdns array if image has a CDN index
+      const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
+      const isProcessed = entry.p === 1
+      
+      if (size === 'full' || !isProcessed) {
+        // Use original image if full size requested OR if not processed (no thumbnails exist)
+        resolvedSrc = cdnUrl ? `${cdnUrl}${lookupKey}` : src
       } else {
-        // Use thumbnail
-        resolvedSrc = getThumbnailPath(lookupKey, size)
+        // Use thumbnail (from CDN if pushed)
+        resolvedSrc = getThumbnailPath(lookupKey, size, cdnUrl)
       }
       // Only use metadata dimensions if user didn't explicitly provide them
       if (!hasExplicitWidth && !hasExplicitHeight) {
@@ -130,11 +160,12 @@ export function Image({
   // If href is not set but mediaLink is true, use original image for lightbox
   else if (!href && mediaLink) {
     const lookupKey = src.startsWith('/') ? src : `/${src}`
-    const meta = leanMeta as LeanMeta
-    const entry = meta[lookupKey]
+    const entry = getMetaEntry(lookupKey)
     if (entry) {
-      // Use original image for lightbox (best quality)
-      mediaLinkHref = src
+      // Get CDN URL from _cdns array if image has a CDN index
+      const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
+      // Use original image for lightbox (best quality), from CDN if available
+      mediaLinkHref = cdnUrl ? `${cdnUrl}${lookupKey}` : src
       isMediaLink = true
     }
   }
