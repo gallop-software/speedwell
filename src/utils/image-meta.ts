@@ -94,9 +94,8 @@ export function getMetaImage(
     const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
     const entryIsProcessed = isProcessed(entry)
 
-    // Get the size key and dimensions
+    // Get the size key
     const sizeConfig = SIZE_MAP[size]
-    const dims = entry[sizeConfig.key]
 
     if (size === 'full' || !entryIsProcessed) {
       // Use original or full dimensions
@@ -117,10 +116,11 @@ export function getMetaImage(
 
     // Try requested size, fall back to larger sizes, then full
     const fallbackOrder: Array<'sm' | 'md' | 'lg' | 'f'> = ['sm', 'md', 'lg', 'f']
-    const startIndex = fallbackOrder.indexOf(sizeConfig.key)
+    const startIndex = Math.max(0, fallbackOrder.indexOf(sizeConfig.key))
     
     for (let i = startIndex; i < fallbackOrder.length; i++) {
       const key = fallbackOrder[i]
+      if (!key) continue
       const sizeDims = entry[key]
       if (sizeDims) {
         const sizeForPath = key === 'sm' ? 'small' : key === 'md' ? 'medium' : key === 'lg' ? 'large' : 'full'

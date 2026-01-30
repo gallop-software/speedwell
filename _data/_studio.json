@@ -1,4 +1,7 @@
 {
+  "_cdns": [
+    "https://architecturallysignificant.dougnewby.com"
+  ],
   "/banner.jpg": {
     "o": {
       "w": 2000,
@@ -2232,5 +2235,13 @@
     },
     "b": "UhPGHcM|-;?b~qxaM{Rkt8ofadWA%MkDa}WA"
   },
-  "/videos/hero-op.mp4": {}
+  "/videos/hero-op.mp4": {},
+  "/wp-content/uploads/2024/06/4400-Belfort-IMG_2411-edited-scaled.jpg": {
+    "o": {
+      "w": 2560,
+      "h": 1440
+    },
+    "b": "UCEMX7-qtkt3vu?XWGNH4;9G%1t7TS9GaLt8",
+    "c": 0
+  }
 }
