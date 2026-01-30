@@ -1,6 +1,7 @@
 {
   "_cdns": [
-    "https://architecturallysignificant.dougnewby.com"
+    "https://architecturallysignificant.dougnewby.com",
+    "https://pub-b11225b418214a90925fbef377b6de87.r2.dev"
   ],
   "/banner.jpg": {
     "o": {
@@ -2241,7 +2242,23 @@
       "w": 2560,
       "h": 1440
     },
+    "f": {
+      "w": 2560,
+      "h": 1440
+    },
+    "sm": {
+      "w": 300,
+      "h": 169
+    },
+    "md": {
+      "w": 700,
+      "h": 394
+    },
+    "lg": {
+      "w": 1400,
+      "h": 788
+    },
     "b": "UCEMX7-qtkt3vu?XWGNH4;9G%1t7TS9GaLt8",
-    "c": 0
+    "c": 1
   }
 }
