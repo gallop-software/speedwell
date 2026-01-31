@@ -11,7 +11,6 @@ import { baseURL } from './metadata'
 import GoogleAds from '@/hooks/google-ads'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
-import { StudioButton } from '@gallop.software/studio'
 
 export const revalidate = 86400
 
@@ -63,7 +62,6 @@ export default function RootLayout({
         <div>{children}</div>
         <SmoothScroll />
         <IframeHeight />
-        <StudioButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
       {process.env.NODE_ENV === 'production' &&

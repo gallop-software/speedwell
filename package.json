@@ -28,6 +28,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "studio": "studio --workspace .",
     "build": "npm run blog && next build",
     "start": "next start",
     "lint": "eslint src/",
@@ -71,7 +72,6 @@
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",
-    "@gallop.software/studio": "^1.5.10",
     "@headlessui/react": "^2.2.9",
     "@iconify/icons-heroicons": "^1.2.9",
     "@iconify/icons-lucide": "^1.2.135",
@@ -97,6 +97,7 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.26.0",
+    "@gallop.software/studio": "^2.1.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
