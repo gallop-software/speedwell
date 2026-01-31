@@ -7046,7 +7046,9 @@
     "b": "UhPGHcM|-;?b~qxaM{Rkt8ofadWA%MkDa}WA",
     "c": 1
   },
-  "/videos/hero-op.mp4": {},
+  "/videos/hero-op.mp4": {
+    "c": 1
+  },
   "/banner.jpg": {
     "o": {
       "w": 2000,
