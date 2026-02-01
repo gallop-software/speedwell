@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import React, { Children, isValidElement } from 'react'
-import imageMeta from '@/../_data/_meta.json'
+import imageMeta from '@/../_data/_studio.json'
 import { LightboxWrapper } from '@/components/lightbox-wrapper'
 
 export interface GalleryProps {
@@ -13,18 +13,23 @@ export interface GalleryProps {
 
 type ImageSize = 'small' | 'medium' | 'large' | 'full'
 
-type ImageSizeData = {
-  width: number
-  height: number
-  file: string
+interface Dimensions {
+  w: number
+  h: number
 }
 
-type ImageMetadata = {
-  [size in ImageSize]?: ImageSizeData
+type MetaEntry = {
+  o?: Dimensions   // original dimensions {w, h}
+  sm?: Dimensions  // small thumbnail
+  md?: Dimensions  // medium thumbnail
+  lg?: Dimensions  // large thumbnail
+  f?: Dimensions   // full size
+  c?: number       // CDN index
 }
 
-type ImageMetaData = {
-  [key: string]: ImageMetadata
+interface FullMeta {
+  _cdns?: string[]
+  [key: string]: MetaEntry | string[] | undefined
 }
 
 type GalleryItemProps = {
@@ -38,28 +43,57 @@ type GalleryItemProps = {
   size?: ImageSize
 }
 
+// Map size prop to meta key
+const SIZE_KEY_MAP: Record<ImageSize, 'sm' | 'md' | 'lg' | 'f'> = {
+  small: 'sm',
+  medium: 'md',
+  large: 'lg',
+  full: 'f',
+}
+
+// Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
+function getMetaLookupKey(src: string): string {
+  let key = src.startsWith('/') ? src : `/${src}`
+  
+  // Strip /images prefix if present
+  if (key.startsWith('/images/')) {
+    key = key.slice(7) // Remove '/images'
+  }
+  
+  // Strip size suffix if present (e.g., -sm, -md, -lg)
+  key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
+  
+  return key
+}
+
 const getDimsFromMetadata = (
   src: string,
   size: ImageSize = 'large'
 ): { width: number; height: number } => {
-  const metaData = imageMeta as ImageMetaData
-  const metadata = metaData[src]
+  const metaData = imageMeta as FullMeta
+  
+  // Normalize src to get lookup key (strips /images prefix and size suffixes)
+  const lookupKey = getMetaLookupKey(src)
+  
+  // Get entry from meta (exclude special keys)
+  if (lookupKey.startsWith('_')) return { width: 1000, height: 1000 }
+  const value = metaData[lookupKey]
+  if (!value || Array.isArray(value)) return { width: 1000, height: 1000 }
+  const entry = value as MetaEntry
 
-  if (metadata && size in metadata) {
-    const sizeData = metadata[size]
-    if (sizeData) {
-      return { width: sizeData.width, height: sizeData.height }
-    }
+  // Try requested size first
+  const sizeKey = SIZE_KEY_MAP[size]
+  const dims = entry[sizeKey]
+  if (dims) {
+    return { width: dims.w, height: dims.h }
   }
 
-  // Fallback to any available size if specified size not found
-  if (metadata) {
-    const availableSizes: ImageSize[] = ['large', 'medium', 'full', 'small']
-    for (const fallbackSize of availableSizes) {
-      if (metadata[fallbackSize]) {
-        const sizeData = metadata[fallbackSize]
-        return { width: sizeData.width, height: sizeData.height }
-      }
+  // Fallback to any available size
+  const fallbackOrder: Array<'lg' | 'md' | 'f' | 'sm' | 'o'> = ['lg', 'md', 'f', 'sm', 'o']
+  for (const key of fallbackOrder) {
+    const fallbackDims = entry[key as keyof MetaEntry] as Dimensions | undefined
+    if (fallbackDims && typeof fallbackDims === 'object' && 'w' in fallbackDims) {
+      return { width: fallbackDims.w, height: fallbackDims.h }
     }
   }
 

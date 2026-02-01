@@ -28,6 +28,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "studio": "studio --workspace .",
     "build": "npm run blog && next build",
     "start": "next start",
     "lint": "eslint src/",
@@ -42,7 +43,6 @@
     "generate:ai-rules": "gallop generate .cursorrules && gallop generate .github/copilot-instructions.md",
     "images": "node _scripts/process-images.js",
     "images:reset": "rm -rf public/images && npm run images",
-    "favicon": "node _scripts/generate-favicon.js",
     "featured-image": "node _scripts/generate-featured-image.js",
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
@@ -97,6 +97,7 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.26.0",
+    "@gallop.software/studio": "^2.3.69",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",

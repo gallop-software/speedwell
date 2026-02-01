@@ -27,7 +27,6 @@ const BASE_URL = 'https://speedwell.gallop.software'
 const SCREENSHOT_WIDTH = 1920
 const SCREENSHOT_HEIGHT = 2400 // Tall screenshot for layouts
 const LARGE_SIZE = 1400 // Large image size on longest side
-const MEDIUM_SIZE = 700 // Medium image size on longest side (with -md suffix)
 
 // Helper function for natural sort (layout-1, layout-2, ..., layout-10)
 function naturalSort(a, b) {
@@ -395,9 +394,8 @@ async function captureScreenshot(browser, slug, outputDir) {
       }
     }
 
-    // Calculate dimensions for both sizes
+    // Calculate dimensions for large size
     const large = calculateDimensions(LARGE_SIZE)
-    const medium = calculateDimensions(MEDIUM_SIZE)
 
     // Save large image (1400px)
     const largeImagePath = join(outputDir, `${slug}.jpg`)
@@ -406,16 +404,7 @@ async function captureScreenshot(browser, slug, outputDir) {
       .jpeg({ quality: 90 })
       .toFile(largeImagePath)
 
-    // Save medium image (700px with -md suffix)
-    const mediumImagePath = join(outputDir, `${slug}-md.jpg`)
-    await sharp(screenshotBuffer)
-      .resize(medium.w, medium.h, { fit: 'inside' })
-      .jpeg({ quality: 90 })
-      .toFile(mediumImagePath)
-
-    console.log(
-      `✓ Saved: ${slug}.jpg (${large.w}x${large.h}) + ${slug}-md.jpg (${medium.w}x${medium.h})`
-    )
+    console.log(`✓ Saved: ${slug}.jpg (${large.w}x${large.h})`)
     return true
   } catch (error) {
     console.error(`✗ Error capturing ${slug}:`, error.message)
@@ -448,11 +437,11 @@ async function cleanupOrphanedScreenshots(currentLayoutSlugs, outputDir) {
     return { orphanedSlugs, deletedCount }
   }
 
-  // Get unique slugs from screenshot files (remove -md suffix and .jpg extension)
+  // Get unique slugs from screenshot files
   const screenshotSlugs = new Set()
   for (const file of screenshotFiles) {
     if (file.endsWith('.jpg')) {
-      const slug = file.replace('-md.jpg', '.jpg').replace('.jpg', '')
+      const slug = file.replace('.jpg', '')
       screenshotSlugs.add(slug)
     }
   }
@@ -462,23 +451,12 @@ async function cleanupOrphanedScreenshots(currentLayoutSlugs, outputDir) {
     if (!currentLayoutSlugs.has(slug)) {
       orphanedSlugs.push(slug)
 
-      // Delete both large and medium screenshots
-      const largePath = join(outputDir, `${slug}.jpg`)
-      const mediumPath = join(outputDir, `${slug}-md.jpg`)
+      const imagePath = join(outputDir, `${slug}.jpg`)
 
       try {
-        await access(largePath)
-        await unlink(largePath)
+        await access(imagePath)
+        await unlink(imagePath)
         console.log(`✓ Deleted orphaned screenshot: ${slug}.jpg`)
-        deletedCount++
-      } catch {
-        // File doesn't exist
-      }
-
-      try {
-        await access(mediumPath)
-        await unlink(mediumPath)
-        console.log(`✓ Deleted orphaned screenshot: ${slug}-md.jpg`)
         deletedCount++
       } catch {
         // File doesn't exist
