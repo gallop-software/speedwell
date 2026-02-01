@@ -167,3 +167,54 @@ export function getMetaImage(
     return undefined
   }
 }
+
+/**
+ * Get the correct Studio URL for an image path.
+ * Returns CDN URL if the image is in the cloud, otherwise returns the original path.
+ *
+ * @example
+ * ```tsx
+ * // Image in cloud returns CDN URL
+ * studioUrl('/images/hero-bg.png')
+ * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg.png'
+ *
+ * // Image not in cloud returns original path
+ * studioUrl('/images/local-only.png')
+ * // Returns: '/images/local-only.png'
+ *
+ * // Works with or without /images prefix
+ * studioUrl('/hero-bg.png')
+ * studioUrl('/images/hero-bg.png')
+ * ```
+ *
+ * @param src - The image path (e.g., '/images/hero-bg.png' or '/hero-bg.png')
+ * @returns The resolved URL (CDN URL if in cloud, original path otherwise)
+ */
+export function studioUrl(src: string): string {
+  if (!src) return src
+
+  // Normalize to get lookup key
+  const lookupKey = getMetaLookupKey(src)
+
+  // Get entry from meta
+  if (lookupKey.startsWith('_')) return src
+  const value = meta[lookupKey]
+  if (!value || Array.isArray(value)) return src
+  const entry = value as MetaEntry
+
+  // Get CDN URL if available
+  const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
+  if (!cdnUrl) return src
+
+  // Build the correct path
+  const entryIsProcessed = isProcessed(entry)
+  
+  if (entryIsProcessed) {
+    // Use processed image path (in /images folder)
+    const imagePath = getThumbnailPath(lookupKey, 'full')
+    return `${cdnUrl}${imagePath}`
+  }
+  
+  // Not processed - use original path from CDN
+  return `${cdnUrl}${lookupKey}`
+}
