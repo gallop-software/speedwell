@@ -45,6 +45,21 @@ function isProcessed(entry: MetaEntry | undefined): boolean {
   return !!(entry.f || entry.lg || entry.md || entry.sm)
 }
 
+// Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
+function getMetaLookupKey(src: string): string {
+  let key = src.startsWith('/') ? src : `/${src}`
+  
+  // Strip /images prefix if present
+  if (key.startsWith('/images/')) {
+    key = key.slice(7) // Remove '/images'
+  }
+  
+  // Strip size suffix if present (e.g., -sm, -md, -lg)
+  key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
+  
+  return key
+}
+
 // Get thumbnail path from original path
 function getThumbnailPath(originalPath: string, size: ImageSize): string {
   const ext = originalPath.match(/\.\w+$/)?.[0] || '.jpg'
@@ -81,8 +96,8 @@ export function getMetaImage(
   }
 
   try {
-    // Normalize URL to have leading slash
-    const lookupKey = url.startsWith('/') ? url : `/${url}`
+    // Normalize URL to get lookup key (strips /images prefix and size suffixes)
+    const lookupKey = getMetaLookupKey(url)
     
     // Get entry from meta (exclude special keys)
     if (lookupKey.startsWith('_')) return undefined

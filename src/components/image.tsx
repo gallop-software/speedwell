@@ -34,30 +34,48 @@ interface FullMeta {
 const meta = leanMeta as FullMeta
 const cdnUrls = meta._cdns || []
 
-// Map size prop to thumbnail suffix
-const SIZE_SUFFIX: Record<string, string> = {
-  small: '-sm',
-  medium: '-md',
-  large: '-lg',
+// Map size prop to thumbnail suffix and meta key
+type ImageSize = 'small' | 'medium' | 'large' | 'full'
+const SIZE_CONFIG: Record<ImageSize, { suffix: string; metaKey: 'sm' | 'md' | 'lg' | 'f' }> = {
+  small: { suffix: '-sm', metaKey: 'sm' },
+  medium: { suffix: '-md', metaKey: 'md' },
+  large: { suffix: '-lg', metaKey: 'lg' },
+  full: { suffix: '', metaKey: 'f' },
 }
 
-// Get thumbnail path from original path, using CDN if available
-function getThumbnailPath(
-  originalPath: string,
-  size: 'small' | 'medium' | 'large',
+// Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
+function getMetaLookupKey(src: string): string {
+  let key = src.startsWith('/') ? src : `/${src}`
+  
+  // Strip /images prefix if present
+  if (key.startsWith('/images/')) {
+    key = key.slice(7) // Remove '/images'
+  }
+  
+  // Strip size suffix if present (e.g., -sm, -md, -lg)
+  key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
+  
+  return key
+}
+
+// Get the resolved image URL based on entry and size
+function getResolvedImageUrl(
+  lookupKey: string,
+  size: ImageSize,
   cdnUrl?: string
 ): string {
-  const ext = originalPath.match(/\.\w+$/)?.[0] || '.jpg'
-  const base = originalPath.replace(/\.\w+$/, '')
+  const ext = lookupKey.match(/\.\w+$/)?.[0] || '.jpg'
+  const base = lookupKey.replace(/\.\w+$/, '')
   const outputExt = ext.toLowerCase() === '.png' ? '.png' : '.jpg'
-  const localPath = `/images${base}${SIZE_SUFFIX[size]}${outputExt}`
+  const config = SIZE_CONFIG[size]
+  const imagePath = `/images${base}${config.suffix}${outputExt}`
   
   // Use CDN URL if available
   if (cdnUrl) {
-    return `${cdnUrl}${localPath}`
+    return `${cdnUrl}${imagePath}`
   }
   
-  return localPath
+  return imagePath
 }
 
 // Helper to get entry from meta (excludes _cdns)
@@ -124,37 +142,40 @@ export function Image({
   const hasExplicitWidth = width !== undefined
   const hasExplicitHeight = height !== undefined
 
-  // Resolve image metadata if size prop is provided
+  // Resolve image metadata - always check meta for CDN URL and dimensions
   let resolvedSrc = src
   let resolvedWidth: number | 'auto' | undefined = width
   let resolvedHeight: number | 'auto' | undefined = height
 
-  if (size) {
-    // Normalize src to have leading slash for lookup
-    const lookupKey = src.startsWith('/') ? src : `/${src}`
-    const entry = getMetaEntry(lookupKey)
+  // Get meta lookup key (strip /images prefix and size suffixes)
+  const lookupKey = getMetaLookupKey(src)
+  const entry = getMetaEntry(lookupKey)
+  
+  // Default to 'large' size for metadata lookup if no size specified
+  const effectiveSize = size || 'large'
+  
+  if (entry) {
+    // Get CDN URL from _cdns array if image has a CDN index
+    const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
+    const entryIsProcessed = isProcessed(entry)
     
-    if (entry) {
-      // Get CDN URL from _cdns array if image has a CDN index
-      const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
-      const entryIsProcessed = isProcessed(entry)
-      
-      if (size === 'full' || !entryIsProcessed) {
-        // Use original image if full size requested OR if not processed (no thumbnails exist)
-        resolvedSrc = cdnUrl ? `${cdnUrl}${lookupKey}` : src
-      } else {
-        // Use thumbnail (from CDN if pushed)
-        resolvedSrc = getThumbnailPath(lookupKey, size, cdnUrl)
-      }
-      // Only use metadata dimensions if user didn't explicitly provide them
-      if (!hasExplicitWidth && !hasExplicitHeight) {
-        // Use thumbnail dimensions if available for that size, otherwise original
-        const sizeKey = size === 'small' ? 'sm' : size === 'medium' ? 'md' : size === 'large' ? 'lg' : 'f'
-        const dims = entry[sizeKey] || entry.o
-        if (dims) {
-          resolvedWidth = dims.w
-          resolvedHeight = dims.h
-        }
+    if (entryIsProcessed) {
+      // Image is processed - use the appropriate size URL
+      resolvedSrc = getResolvedImageUrl(lookupKey, effectiveSize, cdnUrl)
+    } else if (cdnUrl) {
+      // Not processed but on CDN - use original from CDN
+      resolvedSrc = `${cdnUrl}${lookupKey}`
+    }
+    // If not processed and no CDN, keep original src
+    
+    // Always use metadata dimensions based on size (unless explicitly provided)
+    if (!hasExplicitWidth && !hasExplicitHeight) {
+      const config = SIZE_CONFIG[effectiveSize]
+      // Try the requested size first, then fall back through larger sizes
+      const dims = entry[config.metaKey] || entry.lg || entry.md || entry.f || entry.o
+      if (dims) {
+        resolvedWidth = dims.w
+        resolvedHeight = dims.h
       }
     }
   }
@@ -175,17 +196,19 @@ export function Image({
     mediaLinkHref = href
     isMediaLink = true
   }
-  // If href is not set but mediaLink is true, use original image for lightbox
-  else if (!href && mediaLink) {
-    const lookupKey = src.startsWith('/') ? src : `/${src}`
-    const entry = getMetaEntry(lookupKey)
-    if (entry) {
-      // Get CDN URL from _cdns array if image has a CDN index
-      const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
-      // Use original image for lightbox (best quality), from CDN if available
-      mediaLinkHref = cdnUrl ? `${cdnUrl}${lookupKey}` : src
-      isMediaLink = true
+  // If href is not set but mediaLink is true, use full size image for lightbox
+  else if (!href && mediaLink && entry) {
+    const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
+    const entryIsProcessed = isProcessed(entry)
+    // Use full size for lightbox (best quality)
+    if (entryIsProcessed) {
+      mediaLinkHref = getResolvedImageUrl(lookupKey, 'full', cdnUrl)
+    } else if (cdnUrl) {
+      mediaLinkHref = `${cdnUrl}${lookupKey}`
+    } else {
+      mediaLinkHref = src
     }
+    isMediaLink = true
   }
 
   // Calculate aspect ratio style if aspect prop is not provided and we have dimensions

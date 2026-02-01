@@ -52,14 +52,29 @@ const SIZE_KEY_MAP: Record<ImageSize, 'sm' | 'md' | 'lg' | 'f'> = {
   full: 'f',
 }
 
+// Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
+function getMetaLookupKey(src: string): string {
+  let key = src.startsWith('/') ? src : `/${src}`
+  
+  // Strip /images prefix if present
+  if (key.startsWith('/images/')) {
+    key = key.slice(7) // Remove '/images'
+  }
+  
+  // Strip size suffix if present (e.g., -sm, -md, -lg)
+  key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
+  
+  return key
+}
+
 const getDimsFromMetadata = (
   src: string,
   size: ImageSize = 'large'
 ): { width: number; height: number } => {
   const metaData = imageMeta as FullMeta
   
-  // Normalize src to have leading slash
-  const lookupKey = src.startsWith('/') ? src : `/${src}`
+  // Normalize src to get lookup key (strips /images prefix and size suffixes)
+  const lookupKey = getMetaLookupKey(src)
   
   // Get entry from meta (exclude special keys)
   if (lookupKey.startsWith('_')) return { width: 1000, height: 1000 }
