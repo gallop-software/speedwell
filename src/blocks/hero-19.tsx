@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { studioUrl } from '@/utils/studio-helpers'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Accent } from '@/components/accent'
@@ -78,7 +79,7 @@ export default function Hero19() {
       <div
         className="relative px-6 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/portfolio/pexels-heyho-6794934.jpg')",
+          backgroundImage: `url('${studioUrl("/images/portfolio/pexels-heyho-6794934.jpg")}')`,
         }}
       >
         {/* Overlay */}
@@ -230,13 +231,12 @@ export default function Hero19() {
               <Link
                 key={index}
                 href={item.href}
-                className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${
-                  index === 0
+                className={`py-16 px-10 w-full xl:w-1/3 flex flex-col gap-6 justify-center items-center xl:items-start rounded-md xl:rounded-none hover:bg-body/12 transition-colors duration-300 ${index === 0
                     ? 'bg-body/3'
                     : index === 1
                       ? 'bg-body/6'
                       : 'bg-body/9'
-                }`}
+                  }`}
               >
                 <div className="w-20 h-20 flex items-center justify-center rounded-full bg-accent-contrast">
                   <Icon

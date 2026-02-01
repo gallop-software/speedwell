@@ -189,9 +189,13 @@ export function getStudioImage(
  *
  * @example
  * ```tsx
- * // Image in cloud returns CDN URL
+ * // Image in cloud returns CDN URL (defaults to 'large' size)
  * studioUrl('/images/hero-bg.png')
- * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg.png'
+ * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg-lg.jpg'
+ *
+ * // Specify a size
+ * studioUrl('/images/hero-bg.png', 'medium')
+ * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg-md.jpg'
  *
  * // Image not in cloud returns original path
  * studioUrl('/images/local-only.png')
@@ -203,9 +207,10 @@ export function getStudioImage(
  * ```
  *
  * @param src - The image path (e.g., '/images/hero-bg.png' or '/hero-bg.png')
+ * @param size - The desired image size ('small', 'medium', 'large', 'full'). Defaults to 'large'.
  * @returns The resolved URL (CDN URL if in cloud, original path otherwise)
  */
-export function studioUrl(src: string): string {
+export function studioUrl(src: string, size: ImageSize = 'large'): string {
   if (!src) return src
 
   // Normalize to get lookup key
@@ -219,17 +224,39 @@ export function studioUrl(src: string): string {
 
   // Get CDN URL if available
   const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
-  if (!cdnUrl) return src
 
   // Build the correct path
   const entryIsProcessed = isProcessed(entry)
+  const baseUrl = cdnUrl || ''
 
-  if (entryIsProcessed) {
-    // Use processed image path (in /images folder)
-    const imagePath = getThumbnailPath(lookupKey, 'full')
-    return `${cdnUrl}${imagePath}`
+  if (!entryIsProcessed) {
+    // Not processed - use original path
+    return cdnUrl ? `${cdnUrl}${lookupKey}` : src
   }
 
-  // Not processed - use original path from CDN
-  return `${cdnUrl}${lookupKey}`
+  // Try requested size, fall back to larger sizes, then full
+  const sizeConfig = SIZE_MAP[size]
+  const fallbackOrder: Array<'sm' | 'md' | 'lg' | 'f'> = ['sm', 'md', 'lg', 'f']
+  const startIndex = Math.max(0, fallbackOrder.indexOf(sizeConfig.key))
+
+  for (let i = startIndex; i < fallbackOrder.length; i++) {
+    const key = fallbackOrder[i]
+    if (!key) continue
+    if (entry[key]) {
+      const sizeForPath =
+        key === 'sm'
+          ? 'small'
+          : key === 'md'
+            ? 'medium'
+            : key === 'lg'
+              ? 'large'
+              : 'full'
+      const imagePath = getThumbnailPath(lookupKey, sizeForPath)
+      return `${baseUrl}${imagePath}`
+    }
+  }
+
+  // Fallback to full size path
+  const imagePath = getThumbnailPath(lookupKey, 'full')
+  return `${baseUrl}${imagePath}`
 }
