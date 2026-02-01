@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { baseURL, defaultOGImage, defaultSEOConfig } from '@/app/metadata'
-import { getMetaImage } from '@/utils/image-meta'
+import { getStudioImage } from '@/utils/studio-helpers'
 
 export interface PageMetadata {
   title?: string
@@ -48,11 +48,11 @@ export function generatePageMetadata(
   slug?: string[]
 ): Metadata {
   const openGraphImageData = metadata?.openGraph?.image
-    ? getMetaImage(metadata.openGraph.image.url, 'large')
+    ? getStudioImage(metadata.openGraph.image.url, 'large')
     : null
 
   const twitterImageData = metadata?.twitter?.image
-    ? getMetaImage(metadata.twitter.image, 'large')
+    ? getStudioImage(metadata.twitter.image, 'large')
     : null
 
   return {

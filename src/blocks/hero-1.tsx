@@ -1,5 +1,5 @@
 import { Paragraph } from '@/components/paragraph'
-import { studioUrl } from '@/utils/image-meta'
+import { Image } from '@/components/image'
 import { Heading } from '@/components/heading'
 import { Button } from '@/components/button'
 import { ButtonPlay } from '@/components/button-play'
@@ -18,10 +18,12 @@ export default function Hero1() {
     <>
       <Gradient className="relative rounded-4xl ring-1 ring-black/5 ring-inset overflow-hidden m-2 pt-navbar">
         <div className="mx-auto max-w-[1600px] relative">
-          <img
-            src={studioUrl("/images/hero-bg.png")}
+          <Image
+            src="/images/hero-bg.png"
             alt=""
+            size="large"
             className="absolute top-0 left-0 w-[95%] sm:w-[60%] lg:w-[40%] h-auto z-0 opacity-15"
+            rounded="rounded-none"
           />
           <Columns
             cols="grid-cols-1 lg:grid-cols-[3fr_2fr]"

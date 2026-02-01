@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useCallback } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { studioUrl } from '@/utils/image-meta'
+import { studioUrl } from '@/utils/studio-helpers'
 
 type VideoProps = {
   src: string

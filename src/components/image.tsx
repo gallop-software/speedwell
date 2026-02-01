@@ -2,7 +2,7 @@ import { clsx } from 'clsx'
 import Link from 'next/link'
 import { Paragraph } from '@/components/paragraph'
 import type { ComponentProps } from 'react'
-import { getMetaImage } from '@/utils/image-meta'
+import { getStudioImage } from '@/utils/studio-helpers'
 
 export interface ImageProps extends Omit<
   ComponentProps<'img'>,
@@ -64,17 +64,17 @@ export function Image({
   const effectiveSize = size || 'large'
 
   // Get resolved image from metadata (URL + dimensions)
-  const metaImage = getMetaImage(src, effectiveSize)
+  const studioImage = getStudioImage(src, effectiveSize)
 
   // Resolve src and dimensions
-  const resolvedSrc = metaImage?.url || src
+  const resolvedSrc = studioImage?.url || src
   let resolvedWidth: number | 'auto' | undefined = width
   let resolvedHeight: number | 'auto' | undefined = height
 
   // Use metadata dimensions if not explicitly provided
-  if (!hasExplicitWidth && !hasExplicitHeight && metaImage) {
-    resolvedWidth = metaImage.width
-    resolvedHeight = metaImage.height
+  if (!hasExplicitWidth && !hasExplicitHeight && studioImage) {
+    resolvedWidth = studioImage.width
+    resolvedHeight = studioImage.height
   }
 
   // If user explicitly provided only width or height, set the other to 'auto'
@@ -95,7 +95,7 @@ export function Image({
   }
   // If href is not set but mediaLink is true, use full size image for lightbox
   else if (!href && mediaLink) {
-    const fullImage = getMetaImage(src, 'full')
+    const fullImage = getStudioImage(src, 'full')
     mediaLinkHref = fullImage?.url || src
     isMediaLink = true
   }
