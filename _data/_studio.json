@@ -2359,30 +2359,6 @@
     "b": "UDLqe9~q00IU%M009Ft7009F_3t7j[M{%M%M",
     "c": 1
   },
-  "/geometric.jpg": {
-    "o": {
-      "w": 5096,
-      "h": 2943
-    },
-    "f": {
-      "w": 2560,
-      "h": 1478
-    },
-    "sm": {
-      "w": 300,
-      "h": 173
-    },
-    "md": {
-      "w": 700,
-      "h": 404
-    },
-    "lg": {
-      "w": 1400,
-      "h": 809
-    },
-    "b": "UGR{lO?aj[?a~poffkofj[fQjufR~poej[of",
-    "c": 1
-  },
   "/hero-bg.png": {
     "o": {
       "w": 1728,
@@ -7066,6 +7042,7 @@
     "b": "UkR,x3?*TI%0--S}n$j[s:j?WCa|-VkAa{j[",
     "c": 1
   },
+  "/search-index.json": {},
   "/favicon.png": {
     "o": {
       "w": 410,
@@ -7073,25 +7050,28 @@
     },
     "b": "UA6M0~uMXZq8yoj[X3XOtqoajQbby,kUbbbY"
   },
-  "/search-index.json": {},
-  "/LowRes_LubbockCityCouncil_3.jpg": {
+  "/geometric.jpg": {
     "o": {
-      "w": 1600,
-      "h": 2000
+      "w": 5096,
+      "h": 2943
     },
-    "c": 1
-  },
-  "/pexels-ricardo-olvera-225422504-18061788.jpg": {
-    "o": {
+    "f": {
       "w": 2560,
-      "h": 3840
+      "h": 1478
     },
+    "sm": {
+      "w": 300,
+      "h": 173
+    },
+    "md": {
+      "w": 700,
+      "h": 404
+    },
+    "lg": {
+      "w": 1400,
+      "h": 809
+    },
+    "b": "UGR{lO?aj[?a~poffkofj[fQjufR~poej[of",
     "c": 1
-  },
-  "/HTpic3.jpg": {
-    "o": {
-      "w": 4864,
-      "h": 3648
-    }
   }
 }
