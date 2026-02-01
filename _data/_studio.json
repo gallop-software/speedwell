@@ -4495,54 +4495,6 @@
     "b": "UeINpp?aR*xtIVV@WBWqxWslRjfk~Bxabbs:",
     "c": 1
   },
-  "/layout-7/pexels-karola-g-6919956.jpg": {
-    "o": {
-      "w": 6493,
-      "h": 4329
-    },
-    "f": {
-      "w": 2560,
-      "h": 1707
-    },
-    "sm": {
-      "w": 300,
-      "h": 200
-    },
-    "md": {
-      "w": 700,
-      "h": 467
-    },
-    "lg": {
-      "w": 1400,
-      "h": 933
-    },
-    "b": "UJKK[=Djp_%M.msUx]bFtlIUn$sp-;oeRPj@",
-    "c": 1
-  },
-  "/layout-7/video-image.png": {
-    "o": {
-      "w": 3840,
-      "h": 2160
-    },
-    "f": {
-      "w": 2560,
-      "h": 1440
-    },
-    "sm": {
-      "w": 300,
-      "h": 169
-    },
-    "md": {
-      "w": 700,
-      "h": 394
-    },
-    "lg": {
-      "w": 1400,
-      "h": 788
-    },
-    "b": "UGKB8m?w5S%M.8~q%2RP00xtx]D%?baeaKxu",
-    "c": 1
-  },
   "/layouts/before-after.jpg": {
     "o": {
       "w": 1120,
@@ -6895,9 +6847,6 @@
     "b": "UhPGHcM|-;?b~qxaM{Rkt8ofadWA%MkDa}WA",
     "c": 1
   },
-  "/videos/hero-op.mp4": {
-    "c": 1
-  },
   "/banner.jpg": {
     "o": {
       "w": 2000,
@@ -7072,6 +7021,57 @@
       "h": 1000
     },
     "b": "UVHULFwb%1xZ~Asmaes:ozNHkCW:xut8bbWV",
+    "c": 1
+  },
+  "/layout-7/pexels-karola-g-6919956.jpg": {
+    "o": {
+      "w": 6493,
+      "h": 4329
+    },
+    "f": {
+      "w": 2560,
+      "h": 1707
+    },
+    "sm": {
+      "w": 300,
+      "h": 200
+    },
+    "md": {
+      "w": 700,
+      "h": 467
+    },
+    "lg": {
+      "w": 1400,
+      "h": 933
+    },
+    "b": "UJKK[=Djp_%M.msUx]bFtlIUn$sp-;oeRPj@",
+    "c": 1
+  },
+  "/layout-7/video-image.png": {
+    "o": {
+      "w": 3840,
+      "h": 2160
+    },
+    "f": {
+      "w": 2560,
+      "h": 1440
+    },
+    "sm": {
+      "w": 300,
+      "h": 169
+    },
+    "md": {
+      "w": 700,
+      "h": 394
+    },
+    "lg": {
+      "w": 1400,
+      "h": 788
+    },
+    "b": "UGKB8m?w5S%M.8~q%2RP00xtx]D%?baeaKxu",
+    "c": 1
+  },
+  "/videos/hero-op.mp4": {
     "c": 1
   }
 }
