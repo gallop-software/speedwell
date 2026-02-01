@@ -31,7 +31,7 @@ export default function Hero1() {
             <Column className="pt-10">
               <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
                 <Video
-                  src={studioUrl("/videos/hero-op.mp4")}
+                  src="/videos/hero-op.mp4"
                   loop
                   muted
                   playsInline
