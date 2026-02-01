@@ -1,7 +1,7 @@
 {
   "_cdns": [
     "https://architecturallysignificant.dougnewby.com",
-    "https://pub-b11225b418214a90925fbef377b6de87.r2.dev"
+    "https://speedwell-cdn.gallop.software"
   ],
   "/blocks/about-1.jpg": {
     "o": {
@@ -2338,13 +2338,6 @@
     },
     "b": "USQl?_%2~q-;-;j[ofj[?Hof9FV@?Hj[ayj[",
     "c": 1
-  },
-  "/favicon.png": {
-    "o": {
-      "w": 410,
-      "h": 410
-    },
-    "b": "UA6M0~uMXZq8yoj[X3XOtqoajQbby,kUbbbY"
   },
   "/flowers.png": {
     "o": {
@@ -7072,5 +7065,33 @@
     },
     "b": "UkR,x3?*TI%0--S}n$j[s:j?WCa|-VkAa{j[",
     "c": 1
+  },
+  "/favicon.png": {
+    "o": {
+      "w": 410,
+      "h": 410
+    },
+    "b": "UA6M0~uMXZq8yoj[X3XOtqoajQbby,kUbbbY"
+  },
+  "/search-index.json": {},
+  "/LowRes_LubbockCityCouncil_3.jpg": {
+    "o": {
+      "w": 1600,
+      "h": 2000
+    },
+    "c": 1
+  },
+  "/pexels-ricardo-olvera-225422504-18061788.jpg": {
+    "o": {
+      "w": 2560,
+      "h": 3840
+    },
+    "c": 1
+  },
+  "/HTpic3.jpg": {
+    "o": {
+      "w": 4864,
+      "h": 3648
+    }
   }
 }
