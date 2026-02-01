@@ -20,7 +20,6 @@ interface Dimensions {
 
 type MetaEntry = {
   o?: Dimensions   // original dimensions {w, h}
-  b?: string       // blurhash
   sm?: Dimensions  // small thumbnail
   md?: Dimensions  // medium thumbnail
   lg?: Dimensions  // large thumbnail
