@@ -1,11 +1,11 @@
-import { getMetaImage } from '@/utils/image-meta'
+import { getStudioImage } from '@/utils/studio-helpers'
 
 export const baseURL =
   process.env.NEXT_PUBLIC_PRODUCTION_URL || 'http://localhost:3000'
 
-const logoImageData = getMetaImage('/images/banner.jpg', 'large')
+const logoImageData = getStudioImage('/images/banner.jpg', 'large')
 
-const businessImageData = getMetaImage(
+const businessImageData = getStudioImage(
   '/images/pexels-helenalopes-1996337.jpg',
   'large'
 )

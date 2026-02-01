@@ -1,4 +1,4 @@
-import imageMeta from '@/../_data/_studio.json'
+import studioData from '@/../_data/_studio.json'
 
 type ImageSize = 'small' | 'medium' | 'large' | 'full'
 
@@ -13,25 +13,28 @@ interface Dimensions {
   h: number
 }
 
-type MetaEntry = {
-  o?: Dimensions   // original dimensions {w, h}
-  sm?: Dimensions  // small thumbnail (300px width)
-  md?: Dimensions  // medium thumbnail (700px width)
-  lg?: Dimensions  // large thumbnail (1400px width)
-  f?: Dimensions   // full size (capped at 2560px width)
-  c?: number       // CDN index into _cdns array
+type StudioEntry = {
+  o?: Dimensions // original dimensions {w, h}
+  sm?: Dimensions // small thumbnail (300px width)
+  md?: Dimensions // medium thumbnail (700px width)
+  lg?: Dimensions // large thumbnail (1400px width)
+  f?: Dimensions // full size (capped at 2560px width)
+  c?: number // CDN index into _cdns array
 }
 
-interface FullMeta {
+interface FullStudioData {
   _cdns?: string[]
-  [key: string]: MetaEntry | string[] | undefined
+  [key: string]: StudioEntry | string[] | undefined
 }
 
-const meta = imageMeta as FullMeta
-const cdnUrls = meta._cdns || []
+const studio = studioData as FullStudioData
+const cdnUrls = studio._cdns || []
 
-// Map size to meta key and suffix
-const SIZE_MAP: Record<ImageSize, { key: 'sm' | 'md' | 'lg' | 'f'; suffix: string }> = {
+// Map size to studio key and suffix
+const SIZE_MAP: Record<
+  ImageSize,
+  { key: 'sm' | 'md' | 'lg' | 'f'; suffix: string }
+> = {
   small: { key: 'sm', suffix: '-sm' },
   medium: { key: 'md', suffix: '-md' },
   large: { key: 'lg', suffix: '-lg' },
@@ -39,23 +42,23 @@ const SIZE_MAP: Record<ImageSize, { key: 'sm' | 'md' | 'lg' | 'f'; suffix: strin
 }
 
 // Check if an image entry is processed (has any thumbnail dimensions)
-function isProcessed(entry: MetaEntry | undefined): boolean {
+function isProcessed(entry: StudioEntry | undefined): boolean {
   if (!entry) return false
   return !!(entry.f || entry.lg || entry.md || entry.sm)
 }
 
-// Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
-function getMetaLookupKey(src: string): string {
+// Normalize src to get the studio lookup key (strip /images prefix and any size suffix)
+function getStudioLookupKey(src: string): string {
   let key = src.startsWith('/') ? src : `/${src}`
-  
+
   // Strip /images prefix if present
   if (key.startsWith('/images/')) {
     key = key.slice(7) // Remove '/images'
   }
-  
+
   // Strip size suffix if present (e.g., -sm, -md, -lg)
   key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
-  
+
   return key
 }
 
@@ -69,24 +72,24 @@ function getThumbnailPath(originalPath: string, size: ImageSize): string {
 }
 
 /**
- * Gets the image metadata for a specific size from the image metadata
+ * Gets the image data for a specific size from the studio metadata.
  * Falls back to 'full' size if the requested size doesn't exist.
  *
  * @example
  * ```tsx
  * // Get large version, fallback to full if large doesn't exist
- * const image = getMetaImage('/portfolio/photo.jpg', 'large')
+ * const image = getStudioImage('/portfolio/photo.jpg', 'large')
  * // Returns: { url: '/images/portfolio/photo-lg.jpg', width: 1400, height: 934 }
  *
  * // Get medium version, fallback to full if medium doesn't exist
- * const mediumImage = getMetaImage('/portfolio/photo.jpg', 'medium')
+ * const mediumImage = getStudioImage('/portfolio/photo.jpg', 'medium')
  * ```
  *
  * @param url - The original image URL to look up (should start with /)
  * @param size - The desired image size ('small', 'medium', 'large', 'full')
- * @returns Object with url, width, height, or undefined if no metadata found
+ * @returns Object with url, width, height, or undefined if no data found
  */
-export function getMetaImage(
+export function getStudioImage(
   url: string | undefined,
   size: ImageSize = 'large'
 ): ImageResult | undefined {
@@ -96,13 +99,13 @@ export function getMetaImage(
 
   try {
     // Normalize URL to get lookup key (strips /images prefix and size suffixes)
-    const lookupKey = getMetaLookupKey(url)
-    
-    // Get entry from meta (exclude special keys)
+    const lookupKey = getStudioLookupKey(url)
+
+    // Get entry from studio data (exclude special keys)
     if (lookupKey.startsWith('_')) return undefined
-    const value = meta[lookupKey]
+    const value = studio[lookupKey]
     if (!value || Array.isArray(value)) return undefined
-    const entry = value as MetaEntry
+    const entry = value as StudioEntry
 
     // Get CDN URL if available
     const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
@@ -117,7 +120,7 @@ export function getMetaImage(
       if (!fullDims) return undefined
 
       // Return original/full URL
-      const imageUrl = cdnUrl 
+      const imageUrl = cdnUrl
         ? `${cdnUrl}${getThumbnailPath(lookupKey, 'full')}`
         : getThumbnailPath(lookupKey, 'full')
 
@@ -129,15 +132,27 @@ export function getMetaImage(
     }
 
     // Try requested size, fall back to larger sizes, then full
-    const fallbackOrder: Array<'sm' | 'md' | 'lg' | 'f'> = ['sm', 'md', 'lg', 'f']
+    const fallbackOrder: Array<'sm' | 'md' | 'lg' | 'f'> = [
+      'sm',
+      'md',
+      'lg',
+      'f',
+    ]
     const startIndex = Math.max(0, fallbackOrder.indexOf(sizeConfig.key))
-    
+
     for (let i = startIndex; i < fallbackOrder.length; i++) {
       const key = fallbackOrder[i]
       if (!key) continue
       const sizeDims = entry[key]
       if (sizeDims) {
-        const sizeForPath = key === 'sm' ? 'small' : key === 'md' ? 'medium' : key === 'lg' ? 'large' : 'full'
+        const sizeForPath =
+          key === 'sm'
+            ? 'small'
+            : key === 'md'
+              ? 'medium'
+              : key === 'lg'
+                ? 'large'
+                : 'full'
         const imageUrl = cdnUrl
           ? `${cdnUrl}${getThumbnailPath(lookupKey, sizeForPath)}`
           : getThumbnailPath(lookupKey, sizeForPath)
@@ -163,7 +178,7 @@ export function getMetaImage(
     return undefined
   } catch (error) {
     // Safe fallback on any error
-    console.warn(`Failed to get meta image for ${url}:`, error)
+    console.warn(`Failed to get studio image for ${url}:`, error)
     return undefined
   }
 }
@@ -174,9 +189,13 @@ export function getMetaImage(
  *
  * @example
  * ```tsx
- * // Image in cloud returns CDN URL
+ * // Image in cloud returns CDN URL (defaults to 'large' size)
  * studioUrl('/images/hero-bg.png')
- * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg.png'
+ * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg-lg.jpg'
+ *
+ * // Specify a size
+ * studioUrl('/images/hero-bg.png', 'medium')
+ * // Returns: 'https://speedwell-cdn.gallop.software/images/hero-bg-md.jpg'
  *
  * // Image not in cloud returns original path
  * studioUrl('/images/local-only.png')
@@ -188,33 +207,56 @@ export function getMetaImage(
  * ```
  *
  * @param src - The image path (e.g., '/images/hero-bg.png' or '/hero-bg.png')
+ * @param size - The desired image size ('small', 'medium', 'large', 'full'). Defaults to 'large'.
  * @returns The resolved URL (CDN URL if in cloud, original path otherwise)
  */
-export function studioUrl(src: string): string {
+export function studioUrl(src: string, size: ImageSize = 'large'): string {
   if (!src) return src
 
   // Normalize to get lookup key
-  const lookupKey = getMetaLookupKey(src)
+  const lookupKey = getStudioLookupKey(src)
 
-  // Get entry from meta
+  // Get entry from studio data
   if (lookupKey.startsWith('_')) return src
-  const value = meta[lookupKey]
+  const value = studio[lookupKey]
   if (!value || Array.isArray(value)) return src
-  const entry = value as MetaEntry
+  const entry = value as StudioEntry
 
   // Get CDN URL if available
   const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
-  if (!cdnUrl) return src
 
   // Build the correct path
   const entryIsProcessed = isProcessed(entry)
-  
-  if (entryIsProcessed) {
-    // Use processed image path (in /images folder)
-    const imagePath = getThumbnailPath(lookupKey, 'full')
-    return `${cdnUrl}${imagePath}`
+  const baseUrl = cdnUrl || ''
+
+  if (!entryIsProcessed) {
+    // Not processed - use original path
+    return cdnUrl ? `${cdnUrl}${lookupKey}` : src
   }
-  
-  // Not processed - use original path from CDN
-  return `${cdnUrl}${lookupKey}`
+
+  // Try requested size, fall back to larger sizes, then full
+  const sizeConfig = SIZE_MAP[size]
+  const fallbackOrder: Array<'sm' | 'md' | 'lg' | 'f'> = ['sm', 'md', 'lg', 'f']
+  const startIndex = Math.max(0, fallbackOrder.indexOf(sizeConfig.key))
+
+  for (let i = startIndex; i < fallbackOrder.length; i++) {
+    const key = fallbackOrder[i]
+    if (!key) continue
+    if (entry[key]) {
+      const sizeForPath =
+        key === 'sm'
+          ? 'small'
+          : key === 'md'
+            ? 'medium'
+            : key === 'lg'
+              ? 'large'
+              : 'full'
+      const imagePath = getThumbnailPath(lookupKey, sizeForPath)
+      return `${baseUrl}${imagePath}`
+    }
+  }
+
+  // Fallback to full size path
+  const imagePath = getThumbnailPath(lookupKey, 'full')
+  return `${baseUrl}${imagePath}`
 }

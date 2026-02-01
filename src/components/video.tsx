@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useCallback } from 'react'
 import { useInView } from 'react-intersection-observer'
+import { studioUrl } from '@/utils/studio-helpers'
 
 type VideoProps = {
   src: string
@@ -25,6 +26,9 @@ export function Video({
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const { ref: inViewRef, inView } = useInView({ threshold })
 
+  // Resolve src to CDN URL if available
+  const resolvedSrc = studioUrl(src)
+
   const setRefs = useCallback(
     (node: HTMLVideoElement | null) => {
       videoRef.current = node
@@ -47,7 +51,7 @@ export function Video({
   return (
     <video
       ref={setRefs}
-      src={src}
+      src={resolvedSrc}
       loop={loop}
       muted={muted}
       playsInline={playsInline}
