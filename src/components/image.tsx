@@ -3,10 +3,35 @@ import Link from 'next/link'
 import { Paragraph } from '@/components/paragraph'
 import type { ComponentProps } from 'react'
 import leanMeta from '@/../_data/_studio.json'
+import { decode } from 'blurhash'
 
 interface Dimensions {
   w: number
   h: number
+}
+
+// Convert blurhash to a base64 data URL (runs on server at build/render time)
+function blurHashToDataURL(hash: string, width = 8, height = 8): string {
+  try {
+    const pixels = decode(hash, width, height)
+    
+    // Create a simple PPM image (no Canvas needed, works in Node.js)
+    // PPM format: P6\n{width} {height}\n255\n{rgb pixels}
+    const header = `P6\n${width} ${height}\n255\n`
+    const rgbPixels: number[] = []
+    
+    for (let i = 0; i < pixels.length; i += 4) {
+      rgbPixels.push(pixels[i] ?? 0, pixels[i + 1] ?? 0, pixels[i + 2] ?? 0)
+    }
+    
+    // Convert to base64
+    const ppmData = header + String.fromCharCode(...rgbPixels)
+    const base64 = Buffer.from(ppmData, 'binary').toString('base64')
+    
+    return `data:image/x-portable-pixmap;base64,${base64}`
+  } catch {
+    return ''
+  }
 }
 
 type LeanImageEntry = {
@@ -118,6 +143,8 @@ export interface ImageProps extends Omit<
   mediaLink?: boolean
   /** Enable lazy loading - default is true */
   lazy?: boolean
+  /** Enable blur placeholder using blurhash from metadata - default is false */
+  blur?: boolean
 }
 
 export function Image({
@@ -135,6 +162,7 @@ export function Image({
   aspect,
   mediaLink = false,
   lazy = true,
+  blur = false,
 }: ImageProps) {
   const defaultRounded = 'rounded-lg'
 
@@ -217,7 +245,10 @@ export function Image({
       ? { aspectRatio: `${resolvedWidth} / ${resolvedHeight}` }
       : undefined
 
-  let imageElement = (
+  // Generate blur placeholder data URL if blur is enabled and blurhash exists
+  const blurDataURL = blur && entry?.b ? blurHashToDataURL(entry.b) : undefined
+
+  const imgTag = (
     <img
       src={resolvedSrc}
       alt={alt}
@@ -236,6 +267,20 @@ export function Image({
       )}
     />
   )
+
+  // Wrap with blur placeholder background if enabled
+  let imageElement = blurDataURL ? (
+    <div
+      className="relative inline-block"
+      style={{
+        backgroundImage: `url(${blurDataURL})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {imgTag}
+    </div>
+  ) : imgTag
 
   if (isMediaLink && mediaLinkHref) {
     imageElement = (
@@ -286,24 +331,23 @@ export function Image({
 
   // Handle caption case
   if (caption) {
+    // Wrap img with blur placeholder if enabled
+    const captionImgWithBlur = blurDataURL ? (
+      <div
+        className="relative inline-block w-full"
+        style={{
+          backgroundImage: `url(${blurDataURL})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {imgTag}
+      </div>
+    ) : imgTag
+
     let figureElement = (
       <figure className="space-y-2">
-        <img
-          src={resolvedSrc}
-          alt={alt}
-          title={title}
-          width={resolvedWidth}
-          height={resolvedHeight}
-          loading={lazy ? 'lazy' : 'eager'}
-          style={aspectRatioStyle}
-          className={clsx(
-            rounded || defaultRounded,
-            aspect,
-            // Use responsive width for all images
-            !resolvedWidth && !resolvedHeight ? 'w-full h-auto' : '',
-            className
-          )}
-        />
+        {captionImgWithBlur}
         <figcaption
           className="text-sm text-gray-600 text-center italic"
           dangerouslySetInnerHTML={{ __html: caption }}
@@ -326,21 +370,7 @@ export function Image({
             scroll={true}
             className="lightbox-item"
           >
-            <img
-              src={resolvedSrc}
-              alt={alt}
-              title={title}
-              width={resolvedWidth}
-              height={resolvedHeight}
-              loading={lazy ? 'lazy' : 'eager'}
-              style={aspectRatioStyle}
-              className={clsx(
-                rounded || defaultRounded,
-                aspect,
-                !resolvedWidth && !resolvedHeight ? 'w-full h-auto' : '',
-                className
-              )}
-            />
+            {captionImgWithBlur}
           </Link>
           <figcaption
             className="text-sm text-gray-600 text-center italic"
