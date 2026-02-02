@@ -39,7 +39,7 @@ const metadata: PageMetadata = {
     'space utilization',
   ],
   slug: 'space-planning',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
   focusKeyword: 'space planning services',
   readingTimeMinutes: 4,
   publishDate: '2024-06-15T10:00:00Z',

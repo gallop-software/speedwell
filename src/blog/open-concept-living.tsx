@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          src="/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
           size="large"
         />
       </Gallery>
@@ -97,7 +97,7 @@ export const metadata = {
     'Whole-home renovation creating flowing open-concept space with defined zones for kitchen, dining, and living areas with indoor-outdoor connection.',
   date: '2024-04-16',
   slug: 'open-concept-living',
-  featuredImage: '/images/portfolio/houzlook/pexels-houzlook-3356416.jpg',
+  featuredImage: '/portfolio/houzlook/pexels-houzlook-3356416.jpg',
   categories: ['Residential', 'Renovation', 'Contemporary'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/open-concept-living',

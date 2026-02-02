@@ -15,7 +15,7 @@ export default function Content19() {
       >
         <Column>
           <Image
-            src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+            src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
             alt="Budget management and financial control"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"

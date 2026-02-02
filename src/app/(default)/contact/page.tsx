@@ -18,7 +18,7 @@ const metadata: PageMetadata = {
   description:
     'Get in touch with our interior design team for a complimentary consultation. Located in the Design District, we specialize in residential and commercial design projects.',
   slug: 'contact',
-  featuredImage: '/images/portfolio/pexels-pixabay-161758.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-161758.jpg',
   focusKeyword: 'contact interior design',
   readingTimeMinutes: 2,
   publishDate: '2025-09-18T00:00:00Z',

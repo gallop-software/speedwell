@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+          src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
           size="large"
         />
       </Gallery>
@@ -99,7 +99,7 @@ export const metadata = {
   date: '2025-01-30',
   slug: 'wellness-spa-design',
   featuredImage:
-    '/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
+    '/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
   categories: ['Commercial', 'Wellness', 'Spa Design'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/wellness-spa-design',

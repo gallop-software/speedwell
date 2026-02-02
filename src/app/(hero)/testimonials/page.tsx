@@ -23,7 +23,7 @@ const metadata: PageMetadata = {
     'Read what our clients say about their interior design experience with Speedwell. Discover how we have transformed homes and businesses with personalized design solutions that exceed expectations.',
   slug: 'testimonials',
   featuredImage:
-    '/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+    '/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
   focusKeyword: 'interior design testimonials',
   readingTimeMinutes: 6,
   publishDate: '2024-08-01T10:00:00Z',

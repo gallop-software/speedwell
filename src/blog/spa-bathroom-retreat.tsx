@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/pexels-pixabay-269218.jpg"
+        src="/portfolio/pexels-pixabay-269218.jpg"
         alt="Spa-like bathroom retreat with luxurious fixtures and calming design"
         size="large"
         wrap={true}
@@ -93,7 +93,7 @@ export const metadata = {
     'Tranquil spa-inspired bathroom featuring steam shower, soaking tub, heated floors, and luxurious finishes for ultimate relaxation.',
   date: '2024-05-28',
   slug: 'spa-bathroom-retreat',
-  featuredImage: '/images/portfolio/pexels-pixabay-269218.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-269218.jpg',
   categories: ['Bathroom Design', 'Luxury', 'Contemporary'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/spa-bathroom-retreat',

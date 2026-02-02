@@ -47,7 +47,7 @@ const metadata: PageMetadata = {
     'interior inspiration gallery',
   ],
   slug: 'portfolio',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
   focusKeyword: 'interior design portfolio',
   readingTimeMinutes: 15,
   publishDate: '2019-10-24T07:42:20Z',

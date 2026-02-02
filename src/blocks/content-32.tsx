@@ -17,7 +17,7 @@ export default function Content32() {
       >
         <Column>
           <Image
-            src="/images/layout-1/pexels-pavel-danilyuk-6925321-1.jpg"
+            src="/layout-1/pexels-pavel-danilyuk-6925321-1.jpg"
             alt="Creative team collaborating on brand strategy"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"

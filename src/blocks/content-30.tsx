@@ -10,14 +10,14 @@ export default function Content30() {
       <Columns reverseColumns>
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-276724.jpg"
+            src="/portfolio/pexels-pixabay-276724.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tmp"
             className="absolute bottom-0 right-0 z-10 !w-[75%] object-cover"
             aspect="aspect-[16/9]"
             lazy={false}
           />
           <Image
-            src="/images/portfolio/pexels-karola-g-5942742.jpg"
+            src="/portfolio/pexels-karola-g-5942742.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit magna"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-t-full"

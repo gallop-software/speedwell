@@ -27,7 +27,7 @@ export default function Content28() {
         your audience.
       </Paragraph>
       <Image
-        src="/images/layout-1/pexels-thirdman-5257578.jpg"
+        src="/layout-1/pexels-thirdman-5257578.jpg"
         alt="Collaborative creative process and strategy sessions"
         size="large"
         className="my-8"

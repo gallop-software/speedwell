@@ -34,7 +34,7 @@ export default function Hero14() {
             <Column className="relative -mx-6 flex items-center flex-row-reverse h-full  max-xl:order-1">
               <Image
                 className="w-2/3 h-full relative object-cover object-center"
-                src="/images/layout-1/pexels-anna-nekrashevich-7552446.jpg"
+                src="/layout-1/pexels-anna-nekrashevich-7552446.jpg"
                 alt="Labore voluptate enim aliquip eiusmod occaecat"
                 rounded="rounded-none"
                 size="large"
@@ -44,7 +44,7 @@ export default function Hero14() {
                 <Image
                   className="width-full h-full object-cover object-top"
                   aspect="aspect-none"
-                  src="/images/layout-1/pexels-ron-lach-8760891.jpg"
+                  src="/layout-1/pexels-ron-lach-8760891.jpg"
                   alt="Labore voluptate enim aliquip eiusmod occaecat"
                   rounded="rounded-none"
                   size="large"

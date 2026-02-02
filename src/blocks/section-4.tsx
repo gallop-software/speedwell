@@ -23,7 +23,7 @@ export default function Section4() {
         <Column>
           <Card3
             id="case-study-1"
-            image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+            image="/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
             alt="Custom cabinetry by Artisan Woodworks"
             href="#"
           />

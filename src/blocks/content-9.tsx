@@ -13,13 +13,13 @@ export default function Content9() {
       >
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
+            src="/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
             alt="Cozy living space with warm and inviting atmosphere"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+            src="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
             alt="Modern bathroom with spa-like features"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"

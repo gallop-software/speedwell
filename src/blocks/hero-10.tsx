@@ -6,7 +6,7 @@ export default function Hero10() {
   return (
     <>
       <Cover
-        imageSrc="/images/portfolio/pexels-burst-545012.jpg"
+        imageSrc="/portfolio/pexels-burst-545012.jpg"
         imageAlt="Professional interior design project management"
         overlayColor="bg-accent4/90"
         height="h-[400px] md:h-[500px] lg:h-[600px]"

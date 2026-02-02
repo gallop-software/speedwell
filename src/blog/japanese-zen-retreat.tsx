@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/jvdm/pexels-jvdm-1454804.jpg"
+          src="/portfolio/jvdm/pexels-jvdm-1454804.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
           size="large"
         />
       </Gallery>
@@ -97,7 +97,7 @@ export const metadata = {
     'Serene residential space inspired by Japanese aesthetics featuring natural materials, minimal design, and mindful living principles.',
   date: '2024-12-12',
   slug: 'japanese-zen-retreat',
-  featuredImage: '/images/portfolio/jvdm/pexels-jvdm-1454804.jpg',
+  featuredImage: '/portfolio/jvdm/pexels-jvdm-1454804.jpg',
   categories: ['Residential', 'Japanese', 'Zen'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/japanese-zen-retreat',

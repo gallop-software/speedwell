@@ -14,7 +14,7 @@ export default function Hero4() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover object-top"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+                src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
                 alt="Labore voluptate enim aliquip eiusmod occaecat"
                 rounded="rounded-none"
                 size="large"

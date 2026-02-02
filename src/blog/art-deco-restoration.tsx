@@ -12,15 +12,15 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-pixabay-269252.jpg"
+          src="/portfolio/pexels-pixabay-269252.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+          src="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           size="large"
         />
       </Gallery>
@@ -101,7 +101,7 @@ export const metadata = {
     'Meticulous Art Deco apartment restoration featuring geometric details, period furnishings, and glamorous 1920s design with modern amenities.',
   date: '2024-03-25',
   slug: 'art-deco-restoration',
-  featuredImage: '/images/portfolio/pexels-pixabay-269252.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-269252.jpg',
   categories: ['Restoration', 'Art Deco', 'Historic'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/art-deco-restoration',

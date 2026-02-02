@@ -10,13 +10,13 @@ export default function Content14() {
       <Columns reverseColumns>
         <Column className="aspect-4/5 relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
             alt="Beautifully designed interior space"
             className="absolute bottom-0 right-0 z-10 w-[75%]! object-cover"
             lazy={false}
           />
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+            src="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
             alt="Professional project coordination and planning"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-t-full"

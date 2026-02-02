@@ -10,14 +10,14 @@ export default function Content31() {
       <Columns>
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
+            src="/portfolio/pexels-pixabay-269218.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             aspect="aspect-[16/9]"
             size="large"
           />
           <Image
-            src="/images/portfolio/pexels-maksgelatin-4352247.jpg"
+            src="/portfolio/pexels-maksgelatin-4352247.jpg"
             alt="Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incid"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-t-full"

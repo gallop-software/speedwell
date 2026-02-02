@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/pexels-pixabay-259962.jpg"
+        src="/portfolio/pexels-pixabay-259962.jpg"
         alt="Coastal cottage interior with bright, airy design"
         size="large"
         wrap={true}
@@ -93,7 +93,7 @@ export const metadata = {
     'Charming beach cottage refresh featuring light coastal palette, restored vintage pieces, and authentic seaside style for relaxed living.',
   date: '2024-07-08',
   slug: 'coastal-cottage-refresh',
-  featuredImage: '/images/portfolio/pexels-pixabay-259962.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-259962.jpg',
   categories: ['Residential', 'Coastal Design', 'Cottage'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/coastal-cottage-refresh',

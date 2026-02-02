@@ -15,7 +15,7 @@ export default function Content21() {
       >
         <Column>
           <Image
-            src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+            src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
             alt="Client communication and support"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"

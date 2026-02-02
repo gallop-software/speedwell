@@ -13,13 +13,13 @@ export default function Content5() {
       <Columns gap="gap-10 lg:gap-20">
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-279719.jpg"
+            src="/portfolio/pexels-pixabay-279719.jpg"
             alt="Modern residential interior with stylish design elements"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+            src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
             alt="Contemporary living space with elegant furnishings"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"

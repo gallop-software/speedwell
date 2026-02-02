@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/pexels-pixabay-161758.jpg"
+        src="/portfolio/pexels-pixabay-161758.jpg"
         alt="Modern loft transformation with open floor plan and industrial touches"
         size="large"
         wrap={true}
@@ -89,7 +89,7 @@ export const metadata = {
     'Discover how we transformed a raw industrial loft into a sophisticated urban retreat featuring exposed brick, custom steel details, and contemporary luxury.',
   date: '2025-05-01',
   slug: 'modern-loft-transformation',
-  featuredImage: '/images/portfolio/pexels-pixabay-161758.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-161758.jpg',
   categories: ['Residential', 'Urban Living', 'Contemporary'],
   alternates: {
     canonical:

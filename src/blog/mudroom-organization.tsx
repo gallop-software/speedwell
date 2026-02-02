@@ -12,15 +12,15 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
+          src="/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+          src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           size="large"
         />
       </Gallery>
@@ -91,7 +91,7 @@ export const metadata = {
     'Functional family mudroom featuring custom cubbies, durable materials, and smart organization for coats, shoes, and sports gear.',
   date: '2024-10-18',
   slug: 'mudroom-organization',
-  featuredImage: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
   categories: ['Organization', 'Family Home', 'Mudroom'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/mudroom-organization',

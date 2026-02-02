@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/pexels-burst-545012.jpg"
+        src="/portfolio/pexels-burst-545012.jpg"
         alt="Renovated coastal home with ocean-inspired design"
         size="large"
         wrap={true}
@@ -91,7 +91,7 @@ export const metadata = {
     'Complete renovation of a beachfront home featuring airy coastal design, custom built-ins, and seamless indoor-outdoor living spaces with ocean views.',
   date: '2025-04-15',
   slug: 'coastal-home-renovation',
-  featuredImage: '/images/portfolio/pexels-burst-545012.jpg',
+  featuredImage: '/portfolio/pexels-burst-545012.jpg',
   categories: ['Residential', 'Coastal Design', 'Renovation'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/coastal-home-renovation',

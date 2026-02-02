@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+        src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
         alt="Contemporary family home with modern, functional design"
         size="large"
         wrap={true}
@@ -92,7 +92,7 @@ export const metadata = {
   date: '2024-11-10',
   slug: 'contemporary-family-home',
   featuredImage:
-    '/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
+    '/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
   categories: ['Residential', 'Contemporary', 'Family Home'],
   alternates: {
     canonical:

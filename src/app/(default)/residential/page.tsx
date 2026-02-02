@@ -45,7 +45,7 @@ const metadata: PageMetadata = {
     'home makeover services',
   ],
   slug: 'residential',
-  featuredImage: '/images/portfolio/pexels-alex-qian-1180283-2343465.jpg',
+  featuredImage: '/portfolio/pexels-alex-qian-1180283-2343465.jpg',
   focusKeyword: 'residential interior design',
   readingTimeMinutes: 5,
   publishDate: '2024-01-15T10:00:00Z',

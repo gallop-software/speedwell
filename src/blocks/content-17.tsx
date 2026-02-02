@@ -15,7 +15,7 @@ export default function Content17() {
       >
         <Column className="relative">
           <Image
-            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+            src="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
             alt="Construction and renovation management"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"

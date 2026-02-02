@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-enginakyurt-1435894.jpg"
+        src="/layout-1/pexels-enginakyurt-1435894.jpg"
         alt="Farm-to-table restaurant brand identity with rustic design elements"
         size="large"
         wrap={true}
@@ -86,7 +86,7 @@ export const metadata = {
     'Warm restaurant brand identity celebrating local agriculture with hand-lettered typography, seasonal design, and community-focused visual storytelling.',
   date: '2024-09-05',
   slug: 'urban-coffee-house',
-  featuredImage: '/images/layout-1/pexels-enginakyurt-1435894.jpg',
+  featuredImage: '/layout-1/pexels-enginakyurt-1435894.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/urban-coffee-house',

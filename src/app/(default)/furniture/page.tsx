@@ -39,7 +39,7 @@ const metadata: PageMetadata = {
     'furniture specification',
   ],
   slug: 'furniture',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
   focusKeyword: 'furniture selection services',
   readingTimeMinutes: 4,
   publishDate: '2024-07-10T11:00:00Z',

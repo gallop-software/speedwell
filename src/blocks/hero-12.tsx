@@ -17,7 +17,7 @@ export default function Hero12() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
+                src="/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
                 alt="Professional space planning and interior layout optimization"
                 size="large"
                 rounded="rounded-none"

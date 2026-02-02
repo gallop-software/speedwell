@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+        src="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
         alt="Boutique hotel interior with elegant design details"
         size="large"
         wrap={true}
@@ -94,7 +94,7 @@ export const metadata = {
   date: '2025-01-08',
   slug: 'boutique-hotel-design',
   featuredImage:
-    '/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
+    '/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
   categories: ['Commercial', 'Hospitality', 'Luxury'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/boutique-hotel-design',

@@ -11,7 +11,7 @@ export default function Content13() {
       <Columns gap="gap-10 lg:gap-20">
         <Column>
           <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+            src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
             alt="Contemporary living space with harmonious color scheme"
             className="w-full object-cover"
             size="large"

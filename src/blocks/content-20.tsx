@@ -15,7 +15,7 @@ export default function Content20() {
       >
         <Column>
           <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+            src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
             alt="Quality assurance and inspection"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"

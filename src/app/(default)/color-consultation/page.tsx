@@ -43,7 +43,7 @@ const metadata: PageMetadata = {
     'color psychology design',
   ],
   slug: 'color-consultation',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
   focusKeyword: 'color consultation services',
   readingTimeMinutes: 5,
   publishDate: '2024-03-05T10:30:00Z',

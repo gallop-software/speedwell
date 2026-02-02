@@ -74,13 +74,13 @@ const portfolioItems = [
   {
     id: 12,
     category: 'Commercial',
-    image: '/images/layout-1/pexels-shattha-pilabut-38930-135620.jpg',
+    image: '/layout-1/pexels-shattha-pilabut-38930-135620.jpg',
     alt: 'Commercial photography',
   },
   {
     id: 13,
     category: 'Commercial',
-    image: '/images/layout-1/pexels-ekrulila-27467420.jpg',
+    image: '/layout-1/pexels-ekrulila-27467420.jpg',
     alt: 'Commercial photography',
   },
   {
@@ -92,13 +92,13 @@ const portfolioItems = [
   {
     id: 15,
     category: 'Commercial',
-    image: '/images/layout-1/pexels-cottonbro-9745332.jpg',
+    image: '/layout-1/pexels-cottonbro-9745332.jpg',
     alt: 'Commercial photography',
   },
   {
     id: 16,
     category: 'Commercial',
-    image: '/images/layout-1/pexels-rachel-claire-5490970.jpg',
+    image: '/layout-1/pexels-rachel-claire-5490970.jpg',
     alt: 'Commercial photography',
   },
 ]

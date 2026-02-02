@@ -40,7 +40,7 @@ const metadata: PageMetadata = {
   ],
   slug: 'kitchen-bath',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
   focusKeyword: 'kitchen and bath design',
   readingTimeMinutes: 4,
   publishDate: '2024-02-10T09:00:00Z',

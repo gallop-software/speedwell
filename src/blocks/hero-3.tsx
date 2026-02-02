@@ -17,7 +17,7 @@ export default function Hero3() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
+                src="/portfolio/pexels-alex-qian-1180283-2343465.jpg"
                 alt="Elegant modern living room with contemporary furniture and natural lighting"
                 size="large"
                 rounded="rounded-none"

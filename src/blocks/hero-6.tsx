@@ -18,7 +18,7 @@ export default function Hero6() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+                src="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
                 alt="Beautifully designed interior showcasing expert color coordination and palette selection"
                 size="large"
                 rounded="rounded-none"

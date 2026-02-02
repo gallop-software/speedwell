@@ -17,7 +17,7 @@ export default function Hero8() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+                src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
                 alt="Beautifully curated furniture selection for elegant interior design"
                 size="large"
                 rounded="rounded-none"

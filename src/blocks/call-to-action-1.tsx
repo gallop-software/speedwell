@@ -8,7 +8,7 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 export default function CallToAction1() {
   return (
     <Cover
-      imageSrc="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+      imageSrc="/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
       imageAlt="Anim laboris fugiat sit magna non sit minim"
       overlayColor="bg-accent5/90"
       height="h-auto"

@@ -17,7 +17,7 @@ function Demo1() {
   return (
     <div className="space-y-6">
       <Image
-        src="/images/portfolio/pexels-pixabay-161758.jpg"
+        src="/portfolio/pexels-pixabay-161758.jpg"
         alt="Modern interior"
         size="medium"
         className="w-full"
@@ -86,7 +86,7 @@ function Demo2() {
   return (
     <div className="space-y-6">
       <Image
-        src="/images/portfolio/pexels-burst-545012.jpg"
+        src="/portfolio/pexels-burst-545012.jpg"
         alt="Modern living room"
         size="medium"
         className="w-full"
@@ -138,7 +138,7 @@ function Demo3() {
   return (
     <div className="space-y-6">
       <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
         alt="Colorful interior"
         size="medium"
         className="w-full"
@@ -196,7 +196,7 @@ function Demo4() {
   return (
     <div className="space-y-6">
       <Image
-        src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+        src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
         alt="Floor plan"
         size="medium"
         className="w-full"
@@ -255,7 +255,7 @@ function Demo5() {
   return (
     <div className="space-y-6">
       <Image
-        src="/images/portfolio/pexels-pixabay-276724.jpg"
+        src="/portfolio/pexels-pixabay-276724.jpg"
         alt="Minimalist room"
         size="medium"
         className="w-full"
@@ -305,7 +305,7 @@ function Demo6() {
   return (
     <div className="space-y-6">
       <Image
-        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+        src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
         alt="Bohemian interior"
         size="medium"
         className="w-full"
@@ -421,7 +421,7 @@ export default function Sidebar1() {
 
                 {/* Column 2 - Bottom (offset down) */}
                 <Image
-                  src="/images/layout-1/pexels-shattha-pilabut-38930-135620.jpg"
+                  src="/layout-1/pexels-shattha-pilabut-38930-135620.jpg"
                   alt="Commercial photography"
                   size="large"
                   aspect="aspect-4/5"
