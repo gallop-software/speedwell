@@ -41,9 +41,6 @@
     "audit:strict": "gallop audit --strict",
     "audit:json": "gallop audit --json",
     "generate:ai-rules": "gallop generate .cursorrules && gallop generate .github/copilot-instructions.md",
-    "images": "node _scripts/process-images.js",
-    "images:reset": "rm -rf public/images && npm run images",
-    "featured-image": "node _scripts/generate-featured-image.js",
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
@@ -97,7 +94,7 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.26.0",
-    "@gallop.software/studio": "^2.3.69",
+    "@gallop.software/studio": "^2.3.83",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
