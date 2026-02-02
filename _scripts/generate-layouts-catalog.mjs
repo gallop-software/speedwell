@@ -13,6 +13,10 @@ import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { exec } from 'child_process'
 import { promisify } from 'util'
+import { config } from 'dotenv'
+
+// Load environment variables from .env.local
+config({ path: join(dirname(fileURLToPath(import.meta.url)), '../.env.local') })
 
 const execAsync = promisify(exec)
 
@@ -24,6 +28,7 @@ const OUTPUT_DIR = join(__dirname, '../public/layouts')
 const README_PATH = join(__dirname, '../src/app/README.md')
 const BLOCKS_README_PATH = join(__dirname, '../src/blocks/README.md')
 const BASE_URL = 'https://speedwell.gallop.software'
+const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const SCREENSHOT_WIDTH = 1920
 const SCREENSHOT_HEIGHT = 2400 // Tall screenshot for layouts
 const LARGE_SIZE = 1400 // Large image size on longest side
@@ -710,7 +715,7 @@ function generateReadme(layouts) {
   layouts.forEach((layout) => {
     readme += `#### ${layout.displayName}\n\n`
     if (layout.hasScreenshot) {
-      readme += `<img src="../../public/layouts/${layout.slug}.jpg" alt="${layout.displayName}" width="350">\n\n`
+      readme += `<img src="${CDN_URL}/layouts/${layout.slug}.jpg" alt="${layout.displayName}" width="350">\n\n`
     }
     readme += `**Slug:** \`${layout.slug}\`  \n`
     // Generate relative path from src/app
