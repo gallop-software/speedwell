@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Boutique wellness spa with treatment rooms and holistic design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Wellness spa with tranquil treatment rooms',
     },
   },

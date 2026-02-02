@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Open-plan contemporary home with custom millwork and smart home features',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Contemporary family home with open-plan living spaces',
     },
   },

@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Clean minimalist kitchen with integrated appliances and seamless design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Minimalist kitchen with white cabinetry and waterfall countertops',
     },
   },

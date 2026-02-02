@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Charming farmhouse kitchen with Shaker cabinets and rustic character',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Farmhouse kitchen with sage green cabinets and rustic details',
     },
   },

@@ -117,7 +117,7 @@ export const metadata = {
     description:
       'Curated gallery wall with personal art collection and professional arrangement',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Gallery wall with curated art and family photographs',
     },
   },

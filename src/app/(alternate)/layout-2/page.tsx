@@ -46,7 +46,7 @@ const metadata: PageMetadata = {
     description:
       'Explore the second navbar style with a clean, modern design. Features a centered logo layout with balanced navigation links on either side.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Navbar style 2 preview',
     },
   },
@@ -57,7 +57,7 @@ const metadata: PageMetadata = {
     title: 'Navbar Style 2 | Alternate Navigation Layout',
     description:
       'Explore the second navbar style with a clean, modern design. Features a centered logo layout with balanced navigation links on either side.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

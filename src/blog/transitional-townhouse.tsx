@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Historic townhouse with transitional design blending old and new',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Transitional townhouse with classic and contemporary elements',
     },
   },

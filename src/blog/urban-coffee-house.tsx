@@ -97,7 +97,7 @@ export const metadata = {
     description:
       'Community-focused restaurant brand celebrating local farmers and seasonal ingredients',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Farm-to-table restaurant branding',
     },
   },

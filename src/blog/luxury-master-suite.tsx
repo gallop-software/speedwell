@@ -101,7 +101,7 @@ export const metadata = {
     description:
       'Five-star master suite with spa bathroom and custom walk-in closet',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Luxury master bedroom with sophisticated furnishings',
     },
   },

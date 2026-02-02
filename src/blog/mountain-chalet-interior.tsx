@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Cozy mountain chalet with rustic luxury and spectacular views',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Mountain chalet interior with exposed beams and stone fireplace',
     },
   },

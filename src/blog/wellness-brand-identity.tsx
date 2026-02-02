@@ -98,7 +98,7 @@ export const metadata = {
     description:
       'Mindful brand identity creating serene experiences for wellness seekers',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Wellness studio brand materials',
     },
   },

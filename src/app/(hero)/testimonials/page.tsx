@@ -36,7 +36,7 @@ const metadata: PageMetadata = {
     description:
       'Discover what our clients say about working with Speedwell. Real stories of transformed spaces and exceptional design experiences from satisfied homeowners and businesses.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Happy clients in their beautifully designed interior space',
     },
   },

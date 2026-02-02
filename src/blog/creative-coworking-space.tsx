@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Vibrant brand connecting creative professionals through inspired design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Coworking space brand materials',
     },
   },

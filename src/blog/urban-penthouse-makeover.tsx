@@ -111,7 +111,7 @@ export const metadata = {
     description:
       'Sophisticated downtown penthouse with panoramic city views and contemporary design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Urban penthouse with city views and contemporary design',
     },
   },

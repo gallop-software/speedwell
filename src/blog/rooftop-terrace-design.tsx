@@ -108,7 +108,7 @@ export const metadata = {
     description:
       'Urban rooftop oasis with dining, lounge areas, and city views',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Rooftop terrace with outdoor furniture and city views',
     },
   },

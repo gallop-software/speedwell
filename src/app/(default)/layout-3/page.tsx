@@ -50,7 +50,7 @@ const metadata: PageMetadata = {
     description:
       'Discover our multi-column content distribution design. Ideal for organizing and presenting diverse content in a structured format.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Multi-column layout design',
     },
   },
@@ -61,7 +61,7 @@ const metadata: PageMetadata = {
     title: 'Layout 3 | Multi-Column Content Distribution Design',
     description:
       'Discover our multi-column content distribution design. Ideal for organizing and presenting diverse content in a structured format.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

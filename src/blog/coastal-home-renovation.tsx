@@ -102,7 +102,7 @@ export const metadata = {
     description:
       'Fresh, airy beachfront home renovation with ocean views and coastal-inspired interiors',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Coastal living room with ocean views and light airy design',
     },
   },

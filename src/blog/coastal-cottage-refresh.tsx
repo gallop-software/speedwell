@@ -103,7 +103,7 @@ export const metadata = {
     title: 'Coastal Cottage Refresh | Beach House Interior Update',
     description: 'Light and bright beach cottage with coastal charm',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Coastal cottage with whitewashed floors and beach decor',
     },
   },

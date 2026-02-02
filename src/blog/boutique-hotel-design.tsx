@@ -105,7 +105,7 @@ export const metadata = {
     description:
       'Sophisticated boutique hotel with unique rooms and curated public spaces',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Boutique hotel lobby with sophisticated furnishings',
     },
   },

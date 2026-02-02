@@ -65,7 +65,7 @@ const metadata: PageMetadata = {
     description:
       'Browse through our extensive portfolio featuring beautifully designed residential and commercial spaces that reflect sophistication, functionality, and timeless style',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Elegant interior design project by Timmerman Interior Design',
     },
   },
@@ -74,7 +74,7 @@ const metadata: PageMetadata = {
     title: 'Interior Design Portfolio - Transform Your Space',
     description:
       'Discover innovative interior design solutions and stunning transformations from our award-winning team. Each project tells a unique story of style and function',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

@@ -43,7 +43,7 @@ const metadata: PageMetadata = {
     description:
       'Meet our experienced interior designers and specialists at Timmerman. Discover the talented professionals who bring your design vision to life with creativity and expertise.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Timmerman interior design team',
     },
   },

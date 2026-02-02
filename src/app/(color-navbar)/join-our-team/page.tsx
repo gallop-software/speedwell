@@ -33,7 +33,7 @@ const metadata: PageMetadata = {
     description:
       'Join our talented team of interior designers and specialists. Explore career opportunities at Timmerman where creativity meets expertise in residential and commercial design.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Timmerman design team collaboration',
     },
   },

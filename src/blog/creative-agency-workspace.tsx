@@ -97,7 +97,7 @@ export const metadata = {
     description:
       'Sustainable rebrand for organic skincare with minimalist design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Organic skincare brand packaging',
     },
   },

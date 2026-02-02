@@ -100,7 +100,7 @@ export const metadata = {
     description:
       'Bright laundry room with efficient storage and farmhouse charm',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Laundry room with custom cabinets and folding counter',
     },
   },

@@ -101,7 +101,7 @@ export const metadata = {
     description:
       'Raw industrial space transformed into sophisticated urban living with exposed brick and contemporary design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Modern loft interior with exposed brick and industrial elements',
     },
   },

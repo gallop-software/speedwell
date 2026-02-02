@@ -98,7 +98,7 @@ export const metadata = {
     description:
       'Sophisticated rebrand honoring heritage while attracting modern luxury travelers',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Boutique hotel brand identity',
     },
   },

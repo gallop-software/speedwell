@@ -117,7 +117,7 @@ export const metadata = {
     title: 'Wine Country Estate | Rustic Elegant Interior Design',
     description: 'Wine country estate with rustic elegance and vineyard views',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Wine country estate with exposed beams and vineyard views',
     },
   },

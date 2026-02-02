@@ -3,7 +3,7 @@ import { getStudioImage } from '@/utils/studio-helpers'
 export const baseURL =
   process.env.NEXT_PUBLIC_PRODUCTION_URL || 'http://localhost:3000'
 
-const logoImageData = getStudioImage('/images/banner.jpg', 'large')
+const logoImageData = getStudioImage('/banner.jpg', 'large')
 
 const businessImageData = getStudioImage(
   '/images/pexels-helenalopes-1996337.jpg',

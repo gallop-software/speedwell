@@ -100,7 +100,7 @@ export const metadata = {
     description:
       'Traditional library with custom bookcases and leather furnishings',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Library study with floor-to-ceiling bookshelves and reading nook',
     },
   },

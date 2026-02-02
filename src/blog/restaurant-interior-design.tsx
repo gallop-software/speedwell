@@ -105,7 +105,7 @@ export const metadata = {
     description:
       'Upscale restaurant with sophisticated ambiance and thoughtful design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Upscale restaurant interior with rich materials',
     },
   },

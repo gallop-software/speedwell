@@ -101,7 +101,7 @@ export const metadata = {
     title: 'Mudroom Organization | Family Entry Storage Design',
     description: 'Organized family mudroom with custom storage for everyone',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Mudroom with custom cubbies and family organization',
     },
   },

@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Professional chef kitchen with restaurant-grade appliances and functionality',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Chef kitchen with professional appliances and large island',
     },
   },

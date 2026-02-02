@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Modern creative office in converted warehouse with industrial character',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Industrial office space with exposed brick and modern furnishings',
     },
   },

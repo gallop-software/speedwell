@@ -115,7 +115,7 @@ export const metadata = {
     description:
       'Professional home office with custom millwork and executive furnishings',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Executive home office with built-in shelving',
     },
   },

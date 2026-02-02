@@ -116,7 +116,7 @@ export const metadata = {
     description:
       'Hotel-style guest suite with thoughtful amenities and welcoming design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Guest suite with comfortable bed and hotel-quality amenities',
     },
   },

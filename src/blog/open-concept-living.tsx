@@ -107,7 +107,7 @@ export const metadata = {
     title: 'Open Concept Living | Modern Home Renovation Design',
     description: 'Flowing open-concept renovation with connected living spaces',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Open concept living space with kitchen and dining areas',
     },
   },

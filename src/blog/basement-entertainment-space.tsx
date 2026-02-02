@@ -100,7 +100,7 @@ export const metadata = {
     title: 'Basement Entertainment Space | Home Theater & Game Room Design',
     description: 'Finished basement with home theater and entertainment zones',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Basement entertainment space with theater seating',
     },
   },

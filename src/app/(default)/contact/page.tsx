@@ -31,7 +31,7 @@ const metadata: PageMetadata = {
     description:
       'Schedule your complimentary design consultation today. Our award-winning team is ready to transform your space.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Modern interior design studio',
     },
   },

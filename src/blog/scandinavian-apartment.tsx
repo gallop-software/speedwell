@@ -113,7 +113,7 @@ export const metadata = {
     description:
       'Nordic-inspired apartment with natural materials and minimalist design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Scandinavian apartment with white walls and natural wood accents',
     },
   },

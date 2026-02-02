@@ -105,7 +105,7 @@ export const metadata = {
     description:
       'Bohemian bedroom with global textiles and eclectic vintage finds',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Bohemian bedroom with layered textiles and plants',
     },
   },

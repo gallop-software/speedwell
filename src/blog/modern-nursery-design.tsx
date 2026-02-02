@@ -103,7 +103,7 @@ export const metadata = {
     description:
       'Modern nursery with sustainable materials and convertible furniture',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Modern nursery with soft colors and natural materials',
     },
   },

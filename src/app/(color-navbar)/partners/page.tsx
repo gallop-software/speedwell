@@ -33,7 +33,7 @@ const metadata: PageMetadata = {
     description:
       'We collaborate with exceptional craftsmen, artisans, and suppliers to bring your interior design vision to life.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Interior design partner showcase',
     },
   },

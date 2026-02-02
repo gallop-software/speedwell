@@ -103,7 +103,7 @@ export const metadata = {
     title: 'Spa Bathroom Retreat | Luxury Bathroom Interior Design',
     description: 'Luxurious spa bathroom with steam shower and soaking tub',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Spa-inspired bathroom with modern fixtures and natural light',
     },
   },

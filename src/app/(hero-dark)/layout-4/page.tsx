@@ -52,7 +52,7 @@ const metadata: PageMetadata = {
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Full-width carousel layout design',
     },
   },
@@ -63,7 +63,7 @@ const metadata: PageMetadata = {
     title: 'Layout 4 | Full-Width Carousel Presentation Style',
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

@@ -95,7 +95,7 @@ export const metadata = {
     description:
       'Distinctive brewery brand with custom illustrations and bold packaging',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Craft brewery brand labels',
     },
   },

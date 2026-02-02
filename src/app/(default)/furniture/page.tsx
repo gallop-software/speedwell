@@ -57,7 +57,7 @@ const metadata: PageMetadata = {
     description:
       'Expert furniture selection that curates perfect pieces for your space. Quality furnishings combining style, comfort, and durability for beautiful interiors.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Beautifully curated interior furniture selection',
     },
   },
@@ -66,7 +66,7 @@ const metadata: PageMetadata = {
     title: 'Furniture Selection Services | Curated Interior Furnishings',
     description:
       'Expert furniture selection services. Curate perfect pieces combining style, comfort, and durability for cohesive, beautiful interiors.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
 }
 

@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Elegant rebrand merging timeless style with sustainable fashion values',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Fashion boutique brand identity',
     },
   },

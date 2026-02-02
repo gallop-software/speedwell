@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Sustainable brand identity and packaging design for artisan coffee roaster',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Artisan coffee brand packaging',
     },
   },

@@ -46,7 +46,7 @@ const metadata: PageMetadata = {
     description:
       'Expert project management for your interior design needs. We handle every detail from planning to execution, ensuring your project is completed on time, on budget, and beyond expectations.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Professional interior design project in progress',
     },
   },

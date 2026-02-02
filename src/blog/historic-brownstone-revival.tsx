@@ -103,7 +103,7 @@ export const metadata = {
     description:
       '19th-century brownstone restoration honoring original details while incorporating modern comfort',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Restored historic brownstone interior with Victorian details',
     },
   },

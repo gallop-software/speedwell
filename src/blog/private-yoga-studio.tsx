@@ -109,7 +109,7 @@ export const metadata = {
     description:
       'Serene home yoga studio with natural materials and calming design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Private yoga studio with bamboo floors and peaceful ambiance',
     },
   },
