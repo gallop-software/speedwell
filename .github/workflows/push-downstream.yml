@@ -95,10 +95,9 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ pro/
           
-          # Run speedwell-pro preparation script
+          # Run speedwell-pro preparation script (no npm needed - uses only built-in Node modules)
           cd pro
-          npm ci
-          npm run speedwell-pro
+          node _scripts/prepare-speedwell-pro.mjs
 
       - name: Sync to speedwell (lite blocks)
         if: steps.version-check.outputs.should_sync == 'true'
@@ -110,11 +109,10 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ lite/
           
-          # Run speedwell-lite (lite conversion) and speedwell-pro (cleanup) scripts
+          # Run speedwell-lite and speedwell-pro scripts (no npm needed - uses only built-in Node modules)
           cd lite
-          npm ci
-          npm run speedwell-lite
-          npm run speedwell-pro
+          node _scripts/prepare-speedwell-lite.mjs
+          node _scripts/prepare-speedwell-pro.mjs
 
       - name: Commit and push to speedwell-pro
         if: steps.version-check.outputs.should_sync == 'true'
