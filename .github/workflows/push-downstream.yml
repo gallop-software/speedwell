@@ -118,10 +118,9 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ lite/
           
-          # Run blocks:lite conversion (before removing scripts)
+          # Run blocks:lite conversion directly (no npm install needed - uses only built-in Node modules)
           cd lite
-          npm ci
-          npm run blocks:lite
+          node _scripts/convert-pro-blocks.mjs
           
           # Remove dev-only scripts from _scripts/
           rm -f _scripts/generate-blocks-catalog.mjs
