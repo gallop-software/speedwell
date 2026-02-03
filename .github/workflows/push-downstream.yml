@@ -133,12 +133,12 @@ jobs:
 
           ${{ steps.commits.outputs.commits }}
           EOF
-            git push origin main
+            git push --force origin main
           fi
 
-          # Create tag
-          git tag "$VERSION"
-          git push origin "$VERSION"
+          # Create tag (force in case it exists from failed run)
+          git tag -f "$VERSION"
+          git push --force origin "$VERSION"
 
       - name: Commit and push to speedwell (lite)
         if: steps.version-check.outputs.should_sync == 'true'
@@ -157,12 +157,12 @@ jobs:
 
           ${{ steps.commits.outputs.commits }}
           EOF
-            git push origin main
+            git push --force origin main
           fi
 
-          # Create tag
-          git tag "$VERSION"
-          git push origin "$VERSION"
+          # Create tag (force in case it exists from failed run)
+          git tag -f "$VERSION"
+          git push --force origin "$VERSION"
 
       - name: Create release on speedwell-pro
         if: steps.version-check.outputs.should_sync == 'true'
