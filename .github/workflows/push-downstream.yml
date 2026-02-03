@@ -9,7 +9,6 @@ on:
 
 jobs:
   push:
-    if: secrets.GALLOP_APP_ID != '' && secrets.GALLOP_APP_PRIVATE_KEY != ''
     runs-on: ubuntu-latest
     steps:
       - name: Generate GitHub App token
@@ -94,7 +93,7 @@ jobs:
             --exclude='node_modules' \
             --exclude='.github/workflows/' \
             dev/ pro/
-          
+
           # Run speedwell-pro preparation script (no npm needed - uses only built-in Node modules)
           cd pro
           node _scripts/prepare-speedwell-pro.mjs
@@ -108,7 +107,7 @@ jobs:
             --exclude='node_modules' \
             --exclude='.github/workflows/' \
             dev/ lite/
-          
+
           # Run speedwell-lite and speedwell-pro scripts (no npm needed - uses only built-in Node modules)
           cd lite
           node _scripts/prepare-speedwell-lite.mjs
