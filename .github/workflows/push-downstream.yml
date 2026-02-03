@@ -83,12 +83,14 @@ jobs:
       - name: Sync to main branch (full blocks)
         if: steps.version-check.outputs.should_sync == 'true'
         run: |
-          # Copy all files except .git, node_modules, and all workflows
+          # Copy all files except .git and node_modules
           rsync -av --delete \
             --exclude='.git' \
             --exclude='node_modules' \
-            --exclude='.github/workflows/' \
             dev/ pro/
+
+          # Remove workflows from main branch (they only belong on dev)
+          rm -rf pro/.github/workflows
 
           # Run speedwell-pro preparation script (no npm needed - uses only built-in Node modules)
           cd pro
@@ -97,12 +99,14 @@ jobs:
       - name: Sync to speedwell (lite blocks)
         if: steps.version-check.outputs.should_sync == 'true'
         run: |
-          # Copy all files except .git, node_modules, and all workflows
+          # Copy all files except .git and node_modules
           rsync -av --delete \
             --exclude='.git' \
             --exclude='node_modules' \
-            --exclude='.github/workflows/' \
             dev/ lite/
+
+          # Remove workflows from lite (they only belong on dev)
+          rm -rf lite/.github/workflows
 
           # Run speedwell-lite and speedwell-pro scripts (no npm needed - uses only built-in Node modules)
           cd lite
