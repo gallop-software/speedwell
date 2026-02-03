@@ -18,7 +18,7 @@ jobs:
           app-id: ${{ secrets.GALLOP_APP_ID }}
           private-key: ${{ secrets.GALLOP_APP_PRIVATE_KEY }}
           owner: gallop-software
-          repositories: speedwell,speedwell-pro
+          repositories: speedwell-dev,speedwell-pro,speedwell
 
       - name: Checkout dev repo
         uses: actions/checkout@v4
