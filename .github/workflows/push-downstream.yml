@@ -33,10 +33,10 @@ jobs:
         run: |
           CURRENT_VERSION=$(jq -r .version package.json)
           echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
-          
+
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
           echo "last_tag=$LAST_TAG" >> $GITHUB_OUTPUT
-          
+
           if [ "v$CURRENT_VERSION" == "$LAST_TAG" ]; then
             echo "No version bump detected (current: v$CURRENT_VERSION, last tag: $LAST_TAG)"
             echo "should_sync=false" >> $GITHUB_OUTPUT
@@ -57,7 +57,7 @@ jobs:
           else
             COMMITS=$(git log --oneline --no-decorate $LAST_TAG..HEAD)
           fi
-          
+
           # Store commits for release notes
           echo "commits<<EOF" >> $GITHUB_OUTPUT
           echo "$COMMITS" >> $GITHUB_OUTPUT
@@ -95,6 +95,19 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ pro/
 
+          # Remove dev-only scripts from _scripts/
+          rm -f pro/_scripts/generate-blocks-catalog.mjs
+          rm -f pro/_scripts/generate-blocks-catalog.md
+          rm -f pro/_scripts/convert-pro-blocks.mjs
+          rm -f pro/_scripts/convert-pro-blocks.md
+          rm -f pro/_scripts/generate-layouts-catalog.mjs
+          rm -f pro/_scripts/generate-layouts-catalog.md
+
+          # Remove dev-only npm scripts from package.json
+          cd pro
+          jq 'del(.scripts.blocks, .scripts["blocks:screenshots"], .scripts["blocks:sort"], .scripts["blocks:lite"], .scripts.layouts, .scripts["layouts:screenshots"], .scripts["layouts:sort"])' package.json > package.json.tmp
+          mv package.json.tmp package.json
+
       - name: Sync to speedwell (lite blocks)
         if: steps.version-check.outputs.should_sync == 'true'
         run: |
@@ -105,10 +118,22 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ lite/
           
-          # Run blocks:lite conversion
+          # Run blocks:lite conversion (before removing scripts)
           cd lite
           npm ci
           npm run blocks:lite
+          
+          # Remove dev-only scripts from _scripts/
+          rm -f _scripts/generate-blocks-catalog.mjs
+          rm -f _scripts/generate-blocks-catalog.md
+          rm -f _scripts/convert-pro-blocks.mjs
+          rm -f _scripts/convert-pro-blocks.md
+          rm -f _scripts/generate-layouts-catalog.mjs
+          rm -f _scripts/generate-layouts-catalog.md
+          
+          # Remove dev-only npm scripts from package.json
+          jq 'del(.scripts.blocks, .scripts["blocks:screenshots"], .scripts["blocks:sort"], .scripts["blocks:lite"], .scripts.layouts, .scripts["layouts:screenshots"], .scripts["layouts:sort"])' package.json > package.json.tmp
+          mv package.json.tmp package.json
 
       - name: Commit and push to speedwell-pro
         if: steps.version-check.outputs.should_sync == 'true'
@@ -118,7 +143,7 @@ jobs:
           git config user.name "gallop-sync-bot[bot]"
           git config user.email "gallop-sync-bot[bot]@users.noreply.github.com"
           git add -A
-          
+
           if git diff --staged --quiet; then
             echo "No changes to commit to speedwell-pro"
           else
@@ -129,7 +154,7 @@ jobs:
           EOF
             git push origin main
           fi
-          
+
           # Create tag
           git tag "$VERSION"
           git push origin "$VERSION"
@@ -142,7 +167,7 @@ jobs:
           git config user.name "gallop-sync-bot[bot]"
           git config user.email "gallop-sync-bot[bot]@users.noreply.github.com"
           git add -A
-          
+
           if git diff --staged --quiet; then
             echo "No changes to commit to speedwell"
           else
@@ -153,7 +178,7 @@ jobs:
           EOF
             git push origin main
           fi
-          
+
           # Create tag
           git tag "$VERSION"
           git push origin "$VERSION"
@@ -164,7 +189,7 @@ jobs:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           VERSION="v${{ steps.version-check.outputs.current_version }}"
-          
+
           # Create zip
           cd pro
           REPO_NAME="speedwell-pro"
@@ -177,7 +202,7 @@ jobs:
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
-          
+
           # Create release
           gh release create "$VERSION" \
             --repo gallop-software/speedwell-pro \
@@ -191,7 +216,7 @@ jobs:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           VERSION="v${{ steps.version-check.outputs.current_version }}"
-          
+
           # Create zip
           cd lite
           REPO_NAME="speedwell"
@@ -204,7 +229,7 @@ jobs:
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
-          
+
           # Create release
           gh release create "$VERSION" \
             --repo gallop-software/speedwell \
