@@ -94,19 +94,11 @@ jobs:
             --exclude='node_modules' \
             --exclude='.github/workflows/' \
             dev/ pro/
-
-          # Remove dev-only scripts from _scripts/
-          rm -f pro/_scripts/generate-blocks-catalog.mjs
-          rm -f pro/_scripts/generate-blocks-catalog.md
-          rm -f pro/_scripts/convert-pro-blocks.mjs
-          rm -f pro/_scripts/convert-pro-blocks.md
-          rm -f pro/_scripts/generate-layouts-catalog.mjs
-          rm -f pro/_scripts/generate-layouts-catalog.md
-
-          # Remove dev-only npm scripts from package.json
+          
+          # Run speedwell-pro preparation script
           cd pro
-          jq 'del(.scripts.blocks, .scripts["blocks:screenshots"], .scripts["blocks:sort"], .scripts["blocks:lite"], .scripts.layouts, .scripts["layouts:screenshots"], .scripts["layouts:sort"])' package.json > package.json.tmp
-          mv package.json.tmp package.json
+          npm ci
+          npm run speedwell-pro
 
       - name: Sync to speedwell (lite blocks)
         if: steps.version-check.outputs.should_sync == 'true'
@@ -118,22 +110,11 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ lite/
           
-          # Run blocks:lite conversion (before removing scripts)
+          # Run speedwell (lite conversion) and speedwell-pro (cleanup) scripts
           cd lite
           npm ci
-          npm run blocks:lite
-          
-          # Remove dev-only scripts from _scripts/
-          rm -f _scripts/generate-blocks-catalog.mjs
-          rm -f _scripts/generate-blocks-catalog.md
-          rm -f _scripts/convert-pro-blocks.mjs
-          rm -f _scripts/convert-pro-blocks.md
-          rm -f _scripts/generate-layouts-catalog.mjs
-          rm -f _scripts/generate-layouts-catalog.md
-          
-          # Remove dev-only npm scripts from package.json
-          jq 'del(.scripts.blocks, .scripts["blocks:screenshots"], .scripts["blocks:sort"], .scripts["blocks:lite"], .scripts.layouts, .scripts["layouts:screenshots"], .scripts["layouts:sort"])' package.json > package.json.tmp
-          mv package.json.tmp package.json
+          npm run speedwell
+          npm run speedwell-pro
 
       - name: Commit and push to speedwell-pro
         if: steps.version-check.outputs.should_sync == 'true'
