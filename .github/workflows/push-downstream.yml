@@ -73,8 +73,8 @@ jobs:
           VERSION="v${{ steps.version-check.outputs.current_version }}"
           git config user.name "gallop-sync-bot[bot]"
           git config user.email "gallop-sync-bot[bot]@users.noreply.github.com"
-          git tag "$VERSION"
-          git push origin "$VERSION"
+          git tag -f "$VERSION"
+          git push --force origin "$VERSION"
 
       - name: Clone downstream targets
         if: steps.version-check.outputs.should_sync == 'true'
