@@ -78,7 +78,7 @@ export default function Hero19() {
       <div
         className="relative px-6 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://speedwell-cdn.gallop.software/portfolio/pexels-heyho-6794934-lg.jpg')`,
+          backgroundImage: `url('https://speedwell-cdn.gallop.software/images/portfolio/pexels-heyho-6794934-lg.jpg')`,
         }}
       >
         {/* Overlay */}
