@@ -55,7 +55,7 @@ export default function Content37() {
           <Buttons>
             <Button
               variant="primary"
-              href="/enim-ad"
+              href="/contact"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
