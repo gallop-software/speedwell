@@ -1,11 +1,11 @@
-# Push to downstream repos on version bump
-# Only runs when package.json version changes
+# Push to main branch and speedwell (lite) on version bump
+# Runs when dev branch is pushed with a version change
 name: Push Downstream
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   push:
@@ -20,11 +20,12 @@ jobs:
           app-id: ${{ secrets.GALLOP_APP_ID }}
           private-key: ${{ secrets.GALLOP_APP_PRIVATE_KEY }}
           owner: gallop-software
-          repositories: speedwell-dev,speedwell-pro,speedwell
+          repositories: speedwell-pro,speedwell
 
-      - name: Checkout dev repo
+      - name: Checkout dev branch
         uses: actions/checkout@v4
         with:
+          ref: dev
           fetch-depth: 0
           path: dev
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -65,7 +66,7 @@ jobs:
           echo "$COMMITS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Tag dev repo
+      - name: Tag dev branch
         if: steps.version-check.outputs.should_sync == 'true'
         working-directory: dev
         run: |
@@ -75,10 +76,12 @@ jobs:
           git tag "$VERSION"
           git push origin "$VERSION"
 
-      - name: Clone downstream repos
+      - name: Clone downstream targets
         if: steps.version-check.outputs.should_sync == 'true'
         run: |
-          git clone https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/gallop-software/speedwell-pro.git pro
+          # Clone main branch of this repo for pro distribution
+          git clone --branch main https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/gallop-software/speedwell-pro.git pro
+          # Clone speedwell for lite distribution
           git clone https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/gallop-software/speedwell.git lite
 
       - name: Setup Node.js
@@ -87,7 +90,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Sync to speedwell-pro (full blocks)
+      - name: Sync to main branch (full blocks)
         if: steps.version-check.outputs.should_sync == 'true'
         run: |
           # Copy all files except .git, node_modules, and all workflows
@@ -116,7 +119,7 @@ jobs:
           node _scripts/prepare-speedwell-lite.mjs
           node _scripts/prepare-speedwell-pro.mjs
 
-      - name: Commit and push to speedwell-pro
+      - name: Commit and push to main branch
         if: steps.version-check.outputs.should_sync == 'true'
         working-directory: pro
         run: |
