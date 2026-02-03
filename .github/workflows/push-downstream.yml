@@ -66,16 +66,6 @@ jobs:
           echo "$COMMITS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Tag dev branch
-        if: steps.version-check.outputs.should_sync == 'true'
-        working-directory: dev
-        run: |
-          VERSION="v${{ steps.version-check.outputs.current_version }}"
-          git config user.name "gallop-sync-bot[bot]"
-          git config user.email "gallop-sync-bot[bot]@users.noreply.github.com"
-          git tag -f "$VERSION"
-          git push --force origin "$VERSION"
-
       - name: Clone downstream targets
         if: steps.version-check.outputs.should_sync == 'true'
         run: |
@@ -187,6 +177,9 @@ jobs:
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
 
+          # Delete existing release if present (for retries)
+          gh release delete "$VERSION" --repo gallop-software/speedwell-pro --yes 2>/dev/null || true
+
           # Create release
           gh release create "$VERSION" \
             --repo gallop-software/speedwell-pro \
@@ -213,6 +206,9 @@ jobs:
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
+
+          # Delete existing release if present (for retries)
+          gh release delete "$VERSION" --repo gallop-software/speedwell --yes 2>/dev/null || true
 
           # Create release
           gh release create "$VERSION" \
