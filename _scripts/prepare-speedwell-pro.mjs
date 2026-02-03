@@ -33,8 +33,8 @@ const SCRIPTS_TO_REMOVE = [
 const FILES_TO_DELETE = [
   path.join(__dirname, 'generate-blocks-catalog.mjs'),
   path.join(__dirname, 'generate-blocks-catalog.md'),
-  path.join(__dirname, 'convert-pro-blocks.mjs'),
-  path.join(__dirname, 'convert-pro-blocks.md'),
+  path.join(__dirname, 'prepare-speedwell-lite.mjs'),
+  path.join(__dirname, 'prepare-speedwell-lite.md'),
   path.join(__dirname, 'generate-layouts-catalog.mjs'),
   path.join(__dirname, 'generate-layouts-catalog.md'),
   path.join(__dirname, 'prepare-speedwell-pro.mjs'),
