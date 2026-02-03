@@ -13,35 +13,35 @@ export default function Section8() {
       >
         <Card3
           id="1"
-          image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          image="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
           alt="Evergreen Upholstery Co."
           size="large"
           href="#"
         />
         <Card3
           id="2"
-          image="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          image="/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
           alt="Monarch Furniture Studio"
           size="large"
           href="#"
         />
         <Card3
           id="3"
-          image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          image="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           alt="Heritage Seating"
           size="large"
           href="#"
         />
         <Card3
           id="4"
-          image="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          image="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
           alt="Luxe Leather Works"
           size="large"
           href="#"
         />
         <Card3
           id="5"
-          image="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+          image="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
           alt="Bespoke Sofas Ltd."
           size="large"
           href="#"
@@ -55,42 +55,42 @@ export default function Section8() {
       >
         <Card3
           id="6"
-          image="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+          image="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
           alt="Lumière Atelier"
           size="large"
           href="#"
         />
         <Card3
           id="7"
-          image="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+          image="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
           alt="Radiant Designs"
           size="large"
           href="#"
         />
         <Card3
           id="8"
-          image="/images/portfolio/jvdm/pexels-jvdm-1454804.jpg"
+          image="/portfolio/jvdm/pexels-jvdm-1454804.jpg"
           alt="Chandelier House"
           size="large"
           href="#"
         />
         <Card3
           id="9"
-          image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          image="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
           alt="Edison & Co."
           size="large"
           href="#"
         />
         <Card3
           id="10"
-          image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+          image="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
           alt="Ambient Lighting Studio"
           size="large"
           href="#"
         />
         <Card3
           id="11"
-          image="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+          image="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
           alt="Sconce & Shade"
           size="large"
           href="#"
@@ -104,42 +104,42 @@ export default function Section8() {
       >
         <Card3
           id="12"
-          image="/images/portfolio/pexels-mikhail-nilov-6707628.jpg"
+          image="/portfolio/pexels-mikhail-nilov-6707628.jpg"
           alt="Stone & Terra"
           size="large"
           href="#"
         />
         <Card3
           id="13"
-          image="/images/portfolio/pexels-clickerhappy-584399.jpg"
+          image="/portfolio/pexels-clickerhappy-584399.jpg"
           alt="Mosaic Masters"
           size="large"
           href="#"
         />
         <Card3
           id="14"
-          image="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
+          image="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
           alt="Hardwood Heritage"
           size="large"
           href="#"
         />
         <Card3
           id="15"
-          image="/images/portfolio/pexels-pixabay-279719.jpg"
+          image="/portfolio/pexels-pixabay-279719.jpg"
           alt="Marble & Granite Co."
           size="large"
           href="#"
         />
         <Card3
           id="16"
-          image="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+          image="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
           alt="Reclaimed Wood Floors"
           size="large"
           href="#"
         />
         <Card3
           id="17"
-          image="/images/portfolio/pexels-pixabay-269218.jpg"
+          image="/portfolio/pexels-pixabay-269218.jpg"
           alt="Porcelain & Ceramic Studio"
           size="large"
           href="#"
@@ -153,35 +153,35 @@ export default function Section8() {
       >
         <Card3
           id="18"
-          image="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+          image="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
           alt="Silk Road Fabrics"
           size="large"
           href="#"
         />
         <Card3
           id="19"
-          image="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          image="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
           alt="Velvet & Linen Co."
           size="large"
           href="#"
         />
         <Card3
           id="20"
-          image="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+          image="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
           alt="Custom Drapery House"
           size="large"
           href="#"
         />
         <Card3
           id="21"
-          image="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+          image="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
           alt="Woven Wonders"
           size="large"
           href="#"
         />
         <Card3
           id="22"
-          image="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+          image="/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
           alt="Artisan Rugs & Carpets"
           size="large"
           href="#"
@@ -196,14 +196,14 @@ export default function Section8() {
       >
         <Card3
           id="23"
-          image="/images/portfolio/pexels-dropshado-2251247.jpg"
+          image="/portfolio/pexels-dropshado-2251247.jpg"
           alt="Ironwork & Metalcraft"
           size="large"
           href="#"
         />
         <Card3
           id="24"
-          image="/images/portfolio/pexels-pixabay-276724.jpg"
+          image="/portfolio/pexels-pixabay-276724.jpg"
           alt="Glass & Mirror Studio"
           size="large"
           href="#"

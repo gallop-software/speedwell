@@ -15,13 +15,13 @@ export default function Content3() {
       <Columns reverseColumns={false}>
         <Column className="aspect-[8/9] relative lg:-mb-20">
           <Image
-            src="/images/portfolio/pexels-pixabay-276724.jpg"
+            src="/portfolio/pexels-pixabay-276724.jpg"
             alt="Lorem anim pariatur laborum eiusmod labore"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+            src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
             alt="Duis tempor duis labore duis"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"

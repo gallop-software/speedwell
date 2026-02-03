@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+        src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
         alt="Basement entertainment space with home theater and game room"
         size="large"
         wrap={true}
@@ -89,7 +89,7 @@ export const metadata = {
     'Multi-functional finished basement featuring home theater, game area, bar, and lounge with industrial design and smart space planning.',
   date: '2025-02-28',
   slug: 'basement-entertainment-space',
-  featuredImage: '/images/portfolio/houzlook/pexels-houzlook-3797991.jpg',
+  featuredImage: '/portfolio/houzlook/pexels-houzlook-3797991.jpg',
   categories: ['Residential', 'Entertainment', 'Renovation'],
   alternates: {
     canonical:
@@ -100,7 +100,7 @@ export const metadata = {
     title: 'Basement Entertainment Space | Home Theater & Game Room Design',
     description: 'Finished basement with home theater and entertainment zones',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Basement entertainment space with theater seating',
     },
   },

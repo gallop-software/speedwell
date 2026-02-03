@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-rachel-claire-5490970.jpg"
+        src="/layout-1/pexels-rachel-claire-5490970.jpg"
         alt="Elegant fashion boutique brand identity with sophisticated style"
         size="large"
         wrap={true}
@@ -84,7 +84,7 @@ export const metadata = {
     'Sophisticated rebrand for fashion boutique balancing timeless elegance with sustainability, creating a destination for conscious consumers.',
   date: '2024-11-08',
   slug: 'fashion-boutique-rebrand',
-  featuredImage: '/images/layout-1/pexels-rachel-claire-5490970.jpg',
+  featuredImage: '/layout-1/pexels-rachel-claire-5490970.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Fashion'],
   alternates: {
     canonical:
@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Elegant rebrand merging timeless style with sustainable fashion values',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Fashion boutique brand identity',
     },
   },

@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-pixabay-221185.jpg"
+        src="/layout-1/pexels-pixabay-221185.jpg"
         alt="Modern tech startup brand identity with bold colors and dynamic design"
         size="large"
         wrap={true}
@@ -83,7 +83,7 @@ export const metadata = {
     'Bold brand identity for innovative SaaS startup featuring vibrant gradients, custom iconography, and scalable design system for growth.',
   date: '2024-11-15',
   slug: 'modern-medical-office',
-  featuredImage: '/images/layout-1/pexels-pixabay-221185.jpg',
+  featuredImage: '/layout-1/pexels-pixabay-221185.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Digital Branding'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/modern-medical-office',
@@ -94,7 +94,7 @@ export const metadata = {
     description:
       'Energetic brand identity for tech startup with bold visuals and scalable system',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Tech startup brand identity',
     },
   },

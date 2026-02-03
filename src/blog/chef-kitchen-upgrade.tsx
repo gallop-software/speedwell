@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+        src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
         alt="Professional chef's kitchen with high-end appliances"
         size="large"
         wrap={true}
@@ -99,7 +99,7 @@ export const metadata = {
   date: '2025-04-05',
   slug: 'chef-kitchen-upgrade',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
   categories: ['Kitchen Design', 'Professional', 'Gourmet'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/chef-kitchen-upgrade',
@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Professional chef kitchen with restaurant-grade appliances and functionality',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Chef kitchen with professional appliances and large island',
     },
   },

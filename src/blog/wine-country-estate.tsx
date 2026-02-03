@@ -12,15 +12,15 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
+          src="/portfolio/pexels-alex-qian-1180283-2343465.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+          src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
           size="large"
         />
       </Gallery>
@@ -107,7 +107,7 @@ export const metadata = {
     "Sophisticated wine country home featuring rustic elegance, chef's kitchen, custom wine cellar, and seamless indoor-outdoor living.",
   date: '2025-01-19',
   slug: 'wine-country-estate',
-  featuredImage: '/images/portfolio/pexels-alex-qian-1180283-2343465.jpg',
+  featuredImage: '/portfolio/pexels-alex-qian-1180283-2343465.jpg',
   categories: ['Residential', 'Luxury', 'Rustic'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/wine-country-estate',
@@ -117,7 +117,7 @@ export const metadata = {
     title: 'Wine Country Estate | Rustic Elegant Interior Design',
     description: 'Wine country estate with rustic elegance and vineyard views',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Wine country estate with exposed beams and vineyard views',
     },
   },

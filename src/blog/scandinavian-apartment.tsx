@@ -12,15 +12,15 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
+          src="/portfolio/jvdm/pexels-jvdm-1457844.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
           size="large"
         />
       </Gallery>
@@ -102,7 +102,7 @@ export const metadata = {
     'Light-filled apartment featuring Scandinavian design principles with natural materials, multi-functional furniture, and minimalist aesthetic.',
   date: '2024-07-20',
   slug: 'scandinavian-apartment',
-  featuredImage: '/images/portfolio/jvdm/pexels-jvdm-1457844.jpg',
+  featuredImage: '/portfolio/jvdm/pexels-jvdm-1457844.jpg',
   categories: ['Residential', 'Scandinavian', 'Minimalist'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/scandinavian-apartment',
@@ -113,7 +113,7 @@ export const metadata = {
     description:
       'Nordic-inspired apartment with natural materials and minimalist design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Scandinavian apartment with white walls and natural wood accents',
     },
   },

@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
         alt="Midcentury modern home with clean lines and retro furnishings"
         size="large"
         wrap={true}
@@ -93,7 +93,7 @@ export const metadata = {
     'Authentic midcentury modern home renovation preserving original architecture with updated finishes and period-appropriate furnishings.',
   date: '2024-10-03',
   slug: 'midcentury-modern-refresh',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
   categories: ['Residential', 'Midcentury Modern', 'Renovation'],
   alternates: {
     canonical:
@@ -105,7 +105,7 @@ export const metadata = {
     description:
       '1960s home renovation with authentic midcentury modern design and furnishings',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Midcentury modern living room with period furnishings',
     },
   },

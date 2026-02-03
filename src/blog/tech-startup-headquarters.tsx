@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-cottonbro-5379175.jpg"
+        src="/layout-1/pexels-cottonbro-5379175.jpg"
         alt="Luxury boutique hotel brand identity with elegant design"
         size="large"
         wrap={true}
@@ -86,7 +86,7 @@ export const metadata = {
     'Elegant rebrand for historic boutique hotel blending classic sophistication with modern luxury across all guest touchpoints and digital platforms.',
   date: '2024-08-12',
   slug: 'tech-startup-headquarters',
-  featuredImage: '/images/layout-1/pexels-cottonbro-5379175.jpg',
+  featuredImage: '/layout-1/pexels-cottonbro-5379175.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
     canonical:
@@ -98,7 +98,7 @@ export const metadata = {
     description:
       'Sophisticated rebrand honoring heritage while attracting modern luxury travelers',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Boutique hotel brand identity',
     },
   },

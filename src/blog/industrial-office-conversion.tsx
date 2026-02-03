@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
         alt="Industrial office space with exposed brick and modern furnishings"
         size="large"
         wrap={true}
@@ -92,7 +92,7 @@ export const metadata = {
     'Creative office space conversion from warehouse featuring exposed brick, original beams, and modern workplace amenities.',
   date: '2024-08-14',
   slug: 'industrial-office-conversion',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg',
   categories: ['Commercial', 'Industrial', 'Office Design'],
   alternates: {
     canonical:
@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Modern creative office in converted warehouse with industrial character',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Industrial office space with exposed brick and modern furnishings',
     },
   },

@@ -54,7 +54,7 @@ export default function Form1() {
         </Column>
         <Column className="aspect-[8/9] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
+            src="/portfolio/pexels-pixabay-269218.jpg"
             alt="Beautiful interior design space"
             className="object-cover absolute inset-0 w-full h-full"
             size="large"

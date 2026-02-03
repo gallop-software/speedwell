@@ -26,7 +26,7 @@ export default function Content12() {
         </Column>
         <Column>
           <Image
-            src="/images/portfolio/pexels-pixabay-279719.jpg"
+            src="/portfolio/pexels-pixabay-279719.jpg"
             alt="Modern interior with expertly selected color palette"
             className="w-full object-cover"
             rounded="rounded-t-full"

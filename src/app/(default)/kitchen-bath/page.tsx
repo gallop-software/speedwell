@@ -40,7 +40,7 @@ const metadata: PageMetadata = {
   ],
   slug: 'kitchen-bath',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
   focusKeyword: 'kitchen and bath design',
   readingTimeMinutes: 4,
   publishDate: '2024-02-10T09:00:00Z',
@@ -58,7 +58,7 @@ const metadata: PageMetadata = {
     description:
       'Expert kitchen and bathroom design services that blend beauty with functionality. Create stunning spaces that elevate your daily routines with our custom remodeling solutions.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Beautiful modern kitchen with custom cabinetry and contemporary design',
     },
   },
@@ -67,7 +67,7 @@ const metadata: PageMetadata = {
     title: 'Kitchen & Bath Design Services | Custom Remodeling Experts',
     description:
       'Transform your kitchen and bathroom with expert design services. Beautiful, functional spaces combining luxury and innovation for modern living.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
 }
 

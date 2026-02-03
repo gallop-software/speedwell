@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/pexels-pixabay-276724.jpg"
+        src="/portfolio/pexels-pixabay-276724.jpg"
         alt="Home library and study with built-in bookshelves"
         size="large"
         wrap={true}
@@ -89,7 +89,7 @@ export const metadata = {
     'Classic library study featuring floor-to-ceiling bookcases, leather furnishings, and sophisticated traditional design for reading and contemplation.',
   date: '2025-03-12',
   slug: 'library-study-design',
-  featuredImage: '/images/portfolio/pexels-pixabay-276724.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-276724.jpg',
   categories: ['Library Design', 'Traditional', 'Home Office'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/library-study-design',
@@ -100,7 +100,7 @@ export const metadata = {
     description:
       'Traditional library with custom bookcases and leather furnishings',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Library study with floor-to-ceiling bookshelves and reading nook',
     },
   },

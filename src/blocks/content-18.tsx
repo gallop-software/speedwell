@@ -15,7 +15,7 @@ export default function Content18() {
       >
         <Column>
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+            src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
             alt="Professional installation and styling"
             className="w-full object-cover max-w-lg mx-auto"
             rounded="rounded-t-full"

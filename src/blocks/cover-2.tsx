@@ -4,7 +4,7 @@ import { Accent } from '@/components/accent'
 export default function Cover2() {
   return (
     <Cover
-      imageSrc="/images/portfolio/pexels-clickerhappy-584399.jpg"
+      imageSrc="/portfolio/pexels-clickerhappy-584399.jpg"
       imageAlt="Beautiful interior design space"
       imageClassName=""
     >

@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
         alt="Restaurant interior with inviting atmosphere and stylish design"
         size="large"
         wrap={true}
@@ -93,7 +93,7 @@ export const metadata = {
     'Sophisticated restaurant featuring custom millwork, varied dining zones, and elevated design that balances ambiance with operational needs.',
   date: '2024-11-28',
   slug: 'restaurant-interior-design',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
   categories: ['Commercial', 'Hospitality', 'Restaurant'],
   alternates: {
     canonical:
@@ -105,7 +105,7 @@ export const metadata = {
     description:
       'Upscale restaurant with sophisticated ambiance and thoughtful design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Upscale restaurant interior with rich materials',
     },
   },

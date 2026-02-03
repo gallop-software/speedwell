@@ -12,7 +12,7 @@ export default function Content11() {
       <Columns gap="gap-10 lg:gap-20">
         <Column>
           <Image
-            src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+            src="/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
             alt="Interior space showcasing professional color coordination"
             className="w-full object-cover"
             size="large"

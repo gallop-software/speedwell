@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg"
+        src="/layout-1/pexels-blanca-isela-2156722885-35240180.jpg"
         alt="Artisan coffee brand identity with packaging and logo design"
         size="large"
         wrap={true}
@@ -85,7 +85,7 @@ export const metadata = {
     'Complete brand identity for specialty coffee roaster featuring sustainable packaging design, custom illustrations, and authentic visual storytelling.',
   date: '2024-12-10',
   slug: 'boutique-retail-design',
-  featuredImage: '/images/layout-1/pexels-blanca-isela-2156722885-35240180.jpg',
+  featuredImage: '/layout-1/pexels-blanca-isela-2156722885-35240180.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/boutique-retail-design',
@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Sustainable brand identity and packaging design for artisan coffee roaster',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Artisan coffee brand packaging',
     },
   },

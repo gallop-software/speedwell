@@ -20,7 +20,7 @@ const metadata: PageMetadata = {
   description:
     'We collaborate with exceptional craftsmen, artisans, and suppliers to bring your interior design vision to life. Meet the trusted partners who help us deliver outstanding results.',
   slug: 'partners',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
   focusKeyword: 'interior design partners',
   readingTimeMinutes: 3,
   publishDate: '2025-10-13T00:00:00Z',
@@ -33,7 +33,7 @@ const metadata: PageMetadata = {
     description:
       'We collaborate with exceptional craftsmen, artisans, and suppliers to bring your interior design vision to life.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Interior design partner showcase',
     },
   },

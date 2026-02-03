@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-jworks1124-342800.jpg"
+          src="/portfolio/pexels-jworks1124-342800.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+          src="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
           size="large"
         />
       </Gallery>
@@ -98,7 +98,7 @@ export const metadata = {
     'Warm mountain chalet featuring reclaimed wood, stone fireplace, and rustic luxury design with spectacular alpine views and modern amenities.',
   date: '2024-01-15',
   slug: 'mountain-chalet-interior',
-  featuredImage: '/images/portfolio/pexels-jworks1124-342800.jpg',
+  featuredImage: '/portfolio/pexels-jworks1124-342800.jpg',
   categories: ['Residential', 'Mountain', 'Luxury'],
   alternates: {
     canonical:
@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Cozy mountain chalet with rustic luxury and spectacular views',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Mountain chalet interior with exposed beams and stone fireplace',
     },
   },

@@ -14,7 +14,7 @@ export default function Content16() {
       >
         <Column>
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+            src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
             alt="Detailed project planning and scheduling"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"

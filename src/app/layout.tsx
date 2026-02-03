@@ -55,12 +55,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       style={rootStyle}
     >
       <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
         <div>{children}</div>
         <SmoothScroll />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.VERCEL === '1' && <Analytics />}
       </body>
       {process.env.NODE_ENV === 'production' &&
         process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (

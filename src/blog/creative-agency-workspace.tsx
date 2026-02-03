@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-cottonbro-4154192.jpg"
+        src="/layout-1/pexels-cottonbro-4154192.jpg"
         alt="Natural organic skincare brand identity with minimalist packaging"
         size="large"
         wrap={true}
@@ -85,7 +85,7 @@ export const metadata = {
     'Minimalist rebrand for organic skincare line featuring botanical elements, sustainable packaging, and sophisticated visual identity for clean beauty market.',
   date: '2024-10-20',
   slug: 'creative-agency-workspace',
-  featuredImage: '/images/layout-1/pexels-cottonbro-4154192.jpg',
+  featuredImage: '/layout-1/pexels-cottonbro-4154192.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
     canonical:
@@ -97,7 +97,7 @@ export const metadata = {
     description:
       'Sustainable rebrand for organic skincare with minimalist design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Organic skincare brand packaging',
     },
   },

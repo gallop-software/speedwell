@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          src="/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
+          src="/portfolio/jvdm/pexels-jvdm-1457844.jpg"
           size="large"
         />
       </Gallery>
@@ -98,7 +98,7 @@ export const metadata = {
   date: '2024-06-12',
   slug: 'farmhouse-kitchen-remodel',
   featuredImage:
-    '/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg',
+    '/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg',
   categories: ['Kitchen Design', 'Farmhouse', 'Traditional'],
   alternates: {
     canonical:
@@ -110,7 +110,7 @@ export const metadata = {
     description:
       'Charming farmhouse kitchen with Shaker cabinets and rustic character',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Farmhouse kitchen with sage green cabinets and rustic details',
     },
   },

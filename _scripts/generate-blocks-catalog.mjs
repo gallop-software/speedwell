@@ -12,6 +12,10 @@ import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { exec } from 'child_process'
 import { promisify } from 'util'
+import { config } from 'dotenv'
+
+// Load environment variables from .env.local
+config({ path: join(dirname(fileURLToPath(import.meta.url)), '../.env.local') })
 
 const execAsync = promisify(exec)
 
@@ -23,6 +27,7 @@ const OUTPUT_DIR = join(__dirname, '../public/blocks')
 const README_PATH = join(__dirname, '../src/blocks/README.md')
 const META_JSON_PATH = join(__dirname, '../_data/_meta.json')
 const BASE_URL = 'https://speedwell.gallop.software'
+const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const LARGE_SIZE = 1400 // Large image size on longest side
 
 // Preferred category order (edit this to reorder categories)
@@ -543,7 +548,7 @@ function generateReadme(blocks) {
     blocksByCategory[category].forEach((block) => {
       readme += `#### ${block.displayName}\n\n`
       if (block.hasScreenshot) {
-        readme += `<img src="../../public/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
+        readme += `<img src="${CDN_URL}/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
       readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}  \n`

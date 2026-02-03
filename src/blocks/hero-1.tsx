@@ -79,7 +79,7 @@ export default function Hero1() {
         </div>
       </Gradient>
       <Section className="relative py-30 overflow-hidden">
-        <div className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-top-left bg-size-[700px] bg-[url('/images/geometric-1400x809.jpg')]"></div>
+        <div className="absolute inset-0 opacity-30 sm:opacity-50 bg-repeat bg-top-left bg-size-[700px] bg-[url('https://speedwell-cdn.gallop.software/images/geometric-lg.jpg')]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%),linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%),linear-gradient(to_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_70%)]"></div>
         <Accent
           className="absolute left-[130%] sm:left-[120%] md:left-[110%] xl:left-full top-30 transform rotate-90 origin-top-left z-0 whitespace-nowrap opacity-5 sm:opacity-10"

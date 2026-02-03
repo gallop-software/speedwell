@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
         size="large"
         wrap={true}
         alt="Historic brownstone interior with restored architectural details"
@@ -91,7 +91,7 @@ export const metadata = {
     'Meticulous restoration of a 19th-century brownstone blending original architectural details with modern amenities and contemporary design sensibilities.',
   date: '2024-11-05',
   slug: 'historic-brownstone-revival',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
   categories: ['Residential', 'Historic Restoration', 'Victorian'],
   alternates: {
     canonical:
@@ -103,7 +103,7 @@ export const metadata = {
     description:
       '19th-century brownstone restoration honoring original details while incorporating modern comfort',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Restored historic brownstone interior with Victorian details',
     },
   },

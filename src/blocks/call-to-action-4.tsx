@@ -9,7 +9,7 @@ export default function CallToAction4() {
   return (
     <Cover
       className="py-30 lg:py-50"
-      imageSrc="/images/portfolio/pexels-clickerhappy-584399.jpg"
+      imageSrc="/portfolio/pexels-clickerhappy-584399.jpg"
       imageAlt="Culpa nulla minim"
       overlayColor="bg-accent5/90"
       height="h-auto"

@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+          src="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           size="large"
         />
       </Gallery>
@@ -99,7 +99,7 @@ export const metadata = {
   date: '2024-12-05',
   slug: 'urban-penthouse-makeover',
   featuredImage:
-    '/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
+    '/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
   categories: ['Residential', 'Luxury', 'Contemporary'],
   alternates: {
     canonical:
@@ -111,7 +111,7 @@ export const metadata = {
     description:
       'Sophisticated downtown penthouse with panoramic city views and contemporary design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Urban penthouse with city views and contemporary design',
     },
   },

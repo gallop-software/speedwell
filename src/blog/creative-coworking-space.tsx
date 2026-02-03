@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-mareklevak-2265482.jpg"
+        src="/layout-1/pexels-mareklevak-2265482.jpg"
         alt="Modern coworking space brand identity with creative design"
         size="large"
         wrap={true}
@@ -84,7 +84,7 @@ export const metadata = {
     'Dynamic brand identity for coworking space featuring bold design that fosters creative community and inspires collaboration among professionals.',
   date: '2024-12-03',
   slug: 'creative-coworking-space',
-  featuredImage: '/images/layout-1/pexels-mareklevak-2265482.jpg',
+  featuredImage: '/layout-1/pexels-mareklevak-2265482.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Workspace'],
   alternates: {
     canonical:
@@ -96,7 +96,7 @@ export const metadata = {
     description:
       'Vibrant brand connecting creative professionals through inspired design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Coworking space brand materials',
     },
   },

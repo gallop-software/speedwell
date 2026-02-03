@@ -12,13 +12,13 @@ export default function Content29() {
       <Columns reverseColumns={false}>
         <Column className="aspect-8/9 relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
             alt="Beautiful residential interior design transformation"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
+            src="/portfolio/jvdm/pexels-jvdm-1457844.jpg"
             alt="Modern commercial office space design"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"

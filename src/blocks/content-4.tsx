@@ -13,13 +13,13 @@ export default function Content4() {
       <Columns reverseColumns>
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
             alt="Quis aliquip magna proident incididunt"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+            src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
             alt="Culpa in adipiscing culpa"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
@@ -42,7 +42,7 @@ export default function Content4() {
           <Buttons>
             <Button
               variant="primary"
-              href="/eiusmod-tempor"
+              href="/contact"
               icon={arrowRightIcon}
               iconPlacement="after"
             >

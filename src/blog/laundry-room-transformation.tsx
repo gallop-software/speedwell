@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-pixabay-279719.jpg"
+          src="/portfolio/pexels-pixabay-279719.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/pexels-clickerhappy-584399.jpg"
+          src="/portfolio/pexels-clickerhappy-584399.jpg"
           size="large"
         />
       </Gallery>
@@ -88,7 +88,7 @@ export const metadata = {
     'Efficient laundry room featuring smart storage, folding counter, and charming farmhouse design that makes chores more pleasant.',
   date: '2024-02-14',
   slug: 'laundry-room-transformation',
-  featuredImage: '/images/portfolio/pexels-pixabay-279719.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-279719.jpg',
   categories: ['Laundry Room', 'Organization', 'Farmhouse'],
   alternates: {
     canonical:
@@ -100,7 +100,7 @@ export const metadata = {
     description:
       'Bright laundry room with efficient storage and farmhouse charm',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Laundry room with custom cabinets and folding counter',
     },
   },

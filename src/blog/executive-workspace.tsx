@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-mikhail-nilov-6707628.jpg"
+          src="/portfolio/pexels-mikhail-nilov-6707628.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
           size="large"
         />
       </Gallery>
@@ -104,7 +104,7 @@ export const metadata = {
     'Sophisticated home office featuring custom millwork, ergonomic furnishings, and professional design for executive productivity and virtual meetings.',
   date: '2025-02-14',
   slug: 'executive-workspace',
-  featuredImage: '/images/portfolio/pexels-mikhail-nilov-6707628.jpg',
+  featuredImage: '/portfolio/pexels-mikhail-nilov-6707628.jpg',
   categories: ['Home Office', 'Contemporary', 'Professional'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/executive-workspace',
@@ -115,7 +115,7 @@ export const metadata = {
     description:
       'Professional home office with custom millwork and executive furnishings',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Executive home office with built-in shelving',
     },
   },

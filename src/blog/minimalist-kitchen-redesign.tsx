@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+        src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
         alt="Minimalist kitchen with sleek cabinets and clean design"
         size="large"
         wrap={true}
@@ -92,7 +92,7 @@ export const metadata = {
   date: '2024-09-18',
   slug: 'minimalist-kitchen-redesign',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
   categories: ['Kitchen Design', 'Minimalist', 'Contemporary'],
   alternates: {
     canonical:
@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Clean minimalist kitchen with integrated appliances and seamless design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Minimalist kitchen with white cabinetry and waterfall countertops',
     },
   },

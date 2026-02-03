@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
+          src="/portfolio/jvdm/pexels-jvdm-1457844.jpg"
           size="large"
         />
       </Gallery>
@@ -98,7 +98,7 @@ export const metadata = {
     'Tranquil home yoga studio with bamboo floors, soft lighting, and minimalist design for meditation and daily practice.',
   date: '2024-11-05',
   slug: 'private-yoga-studio',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
   categories: ['Wellness', 'Home Gym', 'Minimalist'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/private-yoga-studio',
@@ -109,7 +109,7 @@ export const metadata = {
     description:
       'Serene home yoga studio with natural materials and calming design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Private yoga studio with bamboo floors and peaceful ambiance',
     },
   },

@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/layout-1/pexels-diva-plavalaguna-6937932.jpg"
+        src="/layout-1/pexels-diva-plavalaguna-6937932.jpg"
         alt="Modern wellness studio brand identity with calming design elements"
         size="large"
         wrap={true}
@@ -87,7 +87,7 @@ export const metadata = {
     'Serene brand identity for wellness studio featuring soft palettes, organic shapes, and mindful design that creates calm, welcoming experiences.',
   date: '2024-10-22',
   slug: 'wellness-brand-identity',
-  featuredImage: '/images/layout-1/pexels-diva-plavalaguna-6937932.jpg',
+  featuredImage: '/layout-1/pexels-diva-plavalaguna-6937932.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Wellness'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/wellness-brand-identity',
@@ -98,7 +98,7 @@ export const metadata = {
     description:
       'Mindful brand identity creating serene experiences for wellness seekers',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Wellness studio brand materials',
     },
   },

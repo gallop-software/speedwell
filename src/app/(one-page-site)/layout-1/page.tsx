@@ -54,7 +54,7 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
   alternates: {
     canonical: 'https://speedwell.gallop.software/layout-1',
   },
@@ -68,7 +68,7 @@ const metadata: PageMetadata = {
     description:
       'Award-winning interior design studio specializing in residential and commercial projects. We create beautiful, functional spaces that reflect your unique style and enhance your daily living experience.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Beautifully designed modern interior living space',
     },
   },
@@ -79,7 +79,7 @@ const metadata: PageMetadata = {
     title: 'Transform Your Space | Professional Interior Design Services',
     description:
       'Creating stunning interiors for homes and businesses. Expert design, custom furnishings, and complete project management from concept to completion.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

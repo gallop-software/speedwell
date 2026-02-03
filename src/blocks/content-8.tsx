@@ -16,7 +16,7 @@ export default function Content8() {
       >
         <Column>
           <Image
-            src="/images/portfolio/pexels-jworks1124-342800.jpg"
+            src="/portfolio/pexels-jworks1124-342800.jpg"
             alt="Contemporary residential space with thoughtful design details"
             className="object-cover"
             rounded="rounded-t-full"

@@ -18,7 +18,7 @@ const metadata: PageMetadata = {
   description:
     'Get in touch with our interior design team for a complimentary consultation. Located in the Design District, we specialize in residential and commercial design projects.',
   slug: 'contact',
-  featuredImage: '/images/portfolio/pexels-pixabay-161758.jpg',
+  featuredImage: '/portfolio/pexels-pixabay-161758.jpg',
   focusKeyword: 'contact interior design',
   readingTimeMinutes: 2,
   publishDate: '2025-09-18T00:00:00Z',
@@ -31,7 +31,7 @@ const metadata: PageMetadata = {
     description:
       'Schedule your complimentary design consultation today. Our award-winning team is ready to transform your space.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Modern interior design studio',
     },
   },

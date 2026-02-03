@@ -39,7 +39,7 @@ const metadata: PageMetadata = {
     'space utilization',
   ],
   slug: 'space-planning',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
   focusKeyword: 'space planning services',
   readingTimeMinutes: 4,
   publishDate: '2024-06-15T10:00:00Z',
@@ -57,7 +57,7 @@ const metadata: PageMetadata = {
     description:
       'Expert space planning that maximizes functionality and flow. Strategic layouts that optimize every square foot for beautiful, efficient living and working spaces.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Professional space planning and interior layout design',
     },
   },
@@ -66,7 +66,7 @@ const metadata: PageMetadata = {
     title: 'Space Planning Services | Optimize Your Interior Layout',
     description:
       'Expert space planning services that maximize functionality and flow. Create efficient, beautiful layouts that enhance how you live and work.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
 }
 

@@ -12,11 +12,11 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/pexels-dropshado-2251247.jpg"
+          src="/portfolio/pexels-dropshado-2251247.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
           size="large"
         />
       </Gallery>
@@ -97,7 +97,7 @@ export const metadata = {
     'Urban rooftop terrace featuring multiple zones, container gardens, and weather-resistant design for year-round outdoor entertaining.',
   date: '2024-06-25',
   slug: 'rooftop-terrace-design',
-  featuredImage: '/images/portfolio/pexels-dropshado-2251247.jpg',
+  featuredImage: '/portfolio/pexels-dropshado-2251247.jpg',
   categories: ['Outdoor Living', 'Urban Design', 'Terrace'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/rooftop-terrace-design',
@@ -108,7 +108,7 @@ export const metadata = {
     description:
       'Urban rooftop oasis with dining, lounge areas, and city views',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Rooftop terrace with outdoor furniture and city views',
     },
   },

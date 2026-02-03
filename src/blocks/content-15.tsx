@@ -10,13 +10,13 @@ export default function Content15() {
       <Columns>
         <Column className="aspect-4/5 relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269218.jpg"
+            src="/portfolio/pexels-pixabay-269218.jpg"
             alt="Quality craftsmanship and attention to detail"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+            src="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
             alt="Professional contractor coordination"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-t-full"

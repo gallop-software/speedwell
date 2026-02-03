@@ -12,19 +12,19 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
           size="large"
         />
       </Gallery>
@@ -106,7 +106,7 @@ export const metadata = {
   date: '2024-05-10',
   slug: 'gallery-wall-curation',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg',
   categories: ['Art Display', 'Residential', 'Styling'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/gallery-wall-curation',
@@ -117,7 +117,7 @@ export const metadata = {
     description:
       'Curated gallery wall with personal art collection and professional arrangement',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Gallery wall with curated art and family photographs',
     },
   },

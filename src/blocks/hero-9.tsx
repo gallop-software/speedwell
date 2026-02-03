@@ -17,7 +17,7 @@ export default function Hero9() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+                src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
                 alt="Stunning modern kitchen with custom cabinetry and contemporary design"
                 size="large"
                 rounded="rounded-none"

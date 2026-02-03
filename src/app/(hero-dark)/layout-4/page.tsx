@@ -38,7 +38,7 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
   alternates: {
     canonical: 'https://speedwell.gallop.software/layout-4',
   },
@@ -52,7 +52,7 @@ const metadata: PageMetadata = {
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Full-width carousel layout design',
     },
   },
@@ -63,7 +63,7 @@ const metadata: PageMetadata = {
     title: 'Layout 4 | Full-Width Carousel Presentation Style',
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

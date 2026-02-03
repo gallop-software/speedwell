@@ -20,7 +20,7 @@ const metadata: PageMetadata = {
   description:
     'Explore career opportunities at Timmerman. We are looking for talented interior designers, project managers, and design professionals passionate about creating exceptional spaces. Join our award-winning team.',
   slug: 'join-our-team',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
   focusKeyword: 'interior design careers',
   readingTimeMinutes: 5,
   publishDate: '2024-06-01T10:00:00Z',
@@ -33,7 +33,7 @@ const metadata: PageMetadata = {
     description:
       'Join our talented team of interior designers and specialists. Explore career opportunities at Timmerman where creativity meets expertise in residential and commercial design.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Timmerman design team collaboration',
     },
   },

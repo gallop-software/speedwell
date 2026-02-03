@@ -14,13 +14,13 @@ export default function Content6() {
       >
         <Column className="aspect-[8/7] relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
             alt="Luxurious bedroom design with sophisticated styling"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+            src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
             alt="Beautiful kitchen with modern amenities and design"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"

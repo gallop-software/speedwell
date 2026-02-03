@@ -12,11 +12,11 @@ export default function Hero13() {
     <div className="bg-accent3 pt-navbar overflow-hidden">
       <div className="mx-auto max-w-[1600px] relative">
         <div
-          className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-full z-0 opacity-30 bg-cover bg-no-repeat bg-top-left bg-[url('/images/leaf1.jpg')]"
+          className="absolute top-0 left-0 w-[70%] lg:w-[40%] h-[524px] lg:h-full z-0 opacity-30 bg-cover bg-no-repeat bg-top-left bg-[url('https://speedwell-cdn.gallop.software/images/leaf1.jpg')]"
           aria-hidden="true"
         />
         <div
-          className="absolute -bottom-10 -right-10 w-[500px] h-[500px] pointer-events-none select-none bg-contain bg-no-repeat bg-bottom-right rotate-10 opacity-40 bg-[url('/images/flowers.png')]"
+          className="absolute -bottom-10 -right-10 w-[500px] h-[500px] pointer-events-none select-none bg-contain bg-no-repeat bg-bottom-right rotate-10 opacity-40 bg-[url('https://speedwell-cdn.gallop.software/images/flowers.png')]"
           aria-hidden="true"
         />
         <Columns
@@ -28,7 +28,7 @@ export default function Hero13() {
             <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
               <Image
                 rounded="rounded-none"
-                src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+                src="/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
                 alt="Fugiat cillum sit in adipiscing eiusmod"
                 className="w-full h-full object-cover"
                 size="large"

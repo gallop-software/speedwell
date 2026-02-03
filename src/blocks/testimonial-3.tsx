@@ -7,7 +7,7 @@ import { Quote } from '@/components/quote'
 export default function Testimonial3() {
   return (
     <Section
-      imageSrc="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+      imageSrc="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
       imageAlt="Clients sharing their design experience testimonials"
       overlayColor="bg-body/90"
       className="py-30"

@@ -34,7 +34,7 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
   alternates: {
     canonical: 'https://speedwell.gallop.software/layout-5',
   },
@@ -48,7 +48,7 @@ const metadata: PageMetadata = {
     description:
       'Check out our split-screen layout with fixed left panel. Great for highlighting key information while providing detailed content.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Split-screen layout design',
     },
   },
@@ -59,7 +59,7 @@ const metadata: PageMetadata = {
     title: 'Layout 5 | Split-Screen with Fixed Left Panel',
     description:
       'Check out our split-screen layout with fixed left panel. Great for highlighting key information while providing detailed content.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
   structuredData: [
     {

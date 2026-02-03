@@ -17,13 +17,13 @@ export default function Content7() {
       >
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-161758.jpg"
+            src="/portfolio/pexels-pixabay-161758.jpg"
             alt="Elegant dining room with sophisticated decor"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+            src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
             alt="Stylish home office with functional design"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"

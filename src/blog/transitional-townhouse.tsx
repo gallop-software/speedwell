@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+        src="/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
         alt="Transitional townhouse blending traditional and contemporary design"
         size="large"
         wrap={true}
@@ -93,7 +93,7 @@ export const metadata = {
   date: '2024-08-02',
   slug: 'transitional-townhouse',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
   categories: ['Residential', 'Transitional', 'Townhouse'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/transitional-townhouse',
@@ -104,7 +104,7 @@ export const metadata = {
     description:
       'Historic townhouse with transitional design blending old and new',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Transitional townhouse with classic and contemporary elements',
     },
   },

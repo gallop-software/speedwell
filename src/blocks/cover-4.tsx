@@ -5,7 +5,7 @@ import { Accent } from '@/components/accent'
 export default function Cover4() {
   return (
     <Cover
-      imageSrc="/images/portfolio/pexels-pixabay-269218.jpg"
+      imageSrc="/portfolio/pexels-pixabay-269218.jpg"
       imageAlt="Timmerman interior design team workspace"
       overlayColor="bg-accent4/90"
       height="h-[400px] md:h-[500px] lg:h-[600px]"

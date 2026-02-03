@@ -12,7 +12,7 @@ export default function Content36() {
       <Columns reverseColumns={true}>
         <Column className="aspect-auto relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
             alt="Non reprehenderit laboris"
             className="object-cover"
             rounded="rounded-t-full"
@@ -49,35 +49,35 @@ export default function Content36() {
         className="mt-20"
       >
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/pexels-dropshado-2251247.jpg"
+          src="/portfolio/pexels-dropshado-2251247.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+          src="/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+          src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
           size="large"
         />
       </Gallery>

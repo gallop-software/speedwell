@@ -12,19 +12,19 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
           size="large"
         />
       </Gallery>
@@ -105,7 +105,7 @@ export const metadata = {
   date: '2024-09-22',
   slug: 'guest-suite-makeover',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
   categories: ['Guest Room', 'Residential', 'Bedroom Design'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/guest-suite-makeover',
@@ -116,7 +116,7 @@ export const metadata = {
     description:
       'Hotel-style guest suite with thoughtful amenities and welcoming design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Guest suite with comfortable bed and hotel-quality amenities',
     },
   },

@@ -45,7 +45,7 @@ const metadata: PageMetadata = {
     'home makeover services',
   ],
   slug: 'residential',
-  featuredImage: '/images/portfolio/pexels-alex-qian-1180283-2343465.jpg',
+  featuredImage: '/portfolio/pexels-alex-qian-1180283-2343465.jpg',
   focusKeyword: 'residential interior design',
   readingTimeMinutes: 5,
   publishDate: '2024-01-15T10:00:00Z',
@@ -63,7 +63,7 @@ const metadata: PageMetadata = {
     description:
       'Create the home of your dreams with our expert residential interior design services. We specialize in personalized designs that blend style, functionality, and comfort for modern living.',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Beautiful modern residential interior design with elegant furniture and natural lighting',
     },
   },
@@ -72,7 +72,7 @@ const metadata: PageMetadata = {
     title: 'Residential Interior Design Services | Transform Your Home',
     description:
       'Expert residential interior design services that transform houses into dream homes. Personalized designs that reflect your unique style and enhance your daily life.',
-    image: '/images/banner.jpg',
+    image: '/banner.jpg',
   },
 }
 

@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+        src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
         alt="Modern nursery with soft colors and thoughtful design"
         size="large"
         wrap={true}
@@ -92,7 +92,7 @@ export const metadata = {
   date: '2024-12-20',
   slug: 'modern-nursery-design',
   featuredImage:
-    '/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg',
+    '/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg',
   categories: ['Nursery Design', 'Contemporary', 'Family Home'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/modern-nursery-design',
@@ -103,7 +103,7 @@ export const metadata = {
     description:
       'Modern nursery with sustainable materials and convertible furniture',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Modern nursery with soft colors and natural materials',
     },
   },

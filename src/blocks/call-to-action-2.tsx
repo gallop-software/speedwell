@@ -9,7 +9,7 @@ export default function CallToAction2() {
   return (
     <Cover
       className="py-30 lg:py-50"
-      imageSrc="/images/portfolio/pexels-pixabay-276724.jpg"
+      imageSrc="/portfolio/pexels-pixabay-276724.jpg"
       imageAlt="Proident non esse"
       overlayColor="bg-accent5/90"
       height="h-auto"

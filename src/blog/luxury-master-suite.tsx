@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
         alt="Luxury master suite with elegant furnishings and spa-like atmosphere"
         size="large"
         wrap={true}
@@ -90,7 +90,7 @@ export const metadata = {
     'Opulent master suite with spa-inspired ensuite bathroom, custom closet, and five-star hotel-quality finishes and amenities.',
   date: '2025-03-22',
   slug: 'luxury-master-suite',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
   categories: ['Residential', 'Luxury', 'Bedroom Design'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/luxury-master-suite',
@@ -101,7 +101,7 @@ export const metadata = {
     description:
       'Five-star master suite with spa bathroom and custom walk-in closet',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Luxury master bedroom with sophisticated furnishings',
     },
   },

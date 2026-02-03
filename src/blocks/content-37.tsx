@@ -15,13 +15,13 @@ export default function Content37() {
       <Columns reverseColumns={true}>
         <Column className="aspect-[6/8] relative">
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
             alt="Occaecat duis consequat aute minim"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/jvdm/pexels-jvdm-1457844.jpg"
+            src="/portfolio/jvdm/pexels-jvdm-1457844.jpg"
             alt="Consectetur nulla ullamco"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
@@ -55,7 +55,7 @@ export default function Content37() {
           <Buttons>
             <Button
               variant="primary"
-              href="/enim-ad"
+              href="/contact"
               icon={arrowRightIcon}
               iconPlacement="after"
             >
@@ -70,39 +70,39 @@ export default function Content37() {
         className="mt-20"
       >
         <GalleryItem
-          src="/images/portfolio/pexels-burst-545012.jpg"
+          src="/portfolio/pexels-burst-545012.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/pexels-clickerhappy-584399.jpg"
+          src="/portfolio/pexels-clickerhappy-584399.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+          src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/pexels-pixabay-269252.jpg"
+          src="/portfolio/pexels-pixabay-269252.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/pexels-pixabay-259962.jpg"
+          src="/portfolio/pexels-pixabay-259962.jpg"
           size="large"
         />
       </Gallery>

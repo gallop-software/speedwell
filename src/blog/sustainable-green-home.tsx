@@ -12,19 +12,19 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+          src="/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+          src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          src="/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
           size="large"
         />
         <GalleryItem
-          src="/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+          src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
           size="large"
         />
       </Gallery>
@@ -106,7 +106,7 @@ export const metadata = {
     'Environmentally conscious home featuring sustainable materials, energy-efficient systems, and healthy living spaces with minimal carbon footprint.',
   date: '2024-08-30',
   slug: 'sustainable-green-home',
-  featuredImage: '/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
+  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
   categories: ['Residential', 'Sustainable', 'Contemporary'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/sustainable-green-home',
@@ -117,7 +117,7 @@ export const metadata = {
     description:
       'Eco-friendly home with sustainable materials and energy-efficient design',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Sustainable home interior with natural materials',
     },
   },

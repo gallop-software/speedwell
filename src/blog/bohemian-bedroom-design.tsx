@@ -10,7 +10,7 @@ function Details() {
   return (
     <>
       <Image
-        src="/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+        src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
         alt="Bohemian bedroom with layered textiles and eclectic decor"
         size="large"
         wrap={true}
@@ -94,7 +94,7 @@ export const metadata = {
   date: '2024-09-07',
   slug: 'bohemian-bedroom-design',
   featuredImage:
-    '/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
+    '/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
   categories: ['Bedroom Design', 'Bohemian', 'Eclectic'],
   alternates: {
     canonical: 'https://speedwell.gallop.software/post/bohemian-bedroom-design',
@@ -105,7 +105,7 @@ export const metadata = {
     description:
       'Bohemian bedroom with global textiles and eclectic vintage finds',
     image: {
-      url: '/images/banner.jpg',
+      url: '/banner.jpg',
       alt: 'Bohemian bedroom with layered textiles and plants',
     },
   },

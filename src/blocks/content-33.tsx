@@ -14,7 +14,7 @@ export default function Content33() {
       <Columns>
         <Column>
           <Image
-            src="/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+            src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
             alt="Quis consequat cillum"
             className="object-cover"
             size="large"
@@ -40,13 +40,13 @@ export default function Content33() {
       >
         <Column className="aspect-[29/28] relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-269252.jpg"
+            src="/portfolio/pexels-pixabay-269252.jpg"
             alt="Nostrud ipsum magna"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
             size="large"
           />
           <Image
-            src="/images/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+            src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
             alt="Eiusmod enim sint"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
@@ -76,7 +76,7 @@ export default function Content33() {
       <Columns className="mt-20">
         <Column className="relative">
           <Image
-            src="/images/portfolio/pexels-pixabay-259962.jpg"
+            src="/portfolio/pexels-pixabay-259962.jpg"
             alt="Id ullamco ex"
             className="object-cover"
             rounded="rounded-r-full"
