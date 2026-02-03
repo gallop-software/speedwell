@@ -46,7 +46,7 @@
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
     "blocks:screenshots": "node _scripts/generate-blocks-catalog.mjs --screenshots",
     "blocks:sort": "node _scripts/generate-blocks-catalog.mjs --sort",
-    "speedwell": "node _scripts/prepare-speedwell-lite.mjs",
+    "speedwell-lite": "node _scripts/prepare-speedwell-lite.mjs",
     "speedwell-pro": "node _scripts/prepare-speedwell-pro.mjs",
     "layouts": "node _scripts/generate-layouts-catalog.mjs",
     "layouts:screenshots": "node _scripts/generate-layouts-catalog.mjs --screenshots",

@@ -110,10 +110,10 @@ jobs:
             --exclude='.github/workflows/' \
             dev/ lite/
           
-          # Run speedwell (lite conversion) and speedwell-pro (cleanup) scripts
+          # Run speedwell-lite (lite conversion) and speedwell-pro (cleanup) scripts
           cd lite
           npm ci
-          npm run speedwell
+          npm run speedwell-lite
           npm run speedwell-pro
 
       - name: Commit and push to speedwell-pro

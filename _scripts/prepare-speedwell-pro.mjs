@@ -22,7 +22,7 @@ const SCRIPTS_TO_REMOVE = [
   'blocks:screenshots',
   'blocks:sort',
   'blocks:lite',
-  'speedwell',
+  'speedwell-lite',
   'speedwell-pro',
   'layouts',
   'layouts:screenshots',
