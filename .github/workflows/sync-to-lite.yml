@@ -8,6 +8,7 @@ on:
 
 jobs:
   sync:
+    if: secrets.GALLOP_APP_ID != '' && secrets.GALLOP_APP_PRIVATE_KEY != ''
     runs-on: ubuntu-latest
     steps:
       - name: Generate GitHub App token
