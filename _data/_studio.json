@@ -1,5 +1,7 @@
 {
-  "_cdns": ["https://speedwell-cdn.gallop.software"],
+  "_cdns": [
+    "https://speedwell-cdn.gallop.software"
+  ],
   "/blocks/about-1.jpg": {
     "o": {
       "w": 770,
@@ -6729,7 +6731,7 @@
   "/videos/hero-op.mp4": {
     "c": 0
   },
-  "/speedwell.jpg": {
+  "/screenshot.jpg": {
     "o": {
       "w": 4000,
       "h": 2000
