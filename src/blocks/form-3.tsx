@@ -186,6 +186,7 @@ export default function Form3() {
           label="Reference 2 Relationship"
         />
         <FormButton
+          name="submit"
           label="Submit Application"
           submitMessage="Thank you! Your application has been submitted successfully. We will review it and contact you soon."
         />

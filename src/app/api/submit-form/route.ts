@@ -1,3 +1,4 @@
+import { studioUrl } from '@/utils/studio-helpers'
 import { NextResponse } from 'next/server'
 
 export const runtime = 'nodejs'
@@ -38,7 +39,6 @@ function renderValueCell(v: unknown): string {
 }
 
 function renderEmailHtml(payload: Record<string, any>) {
-  const baseUrl = process.env.NEXT_PUBLIC_PRODUCTION_URL || ''
   const rows: string[] = []
 
   for (const [key, val] of Object.entries(payload)) {
@@ -95,7 +95,7 @@ function renderEmailHtml(payload: Record<string, any>) {
     <body>
       <div class="container">
         <div class="content">
-          <img class="logo" src="${baseUrl}/images/logo-700x73.png" alt="Logo" />
+          <img class="logo" src="${studioUrl('/images/logo.png')}" alt="Logo" />
           ${rows.join('')}
         </div>
       </div>
