@@ -30,6 +30,7 @@ Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using o
 - 🎭 **Framer Motion** animations
 - 🎯 **SEO and AI optimized** with structured data
 - 🤖 **AI-friendly** codebase structure
+- 🎬 **Gallop Studio** - Visual asset manager for images and media
 - 🛡️ **Gallop Canon** - AI guardrails for consistent, reliable code
 - 📊 **Vercel Analytics** integration
 
@@ -154,6 +155,21 @@ Want access to all 117 blocks including premium designs? [Purchase Speedwell Pro
 Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for [Cursor](https://cursor.com) and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. [VSCode](https://code.visualstudio.com) works too, but Cursor's native Claude integration makes development faster and more intuitive.
 
 **Why Claude?** Claude is the premier coding AI agent. It understands context better, writes cleaner code, and handles complex multi-file changes that other AI models struggle with. When you chat with Claude in Cursor, you're working with the best AI pair programmer available.
+
+### Gallop Studio: Visual Asset Manager
+
+Every Gallop template includes `@gallop.software/studio`, a powerful visual interface for managing your website's images and media. Studio provides:
+
+- **Visual file browser** - Browse, upload, and organize images with a beautiful grid/list view
+- **Image editing** - Crop, resize, rotate, and adjust quality directly in the browser
+- **Automatic thumbnails** - Generate optimized thumbnail sizes for responsive images
+- **CDN integration** - Push images to Cloudflare R2 for global edge delivery
+- **Batch operations** - Process multiple files at once with streaming progress
+
+**Studio Commands:**
+
+- `npm run studio` - Launch Studio at http://localhost:4444
+- `npm run studio:scan` - Scan and index all images in public folder
 
 ### Gallop Canon: AI Guardrails
 
@@ -288,18 +304,6 @@ speedwell/
 │   │   ├── _heading2.tsx
 │   │   └── _heading3.tsx
 │   └── _import/             # Import utilities
-├── _scripts/                 # Automation scripts
-│   ├── process-images.js    # Image optimization
-│   ├── generate-blog-metadata.mjs
-│   ├── generate-blocks-catalog.mjs
-│   ├── generate-favicon.js
-│   ├── generate-featured-image.js
-│   ├── push-env-to-vercel.sh # Push env vars to Vercel
-│   ├── generate-search.mjs
-│   ├── generate-search.sh
-│   ├── compress-fonts.js
-│   ├── convert-pro-blocks.mjs
-│   └── *.md                 # Script documentation
 ├── next.config.mjs          # Next.js configuration
 ├── tsconfig.json            # TypeScript config
 ├── postcss.config.js        # PostCSS config
