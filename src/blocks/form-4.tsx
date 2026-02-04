@@ -98,6 +98,7 @@ export default function Form4() {
           />
           <div className="flex justify-center mt-8">
             <FormButton
+              name="submit"
               className="w-full"
               label="Send message"
             />
