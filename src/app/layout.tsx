@@ -59,7 +59,7 @@ export default function RootLayout({
       suppressHydrationWarning
       style={rootStyle}
     >
-      <body className="font-body text-lg font-medium leading-normal text-contrast antialiased">
+      <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
         <div>{children}</div>
         <SmoothScroll />
         <IframeHeight />
