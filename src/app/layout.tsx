@@ -55,7 +55,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       style={rootStyle}
     >
       <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
