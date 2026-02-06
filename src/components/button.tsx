@@ -93,6 +93,7 @@ type ButtonProps = {
   wrap?: boolean
   dark?: boolean
   target?: '_self' | '_blank'
+  native?: boolean
 } & (
   | React.ComponentPropsWithoutRef<typeof Link>
   | (React.ComponentPropsWithoutRef<typeof HeadlessButton> & {
@@ -110,6 +111,7 @@ export function Button({
   wrap = false,
   dark = false,
   target = '_self',
+  native = false,
   children,
   ...props
 }: ButtonProps) {
@@ -145,6 +147,14 @@ export function Button({
       >
         {content}
       </HeadlessButton>
+    ) : native ? (
+      <a
+        href={props.href}
+        target={target}
+        className={clsx('cursor-pointer no-underline!', className)}
+      >
+        {content}
+      </a>
     ) : (
       <Link
         {...props}
