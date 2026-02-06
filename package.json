@@ -46,8 +46,6 @@
     "env": "./_scripts/push-env-to-vercel.sh",
     "env:prod": "./_scripts/push-env-to-vercel.sh production",
     "env:prev": "./_scripts/push-env-to-vercel.sh preview",
-    "fonts": "node _fonts/compress-fonts.js",
-    "fonts:use": "node _fonts/use-fonts.js",
     "refresh": "rm -rf node_modules .next && npm install",
     "clean": "rm -rf node_modules .next package-lock.json && npm install",
     "update:check": "npx npm-check-updates",
@@ -87,7 +85,7 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.26.0",
-    "@gallop.software/studio": "^2.3.138",
+    "@gallop.software/studio": "^2.3.153",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
@@ -105,7 +103,6 @@
     "puppeteer": "^24.36.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
-    "ttf2woff2": "^8.0.0",
     "typescript": "^5"
   }
 }
