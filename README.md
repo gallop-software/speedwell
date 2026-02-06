@@ -158,13 +158,14 @@ Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, b
 
 ### Gallop Studio: Visual Asset Manager
 
-Every Gallop template includes `@gallop.software/studio`, a powerful visual interface for managing your website's images and media. Studio provides:
+Every Gallop template includes `@gallop.software/studio`, a powerful visual interface for managing your website's images, media, and fonts. Studio provides:
 
 - **Visual file browser** - Browse, upload, and organize images with a beautiful grid/list view
 - **Image editing** - Crop, resize, rotate, and adjust quality directly in the browser
 - **Automatic thumbnails** - Generate optimized thumbnail sizes for responsive images
 - **CDN integration** - Push images to Cloudflare R2 for global edge delivery
 - **Batch operations** - Process multiple files at once with streaming progress
+- **Font management** - Upload TTF fonts, compress to WOFF2, and assign to font configuration files with a visual interface
 
 **Studio Commands:**
 
@@ -274,12 +275,16 @@ speedwell/
 │   │   ├── logo.tsx
 │   │   ├── section.tsx
 │   │   └── ...
+│   ├── fonts/                # Font configuration files
+│   │   ├── accent.ts        # Accent font config
+│   │   ├── body.ts          # Body font config
+│   │   ├── heading.ts       # Primary heading font
+│   │   ├── heading2.ts      # Secondary heading font
+│   │   └── heading3.ts      # Tertiary heading font
 │   ├── hooks/                # Custom React hooks
-│   ├── styles/               # Global styles & fonts
-│   │   ├── fonts/           # Font files & management
-│   │   └── globals.css
+│   ├── styles/               # Global styles
+│   │   └── tailwind.css     # Tailwind CSS entry
 │   ├── tools/                # Utility tools
-│   ├── types/                # TypeScript types
 │   ├── utils/                # Helper functions
 │   └── state.ts              # Global state management
 ├── public/
@@ -293,24 +298,29 @@ speedwell/
 │   ├── videos/               # Video assets
 │   ├── search-index.json     # FlexSearch index
 │   └── speedwell.jpg         # Featured image
+├── _fonts/                   # Font source files (managed by Studio)
+│   ├── barlow/              # Barlow font family
+│   │   ├── barlow-regular.ttf
+│   │   ├── barlow-regular.woff2
+│   │   └── ...
+│   ├── montserrat/          # Montserrat font family
+│   ├── opensans/            # Open Sans font family
+│   ├── poppins/             # Poppins font family
+│   └── .../                 # Other font families
 ├── _data/                    # Generated metadata
 │   ├── _blog.json           # Blog metadata
-│   ├── _meta.json           # Image metadata
-│   ├── _meta-old.json       # Backup metadata
-│   ├── _fonts/              # Font configurations
-│   │   ├── _accent.tsx
-│   │   ├── _body.tsx
-│   │   ├── _heading.tsx
-│   │   ├── _heading2.tsx
-│   │   └── _heading3.tsx
-│   └── _import/             # Import utilities
+│   └── _studio.json         # Studio/image metadata
+├── _scripts/                 # Build scripts
+│   ├── generate-blog-metadata.mjs
+│   ├── generate-search.mjs
+│   └── ...
 ├── next.config.mjs          # Next.js configuration
 ├── tsconfig.json            # TypeScript config
 ├── postcss.config.js        # PostCSS config
 ├── package.json             # Dependencies & scripts
 ├── knip.config.js           # Unused file detection config
-├── .prettierrc              # Prettier config
-└── .eslintrc.json           # ESLint config
+├── eslint.config.mjs        # ESLint config
+└── .prettierrc              # Prettier config
 ```
 
 ---
@@ -352,11 +362,6 @@ speedwell/
 - **`npm run layouts`** - Generate layouts catalog from app route groups
 - **`npm run layouts:screenshots`** - Force regenerate all layout screenshots
 - **`npm run layouts:sort`** - Sort layouts in catalog
-
-### Fonts
-
-- **`npm run fonts`** - Convert TTF fonts to WOFF2 → [docs](./_scripts/compress-fonts.md)
-- **`npm run fonts:use`** - Mark fonts as used in project
 
 ### Environment
 
@@ -426,7 +431,6 @@ Build-time tools for content and asset generation:
 
 - **Sharp** `0.34.5` - Image processing and optimization
 - **Puppeteer** `24.36.0` - Screenshot generation (featured images)
-- **ttf2woff2** `8.0.0` - Font compression
 - **jsdom** `27.4.0` - DOM parsing for search index generation
 - **@sindresorhus/slugify** `3.0.0` - URL-friendly slugs for search indexing
 - **xml2js** `0.6.2` - XML/RSS feed generation
