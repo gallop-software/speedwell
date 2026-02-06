@@ -39,13 +39,13 @@ export const metadata: Metadata = {
   },
 }
 
-const rootStyle = {
-  ['--font-body-family' as string]: bodyFont.style.fontFamily,
-  ['--font-heading-family' as string]: headingFont.style.fontFamily,
-  ['--font-heading2-family' as string]: heading2Font.style.fontFamily,
-  ['--font-heading3-family' as string]: heading3Font.style.fontFamily,
-  ['--font-accent-family' as string]: accentFont.style.fontFamily,
-}
+const fontVariables = [
+  bodyFont.variable,
+  headingFont.variable,
+  heading2Font.variable,
+  heading3Font.variable,
+  accentFont.variable,
+].join(' ')
 
 export default function RootLayout({
   children,
@@ -53,12 +53,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      style={rootStyle}
-      suppressHydrationWarning
-    >
-      <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
+    <html lang="en">
+      <body className={`${fontVariables} bg-white font-body text-lg font-medium leading-normal text-contrast antialiased`}>
         <div>{children}</div>
         <SmoothScroll />
         {process.env.VERCEL === '1' && <Analytics />}
