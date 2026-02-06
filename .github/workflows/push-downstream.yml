@@ -92,9 +92,9 @@ jobs:
           # Remove workflows from main branch (they only belong on dev)
           rm -rf pro/.github/workflows
 
-          # Run speedwell-pro preparation script (no npm needed - uses only built-in Node modules)
+          # Run prepare-pro script (no npm needed - uses only built-in Node modules)
           cd pro
-          node _scripts/prepare-speedwell-pro.mjs
+          node _scripts/prepare-pro.mjs
 
       - name: Sync to speedwell (lite blocks)
         if: steps.version-check.outputs.should_sync == 'true'
@@ -108,10 +108,10 @@ jobs:
           # Remove workflows from lite (they only belong on dev)
           rm -rf lite/.github/workflows
 
-          # Run speedwell-lite and speedwell-pro scripts (no npm needed - uses only built-in Node modules)
+          # Run prepare-lite and prepare-pro scripts (no npm needed - uses only built-in Node modules)
           cd lite
-          node _scripts/prepare-speedwell-lite.mjs
-          node _scripts/prepare-speedwell-pro.mjs
+          node _scripts/prepare-lite.mjs
+          node _scripts/prepare-pro.mjs
 
       - name: Commit and push to main branch
         if: steps.version-check.outputs.should_sync == 'true'

@@ -1,11 +1,11 @@
-# Convert Pro Blocks Script
+# Prepare Lite Script
 
 **Tier:** Internal  
-**File:** `_scripts/convert-pro-blocks.mjs`
+**File:** `_scripts/prepare-lite.mjs`
 
 ## Overview
 
-The `convert-pro-blocks.mjs` script automatically converts Pro tier blocks to use the `ProBlock` component, removes pro-only hooks and API routes, and cleans up references to them in the layout file.
+The `prepare-lite.mjs` script automatically converts Pro tier blocks to use the `ProBlock` component, removes pro-only hooks and API routes, and cleans up references to them in the layout file.
 
 ## What It Does
 
@@ -20,7 +20,9 @@ The `convert-pro-blocks.mjs` script automatically converts Pro tier blocks to us
 ## Usage
 
 ```bash
-node _scripts/convert-pro-blocks.mjs
+npm run prepare-lite
+# or
+node _scripts/prepare-lite.mjs
 ```
 
 ## Output Format
