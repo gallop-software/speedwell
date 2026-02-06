@@ -6,7 +6,7 @@ import { Accent } from '@/components/accent'
 import { VideoPopup } from '@/components/video-popup'
 import { Icon } from '@/components/icon'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
-import CircleAnimationInit from '@/hooks/use-circle-animation'
+import CircleAnimation from '@/components/circle-animation'
 import playIcon from '@iconify/icons-heroicons/play-solid'
 
 const slides = [
@@ -33,7 +33,6 @@ const slides = [
 const circleText = 'Watch Video - Watch Video - '
 
 const swiperId = 'hero-16-swiper'
-const circleTextId = 'hero-16-circle-text'
 
 export default function Hero16() {
   return (
@@ -117,11 +116,7 @@ export default function Hero16() {
           >
             <div className="relative w-36 h-36 flex items-center justify-center">
               {/* Circle text animation */}
-              <CircleAnimationInit targetId={circleTextId} />
-              <div
-                id={circleTextId}
-                className="absolute w-full h-full"
-              >
+              <CircleAnimation className="absolute w-full h-full">
                 {circleText.split('').map((letter, index) => {
                   const length = circleText.length
                   const spacing = Math.round(360 / length)
@@ -137,7 +132,7 @@ export default function Hero16() {
                     </span>
                   )
                 })}
-              </div>
+              </CircleAnimation>
 
               {/* Play button */}
               <div className="absolute w-20 h-20 rounded-full bg-body flex items-center justify-center">
