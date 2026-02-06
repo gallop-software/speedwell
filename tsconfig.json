@@ -30,8 +30,7 @@
       "@/template/*": ["./src/template/*"],
       "@/data/*": ["./_data/*"],
       "@/state": ["./src/state.ts"],
-      "@/hooks": ["./src/hooks/*"],
-      "@fonts/*": ["./_fonts/*"]
+      "@/hooks": ["./src/hooks/*"]
     },
     "target": "ES2017"
   },

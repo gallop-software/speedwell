@@ -120,19 +120,23 @@ function displaySummary() {
 }
 
 function updateFontFiles() {
-  // Output directly to _fonts/ directory
-  const fontsPath = __dirname
+  const srcFontsPath = path.join(__dirname, '../src/fonts')
+
+  // Ensure src/fonts directory exists
+  if (!fs.existsSync(srcFontsPath)) {
+    fs.mkdirSync(srcFontsPath, { recursive: true })
+  }
 
   fontTypes.forEach((fontType) => {
     const fileName = `${fontType}.ts`
-    const filePath = path.join(fontsPath, fileName)
+    const filePath = path.join(srcFontsPath, fileName)
     const variableName = `${fontType}Font`
 
-    // Generate the font src array with paths relative to _fonts/
+    // Generate the font src array with paths relative to src/fonts/
     const srcArray = fontMap
       .map(
         (font) =>
-          `    { path: './${font.path}', weight: '${font.weight}', style: '${font.style}' },`
+          `    { path: '../../_fonts/${font.path}', weight: '${font.weight}', style: '${font.style}' },`
       )
       .join('\n')
 
@@ -147,7 +151,7 @@ ${srcArray}
 
     try {
       fs.writeFileSync(filePath, template, 'utf8')
-      console.log(`\n✅ Updated: _fonts/${fileName}`)
+      console.log(`\n✅ Updated: src/fonts/${fileName}`)
     } catch (error) {
       console.error(`❌ Error writing ${fileName}: ${error.message}`)
     }
