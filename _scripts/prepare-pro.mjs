@@ -22,8 +22,8 @@ const SCRIPTS_TO_REMOVE = [
   'blocks:screenshots',
   'blocks:sort',
   'blocks:lite',
-  'speedwell-lite',
-  'speedwell-pro',
+  'prepare-lite',
+  'prepare-pro',
   'layouts',
   'layouts:screenshots',
   'layouts:sort',
@@ -33,12 +33,12 @@ const SCRIPTS_TO_REMOVE = [
 const FILES_TO_DELETE = [
   path.join(__dirname, 'generate-blocks-catalog.mjs'),
   path.join(__dirname, 'generate-blocks-catalog.md'),
-  path.join(__dirname, 'prepare-speedwell-lite.mjs'),
-  path.join(__dirname, 'prepare-speedwell-lite.md'),
+  path.join(__dirname, 'prepare-lite.mjs'),
+  path.join(__dirname, 'prepare-lite.md'),
   path.join(__dirname, 'generate-layouts-catalog.mjs'),
   path.join(__dirname, 'generate-layouts-catalog.md'),
-  path.join(__dirname, 'prepare-speedwell-pro.mjs'),
-  path.join(__dirname, 'prepare-speedwell-pro.md'),
+  path.join(__dirname, 'prepare-pro.mjs'),
+  path.join(__dirname, 'prepare-pro.md'),
 ]
 
 async function removeScriptsFromPackageJson() {
