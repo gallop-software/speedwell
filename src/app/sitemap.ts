@@ -1,6 +1,6 @@
-import { getPageSlugs } from '@/tools/api/get-page-slugs'
-import { getPostSlugs } from '@/tools/api/get-post-slugs'
-import { getCategorySlugs } from '@/tools/api/get-category-slugs'
+import { getPageSlugs } from '@/tools/get-page-slugs'
+import { getPostSlugs } from '@/tools/get-post-slugs'
+import { getCategorySlugs } from '@/tools/get-category-slugs'
 import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'

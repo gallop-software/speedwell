@@ -6,14 +6,14 @@ export default {
     'src/app/**/layout.tsx',
     // 'src/components/index.ts', // Removed to detect unused component exports
     'src/blog/**/*.tsx', // Blog posts are dynamically loaded
+    '_scripts/**/*.{js,mjs}', // Build scripts run via npm commands
   ],
 
   // All project files to analyze
-  project: ['src/**/*.{ts,tsx}'],
+  project: ['src/**/*.{ts,tsx}', '_scripts/**/*.{js,mjs}'],
 
   // Ignore patterns - files that are intentionally standalone or dynamically used
   ignore: [
-    '_scripts/**',
     '_data/**',
     // Config files that are used by tools
     'src/components/**/config.ts',
