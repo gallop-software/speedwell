@@ -19,13 +19,15 @@ const processedFiles = []
 const fontMap = []
 
 const weightMap = {
-  extrabold: '900',
-  bold: '700',
-  semibold: '700',
-  medium: '500',
-  regular: '400',
-  italic: '400',
+  thin: '100',
+  extralight: '200',
   light: '300',
+  regular: '400',
+  medium: '500',
+  semibold: '600',
+  bold: '700',
+  extrabold: '800',
+  black: '900',
 }
 
 function parseFontMetadata(filename) {
@@ -39,12 +41,15 @@ function parseFontMetadata(filename) {
   if (isVariable) {
     weight = '100 900'
   } else {
-    // For static fonts, detect specific weight
-    if (name.includes('extrabold')) weight = weightMap.extrabold
+    // For static fonts, detect specific weight (order matters - check longer strings first)
+    if (name.includes('extralight')) weight = weightMap.extralight
+    else if (name.includes('extrabold')) weight = weightMap.extrabold
     else if (name.includes('semibold')) weight = weightMap.semibold
+    else if (name.includes('thin')) weight = weightMap.thin
+    else if (name.includes('light')) weight = weightMap.light
+    else if (name.includes('black')) weight = weightMap.black
     else if (name.includes('bold')) weight = weightMap.bold
     else if (name.includes('medium')) weight = weightMap.medium
-    else if (name.includes('light')) weight = weightMap.light
     else if (name.includes('regular')) weight = weightMap.regular
   }
 
