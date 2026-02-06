@@ -43,6 +43,8 @@
     "generate:ai-rules": "gallop generate .cursorrules && gallop generate .github/copilot-instructions.md",
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
+    "prepare-lite": "node _scripts/prepare-lite.mjs",
+    "prepare-pro": "node _scripts/prepare-pro.mjs",
     "env": "./_scripts/push-env-to-vercel.sh",
     "env:prod": "./_scripts/push-env-to-vercel.sh production",
     "env:prev": "./_scripts/push-env-to-vercel.sh preview",
