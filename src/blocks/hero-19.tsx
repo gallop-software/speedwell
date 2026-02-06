@@ -6,7 +6,7 @@ import { VideoPopup } from '@/components/video-popup'
 import { Icon } from '@/components/icon'
 import { CurrentDate } from '@/components/current-date'
 import { CurrentTime } from '@/components/current-time'
-import CircleAnimationInit from '@/hooks/use-circle-animation'
+import CircleAnimation from '@/components/circle-animation'
 import SwiperSliderInit from '@/hooks/swiper-slider-init'
 import playIcon from '@iconify/icons-heroicons/play-solid'
 import phoneIcon from '@iconify/icons-heroicons/phone-20-solid'
@@ -70,7 +70,6 @@ const contactItems = [
 
 export default function Hero19() {
   const swiperId = 'hero-19-swiper'
-  const circleTextId = 'hero-19-circle-text'
 
   return (
     <div className="lg:mb-20">
@@ -152,11 +151,7 @@ export default function Hero19() {
             >
               <div className="relative w-36 h-36 flex items-center justify-center">
                 {/* Circle text animation */}
-                <CircleAnimationInit targetId={circleTextId} />
-                <div
-                  id={circleTextId}
-                  className="absolute w-full h-full"
-                >
+                <CircleAnimation className="absolute w-full h-full">
                   {circleText.split('').map((letter, index) => {
                     const length = circleText.length
                     const spacing = Math.round(360 / length)
@@ -172,7 +167,7 @@ export default function Hero19() {
                       </span>
                     )
                   })}
-                </div>
+                </CircleAnimation>
 
                 {/* Play button */}
                 <div className="absolute w-20 h-20 rounded-full bg-body flex items-center justify-center">
