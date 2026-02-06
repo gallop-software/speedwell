@@ -175,8 +175,8 @@ jobs:
           cp -r pro $REPO_NAME-temp
           rm -rf $REPO_NAME-temp/.git
           mkdir -p $REPO_NAME-folder/$REPO_NAME
-          mv $REPO_NAME-temp/* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
-          mv $REPO_NAME-temp/.* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
+          # Use find to move all files (handles empty globs gracefully)
+          find $REPO_NAME-temp -mindepth 1 -maxdepth 1 -exec mv {} $REPO_NAME-folder/$REPO_NAME/ \;
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
@@ -205,8 +205,8 @@ jobs:
           cp -r lite $REPO_NAME-temp
           rm -rf $REPO_NAME-temp/.git
           mkdir -p $REPO_NAME-folder/$REPO_NAME
-          mv $REPO_NAME-temp/* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
-          mv $REPO_NAME-temp/.* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
+          # Use find to move all files (handles empty globs gracefully)
+          find $REPO_NAME-temp -mindepth 1 -maxdepth 1 -exec mv {} $REPO_NAME-folder/$REPO_NAME/ \;
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
