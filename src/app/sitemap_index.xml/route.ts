@@ -1,4 +1,4 @@
-import { getPostSlugs } from '@/tools/api/get-post-slugs'
+import { getPostSlugs } from '@/tools/get-post-slugs'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
