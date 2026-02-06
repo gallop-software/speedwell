@@ -165,6 +165,7 @@ jobs:
         if: steps.version-check.outputs.should_sync == 'true'
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          RELEASE_NOTES: ${{ steps.commits.outputs.commits }}
         run: |
           VERSION="v${{ steps.version-check.outputs.current_version }}"
 
@@ -175,8 +176,10 @@ jobs:
           cp -r pro $REPO_NAME-temp
           rm -rf $REPO_NAME-temp/.git
           mkdir -p $REPO_NAME-folder/$REPO_NAME
+          # Use shopt to handle empty globs gracefully
+          shopt -s dotglob nullglob
           mv $REPO_NAME-temp/* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
-          mv $REPO_NAME-temp/.* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
+          shopt -u dotglob nullglob
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
@@ -184,17 +187,21 @@ jobs:
           # Delete existing release if present (for retries)
           gh release delete "$VERSION" --repo gallop-software/speedwell-pro --yes 2>/dev/null || true
 
+          # Write release notes to file to avoid shell expansion issues
+          echo "$RELEASE_NOTES" > release-notes.txt
+
           # Create release
           gh release create "$VERSION" \
             --repo gallop-software/speedwell-pro \
             --title "Release $VERSION" \
-            --notes "${{ steps.commits.outputs.commits }}" \
+            --notes-file release-notes.txt \
             $REPO_NAME.zip
 
       - name: Create release on speedwell (lite)
         if: steps.version-check.outputs.should_sync == 'true'
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          RELEASE_NOTES: ${{ steps.commits.outputs.commits }}
         run: |
           VERSION="v${{ steps.version-check.outputs.current_version }}"
 
@@ -205,8 +212,10 @@ jobs:
           cp -r lite $REPO_NAME-temp
           rm -rf $REPO_NAME-temp/.git
           mkdir -p $REPO_NAME-folder/$REPO_NAME
+          # Use shopt to handle empty globs gracefully
+          shopt -s dotglob nullglob
           mv $REPO_NAME-temp/* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
-          mv $REPO_NAME-temp/.* $REPO_NAME-folder/$REPO_NAME/ 2>/dev/null || true
+          shopt -u dotglob nullglob
           cd $REPO_NAME-folder
           zip -r ../$REPO_NAME.zip $REPO_NAME
           cd ..
@@ -214,9 +223,12 @@ jobs:
           # Delete existing release if present (for retries)
           gh release delete "$VERSION" --repo gallop-software/speedwell --yes 2>/dev/null || true
 
+          # Write release notes to file to avoid shell expansion issues
+          echo "$RELEASE_NOTES" > release-notes.txt
+
           # Create release
           gh release create "$VERSION" \
             --repo gallop-software/speedwell \
             --title "Release $VERSION" \
-            --notes "${{ steps.commits.outputs.commits }}" \
+            --notes-file release-notes.txt \
             $REPO_NAME.zip
