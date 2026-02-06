@@ -51,9 +51,18 @@ function extractMetadata(filePath) {
 async function generateBlogMetadata() {
   console.log('🔍 Scanning posts directory...')
 
+  // Ensure _data directory exists
+  const dataDir = path.dirname(OUTPUT_FILE)
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true })
+  }
+
   if (!fs.existsSync(POSTS_DIR)) {
-    console.error(`❌ Posts directory not found: ${POSTS_DIR}`)
-    process.exit(1)
+    console.log(`📁 No blog directory found at ${POSTS_DIR}`)
+    console.log(`📝 Creating empty _blog.json`)
+    fs.writeFileSync(OUTPUT_FILE, '[]', 'utf8')
+    console.log(`✅ Generated empty blog metadata: ${OUTPUT_FILE}`)
+    return
   }
 
   const files = fs.readdirSync(POSTS_DIR)
@@ -89,12 +98,6 @@ async function generateBlogMetadata() {
     const dateB = new Date(b.metadata.date)
     return dateB.getTime() - dateA.getTime()
   })
-
-  // Ensure _data directory exists
-  const dataDir = path.dirname(OUTPUT_FILE)
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true })
-  }
 
   // Write to file
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(posts, null, 2), 'utf8')
