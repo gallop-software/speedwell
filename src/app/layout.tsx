@@ -1,9 +1,9 @@
 import '@/styles/tailwind.css'
-import { _bodyFont } from '@/data/_fonts/_body'
-import { _accentFont } from '@/data/_fonts/_accent'
-import { _headingFont } from '@/data/_fonts/_heading'
-import { _heading2Font } from '@/data/_fonts/_heading2'
-import { _heading3Font } from '@/data/_fonts/_heading3'
+import { bodyFont } from '@/fonts/body'
+import { headingFont } from '@/fonts/heading'
+import { heading2Font } from '@/fonts/heading2'
+import { heading3Font } from '@/fonts/heading3'
+import { accentFont } from '@/fonts/accent'
 import type { Metadata } from 'next'
 import SmoothScroll from '@/hooks/smooth-scroll'
 import { baseURL } from './metadata'
@@ -40,11 +40,11 @@ export const metadata: Metadata = {
 }
 
 const rootStyle = {
-  ['--font-body-family' as string]: _bodyFont.style.fontFamily,
-  ['--font-heading-family' as string]: _headingFont.style.fontFamily,
-  ['--font-heading2-family' as string]: _heading2Font.style.fontFamily,
-  ['--font-heading3-family' as string]: _heading3Font.style.fontFamily,
-  ['--font-accent-family' as string]: _accentFont.style.fontFamily,
+  ['--font-body-family' as string]: bodyFont.style.fontFamily,
+  ['--font-heading-family' as string]: headingFont.style.fontFamily,
+  ['--font-heading2-family' as string]: heading2Font.style.fontFamily,
+  ['--font-heading3-family' as string]: heading3Font.style.fontFamily,
+  ['--font-accent-family' as string]: accentFont.style.fontFamily,
 }
 
 export default function RootLayout({

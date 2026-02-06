@@ -12,7 +12,7 @@ if (!folderName) {
   process.exit(1)
 }
 
-// Construct the full path to the fonts folder
+// Construct the full path to the fonts folder (relative to _fonts/)
 const fontsBasePath = path.join(__dirname, folderName)
 
 const processedFiles = []
@@ -61,7 +61,8 @@ function compressTTF(filePath) {
     const baseName = path.basename(filePath, '.ttf')
     const woff2File = baseName + '.woff2'
     const outputPath = path.join(path.dirname(filePath), woff2File)
-    const woff2Path = path.join('./', folderName, woff2File)
+    // Path relative to _fonts/ directory
+    const woff2Path = `${folderName}/${woff2File}`
 
     fs.writeFileSync(outputPath, woff2)
 
@@ -105,16 +106,15 @@ function displaySummary() {
   console.log('\n✅ Compression complete. Processed files:\n')
   processedFiles.forEach((file) => console.log(file))
 
-  console.log('\n🧬 Generated localFont() object:\n')
+  console.log('\n🧬 Generated font config:\n')
 
-  const localFontExport = `export const _font = localFont({\n  src: [\n${fontMap
-    .map(
-      (font) =>
-        `    {\n      path: '${font.path}',\n      weight: '${font.weight}',\n      style: '${font.style}',\n    },`
-    )
-    .join('\n')}\n  ],\n});`
+  const srcArray = fontMap.map((font) => ({
+    path: font.path,
+    weight: font.weight,
+    style: font.style,
+  }))
 
-  console.log(localFontExport)
+  console.log(JSON.stringify({ src: srcArray }, null, 2))
 
   // Update font files if font types are specified
   if (fontTypes.length > 0) {
@@ -123,26 +123,27 @@ function displaySummary() {
 }
 
 function updateFontFiles() {
-  const dataFontsPath = path.join(__dirname, '../../../_data/_fonts')
+  const srcFontsPath = path.join(__dirname, '../src/fonts')
+
+  // Ensure src/fonts directory exists
+  if (!fs.existsSync(srcFontsPath)) {
+    fs.mkdirSync(srcFontsPath, { recursive: true })
+  }
 
   fontTypes.forEach((fontType) => {
-    const fileName = `_${fontType}.tsx`
-    const filePath = path.join(dataFontsPath, fileName)
+    const fileName = `${fontType}.ts`
+    const filePath = path.join(srcFontsPath, fileName)
+    const variableName = `${fontType}Font`
 
-    // Generate the font array with proper paths relative to _data/_fonts/
+    // Generate the font src array with paths relative to src/fonts/
     const srcArray = fontMap
       .map(
         (font) =>
-          `    {\n      path: '../../src/styles/fonts/${folderName}/${path.basename(font.path)}',\n      weight: '${font.weight}',\n      style: '${font.style}',\n    },`
+          `    { path: '../../_fonts/${font.path}', weight: '${font.weight}', style: '${font.style}' },`
       )
       .join('\n')
 
-    if (!fs.existsSync(filePath)) {
-      // Create new file from template
-      console.log(`\n📝 Creating new file: ${fileName}`)
-
-      const variableName = `_${fontType}Font`
-      const template = `import localFont from 'next/font/local'
+    const template = `import localFont from 'next/font/local'
 
 export const ${variableName} = localFont({
   src: [
@@ -151,28 +152,11 @@ ${srcArray}
 })
 `
 
-      try {
-        fs.writeFileSync(filePath, template, 'utf8')
-        console.log(`✅ Created: ${fileName}`)
-      } catch (error) {
-        console.error(`❌ Error creating ${fileName}: ${error.message}`)
-      }
-      return
-    }
-
     try {
-      let content = fs.readFileSync(filePath, 'utf8')
-
-      // Replace the src array in the localFont call
-      const regex = /src:\s*\[[\s\S]*?\]/
-      const replacement = `src: [\n${srcArray}\n  ]`
-
-      content = content.replace(regex, replacement)
-
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`\n✅ Updated: ${fileName}`)
+      fs.writeFileSync(filePath, template, 'utf8')
+      console.log(`\n✅ Updated: src/fonts/${fileName}`)
     } catch (error) {
-      console.error(`\n❌ Error updating ${fileName}: ${error.message}`)
+      console.error(`❌ Error writing ${fileName}: ${error.message}`)
     }
   })
 }
