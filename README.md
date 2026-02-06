@@ -30,7 +30,7 @@ Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using o
 - 🎭 **Framer Motion** animations
 - 🎯 **SEO and AI optimized** with structured data
 - 🤖 **AI-friendly** codebase structure
-- 🎬 **Gallop Studio** - Visual asset manager for images and media
+- 🎬 **Gallop Studio** - Visual asset manager for images, media, and fonts
 - 🛡️ **Gallop Canon** - AI guardrails for consistent, reliable code
 - 📊 **Vercel Analytics** integration
 
