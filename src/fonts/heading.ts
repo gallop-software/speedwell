@@ -1,7 +1,6 @@
 import localFont from 'next/font/local'
 
 export const headingFont = localFont({
-  variable: '--font-heading-family',
   src: [
     { path: '../../_fonts/notoserifdisplay/notoserifdisplay-black.woff2', weight: '900', style: 'normal' },
     { path: '../../_fonts/notoserifdisplay/notoserifdisplay-blackitalic.woff2', weight: '900', style: 'italic' },
