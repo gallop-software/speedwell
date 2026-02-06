@@ -1,6 +1,7 @@
 import localFont from 'next/font/local'
 
 export const bodyFont = localFont({
+  variable: '--font-body-family',
   src: [
     { path: '../../_fonts/raleway/raleway-black.woff2', weight: '900', style: 'normal' },
     { path: '../../_fonts/raleway/raleway-blackitalic.woff2', weight: '900', style: 'italic' },
