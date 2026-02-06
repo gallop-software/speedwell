@@ -37,7 +37,8 @@ jobs:
           CURRENT_VERSION=$(jq -r .version package.json)
           echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
 
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          # Get latest tag in repo (regardless of branch), sorted by version
+          LAST_TAG=$(git tag --sort=-v:refname | head -1 || echo "")
           echo "last_tag=$LAST_TAG" >> $GITHUB_OUTPUT
 
           if [ "v$CURRENT_VERSION" == "$LAST_TAG" ]; then
