@@ -1,5 +1,4 @@
-import { readdirSync, statSync } from 'fs'
-import path from 'path'
+import blogData from '@/data/_blog.json'
 
 type PostSlugItem = {
   slug: string
@@ -7,41 +6,21 @@ type PostSlugItem = {
   uri: string
 }
 
-export async function getPostSlugs(): Promise<{ postSlugs: PostSlugItem[] }> {
-  const postsDir = path.join(process.cwd(), 'src/blog')
-
-  function walk(dir: string, basePath = ''): PostSlugItem[] {
-    const entries = readdirSync(dir, { withFileTypes: true })
-    const out: PostSlugItem[] = []
-
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name)
-      const relPath = basePath ? `${basePath}/${entry.name}` : entry.name
-
-      if (entry.isDirectory()) {
-        out.push(...walk(fullPath, relPath))
-        continue
-      }
-
-      if (entry.isFile() && entry.name.endsWith('.tsx')) {
-        const withoutExt = relPath.slice(0, -4)
-        const segments = withoutExt.split('/').map((seg) => {
-          const decoded = decodeURIComponent(seg)
-          return encodeURIComponent(decoded).toLowerCase()
-        })
-        const slug = segments.join('/')
-        const stats = statSync(fullPath)
-
-        out.push({
-          slug,
-          modified: stats.mtime.toISOString(),
-          uri: `/post/${slug}`,
-        })
-      }
-    }
-
-    return out
+type BlogPost = {
+  slug: string
+  metadata: {
+    date?: string
   }
+}
 
-  return { postSlugs: walk(postsDir) }
+export async function getPostSlugs(): Promise<{ postSlugs: PostSlugItem[] }> {
+  const postSlugs: PostSlugItem[] = (blogData as BlogPost[]).map((post) => ({
+    slug: post.slug,
+    modified: post.metadata.date
+      ? new Date(post.metadata.date).toISOString()
+      : new Date().toISOString(),
+    uri: `/post/${post.slug}`,
+  }))
+
+  return { postSlugs }
 }
