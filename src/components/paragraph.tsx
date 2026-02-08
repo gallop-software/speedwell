@@ -58,7 +58,7 @@ export function Paragraph({
     <p
       className={clsx(
         'content-wrapper',
-        '[&_a]:text-accent [&_a]:underline',
+        '[&_a:not(.gallop-button)]:text-accent [&_a:not(.gallop-button)]:underline',
         finalFontSize,
         finalColor,
         finalFontFamily,

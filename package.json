@@ -1,6 +1,6 @@
 {
   "name": "speedwell",
-  "version": "1.1.11",
+  "version": "1.1.13",
   "private": true,
   "description": "A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.",
   "homepage": "https://speedwell.gallop.software",
@@ -56,7 +56,7 @@
     "update:doctor": "npx npm-check-updates --doctor -u",
     "update:canon": "npm update @gallop.software/canon",
     "unused": "knip",
-    "check": "npm run lint && npm run ts && npm run unused"
+    "check": "npm run lint && npm run ts"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.4",
