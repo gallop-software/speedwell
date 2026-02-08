@@ -29,7 +29,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-09-15T00:00:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/before-after',
+    canonical: '/before-after',
   },
   openGraph: {
     title: 'Before & After Transformations | Interior Design Success Stories',

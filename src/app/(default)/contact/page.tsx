@@ -24,7 +24,7 @@ const metadata: PageMetadata = {
   publishDate: '2025-09-18T00:00:00Z',
   modifiedDate: '2025-11-27T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/contact',
+    canonical: '/contact',
   },
   openGraph: {
     title: 'Contact Us - Interior Design Studio',

@@ -49,7 +49,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-03-05T10:30:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/color-consultation',
+    canonical: '/color-consultation',
   },
   authors: [{ name: 'Speedwell Design Team' }],
   openGraph: {

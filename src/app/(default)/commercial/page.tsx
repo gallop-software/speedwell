@@ -46,7 +46,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-05-20T09:30:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/commercial',
+    canonical: '/commercial',
   },
   authors: [{ name: 'Speedwell Design Team' }],
   openGraph: {

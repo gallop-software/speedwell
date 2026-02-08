@@ -86,7 +86,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-pixabay-221185.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Digital Branding'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/modern-medical-office',
+    canonical: '/post/modern-medical-office',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -108,7 +108,7 @@ export const metadata = {
     '/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
   categories: ['Guest Room', 'Residential', 'Bedroom Design'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/guest-suite-makeover',
+    canonical: '/post/guest-suite-makeover',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

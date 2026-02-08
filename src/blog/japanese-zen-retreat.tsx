@@ -100,7 +100,7 @@ export const metadata = {
   featuredImage: '/portfolio/jvdm/pexels-jvdm-1454804.jpg',
   categories: ['Residential', 'Japanese', 'Zen'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/japanese-zen-retreat',
+    canonical: '/post/japanese-zen-retreat',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

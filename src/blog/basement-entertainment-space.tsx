@@ -92,8 +92,7 @@ export const metadata = {
   featuredImage: '/portfolio/houzlook/pexels-houzlook-3797991.jpg',
   categories: ['Residential', 'Entertainment', 'Renovation'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/basement-entertainment-space',
+    canonical: '/post/basement-entertainment-space',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

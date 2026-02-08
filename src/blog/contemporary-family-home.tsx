@@ -95,8 +95,7 @@ export const metadata = {
     '/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
   categories: ['Residential', 'Contemporary', 'Family Home'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/contemporary-family-home',
+    canonical: '/post/contemporary-family-home',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -100,7 +100,7 @@ export const metadata = {
   featuredImage: '/portfolio/houzlook/pexels-houzlook-3356416.jpg',
   categories: ['Residential', 'Renovation', 'Contemporary'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/open-concept-living',
+    canonical: '/post/open-concept-living',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

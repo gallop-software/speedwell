@@ -100,7 +100,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-dropshado-2251247.jpg',
   categories: ['Outdoor Living', 'Urban Design', 'Terrace'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/rooftop-terrace-design',
+    canonical: '/post/rooftop-terrace-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

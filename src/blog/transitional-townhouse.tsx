@@ -96,7 +96,7 @@ export const metadata = {
     '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
   categories: ['Residential', 'Transitional', 'Townhouse'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/transitional-townhouse',
+    canonical: '/post/transitional-townhouse',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

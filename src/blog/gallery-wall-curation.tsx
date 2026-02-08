@@ -109,7 +109,7 @@ export const metadata = {
     '/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg',
   categories: ['Art Display', 'Residential', 'Styling'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/gallery-wall-curation',
+    canonical: '/post/gallery-wall-curation',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

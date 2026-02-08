@@ -110,7 +110,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-alex-qian-1180283-2343465.jpg',
   categories: ['Residential', 'Luxury', 'Rustic'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/wine-country-estate',
+    canonical: '/post/wine-country-estate',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

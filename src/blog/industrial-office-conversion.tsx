@@ -95,8 +95,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg',
   categories: ['Commercial', 'Industrial', 'Office Design'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/industrial-office-conversion',
+    canonical: '/post/industrial-office-conversion',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

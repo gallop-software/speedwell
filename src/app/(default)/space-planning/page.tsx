@@ -45,7 +45,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-06-15T10:00:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/space-planning',
+    canonical: '/space-planning',
   },
   authors: [{ name: 'Speedwell Design Team' }],
   openGraph: {

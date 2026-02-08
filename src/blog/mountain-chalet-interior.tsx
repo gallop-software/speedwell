@@ -101,8 +101,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-jworks1124-342800.jpg',
   categories: ['Residential', 'Mountain', 'Luxury'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/mountain-chalet-interior',
+    canonical: '/post/mountain-chalet-interior',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

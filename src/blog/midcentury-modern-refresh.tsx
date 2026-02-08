@@ -96,8 +96,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
   categories: ['Residential', 'Midcentury Modern', 'Renovation'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/midcentury-modern-refresh',
+    canonical: '/post/midcentury-modern-refresh',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -96,7 +96,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-pixabay-259962.jpg',
   categories: ['Residential', 'Coastal Design', 'Cottage'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/coastal-cottage-refresh',
+    canonical: '/post/coastal-cottage-refresh',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

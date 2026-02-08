@@ -91,8 +91,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-pixabay-279719.jpg',
   categories: ['Laundry Room', 'Organization', 'Farmhouse'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/laundry-room-transformation',
+    canonical: '/post/laundry-room-transformation',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

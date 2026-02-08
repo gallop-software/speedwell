@@ -102,7 +102,7 @@ export const metadata = {
     '/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
   categories: ['Commercial', 'Wellness', 'Spa Design'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/wellness-spa-design',
+    canonical: '/post/wellness-spa-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

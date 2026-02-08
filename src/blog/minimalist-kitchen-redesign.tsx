@@ -95,8 +95,7 @@ export const metadata = {
     '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
   categories: ['Kitchen Design', 'Minimalist', 'Contemporary'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/minimalist-kitchen-redesign',
+    canonical: '/post/minimalist-kitchen-redesign',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

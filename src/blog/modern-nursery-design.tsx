@@ -95,7 +95,7 @@ export const metadata = {
     '/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg',
   categories: ['Nursery Design', 'Contemporary', 'Family Home'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/modern-nursery-design',
+    canonical: '/post/modern-nursery-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

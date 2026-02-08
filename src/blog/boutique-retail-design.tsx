@@ -88,7 +88,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-blanca-isela-2156722885-35240180.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/boutique-retail-design',
+    canonical: '/post/boutique-retail-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

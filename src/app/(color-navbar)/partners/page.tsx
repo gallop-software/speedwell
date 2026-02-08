@@ -26,7 +26,7 @@ const metadata: PageMetadata = {
   publishDate: '2025-10-13T00:00:00Z',
   modifiedDate: '2025-10-13T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/partners',
+    canonical: '/partners',
   },
   openGraph: {
     title: 'Our Design Partners',

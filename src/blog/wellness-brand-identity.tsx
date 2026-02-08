@@ -90,7 +90,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-diva-plavalaguna-6937932.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Wellness'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/wellness-brand-identity',
+    canonical: '/post/wellness-brand-identity',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -92,7 +92,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-pixabay-276724.jpg',
   categories: ['Library Design', 'Traditional', 'Home Office'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/library-study-design',
+    canonical: '/post/library-study-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

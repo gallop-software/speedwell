@@ -102,7 +102,7 @@ export const metadata = {
     '/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
   categories: ['Kitchen Design', 'Professional', 'Gourmet'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/chef-kitchen-upgrade',
+    canonical: '/post/chef-kitchen-upgrade',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

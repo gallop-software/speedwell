@@ -101,8 +101,7 @@ export const metadata = {
     '/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg',
   categories: ['Kitchen Design', 'Farmhouse', 'Traditional'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/farmhouse-kitchen-remodel',
+    canonical: '/post/farmhouse-kitchen-remodel',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

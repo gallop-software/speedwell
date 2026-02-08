@@ -94,8 +94,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
   categories: ['Residential', 'Historic Restoration', 'Victorian'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/historic-brownstone-revival',
+    canonical: '/post/historic-brownstone-revival',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
