@@ -349,11 +349,16 @@ export async function POST(req: Request) {
 
     const subject = `[FlowTrace] ${productionUrlClean || 'Site'} — ${timeNow}`
 
-    const mailBody = {
-      from: process.env.MAILGUN_SMTP_MAIL,
+    const mailBody: Record<string, any> = {
+      from: `${process.env.MAILGUN_FROM_NAME} <contact@${process.env.MAILGUN_DOMAIN_NAME}>`,
       to: isDevelopment
-        ? process.env.MAILGUN_DEV_MAIL
-        : process.env.MAILGUN_SMTP_MAIL,
+        ? `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`
+        : `${process.env.MAILGUN_FROM_NAME} <${process.env.MAILGUN_SMTP_MAIL}>`,
+      ...(!isDevelopment && {
+        bcc: [
+          `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`,
+        ],
+      }),
       subject,
       html: emailHtml,
     }
