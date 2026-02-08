@@ -88,4 +88,3 @@ Instead of dynamically importing every blog post to list them, this script pre-g
 - Efficient pagination
 - Quick category filtering
 - Better build performance
-

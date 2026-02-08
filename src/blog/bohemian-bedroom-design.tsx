@@ -93,8 +93,7 @@ export const metadata = {
     'Layered bohemian bedroom featuring global textiles, vintage finds, abundant plants, and eclectic mix of patterns and cultural elements.',
   date: '2024-09-07',
   slug: 'bohemian-bedroom-design',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
   categories: ['Bedroom Design', 'Bohemian', 'Eclectic'],
   alternates: {
     canonical: '/post/bohemian-bedroom-design',

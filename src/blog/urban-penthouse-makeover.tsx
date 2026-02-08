@@ -98,8 +98,7 @@ export const metadata = {
     'Sophisticated penthouse renovation featuring open-plan living, city views, and contemporary design with smart home integration.',
   date: '2024-12-05',
   slug: 'urban-penthouse-makeover',
-  featuredImage:
-    '/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
+  featuredImage: '/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
   categories: ['Residential', 'Luxury', 'Contemporary'],
   alternates: {
     canonical: '/post/urban-penthouse-makeover',

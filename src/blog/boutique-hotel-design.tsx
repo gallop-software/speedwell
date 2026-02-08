@@ -93,8 +93,7 @@ export const metadata = {
     'Intimate boutique hotel featuring unique guest rooms, curated public spaces, and sophisticated design blending historic charm with modern luxury.',
   date: '2025-01-08',
   slug: 'boutique-hotel-design',
-  featuredImage:
-    '/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
+  featuredImage: '/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
   categories: ['Commercial', 'Hospitality', 'Luxury'],
   alternates: {
     canonical: '/post/boutique-hotel-design',

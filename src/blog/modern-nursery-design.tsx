@@ -91,8 +91,7 @@ export const metadata = {
     'Serene gender-neutral nursery featuring sustainable materials, convertible furniture, and thoughtful design that grows with your child.',
   date: '2024-12-20',
   slug: 'modern-nursery-design',
-  featuredImage:
-    '/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg',
+  featuredImage: '/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg',
   categories: ['Nursery Design', 'Contemporary', 'Family Home'],
   alternates: {
     canonical: '/post/modern-nursery-design',

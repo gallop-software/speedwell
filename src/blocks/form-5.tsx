@@ -105,7 +105,10 @@ export default function Form5() {
               rows={2}
               label="Special Requests"
             />
-            <FormButton name="submit" label="Request Reservation" />
+            <FormButton
+              name="submit"
+              label="Request Reservation"
+            />
           </Form>
         </Column>
       </Columns>

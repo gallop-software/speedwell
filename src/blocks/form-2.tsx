@@ -100,7 +100,10 @@ export default function Form2() {
             label="Message"
             required
           />
-          <FormButton name="submit" label="Send Message" />
+          <FormButton
+            name="submit"
+            label="Send Message"
+          />
         </Form>
       </div>
     </Section>

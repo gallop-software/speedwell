@@ -26,12 +26,22 @@ const rootStyle = {
 
 export default function GlobalNotFound() {
   return (
-    <html lang="en" style={rootStyle}>
+    <html
+      lang="en"
+      style={rootStyle}
+    >
       <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
         <Navbar />
-        <Section innerAlign="content" className="text-center h-full mb-24">
+        <Section
+          innerAlign="content"
+          className="text-center h-full mb-24"
+        >
           <Heading as="h1">Page Not Found</Heading>
-          <Button variant="outline" href="/" native>
+          <Button
+            variant="outline"
+            href="/"
+            native
+          >
             Return Home
           </Button>
         </Section>

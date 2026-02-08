@@ -98,8 +98,7 @@ export const metadata = {
     'Tranquil boutique spa featuring treatment rooms, meditation lounge, and holistic design creating a sanctuary for rejuvenation and self-care.',
   date: '2025-01-30',
   slug: 'wellness-spa-design',
-  featuredImage:
-    '/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
+  featuredImage: '/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
   categories: ['Commercial', 'Wellness', 'Spa Design'],
   alternates: {
     canonical: '/post/wellness-spa-design',
