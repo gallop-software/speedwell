@@ -9,7 +9,7 @@ import { Icon } from '@/components/icon'
 
 export type FormButtonProps = {
   label: string
-  name?: string
+  name: string
   isLoading?: boolean
   submitMessage?: string
   className?: string
