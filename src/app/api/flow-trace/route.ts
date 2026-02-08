@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { DateTime, Duration } from 'luxon'
+import { studioUrl } from '@/utils/studio-helpers'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -264,7 +265,7 @@ function renderEmailHtml(args: {
     <body>
     <div class="container">
         <div class="content">
-        <img src="/images/logo-700x278.png" alt="Logo" class="logo" />
+        <img src="${studioUrl('/images/logo.png', 'medium')}" alt="Logo" class="logo" />
         <h2 style="font-size:1.25rem;margin:0 0 6px">
             ${element?.href ? 'Click - ' + element?.href : 'Click'} - ${element?.innerText || element?.id || ''}
         </h2>
