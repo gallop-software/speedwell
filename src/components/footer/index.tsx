@@ -2,69 +2,19 @@ import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
 import { Logo } from '@/components/logo'
 import Link from 'next/link'
-import facebookIcon from '@iconify/icons-mdi/facebook'
-import instagramIcon from '@iconify/icons-mdi/instagram'
-import phoneIcon from '@iconify/icons-mdi/phone'
-import emailOutlineIcon from '@iconify/icons-mdi/email-outline'
-import heartIcon from '@iconify/icons-heroicons/heart-solid'
 import { Icon } from '@/components/icon'
 import { Paragraph } from '@/components/paragraph'
 import { Heading } from '@/components/heading'
 import { DateTime } from 'luxon'
-
-interface FooterLink {
-  href: string
-  label: string
-}
-
-interface SocialLink {
-  name: string
-  href: string
-  icon: { body: string; width?: number; height?: number }
-}
-
-const socialLinks: SocialLink[] = [
-  {
-    name: 'Facebook',
-    href: 'https://www.facebook.com/speedwell',
-    icon: facebookIcon,
-  },
-  {
-    name: 'Instagram',
-    href: 'http://instagram.com/speedwell',
-    icon: instagramIcon,
-  },
-  {
-    name: 'Phone',
-    href: 'tel:5551234567',
-    icon: phoneIcon,
-  },
-  {
-    name: 'Email',
-    href: 'mailto:me@your-company.com',
-    icon: emailOutlineIcon,
-  },
-]
-
-const leftColumn = [
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Residential Design', href: '/residential' },
-  { label: 'Commercial Design', href: '/commercial' },
-  { label: 'Kitchen & Bath', href: '/kitchen-bath' },
-  { label: 'Space Planning', href: '/space-planning' },
-  { label: 'Color Consultation', href: '/color-consultation' },
-  { label: 'Furniture Selection', href: '/furniture' },
-]
-
-const rightColumn = [
-  { label: 'Our Story', href: '/residential' },
-  { label: 'Meet the Team', href: '/commercial' },
-  { label: 'Client Testimonials', href: '/testimonials' },
-  { label: 'Before & After', href: '/before-after' },
-  { label: 'Project Management', href: '/project-management' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Join Our Team', href: '/join-our-team' },
-]
+import {
+  socialLinks,
+  leftColumn,
+  rightColumn,
+  description,
+  copyrightName,
+  WebMaster,
+} from './config'
+import type { FooterLink, SocialLink } from './config'
 
 function SocialLinks() {
   return (
@@ -88,35 +38,13 @@ function SocialLinks() {
   )
 }
 
-function WebMaster() {
-  return (
-    <Paragraph
-      fontSize="text-sm"
-      margin="mb-0"
-      className="flex items-center justify-center gap-1"
-    >
-      Built with{' '}
-      <Icon
-        icon={heartIcon}
-        className="text-red-500"
-      />{' '}
-      by the team at{' '}
-      <a
-        className="underline hover:text-contrast-light"
-        href="https://gallop.software/"
-      >
-        Gallop
-      </a>
-    </Paragraph>
-  )
-}
 function Copyright() {
   return (
     <Paragraph
       fontSize="text-sm"
       margin="mb-0"
     >
-      &copy; {DateTime.now().year} Timmerman Interior Designer
+      &copy; {DateTime.now().year} {copyrightName}
     </Paragraph>
   )
 }
@@ -141,11 +69,7 @@ export function Footer() {
                 textAlign="text-center"
                 className="italic"
               >
-                Situated in the heart of the Design District on Main Street, our
-                studio is steps away from premier showrooms and artisan
-                workshops. Nestled within a beautifully restored historic
-                building, our inspiring space is perfect for bringing your
-                design vision to life.
+                {description}
               </Heading>
               <SocialLinks />
             </div>
@@ -189,7 +113,13 @@ export function Footer() {
           <div className="flex justify-center items-center py-6 mt-10 text-center">
             <div>
               <Copyright />
-              <WebMaster />
+              <Paragraph
+                fontSize="text-sm"
+                margin="mb-0"
+                className="flex items-center justify-center gap-1"
+              >
+                <WebMaster />
+              </Paragraph>
             </div>
           </div>
         </Container>

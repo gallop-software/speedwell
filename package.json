@@ -1,6 +1,6 @@
 {
   "name": "speedwell",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "private": true,
   "description": "A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.",
   "homepage": "https://speedwell.gallop.software",
@@ -85,7 +85,7 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.26.0",
-    "@gallop.software/studio": "^2.3.168",
+    "@gallop.software/studio": "^2.3.172",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
