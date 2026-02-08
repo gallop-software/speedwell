@@ -350,10 +350,10 @@ export async function POST(req: Request) {
     const subject = `[FlowTrace] ${productionUrlClean || 'Site'} — ${timeNow}`
 
     const mailBody = {
-      from: `Architecturally Significant Homes <${process.env.MAILGUN_SMTP_MAIL}>`,
+      from: process.env.MAILGUN_SMTP_MAIL,
       to: isDevelopment
-        ? `Web Plant Media <${process.env.MAILGUN_DEV_MAIL}>`
-        : `Douglas Newby <${process.env.MAILGUN_SMTP_MAIL}>`,
+        ? process.env.MAILGUN_DEV_MAIL
+        : process.env.MAILGUN_SMTP_MAIL,
       subject,
       html: emailHtml,
     }
