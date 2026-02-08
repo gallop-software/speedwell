@@ -20,7 +20,7 @@ function extractMetadata(filePath) {
       content.match(/const TITLE\s*=\s*"((?:[^"\\]|\\.)*)"/) ||
       content.match(/const TITLE\s*=\s*'((?:[^'\\]|\\.)*)'/) ||
       content.match(/const TITLE\s*=\s*`((?:[^`\\]|\\.)*)`/)
-    const plainTitle = titleMatch ? titleMatch[1] : null
+    const plainTitle = titleMatch ? titleMatch[1].replace(/\\(.)/g, '$1') : null
 
     // Find the metadata export block - match until the end of the object
     const metadataMatch = content.match(
