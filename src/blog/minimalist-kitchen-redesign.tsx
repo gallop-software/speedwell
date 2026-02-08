@@ -91,8 +91,7 @@ export const metadata = {
     'Sleek minimalist kitchen featuring handleless cabinetry, waterfall countertops, and integrated appliances for a clutter-free culinary space.',
   date: '2024-09-18',
   slug: 'minimalist-kitchen-redesign',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
   categories: ['Kitchen Design', 'Minimalist', 'Contemporary'],
   alternates: {
     canonical: '/post/minimalist-kitchen-redesign',

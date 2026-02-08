@@ -34,7 +34,7 @@ The following npm scripts are removed:
 - `layouts:screenshots` - Generate layout screenshots
 - `layouts:sort` - Sort layouts in catalog
 
-## Files Deleted from _scripts/
+## Files Deleted from \_scripts/
 
 The following files are deleted:
 

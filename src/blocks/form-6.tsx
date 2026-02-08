@@ -112,7 +112,10 @@ export default function Form6() {
             required
             className="flex-1"
           />
-          <FormButton name="submit" label="Subscribe" />
+          <FormButton
+            name="submit"
+            label="Subscribe"
+          />
         </Form>
 
         <Paragraph

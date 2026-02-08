@@ -104,8 +104,7 @@ export const metadata = {
     'Welcoming guest suite featuring hotel-quality amenities, comfortable furnishings, and thoughtful details for the ultimate guest experience.',
   date: '2024-09-22',
   slug: 'guest-suite-makeover',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
   categories: ['Guest Room', 'Residential', 'Bedroom Design'],
   alternates: {
     canonical: '/post/guest-suite-makeover',

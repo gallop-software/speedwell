@@ -1,7 +1,5 @@
 {
-  "_cdns": [
-    "https://speedwell-cdn.gallop.software"
-  ],
+  "_cdns": ["https://speedwell-cdn.gallop.software"],
   "/blocks/about-1.jpg": {
     "o": {
       "w": 770,

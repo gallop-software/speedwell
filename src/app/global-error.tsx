@@ -27,15 +27,24 @@ export default function GlobalError({
   reset: () => void
 }) {
   return (
-    <html lang="en" style={rootStyle}>
+    <html
+      lang="en"
+      style={rootStyle}
+    >
       <head>
         <title>Something Went Wrong</title>
       </head>
       <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
         <Navbar />
-        <Section innerAlign="content" className="text-center h-full mb-24">
+        <Section
+          innerAlign="content"
+          className="text-center h-full mb-24"
+        >
           <Heading as="h1">Something Went Wrong</Heading>
-          <Button variant="outline" onClick={() => reset()}>
+          <Button
+            variant="outline"
+            onClick={() => reset()}
+          >
             Try Again
           </Button>
         </Section>

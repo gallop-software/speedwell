@@ -56,7 +56,11 @@ async function removeScriptsFromPackageJson() {
   }
 
   if (removed > 0) {
-    await fs.writeFile(PACKAGE_JSON_PATH, JSON.stringify(packageJson, null, 2) + '\n', 'utf-8')
+    await fs.writeFile(
+      PACKAGE_JSON_PATH,
+      JSON.stringify(packageJson, null, 2) + '\n',
+      'utf-8'
+    )
     console.log(`\n  Removed ${removed} script(s) from package.json`)
   } else {
     console.log('  ⏭️  No scripts to remove')
@@ -72,9 +76,13 @@ async function deleteDevScripts() {
       console.log(`  ✅ Deleted ${path.basename(filePath)}`)
     } catch (error) {
       if (error.code === 'ENOENT') {
-        console.log(`  ⏭️  Skipping ${path.basename(filePath)} - already deleted`)
+        console.log(
+          `  ⏭️  Skipping ${path.basename(filePath)} - already deleted`
+        )
       } else {
-        console.error(`  ❌ Error deleting ${path.basename(filePath)}: ${error.message}`)
+        console.error(
+          `  ❌ Error deleting ${path.basename(filePath)}: ${error.message}`
+        )
       }
     }
   }
