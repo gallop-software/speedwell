@@ -16,7 +16,10 @@ function extractMetadata(filePath) {
     const content = fs.readFileSync(filePath, 'utf8')
 
     // Extract the TITLE constant (plain title)
-    const titleMatch = content.match(/const TITLE = ['"`]([^'"`]+)['"`]/)
+    const titleMatch =
+      content.match(/const TITLE\s*=\s*"((?:[^"\\]|\\.)*)"/) ||
+      content.match(/const TITLE\s*=\s*'((?:[^'\\]|\\.)*)'/) ||
+      content.match(/const TITLE\s*=\s*`((?:[^`\\]|\\.)*)`/)
     const plainTitle = titleMatch ? titleMatch[1] : null
 
     // Find the metadata export block - match until the end of the object
