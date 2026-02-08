@@ -105,7 +105,7 @@ export const metadata = {
   featuredImage: '/portfolio/jvdm/pexels-jvdm-1457844.jpg',
   categories: ['Residential', 'Scandinavian', 'Minimalist'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/scandinavian-apartment',
+    canonical: '/post/scandinavian-apartment',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

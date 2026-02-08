@@ -92,8 +92,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-pixabay-161758.jpg',
   categories: ['Residential', 'Urban Living', 'Contemporary'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/modern-loft-transformation',
+    canonical: '/post/modern-loft-transformation',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

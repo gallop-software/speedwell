@@ -89,7 +89,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-enginakyurt-1435894.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/urban-coffee-house',
+    canonical: '/post/urban-coffee-house',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

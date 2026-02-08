@@ -102,8 +102,7 @@ export const metadata = {
     '/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
   categories: ['Residential', 'Luxury', 'Contemporary'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/urban-penthouse-makeover',
+    canonical: '/post/urban-penthouse-makeover',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

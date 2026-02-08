@@ -45,7 +45,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-07-10T11:00:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/furniture',
+    canonical: '/furniture',
   },
   authors: [{ name: 'Speedwell Design Team' }],
   openGraph: {

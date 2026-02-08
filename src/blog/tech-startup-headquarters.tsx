@@ -89,8 +89,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-cottonbro-5379175.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/tech-startup-headquarters',
+    canonical: '/post/tech-startup-headquarters',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

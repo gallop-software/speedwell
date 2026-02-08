@@ -56,7 +56,7 @@ const metadata: PageMetadata = {
   modifiedDate: '2025-09-28T01:00:00Z',
   featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/layout-1',
+    canonical: '/layout-1',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

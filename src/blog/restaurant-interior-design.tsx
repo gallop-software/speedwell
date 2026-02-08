@@ -96,8 +96,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
   categories: ['Commercial', 'Hospitality', 'Restaurant'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/restaurant-interior-design',
+    canonical: '/post/restaurant-interior-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

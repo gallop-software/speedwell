@@ -94,7 +94,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-burst-545012.jpg',
   categories: ['Residential', 'Coastal Design', 'Renovation'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/coastal-home-renovation',
+    canonical: '/post/coastal-home-renovation',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

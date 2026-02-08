@@ -107,7 +107,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-mikhail-nilov-6707628.jpg',
   categories: ['Home Office', 'Contemporary', 'Professional'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/executive-workspace',
+    canonical: '/post/executive-workspace',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {
