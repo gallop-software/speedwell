@@ -53,7 +53,7 @@ const metadata: PageMetadata = {
   publishDate: '2019-10-24T07:42:20Z',
   modifiedDate: '2025-11-29T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/portfolio',
+    canonical: '/portfolio',
   },
   authors: [{ name: 'Timmerman Interior Design' }],
   openGraph: {

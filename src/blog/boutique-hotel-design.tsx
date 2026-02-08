@@ -97,7 +97,7 @@ export const metadata = {
     '/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg',
   categories: ['Commercial', 'Hospitality', 'Luxury'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/boutique-hotel-design',
+    canonical: '/post/boutique-hotel-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

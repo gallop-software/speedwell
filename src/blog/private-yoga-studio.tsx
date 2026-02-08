@@ -101,7 +101,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
   categories: ['Wellness', 'Home Gym', 'Minimalist'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/private-yoga-studio',
+    canonical: '/post/private-yoga-studio',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

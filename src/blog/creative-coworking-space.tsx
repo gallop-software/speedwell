@@ -87,8 +87,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-mareklevak-2265482.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Workspace'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/creative-coworking-space',
+    canonical: '/post/creative-coworking-space',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

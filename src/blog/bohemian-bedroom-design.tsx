@@ -97,7 +97,7 @@ export const metadata = {
     '/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg',
   categories: ['Bedroom Design', 'Bohemian', 'Eclectic'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/bohemian-bedroom-design',
+    canonical: '/post/bohemian-bedroom-design',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

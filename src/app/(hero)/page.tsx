@@ -41,7 +41,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-01-01T00:00:00Z',
   modifiedDate: '2025-12-22T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software',
+    canonical: '/',
   },
   authors: [{ name: 'Gallop Software' }],
   openGraph: {

@@ -87,8 +87,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-rachel-claire-5490970.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Fashion'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/fashion-boutique-rebrand',
+    canonical: '/post/fashion-boutique-rebrand',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -88,8 +88,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-cottonbro-4154192.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
-    canonical:
-      'https://speedwell.gallop.software/post/creative-agency-workspace',
+    canonical: '/post/creative-agency-workspace',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

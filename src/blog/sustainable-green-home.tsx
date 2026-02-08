@@ -109,7 +109,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
   categories: ['Residential', 'Sustainable', 'Contemporary'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/sustainable-green-home',
+    canonical: '/post/sustainable-green-home',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -29,7 +29,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-08-01T10:00:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/testimonials',
+    canonical: '/testimonials',
   },
   openGraph: {
     title: 'Client Testimonials | Interior Design Success Stories',

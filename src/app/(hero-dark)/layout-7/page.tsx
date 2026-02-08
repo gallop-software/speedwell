@@ -39,7 +39,7 @@ const metadata: PageMetadata = {
   modifiedDate: '2026-01-06T01:00:00Z',
   featuredImage: '/images/layout-7/hero-bg.jpg',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/layout-7',
+    canonical: '/layout-7',
   },
   authors: [{ name: 'The Mindshift Podcast' }],
   openGraph: {

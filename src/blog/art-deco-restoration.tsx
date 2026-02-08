@@ -104,7 +104,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-pixabay-269252.jpg',
   categories: ['Restoration', 'Art Deco', 'Historic'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/art-deco-restoration',
+    canonical: '/post/art-deco-restoration',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -39,7 +39,7 @@ const metadata: PageMetadata = {
   modifiedDate: '2026-01-06T01:00:00Z',
   featuredImage: '/images/layout-6/pexels-roman-odintsov-5837002.jpg',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/layout-6',
+    canonical: '/layout-6',
   },
   authors: [{ name: 'Veloria Botanicals' }],
   openGraph: {

@@ -96,7 +96,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-pixabay-269218.jpg',
   categories: ['Bathroom Design', 'Luxury', 'Contemporary'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/spa-bathroom-retreat',
+    canonical: '/post/spa-bathroom-retreat',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

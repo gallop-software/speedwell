@@ -87,7 +87,7 @@ export const metadata = {
   featuredImage: '/layout-1/pexels-elevate-1267700.jpg',
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/luxury-fitness-studio',
+    canonical: '/post/luxury-fitness-studio',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

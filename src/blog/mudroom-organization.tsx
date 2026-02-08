@@ -94,7 +94,7 @@ export const metadata = {
   featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
   categories: ['Organization', 'Family Home', 'Mudroom'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/mudroom-organization',
+    canonical: '/post/mudroom-organization',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -93,7 +93,7 @@ export const metadata = {
   featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
   categories: ['Residential', 'Luxury', 'Bedroom Design'],
   alternates: {
-    canonical: 'https://speedwell.gallop.software/post/luxury-master-suite',
+    canonical: '/post/luxury-master-suite',
   },
   authors: [{ name: 'Speedwell Design Studio' }],
   openGraph: {

@@ -36,7 +36,7 @@ const metadata: PageMetadata = {
   publishDate: '2024-07-01T10:00:00Z',
   modifiedDate: '2025-12-11T00:00:00Z',
   alternates: {
-    canonical: 'https://speedwell.gallop.software/meet-the-team',
+    canonical: '/meet-the-team',
   },
   openGraph: {
     title: 'Meet Our Team | Interior Design Experts',

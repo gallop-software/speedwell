@@ -68,7 +68,9 @@ export function generatePageMetadata(
       }),
       ...metadata?.other,
     },
-    alternates: metadata?.alternates || undefined,
+    alternates: metadata?.alternates?.canonical
+      ? { canonical: `${baseURL}${metadata.alternates.canonical}` }
+      : undefined,
     authors: metadata?.authors || undefined,
     creator: defaultSEOConfig.creator,
     publisher: defaultSEOConfig.publisher,
