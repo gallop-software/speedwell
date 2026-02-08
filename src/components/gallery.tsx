@@ -19,12 +19,12 @@ interface Dimensions {
 }
 
 type MetaEntry = {
-  o?: Dimensions   // original dimensions {w, h}
-  sm?: Dimensions  // small thumbnail
-  md?: Dimensions  // medium thumbnail
-  lg?: Dimensions  // large thumbnail
-  f?: Dimensions   // full size
-  c?: number       // CDN index
+  o?: Dimensions // original dimensions {w, h}
+  sm?: Dimensions // small thumbnail
+  md?: Dimensions // medium thumbnail
+  lg?: Dimensions // large thumbnail
+  f?: Dimensions // full size
+  c?: number // CDN index
 }
 
 interface FullMeta {
@@ -54,15 +54,15 @@ const SIZE_KEY_MAP: Record<ImageSize, 'sm' | 'md' | 'lg' | 'f'> = {
 // Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
 function getMetaLookupKey(src: string): string {
   let key = src.startsWith('/') ? src : `/${src}`
-  
+
   // Strip /images prefix if present
   if (key.startsWith('/images/')) {
     key = key.slice(7) // Remove '/images'
   }
-  
+
   // Strip size suffix if present (e.g., -sm, -md, -lg)
   key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
-  
+
   return key
 }
 
@@ -71,10 +71,10 @@ const getDimsFromMetadata = (
   size: ImageSize = 'large'
 ): { width: number; height: number } => {
   const metaData = imageMeta as FullMeta
-  
+
   // Normalize src to get lookup key (strips /images prefix and size suffixes)
   const lookupKey = getMetaLookupKey(src)
-  
+
   // Get entry from meta (exclude special keys)
   if (lookupKey.startsWith('_')) return { width: 1000, height: 1000 }
   const value = metaData[lookupKey]
@@ -89,10 +89,20 @@ const getDimsFromMetadata = (
   }
 
   // Fallback to any available size
-  const fallbackOrder: Array<'lg' | 'md' | 'f' | 'sm' | 'o'> = ['lg', 'md', 'f', 'sm', 'o']
+  const fallbackOrder: Array<'lg' | 'md' | 'f' | 'sm' | 'o'> = [
+    'lg',
+    'md',
+    'f',
+    'sm',
+    'o',
+  ]
   for (const key of fallbackOrder) {
     const fallbackDims = entry[key as keyof MetaEntry] as Dimensions | undefined
-    if (fallbackDims && typeof fallbackDims === 'object' && 'w' in fallbackDims) {
+    if (
+      fallbackDims &&
+      typeof fallbackDims === 'object' &&
+      'w' in fallbackDims
+    ) {
       return { width: fallbackDims.w, height: fallbackDims.h }
     }
   }

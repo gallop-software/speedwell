@@ -49,7 +49,10 @@ export default function Form1() {
               label="Message"
               required
             />
-            <FormButton name="submit" label="Send Message" />
+            <FormButton
+              name="submit"
+              label="Send Message"
+            />
           </Form>
         </Column>
         <Column className="aspect-[8/9] relative">

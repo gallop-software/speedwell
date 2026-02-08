@@ -22,8 +22,7 @@ const metadata: PageMetadata = {
   description:
     'Explore stunning before and after transformations by Timmerman. See how our expert interior designers transform residential and commercial spaces with creative vision and meticulous attention to detail.',
   slug: 'before-after',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
   focusKeyword: 'before after interior design',
   readingTimeMinutes: 6,
   publishDate: '2024-09-15T00:00:00Z',

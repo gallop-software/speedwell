@@ -91,8 +91,7 @@ export const metadata = {
     'Open-plan family home renovation featuring contemporary design, custom millwork, and smart home integration for comfortable modern living.',
   date: '2024-11-10',
   slug: 'contemporary-family-home',
-  featuredImage:
-    '/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
+  featuredImage: '/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
   categories: ['Residential', 'Contemporary', 'Family Home'],
   alternates: {
     canonical: '/post/contemporary-family-home',

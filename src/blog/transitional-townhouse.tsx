@@ -92,8 +92,7 @@ export const metadata = {
     'Urban townhouse blending historic architecture with contemporary design through transitional style, honoring character while updating for modern living.',
   date: '2024-08-02',
   slug: 'transitional-townhouse',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
   categories: ['Residential', 'Transitional', 'Townhouse'],
   alternates: {
     canonical: '/post/transitional-townhouse',

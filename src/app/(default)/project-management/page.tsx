@@ -32,8 +32,7 @@ const metadata: PageMetadata = {
   description:
     'Seamless interior design project management from concept to completion. We coordinate all aspects of your project with precision, ensuring on-time delivery, budget adherence, and exceptional quality.',
   slug: 'project-management',
-  featuredImage:
-    '/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
+  featuredImage: '/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg',
   focusKeyword: 'interior design project management',
   readingTimeMinutes: 6,
   publishDate: '2024-04-15T11:00:00Z',

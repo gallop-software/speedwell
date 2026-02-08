@@ -98,8 +98,7 @@ export const metadata = {
     "Serious cook's kitchen featuring professional-grade appliances, abundant prep space, and restaurant-quality functionality for home.",
   date: '2025-04-05',
   slug: 'chef-kitchen-upgrade',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
   categories: ['Kitchen Design', 'Professional', 'Gourmet'],
   alternates: {
     canonical: '/post/chef-kitchen-upgrade',

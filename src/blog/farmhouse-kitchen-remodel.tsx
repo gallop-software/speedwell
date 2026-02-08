@@ -97,8 +97,7 @@ export const metadata = {
     'Charming farmhouse kitchen renovation featuring Shaker cabinets, butcher block counters, and rustic details with modern amenities.',
   date: '2024-06-12',
   slug: 'farmhouse-kitchen-remodel',
-  featuredImage:
-    '/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg',
+  featuredImage: '/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg',
   categories: ['Kitchen Design', 'Farmhouse', 'Traditional'],
   alternates: {
     canonical: '/post/farmhouse-kitchen-remodel',

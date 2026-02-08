@@ -105,8 +105,7 @@ export const metadata = {
     'Sophisticated salon-style gallery wall featuring curated art collection, family photographs, and strategic arrangement for maximum visual impact.',
   date: '2024-05-10',
   slug: 'gallery-wall-curation',
-  featuredImage:
-    '/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg',
+  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg',
   categories: ['Art Display', 'Residential', 'Styling'],
   alternates: {
     canonical: '/post/gallery-wall-curation',
