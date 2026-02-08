@@ -118,7 +118,7 @@ export function Button({
   const variantClass = dark ? variants[variant].dark : variants[variant].light
   // Text variant doesn't use size padding
   const sizeClass = variant === 'text' ? 'text-sm' : sizes[size]
-  className = clsx(className, variantClass, sizeClass)
+  className = clsx('gallop-button', className, variantClass, sizeClass)
 
   const iconElement = icon ? (
     <Icon
