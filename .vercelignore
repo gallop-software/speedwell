@@ -1,5 +1,0 @@
-# Ignore original images directory - not needed for deployment
-public/originals/
-public/originals/*
-public/originals-not-used/
-public/originals-not-used/*
