@@ -244,16 +244,14 @@ export function Gallery({
           : ''
 
   return (
-    <LightboxWrapper>
-      <div
-        className={clsx(
-          'relative isolate mb-7 !columns-auto',
-          maxWidthClass,
-          className
-        )}
-      >
-        {rows}
-      </div>
+    <LightboxWrapper
+      className={clsx(
+        'relative isolate mb-7 !columns-auto',
+        maxWidthClass,
+        className
+      )}
+    >
+      {rows}
     </LightboxWrapper>
   )
 }
