@@ -11,7 +11,7 @@ export default function Cover6() {
     >
       <Accent
         textAlign="text-center"
-        color="text-white"
+        color="text-overlay-text"
         size="medium"
       >
         Capturing Moments That Last Forever

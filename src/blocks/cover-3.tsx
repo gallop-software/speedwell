@@ -8,7 +8,7 @@ import { Label } from '@/components/label'
 export default function Cover3() {
   return (
     <Section
-      className="relative py-30 overflow-hidden bg-black/70 px-0"
+      className="relative py-30 overflow-hidden bg-overlay/70 px-0"
       innerAlign="content"
     >
       <div className="absolute inset-0 w-full -z-1">
@@ -21,18 +21,18 @@ export default function Cover3() {
       </div>
       <Heading
         as="h2"
-        color="text-white"
+        color="text-overlay-text"
         textAlign="text-center"
       >
         Our Signature Dish
       </Heading>
-      <Paragraph color="text-white/90">
+      <Paragraph color="text-overlay-text/90">
         Introducing our renowned Prime Aged Ribeye with Truffle-Infused Mashed
         Potatoes and Roasted Seasonal Vegetables. A masterful composition of
         premium beef, velvety potatoes, and garden-fresh accompaniments that
         represents the pinnacle of steakhouse excellence.
       </Paragraph>
-      <Paragraph color="text-white/80">
+      <Paragraph color="text-overlay-text/80">
         Featuring 28-day dry-aged USDA Prime ribeye, hand-selected for its
         exceptional marbling and tenderness. Our silky mashed potatoes are
         enriched with black truffle oil and European butter, while seasonal
@@ -46,9 +46,9 @@ export default function Cover3() {
         gap="gap-4"
         className="mb-8"
       >
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+        <div className="bg-overlay-text/10 backdrop-blur-sm rounded-lg p-4 border border-overlay-text/20">
           <Label
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             fontWeight="font-semibold"
             margin="mb-1"
@@ -56,16 +56,16 @@ export default function Cover3() {
             Preparation
           </Label>
           <Paragraph
-            color="text-white/80"
+            color="text-overlay-text/80"
             fontSize="text-xs"
             margin="mb-0"
           >
             Wood-fired grill with butter basting technique
           </Paragraph>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+        <div className="bg-overlay-text/10 backdrop-blur-sm rounded-lg p-4 border border-overlay-text/20">
           <Label
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             fontWeight="font-semibold"
             margin="mb-1"
@@ -73,16 +73,16 @@ export default function Cover3() {
             Wine Pairing
           </Label>
           <Paragraph
-            color="text-white/80"
+            color="text-overlay-text/80"
             fontSize="text-xs"
             margin="mb-0"
           >
             2018 Napa Valley Cabernet Sauvignon
           </Paragraph>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+        <div className="bg-overlay-text/10 backdrop-blur-sm rounded-lg p-4 border border-overlay-text/20">
           <Label
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             fontWeight="font-semibold"
             margin="mb-1"
@@ -90,16 +90,16 @@ export default function Cover3() {
             Chef's Note
           </Label>
           <Paragraph
-            color="text-white/80"
+            color="text-overlay-text/80"
             fontSize="text-xs"
             margin="mb-0"
           >
             Recommended medium-rare for optimal flavor
           </Paragraph>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+        <div className="bg-overlay-text/10 backdrop-blur-sm rounded-lg p-4 border border-overlay-text/20">
           <Label
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             fontWeight="font-semibold"
             margin="mb-1"
@@ -107,7 +107,7 @@ export default function Cover3() {
             Accolades
           </Label>
           <Paragraph
-            color="text-white/80"
+            color="text-overlay-text/80"
             fontSize="text-xs"
             margin="mb-0"
           >

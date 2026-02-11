@@ -83,7 +83,7 @@ export default function Testimonial9() {
             <div
               className={`rounded-2xl p-8 flex flex-col h-full transition-all duration-300 ${
                 testimonial.featured
-                  ? 'bg-accent text-white ring-4 ring-accent/20'
+                  ? 'bg-accent text-accent-contrast ring-4 ring-accent/20'
                   : 'bg-body hover:ring-1 ring-body-dark/10'
               }`}
             >
@@ -91,7 +91,7 @@ export default function Testimonial9() {
               <div className="mb-4">
                 <Icon
                   icon={chatBubbleIcon}
-                  className={`w-10 h-10 ${testimonial.featured ? 'text-white/30' : 'text-accent/20'}`}
+                  className={`w-10 h-10 ${testimonial.featured ? 'text-accent-contrast/30' : 'text-accent/20'}`}
                 />
               </div>
 
@@ -101,7 +101,7 @@ export default function Testimonial9() {
                   <Icon
                     key={i}
                     icon={starIcon}
-                    className={`w-5 h-5 ${testimonial.featured ? 'text-white' : 'text-accent'}`}
+                    className={`w-5 h-5 ${testimonial.featured ? 'text-accent-contrast' : 'text-accent'}`}
                   />
                 ))}
               </div>
@@ -111,7 +111,7 @@ export default function Testimonial9() {
                 lineHeight="leading-relaxed"
                 margin="mb-8"
                 fontStyle="italic"
-                color={testimonial.featured ? 'text-white/90' : undefined}
+                color={testimonial.featured ? 'text-accent-contrast/90' : undefined}
                 className="grow"
               >
                 &ldquo;{testimonial.quote}&rdquo;
@@ -132,13 +132,13 @@ export default function Testimonial9() {
                       as="h4"
                       fontSize="text-base"
                       margin="mb-1"
-                      color={testimonial.featured ? 'text-white' : undefined}
+                      color={testimonial.featured ? 'text-accent-contrast' : undefined}
                     >
                       {testimonial.author}
                     </Heading>
                     <Label
                       margin="mb-0"
-                      color={testimonial.featured ? 'text-white/70' : undefined}
+                      color={testimonial.featured ? 'text-accent-contrast/70' : undefined}
                     >
                       {testimonial.title}
                     </Label>
@@ -148,7 +148,7 @@ export default function Testimonial9() {
                 <div
                   className={`mt-4 inline-block px-3 py-1 rounded-full text-xs font-medium ${
                     testimonial.featured
-                      ? 'bg-white/20 text-white'
+                      ? 'bg-accent-contrast/20 text-accent-contrast'
                       : 'bg-body2 text-contrast'
                   }`}
                 >

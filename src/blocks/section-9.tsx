@@ -218,11 +218,11 @@ export default function Section9() {
               className="absolute inset-0 w-full h-full object-cover"
               rounded="rounded-none"
             />
-            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-overlay/70" />
             <div className="relative text-center">
               <Heading
                 as="h2"
-                color="text-white"
+                color="text-overlay-text"
                 margin="mb-2"
                 disableId={true}
               >
@@ -230,7 +230,7 @@ export default function Section9() {
               </Heading>
               <Label
                 variant="large"
-                color="text-white"
+                color="text-overlay-text"
               >
                 {category.number}
               </Label>
@@ -300,7 +300,7 @@ export default function Section9() {
 
       {/* Sticky Bottom Navigation */}
       <div className="hidden sticky bottom-6 z-1 lg:flex w-full justify-center mt-10">
-        <div className="bg-white/70 backdrop-blur-xl rounded-lg px-4 py-3 ring-1 ring-gray-100 shadow-2xl flex items-center gap-6">
+        <div className="bg-body/70 backdrop-blur-xl rounded-lg px-4 py-3 ring-1 ring-body-light shadow-2xl flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6 ml-4 mr-20">
             {menuCategories.map((category) => (
               <a

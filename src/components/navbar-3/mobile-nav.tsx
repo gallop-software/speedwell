@@ -49,7 +49,7 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
                               'inline-flex items-center justify-center w-full',
                               'rounded-full border border-transparent shadow-md',
                               'pl-6 pr-4 py-2 text-base font-medium',
-                              'bg-gray-950 text-white hover:bg-gray-800',
+                              'bg-contrast-dark text-body hover:bg-contrast',
                               'transition-colors duration-200 cursor-pointer',
                               'focus:outline-none'
                             )
@@ -117,7 +117,7 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
                           'inline-flex items-center justify-center',
                           'rounded-full border border-transparent shadow-md',
                           'px-6 py-2 text-base font-medium',
-                          'bg-gray-950 text-white hover:bg-gray-800',
+                          'bg-contrast-dark text-body hover:bg-contrast',
                           'transition-colors duration-200',
                           'focus:outline-none'
                         )
@@ -133,7 +133,7 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
         {/* Mobile Search Button */}
         <button
           type="button"
-          className="mt-4 w-full flex items-center justify-start rounded-lg py-2.5 pr-3.5 pl-4 text-lg ring-1 ring-contrast outline-none focus:outline-none focus:ring-contrast hover:bg-black/2.5"
+          className="mt-4 w-full flex items-center justify-start rounded-lg py-2.5 pr-3.5 pl-4 text-lg ring-1 ring-contrast outline-none focus:outline-none focus:ring-contrast hover:bg-contrast-dark/2.5"
           onClick={() => setIsSearching(true)}
         >
           <Icon

@@ -9,7 +9,7 @@ export default function Hero5() {
   return (
     <div className="relative h-screen max-h-[1200px] min-h-[900px] overflow-hidden">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-overlay/50 via-overlay/60 to-overlay/70 z-10"></div>
 
       {/* Background image */}
       <Image
@@ -37,7 +37,7 @@ export default function Hero5() {
           {/* Main heading */}
           <Heading
             as="h1"
-            color="text-white"
+            color="text-overlay-text"
             margin="mb-6"
             fontSize="text-5xl md:text-6xl lg:text-7xl"
           >
@@ -46,7 +46,7 @@ export default function Hero5() {
 
           {/* Tagline */}
           <Paragraph
-            color="text-white/80"
+            color="text-overlay-text/80"
             fontSize="text-xl md:text-2xl"
             margin="mb-4"
             lineHeight="leading-relaxed"
@@ -58,11 +58,11 @@ export default function Hero5() {
           </Paragraph>
 
           {/* Product details */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 my-10 text-white/80 text-sm tracking-wider">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 my-10 text-overlay-text/80 text-sm tracking-wider">
             <Span color="text-inherit">0% Alcohol</Span>
-            <span className="w-1 h-1 bg-white/40 rounded-full"></span>
+            <span className="w-1 h-1 bg-overlay-text/40 rounded-full"></span>
             <Span color="text-inherit">750ml</Span>
-            <span className="w-1 h-1 bg-white/40 rounded-full"></span>
+            <span className="w-1 h-1 bg-overlay-text/40 rounded-full"></span>
             <Span color="text-inherit">Small Batch</Span>
           </div>
 

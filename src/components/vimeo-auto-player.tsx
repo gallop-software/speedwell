@@ -130,7 +130,7 @@ export function VimeoAutoPlayer({
         } as React.CSSProperties
       }
     >
-      <div className="absolute inset-0 h-full w-full overflow-hidden rounded-(--radius) shadow-2xl ring-1 ring-black/10">
+      <div className="absolute inset-0 h-full w-full overflow-hidden rounded-(--radius) shadow-2xl ring-1 ring-contrast-dark/10">
         {mounted && (
           <iframe
             ref={iframeRef}

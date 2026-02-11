@@ -14,7 +14,7 @@ import { Grid } from '@/components/grid'
 
 export default function Form4() {
   return (
-    <Section className="py-30 bg-white">
+    <Section className="py-30 bg-body">
       <div className="max-w-3xl mx-auto">
         <Heading
           as="h2"

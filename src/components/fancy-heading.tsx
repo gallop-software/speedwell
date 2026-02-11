@@ -45,7 +45,7 @@ export function FancyHeading({
         <span className="lg:pr-[25%] block">{text}</span>{' '}
         <Accent
           className="lg:pl-[15%] lg:-mt-6"
-          color="text-black"
+          color="text-contrast-dark"
           fontSize="text-6xl sm:text-7xl lg:text-7xl"
         >
           {accent}

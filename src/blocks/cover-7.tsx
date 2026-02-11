@@ -14,7 +14,7 @@ export default function Cover7() {
       <Grid
         cols="grid-cols-2 md:grid-cols-3"
         gap="gap-0"
-        className="bg-black"
+        className="bg-overlay"
       >
         {/* Image 1 - Tall */}
         <div className="relative aspect-auto row-span-2 overflow-hidden group">
@@ -25,7 +25,7 @@ export default function Cover7() {
             size="large"
             rounded="rounded-none"
           />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
         </div>
 
         {/* Image 2 */}
@@ -37,7 +37,7 @@ export default function Cover7() {
             size="medium"
             rounded="rounded-none"
           />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
         </div>
 
         {/* Image 3 */}
@@ -49,7 +49,7 @@ export default function Cover7() {
             size="medium"
             rounded="rounded-none"
           />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
         </div>
 
         {/* Image 4 */}
@@ -61,7 +61,7 @@ export default function Cover7() {
             size="medium"
             rounded="rounded-none"
           />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
         </div>
 
         {/* Image 5 */}
@@ -73,7 +73,7 @@ export default function Cover7() {
             size="medium"
             rounded="rounded-none"
           />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
         </div>
       </Grid>
 

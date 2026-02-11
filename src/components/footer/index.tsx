@@ -53,7 +53,7 @@ export function Footer() {
   return (
     <footer className="">
       <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/50 z-0" />
+        <div className="absolute inset-2 rounded-4xl bg-body/50 z-0" />
         <Container className="pt-20 z-10 relative">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-y-0 pb-6 lg:gap-24 items-center">
             {/* Center content - first in HTML order, but visually centered on desktop */}

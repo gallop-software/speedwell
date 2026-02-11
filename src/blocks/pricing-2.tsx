@@ -27,7 +27,7 @@ const pricingPlans = [
     name: 'Premier',
     description: 'For unforgettable celebrations',
     price: '$6,500',
-    priceColor: 'text-white',
+    priceColor: 'text-accent-contrast',
     featured: true,
     features: [
       'Up to 150 guests',
@@ -87,7 +87,7 @@ export default function Pricing2() {
               'p-8 rounded-2xl transition-all duration-300 flex flex-col relative',
               plan.featured
                 ? 'bg-gradient-to-br from-accent to-accent/90 shadow-2xl hover:shadow-3xl hover:-translate-y-2 xl:scale-105 border-4 border-accent/20'
-                : 'bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1'
+                : 'bg-body shadow-lg hover:shadow-2xl hover:-translate-y-1'
             )}
           >
             {plan.featured && (
@@ -103,12 +103,12 @@ export default function Pricing2() {
               <Heading
                 as="h4"
                 margin="mb-2"
-                color={plan.featured ? 'text-white' : undefined}
+                color={plan.featured ? 'text-accent-contrast' : undefined}
               >
                 {plan.name}
               </Heading>
               <Paragraph
-                color={plan.featured ? 'text-white/90' : 'text-body-muted'}
+                color={plan.featured ? 'text-accent-contrast/90' : 'text-body-muted'}
                 margin="mb-4"
               >
                 {plan.description}
@@ -126,7 +126,7 @@ export default function Pricing2() {
             <List
               variant="unstyled"
               spacing="loose"
-              color={plan.featured ? 'text-white' : undefined}
+              color={plan.featured ? 'text-accent-contrast' : undefined}
               className="mb-6"
             >
               {plan.features.map((feature) => (

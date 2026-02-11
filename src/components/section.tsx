@@ -42,7 +42,7 @@ export function Section({
           <div
             className={clsx(
               'absolute inset-0 -z-[1]',
-              overlayColor || 'bg-black/30'
+              overlayColor || 'bg-overlay/30'
             )}
           ></div>
         </>

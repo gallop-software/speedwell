@@ -65,7 +65,7 @@ export default function Form1() {
           />
           <Accent
             className="absolute -top-[5%] lg:-top-[10%] right-[5%] lg:right-[5%] xl:-right-[10%] z-30 -rotate-[10deg]"
-            color="text-white"
+            color="text-body"
           >
             connect
           </Accent>

@@ -46,12 +46,12 @@ export function Accordion({
               >
                 <Icon
                   icon={chevronDownIcon}
-                  className="size-6 text-gray-900"
+                  className="size-6 text-contrast"
                 />
               </motion.div>
             </DisclosureButton>
 
-            <DisclosurePanel className="mt-8 text-sm leading-5 text-white/50 max-w-3xl">
+            <DisclosurePanel className="mt-8 text-sm leading-5 text-body/50 max-w-3xl">
               {children}
             </DisclosurePanel>
           </>

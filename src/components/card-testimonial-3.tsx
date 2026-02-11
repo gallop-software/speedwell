@@ -22,7 +22,7 @@ export function CardTestimonial3({
   image,
 }: CardTestimonial3Props) {
   return (
-    <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+    <div className="bg-body rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
       {/* Stars */}
       <div className="flex gap-1 mb-6">
         {[...Array(rating)].map((_, i) => (
