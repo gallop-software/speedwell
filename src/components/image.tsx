@@ -181,7 +181,7 @@ export function Image({
       <figure className="space-y-2">
         {imgTag}
         <figcaption
-          className="text-sm text-gray-600 text-center italic"
+          className="text-sm text-contrast-light text-center italic"
           dangerouslySetInnerHTML={{ __html: caption }}
         />
       </figure>
@@ -205,7 +205,7 @@ export function Image({
             {imgTag}
           </Link>
           <figcaption
-            className="text-sm text-gray-600 text-center italic"
+            className="text-sm text-contrast-light text-center italic"
             dangerouslySetInnerHTML={{ __html: caption }}
           />
         </figure>

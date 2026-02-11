@@ -215,7 +215,7 @@ export function DatePickerInput({
         onClose={() => setIsOpen(false)}
         className="relative z-50"
       >
-        <DialogBackdrop className="fixed inset-0 bg-black/30" />
+        <DialogBackdrop className="fixed inset-0 bg-overlay/30" />
         <div className="fixed inset-0 flex items-end lg:items-center justify-center p-0 lg:p-4">
           <DialogPanel className="w-full lg:w-auto bg-body rounded-t-2xl lg:rounded-2xl shadow-xl max-h-[90vh] overflow-auto">
             <div className="p-6 lg:p-8">

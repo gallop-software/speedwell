@@ -53,7 +53,7 @@ export function Accent({
 
   // Add subtle drop shadow for white text to improve readability
   const textShadow =
-    finalColor === 'text-white' ? 'text-shadow-sm text-shadow-contrast/10' : ''
+    finalColor === 'text-body' ? 'text-shadow-sm text-shadow-contrast/10' : ''
 
   return (
     <span

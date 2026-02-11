@@ -35,7 +35,7 @@ export function Card3({
     <a
       key={id}
       href={href}
-      className="group relative focus:outline-none p-10 border border-black aspect-square flex justify-center items-center hover:bg-body2/40"
+      className="group relative focus:outline-none p-10 border border-contrast-dark aspect-square flex justify-center items-center hover:bg-body2/40"
       aria-label={alt}
     >
       {/* Card Container */}

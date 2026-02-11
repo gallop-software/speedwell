@@ -85,7 +85,7 @@ export function VideoPopup({
           </div>
           <button
             type="button"
-            className="absolute z-20 top-0 right-0 rounded-none text-white focus:outline-none focus:ring-0 hover:bg-white/10 p-2"
+            className="absolute z-20 top-0 right-0 rounded-none text-overlay-text focus:outline-none focus:ring-0 hover:bg-overlay-text/10 p-2"
             onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">Close panel</span>

@@ -8,7 +8,7 @@ import { Accent } from '@/components/accent'
 export default function Content29() {
   return (
     <Section className="py-20 md:py-30 bg-body2 relative">
-      <div className="absolute w-[50%] border-r border-b border-black left-0 -top-20 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>
+      <div className="absolute w-[50%] border-r border-b border-contrast-dark left-0 -top-20 bottom-auto h-[500px] sm:h-[600px] md:h-[700px] lg:bottom-60 lg:h-auto pointer-events-none"></div>
       <Columns reverseColumns={false}>
         <Column className="aspect-8/9 relative">
           <Image
@@ -26,7 +26,7 @@ export default function Content29() {
           />
           <Accent
             className="absolute bottom-[35%] left-4 z-30"
-            color="text-white"
+            color="text-body"
           >
             real results
           </Accent>

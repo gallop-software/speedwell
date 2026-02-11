@@ -46,8 +46,8 @@ export function DesktopNav({
                     className={clsx(
                       'flex h-full cursor-pointer items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply focus:outline-none rounded-lg',
                       dark
-                        ? 'text-white hover:bg-white/10'
-                        : 'text-contrast data-hover:bg-black/[2.5%]'
+                        ? 'text-body hover:bg-body/10'
+                        : 'text-contrast data-hover:bg-contrast-dark/[2.5%]'
                     )}
                   >
                     {label}
@@ -92,7 +92,7 @@ export function DesktopNav({
                             href={item.href}
                             prefetch={true}
                             scroll={true}
-                            className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-black/[2.5%] cursor-pointer"
+                            className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-contrast-dark/[2.5%] cursor-pointer"
                           >
                             <span className="mt-1 flex size-11 flex-none items-center justify-center rounded-full bg-body-light group-hover:bg-body-light/50">
                               <Icon
@@ -123,8 +123,8 @@ export function DesktopNav({
               className={clsx(
                 'flex items-center px-4 py-3 text-lg font-body font-medium bg-blend-multiply rounded-lg',
                 dark
-                  ? 'text-white hover:bg-white/10'
-                  : 'text-contrast hover:bg-black/[2.5%]'
+                  ? 'text-body hover:bg-body/10'
+                  : 'text-contrast hover:bg-contrast-dark/[2.5%]'
               )}
             >
               {label}

@@ -204,17 +204,17 @@ function AsyncSidebarPanel({
         )}
       >
         {/* Header */}
-        <div className="sticky top-0 z-10 bg-body/95 backdrop-blur-sm border-b border-gray-200">
+        <div className="sticky top-0 z-10 bg-body/95 backdrop-blur-sm border-b border-body-dark">
           <div className="flex items-center justify-between px-4 md:px-8 py-4">
             <h2
-              className="text-lg font-semibold text-gray-900 truncate transition-opacity duration-150"
+              className="text-lg font-semibold text-contrast truncate transition-opacity duration-150"
               style={{ opacity: titleOpacity }}
             >
               {item.title}
             </h2>
             <button
               type="button"
-              className="rounded-full h-10 w-10 flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors shrink-0"
+              className="rounded-full h-10 w-10 flex items-center justify-center cursor-pointer hover:bg-body-light transition-colors shrink-0"
               onClick={(e) => {
                 e.stopPropagation()
                 onClose(item.id)
@@ -223,7 +223,7 @@ function AsyncSidebarPanel({
             >
               <Icon
                 icon={xMarkIcon}
-                className="h-5 w-5 text-gray-600"
+                className="h-5 w-5 text-contrast-light"
               />
             </button>
           </div>

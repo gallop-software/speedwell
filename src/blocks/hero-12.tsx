@@ -25,7 +25,7 @@ export default function Hero12() {
               />
               <Accent
                 className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
-                color="text-white"
+                color="text-overlay-text"
               >
                 smart layouts
               </Accent>

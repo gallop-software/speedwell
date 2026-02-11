@@ -22,7 +22,7 @@ export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
       />
 
       {/* Overlay with blur and opacity */}
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-md" />
+      <div className="absolute inset-0 bg-body/50 backdrop-blur-md" />
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 py-32 text-center">

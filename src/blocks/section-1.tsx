@@ -92,7 +92,7 @@ export default function Section1() {
                     : 'bg-body/9'
               }`}
             >
-              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white">
+              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-body">
                 <Icon
                   icon={item.icon}
                   className="w-10 h-10 text-accent"

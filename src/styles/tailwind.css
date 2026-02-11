@@ -32,15 +32,22 @@
   --text-6xl: 3.2rem;
   --text-6xl--line-height: 1.3;
 
+  /* ── Surface / Background ── */
   --color-body: #ffffff;
   --color-body-light: #faf6f4;
   --color-body-dark: #d9d1ce;
   --color-body2: #f2eae7;
 
+  /* ── Text / Foreground ── */
   --color-contrast: #2f0e0a;
   --color-contrast-light: #53302b;
   --color-contrast-dark: #190705;
 
+  /* ── Overlay (fixed context — image/video scrims) ── */
+  --color-overlay: #000000;
+  --color-overlay-text: #ffffff;
+
+  /* ── Brand Accent 1 ── */
   --color-accent: #340e0a;
   --color-accent-light: #4b1c18;
   --color-accent-dark: #2f0e0a;

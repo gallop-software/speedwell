@@ -54,7 +54,7 @@ export function Footer2() {
   return (
     <footer className="">
       <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/50 z-0" />
+        <div className="absolute inset-2 rounded-4xl bg-body/50 z-0" />
         <Container className="pt-16 pb-0 z-10 relative">
           {/* Main footer content - 4 columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[35%_1fr_1fr_1fr] gap-12 lg:gap-12 pb-12">

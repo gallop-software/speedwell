@@ -32,7 +32,7 @@ export default function Content37() {
           <Heading
             as="h2"
             styleAs="h3"
-            color="text-gray-600"
+            color="text-contrast-light"
             margin="mb-4"
           >
             Whole Home Design

@@ -21,7 +21,7 @@ export function VideoBackground({
   videoId,
   videoHash,
   posterImage,
-  gradientOverlay = 'bg-gradient-to-br from-purple-900/40 via-black/60 to-black/80',
+  gradientOverlay = 'bg-gradient-to-br from-purple-900/40 via-overlay/60 to-overlay/80',
   className,
 }: VideoBackgroundProps) {
   const [isMounted, setIsMounted] = useState(false)

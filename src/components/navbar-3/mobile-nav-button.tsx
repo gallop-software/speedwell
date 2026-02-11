@@ -35,7 +35,7 @@ export function MobileNavButton({
         className={clsx(
           'lg:hidden rounded-lg transition-colors duration-200 p-2 cursor-pointer -mr-2 focus:outline-none focus:ring-0',
           dark
-            ? 'text-white hover:text-white/80'
+            ? 'text-body hover:text-body/80'
             : 'text-accent hover:text-accent-dark'
         )}
         aria-label="Open mobile menu"
@@ -54,7 +54,7 @@ export function MobileNavButton({
       >
         <DialogBackdrop
           transition
-          className="fixed inset-0 bg-white/50 backdrop-blur-md duration-500 ease-out data-closed:opacity-0"
+          className="fixed inset-0 bg-body/50 backdrop-blur-md duration-500 ease-out data-closed:opacity-0"
         />
 
         <div className="fixed inset-0 font-body h-screen min-h-screen text-contrast max-w-[86%] md:max-w-[77%] w-full right-0 left-auto scroll-smooth">

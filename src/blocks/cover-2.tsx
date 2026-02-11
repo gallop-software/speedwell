@@ -10,7 +10,7 @@ export default function Cover2() {
     >
       <Accent
         textAlign="text-center"
-        color="text-white"
+        color="text-overlay-text"
         size="medium"
       >
         Transform Your Space

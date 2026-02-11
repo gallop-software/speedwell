@@ -224,7 +224,7 @@ function BlogClientInner({
                   openSidebar(post.slug, post.metadata.title || '')
                 }
               >
-                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-body rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   {post.metadata.featuredImage && (
                     <div className="relative overflow-hidden w-full">
                       <Link
@@ -256,7 +256,7 @@ function BlogClientInner({
                             (category: string, idx: number) => (
                               <Link
                                 key={idx}
-                                className="bg-gray-100 text-contrast text-xs px-3 py-[1px] rounded-full outline-0"
+                                className="bg-body-light text-contrast text-xs px-3 py-[1px] rounded-full outline-0"
                                 href={`/category/${getSlug(category)}`}
                                 onClick={(e) => e.preventDefault()}
                               >

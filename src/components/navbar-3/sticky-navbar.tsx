@@ -55,7 +55,7 @@ export function StickyNavbar({
                       scroll={true}
                       href={homeLink}
                       title="Logo"
-                      className="block lg:hover:bg-black/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
+                      className="block lg:hover:bg-contrast-dark/2.5 lg:rounded-lg lg:p-2  outline-none focus:outline-none"
                     >
                       <Logo
                         className=""

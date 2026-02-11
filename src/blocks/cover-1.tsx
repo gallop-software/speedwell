@@ -11,7 +11,7 @@ export default function Cover1() {
       <Accent
         textAlign="text-center"
         size="medium"
-        color="text-white"
+        color="text-overlay-text"
       >
         meet our team
       </Accent>

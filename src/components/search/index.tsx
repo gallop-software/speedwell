@@ -66,9 +66,9 @@ export function Search({
         onClose={() => close(autocomplete)}
         className="relative z-50"
       >
-        <DialogBackdrop className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm" />
+        <DialogBackdrop className="fixed inset-0 bg-overlay/50 backdrop-blur-sm" />
         <div className="fixed inset-0 px-4 pt-4 sm:px-6 pb-28 sm:pt-20 md:py-32 lg:px-8 lg:py-[15vh] flex items-start">
-          <DialogPanel className="mx-auto w-full transform-gpu overflow-hidden rounded-xl bg-white shadow-xl sm:max-w-xl flex flex-col max-h-[calc(100vh-8rem)] sm:max-h-[calc(100vh-10)] md:max-h-[calc(100vh-16rem)] lg:max-h-[calc(100vh-30vh)]">
+          <DialogPanel className="mx-auto w-full transform-gpu overflow-hidden rounded-xl bg-body shadow-xl sm:max-w-xl flex flex-col max-h-[calc(100vh-8rem)] sm:max-h-[calc(100vh-10)] md:max-h-[calc(100vh-16rem)] lg:max-h-[calc(100vh-30vh)]">
             {/* Root & Form props from autocomplete */}
             <div
               {...autocomplete.getRootProps({})}

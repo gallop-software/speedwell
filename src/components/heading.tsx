@@ -76,7 +76,7 @@ export function Heading({
           lineHeight: 'leading-tight sm:leading-tight md:leading-tight',
           textWrap: '',
           fontFamily: 'font-heading',
-          color: 'text-gray-900',
+          color: 'text-contrast',
           margin: 'mb-8',
         }
       case 'h3':
@@ -87,7 +87,7 @@ export function Heading({
           lineHeight: 'leading-normal',
           textWrap: '',
           fontFamily: 'font-heading',
-          color: 'text-gray-900',
+          color: 'text-contrast',
           margin: 'mb-8',
         }
       case 'h4':
@@ -109,7 +109,7 @@ export function Heading({
           lineHeight: 'leading-tight',
           textWrap: '',
           fontFamily: 'font-heading',
-          color: 'text-gray-900',
+          color: 'text-contrast',
           margin: 'mb-8',
         }
       case 'h6':
@@ -120,7 +120,7 @@ export function Heading({
           lineHeight: 'leading-tight',
           textWrap: '',
           fontFamily: 'font-heading',
-          color: 'text-gray-900',
+          color: 'text-contrast',
           margin: 'mb-8',
         }
       default:
@@ -131,7 +131,7 @@ export function Heading({
           lineHeight: 'leading-tight sm:leading-tight md:leading-tight',
           textWrap: '',
           fontFamily: 'font-heading',
-          color: 'text-gray-900',
+          color: 'text-contrast',
           margin: 'mb-8',
         }
     }

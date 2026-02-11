@@ -45,8 +45,8 @@ export function SearchButton({
         className={clsx(
           'rounded-lg transition-colors duration-200 cursor-pointer p-2 outline-none focus:outline-none',
           dark
-            ? 'text-white hover:text-white/80 hover:bg-white/10'
-            : 'text-accent hover:text-accent-dark hover:bg-black/2.5'
+            ? 'text-body hover:text-body/80 hover:bg-body/10'
+            : 'text-accent hover:text-accent-dark hover:bg-contrast-dark/2.5'
         )}
         aria-label="search"
         onClick={() => setIsSearching((prev) => !prev)}

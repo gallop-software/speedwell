@@ -57,7 +57,7 @@ export default function RootLayout({
       lang="en"
       style={rootStyle}
     >
-      <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
+      <body className="bg-body font-body text-lg font-medium leading-normal text-contrast antialiased">
         <div>{children}</div>
         <SmoothScroll />
         {process.env.VERCEL === '1' && <Analytics />}
