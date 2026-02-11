@@ -19,7 +19,7 @@ const WhimsicalArrow = () => (
 
 export default function Process1() {
   return (
-    <Section className="py-30 bg-gradient-to-br from-gray-100 to-white">
+    <Section className="py-30 bg-gradient-to-br from-body-light to-body">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <Subheading className="mb-6">Our Branding Process</Subheading>
         <Heading as="h2">

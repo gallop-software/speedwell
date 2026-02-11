@@ -108,7 +108,7 @@ export function MobileNav({ close }: { close: () => void }): ReactElement {
         {/* Mobile Search Button */}
         <button
           type="button"
-          className="mt-4 w-full flex items-center justify-start rounded-lg py-2.5 pr-3.5 pl-4 text-lg ring-1 ring-contrast outline-none focus:outline-none focus:ring-contrast hover:bg-black/2.5"
+          className="mt-4 w-full flex items-center justify-start rounded-lg py-2.5 pr-3.5 pl-4 text-lg ring-1 ring-contrast outline-none focus:outline-none focus:ring-contrast hover:bg-contrast-dark/2.5"
           onClick={() => setIsSearching(true)}
         >
           <Icon

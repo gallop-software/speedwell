@@ -21,7 +21,7 @@ export default function Hero4() {
                 lazy={false}
               />
               <Accent
-                color="text-white"
+                color="text-overlay-text"
                 className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12"
               >
                 transformed

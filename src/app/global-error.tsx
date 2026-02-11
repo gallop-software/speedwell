@@ -34,7 +34,7 @@ export default function GlobalError({
       <head>
         <title>Something Went Wrong</title>
       </head>
-      <body className="bg-white font-body text-lg font-medium leading-normal text-contrast antialiased">
+      <body className="bg-body font-body text-lg font-medium leading-normal text-contrast antialiased">
         <Navbar />
         <Section
           innerAlign="content"

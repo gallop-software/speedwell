@@ -87,7 +87,7 @@ export default function CallToAction7() {
                 >
                   <Icon
                     icon={feature.icon}
-                    className="w-6 h-6 text-white"
+                    className="w-6 h-6 text-body"
                   />
                 </div>
                 <div>

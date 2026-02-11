@@ -58,7 +58,7 @@ export default function Form6() {
               )}
             >
               <svg
-                className="w-6 h-6 text-white"
+                className="w-6 h-6 text-body"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

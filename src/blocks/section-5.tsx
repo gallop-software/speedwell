@@ -79,7 +79,7 @@ export default function Section5() {
         {services.map((service) => (
           <div
             key={service.title}
-            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+            className="group relative bg-body rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
           >
             <div className="relative h-auto md:h-48 overflow-hidden">
               <Image

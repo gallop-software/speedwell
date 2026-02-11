@@ -83,15 +83,15 @@ export default function Content40() {
               rounded="rounded-none"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/20" />
+            <div className="absolute inset-0 bg-linear-to-t from-overlay/80 via-overlay/50 to-overlay/20" />
 
             {/* Content */}
             <div className="relative z-10 flex flex-col h-full">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-sm flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-overlay-text/50 bg-overlay-text/10 backdrop-blur-sm flex items-center justify-center">
                 <Span
                   fontSize="text-2xl"
                   className="font-serif"
-                  color="text-white"
+                  color="text-overlay-text"
                 >
                   {feature.numeral}
                 </Span>
@@ -100,13 +100,13 @@ export default function Content40() {
                 as="h3"
                 styleAs="h4"
                 margin="mb-3 mt-auto"
-                color="text-white"
+                color="text-overlay-text"
               >
                 {feature.title}
               </Heading>
               <Paragraph
                 fontSize="text-sm"
-                color="text-white/80"
+                color="text-overlay-text/80"
                 margin="mb-0"
               >
                 {feature.description}

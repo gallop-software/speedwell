@@ -156,7 +156,7 @@ function Form({
         })}
       </form>
       {status && (
-        <p className="text-center text-sm font-medium text-gray-700 mt-4">
+        <p className="text-center text-sm font-medium text-contrast-light mt-4">
           {status}
         </p>
       )}

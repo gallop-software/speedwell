@@ -36,8 +36,8 @@ export default function Testimonial5() {
   return (
     <Section className="py-24 md:py-32 bg-contrast relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-black/20 to-transparent pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-black/20 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-overlay/20 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-overlay/20 to-transparent pointer-events-none"></div>
 
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-20">
@@ -49,12 +49,12 @@ export default function Testimonial5() {
         </Subheading>
         <Heading
           as="h2"
-          color="text-white"
+          color="text-overlay-text"
           margin="mb-6"
         >
           What the Experts Say
         </Heading>
-        <div className="w-16 h-px bg-white/20 mx-auto"></div>
+        <div className="w-16 h-px bg-overlay-text/20 mx-auto"></div>
       </div>
 
       {/* Testimonials Grid */}
@@ -70,13 +70,13 @@ export default function Testimonial5() {
             {/* Quote mark */}
             <Icon
               icon={quoteIcon}
-              className="absolute -top-4 -left-2 w-16 h-16 text-white/5 select-none"
+              className="absolute -top-4 -left-2 w-16 h-16 text-overlay-text/5 select-none"
             />
 
             {/* Content */}
             <div className="relative pt-14 flex flex-col h-full">
               <Quote
-                color="text-white/80"
+                color="text-overlay-text/80"
                 margin="mb-8"
                 className="flex-grow"
               >
@@ -84,15 +84,15 @@ export default function Testimonial5() {
               </Quote>
 
               {/* Author */}
-              <div className="pt-6 border-t border-white/10">
+              <div className="pt-6 border-t border-overlay-text/10">
                 <Subheading
-                  color="text-white"
+                  color="text-overlay-text"
                   margin="mb-1"
                 >
                   {testimonial.author}
                 </Subheading>
                 <Paragraph
-                  color="text-white/50"
+                  color="text-overlay-text/50"
                   fontSize="text-sm"
                   margin="mb-0"
                 >
@@ -112,20 +112,20 @@ export default function Testimonial5() {
       </Grid>
 
       {/* Awards bar */}
-      <div className="mt-20 mb-8 w-16 h-px bg-white/20 mx-auto"></div>
+      <div className="mt-20 mb-8 w-16 h-px bg-overlay-text/20 mx-auto"></div>
       <Grid
         cols="grid-cols-1 lg:grid-cols-3"
         gap="gap-12 lg:gap-20"
       >
         <div className="text-center">
           <Label
-            color="text-white/30"
+            color="text-overlay-text/30"
             margin="mb-2"
           >
             Gold Medal
           </Label>
           <Subheading
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             margin="mb-0"
           >
@@ -134,13 +134,13 @@ export default function Testimonial5() {
         </div>
         <div className="text-center">
           <Label
-            color="text-white/30"
+            color="text-overlay-text/30"
             margin="mb-2"
           >
             Best in Class
           </Label>
           <Subheading
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             margin="mb-0"
           >
@@ -149,13 +149,13 @@ export default function Testimonial5() {
         </div>
         <div className="text-center">
           <Label
-            color="text-white/30"
+            color="text-overlay-text/30"
             margin="mb-2"
           >
             Editor's Choice
           </Label>
           <Subheading
-            color="text-white"
+            color="text-overlay-text"
             fontSize="text-sm"
             margin="mb-0"
           >

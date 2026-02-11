@@ -73,7 +73,7 @@ export default function Content2() {
           {/* Host info */}
           <div className="flex items-center gap-6">
             <div className="flex-shrink-0">
-              <Span className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-bold text-xl">
+              <Span className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-body font-bold text-xl">
                 SC
               </Span>
             </div>

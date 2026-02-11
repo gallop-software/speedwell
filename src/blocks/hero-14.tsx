@@ -52,7 +52,7 @@ export default function Hero14() {
                 />
               </div>
               <Accent
-                color="text-white"
+                color="text-overlay-text"
                 className="absolute hidden lg:block -bottom-8 xl:top-0 left-6 xl:-left-30 transform -rotate-12"
               >
                 make impact

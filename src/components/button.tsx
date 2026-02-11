@@ -8,50 +8,50 @@ const variants = {
   primary: {
     light: clsx(
       'inline-flex items-center justify-center',
-      'rounded-full border border-transparent bg-gray-950 shadow-md',
-      'text-white',
-      'disabled:bg-gray-950 disabled:opacity-40 hover:bg-gray-800',
+      'rounded-full border border-transparent bg-contrast-dark shadow-md',
+      'text-body',
+      'disabled:bg-contrast-dark disabled:opacity-40 hover:bg-contrast',
       'transition-colors duration-200'
     ),
     dark: clsx(
       'inline-flex items-center justify-center',
-      'rounded-full border border-transparent bg-white shadow-md',
-      'text-gray-950',
-      'disabled:bg-white disabled:opacity-40 hover:bg-gray-100',
+      'rounded-full border border-transparent bg-body shadow-md',
+      'text-contrast-dark',
+      'disabled:bg-body disabled:opacity-40 hover:bg-body-light',
       'transition-colors duration-200'
     ),
   },
   secondary: {
     light: clsx(
       'relative inline-flex items-center justify-center',
-      'rounded-full border border-transparent bg-white/35 shadow-md ring-1 ring-[#D15052]/15',
+      'rounded-full border border-transparent bg-body/35 shadow-md ring-1 ring-accent4-light/15',
       'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]',
-      'text-gray-950',
-      'disabled:bg-white/25 disabled:opacity-40 hover:bg-white/25',
+      'text-contrast-dark',
+      'disabled:bg-body/25 disabled:opacity-40 hover:bg-body/25',
       'transition-colors duration-200'
     ),
     dark: clsx(
       'relative inline-flex items-center justify-center',
-      'rounded-full border border-transparent bg-gray-950/15 shadow-md ring-1 ring-white/15',
+      'rounded-full border border-transparent bg-contrast-dark/15 shadow-md ring-1 ring-body/15',
       'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#00000040]',
-      'text-white',
-      'disabled:bg-gray-950/15 disabled:opacity-40 hover:bg-gray-950/20',
+      'text-body',
+      'disabled:bg-contrast-dark/15 disabled:opacity-40 hover:bg-contrast-dark/20',
       'transition-colors duration-200'
     ),
   },
   outline: {
     light: clsx(
       'inline-flex items-center justify-center',
-      'rounded-full border border-transparent shadow-sm ring-2 ring-inset ring-gray-950',
-      'text-gray-950',
-      'disabled:bg-transparent disabled:opacity-40 hover:bg-gray-950/5',
+      'rounded-full border border-transparent shadow-sm ring-2 ring-inset ring-contrast-dark',
+      'text-contrast-dark',
+      'disabled:bg-transparent disabled:opacity-40 hover:bg-contrast-dark/5',
       'transition-colors duration-200'
     ),
     dark: clsx(
       'inline-flex items-center justify-center',
-      'rounded-full border border-transparent shadow-sm ring-2 ring-inset ring-white',
-      'text-white',
-      'disabled:bg-transparent disabled:opacity-40 hover:bg-white/5',
+      'rounded-full border border-transparent shadow-sm ring-2 ring-inset ring-body',
+      'text-body',
+      'disabled:bg-transparent disabled:opacity-40 hover:bg-body/5',
       'transition-colors duration-200'
     ),
   },
@@ -64,8 +64,8 @@ const variants = {
     ),
     dark: clsx(
       'inline-flex items-center',
-      'text-white font-semibold',
-      'hover:text-white/80',
+      'text-body font-semibold',
+      'hover:text-body/80',
       'transition-colors duration-200'
     ),
   },

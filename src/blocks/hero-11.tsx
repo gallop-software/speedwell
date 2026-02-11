@@ -14,7 +14,7 @@ export default function Hero11() {
         videoId="1151997268"
         videoHash="ec0ec60a5d"
         posterImage="/images/layout-7/video-image.png"
-        gradientOverlay="bg-gradient-to-br from-purple-900/40 via-black/60 to-black/80"
+        gradientOverlay="bg-gradient-to-br from-purple-900/40 via-overlay/60 to-overlay/80"
       />
 
       {/* Content */}
@@ -23,7 +23,7 @@ export default function Hero11() {
           {/* Accent text */}
           <Accent
             size="medium"
-            color="text-white"
+            color="text-overlay-text"
             margin="mb-4"
           >
             new episode weekly
@@ -32,7 +32,7 @@ export default function Hero11() {
           {/* Main heading */}
           <Heading
             as="h1"
-            color="text-white"
+            color="text-overlay-text"
             margin="mb-6"
             fontSize="text-5xl md:text-6xl lg:text-7xl"
           >
@@ -41,7 +41,7 @@ export default function Hero11() {
 
           {/* Tagline */}
           <Paragraph
-            color="text-white/80"
+            color="text-overlay-text/80"
             fontSize="text-xl md:text-2xl"
             fontWeight="font-light"
             lineHeight="leading-relaxed"
@@ -57,7 +57,7 @@ export default function Hero11() {
             <div className="text-center">
               <Heading
                 as="h3"
-                color="text-white"
+                color="text-overlay-text"
                 margin=""
                 fontSize="text-2xl"
               >
@@ -69,17 +69,17 @@ export default function Hero11() {
                 />
               </Heading>
               <Label
-                color="text-white/60"
+                color="text-overlay-text/60"
                 margin=""
               >
                 Episodes
               </Label>
             </div>
-            <div className="w-full max-w-20 md:max-w-none md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
+            <div className="w-full max-w-20 md:max-w-none md:w-px h-px md:h-auto md:self-stretch bg-overlay-text/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
-                color="text-white"
+                color="text-overlay-text"
                 margin=""
                 fontSize="text-2xl"
               >
@@ -92,17 +92,17 @@ export default function Hero11() {
                 />
               </Heading>
               <Label
-                color="text-white/60"
+                color="text-overlay-text/60"
                 margin=""
               >
                 Listeners
               </Label>
             </div>
-            <div className="w-full max-w-20 md:max-w-none md:w-px h-px md:h-auto md:self-stretch bg-white/20"></div>
+            <div className="w-full max-w-20 md:max-w-none md:w-px h-px md:h-auto md:self-stretch bg-overlay-text/20"></div>
             <div className="text-center">
               <Heading
                 as="h3"
-                color="text-white"
+                color="text-overlay-text"
                 margin=""
                 fontSize="text-2xl"
                 className="flex items-center justify-center gap-1"
@@ -121,7 +121,7 @@ export default function Hero11() {
                 </svg>
               </Heading>
               <Label
-                color="text-white/60"
+                color="text-overlay-text/60"
                 margin=""
               >
                 Rating

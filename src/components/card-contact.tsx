@@ -84,7 +84,7 @@ export function CardContact({
         {copy && (
           <button
             onClick={handleCopy}
-            className="relative flex size-11 flex-none items-center justify-center rounded-full bg-gray-100 text-gray-400 hover:bg-gray-200 transition-colors cursor-grab"
+            className="relative flex size-11 flex-none items-center justify-center rounded-full bg-body-light text-contrast-light hover:bg-body-dark transition-colors cursor-grab"
             aria-label="Copy to clipboard"
           >
             <Icon
@@ -93,7 +93,7 @@ export function CardContact({
               className="size-5"
             />
             {showTooltip && (
-              <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+              <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-contrast-dark text-body text-xs px-2 py-1 rounded whitespace-nowrap">
                 Copied!
               </span>
             )}

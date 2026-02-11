@@ -23,8 +23,8 @@ export function SocialMediaNav({
           className={clsx(
             'rounded-lg transition-colors duration-200 p-2',
             dark
-              ? 'text-white hover:text-white/80 hover:bg-white/10'
-              : 'text-accent hover:text-accent-dark hover:bg-black/2.5'
+              ? 'text-body hover:text-body/80 hover:bg-body/10'
+              : 'text-accent hover:text-accent-dark hover:bg-contrast-dark/2.5'
           )}
           aria-label={item.name}
         >
