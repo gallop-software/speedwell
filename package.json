@@ -92,7 +92,7 @@
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
-    "@gallop.software/canon": "^2.30.0",
+    "@gallop.software/canon": "^2.30.1",
     "@gallop.software/studio": "^2.3.172",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
