@@ -6,6 +6,8 @@ import { Buttons } from '@/components/buttons'
 import { CountUp } from '@/components/count-up'
 import { Label } from '@/components/label'
 import { VideoBackground } from '@/components/video-background'
+import { Icon } from '@/components/icon'
+import starIcon from '@iconify/icons-heroicons/star-20-solid'
 
 export default function Hero11() {
   return (
@@ -113,12 +115,7 @@ export default function Hero11() {
                   delay={0}
                   duration={3}
                 />
-                <svg
-                  className="w-5 h-5 text-yellow-400 fill-current"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
+                <Icon icon={starIcon} className="w-5 h-5 text-yellow-400" />
               </Heading>
               <Label
                 color="text-overlay-text/60"

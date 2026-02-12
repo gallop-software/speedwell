@@ -4,6 +4,8 @@ import { Paragraph } from '@/components/paragraph'
 import { Accent } from '@/components/accent'
 import { Grid } from '@/components/grid'
 import { Form, FormInput, FormButton } from '@/components/form'
+import { Icon } from '@/components/icon'
+import headphonesIcon from '@iconify/icons-lucide/headphones'
 import clsx from 'clsx'
 
 const platforms = [
@@ -57,17 +59,7 @@ export default function Form6() {
                 platform.color
               )}
             >
-              <svg
-                className="w-6 h-6 text-body"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-              </svg>
+              <Icon icon={headphonesIcon} className="w-6 h-6 text-body" />
             </div>
 
             {/* Name */}

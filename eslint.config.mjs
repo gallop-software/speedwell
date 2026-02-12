@@ -20,7 +20,10 @@ export default [
       gallop,
     },
     rules: {
-      ...gallop.recommended,
+      ...Object.fromEntries(
+        Object.entries(gallop.recommended).map(([key]) => [key, 'error'])
+      ),
+      'gallop/no-raw-colors': ['error', { allowedClasses: ['text-red-500', 'text-yellow-400'] }],
     },
   },
 ]

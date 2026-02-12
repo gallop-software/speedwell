@@ -40,7 +40,7 @@
     "audit": "gallop audit",
     "audit:strict": "gallop audit --strict",
     "audit:json": "gallop audit --json",
-    "generate:ai-rules": "gallop generate .cursorrules && gallop generate .github/copilot-instructions.md",
+    "generate:ai-rules": "gallop generate",
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
@@ -92,7 +92,7 @@
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
-    "@gallop.software/canon": "^2.26.0",
+    "@gallop.software/canon": "^2.30.0",
     "@gallop.software/studio": "^2.3.172",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",

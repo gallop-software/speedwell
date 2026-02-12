@@ -36,7 +36,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-2xl mb-2">Garden Wedding</h3>
+              <Heading as="h3" fontSize="text-2xl" margin="mb-2" color="text-overlay-text">Garden Wedding</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -59,7 +59,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-xl mb-2">Reception Details</h3>
+              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Reception Details</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -82,7 +82,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-xl mb-2">Venue Styling</h3>
+              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Venue Styling</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -105,7 +105,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-2xl mb-2">Corporate Gala</h3>
+              <Heading as="h3" fontSize="text-2xl" margin="mb-2" color="text-overlay-text">Corporate Gala</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -128,7 +128,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-xl mb-2">Ceremony Details</h3>
+              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Ceremony Details</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -151,7 +151,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-xl mb-2">Outdoor Celebration</h3>
+              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Outdoor Celebration</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -174,7 +174,7 @@ export default function Content41() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-heading text-xl mb-2">Grand Ballroom</h3>
+              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Grand Ballroom</Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
