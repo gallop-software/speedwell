@@ -93,7 +93,7 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.30.1",
-    "@gallop.software/studio": "^2.4.0",
+    "@gallop.software/studio": "^2.4.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
