@@ -5,8 +5,8 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 ## Overview
 
 - **Total Layouts:** 22
-- **Free Layouts:** 15
-- **Pro Layouts:** 7
+- **Free Layouts:** 22
+- **Pro Layouts:** 0
 
 ## Layouts
 
@@ -30,7 +30,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(one-page-site)/layout-1/page.tsx`  
 **Layout:** `(one-page-site)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -42,7 +42,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(alternate)/layout-2/page.tsx`  
 **Layout:** `(alternate)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -54,7 +54,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(default)/layout-3/page.tsx`  
 **Layout:** `(default)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -66,7 +66,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-4/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -78,7 +78,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero)/layout-5/page.tsx`  
 **Layout:** `(hero)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -90,7 +90,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-6/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -102,7 +102,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(hero-dark)/layout-7/page.tsx`  
 **Layout:** `(hero-dark)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Pro
+**Tier:** Free
 
 ---
 
@@ -273,3 +273,4 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Tier:** Free
 
 ---
+
