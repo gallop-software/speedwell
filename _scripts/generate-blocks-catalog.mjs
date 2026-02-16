@@ -646,11 +646,11 @@ function generateReadme(blocks) {
         readme += `<img src="${CDN_URL}/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
-      readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}  \n`
       if (block.preview) {
+        readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}  \n`
         readme += `**Preview:** ${block.preview}\n\n`
       } else {
-        readme += `\n`
+        readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
       }
       readme += `---\n\n`
     })

@@ -728,12 +728,12 @@ function generateReadme(layouts) {
         readme += `**Layout:** \`${layoutFile}\`  \n`
       })
     }
-    readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}  \n`
     // Only show Preview if it's not Auto (null)
     if (layout.preview) {
+      readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}  \n`
       readme += `**Preview:** ${layout.preview}\n\n`
     } else {
-      readme += `\n`
+      readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}\n\n`
     }
     readme += `---\n\n`
   })

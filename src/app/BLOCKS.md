@@ -5,8 +5,8 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 ## Overview
 
 - **Total Blocks:** 127
-- **Free Blocks:** 127
-- **Pro Blocks:** 0
+- **Free Blocks:** 82
+- **Pro Blocks:** 45
 
 ## Categories
 
@@ -34,7 +34,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-2/hero.jpg" alt="Layout 2 / Hero" width="350">
 
 **Slug:** `layout-2/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -43,7 +43,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/before-after/hero.jpg" alt="Before After / Hero" width="350">
 
 **Slug:** `before-after/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -52,7 +52,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/hero.jpg" alt="Color Consultation / Hero" width="350">
 
 **Slug:** `color-consultation/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -61,7 +61,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/commercial/hero.jpg" alt="Commercial / Hero" width="350">
 
 **Slug:** `commercial/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -70,7 +70,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/furniture/hero.jpg" alt="Furniture / Hero" width="350">
 
 **Slug:** `furniture/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -79,7 +79,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/hero.jpg" alt="Kitchen Bath / Hero" width="350">
 
 **Slug:** `kitchen-bath/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -88,7 +88,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-3/hero.jpg" alt="Layout 3 / Hero" width="350">
 
 **Slug:** `layout-3/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -97,7 +97,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/hero.jpg" alt="Portfolio / Hero" width="350">
 
 **Slug:** `portfolio/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -106,7 +106,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/hero.jpg" alt="Project Management / Hero" width="350">
 
 **Slug:** `project-management/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -115,7 +115,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/hero.jpg" alt="Residential / Hero" width="350">
 
 **Slug:** `residential/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -124,7 +124,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/space-planning/hero.jpg" alt="Space Planning / Hero" width="350">
 
 **Slug:** `space-planning/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -133,7 +133,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/hero.jpg" alt="Hero" width="350">
 
 **Slug:** `hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -142,7 +142,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-5/hero.jpg" alt="Layout 5 / Hero" width="350">
 
 **Slug:** `layout-5/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -151,7 +151,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/testimonials/hero.jpg" alt="Testimonials / Hero" width="350">
 
 **Slug:** `testimonials/hero`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -160,7 +160,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/hero.jpg" alt="Layout 4 / Hero" width="350">
 
 **Slug:** `layout-4/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -169,7 +169,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-6/hero.jpg" alt="Layout 6 / Hero" width="350">
 
 **Slug:** `layout-6/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -178,7 +178,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-7/hero.jpg" alt="Layout 7 / Hero" width="350">
 
 **Slug:** `layout-7/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -187,7 +187,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/hero.jpg" alt="Layout 1 / Hero" width="350">
 
 **Slug:** `layout-1/hero`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -196,7 +196,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-2/hero-2.jpg" alt="Layout 2 / Hero 2" width="350">
 
 **Slug:** `layout-2/hero-2`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -207,7 +207,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/partners/section.jpg" alt="Partners / Section" width="350">
 
 **Slug:** `partners/section`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -216,7 +216,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/contact/section.jpg" alt="Contact / Section" width="350">
 
 **Slug:** `contact/section`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -225,7 +225,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-3/section.jpg" alt="Layout 3 / Section" width="350">
 
 **Slug:** `layout-3/section`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -234,7 +234,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/section.jpg" alt="Section" width="350">
 
 **Slug:** `section`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -243,7 +243,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-5/section.jpg" alt="Layout 5 / Section" width="350">
 
 **Slug:** `layout-5/section`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -252,7 +252,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/section.jpg" alt="Layout 4 / Section" width="350">
 
 **Slug:** `layout-4/section`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -261,7 +261,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-6/section.jpg" alt="Layout 6 / Section" width="350">
 
 **Slug:** `layout-6/section`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -270,7 +270,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/section.jpg" alt="Layout 1 / Section" width="350">
 
 **Slug:** `layout-1/section`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -279,7 +279,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/partners/section-2.jpg" alt="Partners / Section 2" width="350">
 
 **Slug:** `partners/section-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -288,7 +288,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/section-2.jpg" alt="Section 2" width="350">
 
 **Slug:** `section-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -297,7 +297,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/section-2.jpg" alt="Layout 4 / Section 2" width="350">
 
 **Slug:** `layout-4/section-2`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -308,7 +308,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-2/content.jpg" alt="Layout 2 / Content" width="350">
 
 **Slug:** `layout-2/content`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -317,7 +317,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/content.jpg" alt="Join Our Team / Content" width="350">
 
 **Slug:** `join-our-team/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -326,7 +326,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/partners/content.jpg" alt="Partners / Content" width="350">
 
 **Slug:** `partners/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -335,7 +335,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/before-after/content.jpg" alt="Before After / Content" width="350">
 
 **Slug:** `before-after/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -344,7 +344,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/content.jpg" alt="Color Consultation / Content" width="350">
 
 **Slug:** `color-consultation/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -353,7 +353,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/commercial/content.jpg" alt="Commercial / Content" width="350">
 
 **Slug:** `commercial/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -362,7 +362,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/furniture/content.jpg" alt="Furniture / Content" width="350">
 
 **Slug:** `furniture/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -371,7 +371,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/content.jpg" alt="Kitchen Bath / Content" width="350">
 
 **Slug:** `kitchen-bath/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -380,7 +380,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content.jpg" alt="Meet The Team / Content" width="350">
 
 **Slug:** `meet-the-team/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -389,7 +389,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content.jpg" alt="Portfolio / Content" width="350">
 
 **Slug:** `portfolio/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -398,7 +398,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content.jpg" alt="Project Management / Content" width="350">
 
 **Slug:** `project-management/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -407,7 +407,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/content.jpg" alt="Residential / Content" width="350">
 
 **Slug:** `residential/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -416,7 +416,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/space-planning/content.jpg" alt="Space Planning / Content" width="350">
 
 **Slug:** `space-planning/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -425,7 +425,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/content.jpg" alt="Content" width="350">
 
 **Slug:** `content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -434,7 +434,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-5/content.jpg" alt="Layout 5 / Content" width="350">
 
 **Slug:** `layout-5/content`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -443,7 +443,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/testimonials/content.jpg" alt="Testimonials / Content" width="350">
 
 **Slug:** `testimonials/content`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -452,7 +452,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/content.jpg" alt="Layout 4 / Content" width="350">
 
 **Slug:** `layout-4/content`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -461,7 +461,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-6/content.jpg" alt="Layout 6 / Content" width="350">
 
 **Slug:** `layout-6/content`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -470,7 +470,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-7/content.jpg" alt="Layout 7 / Content" width="350">
 
 **Slug:** `layout-7/content`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -479,7 +479,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/content.jpg" alt="Layout 1 / Content" width="350">
 
 **Slug:** `layout-1/content`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -488,7 +488,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/content-2.jpg" alt="Color Consultation / Content 2" width="350">
 
 **Slug:** `color-consultation/content-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -497,7 +497,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-2.jpg" alt="Meet The Team / Content 2" width="350">
 
 **Slug:** `meet-the-team/content-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -506,7 +506,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-2.jpg" alt="Portfolio / Content 2" width="350">
 
 **Slug:** `portfolio/content-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -515,7 +515,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-2.jpg" alt="Project Management / Content 2" width="350">
 
 **Slug:** `project-management/content-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -524,7 +524,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/content-2.jpg" alt="Residential / Content 2" width="350">
 
 **Slug:** `residential/content-2`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -533,7 +533,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/content-2.jpg" alt="Layout 1 / Content 2" width="350">
 
 **Slug:** `layout-1/content-2`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -542,7 +542,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/content-3.jpg" alt="Color Consultation / Content 3" width="350">
 
 **Slug:** `color-consultation/content-3`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -551,7 +551,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-3.jpg" alt="Meet The Team / Content 3" width="350">
 
 **Slug:** `meet-the-team/content-3`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -560,7 +560,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-3.jpg" alt="Portfolio / Content 3" width="350">
 
 **Slug:** `portfolio/content-3`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -569,7 +569,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-3.jpg" alt="Project Management / Content 3" width="350">
 
 **Slug:** `project-management/content-3`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -578,7 +578,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/content-3.jpg" alt="Residential / Content 3" width="350">
 
 **Slug:** `residential/content-3`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -587,7 +587,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/content-3.jpg" alt="Layout 1 / Content 3" width="350">
 
 **Slug:** `layout-1/content-3`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -596,7 +596,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-4.jpg" alt="Meet The Team / Content 4" width="350">
 
 **Slug:** `meet-the-team/content-4`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -605,7 +605,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-4.jpg" alt="Portfolio / Content 4" width="350">
 
 **Slug:** `portfolio/content-4`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -614,7 +614,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-4.jpg" alt="Project Management / Content 4" width="350">
 
 **Slug:** `project-management/content-4`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -623,7 +623,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/content-4.jpg" alt="Residential / Content 4" width="350">
 
 **Slug:** `residential/content-4`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -632,7 +632,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-5.jpg" alt="Meet The Team / Content 5" width="350">
 
 **Slug:** `meet-the-team/content-5`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -641,7 +641,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-5.jpg" alt="Portfolio / Content 5" width="350">
 
 **Slug:** `portfolio/content-5`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -650,7 +650,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-5.jpg" alt="Project Management / Content 5" width="350">
 
 **Slug:** `project-management/content-5`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -659,7 +659,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/content-5.jpg" alt="Residential / Content 5" width="350">
 
 **Slug:** `residential/content-5`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -668,7 +668,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-6.jpg" alt="Meet The Team / Content 6" width="350">
 
 **Slug:** `meet-the-team/content-6`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -677,7 +677,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-6.jpg" alt="Portfolio / Content 6" width="350">
 
 **Slug:** `portfolio/content-6`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -686,7 +686,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-6.jpg" alt="Project Management / Content 6" width="350">
 
 **Slug:** `project-management/content-6`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -695,7 +695,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-7.jpg" alt="Meet The Team / Content 7" width="350">
 
 **Slug:** `meet-the-team/content-7`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -704,7 +704,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-7.jpg" alt="Project Management / Content 7" width="350">
 
 **Slug:** `project-management/content-7`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -713,7 +713,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-8.jpg" alt="Project Management / Content 8" width="350">
 
 **Slug:** `project-management/content-8`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -724,7 +724,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/before-after/call-to-action.jpg" alt="Before After / Call To Action" width="350">
 
 **Slug:** `before-after/call-to-action`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -733,7 +733,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/call-to-action.jpg" alt="Color Consultation / Call To Action" width="350">
 
 **Slug:** `color-consultation/call-to-action`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -742,7 +742,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/commercial/call-to-action.jpg" alt="Commercial / Call To Action" width="350">
 
 **Slug:** `commercial/call-to-action`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -751,7 +751,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/furniture/call-to-action.jpg" alt="Furniture / Call To Action" width="350">
 
 **Slug:** `furniture/call-to-action`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -760,7 +760,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/call-to-action.jpg" alt="Kitchen Bath / Call To Action" width="350">
 
 **Slug:** `kitchen-bath/call-to-action`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -769,7 +769,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/space-planning/call-to-action.jpg" alt="Space Planning / Call To Action" width="350">
 
 **Slug:** `space-planning/call-to-action`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -778,7 +778,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-7/call-to-action.jpg" alt="Layout 7 / Call To Action" width="350">
 
 **Slug:** `layout-7/call-to-action`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -789,7 +789,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/testimonial.jpg" alt="Color Consultation / Testimonial" width="350">
 
 **Slug:** `color-consultation/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -798,7 +798,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/commercial/testimonial.jpg" alt="Commercial / Testimonial" width="350">
 
 **Slug:** `commercial/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -807,7 +807,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/furniture/testimonial.jpg" alt="Furniture / Testimonial" width="350">
 
 **Slug:** `furniture/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -816,7 +816,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/testimonial.jpg" alt="Kitchen Bath / Testimonial" width="350">
 
 **Slug:** `kitchen-bath/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -825,7 +825,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-3/testimonial.jpg" alt="Layout 3 / Testimonial" width="350">
 
 **Slug:** `layout-3/testimonial`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -834,7 +834,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/testimonial.jpg" alt="Portfolio / Testimonial" width="350">
 
 **Slug:** `portfolio/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -843,7 +843,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/testimonial.jpg" alt="Residential / Testimonial" width="350">
 
 **Slug:** `residential/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -852,7 +852,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/space-planning/testimonial.jpg" alt="Space Planning / Testimonial" width="350">
 
 **Slug:** `space-planning/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -861,7 +861,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-5/testimonial.jpg" alt="Layout 5 / Testimonial" width="350">
 
 **Slug:** `layout-5/testimonial`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -870,7 +870,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/testimonials/testimonial.jpg" alt="Testimonials / Testimonial" width="350">
 
 **Slug:** `testimonials/testimonial`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -879,7 +879,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/testimonial.jpg" alt="Layout 4 / Testimonial" width="350">
 
 **Slug:** `layout-4/testimonial`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -888,7 +888,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-6/testimonial.jpg" alt="Layout 6 / Testimonial" width="350">
 
 **Slug:** `layout-6/testimonial`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -897,7 +897,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-7/testimonial.jpg" alt="Layout 7 / Testimonial" width="350">
 
 **Slug:** `layout-7/testimonial`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -906,7 +906,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/testimonial.jpg" alt="Layout 1 / Testimonial" width="350">
 
 **Slug:** `layout-1/testimonial`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -917,7 +917,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/before-after/about.jpg" alt="Before After / About" width="350">
 
 **Slug:** `before-after/about`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -926,7 +926,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/testimonials/about.jpg" alt="Testimonials / About" width="350">
 
 **Slug:** `testimonials/about`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -935,7 +935,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/about.jpg" alt="Layout 1 / About" width="350">
 
 **Slug:** `layout-1/about`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -946,7 +946,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/cover.jpg" alt="Color Consultation / Cover" width="350">
 
 **Slug:** `color-consultation/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -955,7 +955,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/commercial/cover.jpg" alt="Commercial / Cover" width="350">
 
 **Slug:** `commercial/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -964,7 +964,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/furniture/cover.jpg" alt="Furniture / Cover" width="350">
 
 **Slug:** `furniture/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -973,7 +973,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/cover.jpg" alt="Kitchen Bath / Cover" width="350">
 
 **Slug:** `kitchen-bath/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -982,7 +982,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-3/cover.jpg" alt="Layout 3 / Cover" width="350">
 
 **Slug:** `layout-3/cover`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -991,7 +991,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/cover.jpg" alt="Meet The Team / Cover" width="350">
 
 **Slug:** `meet-the-team/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1000,7 +1000,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/portfolio/cover.jpg" alt="Portfolio / Cover" width="350">
 
 **Slug:** `portfolio/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1009,7 +1009,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/residential/cover.jpg" alt="Residential / Cover" width="350">
 
 **Slug:** `residential/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1018,7 +1018,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/space-planning/cover.jpg" alt="Space Planning / Cover" width="350">
 
 **Slug:** `space-planning/cover`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1027,7 +1027,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/cover.jpg" alt="Layout 4 / Cover" width="350">
 
 **Slug:** `layout-4/cover`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1036,7 +1036,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-6/cover.jpg" alt="Layout 6 / Cover" width="350">
 
 **Slug:** `layout-6/cover`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1045,7 +1045,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/cover.jpg" alt="Layout 1 / Cover" width="350">
 
 **Slug:** `layout-1/cover`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1056,7 +1056,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/accordion.jpg" alt="Join Our Team / Accordion" width="350">
 
 **Slug:** `join-our-team/accordion`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1067,7 +1067,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/archive.jpg" alt="Archive" width="350">
 
 **Slug:** `archive`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1076,7 +1076,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-7/archive.jpg" alt="Layout 7 / Archive" width="350">
 
 **Slug:** `layout-7/archive`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1085,7 +1085,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/archive.jpg" alt="Layout 1 / Archive" width="350">
 
 **Slug:** `layout-1/archive`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1096,7 +1096,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/form.jpg" alt="Join Our Team / Form" width="350">
 
 **Slug:** `join-our-team/form`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1105,7 +1105,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/contact/form.jpg" alt="Contact / Form" width="350">
 
 **Slug:** `contact/form`  
-**Tier:** Free  
+**Tier:** Free
 
 ---
 
@@ -1114,7 +1114,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-3/form.jpg" alt="Layout 3 / Form" width="350">
 
 **Slug:** `layout-3/form`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1123,7 +1123,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-4/form.jpg" alt="Layout 4 / Form" width="350">
 
 **Slug:** `layout-4/form`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1132,7 +1132,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-7/form.jpg" alt="Layout 7 / Form" width="350">
 
 **Slug:** `layout-7/form`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1141,7 +1141,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/form.jpg" alt="Layout 1 / Form" width="350">
 
 **Slug:** `layout-1/form`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1152,7 +1152,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-2/pricing.jpg" alt="Layout 2 / Pricing" width="350">
 
 **Slug:** `layout-2/pricing`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1161,7 +1161,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-5/pricing.jpg" alt="Layout 5 / Pricing" width="350">
 
 **Slug:** `layout-5/pricing`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1172,7 +1172,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-1/process.jpg" alt="Layout 1 / Process" width="350">
 
 **Slug:** `layout-1/process`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1183,7 +1183,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-6/shopping.jpg" alt="Layout 6 / Shopping" width="350">
 
 **Slug:** `layout-6/shopping`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
@@ -1194,7 +1194,7 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 <img src="https://speedwell-cdn.gallop.software/blocks/layout-3/sidebar.jpg" alt="Layout 3 / Sidebar" width="350">
 
 **Slug:** `layout-3/sidebar`  
-**Tier:** Free  
+**Tier:** Pro
 
 ---
 
