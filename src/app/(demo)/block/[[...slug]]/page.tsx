@@ -1,8 +1,7 @@
-import { readdirSync } from 'fs'
-import path from 'path'
 import { notFound } from 'next/navigation'
 import { LightboxWrapper } from '@/components/lightbox-wrapper'
 import clsx from 'clsx'
+import { blockImports, blockSlugs } from './_block-index'
 
 interface PageProps {
   params: Promise<{
@@ -25,43 +24,10 @@ function getSlugPath(slug?: string[]): string | null {
   return normalizedSlug.join('/')
 }
 
-// Generate static params for all TSX block files to prerender them
+// Generate static params for all blocks from the index
 export async function generateStaticParams() {
-  const contentDir = path.join(process.cwd(), 'src/blocks')
-
-  function getAllContentFiles(dir: string, basePath: string = ''): string[][] {
-    const files = readdirSync(dir, { withFileTypes: true })
-    const contentFiles: string[][] = []
-
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name)
-      const relativePath = basePath ? `${basePath}/${file.name}` : file.name
-
-      if (file.isDirectory()) {
-        // Recursively get files from subdirectories
-        contentFiles.push(...getAllContentFiles(fullPath, relativePath))
-      } else if (file.name.endsWith('.tsx')) {
-        const slugPath = relativePath.replace(/\.tsx$/, '')
-        const segments = slugPath.split('/').map((seg) => {
-          try {
-            return decodeURIComponent(seg)
-          } catch {
-            return seg
-          }
-        })
-        contentFiles.push(
-          segments.length === 1 && segments[0] === 'index' ? [] : segments
-        )
-      }
-    }
-
-    return contentFiles
-  }
-
-  const allFiles = getAllContentFiles(contentDir)
-
-  return allFiles.map((slugArray) => ({
-    slug: slugArray,
+  return blockSlugs.map((slug) => ({
+    slug: slug.split('/'),
   }))
 }
 
@@ -71,37 +37,37 @@ export default async function Page({ params }: PageProps) {
   const slugPath = getSlugPath(slug)
 
   // If no slug provided, show 404
-  // Additional type guard to ensure slugPath is never null/undefined for the dynamic import
   if (!slugPath || typeof slugPath !== 'string') {
     notFound()
   }
 
-  const slugsWithTopPadding = ['section-1', 'accordion-1']
-  const slugsWithBottomPadding = ['section-1']
+  const importFn = blockImports[slugPath]
+  if (!importFn) {
+    notFound()
+  }
+
+  const { default: Content } = await importFn()
+
+  const slugsWithTopPadding = ['layout-4/section', 'join-our-team/accordion']
+  const slugsWithBottomPadding = ['layout-4/section']
   const shouldAddTopPadding = slugsWithTopPadding.includes(slugPath)
   const shouldAddBottomPadding = slugsWithBottomPadding.includes(slugPath)
 
-  try {
-    const { default: Content } = await import(`@/blocks/${slugPath}.tsx`)
-
-    return (
-      <div className="overflow-hidden">
-        <main
-          className={clsx(
-            '[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl',
-            '[&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl',
-            '[&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40',
-            shouldAddTopPadding && 'pt-30',
-            shouldAddBottomPadding && 'pb-30'
-          )}
-        >
-          <LightboxWrapper>
-            <Content />
-          </LightboxWrapper>
-        </main>
-      </div>
-    )
-  } catch (error) {
-    notFound()
-  }
+  return (
+    <div className="overflow-hidden">
+      <main
+        className={clsx(
+          '[&>.content-wrapper]:px-6 [&>.content-wrapper]:lg:px-8 [&>.content-wrapper]:mx-auto [&>.content-wrapper]:max-w-3xl',
+          '[&>.aligncontent]:px-6 [&>.aligncontent]:lg:px-8 [&>.aligncontent]:mx-auto [&>.aligncontent]:max-w-3xl',
+          '[&>*:last-child:not(div):not(section)]:mb-40 [&>*:last-child:is(.content-wrapper)]:mb-40',
+          shouldAddTopPadding && 'pt-30',
+          shouldAddBottomPadding && 'pb-30'
+        )}
+      >
+        <LightboxWrapper>
+          <Content />
+        </LightboxWrapper>
+      </main>
+    </div>
+  )
 }

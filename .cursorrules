@@ -143,20 +143,36 @@ Use props over className for supported styles
 
 ```
 src/blocks/
-├── Hero.tsx            ❌ No number
+├── Hero.tsx            ❌ Centralized, not co-located
 ├── hero_1.tsx          ❌ Underscore instead of hyphen
 ├── HeroSection.tsx     ❌ Wrong naming pattern
+
+src/app/(default)/furniture/_blocks/
+├── hero-1.tsx          ❌ Unnecessary number for singleton
 ├── cta-1.tsx           ❌ Abbreviation not in type list
 ```
 
 **Good:**
 
 ```
-src/blocks/
-├── hero-1.tsx          → export default function Hero1()
-├── hero-2.tsx          → export default function Hero2()
-├── section-1.tsx       → export default function Section1()
-├── call-to-action-1.tsx → export default function CallToAction1()
+src/app/(default)/furniture/
+├── page.tsx
+└── _blocks/
+    ├── hero.tsx              → export default function Hero()
+    ├── content.tsx           → export default function Content()
+    ├── call-to-action.tsx    → export default function CallToAction()
+    ├── cover.tsx             → export default function Cover()
+    └── testimonial.tsx       → export default function Testimonial()
+
+src/app/(default)/residential/
+├── page.tsx
+└── _blocks/
+    ├── hero.tsx              → export default function Hero()
+    ├── content.tsx           → export default function Content()
+    ├── content-2.tsx         → export default function Content2()
+    ├── content-3.tsx         → export default function Content3()
+    ├── cover.tsx             → export default function Cover()
+    └── testimonial.tsx       → export default function Testimonial()
 ```
 
 ### 007: Import Paths
@@ -499,7 +515,9 @@ These rules govern what AI is allowed and forbidden to do when creating, moving,
 ```
 src/
 ├── app/          # Routes, layouts, metadata (Next.js App Router)
-├── blocks/       # Page-level content sections
+│   └── {route}/
+│       ├── page.tsx
+│       └── _blocks/  # Co-located page-specific blocks
 ├── blog/         # Blog content (archive content type)
 ├── components/   # Reusable UI primitives
 ├── hooks/        # Custom React hooks
@@ -533,9 +551,10 @@ src/app/
 ### File Structure Rules
 
 **Blocks:**
-- Always single files directly in `src/blocks/`
-- Never create folders inside `src/blocks/`
-- Example: `src/blocks/hero-1.tsx`, `src/blocks/testimonial-3.tsx`
+- Co-located in `_blocks/` subdirectories alongside each page route
+- Singleton naming: `hero.tsx` (one per page), numbered when multiple: `content-2.tsx`, `content-3.tsx`
+- Import with relative paths: `import Hero from './_blocks/hero'`
+- Example: `src/app/(default)/furniture/_blocks/hero.tsx`
 
 **Components:**
 - Simple components: Single file in `src/components/`

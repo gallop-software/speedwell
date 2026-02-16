@@ -15,7 +15,7 @@ export default [
   },
   {
     // Gallop governance rules - only for blocks and components
-    files: ['src/blocks/**/*.tsx', 'src/components/**/*.tsx'],
+    files: ['src/app/**/_blocks/**/*.tsx', 'src/components/**/*.tsx'],
     plugins: {
       gallop,
     },

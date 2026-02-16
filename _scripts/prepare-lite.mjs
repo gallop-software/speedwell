@@ -16,8 +16,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const README_PATH = path.join(__dirname, '../src/blocks/README.md')
-const BLOCKS_DIR = path.join(__dirname, '../src/blocks')
+const README_PATH = path.join(__dirname, '../src/app/BLOCKS.md')
+const APP_DIR = path.join(__dirname, '../src/app')
 const HOOKS_DIR = path.join(__dirname, '../src/hooks')
 const API_DIR = path.join(__dirname, '../src/app/api')
 const LAYOUT_PATH = path.join(__dirname, '../src/app/layout.tsx')
@@ -85,6 +85,50 @@ function toPascalCase(slug) {
     .join('')
 }
 
+// Recursively find all _blocks/ directories under src/app/
+async function findBlocksDirs(dir) {
+  const entries = await fs.readdir(dir, { withFileTypes: true })
+  const results = []
+
+  for (const entry of entries) {
+    if (entry.name === '_blocks' && entry.isDirectory()) {
+      results.push(path.join(dir, entry.name))
+    } else if (entry.isDirectory() && !entry.name.startsWith('.')) {
+      results.push(...await findBlocksDirs(path.join(dir, entry.name)))
+    }
+  }
+
+  return results
+}
+
+// Convert route path to URL slug (strip route group parentheses)
+function routeToUrlSlug(blocksDir) {
+  const relPath = path.dirname(blocksDir).replace(APP_DIR + '/', '')
+  return relPath
+    .split('/')
+    .filter(seg => !seg.startsWith('('))
+    .join('/')
+}
+
+// Find all block file paths indexed by their slug
+async function buildBlockPathIndex() {
+  const blocksDirs = await findBlocksDirs(APP_DIR)
+  const index = new Map()
+
+  for (const blocksDir of blocksDirs) {
+    const urlSlug = routeToUrlSlug(blocksDir)
+    const files = (await fs.readdir(blocksDir)).filter(f => f.endsWith('.tsx'))
+
+    for (const file of files) {
+      const blockName = file.replace('.tsx', '')
+      const slug = urlSlug ? `${urlSlug}/${blockName}` : blockName
+      index.set(slug, path.join(blocksDir, file))
+    }
+  }
+
+  return index
+}
+
 // Check if a block file already uses ProBlock
 async function isAlreadyConverted(filePath) {
   try {
@@ -96,8 +140,12 @@ async function isAlreadyConverted(filePath) {
 }
 
 // Convert a single block file
-async function convertBlock(block) {
-  const filePath = path.join(BLOCKS_DIR, block.fileName)
+async function convertBlock(block, blockPathIndex) {
+  const filePath = blockPathIndex.get(block.slug)
+  if (!filePath) {
+    console.error(`❌ Block file not found for slug: ${block.slug}`)
+    return { success: false, skipped: false, error: 'File not found' }
+  }
 
   try {
     // Check if file exists
@@ -216,9 +264,10 @@ async function main() {
 
     console.log('🔄 Converting blocks...\n')
 
+    const blockPathIndex = await buildBlockPathIndex()
     const results = []
     for (const block of proBlocks) {
-      const result = await convertBlock(block)
+      const result = await convertBlock(block, blockPathIndex)
       results.push({ ...block, ...result })
     }
 

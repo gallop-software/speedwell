@@ -26,7 +26,7 @@ const __dirname = dirname(__filename)
 const APP_DIR = join(__dirname, '../src/app')
 const OUTPUT_DIR = join(__dirname, '../public/layouts')
 const README_PATH = join(__dirname, '../src/app/README.md')
-const BLOCKS_README_PATH = join(__dirname, '../src/blocks/README.md')
+const BLOCKS_README_PATH = join(__dirname, '../src/app/BLOCKS.md')
 const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const SCREENSHOT_WIDTH = 1920
@@ -245,13 +245,14 @@ async function getLayoutTierFromBlocks(layoutFilePath, blockTiers) {
   try {
     const content = await readFile(layoutFilePath, 'utf8')
 
-    // Match imports from @/blocks/ - e.g., import Hero14 from '@/blocks/hero-14'
-    const importRegex = /import\s+\w+\s+from\s+['"]@\/blocks\/([^'"]+)['"]/g
+    // Match imports from ./_blocks/ - e.g., import Hero from './_blocks/hero'
+    const importRegex = /import\s+\w+\s+from\s+['"]\.\/(_blocks\/[^'"]+)['"]/g
     let match
     const usedBlocks = []
 
     while ((match = importRegex.exec(content)) !== null) {
-      usedBlocks.push(match[1])
+      // Extract just the block filename from _blocks/hero -> hero
+      usedBlocks.push(match[1].replace('_blocks/', ''))
     }
 
     // Check if any used block is pro

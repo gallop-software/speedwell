@@ -1,20 +1,20 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Hero8 from '@/blocks/hero-8'
-import Content44 from '@/blocks/content-44'
-import CallToAction4 from '@/blocks/call-to-action-4'
-import Cover2 from '@/blocks/cover-2'
-import Testimonial2 from '@/blocks/testimonial-2'
+import Hero from './_blocks/hero'
+import Content from './_blocks/content'
+import CallToAction from './_blocks/call-to-action'
+import Cover from './_blocks/cover'
+import Testimonial from './_blocks/testimonial'
 
-function Content() {
+function Blocks() {
   return (
     <>
-      <Hero8 />
-      <Content44 />
-      <CallToAction4 />
-      <Cover2 />
-      <Testimonial2 />
+      <Hero />
+      <Content />
+      <CallToAction />
+      <Cover />
+      <Testimonial />
     </>
   )
 }
@@ -74,7 +74,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Content />
+      <Blocks />
     </PageWrapper>
   )
 }

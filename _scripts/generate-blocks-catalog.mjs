@@ -22,10 +22,12 @@ const execAsync = promisify(exec)
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const BLOCKS_DIR = join(__dirname, '../src/blocks')
+const SRC_DIR = join(__dirname, '../src')
+const APP_DIR = join(SRC_DIR, 'app')
 const OUTPUT_DIR = join(__dirname, '../public/blocks')
-const README_PATH = join(__dirname, '../src/blocks/README.md')
+const README_PATH = join(APP_DIR, 'BLOCKS.md')
 const META_JSON_PATH = join(__dirname, '../_data/_meta.json')
+const BLOCK_INDEX_PATH = join(APP_DIR, '(demo)/block/[[...slug]]/_block-index.ts')
 const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const LARGE_SIZE = 1400 // Large image size on longest side
@@ -86,16 +88,65 @@ function getCategoryDisplayName(category) {
     .join(' ')
 }
 
-// Helper function to convert filename to display name and slug
-function parseBlockName(filename) {
-  const name = filename.replace('.tsx', '')
-  const slug = name
+// Helper function to recursively find all _blocks/ directories under src/app/
+async function findBlocksDirs(dir) {
+  const entries = await readdir(dir, { withFileTypes: true })
+  const results = []
 
-  // Convert to display name (e.g., "hero-1" -> "Hero 1")
-  const displayName = name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
+  for (const entry of entries) {
+    if (entry.name === '_blocks' && entry.isDirectory()) {
+      results.push(join(dir, entry.name))
+    } else if (entry.isDirectory() && !entry.name.startsWith('.')) {
+      results.push(...await findBlocksDirs(join(dir, entry.name)))
+    }
+  }
+
+  return results
+}
+
+// Convert route path to URL slug (strip route group parentheses)
+function routeToUrlSlug(blocksDir) {
+  const relPath = dirname(blocksDir).replace(APP_DIR + '/', '')
+  return relPath
+    .split('/')
+    .filter(seg => !seg.startsWith('('))
+    .join('/')
+}
+
+// Collect all block files from all _blocks/ directories
+async function collectAllBlocks() {
+  const blocksDirs = await findBlocksDirs(APP_DIR)
+  const allFiles = []
+  const seen = new Set()
+
+  for (const blocksDir of blocksDirs) {
+    const urlSlug = routeToUrlSlug(blocksDir)
+    const files = (await readdir(blocksDir)).filter(f => f.endsWith('.tsx'))
+
+    for (const file of files) {
+      const blockName = file.replace('.tsx', '')
+      const slug = urlSlug ? `${urlSlug}/${blockName}` : blockName
+
+      // Deduplicate by slug (shared blocks like cover/testimonial appear in multiple routes)
+      if (!seen.has(slug)) {
+        seen.add(slug)
+        allFiles.push({ filename: file, slug, blocksDir })
+      }
+    }
+  }
+
+  return allFiles
+}
+
+// Helper function to convert filename to display name and slug
+function parseBlockName(filename, slug) {
+  const name = filename.replace('.tsx', '')
+
+  // Convert to display name (e.g., "furniture/hero" -> "Furniture Hero")
+  const displayName = slug
+    .split('/')
+    .map(part => part.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))
+    .join(' / ')
 
   return { name, slug, displayName }
 }
@@ -264,14 +315,13 @@ async function generateBlocksCatalog(
   try {
     console.log('Starting blocks catalog generation...\n')
 
-    // Read all files from blocks directory
-    const files = await readdir(BLOCKS_DIR)
-    let blockFiles = files.filter((f) => f.endsWith('.tsx'))
+    // Collect all block files from _blocks/ directories
+    let blockFiles = await collectAllBlocks()
 
     // Filter to single block if specified
     if (filterBlock) {
       blockFiles = blockFiles.filter(
-        (f) => f.replace('.tsx', '') === filterBlock
+        (f) => f.slug === filterBlock
       )
       if (blockFiles.length === 0) {
         console.error(`Error: Block "${filterBlock}" not found`)
@@ -309,9 +359,8 @@ async function generateBlocksCatalog(
 
     // Parse all block files
     const allBlocksMap = new Map()
-    for (const file of blockFiles) {
-      const filePath = join(BLOCKS_DIR, file)
-      const { name, slug, displayName } = parseBlockName(file)
+    for (const blockFile of blockFiles) {
+      const { name, slug, displayName } = parseBlockName(blockFile.filename, blockFile.slug)
       // Use existing tier and preview from README, default to 'free' and null
       const existingBlock = existingBlockMap.get(displayName)
       const tier = existingBlock?.tier || 'free'
@@ -323,7 +372,7 @@ async function generateBlocksCatalog(
         displayName,
         tier,
         preview,
-        filename: file,
+        filename: blockFile.filename,
       })
     }
 
@@ -351,7 +400,7 @@ async function generateBlocksCatalog(
     // Get all categories and sort them by preferred order
     const allCategories = new Set()
     for (const block of allBlocksMap.values()) {
-      allCategories.add(block.name.split('-')[0])
+      allCategories.add(block.name.replace(/-\d+$/, ''))
     }
     const sortedCategories = sortCategories([...allCategories])
 
@@ -373,7 +422,7 @@ async function generateBlocksCatalog(
       const newCategoryBlocks = []
       for (const block of allBlocksMap.values()) {
         if (
-          block.name.split('-')[0] === category &&
+          block.name.replace(/-\d+$/, '') === category &&
           !processedBlocks.has(block.displayName)
         ) {
           newCategoryBlocks.push(block)
@@ -487,12 +536,15 @@ async function generateBlocksCatalog(
       console.log(`Total captured: ${blocksToCapture.length}\n`)
     }
 
-    // Generate README (skip when filtering to single block)
+    // Generate README and block index (skip when filtering to single block)
     if (!filterBlock) {
       console.log('Generating README...')
       const readme = generateReadme(blocks)
       await writeFile(README_PATH, readme, 'utf8')
       console.log(`✓ README saved to ${README_PATH}\n`)
+
+      console.log('Generating block index...')
+      await generateBlockIndex(blockFiles)
     }
 
     console.log('=== Blocks Catalog Generation Complete ===')
@@ -500,6 +552,40 @@ async function generateBlocksCatalog(
     console.error('Fatal error:', error)
     process.exit(1)
   }
+}
+
+async function generateBlockIndex(blockFiles) {
+  const entries = []
+
+  for (const { slug, blocksDir } of blockFiles) {
+    const relFromSrc = blocksDir.replace(SRC_DIR + '/', '')
+    const blockName = slug.includes('/') ? slug.split('/').pop() : slug
+    const importPath = `@/${relFromSrc}/${blockName}`
+    entries.push({ slug, importPath })
+  }
+
+  entries.sort((a, b) => a.slug.localeCompare(b.slug))
+
+  const lines = [
+    '// Auto-generated — regenerate with: npm run blocks',
+    '// Maps demo page slugs to block imports',
+    '',
+    "import type { ComponentType } from 'react'",
+    '',
+    'export const blockImports: Record<string, () => Promise<{ default: ComponentType }>> = {',
+  ]
+
+  for (const { slug, importPath } of entries) {
+    lines.push(`  '${slug}': () => import('${importPath}'),`)
+  }
+
+  lines.push('}')
+  lines.push('')
+  lines.push('export const blockSlugs = Object.keys(blockImports)')
+  lines.push('')
+
+  await writeFile(BLOCK_INDEX_PATH, lines.join('\n'), 'utf-8')
+  console.log(`✓ Block index saved to ${BLOCK_INDEX_PATH} with ${entries.length} entries\n`)
 }
 
 function generateReadme(blocks) {

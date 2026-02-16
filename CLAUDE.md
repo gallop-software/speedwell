@@ -10,7 +10,7 @@
 | `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/blog/ |
 | `_data/_studio.json` | `Gallop Studio UI` | Never edit — image optimization metadata |
 | `_data/_meta.json` | `npm run blocks` | Block catalog changes |
-| `src/blocks/README.md` | `npm run blocks` | Block additions (tier/order preserved) |
+| `src/app/BLOCKS.md` | `npm run blocks` | Block additions (tier/order preserved) |
 | `src/app/README.md` | `npm run layouts` | Layout additions |
 | `public/search-index.json` | `npm run search` | Content changes |
 | `public/blocks/*.jpg` | `npm run blocks:screenshots` | Block visual changes |
