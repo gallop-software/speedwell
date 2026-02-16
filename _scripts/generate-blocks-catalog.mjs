@@ -239,6 +239,7 @@ async function captureScreenshot(browser, slug, outputDir) {
 
     // Save large image (1400px)
     const largeImagePath = join(outputDir, `${slug}.jpg`)
+    await mkdir(dirname(largeImagePath), { recursive: true })
     await sharp(screenshotBuffer)
       .resize(large.w, large.h, { fit: 'inside' })
       .jpeg({ quality: 90 })
@@ -264,26 +265,34 @@ async function imageExists(slug, outputDir) {
   }
 }
 
+async function findScreenshots(dir, base = dir) {
+  const entries = await readdir(dir, { withFileTypes: true })
+  const results = []
+
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name)
+    if (entry.isDirectory()) {
+      results.push(...await findScreenshots(fullPath, base))
+    } else if (entry.name.endsWith('.jpg')) {
+      const rel = fullPath.replace(base + '/', '').replace('.jpg', '')
+      results.push(rel)
+    }
+  }
+
+  return results
+}
+
 async function cleanupOrphanedScreenshots(currentBlockSlugs, outputDir) {
   const orphanedSlugs = []
   let deletedCount = 0
 
-  // Read all files in the output directory
-  let screenshotFiles = []
+  // Find all screenshot files recursively
+  let screenshotSlugs
   try {
-    screenshotFiles = await readdir(outputDir)
+    screenshotSlugs = await findScreenshots(outputDir)
   } catch {
     // Output directory doesn't exist yet
     return { orphanedSlugs, deletedCount }
-  }
-
-  // Get unique slugs from screenshot files
-  const screenshotSlugs = new Set()
-  for (const file of screenshotFiles) {
-    if (file.endsWith('.jpg')) {
-      const slug = file.replace('.jpg', '')
-      screenshotSlugs.add(slug)
-    }
   }
 
   // Find orphaned screenshots (exist as images but no corresponding block file)
