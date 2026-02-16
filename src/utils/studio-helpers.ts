@@ -8,12 +8,14 @@ type ImageResult = {
   height: number
 }
 
+// Matches studio's Dimensions type
 interface Dimensions {
   w: number
   h: number
 }
 
-type StudioEntry = {
+// Matches studio's MetaEntry type (subset used by helpers)
+type MetaEntry = {
   o?: Dimensions // original dimensions {w, h}
   sm?: Dimensions // small thumbnail (300px width)
   md?: Dimensions // medium thumbnail (700px width)
@@ -22,12 +24,13 @@ type StudioEntry = {
   c?: number // CDN index into _cdns array
 }
 
-interface FullStudioData {
+// Matches studio's FullMeta type
+interface FullMeta {
   _cdns?: string[]
-  [key: string]: StudioEntry | string[] | undefined
+  [key: string]: MetaEntry | string[] | undefined
 }
 
-const studio = studioData as FullStudioData
+const studio = studioData as FullMeta
 const cdnUrls = studio._cdns || []
 
 // Map size to studio key and suffix
@@ -42,7 +45,7 @@ const SIZE_MAP: Record<
 }
 
 // Check if an image entry is processed (has any thumbnail dimensions)
-function isProcessed(entry: StudioEntry | undefined): boolean {
+function isProcessed(entry: MetaEntry | undefined): boolean {
   if (!entry) return false
   return !!(entry.f || entry.lg || entry.md || entry.sm)
 }
@@ -105,7 +108,7 @@ export function getStudioImage(
     if (lookupKey.startsWith('_')) return undefined
     const value = studio[lookupKey]
     if (!value || Array.isArray(value)) return undefined
-    const entry = value as StudioEntry
+    const entry = value as MetaEntry
 
     // Get CDN URL if available
     const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined
@@ -220,7 +223,7 @@ export function studioUrl(src: string, size: ImageSize = 'large'): string {
   if (lookupKey.startsWith('_')) return src
   const value = studio[lookupKey]
   if (!value || Array.isArray(value)) return src
-  const entry = value as StudioEntry
+  const entry = value as MetaEntry
 
   // Get CDN URL if available
   const cdnUrl = entry.c !== undefined ? cdnUrls[entry.c] : undefined

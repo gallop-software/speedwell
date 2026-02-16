@@ -6,6 +6,7 @@ import { heading3Font } from '@/fonts/heading3'
 import { accentFont } from '@/fonts/accent'
 import type { Metadata } from 'next'
 import SmoothScroll from '@/hooks/smooth-scroll'
+import IframeHeight from '@/hooks/use-iframe-height'
 import { baseURL } from './metadata'
 import GoogleAds from '@/hooks/google-ads'
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body className="bg-body font-body text-lg font-medium leading-normal text-contrast antialiased">
         <div>{children}</div>
         <SmoothScroll />
+        <IframeHeight />
         {process.env.VERCEL === '1' && <Analytics />}
       </body>
       {process.env.NODE_ENV === 'production' &&
