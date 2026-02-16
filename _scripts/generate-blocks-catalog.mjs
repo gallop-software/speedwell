@@ -7,7 +7,7 @@ import {
   unlink,
   access,
 } from 'fs/promises'
-import { join, dirname } from 'path'
+import { join, dirname, relative } from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { exec } from 'child_process'
@@ -382,6 +382,7 @@ async function generateBlocksCatalog(
         tier,
         preview,
         filename: blockFile.filename,
+        blocksDir: blockFile.blocksDir,
       })
     }
 
@@ -646,6 +647,7 @@ function generateReadme(blocks) {
         readme += `<img src="${CDN_URL}/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
+      readme += `**Path:** \`${relative(APP_DIR, join(block.blocksDir, block.filename))}\`  \n`
       if (block.preview) {
         readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}  \n`
         readme += `**Preview:** ${block.preview}\n\n`
