@@ -143,20 +143,71 @@ Use props over className for supported styles
 
 ```
 src/blocks/
-├── Hero.tsx            ❌ No number
+├── Hero.tsx            ❌ Centralized, not co-located
 ├── hero_1.tsx          ❌ Underscore instead of hyphen
 ├── HeroSection.tsx     ❌ Wrong naming pattern
+
+src/app/(default)/furniture/_blocks/
+├── hero-1.tsx          ❌ Unnecessary number for singleton
 ├── cta-1.tsx           ❌ Abbreviation not in type list
 ```
 
 **Good:**
 
 ```
-src/blocks/
-├── hero-1.tsx          → export default function Hero1()
-├── hero-2.tsx          → export default function Hero2()
-├── section-1.tsx       → export default function Section1()
-├── call-to-action-1.tsx → export default function CallToAction1()
+src/app/(default)/furniture/
+├── page.tsx
+└── _blocks/
+    ├── hero.tsx              → export default function Hero()
+    ├── content.tsx           → export default function Content()
+    ├── call-to-action.tsx    → export default function CallToAction()
+    ├── cover.tsx             → export default function Cover()
+    └── testimonial.tsx       → export default function Testimonial()
+
+src/app/(default)/residential/
+├── page.tsx
+└── _blocks/
+    ├── hero.tsx              → export default function Hero()
+    ├── content.tsx           → export default function Content()
+    ├── content-2.tsx         → export default function Content2()
+    ├── content-3.tsx         → export default function Content3()
+    ├── cover.tsx             → export default function Cover()
+    └── testimonial.tsx       → export default function Testimonial()
+```
+
+### 007: Import Paths
+
+@/ aliases, direct file imports
+
+- **ESLint Rule:** `gallop/prefer-alias-imports`
+- **Category:** structure
+
+**Bad:**
+
+```tsx
+// Barrel imports (no longer used)
+import { Heading, Paragraph, Button } from '@/components'
+
+// Relative imports outside component subfolders
+import { Heading } from '../../components/heading'
+import Hero1 from '../blocks/hero-1'
+
+// Wrong alias format
+import { Heading } from 'components/heading'
+import { Heading } from '~/components/heading'
+```
+
+**Good:**
+
+```tsx
+import { Heading } from '@/components/heading'
+import { Paragraph } from '@/components/paragraph'
+import { Button } from '@/components/button'
+import { Section } from '@/components/section'
+import { Columns, Column } from '@/components/columns'
+import { Image } from '@/components/image'
+import Hero1 from '@/blocks/hero-1'
+import arrowDownIcon from '@iconify/icons-heroicons/arrow-down-20-solid'
 ```
 
 ### 008: Tailwind Only
@@ -187,6 +238,107 @@ const StyledDiv = styled.div`
 <div className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-lg">
   <Heading className="text-2xl">Title</Heading>
 </div>
+```
+
+### 009: Color Tokens
+
+Use semantic color tokens
+
+- **ESLint Rule:** `gallop/no-raw-colors`
+- **Category:** styling
+
+**Bad:**
+
+```tsx
+<Section className="bg-gray-100">
+  <Heading className="text-gray-900">Title</Heading>
+  <Paragraph className="text-gray-600">Body content</Paragraph>
+  <Button className="bg-purple-600 text-white">
+    Call to Action
+  </Button>
+</Section>
+```
+
+**Good:**
+
+```tsx
+<Section className="bg-body2">
+  <Heading color="text-contrast">Title</Heading>
+  <Paragraph color="text-body">Body content</Paragraph>
+  <Button className="bg-accent text-accent-contrast">
+    Call to Action
+  </Button>
+</Section>
+```
+
+### 012: Icon System
+
+Iconify with Icon component
+
+- **ESLint Rule:** `gallop/no-inline-svg`
+- **Category:** components
+
+**Bad:**
+
+```tsx
+// Inline SVG
+<button>
+  Next
+  <svg className="w-5 h-5" viewBox="0 0 20 20">
+    <path d="M..." />
+  </svg>
+</button>
+
+// Other icon library
+import { ArrowRight } from 'react-icons/hi'
+<ArrowRight />
+```
+
+**Good:**
+
+```tsx
+import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
+import { Icon } from '@/components/icon'
+
+<button className="flex items-center gap-2">
+  Next
+  <Icon icon={arrowRightIcon} className="w-5 h-5" />
+</button>
+```
+
+### 014: clsx Not classnames
+
+Use clsx, never classnames package
+
+- **ESLint Rule:** `gallop/no-classnames-package`
+- **Category:** styling
+
+**Bad:**
+
+```tsx
+// Using classnames package
+import classNames from 'classnames'
+
+<div className={classNames('flex', { 'bg-accent': isPrimary })}>
+
+// Template literals (harder to read)
+<div className={`flex ${isPrimary ? 'bg-accent' : ''}`}>
+
+// Array join (non-standard)
+<div className={['flex', isPrimary && 'bg-accent'].filter(Boolean).join(' ')}>
+```
+
+**Good:**
+
+```tsx
+import { clsx } from 'clsx'
+
+<div className={clsx(
+  'flex items-center gap-2',
+  variant === 'primary' && 'bg-accent text-white',
+  variant === 'secondary' && 'bg-gray-100 text-gray-900',
+  disabled && 'opacity-50 pointer-events-none'
+)}>
 ```
 
 ### 018: Layout Components
@@ -289,14 +441,6 @@ These patterns are not enforced by ESLint but should be followed.
 
 PageWrapper, generatePageMetadata pattern
 
-### 007: Import Paths
-
-@/ aliases, direct file imports
-
-### 009: Color Tokens
-
-Use semantic color tokens
-
 ### 010: Spacing System
 
 Standard padding/margin values
@@ -305,17 +449,9 @@ Standard padding/margin values
 
 sm/md/lg/xl breakpoint usage
 
-### 012: Icon System
-
-Iconify with Icon component
-
 ### 013: New Component Pattern
 
 Props for margin/color/fontSize
-
-### 014: clsx Not classnames
-
-Use clsx, never classnames package
 
 ### 015: No Inline Hover Styles
 
@@ -340,31 +476,35 @@ Following these patterns provides these guarantees:
 
 ## Component Quick Reference
 
-### Typography
-- `Heading` - props: `as`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
+- `Heading` - props: `as`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign` (h1/h4 default text-accent; h2/h3/h5/h6 default text-contrast)
 - `Paragraph` - props: `color`, `margin`, `fontSize`, `lineHeight`, `textAlign`
-- `Span` - props: `color`, `margin`, `fontSize` (inline text, mb-0 default)
+- `Span` - props: `color`, `margin`, `fontSize` (Inline text, mb-0 default)
 - `Label` - props: `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
+- `Accent` - props: `color`, `margin`, `size`, `textAlign` (Has conditional text-shadow when color='text-body')
 - `Quote` - props: `variant`, `color`, `margin`, `fontSize`, `fontWeight`, `textAlign`
-
-### Layout
-- `Section` - semantic section wrapper
-- `Columns` - grid layout, props: `cols`, `gap`, `align`
-- `Column` - column child
-
-### Interactive
-- `Button` - props: `href`, `variant`, `icon`, `iconPlacement`, `margin`
-- `Icon` - Iconify icon wrapper
+- `Section` - props: `overlayColor` (Wraps content with Container. Default overlay bg-overlay/30)
+- `Cover` - props: `overlayColor` (Full-height hero-style with image backgrounds)
+- `Columns` - props: `cols`, `gap`, `align`
+- `Column`
+- `Button` - props: `href`, `variant`, `icon`, `iconPlacement`, `margin`, `dark` (dark prop flips light/dark variant class sets (render-time boolean, not CSS dark mode))
+- `Icon` (Iconify icon wrapper. Always include sizing class (w-5 h-5))
+- `Image` - props: `size` (Always use size prop ('small'|'medium'|'large'|'full'). Uses getStudioImage() from src/utils/studio-helpers.ts)
 
 ## Do NOT
 
 - Use `'use client'` in blocks - extract to components
-- Use raw `<p>` or `<span>` - use Paragraph/Span components
+- Use raw `<p>`, `<span>`, or `<h1>`–`<h6>` - use Paragraph/Span/Heading components
 - Use className for margin/color/fontSize when component has props
 - Use Container inside Section - Section already provides containment
 - Use `classnames` package - use `clsx` instead
 - Use inline styles for hover states - use Tailwind classes
 - Use native `IntersectionObserver` - use `react-intersection-observer` package
+- Use inline `<svg>` in blocks - use the Icon component with Iconify icons
+- Use deep relative imports (`../../`) - use `@/` alias imports
+- Use gray-*, white, black, slate-* — always map to a semantic token
+- Put text color in className when component has a color prop
+- Manually construct image URLs when a _data/_studio.json metadata entry exists
+- Manually edit files in _data/ (generated only)
 
 ## File & Folder Authority
 
@@ -375,7 +515,9 @@ These rules govern what AI is allowed and forbidden to do when creating, moving,
 ```
 src/
 ├── app/          # Routes, layouts, metadata (Next.js App Router)
-├── blocks/       # Page-level content sections
+│   └── {route}/
+│       ├── page.tsx
+│       └── _blocks/  # Co-located page-specific blocks
 ├── blog/         # Blog content (archive content type)
 ├── components/   # Reusable UI primitives
 ├── hooks/        # Custom React hooks
@@ -409,9 +551,10 @@ src/app/
 ### File Structure Rules
 
 **Blocks:**
-- Always single files directly in `src/blocks/`
-- Never create folders inside `src/blocks/`
-- Example: `src/blocks/hero-1.tsx`, `src/blocks/testimonial-3.tsx`
+- Co-located in `_blocks/` subdirectories alongside each page route
+- Singleton naming: `hero.tsx` (one per page), numbered when multiple: `content-2.tsx`, `content-3.tsx`
+- Import with relative paths: `import Hero from './_blocks/hero'`
+- Example: `src/app/(default)/furniture/_blocks/hero.tsx`
 
 **Components:**
 - Simple components: Single file in `src/components/`
@@ -444,7 +587,8 @@ src/app/
 ## Post-Edit Verification
 
 After editing files:
-1. Run `npm run lint` to check for errors
-2. Fix any violations before committing
+1. Run `npm run lint`
+2. Run `npm run ts`
+3. Fix any violations before committing
 
 Note: Only lint files you edited, not the entire codebase.

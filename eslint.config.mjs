@@ -15,12 +15,15 @@ export default [
   },
   {
     // Gallop governance rules - only for blocks and components
-    files: ['src/blocks/**/*.tsx', 'src/components/**/*.tsx'],
+    files: ['src/app/**/_blocks/**/*.tsx', 'src/components/**/*.tsx'],
     plugins: {
       gallop,
     },
     rules: {
-      ...gallop.recommended,
+      ...Object.fromEntries(
+        Object.entries(gallop.recommended).map(([key]) => [key, 'error'])
+      ),
+      'gallop/no-raw-colors': ['error', { allowedClasses: ['text-red-500', 'text-yellow-400'] }],
     },
   },
 ]

@@ -1,6 +1,6 @@
 {
   "name": "speedwell",
-  "version": "1.1.26",
+  "version": "1.1.27",
   "private": true,
   "description": "A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.",
   "homepage": "https://speedwell.gallop.software",
@@ -36,11 +36,11 @@
     "prettier": "prettier --write .",
     "ts": "tsc --noEmit",
     "lint:next": "eslint src/ --rule 'gallop/no-client-blocks: off' --rule 'gallop/no-container-in-section: off' --rule 'gallop/prefer-component-props: off'",
-    "lint:gallop": "eslint src/blocks/ --rule 'gallop/no-client-blocks: warn' --rule 'gallop/no-container-in-section: warn' --rule 'gallop/prefer-component-props: warn'",
+    "lint:gallop": "eslint 'src/app/**/_blocks/' --rule 'gallop/no-client-blocks: warn' --rule 'gallop/no-container-in-section: warn' --rule 'gallop/prefer-component-props: warn'",
     "audit": "gallop audit",
     "audit:strict": "gallop audit --strict",
     "audit:json": "gallop audit --json",
-    "generate:ai-rules": "gallop generate .cursorrules && gallop generate .github/copilot-instructions.md",
+    "generate:ai-rules": "gallop generate",
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "env": "./_scripts/push-env-to-vercel.sh",
@@ -84,8 +84,8 @@
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
-    "@gallop.software/canon": "^2.26.0",
-    "@gallop.software/studio": "^2.3.172",
+    "@gallop.software/canon": "^2.31.0",
+    "@gallop.software/studio": "^2.4.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
