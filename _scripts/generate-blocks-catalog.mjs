@@ -26,7 +26,6 @@ const SRC_DIR = join(__dirname, '../src')
 const APP_DIR = join(SRC_DIR, 'app')
 const OUTPUT_DIR = join(__dirname, '../public/blocks')
 const README_PATH = join(APP_DIR, 'BLOCKS.md')
-const META_JSON_PATH = join(__dirname, '../_data/_meta.json')
 const BLOCK_INDEX_PATH = join(APP_DIR, '(demo)/block/[[...slug]]/_block-index.ts')
 const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
@@ -71,14 +70,6 @@ function sortCategories(categories) {
   })
 }
 
-// Helper function for natural sort (hero-1, hero-2, ..., hero-10)
-function naturalSort(a, b) {
-  return a.name.localeCompare(b.name, undefined, {
-    numeric: true,
-    sensitivity: 'base',
-  })
-}
-
 // Helper function to get full category display name
 function getCategoryDisplayName(category) {
   // Convert category slug to display name (e.g., "call-to-action" -> "Call To Action")
@@ -111,6 +102,36 @@ function routeToUrlSlug(blocksDir) {
     .split('/')
     .filter(seg => !seg.startsWith('('))
     .join('/')
+}
+
+const LAYOUTS_README_PATH = join(APP_DIR, 'README.md')
+
+// Parse layout order and tiers from src/app/README.md (single source of truth)
+async function parseLayoutOrder() {
+  let readme
+  try {
+    readme = await readFile(LAYOUTS_README_PATH, 'utf8')
+  } catch {
+    console.error('Layout file not found. Run `npm run layouts` first.')
+    process.exit(1)
+  }
+
+  const layoutRegex = /\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
+  const order = []
+  const tiers = new Map()
+  let match
+  while ((match = layoutRegex.exec(readme)) !== null) {
+    const prefix = match[1] === 'index' ? '' : match[1]
+    order.push(prefix)
+    tiers.set(prefix, match[2].toLowerCase())
+  }
+  return { order, tiers }
+}
+
+// Extract route prefix from a block slug (e.g. "furniture/hero" -> "furniture", "hero" -> "")
+function getRoutePrefix(slug) {
+  const lastSlash = slug.lastIndexOf('/')
+  return lastSlash === -1 ? '' : slug.substring(0, lastSlash)
 }
 
 // Collect all block files from all _blocks/ directories
@@ -151,30 +172,6 @@ function parseBlockName(filename, slug) {
   return { name, slug, displayName }
 }
 
-// Helper function to parse existing README to preserve tier settings, preview, and order
-async function parseExistingReadme() {
-  try {
-    const readme = await readFile(README_PATH, 'utf8')
-    const existingBlocks = []
-
-    // Match blocks with their tier info and optional preview: **Tier:** Free or Pro, **Preview:** value
-    const blockRegex =
-      /####\s+([^\n]+)[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)(?:[\s\S]*?\*\*Preview:\*\*\s+([^\n]+))?/g
-    let match
-
-    while ((match = blockRegex.exec(readme)) !== null) {
-      const displayName = match[1].trim()
-      const tier = match[2].toLowerCase()
-      const preview = match[3] ? match[3].trim() : null
-      existingBlocks.push({ displayName, tier, preview })
-    }
-
-    return existingBlocks
-  } catch (error) {
-    // README doesn't exist yet, return empty array
-    return []
-  }
-}
 
 async function captureScreenshot(browser, slug, outputDir) {
   const page = await browser.newPage()
@@ -316,11 +313,7 @@ async function cleanupOrphanedScreenshots(currentBlockSlugs, outputDir) {
   return { orphanedSlugs, deletedCount }
 }
 
-async function generateBlocksCatalog(
-  mode = 'smart',
-  ignoreSavedOrder = false,
-  filterBlock = null
-) {
+async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
   try {
     console.log('Starting blocks catalog generation...\n')
 
@@ -341,71 +334,34 @@ async function generateBlocksCatalog(
 
     console.log(`Found ${blockFiles.length} block files\n`)
 
-    // Load meta.json for image URLs
-    let metaData = {}
-    try {
-      metaData = JSON.parse(await readFile(META_JSON_PATH, 'utf8'))
-    } catch (error) {
-      console.warn('Warning: Could not load _meta.json, will use default paths')
-    }
+    // Parse layout order and tiers from src/app/README.md
+    const { order: layoutOrder, tiers: layoutTiers } = await parseLayoutOrder()
+    console.log(`Loaded layout order: ${layoutOrder.length} pages\n`)
 
-    // Load existing blocks from README to preserve order and tier settings
-    const existingReadmeBlocks = ignoreSavedOrder
-      ? []
-      : await parseExistingReadme()
-    if (!ignoreSavedOrder) {
-      console.log(
-        `Loaded ${existingReadmeBlocks.length} blocks from existing README\n`
-      )
-    } else {
-      console.log('Ignoring saved order - sorting all blocks naturally\n')
-    }
-
-    // Create a map for quick lookup
-    const existingBlockMap = new Map(
-      existingReadmeBlocks.map((b) => [b.displayName, b])
+    // Build layout order index for sorting
+    const layoutOrderIndex = new Map(
+      layoutOrder.map((prefix, i) => [prefix, i])
     )
 
-    // Parse all block files
+    // Parse all block files, derive tier from layout
     const allBlocksMap = new Map()
     for (const blockFile of blockFiles) {
       const { name, slug, displayName } = parseBlockName(blockFile.filename, blockFile.slug)
-      // Use existing tier and preview from README, default to 'free' and null
-      const existingBlock = existingBlockMap.get(displayName)
-      const tier = existingBlock?.tier || 'free'
-      const preview = existingBlock?.preview || null
+      const routePrefix = getRoutePrefix(slug)
+      const tier = layoutTiers.get(routePrefix) || 'free'
 
       allBlocksMap.set(displayName, {
         name,
         slug,
         displayName,
         tier,
-        preview,
         filename: blockFile.filename,
         blocksDir: blockFile.blocksDir,
       })
     }
 
-    // Group blocks by category and preserve order within each category
-    const blocksByCategory = {}
-    const existingOrderByCategory = {}
-
-    // First, group existing blocks by category to preserve their order
-    for (const existingBlock of existingReadmeBlocks) {
-      if (allBlocksMap.has(existingBlock.displayName)) {
-        const block = allBlocksMap.get(existingBlock.displayName)
-        const category = block.name.replace(/-\d+$/, '')
-
-        if (!existingOrderByCategory[category]) {
-          existingOrderByCategory[category] = []
-        }
-        existingOrderByCategory[category].push(block.displayName)
-      }
-    }
-
-    // Reconstruct blocks organized by category
+    // Sort blocks by layout order within each category
     const blocks = []
-    const processedBlocks = new Set()
 
     // Get all categories and sort them by preferred order
     const allCategories = new Set()
@@ -414,40 +370,36 @@ async function generateBlocksCatalog(
     }
     const sortedCategories = sortCategories([...allCategories])
 
-    // For each category (in preferred order), add blocks
+    // For each category, collect blocks and sort by layout order
     for (const category of sortedCategories) {
       const categoryBlocks = []
-
-      // First, add existing blocks in their README order within this category
-      if (existingOrderByCategory[category]) {
-        for (const displayName of existingOrderByCategory[category]) {
-          if (allBlocksMap.has(displayName)) {
-            categoryBlocks.push(allBlocksMap.get(displayName))
-            processedBlocks.add(displayName)
-          }
-        }
-      }
-
-      // Then, add any new blocks in this category (sorted naturally by number)
-      const newCategoryBlocks = []
       for (const block of allBlocksMap.values()) {
-        if (
-          block.name.replace(/-\d+$/, '') === category &&
-          !processedBlocks.has(block.displayName)
-        ) {
-          newCategoryBlocks.push(block)
-          processedBlocks.add(block.displayName)
+        if (block.name.replace(/-\d+$/, '') === category) {
+          categoryBlocks.push(block)
         }
       }
-      newCategoryBlocks.sort(naturalSort)
-      categoryBlocks.push(...newCategoryBlocks)
+
+      categoryBlocks.sort((a, b) => {
+        const prefixA = getRoutePrefix(a.slug)
+        const prefixB = getRoutePrefix(b.slug)
+        const indexA = layoutOrderIndex.has(prefixA)
+          ? layoutOrderIndex.get(prefixA)
+          : Infinity
+        const indexB = layoutOrderIndex.has(prefixB)
+          ? layoutOrderIndex.get(prefixB)
+          : Infinity
+
+        // Primary: layout order position
+        if (indexA !== indexB) return indexA - indexB
+
+        // Secondary: natural sort on block name (for numbered variants)
+        return a.name.localeCompare(b.name, undefined, {
+          numeric: true,
+          sensitivity: 'base',
+        })
+      })
 
       blocks.push(...categoryBlocks)
-    }
-
-    const totalNew = blocks.length - existingReadmeBlocks.length
-    if (totalNew > 0) {
-      console.log(`Found ${totalNew} new blocks\n`)
     }
 
     // Check for orphaned screenshots (skip when filtering to single block)
@@ -648,12 +600,7 @@ function generateReadme(blocks) {
       }
       readme += `**Slug:** \`${block.slug}\`  \n`
       readme += `**Path:** \`${relative(APP_DIR, join(block.blocksDir, block.filename))}\`  \n`
-      if (block.preview) {
-        readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}  \n`
-        readme += `**Preview:** ${block.preview}\n\n`
-      } else {
-        readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
-      }
+      readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
       readme += `---\n\n`
     })
   })
@@ -663,7 +610,6 @@ function generateReadme(blocks) {
 
 // Run the script
 let mode = 'smart' // Default: only capture missing images
-let ignoreSavedOrder = false
 let filterBlock = null
 
 if (process.argv.includes('--screenshots')) {
@@ -672,14 +618,10 @@ if (process.argv.includes('--screenshots')) {
   mode = 'skip' // Skip all screenshots
 }
 
-if (process.argv.includes('--sort')) {
-  ignoreSavedOrder = true // Ignore saved order, sort naturally
-}
-
 // Parse --block=name argument to filter to a single block
 const blockArg = process.argv.find((arg) => arg.startsWith('--block='))
 if (blockArg) {
   filterBlock = blockArg.split('=')[1]
 }
 
-generateBlocksCatalog(mode, ignoreSavedOrder, filterBlock)
+generateBlocksCatalog(mode, filterBlock)

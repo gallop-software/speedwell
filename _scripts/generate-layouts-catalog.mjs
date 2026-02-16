@@ -26,19 +26,87 @@ const __dirname = dirname(__filename)
 const APP_DIR = join(__dirname, '../src/app')
 const OUTPUT_DIR = join(__dirname, '../public/layouts')
 const README_PATH = join(__dirname, '../src/app/README.md')
-const BLOCKS_README_PATH = join(__dirname, '../src/app/BLOCKS.md')
+const NAVBAR_CONFIG_PATH = join(__dirname, '../src/components/navbar/config.ts')
 const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const SCREENSHOT_WIDTH = 1920
 const SCREENSHOT_HEIGHT = 2400 // Tall screenshot for layouts
 const LARGE_SIZE = 1400 // Large image size on longest side
 
-// Helper function for natural sort (layout-1, layout-2, ..., layout-10)
-function naturalSort(a, b) {
-  return a.name.localeCompare(b.name, undefined, {
-    numeric: true,
-    sensitivity: 'base',
-  })
+// Parse navbar config to derive layout ordering
+async function parseNavbarOrder() {
+  const configText = await readFile(NAVBAR_CONFIG_PATH, 'utf8')
+  const slugs = []
+  const seen = new Set()
+
+  // Helper: extract hrefs from a text block
+  function extractHrefs(text) {
+    const regex = /href:\s*'([^']+)'/g
+    const hrefs = []
+    let m
+    while ((m = regex.exec(text)) !== null) hrefs.push(m[1])
+    return hrefs
+  }
+
+  // Helper: bracket-match from an opening '[' position, return the block text
+  function findBracketBlock(text, openPos) {
+    let depth = 0
+    for (let i = openPos; i < text.length; i++) {
+      if (text[i] === '[') depth++
+      if (text[i] === ']') depth--
+      if (depth === 0) return text.slice(openPos, i + 1)
+    }
+    return ''
+  }
+
+  // 1. Find Demos items block and extract hrefs first
+  const demosIdx = configText.indexOf("label: 'Demos'")
+  if (demosIdx === -1) {
+    console.warn('Warning: Could not find Demos section in navbar config')
+    return []
+  }
+  const demosItemsIdx = configText.indexOf('items:', demosIdx)
+  const demosOpenBracket = configText.indexOf('[', demosItemsIdx)
+  const demosBlock = findBracketBlock(configText, demosOpenBracket)
+
+  for (const href of extractHrefs(demosBlock)) {
+    if (href.startsWith('/')) {
+      const slug = href === '/' ? 'index' : href.slice(1)
+      if (!seen.has(slug)) { seen.add(slug); slugs.push(slug) }
+    }
+  }
+
+  // 2. Collect non-demo items blocks with positions
+  const itemsBlocks = []
+  const itemsRegex = /items:\s*\[/g
+  let im
+  while ((im = itemsRegex.exec(configText)) !== null) {
+    const openPos = configText.indexOf('[', im.index)
+    if (openPos === demosOpenBracket) continue
+    itemsBlocks.push({ position: openPos, hrefs: extractHrefs(findBracketBlock(configText, openPos)).filter((h) => h.startsWith('/')) })
+  }
+
+  // 3. Collect direct link hrefs (links without dropdowns)
+  const directLinkRegex = /\{\s*href:\s*'([^']+)',\s*label:\s*'[^']+'\s*\}/g
+  const directLinks = []
+  let dm
+  while ((dm = directLinkRegex.exec(configText)) !== null) {
+    if (dm[1].startsWith('/')) {
+      directLinks.push({ position: dm.index, hrefs: [dm[1]] })
+    }
+  }
+
+  // 4. Merge in position order, then add to slugs (deduped against demos)
+  const allEntries = [...directLinks, ...itemsBlocks].sort((a, b) => a.position - b.position)
+
+  for (const entry of allEntries) {
+    for (const href of entry.hrefs) {
+      const slug = href === '/' ? 'index' : href.slice(1)
+      if (!seen.has(slug)) { seen.add(slug); slugs.push(slug) }
+    }
+  }
+
+  return slugs
 }
 
 // Helper function to convert route folder name to display name and slug
@@ -191,82 +259,6 @@ async function findLayoutPages() {
   return layouts
 }
 
-// Helper function to parse existing README to preserve tier settings, preview, and order
-async function parseExistingReadme() {
-  try {
-    const readme = await readFile(README_PATH, 'utf8')
-    const existingLayouts = []
-
-    // Match layouts with their tier info and optional preview: **Tier:** Free or Pro, **Preview:** value
-    const layoutRegex =
-      /####\s+([^\n]+)[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)(?:[\s\S]*?\*\*Preview:\*\*\s+([^\n]+))?/g
-    let match
-
-    while ((match = layoutRegex.exec(readme)) !== null) {
-      const displayName = match[1].trim()
-      const tier = match[2].toLowerCase()
-      const preview = match[3] ? match[3].trim() : null
-      existingLayouts.push({ displayName, tier, preview })
-    }
-
-    return existingLayouts
-  } catch (error) {
-    // README doesn't exist yet, return empty array
-    return []
-  }
-}
-
-// Helper function to parse blocks README and get a map of block slugs to their tier
-async function parseBlocksTiers() {
-  try {
-    const readme = await readFile(BLOCKS_README_PATH, 'utf8')
-    const blockTiers = new Map()
-
-    // Match blocks with their slug and tier: **Slug:** `slug` **Tier:** Free or Pro
-    const blockRegex =
-      /\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
-    let match
-
-    while ((match = blockRegex.exec(readme)) !== null) {
-      const slug = match[1].trim()
-      const tier = match[2].toLowerCase()
-      blockTiers.set(slug, tier)
-    }
-
-    return blockTiers
-  } catch (error) {
-    console.warn('Warning: Could not parse blocks README for tier info')
-    return new Map()
-  }
-}
-
-// Helper function to extract block imports from a layout file and determine if any are pro
-async function getLayoutTierFromBlocks(layoutFilePath, blockTiers) {
-  try {
-    const content = await readFile(layoutFilePath, 'utf8')
-
-    // Match imports from ./_blocks/ - e.g., import Hero from './_blocks/hero'
-    const importRegex = /import\s+\w+\s+from\s+['"]\.\/(_blocks\/[^'"]+)['"]/g
-    let match
-    const usedBlocks = []
-
-    while ((match = importRegex.exec(content)) !== null) {
-      // Extract just the block filename from _blocks/hero -> hero
-      usedBlocks.push(match[1].replace('_blocks/', ''))
-    }
-
-    // Check if any used block is pro
-    for (const blockSlug of usedBlocks) {
-      if (blockTiers.get(blockSlug) === 'pro') {
-        return 'pro'
-      }
-    }
-
-    return 'free'
-  } catch (error) {
-    return 'free'
-  }
-}
 
 async function captureScreenshot(browser, slug, outputDir) {
   const page = await browser.newPage()
@@ -473,10 +465,7 @@ async function cleanupOrphanedScreenshots(currentLayoutSlugs, outputDir) {
   return { orphanedSlugs, deletedCount }
 }
 
-async function generateLayoutsCatalog(
-  mode = 'smart',
-  ignoreSavedOrder = false
-) {
+async function generateLayoutsCatalog(mode = 'smart') {
   try {
     console.log('Starting layouts catalog generation...\n')
 
@@ -485,108 +474,53 @@ async function generateLayoutsCatalog(
 
     console.log(`Found ${layoutPages.length} layout pages\n`)
 
-    // Load existing layouts from README to preserve order and tier settings
-    const existingReadmeLayouts = ignoreSavedOrder
-      ? []
-      : await parseExistingReadme()
-    if (!ignoreSavedOrder) {
-      console.log(
-        `Loaded ${existingReadmeLayouts.length} layouts from existing README\n`
-      )
-    } else {
-      console.log('Ignoring saved order - sorting all layouts naturally\n')
-    }
-
-    // Create a map for quick lookup
-    const existingLayoutMap = new Map(
-      existingReadmeLayouts.map((l) => [l.displayName, l])
-    )
-
-    // Parse blocks README to get block tiers
-    console.log('Parsing blocks README for tier info...')
-    const blockTiers = await parseBlocksTiers()
-    console.log(`Found ${blockTiers.size} blocks with tier info\n`)
-
     // Parse all layout files
-    const allLayoutsMap = new Map()
+    const layouts = []
     for (const layoutPage of layoutPages) {
       const { name, slug, displayName } = parseLayoutName(
         layoutPage.folderName,
         layoutPage.isHomePage
       )
 
-      // Determine tier from blocks used in the layout
-      const detectedTier = await getLayoutTierFromBlocks(
-        layoutPage.pagePath,
-        blockTiers
-      )
-
-      // Use existing preview from README, default to null (Auto)
-      const existingLayout = existingLayoutMap.get(displayName)
-      const preview = existingLayout?.preview || null // null means Auto (omitted)
+      // layout-2 and up are pro, everything else is free
+      const tier = /^layout-[2-9]\d*$/.test(slug) ? 'pro' : 'free'
 
       // Find all layout files that apply to this page
       const layoutFiles = await findLayoutsForPage(layoutPage.pagePath)
 
-      allLayoutsMap.set(displayName, {
+      layouts.push({
         name,
         slug,
         displayName,
-        tier: detectedTier, // Always use detected tier based on blocks
-        preview,
+        tier,
         routeGroup: layoutPage.routeGroup,
         pagePath: layoutPage.pagePath,
         isHomePage: layoutPage.isHomePage,
-        layoutFiles, // Array of layout file paths
+        layoutFiles,
       })
     }
 
-    // Build layouts list preserving order from README
-    const layouts = []
-    const processedLayouts = new Set()
+    // Sort layouts based on navbar config order
+    const navbarOrder = await parseNavbarOrder()
+    const layoutMap = new Map(layouts.map((l) => [l.slug, l]))
+    const sorted = []
 
-    // First, add existing layouts in their README order
-    for (const existingLayout of existingReadmeLayouts) {
-      if (allLayoutsMap.has(existingLayout.displayName)) {
-        layouts.push(allLayoutsMap.get(existingLayout.displayName))
-        processedLayouts.add(existingLayout.displayName)
+    // Add layouts in navbar order
+    for (const slug of navbarOrder) {
+      const layout = layoutMap.get(slug)
+      if (layout) {
+        sorted.push(layout)
+        layoutMap.delete(slug)
       }
     }
 
-    // Then, add any new layouts (sorted naturally by number)
-    const newLayouts = []
-    for (const layout of allLayoutsMap.values()) {
-      if (!processedLayouts.has(layout.displayName)) {
-        newLayouts.push(layout)
-        processedLayouts.add(layout.displayName)
-      }
+    // Append any remaining layouts not in navbar
+    for (const layout of layoutMap.values()) {
+      sorted.push(layout)
     }
-    newLayouts.sort(naturalSort)
-    layouts.push(...newLayouts)
 
-    // Ensure priority order: index first, then all layout-* pages, then the rest
-    const indexLayout = layouts.find((l) => l.displayName === 'Index')
-    const numberedLayouts = layouts.filter((l) =>
-      l.displayName.toLowerCase().startsWith('layout ')
-    )
-    const otherLayouts = layouts.filter(
-      (l) =>
-        l.displayName !== 'Index' &&
-        !l.displayName.toLowerCase().startsWith('layout ')
-    )
-
-    // Sort numbered layouts naturally (layout-1, layout-2, ..., layout-10)
-    numberedLayouts.sort(naturalSort)
-
-    // Replace layouts with priority ordering: index, layouts, rest
     layouts.length = 0
-    if (indexLayout) layouts.push(indexLayout)
-    layouts.push(...numberedLayouts, ...otherLayouts)
-
-    const totalNew = layouts.length - existingReadmeLayouts.length
-    if (totalNew > 0) {
-      console.log(`Found ${totalNew} new layouts\n`)
-    }
+    layouts.push(...sorted)
 
     // Check for orphaned screenshots (images without corresponding layout pages)
     const currentLayoutSlugs = new Set(layouts.map((l) => l.slug))
@@ -728,13 +662,7 @@ function generateReadme(layouts) {
         readme += `**Layout:** \`${layoutFile}\`  \n`
       })
     }
-    // Only show Preview if it's not Auto (null)
-    if (layout.preview) {
-      readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}  \n`
-      readme += `**Preview:** ${layout.preview}\n\n`
-    } else {
-      readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}\n\n`
-    }
+    readme += `**Tier:** ${layout.tier.charAt(0).toUpperCase() + layout.tier.slice(1)}\n\n`
     readme += `---\n\n`
   })
 
@@ -743,7 +671,6 @@ function generateReadme(layouts) {
 
 // Run the script
 let mode = 'smart' // Default: only capture missing images
-let ignoreSavedOrder = false
 
 if (process.argv.includes('--screenshots')) {
   mode = 'force' // Force overwrite all images
@@ -751,8 +678,4 @@ if (process.argv.includes('--screenshots')) {
   mode = 'skip' // Skip all screenshots
 }
 
-if (process.argv.includes('--sort')) {
-  ignoreSavedOrder = true // Ignore saved order, sort naturally
-}
-
-generateLayoutsCatalog(mode, ignoreSavedOrder)
+generateLayoutsCatalog(mode)
