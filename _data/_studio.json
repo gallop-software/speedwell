@@ -4878,5 +4878,137 @@
       "w": 1400,
       "h": 674
     }
+  },
+  "/layouts/before-after.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/color-consultation.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/commercial.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/contact.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/furniture.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/index.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/join-our-team.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/kitchen-bath.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-1.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-2.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-3.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-4.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-5.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-6.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/layout-7.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/meet-the-team.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/partners.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/portfolio.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/project-management.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/residential.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/space-planning.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
+  },
+  "/layouts/testimonials.jpg": {
+    "o": {
+      "w": 1120,
+      "h": 1400
+    }
   }
 }
