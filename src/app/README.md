@@ -5,8 +5,8 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 ## Overview
 
 - **Total Layouts:** 22
-- **Free Layouts:** 16
-- **Pro Layouts:** 6
+- **Free Layouts:** 15
+- **Pro Layouts:** 7
 
 ## Layouts
 
@@ -30,7 +30,7 @@ A collection of 22 pre-built page layouts for the Speedwell template.
 **Path:** `(one-page-site)/layout-1/page.tsx`  
 **Layout:** `(one-page-site)/layout.tsx`  
 **Layout:** `layout.tsx`  
-**Tier:** Free
+**Tier:** Pro
 
 ---
 
