@@ -2,7 +2,7 @@ import { Section } from '@/components/section'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import {
-  Form as FormComponent,
+  Form,
   FormInput,
   FormTextArea,
   FormUpload,
@@ -12,7 +12,7 @@ import {
   FormName,
 } from '@/components/form'
 
-export default function Form() {
+export default function Application() {
   return (
     <Section className="py-20 md:py-30 bg-body2 relative">
       <Heading
@@ -21,7 +21,7 @@ export default function Form() {
       >
         Submit Your Application
       </Heading>
-      <FormComponent classname="max-w-3xl mx-auto">
+      <Form classname="max-w-3xl mx-auto">
         <FormInput
           name="emailSubject"
           defaultValue="Job Application"
@@ -190,7 +190,7 @@ export default function Form() {
           label="Submit Application"
           submitMessage="Thank you! Your application has been submitted successfully. We will review it and contact you soon."
         />
-      </FormComponent>
+      </Form>
     </Section>
   )
 }

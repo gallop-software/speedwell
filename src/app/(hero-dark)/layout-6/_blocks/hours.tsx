@@ -1,4 +1,4 @@
-import { Section as SectionComponent } from '@/components/section'
+import { Section } from '@/components/section'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Grid } from '@/components/grid'
@@ -41,9 +41,9 @@ const ingredients = [
   },
 ]
 
-export default function Section() {
+export default function Hours() {
   return (
-    <SectionComponent className="py-24 md:py-32 bg-body2 relative">
+    <Section className="py-24 md:py-32 bg-body2 relative">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto">
         <Subheading margin="mb-4">The Craft</Subheading>
@@ -108,6 +108,6 @@ export default function Section() {
           </div>
         ))}
       </Grid>
-    </SectionComponent>
+    </Section>
   )
 }

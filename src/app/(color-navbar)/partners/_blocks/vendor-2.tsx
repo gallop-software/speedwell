@@ -3,7 +3,7 @@ import { Heading } from '@/components/heading'
 import { Grid } from '@/components/grid'
 import { Card3 } from '@/components/card-3'
 
-export default function Section2() {
+export default function Vendor2() {
   return (
     <Section className="relative py-30">
       <Heading as="h2">Furniture & Upholstery</Heading>

@@ -2,15 +2,15 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Content from './_blocks/content'
-import Section from './_blocks/section'
-import Section2 from './_blocks/section-2'
+import Vendor from './_blocks/vendor'
+import Vendor2 from './_blocks/vendor-2'
 
 function Blocks() {
   return (
     <>
       <Content />
-      <Section />
-      <Section2 />
+      <Vendor />
+      <Vendor2 />
     </>
   )
 }

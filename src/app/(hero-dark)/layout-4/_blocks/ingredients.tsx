@@ -199,7 +199,7 @@ const menuCategories = [
   },
 ]
 
-export default function Section2() {
+export default function Ingredients() {
   return (
     <Section
       className="pt-30 pb-40 lg:pb-50 relative"

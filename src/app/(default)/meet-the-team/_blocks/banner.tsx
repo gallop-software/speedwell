@@ -1,10 +1,10 @@
-import { Cover as CoverComponent } from '@/components/cover'
+import { Cover } from '@/components/cover'
 import { Heading } from '@/components/heading'
 import { Accent } from '@/components/accent'
 
-export default function Cover() {
+export default function Banner() {
   return (
-    <CoverComponent
+    <Cover
       imageSrc="/portfolio/pexels-pixabay-269218.jpg"
       imageAlt="Timmerman interior design team workspace"
       overlayColor="bg-accent4/90"
@@ -25,6 +25,6 @@ export default function Cover() {
           passionate designers creating exceptional spaces
         </Accent>
       </div>
-    </CoverComponent>
+    </Cover>
   )
 }

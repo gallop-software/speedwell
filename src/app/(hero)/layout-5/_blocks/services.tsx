@@ -1,4 +1,4 @@
-import { Section as SectionComponent } from '@/components/section'
+import { Section } from '@/components/section'
 import { Subheading } from '@/components/subheading'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
@@ -52,9 +52,9 @@ const services = [
   },
 ]
 
-export default function Section() {
+export default function Services() {
   return (
-    <SectionComponent className="py-30 bg-gradient-to-tl from-body via-accent2/5 to-body relative overflow-hidden">
+    <Section className="py-30 bg-gradient-to-tl from-body via-accent2/5 to-body relative overflow-hidden">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto">
         <Subheading className="mb-4">What We Offer</Subheading>
@@ -125,6 +125,6 @@ export default function Section() {
           </div>
         ))}
       </Grid>
-    </SectionComponent>
+    </Section>
   )
 }

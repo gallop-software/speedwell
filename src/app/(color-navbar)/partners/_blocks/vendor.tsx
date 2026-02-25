@@ -1,12 +1,12 @@
-import { Section as SectionComponent } from '@/components/section'
+import { Section } from '@/components/section'
 import { Columns, Column } from '@/components/columns'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Card3 } from '@/components/card-3'
 
-export default function Section() {
+export default function Vendor() {
   return (
-    <SectionComponent className="py-30">
+    <Section className="py-30">
       <Columns reverseColumns={false}>
         <Column>
           <Heading as="h2">Artisan Woodworks</Heading>
@@ -29,6 +29,6 @@ export default function Section() {
           />
         </Column>
       </Columns>
-    </SectionComponent>
+    </Section>
   )
 }

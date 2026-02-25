@@ -11,15 +11,28 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 ## Categories
 
 - **Hero:** 19 blocks
-- **Section:** 11 blocks
+- **Banner:** 10 blocks
 - **Content:** 46 blocks
+- **Highlights:** 1 blocks
+- **Services:** 2 blocks
+- **Gallery:** 2 blocks
+- **Featured:** 1 blocks
 - **Call To Action:** 7 blocks
 - **Testimonial:** 14 blocks
 - **About:** 3 blocks
-- **Cover:** 12 blocks
-- **Accordion:** 1 blocks
+- **Contact Info:** 2 blocks
+- **Contact Form:** 1 blocks
+- **Booking:** 1 blocks
+- **Consultation:** 1 blocks
+- **Reservation:** 1 blocks
+- **Subscribe:** 1 blocks
+- **Openings:** 1 blocks
+- **Application:** 1 blocks
+- **Vendor:** 2 blocks
+- **Menu:** 1 blocks
+- **Ingredients:** 1 blocks
+- **Hours:** 1 blocks
 - **Archive:** 3 blocks
-- **Form:** 6 blocks
 - **Pricing:** 2 blocks
 - **Process:** 1 blocks
 - **Shopping:** 1 blocks
@@ -219,114 +232,104 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Section
+### Banner
 
-#### Section
+#### Layout 1 / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/section.jpg" alt="Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/banner.jpg" alt="Layout 1 / Banner" width="350">
 
-**Slug:** `section`  
-**Path:** `(hero)/_blocks/section.tsx`  
+**Slug:** `layout-1/banner`  
+**Path:** `(one-page-site)/layout-1/_blocks/banner.tsx`  
+**Tier:** Pro
+
+---
+
+#### Layout 3 / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/banner.jpg" alt="Layout 3 / Banner" width="350">
+
+**Slug:** `layout-3/banner`  
+**Path:** `(default)/layout-3/_blocks/banner.tsx`  
+**Tier:** Pro
+
+---
+
+#### Portfolio / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/banner.jpg" alt="Portfolio / Banner" width="350">
+
+**Slug:** `portfolio/banner`  
+**Path:** `(default)/portfolio/_blocks/banner.tsx`  
 **Tier:** Free
 
 ---
 
-#### Section 2
+#### Residential / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/section-2.jpg" alt="Section 2" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/banner.jpg" alt="Residential / Banner" width="350">
 
-**Slug:** `section-2`  
-**Path:** `(hero)/_blocks/section-2.tsx`  
+**Slug:** `residential/banner`  
+**Path:** `(default)/residential/_blocks/banner.tsx`  
 **Tier:** Free
 
 ---
 
-#### Layout 1 / Section
+#### Commercial / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/section.jpg" alt="Layout 1 / Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/commercial/banner.jpg" alt="Commercial / Banner" width="350">
 
-**Slug:** `layout-1/section`  
-**Path:** `(one-page-site)/layout-1/_blocks/section.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 3 / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/section.jpg" alt="Layout 3 / Section" width="350">
-
-**Slug:** `layout-3/section`  
-**Path:** `(default)/layout-3/_blocks/section.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 4 / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/section.jpg" alt="Layout 4 / Section" width="350">
-
-**Slug:** `layout-4/section`  
-**Path:** `(hero-dark)/layout-4/_blocks/section.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 4 / Section 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/section-2.jpg" alt="Layout 4 / Section 2" width="350">
-
-**Slug:** `layout-4/section-2`  
-**Path:** `(hero-dark)/layout-4/_blocks/section-2.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 5 / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-5/section.jpg" alt="Layout 5 / Section" width="350">
-
-**Slug:** `layout-5/section`  
-**Path:** `(hero)/layout-5/_blocks/section.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 6 / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/section.jpg" alt="Layout 6 / Section" width="350">
-
-**Slug:** `layout-6/section`  
-**Path:** `(hero-dark)/layout-6/_blocks/section.tsx`  
-**Tier:** Pro
-
----
-
-#### Contact / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/contact/section.jpg" alt="Contact / Section" width="350">
-
-**Slug:** `contact/section`  
-**Path:** `(default)/contact/_blocks/section.tsx`  
+**Slug:** `commercial/banner`  
+**Path:** `(default)/commercial/_blocks/banner.tsx`  
 **Tier:** Free
 
 ---
 
-#### Partners / Section
+#### Kitchen Bath / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/partners/section.jpg" alt="Partners / Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/banner.jpg" alt="Kitchen Bath / Banner" width="350">
 
-**Slug:** `partners/section`  
-**Path:** `(color-navbar)/partners/_blocks/section.tsx`  
+**Slug:** `kitchen-bath/banner`  
+**Path:** `(default)/kitchen-bath/_blocks/banner.tsx`  
 **Tier:** Free
 
 ---
 
-#### Partners / Section 2
+#### Space Planning / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/partners/section-2.jpg" alt="Partners / Section 2" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/space-planning/banner.jpg" alt="Space Planning / Banner" width="350">
 
-**Slug:** `partners/section-2`  
-**Path:** `(color-navbar)/partners/_blocks/section-2.tsx`  
+**Slug:** `space-planning/banner`  
+**Path:** `(default)/space-planning/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Color Consultation / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/banner.jpg" alt="Color Consultation / Banner" width="350">
+
+**Slug:** `color-consultation/banner`  
+**Path:** `(default)/color-consultation/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Furniture / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/furniture/banner.jpg" alt="Furniture / Banner" width="350">
+
+**Slug:** `furniture/banner`  
+**Path:** `(default)/furniture/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/banner.jpg" alt="Meet The Team / Banner" width="350">
+
+**Slug:** `meet-the-team/banner`  
+**Path:** `(default)/meet-the-team/_blocks/banner.tsx`  
 **Tier:** Free
 
 ---
@@ -793,6 +796,74 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
+### Highlights
+
+#### Highlights
+
+<img src="https://speedwell-cdn.gallop.software/blocks/highlights.jpg" alt="Highlights" width="350">
+
+**Slug:** `highlights`  
+**Path:** `(hero)/_blocks/highlights.tsx`  
+**Tier:** Free
+
+---
+
+### Services
+
+#### Services
+
+<img src="https://speedwell-cdn.gallop.software/blocks/services.jpg" alt="Services" width="350">
+
+**Slug:** `services`  
+**Path:** `(hero)/_blocks/services.tsx`  
+**Tier:** Free
+
+---
+
+#### Layout 5 / Services
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-5/services.jpg" alt="Layout 5 / Services" width="350">
+
+**Slug:** `layout-5/services`  
+**Path:** `(hero)/layout-5/_blocks/services.tsx`  
+**Tier:** Pro
+
+---
+
+### Gallery
+
+#### Layout 3 / Gallery
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/gallery.jpg" alt="Layout 3 / Gallery" width="350">
+
+**Slug:** `layout-3/gallery`  
+**Path:** `(default)/layout-3/_blocks/gallery.tsx`  
+**Tier:** Pro
+
+---
+
+#### Layout 6 / Gallery
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/gallery.jpg" alt="Layout 6 / Gallery" width="350">
+
+**Slug:** `layout-6/gallery`  
+**Path:** `(hero-dark)/layout-6/_blocks/gallery.tsx`  
+**Tier:** Pro
+
+---
+
+### Featured
+
+#### Layout 4 / Featured
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/featured.jpg" alt="Layout 4 / Featured" width="350">
+
+**Slug:** `layout-4/featured`  
+**Path:** `(hero-dark)/layout-4/_blocks/featured.tsx`  
+**Tier:** Pro
+
+---
+
 ### Call To Action
 
 #### Layout 7 / Call To Action
@@ -1039,137 +1110,167 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Cover
+### Contact Info
 
-#### Layout 1 / Cover
+#### Layout 1 / Contact Info
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/cover.jpg" alt="Layout 1 / Cover" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/contact-info.jpg" alt="Layout 1 / Contact Info" width="350">
 
-**Slug:** `layout-1/cover`  
-**Path:** `(one-page-site)/layout-1/_blocks/cover.tsx`  
+**Slug:** `layout-1/contact-info`  
+**Path:** `(one-page-site)/layout-1/_blocks/contact-info.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 3 / Cover
+#### Contact / Contact Info
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/cover.jpg" alt="Layout 3 / Cover" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/contact/contact-info.jpg" alt="Contact / Contact Info" width="350">
 
-**Slug:** `layout-3/cover`  
-**Path:** `(default)/layout-3/_blocks/cover.tsx`  
+**Slug:** `contact/contact-info`  
+**Path:** `(default)/contact/_blocks/contact-info.tsx`  
+**Tier:** Free
+
+---
+
+### Contact Form
+
+#### Contact / Contact Form
+
+<img src="https://speedwell-cdn.gallop.software/blocks/contact/contact-form.jpg" alt="Contact / Contact Form" width="350">
+
+**Slug:** `contact/contact-form`  
+**Path:** `(default)/contact/_blocks/contact-form.tsx`  
+**Tier:** Free
+
+---
+
+### Booking
+
+#### Layout 3 / Booking
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/booking.jpg" alt="Layout 3 / Booking" width="350">
+
+**Slug:** `layout-3/booking`  
+**Path:** `(default)/layout-3/_blocks/booking.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 4 / Cover
+### Consultation
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/cover.jpg" alt="Layout 4 / Cover" width="350">
+#### Layout 1 / Consultation
 
-**Slug:** `layout-4/cover`  
-**Path:** `(hero-dark)/layout-4/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/consultation.jpg" alt="Layout 1 / Consultation" width="350">
+
+**Slug:** `layout-1/consultation`  
+**Path:** `(one-page-site)/layout-1/_blocks/consultation.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 6 / Cover
+### Reservation
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/cover.jpg" alt="Layout 6 / Cover" width="350">
+#### Layout 4 / Reservation
 
-**Slug:** `layout-6/cover`  
-**Path:** `(hero-dark)/layout-6/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/reservation.jpg" alt="Layout 4 / Reservation" width="350">
+
+**Slug:** `layout-4/reservation`  
+**Path:** `(hero-dark)/layout-4/_blocks/reservation.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Portfolio / Cover
+### Subscribe
 
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/cover.jpg" alt="Portfolio / Cover" width="350">
+#### Layout 7 / Subscribe
 
-**Slug:** `portfolio/cover`  
-**Path:** `(default)/portfolio/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-7/subscribe.jpg" alt="Layout 7 / Subscribe" width="350">
+
+**Slug:** `layout-7/subscribe`  
+**Path:** `(hero-dark)/layout-7/_blocks/subscribe.tsx`  
+**Tier:** Pro
+
+---
+
+### Openings
+
+#### Join Our Team / Openings
+
+<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/openings.jpg" alt="Join Our Team / Openings" width="350">
+
+**Slug:** `join-our-team/openings`  
+**Path:** `(color-navbar)/join-our-team/_blocks/openings.tsx`  
 **Tier:** Free
 
 ---
 
-#### Residential / Cover
+### Application
 
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/cover.jpg" alt="Residential / Cover" width="350">
+#### Join Our Team / Application
 
-**Slug:** `residential/cover`  
-**Path:** `(default)/residential/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/application.jpg" alt="Join Our Team / Application" width="350">
+
+**Slug:** `join-our-team/application`  
+**Path:** `(color-navbar)/join-our-team/_blocks/application.tsx`  
 **Tier:** Free
 
 ---
 
-#### Commercial / Cover
+### Vendor
 
-<img src="https://speedwell-cdn.gallop.software/blocks/commercial/cover.jpg" alt="Commercial / Cover" width="350">
+#### Partners / Vendor
 
-**Slug:** `commercial/cover`  
-**Path:** `(default)/commercial/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/partners/vendor.jpg" alt="Partners / Vendor" width="350">
+
+**Slug:** `partners/vendor`  
+**Path:** `(color-navbar)/partners/_blocks/vendor.tsx`  
 **Tier:** Free
 
 ---
 
-#### Kitchen Bath / Cover
+#### Partners / Vendor 2
 
-<img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/cover.jpg" alt="Kitchen Bath / Cover" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/partners/vendor-2.jpg" alt="Partners / Vendor 2" width="350">
 
-**Slug:** `kitchen-bath/cover`  
-**Path:** `(default)/kitchen-bath/_blocks/cover.tsx`  
+**Slug:** `partners/vendor-2`  
+**Path:** `(color-navbar)/partners/_blocks/vendor-2.tsx`  
 **Tier:** Free
 
 ---
 
-#### Space Planning / Cover
+### Menu
 
-<img src="https://speedwell-cdn.gallop.software/blocks/space-planning/cover.jpg" alt="Space Planning / Cover" width="350">
+#### Layout 4 / Menu
 
-**Slug:** `space-planning/cover`  
-**Path:** `(default)/space-planning/_blocks/cover.tsx`  
-**Tier:** Free
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/menu.jpg" alt="Layout 4 / Menu" width="350">
 
----
-
-#### Color Consultation / Cover
-
-<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/cover.jpg" alt="Color Consultation / Cover" width="350">
-
-**Slug:** `color-consultation/cover`  
-**Path:** `(default)/color-consultation/_blocks/cover.tsx`  
-**Tier:** Free
+**Slug:** `layout-4/menu`  
+**Path:** `(hero-dark)/layout-4/_blocks/menu.tsx`  
+**Tier:** Pro
 
 ---
 
-#### Furniture / Cover
+### Ingredients
 
-<img src="https://speedwell-cdn.gallop.software/blocks/furniture/cover.jpg" alt="Furniture / Cover" width="350">
+#### Layout 4 / Ingredients
 
-**Slug:** `furniture/cover`  
-**Path:** `(default)/furniture/_blocks/cover.tsx`  
-**Tier:** Free
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/ingredients.jpg" alt="Layout 4 / Ingredients" width="350">
 
----
-
-#### Meet The Team / Cover
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/cover.jpg" alt="Meet The Team / Cover" width="350">
-
-**Slug:** `meet-the-team/cover`  
-**Path:** `(default)/meet-the-team/_blocks/cover.tsx`  
-**Tier:** Free
+**Slug:** `layout-4/ingredients`  
+**Path:** `(hero-dark)/layout-4/_blocks/ingredients.tsx`  
+**Tier:** Pro
 
 ---
 
-### Accordion
+### Hours
 
-#### Join Our Team / Accordion
+#### Layout 6 / Hours
 
-<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/accordion.jpg" alt="Join Our Team / Accordion" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/hours.jpg" alt="Layout 6 / Hours" width="350">
 
-**Slug:** `join-our-team/accordion`  
-**Path:** `(color-navbar)/join-our-team/_blocks/accordion.tsx`  
-**Tier:** Free
+**Slug:** `layout-6/hours`  
+**Path:** `(hero-dark)/layout-6/_blocks/hours.tsx`  
+**Tier:** Pro
 
 ---
 
@@ -1202,68 +1303,6 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 **Slug:** `layout-7/archive`  
 **Path:** `(hero-dark)/layout-7/_blocks/archive.tsx`  
 **Tier:** Pro
-
----
-
-### Form
-
-#### Layout 1 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/form.jpg" alt="Layout 1 / Form" width="350">
-
-**Slug:** `layout-1/form`  
-**Path:** `(one-page-site)/layout-1/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 3 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/form.jpg" alt="Layout 3 / Form" width="350">
-
-**Slug:** `layout-3/form`  
-**Path:** `(default)/layout-3/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 4 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/form.jpg" alt="Layout 4 / Form" width="350">
-
-**Slug:** `layout-4/form`  
-**Path:** `(hero-dark)/layout-4/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 7 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-7/form.jpg" alt="Layout 7 / Form" width="350">
-
-**Slug:** `layout-7/form`  
-**Path:** `(hero-dark)/layout-7/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Contact / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/contact/form.jpg" alt="Contact / Form" width="350">
-
-**Slug:** `contact/form`  
-**Path:** `(default)/contact/_blocks/form.tsx`  
-**Tier:** Free
-
----
-
-#### Join Our Team / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/form.jpg" alt="Join Our Team / Form" width="350">
-
-**Slug:** `join-our-team/form`  
-**Path:** `(color-navbar)/join-our-team/_blocks/form.tsx`  
-**Tier:** Free
 
 ---
 

@@ -1,7 +1,7 @@
 import { Section } from '@/components/section'
 import { Heading } from '@/components/heading'
 import {
-  Form as FormComponent,
+  Form,
   FormInput,
   FormTextArea,
   FormButton,
@@ -10,7 +10,7 @@ import {
   FormCheckboxGroup,
 } from '@/components/form'
 
-export default function Form() {
+export default function Consultation() {
   return (
     <Section
       id="contact"
@@ -23,7 +23,7 @@ export default function Form() {
         >
           Let's Build Your Brand Together
         </Heading>
-        <FormComponent>
+        <Form>
           <FormInput
             name="emailSubject"
             defaultValue="Brand Consultation Request"
@@ -104,7 +104,7 @@ export default function Form() {
             name="submit"
             label="Send Message"
           />
-        </FormComponent>
+        </Form>
       </div>
     </Section>
   )

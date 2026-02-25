@@ -1,10 +1,10 @@
-import { Cover as CoverComponent } from '@/components/cover'
+import { Cover } from '@/components/cover'
 import { Accent } from '@/components/accent'
 
-export default function Cover() {
+export default function Banner() {
   return (
-    <CoverComponent
-      imageSrc="/layout-1/pexels-ivan-s-8117415.jpg"
+    <Cover
+      imageSrc="/images/layout-3/pexels-cesar-o-neill-26650613-35240283.jpg"
       imageAlt="Creative workspace with design materials"
       imageClassName=""
       parallax={true}
@@ -14,8 +14,8 @@ export default function Cover() {
         color="text-overlay-text"
         size="medium"
       >
-        Strategy Meets Creativity
+        Capturing Moments That Last Forever
       </Accent>
-    </CoverComponent>
+    </Cover>
   )
 }

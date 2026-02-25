@@ -2,7 +2,7 @@ import { Section } from '@/components/section'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import {
-  Form as FormComponent,
+  Form,
   FormInput,
   FormTextArea,
   FormRadioGroup,
@@ -12,7 +12,7 @@ import {
 } from '@/components/form'
 import { Grid } from '@/components/grid'
 
-export default function Form() {
+export default function Booking() {
   return (
     <Section className="py-30 bg-body">
       <div className="max-w-3xl mx-auto">
@@ -31,7 +31,7 @@ export default function Form() {
           For more information please get in touch using the form below:
         </Paragraph>
 
-        <FormComponent>
+        <Form>
           <FormInput
             name="emailSubject"
             defaultValue="Photography Pricing Request"
@@ -103,7 +103,7 @@ export default function Form() {
               label="Send message"
             />
           </div>
-        </FormComponent>
+        </Form>
       </div>
     </Section>
   )

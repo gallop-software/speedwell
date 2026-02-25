@@ -1,14 +1,14 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Form from './_blocks/form'
-import Section from './_blocks/section'
+import ContactForm from './_blocks/contact-form'
+import ContactInfo from './_blocks/contact-info'
 
 function Blocks() {
   return (
     <>
-      <Form />
-      <Section />
+      <ContactForm />
+      <ContactInfo />
     </>
   )
 }

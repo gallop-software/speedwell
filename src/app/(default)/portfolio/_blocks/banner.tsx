@@ -1,9 +1,9 @@
-import { Cover as CoverComponent } from '@/components/cover'
+import { Cover } from '@/components/cover'
 import { Accent } from '@/components/accent'
 
-export default function Cover() {
+export default function Banner() {
   return (
-    <CoverComponent
+    <Cover
       imageSrc="/portfolio/pexels-jworks1124-342800.jpg"
       imageAlt="Speedwell interior design team workspace"
       imageClassName=""
@@ -15,6 +15,6 @@ export default function Cover() {
       >
         meet our team
       </Accent>
-    </CoverComponent>
+    </Cover>
   )
 }

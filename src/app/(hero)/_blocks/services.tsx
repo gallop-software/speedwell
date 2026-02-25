@@ -3,7 +3,7 @@ import { Heading } from '@/components/heading'
 import { Grid } from '@/components/grid'
 import { Card2 } from '@/components/card-2'
 
-export default function Section2() {
+export default function Services() {
   return (
     <Section className="py-16 md:py-24 bg-gradient-to-b from-body to-body-light">
       <Heading

@@ -5,12 +5,12 @@ import Hero from './_blocks/hero'
 import Content from './_blocks/content'
 import Content2 from './_blocks/content-2'
 import Content3 from './_blocks/content-3'
-import Cover from './_blocks/cover'
+import Banner from './_blocks/banner'
 import About from './_blocks/about'
 import Process from './_blocks/process'
 import Archive from './_blocks/archive'
-import Form from './_blocks/form'
-import Section from './_blocks/section'
+import Consultation from './_blocks/consultation'
+import ContactInfo from './_blocks/contact-info'
 import Testimonial from './_blocks/testimonial'
 
 function Blocks() {
@@ -22,11 +22,11 @@ function Blocks() {
       <Process />
       <Content3 />
       <About />
-      <Cover />
+      <Banner />
       <Archive />
       <Testimonial />
-      <Form />
-      <Section />
+      <Consultation />
+      <ContactInfo />
     </>
   )
 }

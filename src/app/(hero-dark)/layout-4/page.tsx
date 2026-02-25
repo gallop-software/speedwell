@@ -3,22 +3,22 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
 import Content from './_blocks/content'
-import Cover from './_blocks/cover'
-import Section from './_blocks/section'
-import Section2 from './_blocks/section-2'
+import Featured from './_blocks/featured'
+import Menu from './_blocks/menu'
+import Ingredients from './_blocks/ingredients'
 import Testimonial from './_blocks/testimonial'
-import Form from './_blocks/form'
+import Reservation from './_blocks/reservation'
 
 function Blocks() {
   return (
     <>
       <Hero />
       <Content />
-      <Cover />
-      <Section2 />
-      <Section />
+      <Featured />
+      <Ingredients />
+      <Menu />
       <Testimonial />
-      <Form />
+      <Reservation />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { Section as SectionComponent } from '@/components/section'
+import { Section } from '@/components/section'
 import { Heading } from '@/components/heading'
 import { MasonryFilter } from '@/components/masonry-filter'
 
@@ -103,9 +103,9 @@ const portfolioItems = [
   },
 ]
 
-export default function Section() {
+export default function Gallery() {
   return (
-    <SectionComponent
+    <Section
       id="portfolio-section"
       className="py-30 bg-body2"
     >
@@ -121,6 +121,6 @@ export default function Section() {
         gap={16}
         breakpoints={{ default: 3, lg: 3, md: 2, sm: 1 }}
       />
-    </SectionComponent>
+    </Section>
   )
 }

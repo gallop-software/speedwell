@@ -1,4 +1,4 @@
-import { Section as SectionComponent } from '@/components/section'
+import { Section } from '@/components/section'
 import { Columns, Column } from '@/components/columns'
 import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
@@ -9,9 +9,9 @@ import starIcon from '@iconify/icons-lucide/star'
 import mapPinIcon from '@iconify/icons-lucide/map-pin'
 import mailIcon from '@iconify/icons-lucide/mail'
 
-export default function Section() {
+export default function ContactInfo() {
   return (
-    <SectionComponent className="py-20 md:py-30 bg-accent4 relative">
+    <Section className="py-20 md:py-30 bg-accent4 relative">
       <Columns
         gap="gap-10 lg:gap-20"
         cols="grid-cols-1 lg:grid-cols-[2fr_3fr]"
@@ -66,6 +66,6 @@ export default function Section() {
           </Grid>
         </Column>
       </Columns>
-    </SectionComponent>
+    </Section>
   )
 }

@@ -4,7 +4,7 @@ import { Heading } from '@/components/heading'
 import { Grid } from '@/components/grid'
 import { Subheading } from '@/components/subheading'
 
-export default function Cover() {
+export default function Gallery() {
   return (
     <Section
       className="py-0 bg-body relative overflow-hidden"

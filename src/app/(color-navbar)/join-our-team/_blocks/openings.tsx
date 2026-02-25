@@ -1,13 +1,13 @@
 import { Section } from '@/components/section'
 import { Heading } from '@/components/heading'
-import { Accordion as AccordionComponent } from '@/components/accordion'
+import { Accordion } from '@/components/accordion'
 import { List, Li } from '@/components/list'
 
-export default function Accordion() {
+export default function Openings() {
   return (
     <Section className="relative pb-30">
       <Heading as="h2">Current Openings</Heading>
-      <AccordionComponent headingText="Interior Designer">
+      <Accordion headingText="Interior Designer">
         <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
           <Li>
@@ -40,8 +40,8 @@ export default function Accordion() {
           <Li>Professional development and continuing education</Li>
           <Li>Collaborative studio environment with talented team</Li>
         </List>
-      </AccordionComponent>
-      <AccordionComponent headingText="Project Manager">
+      </Accordion>
+      <Accordion headingText="Project Manager">
         <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
           <Li>
@@ -67,8 +67,8 @@ export default function Accordion() {
           <Li>Work with experienced design team</Li>
           <Li>Professional growth opportunities</Li>
         </List>
-      </AccordionComponent>
-      <AccordionComponent headingText="Design Intern">
+      </Accordion>
+      <Accordion headingText="Design Intern">
         <Heading as="h4">Responsibilities</Heading>
         <List className="mb-8">
           <Li>Assist senior designers with project research and development</Li>
@@ -94,7 +94,7 @@ export default function Accordion() {
           <Li>Exposure to residential and commercial design</Li>
           <Li>Potential for full-time employment after internship</Li>
         </List>
-      </AccordionComponent>
+      </Accordion>
     </Section>
   )
 }

@@ -1,10 +1,10 @@
-import { Section as SectionComponent } from '@/components/section'
+import { Section } from '@/components/section'
 import { Grid } from '@/components/grid'
 import { Card1 } from '@/components/card-1'
 
-export default function Section() {
+export default function Highlights() {
   return (
-    <SectionComponent className="pt-30 lg:pt-50 pb-30 bg-gradient-to-b from-body to-body-light">
+    <Section className="pt-30 lg:pt-50 pb-30 bg-gradient-to-b from-body to-body-light">
       <Grid>
         <Card1
           id="1"
@@ -49,6 +49,6 @@ export default function Section() {
           alt="Get in touch with our design team"
         />
       </Grid>
-    </SectionComponent>
+    </Section>
   )
 }

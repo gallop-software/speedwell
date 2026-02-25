@@ -3,8 +3,8 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
 import Content from './_blocks/content'
-import Section from './_blocks/section'
-import Section2 from './_blocks/section-2'
+import Highlights from './_blocks/highlights'
+import Services from './_blocks/services'
 import Archive from './_blocks/archive'
 
 function Blocks() {
@@ -12,8 +12,8 @@ function Blocks() {
     <>
       <Hero />
       <Content />
-      <Section />
-      <Section2 />
+      <Highlights />
+      <Services />
       <Archive />
     </>
   )

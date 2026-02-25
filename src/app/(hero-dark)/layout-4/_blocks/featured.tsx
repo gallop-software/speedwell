@@ -5,7 +5,7 @@ import { Image } from '@/components/image'
 import { Grid } from '@/components/grid'
 import { Label } from '@/components/label'
 
-export default function Cover() {
+export default function Featured() {
   return (
     <Section
       className="relative py-30 overflow-hidden bg-overlay/70 px-0"

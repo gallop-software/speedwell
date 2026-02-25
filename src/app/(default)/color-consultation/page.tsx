@@ -6,7 +6,7 @@ import Content from './_blocks/content'
 import Content2 from './_blocks/content-2'
 import Content3 from './_blocks/content-3'
 import CallToAction from './_blocks/call-to-action'
-import Cover from './_blocks/cover'
+import Banner from './_blocks/banner'
 import Testimonial from './_blocks/testimonial'
 
 function Blocks() {
@@ -17,7 +17,7 @@ function Blocks() {
       <Content2 />
       <Content3 />
       <CallToAction />
-      <Cover />
+      <Banner />
       <Testimonial />
     </>
   )

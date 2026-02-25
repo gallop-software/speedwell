@@ -2,15 +2,15 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Content from './_blocks/content'
-import Accordion from './_blocks/accordion'
-import Form from './_blocks/form'
+import Openings from './_blocks/openings'
+import Application from './_blocks/application'
 
 function Blocks() {
   return (
     <>
       <Content />
-      <Accordion />
-      <Form />
+      <Openings />
+      <Application />
     </>
   )
 }

@@ -3,7 +3,7 @@ import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Accent } from '@/components/accent'
 import { Grid } from '@/components/grid'
-import { Form as FormComponent, FormInput, FormButton } from '@/components/form'
+import { Form, FormInput, FormButton } from '@/components/form'
 import { Icon } from '@/components/icon'
 import headphonesIcon from '@iconify/icons-lucide/headphones'
 import clsx from 'clsx'
@@ -17,7 +17,7 @@ const platforms = [
   { name: 'Pocket Casts', color: 'bg-[#F43E37]' },
 ]
 
-export default function Form() {
+export default function Subscribe() {
   return (
     <Section
       id="subscribe"
@@ -92,7 +92,7 @@ export default function Form() {
           takeaways, and exclusive behind-the-scenes content.
         </Paragraph>
 
-        <FormComponent
+        <Form
           classname="max-w-md mx-auto"
           gap="gap-4"
         >
@@ -108,7 +108,7 @@ export default function Form() {
             name="submit"
             label="Subscribe"
           />
-        </FormComponent>
+        </Form>
 
         <Paragraph
           variant="small"

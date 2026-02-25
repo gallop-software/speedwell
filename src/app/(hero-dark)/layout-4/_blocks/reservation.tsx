@@ -1,13 +1,13 @@
 import { Section } from '@/components/section'
 import { Columns, Column } from '@/components/columns'
 import { Heading } from '@/components/heading'
-import { Form as FormComponent, FormInput, FormTextArea, FormButton } from '@/components/form'
+import { Form, FormInput, FormTextArea, FormButton } from '@/components/form'
 import { Image } from '@/components/image'
 import { Accent } from '@/components/accent'
 import { Paragraph } from '@/components/paragraph'
 import { Grid } from '@/components/grid'
 
-export default function Form() {
+export default function Reservation() {
   return (
     <Section className="py-30 bg-body relative">
       <Columns
@@ -40,7 +40,7 @@ export default function Form() {
             Book your table today and let us create an unforgettable culinary
             experience for you.
           </Paragraph>
-          <FormComponent classname="space-y-2">
+          <Form classname="space-y-2">
             <FormInput
               name="emailSubject"
               defaultValue="Reservation Request"
@@ -109,7 +109,7 @@ export default function Form() {
               name="submit"
               label="Request Reservation"
             />
-          </FormComponent>
+          </Form>
         </Column>
       </Columns>
     </Section>

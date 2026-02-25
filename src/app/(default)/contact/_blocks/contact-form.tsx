@@ -1,11 +1,11 @@
 import { Section } from '@/components/section'
 import { Columns, Column } from '@/components/columns'
 import { Heading } from '@/components/heading'
-import { Form as FormComponent, FormInput, FormTextArea, FormButton } from '@/components/form'
+import { Form, FormInput, FormTextArea, FormButton } from '@/components/form'
 import { Image } from '@/components/image'
 import { Accent } from '@/components/accent'
 
-export default function Form() {
+export default function ContactForm() {
   return (
     <Section className="py-20 md:py-30 bg-body2 relative">
       <Columns
@@ -14,7 +14,7 @@ export default function Form() {
       >
         <Column className="mb-10">
           <Heading as="h1">Let's Create Your Dream Space</Heading>
-          <FormComponent>
+          <Form>
             <FormInput
               name="emailSubject"
               defaultValue="Contact Form"
@@ -53,7 +53,7 @@ export default function Form() {
               name="submit"
               label="Send Message"
             />
-          </FormComponent>
+          </Form>
         </Column>
         <Column className="aspect-[8/9] relative">
           <Image

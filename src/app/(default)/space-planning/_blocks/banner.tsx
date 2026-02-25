@@ -1,9 +1,9 @@
-import { Cover as CoverComponent } from '@/components/cover'
+import { Cover } from '@/components/cover'
 import { Accent } from '@/components/accent'
 
-export default function Cover() {
+export default function Banner() {
   return (
-    <CoverComponent
+    <Cover
       imageSrc="/portfolio/pexels-clickerhappy-584399.jpg"
       imageAlt="Beautiful interior design space"
       imageClassName=""
@@ -15,6 +15,6 @@ export default function Cover() {
       >
         Transform Your Space
       </Accent>
-    </CoverComponent>
+    </Cover>
   )
 }

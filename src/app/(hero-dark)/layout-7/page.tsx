@@ -4,7 +4,7 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import Hero from './_blocks/hero'
 import Content from './_blocks/content'
 import Archive from './_blocks/archive'
-import Form from './_blocks/form'
+import Subscribe from './_blocks/subscribe'
 import Testimonial from './_blocks/testimonial'
 import CallToAction from './_blocks/call-to-action'
 
@@ -14,7 +14,7 @@ function Blocks() {
       <Hero />
       <Content />
       <Archive />
-      <Form />
+      <Subscribe />
       <Testimonial />
       <CallToAction />
     </>
