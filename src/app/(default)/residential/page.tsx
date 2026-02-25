@@ -2,11 +2,11 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
-import Content from './_blocks/content'
-import Content2 from './_blocks/content-2'
-import Content3 from './_blocks/content-3'
-import Content4 from './_blocks/content-4'
-import Content5 from './_blocks/content-5'
+import Overview from './_blocks/overview'
+import Approach from './_blocks/approach'
+import Sustainability from './_blocks/sustainability'
+import Process from './_blocks/process'
+import Excellence from './_blocks/excellence'
 import Banner from './_blocks/banner'
 import Testimonial from './_blocks/testimonial'
 
@@ -14,11 +14,11 @@ function Blocks() {
   return (
     <>
       <Hero />
-      <Content />
-      <Content2 />
-      <Content3 />
-      <Content4 />
-      <Content5 />
+      <Overview />
+      <Approach />
+      <Sustainability />
+      <Process />
+      <Excellence />
       <Banner />
       <Testimonial />
     </>

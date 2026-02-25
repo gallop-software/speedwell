@@ -2,7 +2,7 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
-import Content from './_blocks/content'
+import Spotlight from './_blocks/spotlight'
 import Highlights from './_blocks/highlights'
 import Services from './_blocks/services'
 import Archive from './_blocks/archive'
@@ -11,7 +11,7 @@ function Blocks() {
   return (
     <>
       <Hero />
-      <Content />
+      <Spotlight />
       <Highlights />
       <Services />
       <Archive />

@@ -2,25 +2,25 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Banner from './_blocks/banner'
-import Content from './_blocks/content'
-import Content2 from './_blocks/content-2'
-import Content3 from './_blocks/content-3'
-import Content4 from './_blocks/content-4'
-import Content5 from './_blocks/content-5'
-import Content6 from './_blocks/content-6'
-import Content7 from './_blocks/content-7'
+import Intro from './_blocks/intro'
+import Philosophy from './_blocks/philosophy'
+import Profile from './_blocks/profile'
+import Profile2 from './_blocks/profile-2'
+import Profile3 from './_blocks/profile-3'
+import Profile4 from './_blocks/profile-4'
+import Profile5 from './_blocks/profile-5'
 
 function Blocks() {
   return (
     <>
       <Banner />
-      <Content />
-      <Content2 />
-      <Content3 />
-      <Content4 />
-      <Content5 />
-      <Content6 />
-      <Content7 />
+      <Intro />
+      <Philosophy />
+      <Profile />
+      <Profile2 />
+      <Profile3 />
+      <Profile4 />
+      <Profile5 />
     </>
   )
 }

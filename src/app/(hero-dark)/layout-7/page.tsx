@@ -2,7 +2,7 @@ import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
-import Content from './_blocks/content'
+import About from './_blocks/about'
 import Archive from './_blocks/archive'
 import Subscribe from './_blocks/subscribe'
 import Testimonial from './_blocks/testimonial'
@@ -12,7 +12,7 @@ function Blocks() {
   return (
     <>
       <Hero />
-      <Content />
+      <About />
       <Archive />
       <Subscribe />
       <Testimonial />
