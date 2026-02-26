@@ -10,7 +10,7 @@ import Profile3 from './_blocks/profile-3'
 import Profile4 from './_blocks/profile-4'
 import Profile5 from './_blocks/profile-5'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Banner />
@@ -53,7 +53,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

@@ -5,7 +5,7 @@ import Intro from './_blocks/intro'
 import Vendor from './_blocks/vendor'
 import Vendor2 from './_blocks/vendor-2'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Intro />
@@ -43,7 +43,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

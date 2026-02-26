@@ -14,7 +14,7 @@ For each page.tsx file under `src/app/`, identify which blocks it imports from `
 
 5. If a block is imported by multiple pages, duplicate it into each page's `_blocks/` directory — blocks are page-specific content, not shared components.
 
-6. If the page has a wrapper function named `Content()`, rename it to `Blocks()` to avoid collisions with `Content` block imports.
+6. The page wrapper function that renders all blocks should be named `Content()`.
 
 7. Update `eslint.config.mjs`: change the blocks glob from `src/blocks/**/*.tsx` to `src/app/**/_blocks/**/*.tsx`.
 

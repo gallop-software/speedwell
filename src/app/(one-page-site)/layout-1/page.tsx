@@ -13,7 +13,7 @@ import Consultation from './_blocks/consultation'
 import ContactInfo from './_blocks/contact-info'
 import Testimonial from './_blocks/testimonial'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -101,7 +101,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

@@ -4,7 +4,7 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import ContactForm from './_blocks/contact-form'
 import ContactInfo from './_blocks/contact-info'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <ContactForm />
@@ -41,7 +41,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

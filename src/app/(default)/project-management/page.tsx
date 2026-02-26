@@ -11,7 +11,7 @@ import Budget from './_blocks/budget'
 import Quality from './_blocks/quality'
 import Partnership from './_blocks/partnership'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -55,7 +55,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

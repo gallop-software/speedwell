@@ -6,7 +6,7 @@ import Testimonial from './_blocks/testimonial'
 import Intro from './_blocks/intro'
 import About from './_blocks/about'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -45,7 +45,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

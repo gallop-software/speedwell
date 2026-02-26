@@ -11,7 +11,7 @@ import Spotlight from './_blocks/spotlight'
 import Banner from './_blocks/banner'
 import Testimonial from './_blocks/testimonial'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -109,7 +109,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

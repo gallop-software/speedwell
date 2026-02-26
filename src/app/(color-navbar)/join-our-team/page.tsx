@@ -5,7 +5,7 @@ import Intro from './_blocks/intro'
 import Openings from './_blocks/openings'
 import Application from './_blocks/application'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Intro />
@@ -43,7 +43,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

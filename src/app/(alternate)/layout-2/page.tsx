@@ -6,7 +6,7 @@ import Hero from './_blocks/hero'
 import Features from './_blocks/features'
 import Pricing from './_blocks/pricing'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -85,7 +85,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

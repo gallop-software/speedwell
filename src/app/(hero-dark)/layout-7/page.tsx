@@ -8,7 +8,7 @@ import Subscribe from './_blocks/subscribe'
 import Testimonial from './_blocks/testimonial'
 import CallToAction from './_blocks/call-to-action'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -84,7 +84,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

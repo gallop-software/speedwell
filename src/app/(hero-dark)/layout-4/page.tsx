@@ -9,7 +9,7 @@ import Ingredients from './_blocks/ingredients'
 import Testimonial from './_blocks/testimonial'
 import Reservation from './_blocks/reservation'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -91,7 +91,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

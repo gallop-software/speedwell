@@ -8,7 +8,7 @@ import Gallery from './_blocks/gallery'
 import Testimonial from './_blocks/testimonial'
 import Shopping from './_blocks/shopping'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -88,7 +88,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

@@ -7,7 +7,7 @@ import Highlights from './_blocks/highlights'
 import Services from './_blocks/services'
 import Archive from './_blocks/archive'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
@@ -88,7 +88,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }
