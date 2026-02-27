@@ -39,7 +39,6 @@
     "audit": "gallop audit",
     "audit:strict": "gallop audit --strict",
     "audit:json": "gallop audit --json",
-    "generate:ai-rules": "gallop generate",
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
@@ -61,7 +60,6 @@
     "update:major": "npx npm-check-updates -u --target latest && npm run clean",
     "update:interactive": "npx npm-check-updates -i",
     "update:doctor": "npx npm-check-updates --doctor -u",
-    "update:canon": "npm update @gallop.software/canon",
     "unused": "knip",
     "check": "npm run lint && npm run ts"
   },

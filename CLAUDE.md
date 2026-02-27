@@ -1,7 +1,6 @@
-# CLAUDE.md — Project-Specific Intelligence
+# Speedwell — Gallop Canon Template
 
-> Auto-generated from Gallop Canon v1.0.0. Do not edit manually.
-> Regenerate with: npm run generate:ai-rules
+Speedwell is a Next.js template for small businesses built on the Gallop Canon architecture system. Canon provides ESLint rules (`@gallop.software/canon/eslint`) and an audit CLI (`gallop audit`) that enforce the patterns below. The `CLAUDE.md` file is the canonical AI reference — there is no auto-generation pipeline.
 
 ## Auto-Generated Files — Never Edit Manually
 
@@ -14,7 +13,6 @@
 | `public/search-index.json` | `npm run search` | Content changes |
 | `public/blocks/*.jpg` | `npm run blocks:screenshots` | Block visual changes |
 | `public/layouts/*.jpg` | `npm run layouts:screenshots` | Layout visual changes |
-| `.cursorrules` | `npm run generate:ai-rules` | Canon rule changes |
 
 ## Build Commands
 
@@ -29,6 +27,84 @@
 | `npm run ts` | TypeScript check |
 | `npm run check` | lint + ts combined |
 | `npm run prettier` | Format code |
+
+## File & Folder Authority
+
+These rules govern what AI is allowed and forbidden to do when creating, moving, or modifying files and folders.
+
+### Defined `/src` Structure
+
+```
+src/
+├── app/          # Routes, layouts, metadata (Next.js App Router)
+│   └── {route}/
+│       ├── page.tsx
+│       └── _blocks/  # Co-located page-specific blocks
+├── blog/         # Blog content (archive content type)
+├── components/   # Reusable UI primitives
+├── hooks/        # Custom React hooks
+├── styles/       # CSS, Tailwind, fonts
+├── template/     # Template-level components
+├── tools/        # Utility tools
+├── types/        # TypeScript types
+├── utils/        # Utility functions
+└── state.ts      # Global state
+```
+
+### App Router Structure
+
+Routes must use Next.js route groups. At minimum, `(default)` must exist:
+
+```
+src/app/
+├── (default)/        # Required - default layout group
+│   ├── layout.tsx
+│   └── {routes}/
+├── (hero)/           # Optional - hero layout variant
+├── api/              # API routes (exception - no grouping)
+├── layout.tsx        # Root layout
+└── metadata.tsx      # Shared metadata
+```
+
+- All page routes must be inside a route group (parentheses folder)
+- Never create routes directly under `src/app/` (except `api/`, root files)
+- New route groups are allowed freely when a new layout variant is needed
+
+### File Structure Rules
+
+**Blocks:**
+- Co-located in `_blocks/` subdirectories alongside each page route
+- Singleton naming: `hero.tsx` (one per page), numbered when multiple: `content-2.tsx`, `content-3.tsx`
+- Import with relative paths: `import Hero from './_blocks/hero'`
+- Example: `src/app/(default)/furniture/_blocks/hero.tsx`
+
+**Components:**
+- Simple components: Single file in `src/components/`
+- Complex components: Folder with `index.tsx`
+- Use folders when component has multiple sub-files
+
+### DO — What AI IS Allowed To Do
+
+- Create files only inside existing Canon-defined zones
+- Place new files in the zone that matches their architectural role
+- Follow existing folder conventions within a zone
+- Reuse existing folders when possible
+- Create new route groups in `src/app/` when new layouts are needed
+- Create new archive content folders (like `blog/`, `portfolio/`) in `/src`
+- Create dotfiles/directories at project root (`.github/`, `.cursor/`, etc.)
+- Ask for confirmation if the correct zone is ambiguous
+
+### DO NOT — What AI Is Forbidden To Do
+
+- Create new top-level directories (except dotfiles)
+- Create new folders in `/src` (except archive content or route groups)
+- Place files outside Canon-defined zones
+- Mix responsibilities across zones (components importing blocks, etc.)
+- Reorganize or move folders without explicit instruction
+- Invent new organizational conventions
+- Create placeholder or speculative files
+- Import from `_scripts/` or `_data/` in runtime code
+- Manually edit files in `_data/` (generated only)
 
 ## Enforced Patterns (ESLint)
 
@@ -57,33 +133,13 @@ These patterns are enforced by `@gallop.software/canon/eslint`. Violations will 
 
 These patterns are not enforced by ESLint but should be followed.
 
-### 005: Page Structure
-
-PageWrapper, generatePageMetadata pattern
-
-### 010: Spacing System
-
-Standard padding/margin values
-
-### 011: Responsive Mobile-First
-
-sm/md/lg/xl breakpoint usage
-
-### 013: New Component Pattern
-
-Props for margin/color/fontSize
-
-### 015: No Inline Hover Styles
-
-Tailwind for hover states
-
-### 016: Client Extraction
-
-Extract hooks to components, not blocks (see Pattern 001 for enforcement)
-
-### 017: SEO Metadata
-
-PageMetadata structure, structured data
+- **005: Page Structure** — PageWrapper, generatePageMetadata pattern
+- **010: Spacing System** — Standard padding/margin values
+- **011: Responsive Mobile-First** — sm/md/lg/xl breakpoint usage
+- **013: New Component Pattern** — Props for margin/color/fontSize
+- **015: No Inline Hover Styles** — Tailwind for hover states
+- **016: Client Extraction** — Extract hooks to components, not blocks (see Pattern 001 for enforcement)
+- **017: SEO Metadata** — PageMetadata structure, structured data
 
 ## Color Token System
 
