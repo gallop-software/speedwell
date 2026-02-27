@@ -134,7 +134,7 @@ Use props over className for supported styles
 
 ### 006: Block Naming
 
-{type}-{n}.tsx naming, PascalCase exports
+Descriptive kebab-case naming, PascalCase exports
 
 - **ESLint Rule:** `gallop/block-naming-convention`
 - **Category:** structure
@@ -149,30 +149,28 @@ src/blocks/
 
 src/app/(default)/furniture/_blocks/
 ├── hero-1.tsx          ❌ Unnecessary number for singleton
-├── cta-1.tsx           ❌ Abbreviation not in type list
+├── CTA.tsx             ❌ Not kebab-case
 ```
 
 **Good:**
 
 ```
-src/app/(default)/furniture/
+src/app/(default)/contact/
 ├── page.tsx
 └── _blocks/
     ├── hero.tsx              → export default function Hero()
-    ├── content.tsx           → export default function Content()
-    ├── call-to-action.tsx    → export default function CallToAction()
-    ├── cover.tsx             → export default function Cover()
-    └── testimonial.tsx       → export default function Testimonial()
+    ├── contact-form.tsx      → export default function ContactForm()
+    ├── contact-info.tsx      → export default function ContactInfo()
+    └── call-to-action.tsx    → export default function CallToAction()
 
-src/app/(default)/residential/
+src/app/(default)/portfolio/
 ├── page.tsx
 └── _blocks/
     ├── hero.tsx              → export default function Hero()
-    ├── content.tsx           → export default function Content()
-    ├── content-2.tsx         → export default function Content2()
-    ├── content-3.tsx         → export default function Content3()
-    ├── cover.tsx             → export default function Cover()
-    └── testimonial.tsx       → export default function Testimonial()
+    ├── project.tsx           → export default function Project()
+    ├── project-2.tsx         → export default function Project2()
+    ├── project-3.tsx         → export default function Project3()
+    └── call-to-action.tsx    → export default function CallToAction()
 ```
 
 ### 007: Import Paths

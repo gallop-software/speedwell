@@ -38,7 +38,7 @@ These patterns are enforced by `@gallop.software/canon/eslint`. Violations will 
 - **002: Layout Hierarchy** — `gallop/no-container-in-section` — No Container inside Section
 - **003: Typography Components** — `gallop/prefer-typography-components` — Use Paragraph/Span, not raw tags
 - **004: Component Props** — `gallop/prefer-component-props` — Use props over className for supported styles
-- **006: Block Naming** — `gallop/block-naming-convention` — {type}-{n}.tsx naming, PascalCase exports
+- **006: Block Naming** — `gallop/block-naming-convention` — Descriptive kebab-case naming, PascalCase exports
 - **007: Import Paths** — `gallop/prefer-alias-imports` — @/ aliases, direct file imports
 - **008: Tailwind Only** — `gallop/no-inline-styles` — No inline styles in blocks, components allowed for dynamic values
 - **009: Color Tokens** — `gallop/no-raw-colors` — Use semantic color tokens

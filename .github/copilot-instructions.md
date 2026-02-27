@@ -45,7 +45,7 @@ Use props over className for supported styles
 
 ### 006: Block Naming
 
-{type}-{n}.tsx naming, PascalCase exports
+Descriptive kebab-case naming, PascalCase exports
 
 - **ESLint Rule:** `gallop/block-naming-convention`
 - **Category:** structure
