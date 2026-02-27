@@ -3,20 +3,20 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
 import Sidebar from './_blocks/sidebar'
-import Section from './_blocks/section'
-import Cover from './_blocks/cover'
+import Gallery from './_blocks/gallery'
+import Banner from './_blocks/banner'
 import Testimonial from './_blocks/testimonial'
-import Form from './_blocks/form'
+import Booking from './_blocks/booking'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
       <Sidebar />
-      <Section />
-      <Cover />
+      <Gallery />
+      <Banner />
       <Testimonial />
-      <Form />
+      <Booking />
     </>
   )
 }
@@ -89,7 +89,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

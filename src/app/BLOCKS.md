@@ -11,17 +11,47 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 ## Categories
 
 - **Hero:** 19 blocks
-- **Section:** 11 blocks
-- **Content:** 46 blocks
+- **Banner:** 10 blocks
+- **Overview:** 7 blocks
+- **Intro:** 6 blocks
+- **Features:** 2 blocks
+- **Spotlight:** 2 blocks
+- **Profile:** 5 blocks
+- **Project:** 4 blocks
+- **Phase:** 3 blocks
+- **Philosophy:** 2 blocks
+- **Process:** 3 blocks
+- **Approach:** 1 blocks
+- **Sustainability:** 1 blocks
+- **Excellence:** 1 blocks
+- **Budget:** 1 blocks
+- **Quality:** 1 blocks
+- **Partnership:** 1 blocks
+- **Benefits:** 1 blocks
+- **Methodology:** 1 blocks
+- **Portfolio:** 1 blocks
+- **Story:** 1 blocks
+- **Highlights:** 1 blocks
+- **Services:** 3 blocks
+- **Gallery:** 3 blocks
+- **Featured:** 1 blocks
 - **Call To Action:** 7 blocks
 - **Testimonial:** 14 blocks
-- **About:** 3 blocks
-- **Cover:** 12 blocks
-- **Accordion:** 1 blocks
+- **About:** 4 blocks
+- **Contact Info:** 2 blocks
+- **Contact Form:** 1 blocks
+- **Booking:** 1 blocks
+- **Consultation:** 1 blocks
+- **Reservation:** 1 blocks
+- **Subscribe:** 1 blocks
+- **Openings:** 1 blocks
+- **Application:** 1 blocks
+- **Vendor:** 2 blocks
+- **Menu:** 1 blocks
+- **Ingredients:** 1 blocks
+- **Hours:** 1 blocks
 - **Archive:** 3 blocks
-- **Form:** 6 blocks
 - **Pricing:** 2 blocks
-- **Process:** 1 blocks
 - **Shopping:** 1 blocks
 - **Sidebar:** 1 blocks
 
@@ -219,577 +249,671 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Section
+### Banner
 
-#### Section
+#### Layout 1 / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/section.jpg" alt="Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/banner.jpg" alt="Layout 1 / Banner" width="350">
 
-**Slug:** `section`  
-**Path:** `(hero)/_blocks/section.tsx`  
-**Tier:** Free
-
----
-
-#### Section 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/section-2.jpg" alt="Section 2" width="350">
-
-**Slug:** `section-2`  
-**Path:** `(hero)/_blocks/section-2.tsx`  
-**Tier:** Free
-
----
-
-#### Layout 1 / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/section.jpg" alt="Layout 1 / Section" width="350">
-
-**Slug:** `layout-1/section`  
-**Path:** `(one-page-site)/layout-1/_blocks/section.tsx`  
+**Slug:** `layout-1/banner`  
+**Path:** `(one-page-site)/layout-1/_blocks/banner.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 3 / Section
+#### Layout 3 / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/section.jpg" alt="Layout 3 / Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/banner.jpg" alt="Layout 3 / Banner" width="350">
 
-**Slug:** `layout-3/section`  
-**Path:** `(default)/layout-3/_blocks/section.tsx`  
+**Slug:** `layout-3/banner`  
+**Path:** `(default)/layout-3/_blocks/banner.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 4 / Section
+#### Portfolio / Banner
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/section.jpg" alt="Layout 4 / Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/banner.jpg" alt="Portfolio / Banner" width="350">
 
-**Slug:** `layout-4/section`  
-**Path:** `(hero-dark)/layout-4/_blocks/section.tsx`  
+**Slug:** `portfolio/banner`  
+**Path:** `(default)/portfolio/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Residential / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/banner.jpg" alt="Residential / Banner" width="350">
+
+**Slug:** `residential/banner`  
+**Path:** `(default)/residential/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Commercial / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/commercial/banner.jpg" alt="Commercial / Banner" width="350">
+
+**Slug:** `commercial/banner`  
+**Path:** `(default)/commercial/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Kitchen Bath / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/banner.jpg" alt="Kitchen Bath / Banner" width="350">
+
+**Slug:** `kitchen-bath/banner`  
+**Path:** `(default)/kitchen-bath/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Space Planning / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/space-planning/banner.jpg" alt="Space Planning / Banner" width="350">
+
+**Slug:** `space-planning/banner`  
+**Path:** `(default)/space-planning/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Color Consultation / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/banner.jpg" alt="Color Consultation / Banner" width="350">
+
+**Slug:** `color-consultation/banner`  
+**Path:** `(default)/color-consultation/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Furniture / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/furniture/banner.jpg" alt="Furniture / Banner" width="350">
+
+**Slug:** `furniture/banner`  
+**Path:** `(default)/furniture/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Banner
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/banner.jpg" alt="Meet The Team / Banner" width="350">
+
+**Slug:** `meet-the-team/banner`  
+**Path:** `(default)/meet-the-team/_blocks/banner.tsx`  
+**Tier:** Free
+
+---
+
+### Overview
+
+#### Portfolio / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/overview.jpg" alt="Portfolio / Overview" width="350">
+
+**Slug:** `portfolio/overview`  
+**Path:** `(default)/portfolio/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+#### Residential / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/overview.jpg" alt="Residential / Overview" width="350">
+
+**Slug:** `residential/overview`  
+**Path:** `(default)/residential/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+#### Commercial / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/commercial/overview.jpg" alt="Commercial / Overview" width="350">
+
+**Slug:** `commercial/overview`  
+**Path:** `(default)/commercial/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+#### Kitchen Bath / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/overview.jpg" alt="Kitchen Bath / Overview" width="350">
+
+**Slug:** `kitchen-bath/overview`  
+**Path:** `(default)/kitchen-bath/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+#### Space Planning / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/space-planning/overview.jpg" alt="Space Planning / Overview" width="350">
+
+**Slug:** `space-planning/overview`  
+**Path:** `(default)/space-planning/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+#### Color Consultation / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/overview.jpg" alt="Color Consultation / Overview" width="350">
+
+**Slug:** `color-consultation/overview`  
+**Path:** `(default)/color-consultation/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+#### Furniture / Overview
+
+<img src="https://speedwell-cdn.gallop.software/blocks/furniture/overview.jpg" alt="Furniture / Overview" width="350">
+
+**Slug:** `furniture/overview`  
+**Path:** `(default)/furniture/_blocks/overview.tsx`  
+**Tier:** Free
+
+---
+
+### Intro
+
+#### Project Management / Intro
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/intro.jpg" alt="Project Management / Intro" width="350">
+
+**Slug:** `project-management/intro`  
+**Path:** `(default)/project-management/_blocks/intro.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Intro
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/intro.jpg" alt="Meet The Team / Intro" width="350">
+
+**Slug:** `meet-the-team/intro`  
+**Path:** `(default)/meet-the-team/_blocks/intro.tsx`  
+**Tier:** Free
+
+---
+
+#### Testimonials / Intro
+
+<img src="https://speedwell-cdn.gallop.software/blocks/testimonials/intro.jpg" alt="Testimonials / Intro" width="350">
+
+**Slug:** `testimonials/intro`  
+**Path:** `(hero)/testimonials/_blocks/intro.tsx`  
+**Tier:** Free
+
+---
+
+#### Before After / Intro
+
+<img src="https://speedwell-cdn.gallop.software/blocks/before-after/intro.jpg" alt="Before After / Intro" width="350">
+
+**Slug:** `before-after/intro`  
+**Path:** `(default)/before-after/_blocks/intro.tsx`  
+**Tier:** Free
+
+---
+
+#### Join Our Team / Intro
+
+<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/intro.jpg" alt="Join Our Team / Intro" width="350">
+
+**Slug:** `join-our-team/intro`  
+**Path:** `(color-navbar)/join-our-team/_blocks/intro.tsx`  
+**Tier:** Free
+
+---
+
+#### Partners / Intro
+
+<img src="https://speedwell-cdn.gallop.software/blocks/partners/intro.jpg" alt="Partners / Intro" width="350">
+
+**Slug:** `partners/intro`  
+**Path:** `(color-navbar)/partners/_blocks/intro.tsx`  
+**Tier:** Free
+
+---
+
+### Features
+
+#### Layout 2 / Features
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-2/features.jpg" alt="Layout 2 / Features" width="350">
+
+**Slug:** `layout-2/features`  
+**Path:** `(alternate)/layout-2/_blocks/features.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 4 / Section 2
+#### Layout 4 / Features
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/section-2.jpg" alt="Layout 4 / Section 2" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/features.jpg" alt="Layout 4 / Features" width="350">
 
-**Slug:** `layout-4/section-2`  
-**Path:** `(hero-dark)/layout-4/_blocks/section-2.tsx`  
+**Slug:** `layout-4/features`  
+**Path:** `(hero-dark)/layout-4/_blocks/features.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 5 / Section
+### Spotlight
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-5/section.jpg" alt="Layout 5 / Section" width="350">
+#### Spotlight
 
-**Slug:** `layout-5/section`  
-**Path:** `(hero)/layout-5/_blocks/section.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/spotlight.jpg" alt="Spotlight" width="350">
+
+**Slug:** `spotlight`  
+**Path:** `(hero)/_blocks/spotlight.tsx`  
+**Tier:** Free
+
+---
+
+#### Portfolio / Spotlight
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/spotlight.jpg" alt="Portfolio / Spotlight" width="350">
+
+**Slug:** `portfolio/spotlight`  
+**Path:** `(default)/portfolio/_blocks/spotlight.tsx`  
+**Tier:** Free
+
+---
+
+### Profile
+
+#### Meet The Team / Profile
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/profile.jpg" alt="Meet The Team / Profile" width="350">
+
+**Slug:** `meet-the-team/profile`  
+**Path:** `(default)/meet-the-team/_blocks/profile.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Profile 2
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/profile-2.jpg" alt="Meet The Team / Profile 2" width="350">
+
+**Slug:** `meet-the-team/profile-2`  
+**Path:** `(default)/meet-the-team/_blocks/profile-2.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Profile 3
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/profile-3.jpg" alt="Meet The Team / Profile 3" width="350">
+
+**Slug:** `meet-the-team/profile-3`  
+**Path:** `(default)/meet-the-team/_blocks/profile-3.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Profile 4
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/profile-4.jpg" alt="Meet The Team / Profile 4" width="350">
+
+**Slug:** `meet-the-team/profile-4`  
+**Path:** `(default)/meet-the-team/_blocks/profile-4.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Profile 5
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/profile-5.jpg" alt="Meet The Team / Profile 5" width="350">
+
+**Slug:** `meet-the-team/profile-5`  
+**Path:** `(default)/meet-the-team/_blocks/profile-5.tsx`  
+**Tier:** Free
+
+---
+
+### Project
+
+#### Portfolio / Project
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/project.jpg" alt="Portfolio / Project" width="350">
+
+**Slug:** `portfolio/project`  
+**Path:** `(default)/portfolio/_blocks/project.tsx`  
+**Tier:** Free
+
+---
+
+#### Portfolio / Project 2
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/project-2.jpg" alt="Portfolio / Project 2" width="350">
+
+**Slug:** `portfolio/project-2`  
+**Path:** `(default)/portfolio/_blocks/project-2.tsx`  
+**Tier:** Free
+
+---
+
+#### Portfolio / Project 3
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/project-3.jpg" alt="Portfolio / Project 3" width="350">
+
+**Slug:** `portfolio/project-3`  
+**Path:** `(default)/portfolio/_blocks/project-3.tsx`  
+**Tier:** Free
+
+---
+
+#### Portfolio / Project 4
+
+<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/project-4.jpg" alt="Portfolio / Project 4" width="350">
+
+**Slug:** `portfolio/project-4`  
+**Path:** `(default)/portfolio/_blocks/project-4.tsx`  
+**Tier:** Free
+
+---
+
+### Phase
+
+#### Project Management / Phase
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/phase.jpg" alt="Project Management / Phase" width="350">
+
+**Slug:** `project-management/phase`  
+**Path:** `(default)/project-management/_blocks/phase.tsx`  
+**Tier:** Free
+
+---
+
+#### Project Management / Phase 2
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/phase-2.jpg" alt="Project Management / Phase 2" width="350">
+
+**Slug:** `project-management/phase-2`  
+**Path:** `(default)/project-management/_blocks/phase-2.tsx`  
+**Tier:** Free
+
+---
+
+#### Project Management / Phase 3
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/phase-3.jpg" alt="Project Management / Phase 3" width="350">
+
+**Slug:** `project-management/phase-3`  
+**Path:** `(default)/project-management/_blocks/phase-3.tsx`  
+**Tier:** Free
+
+---
+
+### Philosophy
+
+#### Project Management / Philosophy
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/philosophy.jpg" alt="Project Management / Philosophy" width="350">
+
+**Slug:** `project-management/philosophy`  
+**Path:** `(default)/project-management/_blocks/philosophy.tsx`  
+**Tier:** Free
+
+---
+
+#### Meet The Team / Philosophy
+
+<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/philosophy.jpg" alt="Meet The Team / Philosophy" width="350">
+
+**Slug:** `meet-the-team/philosophy`  
+**Path:** `(default)/meet-the-team/_blocks/philosophy.tsx`  
+**Tier:** Free
+
+---
+
+### Process
+
+#### Layout 1 / Process
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/process.jpg" alt="Layout 1 / Process" width="350">
+
+**Slug:** `layout-1/process`  
+**Path:** `(one-page-site)/layout-1/_blocks/process.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 6 / Section
+#### Residential / Process
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/section.jpg" alt="Layout 6 / Section" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/process.jpg" alt="Residential / Process" width="350">
 
-**Slug:** `layout-6/section`  
-**Path:** `(hero-dark)/layout-6/_blocks/section.tsx`  
+**Slug:** `residential/process`  
+**Path:** `(default)/residential/_blocks/process.tsx`  
+**Tier:** Free
+
+---
+
+#### Color Consultation / Process
+
+<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/process.jpg" alt="Color Consultation / Process" width="350">
+
+**Slug:** `color-consultation/process`  
+**Path:** `(default)/color-consultation/_blocks/process.tsx`  
+**Tier:** Free
+
+---
+
+### Approach
+
+#### Residential / Approach
+
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/approach.jpg" alt="Residential / Approach" width="350">
+
+**Slug:** `residential/approach`  
+**Path:** `(default)/residential/_blocks/approach.tsx`  
+**Tier:** Free
+
+---
+
+### Sustainability
+
+#### Residential / Sustainability
+
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/sustainability.jpg" alt="Residential / Sustainability" width="350">
+
+**Slug:** `residential/sustainability`  
+**Path:** `(default)/residential/_blocks/sustainability.tsx`  
+**Tier:** Free
+
+---
+
+### Excellence
+
+#### Residential / Excellence
+
+<img src="https://speedwell-cdn.gallop.software/blocks/residential/excellence.jpg" alt="Residential / Excellence" width="350">
+
+**Slug:** `residential/excellence`  
+**Path:** `(default)/residential/_blocks/excellence.tsx`  
+**Tier:** Free
+
+---
+
+### Budget
+
+#### Project Management / Budget
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/budget.jpg" alt="Project Management / Budget" width="350">
+
+**Slug:** `project-management/budget`  
+**Path:** `(default)/project-management/_blocks/budget.tsx`  
+**Tier:** Free
+
+---
+
+### Quality
+
+#### Project Management / Quality
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/quality.jpg" alt="Project Management / Quality" width="350">
+
+**Slug:** `project-management/quality`  
+**Path:** `(default)/project-management/_blocks/quality.tsx`  
+**Tier:** Free
+
+---
+
+### Partnership
+
+#### Project Management / Partnership
+
+<img src="https://speedwell-cdn.gallop.software/blocks/project-management/partnership.jpg" alt="Project Management / Partnership" width="350">
+
+**Slug:** `project-management/partnership`  
+**Path:** `(default)/project-management/_blocks/partnership.tsx`  
+**Tier:** Free
+
+---
+
+### Benefits
+
+#### Color Consultation / Benefits
+
+<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/benefits.jpg" alt="Color Consultation / Benefits" width="350">
+
+**Slug:** `color-consultation/benefits`  
+**Path:** `(default)/color-consultation/_blocks/benefits.tsx`  
+**Tier:** Free
+
+---
+
+### Methodology
+
+#### Layout 1 / Methodology
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/methodology.jpg" alt="Layout 1 / Methodology" width="350">
+
+**Slug:** `layout-1/methodology`  
+**Path:** `(one-page-site)/layout-1/_blocks/methodology.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Contact / Section
+### Portfolio
 
-<img src="https://speedwell-cdn.gallop.software/blocks/contact/section.jpg" alt="Contact / Section" width="350">
+#### Layout 1 / Portfolio
 
-**Slug:** `contact/section`  
-**Path:** `(default)/contact/_blocks/section.tsx`  
-**Tier:** Free
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/portfolio.jpg" alt="Layout 1 / Portfolio" width="350">
 
----
-
-#### Partners / Section
-
-<img src="https://speedwell-cdn.gallop.software/blocks/partners/section.jpg" alt="Partners / Section" width="350">
-
-**Slug:** `partners/section`  
-**Path:** `(color-navbar)/partners/_blocks/section.tsx`  
-**Tier:** Free
-
----
-
-#### Partners / Section 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/partners/section-2.jpg" alt="Partners / Section 2" width="350">
-
-**Slug:** `partners/section-2`  
-**Path:** `(color-navbar)/partners/_blocks/section-2.tsx`  
-**Tier:** Free
-
----
-
-### Content
-
-#### Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/content.jpg" alt="Content" width="350">
-
-**Slug:** `content`  
-**Path:** `(hero)/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Layout 1 / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/content.jpg" alt="Layout 1 / Content" width="350">
-
-**Slug:** `layout-1/content`  
-**Path:** `(one-page-site)/layout-1/_blocks/content.tsx`  
+**Slug:** `layout-1/portfolio`  
+**Path:** `(one-page-site)/layout-1/_blocks/portfolio.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 1 / Content 2
+### Story
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/content-2.jpg" alt="Layout 1 / Content 2" width="350">
+#### Layout 6 / Story
 
-**Slug:** `layout-1/content-2`  
-**Path:** `(one-page-site)/layout-1/_blocks/content-2.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/story.jpg" alt="Layout 6 / Story" width="350">
+
+**Slug:** `layout-6/story`  
+**Path:** `(hero-dark)/layout-6/_blocks/story.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 1 / Content 3
+### Highlights
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/content-3.jpg" alt="Layout 1 / Content 3" width="350">
+#### Highlights
 
-**Slug:** `layout-1/content-3`  
-**Path:** `(one-page-site)/layout-1/_blocks/content-3.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/highlights.jpg" alt="Highlights" width="350">
+
+**Slug:** `highlights`  
+**Path:** `(hero)/_blocks/highlights.tsx`  
+**Tier:** Free
+
+---
+
+### Services
+
+#### Services
+
+<img src="https://speedwell-cdn.gallop.software/blocks/services.jpg" alt="Services" width="350">
+
+**Slug:** `services`  
+**Path:** `(hero)/_blocks/services.tsx`  
+**Tier:** Free
+
+---
+
+#### Layout 1 / Services
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/services.jpg" alt="Layout 1 / Services" width="350">
+
+**Slug:** `layout-1/services`  
+**Path:** `(one-page-site)/layout-1/_blocks/services.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 2 / Content
+#### Layout 5 / Services
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-2/content.jpg" alt="Layout 2 / Content" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-5/services.jpg" alt="Layout 5 / Services" width="350">
 
-**Slug:** `layout-2/content`  
-**Path:** `(alternate)/layout-2/_blocks/content.tsx`  
+**Slug:** `layout-5/services`  
+**Path:** `(hero)/layout-5/_blocks/services.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 4 / Content
+### Gallery
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/content.jpg" alt="Layout 4 / Content" width="350">
+#### Layout 3 / Gallery
 
-**Slug:** `layout-4/content`  
-**Path:** `(hero-dark)/layout-4/_blocks/content.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/gallery.jpg" alt="Layout 3 / Gallery" width="350">
+
+**Slug:** `layout-3/gallery`  
+**Path:** `(default)/layout-3/_blocks/gallery.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 5 / Content
+#### Layout 5 / Gallery
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-5/content.jpg" alt="Layout 5 / Content" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-5/gallery.jpg" alt="Layout 5 / Gallery" width="350">
 
-**Slug:** `layout-5/content`  
-**Path:** `(hero)/layout-5/_blocks/content.tsx`  
+**Slug:** `layout-5/gallery`  
+**Path:** `(hero)/layout-5/_blocks/gallery.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 6 / Content
+#### Layout 6 / Gallery
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/content.jpg" alt="Layout 6 / Content" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/gallery.jpg" alt="Layout 6 / Gallery" width="350">
 
-**Slug:** `layout-6/content`  
-**Path:** `(hero-dark)/layout-6/_blocks/content.tsx`  
+**Slug:** `layout-6/gallery`  
+**Path:** `(hero-dark)/layout-6/_blocks/gallery.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 7 / Content
+### Featured
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-7/content.jpg" alt="Layout 7 / Content" width="350">
+#### Layout 4 / Featured
 
-**Slug:** `layout-7/content`  
-**Path:** `(hero-dark)/layout-7/_blocks/content.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/featured.jpg" alt="Layout 4 / Featured" width="350">
+
+**Slug:** `layout-4/featured`  
+**Path:** `(hero-dark)/layout-4/_blocks/featured.tsx`  
 **Tier:** Pro
-
----
-
-#### Portfolio / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content.jpg" alt="Portfolio / Content" width="350">
-
-**Slug:** `portfolio/content`  
-**Path:** `(default)/portfolio/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Portfolio / Content 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-2.jpg" alt="Portfolio / Content 2" width="350">
-
-**Slug:** `portfolio/content-2`  
-**Path:** `(default)/portfolio/_blocks/content-2.tsx`  
-**Tier:** Free
-
----
-
-#### Portfolio / Content 3
-
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-3.jpg" alt="Portfolio / Content 3" width="350">
-
-**Slug:** `portfolio/content-3`  
-**Path:** `(default)/portfolio/_blocks/content-3.tsx`  
-**Tier:** Free
-
----
-
-#### Portfolio / Content 4
-
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-4.jpg" alt="Portfolio / Content 4" width="350">
-
-**Slug:** `portfolio/content-4`  
-**Path:** `(default)/portfolio/_blocks/content-4.tsx`  
-**Tier:** Free
-
----
-
-#### Portfolio / Content 5
-
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-5.jpg" alt="Portfolio / Content 5" width="350">
-
-**Slug:** `portfolio/content-5`  
-**Path:** `(default)/portfolio/_blocks/content-5.tsx`  
-**Tier:** Free
-
----
-
-#### Portfolio / Content 6
-
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/content-6.jpg" alt="Portfolio / Content 6" width="350">
-
-**Slug:** `portfolio/content-6`  
-**Path:** `(default)/portfolio/_blocks/content-6.tsx`  
-**Tier:** Free
-
----
-
-#### Residential / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/content.jpg" alt="Residential / Content" width="350">
-
-**Slug:** `residential/content`  
-**Path:** `(default)/residential/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Residential / Content 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/content-2.jpg" alt="Residential / Content 2" width="350">
-
-**Slug:** `residential/content-2`  
-**Path:** `(default)/residential/_blocks/content-2.tsx`  
-**Tier:** Free
-
----
-
-#### Residential / Content 3
-
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/content-3.jpg" alt="Residential / Content 3" width="350">
-
-**Slug:** `residential/content-3`  
-**Path:** `(default)/residential/_blocks/content-3.tsx`  
-**Tier:** Free
-
----
-
-#### Residential / Content 4
-
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/content-4.jpg" alt="Residential / Content 4" width="350">
-
-**Slug:** `residential/content-4`  
-**Path:** `(default)/residential/_blocks/content-4.tsx`  
-**Tier:** Free
-
----
-
-#### Residential / Content 5
-
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/content-5.jpg" alt="Residential / Content 5" width="350">
-
-**Slug:** `residential/content-5`  
-**Path:** `(default)/residential/_blocks/content-5.tsx`  
-**Tier:** Free
-
----
-
-#### Commercial / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/commercial/content.jpg" alt="Commercial / Content" width="350">
-
-**Slug:** `commercial/content`  
-**Path:** `(default)/commercial/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Kitchen Bath / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/content.jpg" alt="Kitchen Bath / Content" width="350">
-
-**Slug:** `kitchen-bath/content`  
-**Path:** `(default)/kitchen-bath/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Space Planning / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/space-planning/content.jpg" alt="Space Planning / Content" width="350">
-
-**Slug:** `space-planning/content`  
-**Path:** `(default)/space-planning/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Color Consultation / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/content.jpg" alt="Color Consultation / Content" width="350">
-
-**Slug:** `color-consultation/content`  
-**Path:** `(default)/color-consultation/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Color Consultation / Content 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/content-2.jpg" alt="Color Consultation / Content 2" width="350">
-
-**Slug:** `color-consultation/content-2`  
-**Path:** `(default)/color-consultation/_blocks/content-2.tsx`  
-**Tier:** Free
-
----
-
-#### Color Consultation / Content 3
-
-<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/content-3.jpg" alt="Color Consultation / Content 3" width="350">
-
-**Slug:** `color-consultation/content-3`  
-**Path:** `(default)/color-consultation/_blocks/content-3.tsx`  
-**Tier:** Free
-
----
-
-#### Furniture / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/furniture/content.jpg" alt="Furniture / Content" width="350">
-
-**Slug:** `furniture/content`  
-**Path:** `(default)/furniture/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content.jpg" alt="Project Management / Content" width="350">
-
-**Slug:** `project-management/content`  
-**Path:** `(default)/project-management/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-2.jpg" alt="Project Management / Content 2" width="350">
-
-**Slug:** `project-management/content-2`  
-**Path:** `(default)/project-management/_blocks/content-2.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 3
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-3.jpg" alt="Project Management / Content 3" width="350">
-
-**Slug:** `project-management/content-3`  
-**Path:** `(default)/project-management/_blocks/content-3.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 4
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-4.jpg" alt="Project Management / Content 4" width="350">
-
-**Slug:** `project-management/content-4`  
-**Path:** `(default)/project-management/_blocks/content-4.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 5
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-5.jpg" alt="Project Management / Content 5" width="350">
-
-**Slug:** `project-management/content-5`  
-**Path:** `(default)/project-management/_blocks/content-5.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 6
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-6.jpg" alt="Project Management / Content 6" width="350">
-
-**Slug:** `project-management/content-6`  
-**Path:** `(default)/project-management/_blocks/content-6.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 7
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-7.jpg" alt="Project Management / Content 7" width="350">
-
-**Slug:** `project-management/content-7`  
-**Path:** `(default)/project-management/_blocks/content-7.tsx`  
-**Tier:** Free
-
----
-
-#### Project Management / Content 8
-
-<img src="https://speedwell-cdn.gallop.software/blocks/project-management/content-8.jpg" alt="Project Management / Content 8" width="350">
-
-**Slug:** `project-management/content-8`  
-**Path:** `(default)/project-management/_blocks/content-8.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content.jpg" alt="Meet The Team / Content" width="350">
-
-**Slug:** `meet-the-team/content`  
-**Path:** `(default)/meet-the-team/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content 2
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-2.jpg" alt="Meet The Team / Content 2" width="350">
-
-**Slug:** `meet-the-team/content-2`  
-**Path:** `(default)/meet-the-team/_blocks/content-2.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content 3
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-3.jpg" alt="Meet The Team / Content 3" width="350">
-
-**Slug:** `meet-the-team/content-3`  
-**Path:** `(default)/meet-the-team/_blocks/content-3.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content 4
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-4.jpg" alt="Meet The Team / Content 4" width="350">
-
-**Slug:** `meet-the-team/content-4`  
-**Path:** `(default)/meet-the-team/_blocks/content-4.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content 5
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-5.jpg" alt="Meet The Team / Content 5" width="350">
-
-**Slug:** `meet-the-team/content-5`  
-**Path:** `(default)/meet-the-team/_blocks/content-5.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content 6
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-6.jpg" alt="Meet The Team / Content 6" width="350">
-
-**Slug:** `meet-the-team/content-6`  
-**Path:** `(default)/meet-the-team/_blocks/content-6.tsx`  
-**Tier:** Free
-
----
-
-#### Meet The Team / Content 7
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/content-7.jpg" alt="Meet The Team / Content 7" width="350">
-
-**Slug:** `meet-the-team/content-7`  
-**Path:** `(default)/meet-the-team/_blocks/content-7.tsx`  
-**Tier:** Free
-
----
-
-#### Testimonials / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/testimonials/content.jpg" alt="Testimonials / Content" width="350">
-
-**Slug:** `testimonials/content`  
-**Path:** `(hero)/testimonials/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Before After / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/before-after/content.jpg" alt="Before After / Content" width="350">
-
-**Slug:** `before-after/content`  
-**Path:** `(default)/before-after/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Join Our Team / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/content.jpg" alt="Join Our Team / Content" width="350">
-
-**Slug:** `join-our-team/content`  
-**Path:** `(color-navbar)/join-our-team/_blocks/content.tsx`  
-**Tier:** Free
-
----
-
-#### Partners / Content
-
-<img src="https://speedwell-cdn.gallop.software/blocks/partners/content.jpg" alt="Partners / Content" width="350">
-
-**Slug:** `partners/content`  
-**Path:** `(color-navbar)/partners/_blocks/content.tsx`  
-**Tier:** Free
 
 ---
 
@@ -1019,6 +1143,16 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
+#### Layout 7 / About
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-7/about.jpg" alt="Layout 7 / About" width="350">
+
+**Slug:** `layout-7/about`  
+**Path:** `(hero-dark)/layout-7/_blocks/about.tsx`  
+**Tier:** Pro
+
+---
+
 #### Testimonials / About
 
 <img src="https://speedwell-cdn.gallop.software/blocks/testimonials/about.jpg" alt="Testimonials / About" width="350">
@@ -1039,137 +1173,167 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Cover
+### Contact Info
 
-#### Layout 1 / Cover
+#### Layout 1 / Contact Info
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/cover.jpg" alt="Layout 1 / Cover" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/contact-info.jpg" alt="Layout 1 / Contact Info" width="350">
 
-**Slug:** `layout-1/cover`  
-**Path:** `(one-page-site)/layout-1/_blocks/cover.tsx`  
+**Slug:** `layout-1/contact-info`  
+**Path:** `(one-page-site)/layout-1/_blocks/contact-info.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 3 / Cover
+#### Contact / Contact Info
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/cover.jpg" alt="Layout 3 / Cover" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/contact/contact-info.jpg" alt="Contact / Contact Info" width="350">
 
-**Slug:** `layout-3/cover`  
-**Path:** `(default)/layout-3/_blocks/cover.tsx`  
+**Slug:** `contact/contact-info`  
+**Path:** `(default)/contact/_blocks/contact-info.tsx`  
+**Tier:** Free
+
+---
+
+### Contact Form
+
+#### Contact / Contact Form
+
+<img src="https://speedwell-cdn.gallop.software/blocks/contact/contact-form.jpg" alt="Contact / Contact Form" width="350">
+
+**Slug:** `contact/contact-form`  
+**Path:** `(default)/contact/_blocks/contact-form.tsx`  
+**Tier:** Free
+
+---
+
+### Booking
+
+#### Layout 3 / Booking
+
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/booking.jpg" alt="Layout 3 / Booking" width="350">
+
+**Slug:** `layout-3/booking`  
+**Path:** `(default)/layout-3/_blocks/booking.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 4 / Cover
+### Consultation
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/cover.jpg" alt="Layout 4 / Cover" width="350">
+#### Layout 1 / Consultation
 
-**Slug:** `layout-4/cover`  
-**Path:** `(hero-dark)/layout-4/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/consultation.jpg" alt="Layout 1 / Consultation" width="350">
+
+**Slug:** `layout-1/consultation`  
+**Path:** `(one-page-site)/layout-1/_blocks/consultation.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Layout 6 / Cover
+### Reservation
 
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/cover.jpg" alt="Layout 6 / Cover" width="350">
+#### Layout 4 / Reservation
 
-**Slug:** `layout-6/cover`  
-**Path:** `(hero-dark)/layout-6/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/reservation.jpg" alt="Layout 4 / Reservation" width="350">
+
+**Slug:** `layout-4/reservation`  
+**Path:** `(hero-dark)/layout-4/_blocks/reservation.tsx`  
 **Tier:** Pro
 
 ---
 
-#### Portfolio / Cover
+### Subscribe
 
-<img src="https://speedwell-cdn.gallop.software/blocks/portfolio/cover.jpg" alt="Portfolio / Cover" width="350">
+#### Layout 7 / Subscribe
 
-**Slug:** `portfolio/cover`  
-**Path:** `(default)/portfolio/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-7/subscribe.jpg" alt="Layout 7 / Subscribe" width="350">
+
+**Slug:** `layout-7/subscribe`  
+**Path:** `(hero-dark)/layout-7/_blocks/subscribe.tsx`  
+**Tier:** Pro
+
+---
+
+### Openings
+
+#### Join Our Team / Openings
+
+<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/openings.jpg" alt="Join Our Team / Openings" width="350">
+
+**Slug:** `join-our-team/openings`  
+**Path:** `(color-navbar)/join-our-team/_blocks/openings.tsx`  
 **Tier:** Free
 
 ---
 
-#### Residential / Cover
+### Application
 
-<img src="https://speedwell-cdn.gallop.software/blocks/residential/cover.jpg" alt="Residential / Cover" width="350">
+#### Join Our Team / Application
 
-**Slug:** `residential/cover`  
-**Path:** `(default)/residential/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/application.jpg" alt="Join Our Team / Application" width="350">
+
+**Slug:** `join-our-team/application`  
+**Path:** `(color-navbar)/join-our-team/_blocks/application.tsx`  
 **Tier:** Free
 
 ---
 
-#### Commercial / Cover
+### Vendor
 
-<img src="https://speedwell-cdn.gallop.software/blocks/commercial/cover.jpg" alt="Commercial / Cover" width="350">
+#### Partners / Vendor
 
-**Slug:** `commercial/cover`  
-**Path:** `(default)/commercial/_blocks/cover.tsx`  
+<img src="https://speedwell-cdn.gallop.software/blocks/partners/vendor.jpg" alt="Partners / Vendor" width="350">
+
+**Slug:** `partners/vendor`  
+**Path:** `(color-navbar)/partners/_blocks/vendor.tsx`  
 **Tier:** Free
 
 ---
 
-#### Kitchen Bath / Cover
+#### Partners / Vendor 2
 
-<img src="https://speedwell-cdn.gallop.software/blocks/kitchen-bath/cover.jpg" alt="Kitchen Bath / Cover" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/partners/vendor-2.jpg" alt="Partners / Vendor 2" width="350">
 
-**Slug:** `kitchen-bath/cover`  
-**Path:** `(default)/kitchen-bath/_blocks/cover.tsx`  
+**Slug:** `partners/vendor-2`  
+**Path:** `(color-navbar)/partners/_blocks/vendor-2.tsx`  
 **Tier:** Free
 
 ---
 
-#### Space Planning / Cover
+### Menu
 
-<img src="https://speedwell-cdn.gallop.software/blocks/space-planning/cover.jpg" alt="Space Planning / Cover" width="350">
+#### Layout 4 / Menu
 
-**Slug:** `space-planning/cover`  
-**Path:** `(default)/space-planning/_blocks/cover.tsx`  
-**Tier:** Free
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/menu.jpg" alt="Layout 4 / Menu" width="350">
 
----
-
-#### Color Consultation / Cover
-
-<img src="https://speedwell-cdn.gallop.software/blocks/color-consultation/cover.jpg" alt="Color Consultation / Cover" width="350">
-
-**Slug:** `color-consultation/cover`  
-**Path:** `(default)/color-consultation/_blocks/cover.tsx`  
-**Tier:** Free
+**Slug:** `layout-4/menu`  
+**Path:** `(hero-dark)/layout-4/_blocks/menu.tsx`  
+**Tier:** Pro
 
 ---
 
-#### Furniture / Cover
+### Ingredients
 
-<img src="https://speedwell-cdn.gallop.software/blocks/furniture/cover.jpg" alt="Furniture / Cover" width="350">
+#### Layout 4 / Ingredients
 
-**Slug:** `furniture/cover`  
-**Path:** `(default)/furniture/_blocks/cover.tsx`  
-**Tier:** Free
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/ingredients.jpg" alt="Layout 4 / Ingredients" width="350">
 
----
-
-#### Meet The Team / Cover
-
-<img src="https://speedwell-cdn.gallop.software/blocks/meet-the-team/cover.jpg" alt="Meet The Team / Cover" width="350">
-
-**Slug:** `meet-the-team/cover`  
-**Path:** `(default)/meet-the-team/_blocks/cover.tsx`  
-**Tier:** Free
+**Slug:** `layout-4/ingredients`  
+**Path:** `(hero-dark)/layout-4/_blocks/ingredients.tsx`  
+**Tier:** Pro
 
 ---
 
-### Accordion
+### Hours
 
-#### Join Our Team / Accordion
+#### Layout 6 / Hours
 
-<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/accordion.jpg" alt="Join Our Team / Accordion" width="350">
+<img src="https://speedwell-cdn.gallop.software/blocks/layout-6/hours.jpg" alt="Layout 6 / Hours" width="350">
 
-**Slug:** `join-our-team/accordion`  
-**Path:** `(color-navbar)/join-our-team/_blocks/accordion.tsx`  
-**Tier:** Free
+**Slug:** `layout-6/hours`  
+**Path:** `(hero-dark)/layout-6/_blocks/hours.tsx`  
+**Tier:** Pro
 
 ---
 
@@ -1205,68 +1369,6 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 ---
 
-### Form
-
-#### Layout 1 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/form.jpg" alt="Layout 1 / Form" width="350">
-
-**Slug:** `layout-1/form`  
-**Path:** `(one-page-site)/layout-1/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 3 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-3/form.jpg" alt="Layout 3 / Form" width="350">
-
-**Slug:** `layout-3/form`  
-**Path:** `(default)/layout-3/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 4 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-4/form.jpg" alt="Layout 4 / Form" width="350">
-
-**Slug:** `layout-4/form`  
-**Path:** `(hero-dark)/layout-4/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Layout 7 / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-7/form.jpg" alt="Layout 7 / Form" width="350">
-
-**Slug:** `layout-7/form`  
-**Path:** `(hero-dark)/layout-7/_blocks/form.tsx`  
-**Tier:** Pro
-
----
-
-#### Contact / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/contact/form.jpg" alt="Contact / Form" width="350">
-
-**Slug:** `contact/form`  
-**Path:** `(default)/contact/_blocks/form.tsx`  
-**Tier:** Free
-
----
-
-#### Join Our Team / Form
-
-<img src="https://speedwell-cdn.gallop.software/blocks/join-our-team/form.jpg" alt="Join Our Team / Form" width="350">
-
-**Slug:** `join-our-team/form`  
-**Path:** `(color-navbar)/join-our-team/_blocks/form.tsx`  
-**Tier:** Free
-
----
-
 ### Pricing
 
 #### Layout 2 / Pricing
@@ -1285,18 +1387,6 @@ A collection of 127 pre-built UI blocks for the Speedwell template.
 
 **Slug:** `layout-5/pricing`  
 **Path:** `(hero)/layout-5/_blocks/pricing.tsx`  
-**Tier:** Pro
-
----
-
-### Process
-
-#### Layout 1 / Process
-
-<img src="https://speedwell-cdn.gallop.software/blocks/layout-1/process.jpg" alt="Layout 1 / Process" width="350">
-
-**Slug:** `layout-1/process`  
-**Path:** `(one-page-site)/layout-1/_blocks/process.tsx`  
 **Tier:** Pro
 
 ---
