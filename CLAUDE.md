@@ -8,7 +8,6 @@
 | File | Regenerate With | Triggered By |
 |---|---|---|
 | `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/blog/ |
-| `_data/_studio.json` | `Gallop Studio UI` | Never edit — image optimization metadata |
 | `_data/_meta.json` | `npm run blocks` | Block catalog changes |
 | `src/app/BLOCKS.md` | `npm run blocks` | Block additions (tier/order preserved) |
 | `src/app/README.md` | `npm run layouts` | Layout additions |

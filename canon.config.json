@@ -2,7 +2,6 @@
   "name": "Speedwell",
   "generatedFiles": [
     { "path": "_data/_blog.json", "command": "npm run blog", "trigger": "Adding/editing posts in src/blog/" },
-    { "path": "_data/_studio.json", "command": "Gallop Studio UI", "trigger": "Never edit — image optimization metadata" },
     { "path": "_data/_meta.json", "command": "npm run blocks", "trigger": "Block catalog changes" },
     { "path": "src/app/BLOCKS.md", "command": "npm run blocks", "trigger": "Block additions (tier/order preserved)" },
     { "path": "src/app/README.md", "command": "npm run layouts", "trigger": "Layout additions" },

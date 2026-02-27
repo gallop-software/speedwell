@@ -28,7 +28,6 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "studio": "studio --workspace .",
     "build": "npm run blog && next build",
     "start": "next start",
     "lint": "eslint src/",
@@ -93,7 +92,6 @@
   },
   "devDependencies": {
     "@gallop.software/canon": "^2.31.0",
-    "@gallop.software/studio": "^2.4.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24",
