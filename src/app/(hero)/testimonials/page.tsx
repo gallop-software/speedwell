@@ -3,15 +3,15 @@ import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
 import Hero from './_blocks/hero'
 import Testimonial from './_blocks/testimonial'
-import Content from './_blocks/content'
+import Intro from './_blocks/intro'
 import About from './_blocks/about'
 
-function Blocks() {
+function Content() {
   return (
     <>
       <Hero />
       <Testimonial />
-      <Content />
+      <Intro />
       <About />
     </>
   )
@@ -45,7 +45,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

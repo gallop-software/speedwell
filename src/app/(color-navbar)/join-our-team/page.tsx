@@ -1,16 +1,16 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 
-import Content from './_blocks/content'
-import Accordion from './_blocks/accordion'
-import Form from './_blocks/form'
+import Intro from './_blocks/intro'
+import Openings from './_blocks/openings'
+import Application from './_blocks/application'
 
-function Blocks() {
+function Content() {
   return (
     <>
-      <Content />
-      <Accordion />
-      <Form />
+      <Intro />
+      <Openings />
+      <Application />
     </>
   )
 }
@@ -43,7 +43,7 @@ export const generateMetadata = () => generatePageMetadata(metadata)
 export default function Page() {
   return (
     <PageWrapper metadata={metadata}>
-      <Blocks />
+      <Content />
     </PageWrapper>
   )
 }

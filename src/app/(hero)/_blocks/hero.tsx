@@ -16,7 +16,7 @@ import playCircleIcon from '@iconify/icons-lucide/play-circle'
 export default function Hero() {
   return (
     <>
-      <Gradient className="relative rounded-4xl ring-1 ring-contrast-dark/5 ring-inset overflow-hidden m-2 pt-navbar">
+      <Gradient className="pt-navbar relative rounded-4xl ring-1 ring-contrast-dark/5 ring-inset overflow-hidden m-2">
         <div className="mx-auto max-w-[1600px] relative">
           <Image
             src="/images/hero-bg.png"
