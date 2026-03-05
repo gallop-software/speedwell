@@ -11,3 +11,6 @@ public/
 
 # Lock files
 package-lock.json
+
+# Markdown files
+*.md
