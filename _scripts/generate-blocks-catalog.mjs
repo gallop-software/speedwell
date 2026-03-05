@@ -26,7 +26,10 @@ const SRC_DIR = join(__dirname, '../src')
 const APP_DIR = join(SRC_DIR, 'app')
 const OUTPUT_DIR = join(__dirname, '../public/blocks')
 const README_PATH = join(APP_DIR, 'BLOCKS.md')
-const BLOCK_INDEX_PATH = join(APP_DIR, '(demo)/block/[[...slug]]/_block-index.ts')
+const BLOCK_INDEX_PATH = join(
+  APP_DIR,
+  '(demo)/block/[[...slug]]/_block-index.ts'
+)
 const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const LARGE_SIZE = 1400 // Large image size on longest side
@@ -118,7 +121,7 @@ async function findBlocksDirs(dir) {
     if (entry.name === '_blocks' && entry.isDirectory()) {
       results.push(join(dir, entry.name))
     } else if (entry.isDirectory() && !entry.name.startsWith('.')) {
-      results.push(...await findBlocksDirs(join(dir, entry.name)))
+      results.push(...(await findBlocksDirs(join(dir, entry.name))))
     }
   }
 
@@ -130,7 +133,7 @@ function routeToUrlSlug(blocksDir) {
   const relPath = dirname(blocksDir).replace(APP_DIR + '/', '')
   return relPath
     .split('/')
-    .filter(seg => !seg.startsWith('('))
+    .filter((seg) => !seg.startsWith('('))
     .join('/')
 }
 
@@ -146,7 +149,8 @@ async function parseLayoutOrder() {
     process.exit(1)
   }
 
-  const layoutRegex = /\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
+  const layoutRegex =
+    /\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
   const order = []
   const tiers = new Map()
   let match
@@ -172,7 +176,7 @@ async function collectAllBlocks() {
 
   for (const blocksDir of blocksDirs) {
     const urlSlug = routeToUrlSlug(blocksDir)
-    const files = (await readdir(blocksDir)).filter(f => f.endsWith('.tsx'))
+    const files = (await readdir(blocksDir)).filter((f) => f.endsWith('.tsx'))
 
     for (const file of files) {
       const blockName = file.replace('.tsx', '')
@@ -196,12 +200,16 @@ function parseBlockName(filename, slug) {
   // Convert to display name (e.g., "furniture/hero" -> "Furniture Hero")
   const displayName = slug
     .split('/')
-    .map(part => part.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))
+    .map((part) =>
+      part
+        .split('-')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ')
+    )
     .join(' / ')
 
   return { name, slug, displayName }
 }
-
 
 async function captureScreenshot(browser, slug, outputDir) {
   const page = await browser.newPage()
@@ -299,7 +307,7 @@ async function findScreenshots(dir, base = dir) {
   for (const entry of entries) {
     const fullPath = join(dir, entry.name)
     if (entry.isDirectory()) {
-      results.push(...await findScreenshots(fullPath, base))
+      results.push(...(await findScreenshots(fullPath, base)))
     } else if (entry.name.endsWith('.jpg')) {
       const rel = fullPath.replace(base + '/', '').replace('.jpg', '')
       results.push(rel)
@@ -352,9 +360,7 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
 
     // Filter to single block if specified
     if (filterBlock) {
-      blockFiles = blockFiles.filter(
-        (f) => f.slug === filterBlock
-      )
+      blockFiles = blockFiles.filter((f) => f.slug === filterBlock)
       if (blockFiles.length === 0) {
         console.error(`Error: Block "${filterBlock}" not found`)
         process.exit(1)
@@ -376,7 +382,10 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
     // Parse all block files, derive tier from layout
     const allBlocksMap = new Map()
     for (const blockFile of blockFiles) {
-      const { name, slug, displayName } = parseBlockName(blockFile.filename, blockFile.slug)
+      const { name, slug, displayName } = parseBlockName(
+        blockFile.filename,
+        blockFile.slug
+      )
       const routePrefix = getRoutePrefix(slug)
       const tier = layoutTiers.get(routePrefix) || 'free'
 
@@ -577,7 +586,9 @@ async function generateBlockIndex(blockFiles) {
   lines.push('')
 
   await writeFile(BLOCK_INDEX_PATH, lines.join('\n'), 'utf-8')
-  console.log(`✓ Block index saved to ${BLOCK_INDEX_PATH} with ${entries.length} entries\n`)
+  console.log(
+    `✓ Block index saved to ${BLOCK_INDEX_PATH} with ${entries.length} entries\n`
+  )
 }
 
 function generateReadme(blocks) {

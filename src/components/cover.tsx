@@ -71,7 +71,10 @@ export function Cover({
             />
           )}
           <div
-            className={clsx('absolute inset-0', overlayColor || 'bg-overlay/30')}
+            className={clsx(
+              'absolute inset-0',
+              overlayColor || 'bg-overlay/30'
+            )}
           ></div>
         </>
       )}

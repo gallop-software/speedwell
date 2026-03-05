@@ -94,7 +94,7 @@ async function findBlocksDirs(dir) {
     if (entry.name === '_blocks' && entry.isDirectory()) {
       results.push(path.join(dir, entry.name))
     } else if (entry.isDirectory() && !entry.name.startsWith('.')) {
-      results.push(...await findBlocksDirs(path.join(dir, entry.name)))
+      results.push(...(await findBlocksDirs(path.join(dir, entry.name))))
     }
   }
 
@@ -106,7 +106,7 @@ function routeToUrlSlug(blocksDir) {
   const relPath = path.dirname(blocksDir).replace(APP_DIR + '/', '')
   return relPath
     .split('/')
-    .filter(seg => !seg.startsWith('('))
+    .filter((seg) => !seg.startsWith('('))
     .join('/')
 }
 
@@ -117,7 +117,9 @@ async function buildBlockPathIndex() {
 
   for (const blocksDir of blocksDirs) {
     const urlSlug = routeToUrlSlug(blocksDir)
-    const files = (await fs.readdir(blocksDir)).filter(f => f.endsWith('.tsx'))
+    const files = (await fs.readdir(blocksDir)).filter((f) =>
+      f.endsWith('.tsx')
+    )
 
     for (const file of files) {
       const blockName = file.replace('.tsx', '')

@@ -72,7 +72,10 @@ async function parseNavbarOrder() {
   for (const href of extractHrefs(demosBlock)) {
     if (href.startsWith('/')) {
       const slug = href === '/' ? 'index' : href.slice(1)
-      if (!seen.has(slug)) { seen.add(slug); slugs.push(slug) }
+      if (!seen.has(slug)) {
+        seen.add(slug)
+        slugs.push(slug)
+      }
     }
   }
 
@@ -83,7 +86,12 @@ async function parseNavbarOrder() {
   while ((im = itemsRegex.exec(configText)) !== null) {
     const openPos = configText.indexOf('[', im.index)
     if (openPos === demosOpenBracket) continue
-    itemsBlocks.push({ position: openPos, hrefs: extractHrefs(findBracketBlock(configText, openPos)).filter((h) => h.startsWith('/')) })
+    itemsBlocks.push({
+      position: openPos,
+      hrefs: extractHrefs(findBracketBlock(configText, openPos)).filter((h) =>
+        h.startsWith('/')
+      ),
+    })
   }
 
   // 3. Collect direct link hrefs (links without dropdowns)
@@ -97,12 +105,17 @@ async function parseNavbarOrder() {
   }
 
   // 4. Merge in position order, then add to slugs (deduped against demos)
-  const allEntries = [...directLinks, ...itemsBlocks].sort((a, b) => a.position - b.position)
+  const allEntries = [...directLinks, ...itemsBlocks].sort(
+    (a, b) => a.position - b.position
+  )
 
   for (const entry of allEntries) {
     for (const href of entry.hrefs) {
       const slug = href === '/' ? 'index' : href.slice(1)
-      if (!seen.has(slug)) { seen.add(slug); slugs.push(slug) }
+      if (!seen.has(slug)) {
+        seen.add(slug)
+        slugs.push(slug)
+      }
     }
   }
 
@@ -258,7 +271,6 @@ async function findLayoutPages() {
 
   return layouts
 }
-
 
 async function captureScreenshot(browser, slug, outputDir) {
   const page = await browser.newPage()

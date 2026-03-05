@@ -115,7 +115,10 @@ export default function Hero() {
                   delay={0}
                   duration={3}
                 />
-                <Icon icon={starIcon} className="w-5 h-5 text-yellow-400" />
+                <Icon
+                  icon={starIcon}
+                  className="w-5 h-5 text-yellow-400"
+                />
               </Heading>
               <Label
                 color="text-overlay-text/60"
