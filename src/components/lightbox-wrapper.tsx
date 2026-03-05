@@ -13,7 +13,10 @@ export function LightboxWrapper({ children, className }: LightboxWrapperProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div ref={containerRef} className={clsx(className)}>
+    <div
+      ref={containerRef}
+      className={clsx(className)}
+    >
       {children}
       <LightboxHandler containerRef={containerRef} />
     </div>

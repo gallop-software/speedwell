@@ -108,7 +108,9 @@ export default function Pricing() {
                 {plan.name}
               </Heading>
               <Paragraph
-                color={plan.featured ? 'text-accent-contrast/90' : 'text-body-muted'}
+                color={
+                  plan.featured ? 'text-accent-contrast/90' : 'text-body-muted'
+                }
                 margin="mb-4"
               >
                 {plan.description}

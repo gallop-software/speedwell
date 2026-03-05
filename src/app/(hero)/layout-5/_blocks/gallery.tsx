@@ -36,7 +36,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-2xl" margin="mb-2" color="text-overlay-text">Garden Wedding</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-2xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Garden Wedding
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -59,7 +66,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Reception Details</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Reception Details
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -82,7 +96,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Venue Styling</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Venue Styling
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -105,7 +126,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-2xl" margin="mb-2" color="text-overlay-text">Corporate Gala</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-2xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Corporate Gala
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -128,7 +156,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Ceremony Details</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Ceremony Details
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -151,7 +186,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Outdoor Celebration</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Outdoor Celebration
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
@@ -174,7 +216,14 @@ export default function Gallery() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-0 left-0 right-0 p-6 text-overlay-text transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-              <Heading as="h3" fontSize="text-xl" margin="mb-2" color="text-overlay-text">Grand Ballroom</Heading>
+              <Heading
+                as="h3"
+                fontSize="text-xl"
+                margin="mb-2"
+                color="text-overlay-text"
+              >
+                Grand Ballroom
+              </Heading>
               <Paragraph
                 fontSize="text-sm"
                 color="text-overlay-text/90"
