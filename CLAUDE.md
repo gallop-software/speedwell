@@ -5,7 +5,7 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 ## Auto-Generated Files — Never Edit Manually
 
 | File | Regenerate With | Triggered By |
-| --- | --- | --- |
+|---|---|---|
 | `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/blog/ |
 | `_data/_meta.json` | `npm run blocks` | Block catalog changes |
 | `src/app/BLOCKS.md` | `npm run blocks` | Block additions (tier/order preserved) |
@@ -16,17 +16,17 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 
 ## Build Commands
 
-| Command            | Purpose                                   |
-| ------------------ | ----------------------------------------- |
-| `npm run dev`      | Development server                        |
-| `npm run build`    | Production build (auto-runs npm run blog) |
-| `npm run blog`     | Regenerate blog metadata                  |
-| `npm run blocks`   | Regenerate blocks catalog                 |
-| `npm run search`   | Regenerate search index                   |
-| `npm run lint`     | ESLint check (run after edits)            |
-| `npm run ts`       | TypeScript check                          |
-| `npm run check`    | lint + ts combined                        |
-| `npm run prettier` | Format code                               |
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Development server |
+| `npm run build` | Production build (auto-runs npm run blog) |
+| `npm run blog` | Regenerate blog metadata |
+| `npm run blocks` | Regenerate blocks catalog |
+| `npm run search` | Regenerate search index |
+| `npm run lint` | ESLint check (run after edits) |
+| `npm run ts` | TypeScript check |
+| `npm run check` | lint + ts combined |
+| `npm run prettier` | Format code |
 
 ## File & Folder Authority
 
@@ -73,14 +73,12 @@ src/app/
 ### File Structure Rules
 
 **Blocks:**
-
 - Co-located in `_blocks/` subdirectories alongside each page route
 - Singleton naming: `hero.tsx` (one per page), numbered when multiple: `content-2.tsx`, `content-3.tsx`
 - Import with relative paths: `import Hero from './_blocks/hero'`
 - Example: `src/app/(default)/furniture/_blocks/hero.tsx`
 
 **Components:**
-
 - Simple components: Single file in `src/components/`
 - Complex components: Folder with `index.tsx`
 - Use folders when component has multiple sub-files
@@ -194,15 +192,14 @@ Available state: `playVideo`, `offsetTop`, `windowHeight`, `lastOffsetTop`, `isS
 - Use native `IntersectionObserver` - use `react-intersection-observer` package
 - Use inline `<svg>` in blocks - use the Icon component with Iconify icons
 - Use deep relative imports (`../../`) - use `@/` alias imports
-- Use gray-_, white, black, slate-_ — always map to a semantic token
+- Use gray-*, white, black, slate-* — always map to a semantic token
 - Put text color in className when component has a color prop
-- Manually construct image URLs when a \_data/\_studio.json metadata entry exists
-- Manually edit files in \_data/ (generated only)
+- Manually construct image URLs when a _data/_studio.json metadata entry exists
+- Manually edit files in _data/ (generated only)
 
 ## Post-Edit Verification
 
 After editing files:
-
 1. Run `npm run lint`
 2. Run `npm run ts`
 3. Fix any violations before committing
