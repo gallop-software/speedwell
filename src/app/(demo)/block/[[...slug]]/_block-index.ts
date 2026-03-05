@@ -3,134 +3,230 @@
 
 import type { ComponentType } from 'react'
 
-export const blockImports: Record<string, () => Promise<{ default: ComponentType }>> = {
-  'archive': () => import('@/app/(hero)/_blocks/archive'),
-  'before-after/about': () => import('@/app/(default)/before-after/_blocks/about'),
-  'before-after/call-to-action': () => import('@/app/(default)/before-after/_blocks/call-to-action'),
-  'before-after/hero': () => import('@/app/(default)/before-after/_blocks/hero'),
-  'before-after/intro': () => import('@/app/(default)/before-after/_blocks/intro'),
-  'color-consultation/banner': () => import('@/app/(default)/color-consultation/_blocks/banner'),
-  'color-consultation/benefits': () => import('@/app/(default)/color-consultation/_blocks/benefits'),
-  'color-consultation/call-to-action': () => import('@/app/(default)/color-consultation/_blocks/call-to-action'),
-  'color-consultation/hero': () => import('@/app/(default)/color-consultation/_blocks/hero'),
-  'color-consultation/overview': () => import('@/app/(default)/color-consultation/_blocks/overview'),
-  'color-consultation/process': () => import('@/app/(default)/color-consultation/_blocks/process'),
-  'color-consultation/testimonial': () => import('@/app/(default)/color-consultation/_blocks/testimonial'),
-  'commercial/banner': () => import('@/app/(default)/commercial/_blocks/banner'),
-  'commercial/call-to-action': () => import('@/app/(default)/commercial/_blocks/call-to-action'),
+export const blockImports: Record<
+  string,
+  () => Promise<{ default: ComponentType }>
+> = {
+  archive: () => import('@/app/(hero)/_blocks/archive'),
+  'before-after/about': () =>
+    import('@/app/(default)/before-after/_blocks/about'),
+  'before-after/call-to-action': () =>
+    import('@/app/(default)/before-after/_blocks/call-to-action'),
+  'before-after/hero': () =>
+    import('@/app/(default)/before-after/_blocks/hero'),
+  'before-after/intro': () =>
+    import('@/app/(default)/before-after/_blocks/intro'),
+  'color-consultation/banner': () =>
+    import('@/app/(default)/color-consultation/_blocks/banner'),
+  'color-consultation/benefits': () =>
+    import('@/app/(default)/color-consultation/_blocks/benefits'),
+  'color-consultation/call-to-action': () =>
+    import('@/app/(default)/color-consultation/_blocks/call-to-action'),
+  'color-consultation/hero': () =>
+    import('@/app/(default)/color-consultation/_blocks/hero'),
+  'color-consultation/overview': () =>
+    import('@/app/(default)/color-consultation/_blocks/overview'),
+  'color-consultation/process': () =>
+    import('@/app/(default)/color-consultation/_blocks/process'),
+  'color-consultation/testimonial': () =>
+    import('@/app/(default)/color-consultation/_blocks/testimonial'),
+  'commercial/banner': () =>
+    import('@/app/(default)/commercial/_blocks/banner'),
+  'commercial/call-to-action': () =>
+    import('@/app/(default)/commercial/_blocks/call-to-action'),
   'commercial/hero': () => import('@/app/(default)/commercial/_blocks/hero'),
-  'commercial/overview': () => import('@/app/(default)/commercial/_blocks/overview'),
-  'commercial/testimonial': () => import('@/app/(default)/commercial/_blocks/testimonial'),
-  'contact/contact-form': () => import('@/app/(default)/contact/_blocks/contact-form'),
-  'contact/contact-info': () => import('@/app/(default)/contact/_blocks/contact-info'),
+  'commercial/overview': () =>
+    import('@/app/(default)/commercial/_blocks/overview'),
+  'commercial/testimonial': () =>
+    import('@/app/(default)/commercial/_blocks/testimonial'),
+  'contact/contact-form': () =>
+    import('@/app/(default)/contact/_blocks/contact-form'),
+  'contact/contact-info': () =>
+    import('@/app/(default)/contact/_blocks/contact-info'),
   'furniture/banner': () => import('@/app/(default)/furniture/_blocks/banner'),
-  'furniture/call-to-action': () => import('@/app/(default)/furniture/_blocks/call-to-action'),
+  'furniture/call-to-action': () =>
+    import('@/app/(default)/furniture/_blocks/call-to-action'),
   'furniture/hero': () => import('@/app/(default)/furniture/_blocks/hero'),
-  'furniture/overview': () => import('@/app/(default)/furniture/_blocks/overview'),
-  'furniture/testimonial': () => import('@/app/(default)/furniture/_blocks/testimonial'),
-  'hero': () => import('@/app/(hero)/_blocks/hero'),
-  'highlights': () => import('@/app/(hero)/_blocks/highlights'),
-  'join-our-team/application': () => import('@/app/(color-navbar)/join-our-team/_blocks/application'),
-  'join-our-team/intro': () => import('@/app/(color-navbar)/join-our-team/_blocks/intro'),
-  'join-our-team/openings': () => import('@/app/(color-navbar)/join-our-team/_blocks/openings'),
-  'kitchen-bath/banner': () => import('@/app/(default)/kitchen-bath/_blocks/banner'),
-  'kitchen-bath/call-to-action': () => import('@/app/(default)/kitchen-bath/_blocks/call-to-action'),
-  'kitchen-bath/hero': () => import('@/app/(default)/kitchen-bath/_blocks/hero'),
-  'kitchen-bath/overview': () => import('@/app/(default)/kitchen-bath/_blocks/overview'),
-  'kitchen-bath/testimonial': () => import('@/app/(default)/kitchen-bath/_blocks/testimonial'),
-  'layout-1/about': () => import('@/app/(one-page-site)/layout-1/_blocks/about'),
-  'layout-1/archive': () => import('@/app/(one-page-site)/layout-1/_blocks/archive'),
-  'layout-1/banner': () => import('@/app/(one-page-site)/layout-1/_blocks/banner'),
-  'layout-1/consultation': () => import('@/app/(one-page-site)/layout-1/_blocks/consultation'),
-  'layout-1/contact-info': () => import('@/app/(one-page-site)/layout-1/_blocks/contact-info'),
+  'furniture/overview': () =>
+    import('@/app/(default)/furniture/_blocks/overview'),
+  'furniture/testimonial': () =>
+    import('@/app/(default)/furniture/_blocks/testimonial'),
+  hero: () => import('@/app/(hero)/_blocks/hero'),
+  highlights: () => import('@/app/(hero)/_blocks/highlights'),
+  'join-our-team/application': () =>
+    import('@/app/(color-navbar)/join-our-team/_blocks/application'),
+  'join-our-team/intro': () =>
+    import('@/app/(color-navbar)/join-our-team/_blocks/intro'),
+  'join-our-team/openings': () =>
+    import('@/app/(color-navbar)/join-our-team/_blocks/openings'),
+  'kitchen-bath/banner': () =>
+    import('@/app/(default)/kitchen-bath/_blocks/banner'),
+  'kitchen-bath/call-to-action': () =>
+    import('@/app/(default)/kitchen-bath/_blocks/call-to-action'),
+  'kitchen-bath/hero': () =>
+    import('@/app/(default)/kitchen-bath/_blocks/hero'),
+  'kitchen-bath/overview': () =>
+    import('@/app/(default)/kitchen-bath/_blocks/overview'),
+  'kitchen-bath/testimonial': () =>
+    import('@/app/(default)/kitchen-bath/_blocks/testimonial'),
+  'layout-1/about': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/about'),
+  'layout-1/archive': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/archive'),
+  'layout-1/banner': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/banner'),
+  'layout-1/consultation': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/consultation'),
+  'layout-1/contact-info': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/contact-info'),
   'layout-1/hero': () => import('@/app/(one-page-site)/layout-1/_blocks/hero'),
-  'layout-1/methodology': () => import('@/app/(one-page-site)/layout-1/_blocks/methodology'),
-  'layout-1/portfolio': () => import('@/app/(one-page-site)/layout-1/_blocks/portfolio'),
-  'layout-1/process': () => import('@/app/(one-page-site)/layout-1/_blocks/process'),
-  'layout-1/services': () => import('@/app/(one-page-site)/layout-1/_blocks/services'),
-  'layout-1/testimonial': () => import('@/app/(one-page-site)/layout-1/_blocks/testimonial'),
-  'layout-2/features': () => import('@/app/(alternate)/layout-2/_blocks/features'),
+  'layout-1/methodology': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/methodology'),
+  'layout-1/portfolio': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/portfolio'),
+  'layout-1/process': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/process'),
+  'layout-1/services': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/services'),
+  'layout-1/testimonial': () =>
+    import('@/app/(one-page-site)/layout-1/_blocks/testimonial'),
+  'layout-2/features': () =>
+    import('@/app/(alternate)/layout-2/_blocks/features'),
   'layout-2/hero': () => import('@/app/(alternate)/layout-2/_blocks/hero'),
   'layout-2/hero-2': () => import('@/app/(alternate)/layout-2/_blocks/hero-2'),
-  'layout-2/pricing': () => import('@/app/(alternate)/layout-2/_blocks/pricing'),
+  'layout-2/pricing': () =>
+    import('@/app/(alternate)/layout-2/_blocks/pricing'),
   'layout-3/banner': () => import('@/app/(default)/layout-3/_blocks/banner'),
   'layout-3/booking': () => import('@/app/(default)/layout-3/_blocks/booking'),
   'layout-3/gallery': () => import('@/app/(default)/layout-3/_blocks/gallery'),
   'layout-3/hero': () => import('@/app/(default)/layout-3/_blocks/hero'),
   'layout-3/sidebar': () => import('@/app/(default)/layout-3/_blocks/sidebar'),
-  'layout-3/testimonial': () => import('@/app/(default)/layout-3/_blocks/testimonial'),
-  'layout-4/featured': () => import('@/app/(hero-dark)/layout-4/_blocks/featured'),
-  'layout-4/features': () => import('@/app/(hero-dark)/layout-4/_blocks/features'),
+  'layout-3/testimonial': () =>
+    import('@/app/(default)/layout-3/_blocks/testimonial'),
+  'layout-4/featured': () =>
+    import('@/app/(hero-dark)/layout-4/_blocks/featured'),
+  'layout-4/features': () =>
+    import('@/app/(hero-dark)/layout-4/_blocks/features'),
   'layout-4/hero': () => import('@/app/(hero-dark)/layout-4/_blocks/hero'),
-  'layout-4/ingredients': () => import('@/app/(hero-dark)/layout-4/_blocks/ingredients'),
+  'layout-4/ingredients': () =>
+    import('@/app/(hero-dark)/layout-4/_blocks/ingredients'),
   'layout-4/menu': () => import('@/app/(hero-dark)/layout-4/_blocks/menu'),
-  'layout-4/reservation': () => import('@/app/(hero-dark)/layout-4/_blocks/reservation'),
-  'layout-4/testimonial': () => import('@/app/(hero-dark)/layout-4/_blocks/testimonial'),
+  'layout-4/reservation': () =>
+    import('@/app/(hero-dark)/layout-4/_blocks/reservation'),
+  'layout-4/testimonial': () =>
+    import('@/app/(hero-dark)/layout-4/_blocks/testimonial'),
   'layout-5/gallery': () => import('@/app/(hero)/layout-5/_blocks/gallery'),
   'layout-5/hero': () => import('@/app/(hero)/layout-5/_blocks/hero'),
   'layout-5/pricing': () => import('@/app/(hero)/layout-5/_blocks/pricing'),
   'layout-5/services': () => import('@/app/(hero)/layout-5/_blocks/services'),
-  'layout-5/testimonial': () => import('@/app/(hero)/layout-5/_blocks/testimonial'),
-  'layout-6/gallery': () => import('@/app/(hero-dark)/layout-6/_blocks/gallery'),
+  'layout-5/testimonial': () =>
+    import('@/app/(hero)/layout-5/_blocks/testimonial'),
+  'layout-6/gallery': () =>
+    import('@/app/(hero-dark)/layout-6/_blocks/gallery'),
   'layout-6/hero': () => import('@/app/(hero-dark)/layout-6/_blocks/hero'),
   'layout-6/hours': () => import('@/app/(hero-dark)/layout-6/_blocks/hours'),
-  'layout-6/shopping': () => import('@/app/(hero-dark)/layout-6/_blocks/shopping'),
+  'layout-6/shopping': () =>
+    import('@/app/(hero-dark)/layout-6/_blocks/shopping'),
   'layout-6/story': () => import('@/app/(hero-dark)/layout-6/_blocks/story'),
-  'layout-6/testimonial': () => import('@/app/(hero-dark)/layout-6/_blocks/testimonial'),
+  'layout-6/testimonial': () =>
+    import('@/app/(hero-dark)/layout-6/_blocks/testimonial'),
   'layout-7/about': () => import('@/app/(hero-dark)/layout-7/_blocks/about'),
-  'layout-7/archive': () => import('@/app/(hero-dark)/layout-7/_blocks/archive'),
-  'layout-7/call-to-action': () => import('@/app/(hero-dark)/layout-7/_blocks/call-to-action'),
+  'layout-7/archive': () =>
+    import('@/app/(hero-dark)/layout-7/_blocks/archive'),
+  'layout-7/call-to-action': () =>
+    import('@/app/(hero-dark)/layout-7/_blocks/call-to-action'),
   'layout-7/hero': () => import('@/app/(hero-dark)/layout-7/_blocks/hero'),
-  'layout-7/subscribe': () => import('@/app/(hero-dark)/layout-7/_blocks/subscribe'),
-  'layout-7/testimonial': () => import('@/app/(hero-dark)/layout-7/_blocks/testimonial'),
-  'meet-the-team/banner': () => import('@/app/(default)/meet-the-team/_blocks/banner'),
-  'meet-the-team/intro': () => import('@/app/(default)/meet-the-team/_blocks/intro'),
-  'meet-the-team/philosophy': () => import('@/app/(default)/meet-the-team/_blocks/philosophy'),
-  'meet-the-team/profile': () => import('@/app/(default)/meet-the-team/_blocks/profile'),
-  'meet-the-team/profile-2': () => import('@/app/(default)/meet-the-team/_blocks/profile-2'),
-  'meet-the-team/profile-3': () => import('@/app/(default)/meet-the-team/_blocks/profile-3'),
-  'meet-the-team/profile-4': () => import('@/app/(default)/meet-the-team/_blocks/profile-4'),
-  'meet-the-team/profile-5': () => import('@/app/(default)/meet-the-team/_blocks/profile-5'),
+  'layout-7/subscribe': () =>
+    import('@/app/(hero-dark)/layout-7/_blocks/subscribe'),
+  'layout-7/testimonial': () =>
+    import('@/app/(hero-dark)/layout-7/_blocks/testimonial'),
+  'meet-the-team/banner': () =>
+    import('@/app/(default)/meet-the-team/_blocks/banner'),
+  'meet-the-team/intro': () =>
+    import('@/app/(default)/meet-the-team/_blocks/intro'),
+  'meet-the-team/philosophy': () =>
+    import('@/app/(default)/meet-the-team/_blocks/philosophy'),
+  'meet-the-team/profile': () =>
+    import('@/app/(default)/meet-the-team/_blocks/profile'),
+  'meet-the-team/profile-2': () =>
+    import('@/app/(default)/meet-the-team/_blocks/profile-2'),
+  'meet-the-team/profile-3': () =>
+    import('@/app/(default)/meet-the-team/_blocks/profile-3'),
+  'meet-the-team/profile-4': () =>
+    import('@/app/(default)/meet-the-team/_blocks/profile-4'),
+  'meet-the-team/profile-5': () =>
+    import('@/app/(default)/meet-the-team/_blocks/profile-5'),
   'partners/intro': () => import('@/app/(color-navbar)/partners/_blocks/intro'),
-  'partners/vendor': () => import('@/app/(color-navbar)/partners/_blocks/vendor'),
-  'partners/vendor-2': () => import('@/app/(color-navbar)/partners/_blocks/vendor-2'),
+  'partners/vendor': () =>
+    import('@/app/(color-navbar)/partners/_blocks/vendor'),
+  'partners/vendor-2': () =>
+    import('@/app/(color-navbar)/partners/_blocks/vendor-2'),
   'portfolio/banner': () => import('@/app/(default)/portfolio/_blocks/banner'),
   'portfolio/hero': () => import('@/app/(default)/portfolio/_blocks/hero'),
-  'portfolio/overview': () => import('@/app/(default)/portfolio/_blocks/overview'),
-  'portfolio/project': () => import('@/app/(default)/portfolio/_blocks/project'),
-  'portfolio/project-2': () => import('@/app/(default)/portfolio/_blocks/project-2'),
-  'portfolio/project-3': () => import('@/app/(default)/portfolio/_blocks/project-3'),
-  'portfolio/project-4': () => import('@/app/(default)/portfolio/_blocks/project-4'),
-  'portfolio/spotlight': () => import('@/app/(default)/portfolio/_blocks/spotlight'),
-  'portfolio/testimonial': () => import('@/app/(default)/portfolio/_blocks/testimonial'),
-  'project-management/budget': () => import('@/app/(default)/project-management/_blocks/budget'),
-  'project-management/hero': () => import('@/app/(default)/project-management/_blocks/hero'),
-  'project-management/intro': () => import('@/app/(default)/project-management/_blocks/intro'),
-  'project-management/partnership': () => import('@/app/(default)/project-management/_blocks/partnership'),
-  'project-management/phase': () => import('@/app/(default)/project-management/_blocks/phase'),
-  'project-management/phase-2': () => import('@/app/(default)/project-management/_blocks/phase-2'),
-  'project-management/phase-3': () => import('@/app/(default)/project-management/_blocks/phase-3'),
-  'project-management/philosophy': () => import('@/app/(default)/project-management/_blocks/philosophy'),
-  'project-management/quality': () => import('@/app/(default)/project-management/_blocks/quality'),
-  'residential/approach': () => import('@/app/(default)/residential/_blocks/approach'),
-  'residential/banner': () => import('@/app/(default)/residential/_blocks/banner'),
-  'residential/excellence': () => import('@/app/(default)/residential/_blocks/excellence'),
+  'portfolio/overview': () =>
+    import('@/app/(default)/portfolio/_blocks/overview'),
+  'portfolio/project': () =>
+    import('@/app/(default)/portfolio/_blocks/project'),
+  'portfolio/project-2': () =>
+    import('@/app/(default)/portfolio/_blocks/project-2'),
+  'portfolio/project-3': () =>
+    import('@/app/(default)/portfolio/_blocks/project-3'),
+  'portfolio/project-4': () =>
+    import('@/app/(default)/portfolio/_blocks/project-4'),
+  'portfolio/spotlight': () =>
+    import('@/app/(default)/portfolio/_blocks/spotlight'),
+  'portfolio/testimonial': () =>
+    import('@/app/(default)/portfolio/_blocks/testimonial'),
+  'project-management/budget': () =>
+    import('@/app/(default)/project-management/_blocks/budget'),
+  'project-management/hero': () =>
+    import('@/app/(default)/project-management/_blocks/hero'),
+  'project-management/intro': () =>
+    import('@/app/(default)/project-management/_blocks/intro'),
+  'project-management/partnership': () =>
+    import('@/app/(default)/project-management/_blocks/partnership'),
+  'project-management/phase': () =>
+    import('@/app/(default)/project-management/_blocks/phase'),
+  'project-management/phase-2': () =>
+    import('@/app/(default)/project-management/_blocks/phase-2'),
+  'project-management/phase-3': () =>
+    import('@/app/(default)/project-management/_blocks/phase-3'),
+  'project-management/philosophy': () =>
+    import('@/app/(default)/project-management/_blocks/philosophy'),
+  'project-management/quality': () =>
+    import('@/app/(default)/project-management/_blocks/quality'),
+  'residential/approach': () =>
+    import('@/app/(default)/residential/_blocks/approach'),
+  'residential/banner': () =>
+    import('@/app/(default)/residential/_blocks/banner'),
+  'residential/excellence': () =>
+    import('@/app/(default)/residential/_blocks/excellence'),
   'residential/hero': () => import('@/app/(default)/residential/_blocks/hero'),
-  'residential/overview': () => import('@/app/(default)/residential/_blocks/overview'),
-  'residential/process': () => import('@/app/(default)/residential/_blocks/process'),
-  'residential/sustainability': () => import('@/app/(default)/residential/_blocks/sustainability'),
-  'residential/testimonial': () => import('@/app/(default)/residential/_blocks/testimonial'),
-  'services': () => import('@/app/(hero)/_blocks/services'),
-  'space-planning/banner': () => import('@/app/(default)/space-planning/_blocks/banner'),
-  'space-planning/call-to-action': () => import('@/app/(default)/space-planning/_blocks/call-to-action'),
-  'space-planning/hero': () => import('@/app/(default)/space-planning/_blocks/hero'),
-  'space-planning/overview': () => import('@/app/(default)/space-planning/_blocks/overview'),
-  'space-planning/testimonial': () => import('@/app/(default)/space-planning/_blocks/testimonial'),
-  'spotlight': () => import('@/app/(hero)/_blocks/spotlight'),
+  'residential/overview': () =>
+    import('@/app/(default)/residential/_blocks/overview'),
+  'residential/process': () =>
+    import('@/app/(default)/residential/_blocks/process'),
+  'residential/sustainability': () =>
+    import('@/app/(default)/residential/_blocks/sustainability'),
+  'residential/testimonial': () =>
+    import('@/app/(default)/residential/_blocks/testimonial'),
+  services: () => import('@/app/(hero)/_blocks/services'),
+  'space-planning/banner': () =>
+    import('@/app/(default)/space-planning/_blocks/banner'),
+  'space-planning/call-to-action': () =>
+    import('@/app/(default)/space-planning/_blocks/call-to-action'),
+  'space-planning/hero': () =>
+    import('@/app/(default)/space-planning/_blocks/hero'),
+  'space-planning/overview': () =>
+    import('@/app/(default)/space-planning/_blocks/overview'),
+  'space-planning/testimonial': () =>
+    import('@/app/(default)/space-planning/_blocks/testimonial'),
+  spotlight: () => import('@/app/(hero)/_blocks/spotlight'),
   'testimonials/about': () => import('@/app/(hero)/testimonials/_blocks/about'),
   'testimonials/hero': () => import('@/app/(hero)/testimonials/_blocks/hero'),
   'testimonials/intro': () => import('@/app/(hero)/testimonials/_blocks/intro'),
-  'testimonials/testimonial': () => import('@/app/(hero)/testimonials/_blocks/testimonial'),
+  'testimonials/testimonial': () =>
+    import('@/app/(hero)/testimonials/_blocks/testimonial'),
 }
 
 export const blockSlugs = Object.keys(blockImports)

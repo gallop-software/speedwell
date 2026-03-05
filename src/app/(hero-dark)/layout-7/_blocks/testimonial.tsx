@@ -111,7 +111,9 @@ export default function Testimonial() {
                 lineHeight="leading-relaxed"
                 margin="mb-8"
                 fontStyle="italic"
-                color={testimonial.featured ? 'text-accent-contrast/90' : undefined}
+                color={
+                  testimonial.featured ? 'text-accent-contrast/90' : undefined
+                }
                 className="grow"
               >
                 &ldquo;{testimonial.quote}&rdquo;
@@ -132,13 +134,21 @@ export default function Testimonial() {
                       as="h4"
                       fontSize="text-base"
                       margin="mb-1"
-                      color={testimonial.featured ? 'text-accent-contrast' : undefined}
+                      color={
+                        testimonial.featured
+                          ? 'text-accent-contrast'
+                          : undefined
+                      }
                     >
                       {testimonial.author}
                     </Heading>
                     <Label
                       margin="mb-0"
-                      color={testimonial.featured ? 'text-accent-contrast/70' : undefined}
+                      color={
+                        testimonial.featured
+                          ? 'text-accent-contrast/70'
+                          : undefined
+                      }
                     >
                       {testimonial.title}
                     </Label>

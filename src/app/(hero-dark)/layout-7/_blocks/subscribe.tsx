@@ -59,7 +59,10 @@ export default function Subscribe() {
                 platform.color
               )}
             >
-              <Icon icon={headphonesIcon} className="w-6 h-6 text-body" />
+              <Icon
+                icon={headphonesIcon}
+                className="w-6 h-6 text-body"
+              />
             </div>
 
             {/* Name */}
