@@ -77,9 +77,10 @@ export default function ${toPascalCase(blockSlug)}() {
 `
 }
 
-// Convert slug to PascalCase (e.g., hero-11 -> Hero11)
+// Convert slug to PascalCase (e.g., hero-11 -> Hero11, layout-2/hero -> Hero)
 function toPascalCase(slug) {
-  return slug
+  const base = slug.includes('/') ? slug.split('/').pop() : slug
+  return base
     .split('-')
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join('')
