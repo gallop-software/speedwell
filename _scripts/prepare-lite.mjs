@@ -21,6 +21,11 @@ const APP_DIR = path.join(__dirname, '../src/app')
 const HOOKS_DIR = path.join(__dirname, '../src/hooks')
 const API_DIR = path.join(__dirname, '../src/app/api')
 const LAYOUT_PATH = path.join(__dirname, '../src/app/layout.tsx')
+const PKG_PATH = path.join(__dirname, '../package.json')
+const PRO_BLOCK_PATH = path.join(
+  __dirname,
+  '../src/components/pro-block.tsx'
+)
 // Files and directories to delete for lite version
 const FILES_TO_DELETE = [
   path.join(HOOKS_DIR, 'flow-trace.tsx'),
@@ -250,6 +255,32 @@ async function removeHookReferencesFromLayout() {
   }
 }
 
+// Rewrite ProBlock image src to use CDN URLs
+async function rewriteProBlockImageSrc() {
+  console.log('\n🌐 Rewriting ProBlock image src to CDN URLs...\n')
+
+  try {
+    const pkg = JSON.parse(await fs.readFile(PKG_PATH, 'utf-8'))
+    const templateName = pkg.name
+    let content = await fs.readFile(PRO_BLOCK_PATH, 'utf-8')
+
+    const oldSrc = '`/blocks/${blockSlug}.jpg`'
+    const newSrc = `\`https://${templateName}-cdn.gallop.software/blocks/\${blockSlug}.jpg\``
+
+    if (content.includes(oldSrc)) {
+      content = content.replace(oldSrc, newSrc)
+      await fs.writeFile(PRO_BLOCK_PATH, content, 'utf-8')
+      console.log(
+        `  ✅ Updated image src to https://${templateName}-cdn.gallop.software/blocks/...`
+      )
+    } else {
+      console.log('  ⏭️  ProBlock image src already updated or not found')
+    }
+  } catch (error) {
+    console.error(`  ❌ Error rewriting ProBlock image src: ${error.message}`)
+  }
+}
+
 // Main execution
 async function main() {
   console.log('🔍 Scanning blocks README for Pro blocks...\n')
@@ -299,6 +330,9 @@ async function main() {
 
   // Remove hook references from layout.tsx
   await removeHookReferencesFromLayout()
+
+  // Rewrite ProBlock image src to CDN URLs
+  await rewriteProBlockImageSrc()
 
   console.log('\n✨ Lite conversion complete!')
 }
