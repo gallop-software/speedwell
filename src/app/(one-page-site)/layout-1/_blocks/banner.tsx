@@ -1,21 +1,10 @@
-import { Cover } from '@/components/cover'
-import { Accent } from '@/components/accent'
+import { ProBlock } from '@/components/pro-block'
 
-export default function Banner() {
+export default function Layout1/banner() {
   return (
-    <Cover
-      imageSrc="/layout-1/pexels-ivan-s-8117415.jpg"
-      imageAlt="Creative workspace with design materials"
-      imageClassName=""
-      parallax={true}
-    >
-      <Accent
-        textAlign="text-center"
-        color="text-overlay-text"
-        size="medium"
-      >
-        Strategy Meets Creativity
-      </Accent>
-    </Cover>
+    <ProBlock
+      blockSlug="layout-1/banner"
+      blockName="Layout 1 / Banner"
+    />
   )
 }

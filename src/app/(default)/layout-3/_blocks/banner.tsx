@@ -1,21 +1,10 @@
-import { Cover } from '@/components/cover'
-import { Accent } from '@/components/accent'
+import { ProBlock } from '@/components/pro-block'
 
-export default function Banner() {
+export default function Layout3/banner() {
   return (
-    <Cover
-      imageSrc="/images/layout-3/pexels-cesar-o-neill-26650613-35240283.jpg"
-      imageAlt="Creative workspace with design materials"
-      imageClassName=""
-      parallax={true}
-    >
-      <Accent
-        textAlign="text-center"
-        color="text-overlay-text"
-        size="medium"
-      >
-        Capturing Moments That Last Forever
-      </Accent>
-    </Cover>
+    <ProBlock
+      blockSlug="layout-3/banner"
+      blockName="Layout 3 / Banner"
+    />
   )
 }
