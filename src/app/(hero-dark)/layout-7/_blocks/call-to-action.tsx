@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout7/callToAction() {
+export default function CallToAction() {
   return (
     <ProBlock
       blockSlug="layout-7/call-to-action"

@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout5/pricing() {
+export default function Pricing() {
   return (
     <ProBlock
       blockSlug="layout-5/pricing"

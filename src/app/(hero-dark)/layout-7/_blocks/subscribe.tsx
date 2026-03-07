@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout7/subscribe() {
+export default function Subscribe() {
   return (
     <ProBlock
       blockSlug="layout-7/subscribe"

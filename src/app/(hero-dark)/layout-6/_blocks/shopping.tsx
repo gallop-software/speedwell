@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout6/shopping() {
+export default function Shopping() {
   return (
     <ProBlock
       blockSlug="layout-6/shopping"

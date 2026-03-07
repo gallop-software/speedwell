@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout1/process() {
+export default function Process() {
   return (
     <ProBlock
       blockSlug="layout-1/process"

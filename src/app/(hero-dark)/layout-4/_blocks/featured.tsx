@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout4/featured() {
+export default function Featured() {
   return (
     <ProBlock
       blockSlug="layout-4/featured"

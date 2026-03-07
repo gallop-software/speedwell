@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout1/contactInfo() {
+export default function ContactInfo() {
   return (
     <ProBlock
       blockSlug="layout-1/contact-info"

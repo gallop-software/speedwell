@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout6/story() {
+export default function Story() {
   return (
     <ProBlock
       blockSlug="layout-6/story"

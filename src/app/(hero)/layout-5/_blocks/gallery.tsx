@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout5/gallery() {
+export default function Gallery() {
   return (
     <ProBlock
       blockSlug="layout-5/gallery"

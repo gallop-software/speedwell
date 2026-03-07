@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout4/ingredients() {
+export default function Ingredients() {
   return (
     <ProBlock
       blockSlug="layout-4/ingredients"

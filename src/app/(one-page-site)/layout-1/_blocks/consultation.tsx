@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout1/consultation() {
+export default function Consultation() {
   return (
     <ProBlock
       blockSlug="layout-1/consultation"

@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout3/banner() {
+export default function Banner() {
   return (
     <ProBlock
       blockSlug="layout-3/banner"

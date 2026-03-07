@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout4/reservation() {
+export default function Reservation() {
   return (
     <ProBlock
       blockSlug="layout-4/reservation"

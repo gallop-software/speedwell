@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout3/sidebar() {
+export default function Sidebar() {
   return (
     <ProBlock
       blockSlug="layout-3/sidebar"

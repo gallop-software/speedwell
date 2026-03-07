@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout4/menu() {
+export default function Menu() {
   return (
     <ProBlock
       blockSlug="layout-4/menu"

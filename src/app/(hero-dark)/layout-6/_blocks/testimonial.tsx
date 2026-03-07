@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout6/testimonial() {
+export default function Testimonial() {
   return (
     <ProBlock
       blockSlug="layout-6/testimonial"

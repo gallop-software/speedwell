@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout3/booking() {
+export default function Booking() {
   return (
     <ProBlock
       blockSlug="layout-3/booking"

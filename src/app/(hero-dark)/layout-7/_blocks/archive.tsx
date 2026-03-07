@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout7/archive() {
+export default function Archive() {
   return (
     <ProBlock
       blockSlug="layout-7/archive"

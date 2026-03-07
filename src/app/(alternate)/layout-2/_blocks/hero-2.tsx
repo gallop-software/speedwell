@@ -1,6 +1,6 @@
 import { ProBlock } from '@/components/pro-block'
 
-export default function Layout2/hero2() {
+export default function Hero2() {
   return (
     <ProBlock
       blockSlug="layout-2/hero-2"
