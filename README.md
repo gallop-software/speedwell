@@ -2,7 +2,7 @@
 
 [![Speedwell Theme](https://speedwell-cdn.gallop.software/images/screenshot.jpg)](https://speedwell.gallop.software)
 
-The premier feminine website template for women-owned businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
+An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
