@@ -16,7 +16,7 @@ export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
     <div className="relative w-full">
       {/* Background Image - contains to show full image */}
       <img
-        src={`/blocks/${blockSlug}.jpg`}
+        src={`https://speedwell-cdn.gallop.software/blocks/${blockSlug}.jpg`}
         alt={blockName}
         className="w-full h-auto object-contain"
       />
