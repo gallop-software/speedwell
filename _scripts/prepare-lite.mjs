@@ -45,7 +45,7 @@ async function findProBlocks() {
 
   // Match pattern: block name followed by slug and tier
   const blockPattern =
-    /####\s+([^\n]+)\n[\s\S]*?\*\*Slug:\*\*\s+`([^`]+)`\s*\n\*\*Tier:\*\*\s+(Pro|Free)/gi
+    /####\s+([^\n]+)\n[\s\S]*?\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Pro|Free)/gi
 
   let match
   while ((match = blockPattern.exec(readmeContent)) !== null) {
