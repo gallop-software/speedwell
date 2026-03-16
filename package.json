@@ -70,6 +70,7 @@
     "@iconify/icons-lucide": "^1.2.135",
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/icons-simple-icons": "^1.2.74",
+    "@marsidev/react-turnstile": "^1.4.2",
     "@next/third-parties": "^16.1.6",
     "@sindresorhus/slugify": "^3.0.0",
     "@vercel/analytics": "^1.6.1",

@@ -1,6 +1,8 @@
 'use client'
 
-import React, { Children, isValidElement, useState } from 'react'
+import React, { Children, isValidElement, useRef, useState } from 'react'
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
+import { DateTime } from 'luxon'
 import clsx from 'clsx'
 
 // Sub-components
@@ -24,9 +26,8 @@ type FormProps = {
   gap?: string
   flexDirection?: string
   honeypot?: boolean
+  turnstile?: boolean
 }
-
-const formStartTime = Date.now()
 
 function Form({
   classname,
@@ -34,9 +35,13 @@ function Form({
   gap = 'gap-8',
   flexDirection = 'flex-col',
   honeypot = false,
+  turnstile = false,
 }: FormProps) {
   const [status, setStatus] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [formStartTime] = useState(() => DateTime.now().toMillis())
+  const turnstileRef = useRef<TurnstileInstance>(null)
+  const turnstileToken = useRef<string | null>(null)
 
   const fileToBase64 = (file: File): Promise<string> =>
     new Promise((resolve, reject) => {
@@ -82,6 +87,8 @@ function Form({
     }
 
     for (const [k, v] of fd) {
+      // Skip Turnstile's injected hidden input
+      if (k === 'cf-turnstile-response') continue
       const isArray = k.endsWith('[]')
       const key = isArray ? k.slice(0, -2) : k
       const val = v instanceof File ? v : String(v)
@@ -128,7 +135,7 @@ function Form({
       }
       delete obj.website
 
-      const submissionTime = Date.now() - formStartTime
+      const submissionTime = DateTime.now().toMillis() - formStartTime
       if (submissionTime < 3000) {
         setIsLoading(false)
         setStatus('Message did not send.')
@@ -137,12 +144,35 @@ function Form({
       obj._submissionTime = submissionTime
     }
 
+    // Turnstile verification
+    if (turnstile) {
+      turnstileToken.current = null
+      turnstileRef.current?.execute()
+
+      const maxWait = 10000
+      const interval = 100
+      let waited = 0
+      while (!turnstileToken.current && waited < maxWait) {
+        await new Promise((r) => setTimeout(r, interval))
+        waited += interval
+      }
+
+      if (!turnstileToken.current) {
+        setIsLoading(false)
+        setStatus('Verification failed.')
+        return
+      }
+      obj._turnstileToken = turnstileToken.current
+    }
+
     const api = '/api/submit-form/'
     const response = await fetch(api, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(obj),
     })
+
+    if (turnstile) turnstileRef.current?.reset()
 
     if (response.ok) {
       form.reset()
@@ -187,6 +217,17 @@ function Form({
           return child
         })}
       </form>
+      {turnstile && (
+        <Turnstile
+          ref={turnstileRef}
+          siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY!}
+          options={{ size: 'invisible', execution: 'execute' }}
+          onSuccess={(token) => {
+            turnstileToken.current = token
+          }}
+          onError={() => {}}
+        />
+      )}
       {status && (
         <p className="text-center text-sm font-medium text-contrast-light mt-4">
           {status}

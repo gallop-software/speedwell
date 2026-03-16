@@ -125,6 +125,30 @@ export async function POST(req: Request) {
     )
   }
 
+  // Turnstile verification
+  const turnstileToken = payload._turnstileToken
+  delete payload._turnstileToken
+  if (turnstileToken) {
+    const turnstileRes = await fetch(
+      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          secret: process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      }
+    )
+    const turnstileData = await turnstileRes.json()
+    if (!turnstileData.success) {
+      return NextResponse.json(
+        { message: 'Verification failed.' },
+        { status: 400 }
+      )
+    }
+  }
+
   const emailSubjectValue = payload.emailSubject?.value
     ? String(payload.emailSubject.value)
     : 'Form Submission'
