@@ -23,13 +23,17 @@ type FormProps = {
   children: React.ReactNode
   gap?: string
   flexDirection?: string
+  honeypot?: boolean
 }
+
+const formStartTime = Date.now()
 
 function Form({
   classname,
   children,
   gap = 'gap-8',
   flexDirection = 'flex-col',
+  honeypot = false,
 }: FormProps) {
   const [status, setStatus] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -115,6 +119,24 @@ function Form({
       obj[key] = { value: val, label }
     }
 
+    // Honeypot checks
+    if (honeypot) {
+      if (obj.website?.value) {
+        setIsLoading(false)
+        setStatus('Message did not send.')
+        return
+      }
+      delete obj.website
+
+      const submissionTime = Date.now() - formStartTime
+      if (submissionTime < 3000) {
+        setIsLoading(false)
+        setStatus('Message did not send.')
+        return
+      }
+      obj._submissionTime = submissionTime
+    }
+
     const api = '/api/submit-form/'
     const response = await fetch(api, {
       method: 'POST',
@@ -144,6 +166,16 @@ function Form({
         onSubmit={handleSubmit}
         className={clsx('flex', flexDirection, gap, classname)}
       >
+        {honeypot && (
+          <input
+            type="text"
+            name="website"
+            className="!hidden"
+            tabIndex={-1}
+            aria-hidden="true"
+            autoComplete="off"
+          />
+        )}
         {Children.map(children, (child) => {
           if (
             isValidElement(child) &&

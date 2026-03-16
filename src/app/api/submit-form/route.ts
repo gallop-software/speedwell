@@ -106,6 +106,25 @@ function renderEmailHtml(payload: Record<string, any>) {
 export async function POST(req: Request) {
   const payload = (await req.json().catch(() => ({}))) as Record<string, any>
 
+  // Honeypot check
+  if (payload.website?.value && String(payload.website.value).trim() !== '') {
+    return NextResponse.json(
+      { message: 'Message did not send.' },
+      { status: 400 }
+    )
+  }
+  delete payload.website
+
+  // Time-based bot check
+  const submissionTime = payload._submissionTime
+  delete payload._submissionTime
+  if (typeof submissionTime === 'number' && submissionTime < 3000) {
+    return NextResponse.json(
+      { message: 'Message did not send.' },
+      { status: 400 }
+    )
+  }
+
   const emailSubjectValue = payload.emailSubject?.value
     ? String(payload.emailSubject.value)
     : 'Form Submission'
