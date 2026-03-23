@@ -50,7 +50,7 @@ We recommend the **Gallop AI Editor** for the best experience with Gallop templa
 | **Setup required** | None — works out of the box | Install extensions manually |
 | **Template browser** | Built-in marketplace | Download ZIP from GitHub |
 | **Media manager** | Built-in Studio with CDN sync | Manual file management |
-| **Git** | Visual 3-column Git UI | Requires Git extension or CLI |
+| **Git** | Column UI with modal diff viewer | Built-in Git UI |
 | **Node.js** | Built-in installer and version manager | Install Node.js separately |
 
 ---
