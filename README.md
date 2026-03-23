@@ -4,16 +4,16 @@
 
 An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
-**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
-**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
-**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
+**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)
+**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)
+**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)
 **🏷️ Category:** Small Business Template
 
 ---
 
 ## Why Use Gallop Templates?
 
-Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and it writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our [Gallop community](https://gallop-software.slack.com/). Go live in minutes.
+Just chat with AI inside your code editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and AI writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our [Gallop community](https://gallop-software.slack.com/). Go live in minutes.
 
 ---
 
@@ -37,38 +37,69 @@ Just chat with Claude AI inside [Cursor](https://cursor.com) text editor using o
 
 ## Getting Started
 
-New to this? No problem. You'll have Claude AI guiding you the entire way.
+New to this? No problem. You'll have AI guiding you the entire way. Choose your editor below and follow the steps.
 
-### Step 1: Install Cursor
+### Choose Your Editor
 
-[![Download Cursor](https://img.shields.io/badge/Download_Cursor-00A0DC?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com)
+We recommend the **Gallop AI Editor** for the best experience with Gallop templates — whether you're a beginner or an advanced Next.js developer who wants AI-assisted development. It was purpose-built for this workflow and requires zero configuration. VS Code is also a fine choice if you prefer to work without AI assistance.
 
-Available for Mac and Windows. This is where you'll chat with Claude AI to build your site. [VSCode](https://code.visualstudio.com) with the Github CoPilot also works if you prefer. We recommend Claude AI as the AI model of choice.
+| | Gallop AI Editor | VS Code |
+|---|---|---|
+| **Best for** | Anyone who wants AI-assisted development | Developers who prefer no AI assistance |
+| **AI built in** | Yes — Claude AI ready to go | No (optional extensions available) |
+| **Setup required** | None — works out of the box | Install extensions manually |
+| **Template browser** | Built-in marketplace | Download ZIP from GitHub |
+| **Media manager** | Built-in Studio with CDN sync | Manual file management |
+| **Git** | Visual 3-column Git UI | Requires Git extension or CLI |
+| **Node.js** | Built-in installer and version manager | Install Node.js separately |
 
-### Step 2: Download This Template
+---
 
-Click the green **Code** button at the top of this page, then click **Download ZIP**. Unzip the folder somewhere easy to find (like your Desktop).
+### Option A: Gallop AI Editor (Recommended)
 
-### Step 3: Open in Cursor
+The Gallop AI Editor is a desktop app built specifically for AI-powered web development. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, and a template marketplace — all in one window with nothing to configure.
 
-1. Open Cursor
-2. Click **File → Open Folder**
-3. Select the unzipped `speedwell` folder
-4. Click **Open**
+[![Download Gallop AI Editor](https://img.shields.io/badge/Download_Gallop_AI_Editor-166534?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white)](https://gallop.software/)
 
-### Step 4: Ask Claude AI for Help
+Available for Mac and Windows.
 
-Press `Cmd+L` (Mac) or `Ctrl+L` (Windows) to open the chat panel. Now just ask:
+#### Step 1: Install Gallop AI Editor
+
+1. Go to [gallop.software](https://gallop.software/) and download the installer for your platform
+2. Open the installer and follow the prompts
+3. Launch the Gallop AI Editor
+4. If prompted, the editor will walk you through installing Node.js automatically — just follow the on-screen steps
+
+#### Step 2: Open This Template
+
+**From the built-in template marketplace:**
+
+1. Click the **Templates** tab in the sidebar
+2. Find **Speedwell** and click **Clone**
+3. Choose a folder on your computer (like your Desktop)
+4. The editor will download and set up the project for you
+
+**Or from a ZIP download:**
+
+1. Click the green **Code** button at the top of this GitHub page, then click **Download ZIP**
+2. Unzip the folder somewhere easy to find (like your Desktop)
+3. In the Gallop AI Editor, click **Open Project** and select the unzipped `speedwell` folder
+
+#### Step 3: Start the Dev Server
+
+1. Click the **Terminal** tab at the bottom of the editor
+2. Click **Install** to install dependencies, then click **Start** to run the dev server
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to see your site
+
+#### Step 4: Chat with AI
+
+Click the **AI Chat** panel (or press `Cmd+E` on Mac / `Ctrl+E` on Windows) to open the AI assistant. Now just ask:
 
 ```
-I'm new to this. Help me get this website running on my computer.
+I'm new to this. Help me customize this website for my business.
 ```
 
-Claude will walk you through everything, including installing any tools you need. Just follow along and ask questions whenever you're stuck.
-
-### Step 5: Start Building
-
-Once your site is running, you can describe any changes you want:
+The AI assistant can read and edit your project files, run commands, and explain anything you're confused about. Just describe what you want in plain English:
 
 ```
 Change the homepage heading to Welcome to My Bakery
@@ -86,6 +117,49 @@ Add a new page called Services
 Optimize the SEO on my homepage
 ```
 
+**Tip:** Press `Cmd+Ctrl+3` (Mac) to take a screenshot of your running site and attach it to the chat. The AI can see exactly what you see and suggest changes visually.
+
+---
+
+### Option B: VS Code
+
+VS Code is a good choice if you prefer to work without AI assistance. You'll need to install a few things manually.
+
+[![Download VS Code](https://img.shields.io/badge/Download_VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com)
+
+#### Step 1: Install Prerequisites
+
+1. Install [VS Code](https://code.visualstudio.com)
+2. Install [Node.js](https://nodejs.org) (version 20 or higher)
+
+#### Step 2: Download This Template
+
+Click the green **Code** button at the top of this GitHub page, then click **Download ZIP**. Unzip the folder somewhere easy to find (like your Desktop).
+
+#### Step 3: Open in VS Code
+
+1. Open VS Code
+2. Click **File → Open Folder**
+3. Select the unzipped `speedwell` folder
+4. Click **Open**
+
+#### Step 4: Install and Run
+
+Open the terminal in VS Code (`Ctrl+`` ` on Mac/Windows) and run:
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see your site. Press `Ctrl+C` to stop the server.
+
+#### Step 5: Start Building
+
+Edit files directly in VS Code. Refer to the [Project Structure](#project-structure) and [Available Scripts](#available-scripts) sections below for guidance.
+
+---
+
 ### Join the Community
 
 Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
@@ -100,13 +174,13 @@ When you're ready to share your site with the world, you'll need a free [GitHub]
 
 ### The Easy Way
 
-Just ask Claude AI:
+Just ask your AI assistant:
 
 ```
 Help me create a GitHub account, push this project to GitHub, and deploy to Vercel
 ```
 
-Claude will walk you through every step. When you're done, your site will be live with a URL you can share.
+The AI will walk you through every step. When you're done, your site will be live with a URL you can share.
 
 ### For Technical Users
 
@@ -118,7 +192,7 @@ If you're comfortable with Git:
 
 #### Step 2: Clone Your Repository
 
-Ask Claude AI:
+Ask your AI assistant:
 
 ```
 Help me clone my new GitHub repository and run it locally
@@ -151,20 +225,33 @@ Want access to all 117 blocks including premium designs? [Purchase Speedwell Pro
 
 ## About Gallop Templates
 
-Speedwell is part of the [Gallop](https://gallop.software) template ecosystem, built for [Cursor](https://cursor.com) and Claude AI. Cursor is Gallop's preferred AI programming editor, purpose-built for coding with AI. [VSCode](https://code.visualstudio.com) works too, but Cursor's native Claude integration makes development faster and more intuitive.
+Speedwell is part of the [Gallop](https://gallop.software) template ecosystem. Gallop templates are designed to be built with AI — just describe what you want in plain English and watch your site come to life.
 
-**Why Claude?** Claude is the premier coding AI agent. It understands context better, writes cleaner code, and handles complex multi-file changes that other AI models struggle with. When you chat with Claude in Cursor, you're working with the best AI pair programmer available.
+### Gallop AI Editor
+
+The [Gallop AI Editor](https://gallop.software/) is a desktop code editor built specifically for AI-powered web development. It combines a full code editor, Claude AI assistant, visual Git interface, integrated terminal, media manager, and template marketplace into one app. Everything is preconfigured to work with Gallop templates out of the box — no extensions, no plugins, no setup.
+
+**Key highlights:**
+
+- **Claude AI built in** — Chat with Claude to write code, debug issues, and learn as you go. Supports Opus 4.6, Sonnet 4.6, and Haiku 4.5 models
+- **Agent and Plan modes** — Agent mode lets AI apply changes automatically. Plan mode shows you what AI wants to do before it does it, so you stay in control
+- **Screenshot capture** — Press `Cmd+Ctrl+3` to screenshot your running site and share it with AI for visual feedback
+- **Built-in template marketplace** — Browse and clone Gallop templates without leaving the editor
+- **Visual Git** — Stage, commit, and merge with a 3-column visual interface. No command line required
+- **Studio media manager** — Manage images, fonts, and assets with thumbnail previews and CDN sync
+- **Node.js manager** — Install and switch Node.js versions without touching the terminal
+- **Auto-updates** — The editor keeps itself up to date automatically
 
 ### Gallop Canon: AI Guardrails
 
-Every Gallop template includes `@gallop.software/canon`, a system of ESLint rules and AI instructions that keep Claude on track. Canon ensures:
+Every Gallop template includes `@gallop.software/canon`, a system of ESLint rules and AI instructions that keep your AI assistant on track. Canon ensures:
 
-- **Consistent architecture** - Claude follows the same patterns across your entire codebase
+- **Consistent architecture** - AI follows the same patterns across your entire codebase
 - **No breaking changes** - Guardrails prevent AI from introducing common mistakes
-- **Faster development** - Claude already knows the project structure, components, and conventions
+- **Faster development** - AI already knows the project structure, components, and conventions
 - **Quality code** - Enforced best practices for performance, SEO, AI discoverability, and maintainability
 
-Think of Canon as training wheels that never come off. Claude stays within proven patterns, so you get reliable results every time.
+Think of Canon as training wheels that never come off. AI stays within proven patterns, so you get reliable results every time.
 
 **Canon Commands:**
 
@@ -328,7 +415,7 @@ speedwell/
 - **`npm run audit`** - Audit codebase with Gallop Canon
 - **`npm run audit:strict`** - Strict audit mode
 - **`npm run audit:json`** - Output audit results as JSON
-- **`npm run generate:ai-rules`** - Generate AI rules for Cursor and Copilot
+- **`npm run generate:ai-rules`** - Generate AI rules for code editors
 
 ### Content & Assets
 
@@ -449,7 +536,8 @@ Built with ❤️ by the team at [Gallop](https://gallop.software)
 
 ## Learn More
 
+- [Gallop AI Editor](https://gallop.software/)
+- [Gallop Templates](https://gallop.software/templates)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Gallop Templates](https://gallop.software/templates)
 - [React Documentation](https://react.dev)
