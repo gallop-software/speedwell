@@ -5,7 +5,11 @@
       "title": "Modern Loft Transformation",
       "description": "Discover how we transformed a raw industrial loft into a sophisticated urban retreat featuring exposed brick, custom steel details, and contemporary luxury.",
       "date": "2025-05-01",
-      "categories": ["Residential", "Urban Living", "Contemporary"],
+      "categories": [
+        "Residential",
+        "Urban Living",
+        "Contemporary"
+      ],
       "featuredImage": "/portfolio/pexels-pixabay-161758.jpg",
       "author": ""
     }
@@ -16,7 +20,11 @@
       "title": "Coastal Home Renovation",
       "description": "Complete renovation of a beachfront home featuring airy coastal design, custom built-ins, and seamless indoor-outdoor living spaces with ocean views.",
       "date": "2025-04-15",
-      "categories": ["Residential", "Coastal Design", "Renovation"],
+      "categories": [
+        "Residential",
+        "Coastal Design",
+        "Renovation"
+      ],
       "featuredImage": "/portfolio/pexels-burst-545012.jpg",
       "author": ""
     }
@@ -27,7 +35,11 @@
       "title": "Chef Kitchen Upgrade",
       "description": "Serious cook's kitchen featuring professional-grade appliances, abundant prep space, and restaurant-quality functionality for home.",
       "date": "2025-04-05",
-      "categories": ["Kitchen Design", "Professional", "Gourmet"],
+      "categories": [
+        "Kitchen Design",
+        "Professional",
+        "Gourmet"
+      ],
       "featuredImage": "/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg",
       "author": ""
     }
@@ -38,7 +50,11 @@
       "title": "Luxury Master Suite",
       "description": "Opulent master suite with spa-inspired ensuite bathroom, custom closet, and five-star hotel-quality finishes and amenities.",
       "date": "2025-03-22",
-      "categories": ["Residential", "Luxury", "Bedroom Design"],
+      "categories": [
+        "Residential",
+        "Luxury",
+        "Bedroom Design"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg",
       "author": ""
     }
@@ -49,7 +65,11 @@
       "title": "Library Study Design",
       "description": "Classic library study featuring floor-to-ceiling bookcases, leather furnishings, and sophisticated traditional design for reading and contemplation.",
       "date": "2025-03-12",
-      "categories": ["Library Design", "Traditional", "Home Office"],
+      "categories": [
+        "Library Design",
+        "Traditional",
+        "Home Office"
+      ],
       "featuredImage": "/portfolio/pexels-pixabay-276724.jpg",
       "author": ""
     }
@@ -60,7 +80,11 @@
       "title": "Basement Entertainment Space",
       "description": "Multi-functional finished basement featuring home theater, game area, bar, and lounge with industrial design and smart space planning.",
       "date": "2025-02-28",
-      "categories": ["Residential", "Entertainment", "Renovation"],
+      "categories": [
+        "Residential",
+        "Entertainment",
+        "Renovation"
+      ],
       "featuredImage": "/portfolio/houzlook/pexels-houzlook-3797991.jpg",
       "author": ""
     }
@@ -71,7 +95,11 @@
       "title": "Executive Workspace",
       "description": "Sophisticated home office featuring custom millwork, ergonomic furnishings, and professional design for executive productivity and virtual meetings.",
       "date": "2025-02-14",
-      "categories": ["Home Office", "Contemporary", "Professional"],
+      "categories": [
+        "Home Office",
+        "Contemporary",
+        "Professional"
+      ],
       "featuredImage": "/portfolio/pexels-mikhail-nilov-6707628.jpg",
       "author": ""
     }
@@ -82,7 +110,11 @@
       "title": "Wellness Spa Design",
       "description": "Tranquil boutique spa featuring treatment rooms, meditation lounge, and holistic design creating a sanctuary for rejuvenation and self-care.",
       "date": "2025-01-30",
-      "categories": ["Commercial", "Wellness", "Spa Design"],
+      "categories": [
+        "Commercial",
+        "Wellness",
+        "Spa Design"
+      ],
       "featuredImage": "/portfolio/falling4utah/pexels-falling4utah-1080721.jpg",
       "author": ""
     }
@@ -93,7 +125,11 @@
       "title": "Wine Country Estate",
       "description": "Sophisticated wine country home featuring rustic elegance, chef's kitchen, custom wine cellar, and seamless indoor-outdoor living.",
       "date": "2025-01-19",
-      "categories": ["Residential", "Luxury", "Rustic"],
+      "categories": [
+        "Residential",
+        "Luxury",
+        "Rustic"
+      ],
       "featuredImage": "/portfolio/pexels-alex-qian-1180283-2343465.jpg",
       "author": ""
     }
@@ -104,7 +140,11 @@
       "title": "Boutique Hotel Design",
       "description": "Intimate boutique hotel featuring unique guest rooms, curated public spaces, and sophisticated design blending historic charm with modern luxury.",
       "date": "2025-01-08",
-      "categories": ["Commercial", "Hospitality", "Luxury"],
+      "categories": [
+        "Commercial",
+        "Hospitality",
+        "Luxury"
+      ],
       "featuredImage": "/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg",
       "author": ""
     }
@@ -115,7 +155,11 @@
       "title": "Modern Nursery Design",
       "description": "Serene gender-neutral nursery featuring sustainable materials, convertible furniture, and thoughtful design that grows with your child.",
       "date": "2024-12-20",
-      "categories": ["Nursery Design", "Contemporary", "Family Home"],
+      "categories": [
+        "Nursery Design",
+        "Contemporary",
+        "Family Home"
+      ],
       "featuredImage": "/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg",
       "author": ""
     }
@@ -126,7 +170,11 @@
       "title": "Japanese Zen Retreat",
       "description": "Serene residential space inspired by Japanese aesthetics featuring natural materials, minimal design, and mindful living principles.",
       "date": "2024-12-12",
-      "categories": ["Residential", "Japanese", "Zen"],
+      "categories": [
+        "Residential",
+        "Japanese",
+        "Zen"
+      ],
       "featuredImage": "/portfolio/jvdm/pexels-jvdm-1454804.jpg",
       "author": ""
     }
@@ -137,7 +185,11 @@
       "title": "Artisan Coffee Brand Identity",
       "description": "Complete brand identity for specialty coffee roaster featuring sustainable packaging design, custom illustrations, and authentic visual storytelling.",
       "date": "2024-12-10",
-      "categories": ["Portfolio", "Brand Identity", "Packaging Design"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Packaging Design"
+      ],
       "featuredImage": "/layout-1/pexels-blanca-isela-2156722885-35240180.jpg",
       "author": ""
     }
@@ -148,7 +200,11 @@
       "title": "Urban Penthouse Makeover",
       "description": "Sophisticated penthouse renovation featuring open-plan living, city views, and contemporary design with smart home integration.",
       "date": "2024-12-05",
-      "categories": ["Residential", "Luxury", "Contemporary"],
+      "categories": [
+        "Residential",
+        "Luxury",
+        "Contemporary"
+      ],
       "featuredImage": "/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg",
       "author": ""
     }
@@ -159,7 +215,11 @@
       "title": "Creative Coworking Space Brand",
       "description": "Dynamic brand identity for coworking space featuring bold design that fosters creative community and inspires collaboration among professionals.",
       "date": "2024-12-03",
-      "categories": ["Portfolio", "Brand Identity", "Workspace"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Workspace"
+      ],
       "featuredImage": "/layout-1/pexels-mareklevak-2265482.jpg",
       "author": ""
     }
@@ -170,7 +230,11 @@
       "title": "Restaurant Interior Design",
       "description": "Sophisticated restaurant featuring custom millwork, varied dining zones, and elevated design that balances ambiance with operational needs.",
       "date": "2024-11-28",
-      "categories": ["Commercial", "Hospitality", "Restaurant"],
+      "categories": [
+        "Commercial",
+        "Hospitality",
+        "Restaurant"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg",
       "author": ""
     }
@@ -181,7 +245,11 @@
       "title": "Tech Startup Brand Launch",
       "description": "Bold brand identity for innovative SaaS startup featuring vibrant gradients, custom iconography, and scalable design system for growth.",
       "date": "2024-11-15",
-      "categories": ["Portfolio", "Brand Identity", "Digital Branding"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Digital Branding"
+      ],
       "featuredImage": "/layout-1/pexels-pixabay-221185.jpg",
       "author": ""
     }
@@ -192,7 +260,11 @@
       "title": "Contemporary Family Home",
       "description": "Open-plan family home renovation featuring contemporary design, custom millwork, and smart home integration for comfortable modern living.",
       "date": "2024-11-10",
-      "categories": ["Residential", "Contemporary", "Family Home"],
+      "categories": [
+        "Residential",
+        "Contemporary",
+        "Family Home"
+      ],
       "featuredImage": "/portfolio/falling4utah/pexels-falling4utah-1080696.jpg",
       "author": ""
     }
@@ -203,7 +275,11 @@
       "title": "Fashion Boutique Rebrand",
       "description": "Sophisticated rebrand for fashion boutique balancing timeless elegance with sustainability, creating a destination for conscious consumers.",
       "date": "2024-11-08",
-      "categories": ["Portfolio", "Brand Identity", "Fashion"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Fashion"
+      ],
       "featuredImage": "/layout-1/pexels-rachel-claire-5490970.jpg",
       "author": ""
     }
@@ -214,7 +290,11 @@
       "title": "Historic Brownstone Revival",
       "description": "Meticulous restoration of a 19th-century brownstone blending original architectural details with modern amenities and contemporary design sensibilities.",
       "date": "2024-11-05",
-      "categories": ["Residential", "Historic Restoration", "Victorian"],
+      "categories": [
+        "Residential",
+        "Historic Restoration",
+        "Victorian"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg",
       "author": ""
     }
@@ -225,7 +305,11 @@
       "title": "Private Yoga Studio",
       "description": "Tranquil home yoga studio with bamboo floors, soft lighting, and minimalist design for meditation and daily practice.",
       "date": "2024-11-05",
-      "categories": ["Wellness", "Home Gym", "Minimalist"],
+      "categories": [
+        "Wellness",
+        "Home Gym",
+        "Minimalist"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg",
       "author": ""
     }
@@ -236,7 +320,11 @@
       "title": "Wellness Studio Brand Identity",
       "description": "Serene brand identity for wellness studio featuring soft palettes, organic shapes, and mindful design that creates calm, welcoming experiences.",
       "date": "2024-10-22",
-      "categories": ["Portfolio", "Brand Identity", "Wellness"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Wellness"
+      ],
       "featuredImage": "/layout-1/pexels-diva-plavalaguna-6937932.jpg",
       "author": ""
     }
@@ -247,7 +335,11 @@
       "title": "Organic Skincare Rebrand",
       "description": "Minimalist rebrand for organic skincare line featuring botanical elements, sustainable packaging, and sophisticated visual identity for clean beauty market.",
       "date": "2024-10-20",
-      "categories": ["Portfolio", "Brand Identity", "Packaging Design"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Packaging Design"
+      ],
       "featuredImage": "/layout-1/pexels-cottonbro-4154192.jpg",
       "author": ""
     }
@@ -258,7 +350,11 @@
       "title": "Mudroom Organization",
       "description": "Functional family mudroom featuring custom cubbies, durable materials, and smart organization for coats, shoes, and sports gear.",
       "date": "2024-10-18",
-      "categories": ["Organization", "Family Home", "Mudroom"],
+      "categories": [
+        "Organization",
+        "Family Home",
+        "Mudroom"
+      ],
       "featuredImage": "/portfolio/pexels-leah-newhouse-50725-6480707.jpg",
       "author": ""
     }
@@ -269,7 +365,11 @@
       "title": "Midcentury Modern Refresh",
       "description": "Authentic midcentury modern home renovation preserving original architecture with updated finishes and period-appropriate furnishings.",
       "date": "2024-10-03",
-      "categories": ["Residential", "Midcentury Modern", "Renovation"],
+      "categories": [
+        "Residential",
+        "Midcentury Modern",
+        "Renovation"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg",
       "author": ""
     }
@@ -280,7 +380,11 @@
       "title": "Guest Suite Makeover",
       "description": "Welcoming guest suite featuring hotel-quality amenities, comfortable furnishings, and thoughtful details for the ultimate guest experience.",
       "date": "2024-09-22",
-      "categories": ["Guest Room", "Residential", "Bedroom Design"],
+      "categories": [
+        "Guest Room",
+        "Residential",
+        "Bedroom Design"
+      ],
       "featuredImage": "/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg",
       "author": ""
     }
@@ -291,7 +395,11 @@
       "title": "Minimalist Kitchen Redesign",
       "description": "Sleek minimalist kitchen featuring handleless cabinetry, waterfall countertops, and integrated appliances for a clutter-free culinary space.",
       "date": "2024-09-18",
-      "categories": ["Kitchen Design", "Minimalist", "Contemporary"],
+      "categories": [
+        "Kitchen Design",
+        "Minimalist",
+        "Contemporary"
+      ],
       "featuredImage": "/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg",
       "author": ""
     }
@@ -302,7 +410,11 @@
       "title": "Bohemian Bedroom Design",
       "description": "Layered bohemian bedroom featuring global textiles, vintage finds, abundant plants, and eclectic mix of patterns and cultural elements.",
       "date": "2024-09-07",
-      "categories": ["Bedroom Design", "Bohemian", "Eclectic"],
+      "categories": [
+        "Bedroom Design",
+        "Bohemian",
+        "Eclectic"
+      ],
       "featuredImage": "/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg",
       "author": ""
     }
@@ -313,7 +425,11 @@
       "title": "Farm-to-Table Restaurant Brand",
       "description": "Warm restaurant brand identity celebrating local agriculture with hand-lettered typography, seasonal design, and community-focused visual storytelling.",
       "date": "2024-09-05",
-      "categories": ["Portfolio", "Brand Identity", "Hospitality"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Hospitality"
+      ],
       "featuredImage": "/layout-1/pexels-enginakyurt-1435894.jpg",
       "author": ""
     }
@@ -324,7 +440,11 @@
       "title": "Sustainable Green Home",
       "description": "Environmentally conscious home featuring sustainable materials, energy-efficient systems, and healthy living spaces with minimal carbon footprint.",
       "date": "2024-08-30",
-      "categories": ["Residential", "Sustainable", "Contemporary"],
+      "categories": [
+        "Residential",
+        "Sustainable",
+        "Contemporary"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg",
       "author": ""
     }
@@ -335,7 +455,11 @@
       "title": "Industrial Office Conversion",
       "description": "Creative office space conversion from warehouse featuring exposed brick, original beams, and modern workplace amenities.",
       "date": "2024-08-14",
-      "categories": ["Commercial", "Industrial", "Office Design"],
+      "categories": [
+        "Commercial",
+        "Industrial",
+        "Office Design"
+      ],
       "featuredImage": "/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg",
       "author": ""
     }
@@ -346,7 +470,11 @@
       "title": "Boutique Hotel Rebrand",
       "description": "Elegant rebrand for historic boutique hotel blending classic sophistication with modern luxury across all guest touchpoints and digital platforms.",
       "date": "2024-08-12",
-      "categories": ["Portfolio", "Brand Identity", "Hospitality"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Hospitality"
+      ],
       "featuredImage": "/layout-1/pexels-cottonbro-5379175.jpg",
       "author": ""
     }
@@ -357,7 +485,11 @@
       "title": "Transitional Townhouse",
       "description": "Urban townhouse blending historic architecture with contemporary design through transitional style, honoring character while updating for modern living.",
       "date": "2024-08-02",
-      "categories": ["Residential", "Transitional", "Townhouse"],
+      "categories": [
+        "Residential",
+        "Transitional",
+        "Townhouse"
+      ],
       "featuredImage": "/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg",
       "author": ""
     }
@@ -368,7 +500,11 @@
       "title": "Scandinavian Apartment",
       "description": "Light-filled apartment featuring Scandinavian design principles with natural materials, multi-functional furniture, and minimalist aesthetic.",
       "date": "2024-07-20",
-      "categories": ["Residential", "Scandinavian", "Minimalist"],
+      "categories": [
+        "Residential",
+        "Scandinavian",
+        "Minimalist"
+      ],
       "featuredImage": "/portfolio/jvdm/pexels-jvdm-1457844.jpg",
       "author": ""
     }
@@ -379,7 +515,11 @@
       "title": "Craft Brewery Brand Identity",
       "description": "Bold brewery brand featuring custom illustrations, vibrant label designs, and cohesive identity system that stands out in craft beer market.",
       "date": "2024-07-18",
-      "categories": ["Portfolio", "Brand Identity", "Packaging Design"],
+      "categories": [
+        "Portfolio",
+        "Brand Identity",
+        "Packaging Design"
+      ],
       "featuredImage": "/layout-1/pexels-elevate-1267700.jpg",
       "author": ""
     }
@@ -390,7 +530,11 @@
       "title": "Coastal Cottage Refresh",
       "description": "Charming beach cottage refresh featuring light coastal palette, restored vintage pieces, and authentic seaside style for relaxed living.",
       "date": "2024-07-08",
-      "categories": ["Residential", "Coastal Design", "Cottage"],
+      "categories": [
+        "Residential",
+        "Coastal Design",
+        "Cottage"
+      ],
       "featuredImage": "/portfolio/pexels-pixabay-259962.jpg",
       "author": ""
     }
@@ -401,7 +545,11 @@
       "title": "Rooftop Terrace Design",
       "description": "Urban rooftop terrace featuring multiple zones, container gardens, and weather-resistant design for year-round outdoor entertaining.",
       "date": "2024-06-25",
-      "categories": ["Outdoor Living", "Urban Design", "Terrace"],
+      "categories": [
+        "Outdoor Living",
+        "Urban Design",
+        "Terrace"
+      ],
       "featuredImage": "/portfolio/pexels-dropshado-2251247.jpg",
       "author": ""
     }
@@ -412,7 +560,11 @@
       "title": "Farmhouse Kitchen Remodel",
       "description": "Charming farmhouse kitchen renovation featuring Shaker cabinets, butcher block counters, and rustic details with modern amenities.",
       "date": "2024-06-12",
-      "categories": ["Kitchen Design", "Farmhouse", "Traditional"],
+      "categories": [
+        "Kitchen Design",
+        "Farmhouse",
+        "Traditional"
+      ],
       "featuredImage": "/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg",
       "author": ""
     }
@@ -423,7 +575,11 @@
       "title": "Spa Bathroom Retreat",
       "description": "Tranquil spa-inspired bathroom featuring steam shower, soaking tub, heated floors, and luxurious finishes for ultimate relaxation.",
       "date": "2024-05-28",
-      "categories": ["Bathroom Design", "Luxury", "Contemporary"],
+      "categories": [
+        "Bathroom Design",
+        "Luxury",
+        "Contemporary"
+      ],
       "featuredImage": "/portfolio/pexels-pixabay-269218.jpg",
       "author": ""
     }
@@ -434,7 +590,11 @@
       "title": "Gallery Wall Curation",
       "description": "Sophisticated salon-style gallery wall featuring curated art collection, family photographs, and strategic arrangement for maximum visual impact.",
       "date": "2024-05-10",
-      "categories": ["Art Display", "Residential", "Styling"],
+      "categories": [
+        "Art Display",
+        "Residential",
+        "Styling"
+      ],
       "featuredImage": "/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg",
       "author": ""
     }
@@ -445,7 +605,11 @@
       "title": "Open Concept Living",
       "description": "Whole-home renovation creating flowing open-concept space with defined zones for kitchen, dining, and living areas with indoor-outdoor connection.",
       "date": "2024-04-16",
-      "categories": ["Residential", "Renovation", "Contemporary"],
+      "categories": [
+        "Residential",
+        "Renovation",
+        "Contemporary"
+      ],
       "featuredImage": "/portfolio/houzlook/pexels-houzlook-3356416.jpg",
       "author": ""
     }
@@ -456,7 +620,11 @@
       "title": "Art Deco Restoration",
       "description": "Meticulous Art Deco apartment restoration featuring geometric details, period furnishings, and glamorous 1920s design with modern amenities.",
       "date": "2024-03-25",
-      "categories": ["Restoration", "Art Deco", "Historic"],
+      "categories": [
+        "Restoration",
+        "Art Deco",
+        "Historic"
+      ],
       "featuredImage": "/portfolio/pexels-pixabay-269252.jpg",
       "author": ""
     }
@@ -467,7 +635,11 @@
       "title": "Laundry Room Transformation",
       "description": "Efficient laundry room featuring smart storage, folding counter, and charming farmhouse design that makes chores more pleasant.",
       "date": "2024-02-14",
-      "categories": ["Laundry Room", "Organization", "Farmhouse"],
+      "categories": [
+        "Laundry Room",
+        "Organization",
+        "Farmhouse"
+      ],
       "featuredImage": "/portfolio/pexels-pixabay-279719.jpg",
       "author": ""
     }
@@ -478,7 +650,11 @@
       "title": "Mountain Chalet Interior",
       "description": "Warm mountain chalet featuring reclaimed wood, stone fireplace, and rustic luxury design with spectacular alpine views and modern amenities.",
       "date": "2024-01-15",
-      "categories": ["Residential", "Mountain", "Luxury"],
+      "categories": [
+        "Residential",
+        "Mountain",
+        "Luxury"
+      ],
       "featuredImage": "/portfolio/pexels-jworks1124-342800.jpg",
       "author": ""
     }
