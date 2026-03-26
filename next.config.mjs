@@ -16,11 +16,6 @@ const nextConfig = {
   async redirects() {
     return []
   },
-  // Poll for file changes instead of relying on fsevents, which can
-  // intermittently miss writes from AI tools and external processes
-  watchOptions: {
-    pollIntervalMs: 1000,
-  },
 }
 
 export default nextConfig
