@@ -9,8 +9,9 @@ interface ProBlockProps {
 }
 
 export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
-  // Extract category by removing the -{number} suffix
-  const category = blockSlug.replace(/-\d+$/, '')
+  // Extract category from last segment of slug, stripping -{number} suffix
+  const lastSegment = blockSlug.includes('/') ? blockSlug.split('/').pop() : blockSlug
+  const category = lastSegment!.replace(/-\d+$/, '')
 
   return (
     <div className="relative w-full">
@@ -36,7 +37,7 @@ export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
         </Paragraph>
 
         <Button
-          href={`https://gallop.software/code/speedwell/blocks/${category}/${blockSlug}`}
+          href={`https://gallop.software/code/speedwell/blocks/${category}?block=${blockSlug}`}
           variant="primary"
           target="_blank"
           icon={arrowRightIcon}
