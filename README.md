@@ -4,9 +4,9 @@
 
 An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
-**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)
-**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)
-**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)
+**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)<br>
+**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)<br>
+**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)<br>
 **🏷️ Category:** Small Business Template
 
 ---
