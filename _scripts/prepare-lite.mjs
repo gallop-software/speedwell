@@ -70,7 +70,7 @@ async function findProBlocks() {
 
 // Generate ProBlock component content
 function generateProBlockContent(blockName, blockSlug, { hasPtNavbar = false } = {}) {
-  const classNameProp = hasPtNavbar ? `\n      className="pt-navbar"` : ''
+  const classNameProp = hasPtNavbar ? `\n      className="pt-navbar xl:!pt-0"` : ''
   return `import { ProBlock } from '@/components/pro-block'
 
 export default function ${toPascalCase(blockSlug)}() {
