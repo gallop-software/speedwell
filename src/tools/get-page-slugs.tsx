@@ -10,7 +10,6 @@ type PageSlugItem = {
 const BLOCKED_ROUTE_GROUPS = ['(demo)']
 const EXCLUDED_FOLDERS = [
   'api',
-  'sitemap_index.xml',
   'post', // Posts are handled separately
 ]
 
