@@ -2,14 +2,16 @@ import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Button } from '@/components/button'
 import { Buttons } from '@/components/buttons'
+import clsx from 'clsx'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 interface ProBlockProps {
   blockSlug: string
   blockName: string
+  className?: string
 }
 
-export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
+export function ProBlock({ blockSlug, blockName, className }: ProBlockProps) {
   // Extract category from last segment of slug, stripping -{number} suffix
   const lastSegment = blockSlug.includes('/') ? blockSlug.split('/').pop() : blockSlug
   const category = lastSegment!.replace(/-\d+$/, '')
@@ -17,12 +19,12 @@ export function ProBlock({ blockSlug, blockName }: ProBlockProps) {
   const pageRoute = blockSlug.includes('/') ? blockSlug.split('/').slice(0, -1).join('/') : ''
 
   return (
-    <div className="relative w-full">
-      {/* Background Image - contains to show full image */}
+    <div className={clsx('relative w-full md:min-h-[600px] lg:min-h-[900px] 2xl:min-h-0', className)}>
+      {/* Background Image */}
       <img
-        src={`/blocks/${blockSlug}.jpg`}
+        src={`https://speedwell-cdn.gallop.software/blocks/${blockSlug}.jpg`}
         alt={blockName}
-        className="w-full h-auto object-contain"
+        className="absolute inset-0 w-full h-full object-cover 2xl:relative 2xl:inset-auto 2xl:h-auto 2xl:object-contain"
       />
 
       {/* Overlay with blur and opacity */}

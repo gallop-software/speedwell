@@ -69,14 +69,15 @@ async function findProBlocks() {
 }
 
 // Generate ProBlock component content
-function generateProBlockContent(blockName, blockSlug) {
+function generateProBlockContent(blockName, blockSlug, { hasPtNavbar = false } = {}) {
+  const classNameProp = hasPtNavbar ? `\n      className="pt-navbar"` : ''
   return `import { ProBlock } from '@/components/pro-block'
 
 export default function ${toPascalCase(blockSlug)}() {
   return (
     <ProBlock
       blockSlug="${blockSlug}"
-      blockName="${blockName}"
+      blockName="${blockName}"${classNameProp}
     />
   )
 }
@@ -160,14 +161,20 @@ async function convertBlock(block, blockPathIndex) {
     // Check if file exists
     await fs.access(filePath)
 
+    // Read original content before conversion
+    const originalContent = await fs.readFile(filePath, 'utf-8')
+
     // Check if already converted
-    if (await isAlreadyConverted(filePath)) {
+    if (originalContent.includes('ProBlock')) {
       console.log(`⏭️  Skipping ${block.slug} - already uses ProBlock`)
       return { success: true, skipped: true }
     }
 
+    // Detect pt-navbar usage in original block
+    const hasPtNavbar = originalContent.includes('pt-navbar')
+
     // Generate new content
-    const newContent = generateProBlockContent(block.name, block.slug)
+    const newContent = generateProBlockContent(block.name, block.slug, { hasPtNavbar })
 
     // Write to file
     await fs.writeFile(filePath, newContent, 'utf-8')
