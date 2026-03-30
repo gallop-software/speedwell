@@ -4,9 +4,9 @@
 
 An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
-**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)
-**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)
-**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)
+**🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)<br>
+**🎨 Template:** [gallop.software/templates](https://gallop.software/templates)<br>
+**📦 Repository:** [github.com/gallop-software/speedwell-pro](https://github.com/gallop-software/speedwell-pro)<br>
 **🏷️ Category:** Small Business Template
 
 ---
@@ -188,7 +188,7 @@ If you're comfortable with Git:
 
 #### Step 1: Create Your Repository
 
-[![Speedwell Lite (Free)](<https://img.shields.io/badge/Speedwell_Lite_(Free)-238636?style=for-the-badge&logo=github&logoColor=white>)](https://github.com/gallop-software/speedwell/generate) [![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
+[![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
 
 #### Step 2: Clone Your Repository
 
@@ -211,7 +211,7 @@ Open [http://localhost:3000](http://localhost:3000) to view your site. Press `Ct
 
 #### Step 3: Deploy to Vercel
 
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?demo-title=Speedwell&demo-description=An%20artistic%20website%20template%20for%20creatives%20and%20small%20businesses%20who%20want%20to%20build%20at%20the%20speed%20of%20thought%20with%20AI%2C%20look%20more%20professional%20than%20the%20competition%2C%20and%20rank%20%231%20on%20Google.&demo-url=https%3A%2F%2Fspeedwell.gallop.software&demo-image=https%3A%2F%2Fspeedwell-cdn.gallop.software%2Fimages%2Fscreenshot.jpg&from=templates&project-name=speedwell-pro&repository-name=speedwell-pro&repository-url=https%3A%2F%2Fgithub.com%2Fgallop-software%2Fspeedwell-pro)
 
 Select your repository, and Vercel will automatically deploy whenever you push changes.
 
@@ -510,7 +510,7 @@ Build-time tools for content and asset generation:
 ## Support & Community
 
 - **Documentation:** [gallop.software](https://gallop.software)
-- **Issues:** [GitHub Issues](https://github.com/gallop-software/speedwell/issues)
+- **Issues:** [GitHub Issues](https://github.com/gallop-software/speedwell-pro/issues)
 - **Slack:** [Join Community](https://join.slack.com/t/gallop-software/shared_invite/zt-358q3rdrp-H6kKvKzpR2qgB5xJviAOcw)
 - **Professional Services:** [Web Plant Media, LLC](https://webplant.media)
 
