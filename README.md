@@ -47,7 +47,7 @@ We recommend the **Gallop AI Editor** for the best experience with Gallop templa
 |---|---|---|
 | **Best for** | Non-programmers, junior programmers, advanced programmers | Advanced programmers |
 | **AI built in** | Yes — Claude AI ready to go | No (optional extensions available) |
-| **AI setup requirement** | None — works out of the box | Enter Claude API keys |
+| **AI setup requirement** | Enter Claude API keys | Install extensions manually |
 | **Template browser** | Built-in marketplace | Download ZIP from GitHub |
 | **Media manager** | Built-in Studio with CDN sync | Manual file management |
 | **Git** | Column UI with modal diff viewer | Built-in Git UI |
