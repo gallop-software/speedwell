@@ -2,6 +2,7 @@ import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Button } from '@/components/button'
 import { Buttons } from '@/components/buttons'
+import clsx from 'clsx'
 import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 interface ProBlockProps {
@@ -22,48 +23,50 @@ export function ProBlock({ blockSlug, blockName, className }: ProBlockProps) {
     : ''
 
   return (
-    <div className={className}>
-      <div className="relative w-full min-h-[800px] xl:min-h-0">
-        {/* Background Image */}
-        <img
-          src={`https://speedwell-cdn.gallop.software/blocks/${blockSlug}.jpg`}
-          alt={blockName}
-          className="absolute inset-0 w-full h-full object-cover xl:relative xl:inset-auto xl:h-auto xl:object-contain"
-        />
+    <div
+      className={clsx(
+        'relative w-full min-h-[800px] xl:min-h-0 flex items-center',
+        className
+      )}
+    >
+      {/* Background Image */}
+      <img
+        src={`https://speedwell-cdn.gallop.software/blocks/${blockSlug}.jpg`}
+        alt={blockName}
+        className="absolute inset-0 w-full h-full object-cover xl:relative xl:inset-auto xl:h-auto xl:object-contain"
+      />
 
-        {/* Overlay with blur and opacity */}
-        <div className="absolute inset-0 bg-body/50 backdrop-blur-md" />
+      {/* Overlay with blur and opacity */}
+      <div className="absolute inset-0 bg-body/50 backdrop-blur-md" />
 
-        {/* Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 py-32 text-center">
-          <Heading as="h1">{blockName} Block</Heading>
+      {/* Content */}
+      <div className="relative xl:absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 text-center w-full">
+        <Heading as="h1">{blockName} Block</Heading>
 
-          <Paragraph
-            variant="large"
-            className="max-w-2xl"
+        <Paragraph
+          variant="large"
+          className="max-w-2xl"
+        >
+          Get lifetime access to production ready blocks and all future updates.
+        </Paragraph>
+
+        <Buttons margin="mt-0 mb-0">
+          <Button
+            href={`https://gallop.software/code/speedwell/blocks/${category}?block=${blockSlug}`}
+            variant="primary"
+            target="_blank"
+            icon={arrowRightIcon}
+            iconPlacement="after"
           >
-            Get lifetime access to production ready blocks and all future
-            updates.
-          </Paragraph>
-
-          <Buttons margin="mt-0 mb-0">
-            <Button
-              href={`https://gallop.software/code/speedwell/blocks/${category}?block=${blockSlug}`}
-              variant="primary"
-              target="_blank"
-              icon={arrowRightIcon}
-              iconPlacement="after"
-            >
-              See Block
-            </Button>
-            <Button
-              href={`https://speedwell.gallop.software/${pageRoute}`}
-              variant="secondary"
-            >
-              Speedwell Pro Demo
-            </Button>
-          </Buttons>
-        </div>
+            See Block
+          </Button>
+          <Button
+            href={`https://speedwell.gallop.software/${pageRoute}`}
+            variant="secondary"
+          >
+            Speedwell Pro Demo
+          </Button>
+        </Buttons>
       </div>
     </div>
   )
