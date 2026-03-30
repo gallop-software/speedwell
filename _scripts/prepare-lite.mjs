@@ -293,6 +293,7 @@ async function rewriteReadmeForLite() {
     // Replace GitHub repo references (covers repo link, issues, Vercel deploy URL)
     const repoReplacements = [
       ['gallop-software/speedwell-pro', 'gallop-software/speedwell'],
+      ['gallop-software%2Fspeedwell-pro', 'gallop-software%2Fspeedwell'],
       ['project-name=speedwell-pro', 'project-name=speedwell'],
       ['repository-name=speedwell-pro', 'repository-name=speedwell'],
     ]
