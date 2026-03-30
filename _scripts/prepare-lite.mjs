@@ -303,6 +303,7 @@ async function rewriteReadmeForLite() {
       ['gallop-software%2Fspeedwell-pro', 'gallop-software%2Fspeedwell'],
       ['project-name=speedwell-pro', 'project-name=speedwell'],
       ['repository-name=speedwell-pro', 'repository-name=speedwell'],
+      ['demo-url=https%3A%2F%2Fspeedwell.gallop.software', 'demo-url=https%3A%2F%2Fspeedwell-lite.vercel.app'],
     ]
 
     for (const [oldStr, newStr] of repoReplacements) {
