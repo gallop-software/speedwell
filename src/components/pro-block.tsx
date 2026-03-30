@@ -21,6 +21,7 @@ export function ProBlock({ blockSlug, blockName, className }: ProBlockProps) {
   const pageRoute = blockSlug.includes('/')
     ? blockSlug.split('/').slice(0, -1).join('/')
     : ''
+  const hasPtNavbar = className?.includes('pt-navbar')
 
   return (
     <div
@@ -40,7 +41,12 @@ export function ProBlock({ blockSlug, blockName, className }: ProBlockProps) {
       <div className="absolute inset-0 bg-body/50 backdrop-blur-md" />
 
       {/* Content */}
-      <div className="relative xl:absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 text-center w-full">
+      <div
+        className={clsx(
+          'relative xl:absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 text-center w-full',
+          hasPtNavbar && 'xl:pt-60'
+        )}
+      >
         <Heading as="h1">{blockName} Block</Heading>
 
         <Paragraph
