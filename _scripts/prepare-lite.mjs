@@ -17,6 +17,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const README_PATH = path.join(__dirname, '../src/app/BLOCKS.md')
+const README_FILE_PATH = path.join(__dirname, '../README.md')
 const APP_DIR = path.join(__dirname, '../src/app')
 const HOOKS_DIR = path.join(__dirname, '../src/hooks')
 const API_DIR = path.join(__dirname, '../src/app/api')
@@ -281,6 +282,50 @@ async function rewriteProBlockImageSrc() {
   }
 }
 
+// Rewrite README.md for lite version
+async function rewriteReadmeForLite() {
+  console.log('\n📝 Rewriting README.md for lite version...\n')
+
+  try {
+    let content = await fs.readFile(README_FILE_PATH, 'utf-8')
+    let modified = false
+
+    // Replace GitHub repo references (covers repo link, issues, Vercel deploy URL)
+    const repoReplacements = [
+      ['gallop-software/speedwell-pro', 'gallop-software/speedwell'],
+      ['project-name=speedwell-pro', 'project-name=speedwell'],
+      ['repository-name=speedwell-pro', 'repository-name=speedwell'],
+    ]
+
+    for (const [oldStr, newStr] of repoReplacements) {
+      if (content.includes(oldStr)) {
+        content = content.replaceAll(oldStr, newStr)
+        modified = true
+      }
+    }
+
+    // Replace Pro generate button with Lite generate button
+    const proButton =
+      '[![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)'
+    const liteButton =
+      '[![Speedwell](https://img.shields.io/badge/Speedwell-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)'
+
+    if (content.includes(proButton)) {
+      content = content.replace(proButton, liteButton)
+      modified = true
+    }
+
+    if (modified) {
+      await fs.writeFile(README_FILE_PATH, content, 'utf-8')
+      console.log('  ✅ Updated README.md for lite version')
+    } else {
+      console.log('  ⏭️  README.md - no changes needed')
+    }
+  } catch (error) {
+    console.error(`  ❌ Error updating README.md: ${error.message}`)
+  }
+}
+
 // Main execution
 async function main() {
   console.log('🔍 Scanning blocks README for Pro blocks...\n')
@@ -333,6 +378,9 @@ async function main() {
 
   // Rewrite ProBlock image src to CDN URLs
   await rewriteProBlockImageSrc()
+
+  // Rewrite README.md for lite version
+  await rewriteReadmeForLite()
 
   console.log('\n✨ Lite conversion complete!')
 }
