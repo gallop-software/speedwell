@@ -7,7 +7,6 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 | File | Regenerate With | Triggered By |
 |---|---|---|
 | `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/blog/ |
-| `_data/_meta.json` | `npm run blocks` | Block catalog changes |
 | `src/app/BLOCKS.md` | `npm run blocks` | Block additions (tier/order preserved) |
 | `src/app/README.md` | `npm run layouts` | Layout additions |
 | `public/search-index.json` | `npm run search` | Content changes |
@@ -44,9 +43,7 @@ src/
 ├── components/   # Reusable UI primitives
 ├── hooks/        # Custom React hooks
 ├── styles/       # CSS, Tailwind, fonts
-├── template/     # Template-level components
 ├── tools/        # Utility tools
-├── types/        # TypeScript types
 ├── utils/        # Utility functions
 └── state.ts      # Global state
 ```
