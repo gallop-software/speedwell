@@ -1,6 +1,6 @@
 # Speedwell
 
-[![Speedwell Theme](https://speedwell-cdn.gallop.software/images/screenshot.jpg)](https://speedwell.gallop.software)
+[![Speedwell Theme](public/images/screenshot.jpg)](https://speedwell.gallop.software)
 
 An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
@@ -211,7 +211,7 @@ Open [http://localhost:3000](http://localhost:3000) to view your site. Press `Ct
 
 #### Step 3: Deploy to Vercel
 
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?demo-title=Speedwell&demo-description=An%20artistic%20website%20template%20for%20creatives%20and%20small%20businesses%20who%20want%20to%20build%20at%20the%20speed%20of%20thought%20with%20AI%2C%20look%20more%20professional%20than%20the%20competition%2C%20and%20rank%20%231%20on%20Google.&demo-url=https%3A%2F%2Fspeedwell.gallop.software&demo-image=https%3A%2F%2Fspeedwell-cdn.gallop.software%2Fimages%2Fscreenshot-md.jpg&from=templates&project-name=speedwell-pro&repository-name=speedwell-pro&repository-url=https%3A%2F%2Fgithub.com%2Fgallop-software%2Fspeedwell-pro)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?demo-title=Speedwell&demo-description=An%20artistic%20website%20template%20for%20creatives%20and%20small%20businesses%20who%20want%20to%20build%20at%20the%20speed%20of%20thought%20with%20AI%2C%20look%20more%20professional%20than%20the%20competition%2C%20and%20rank%20%231%20on%20Google.&demo-url=https%3A%2F%2Fspeedwell.gallop.software&demo-image=https%3A%2F%2Fspeedwell.gallop.software%2Fimages%2Fscreenshot-md.jpg&from=templates&project-name=speedwell-pro&repository-name=speedwell-pro&repository-url=https%3A%2F%2Fgithub.com%2Fgallop-software%2Fspeedwell-pro)
 
 Select your repository, and Vercel will automatically deploy whenever you push changes.
 
