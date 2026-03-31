@@ -59,7 +59,7 @@ We recommend the **Gallop AI Editor** for the best experience with Gallop templa
 
 The Gallop AI Editor is a desktop app built specifically for AI-powered web development. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, and a template marketplace — all in one window with nothing to configure.
 
-[![Download Gallop AI Editor](https://img.shields.io/badge/Download_Gallop_AI_Editor-166534?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white)](https://gallop.software/)
+[![Download Gallop AI Editor](https://img.shields.io/badge/Download_Gallop_AI_Editor-166534?style=for-the-badge)](https://gallop.software/)
 
 Available for Mac and Windows.
 
