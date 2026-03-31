@@ -464,26 +464,25 @@ speedwell/
 
 Every dependency is battle-tested in production and chosen for stability, performance, and long-term maintainability.
 
-- **Next.js** `16.1.4` - React framework with App Router
+- **Next.js** `16.2.1` - React framework with App Router
 - **React** `19` - UI library
-- **Tailwind CSS** `4.1.18` - Utility-first CSS framework
+- **Tailwind CSS** `4.2.2` - Utility-first CSS framework
 - **Headless UI** `2.2.9` - Unstyled accessible components
-- **Valtio** `2.3.0` - State management
-- **Swiper** `12.0.3` - Modern slider/carousel
-- **Yet Another React Lightbox** `3.28.0` - Image gallery
+- **Valtio** `2.3.1` - State management
+- **Swiper** `12.1.3` - Modern slider/carousel
+- **Yet Another React Lightbox** `3.30.1` - Image gallery
 - **FlexSearch** `0.8.212` - Full-text search
-- **Algolia Autocomplete** `1.19.4` - Search autocomplete
-- **Vimeo Player** `2.30.1` - Video player integration
-- **Framer Motion** `12.29.0` - Animation library
-- **DayJS** `1.11.19` - Date formatting
+- **Algolia Autocomplete** `1.19.7` - Search autocomplete
+- **Vimeo Player** `2.30.3` - Video player integration
+- **Framer Motion** `12.38.0` - Animation library
 - **Luxon** `3.7.2` - DateTime library
-- **React Intersection Observer** `10.0.2` - Scroll-based animations and lazy loading
+- **React Intersection Observer** `10.0.3` - Scroll-based animations and lazy loading
 - **React Highlight Words** `0.21.0` - Text highlighting
 - **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design)
 - **clsx** `2.1.1` - Conditional className utility
-- **React DOM** `19.2.3` - React rendering
+- **React DOM** `19.2.4` - React rendering
 - **Vercel Analytics** `1.6.1` - Analytics integration
-- **Next Third Parties** `16.1.4` - Third-party script optimization
+- **Next Third Parties** `16.2.1` - Third-party script optimization
 
 ### Development
 
@@ -494,15 +493,15 @@ Tools for building and developing the site:
 - **Prettier** `3.8.1` - Code formatting
 - **Prettier Plugin Organize Imports** `4.3.0` - Auto-organize imports
 - **Prettier Plugin Tailwindcss** `0.7.2` - Sort Tailwind classes
-- **PostCSS** `8.5.6` - CSS transformations
-- **Gallop Canon** `2.16.1` - ESLint rules and AI rules generator
+- **PostCSS** `8.5.8` - CSS transformations
+- **Gallop Canon** `2.33.0` - ESLint rules and AI rules generator
 
 ### Scripts & Processing
 
 Build-time tools for content and asset generation:
 
 - **Sharp** `0.34.5` - Image processing and optimization
-- **Puppeteer** `24.36.0` - Screenshot generation (featured images)
+- **Puppeteer** `24.40.0` - Screenshot generation (featured images)
 - **jsdom** `27.4.0` - DOM parsing for search index generation
 - **@sindresorhus/slugify** `3.0.0` - URL-friendly slugs for search indexing
 - **xml2js** `0.6.2` - XML/RSS feed generation
