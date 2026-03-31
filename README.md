@@ -19,9 +19,9 @@ Just chat with AI inside your code editor using our Gallop templates, and you wi
 
 ## Features
 
-- 🚀 **Next.js 16.1** with App Router
+- 🚀 **Next.js 16.2** with App Router
 - ⚛️ **React 19** for cutting-edge performance
-- 🎨 **Tailwind CSS 4.1** for pixel-perfect design
+- 🎨 **Tailwind CSS 4.2** for pixel-perfect design
 - 📝 **TSX-powered content** - No CMS required
 - 🖼️ **Image processing** with automatic optimization
 - 🔍 **Built-in search** powered by FlexSearch
@@ -304,31 +304,19 @@ speedwell/
 │   │   │   └── block/         # Block preview routes
 │   │   ├── (one-page-site)/   # Single-page layout group
 │   │   ├── (alternate)/       # Alternate navbar group
+│   │   ├── (hero-dark)/       # Hero dark layout group
 │   │   ├── (color-navbar)/    # Colored navbar group
 │   │   ├── api/               # API routes
 │   │   ├── sitemap_index.xml/ # Sitemap generation
-│   │   ├── error.tsx          # Error boundary
+│   │   ├── global-error.tsx    # Error boundary
+│   │   ├── global-not-found.tsx # 404 page
 │   │   ├── layout.tsx         # Root layout
 │   │   ├── metadata.tsx       # Site metadata
-│   │   ├── not-found.tsx      # 404 page
+│   │   ├── robots.ts          # Robots.txt config
 │   │   ├── sitemap.ts         # Sitemap config
 │   │   ├── README.md          # Layouts documentation
 │   │   └── *.png, *.ico       # App icons and favicon
 │   ├── blog/                  # Blog post content (TSX files)
-│   ├── blocks/                # Reusable content blocks
-│   │   ├── hero-*.tsx         # Hero sections (1-19)
-│   │   ├── content-*.tsx      # Content sections (1-46)
-│   │   ├── section-*.tsx      # Section layouts (1-10)
-│   │   ├── call-to-action-*.tsx  # CTAs (1-7)
-│   │   ├── testimonial-*.tsx  # Testimonials (1-9)
-│   │   ├── form-*.tsx         # Form sections (1-7)
-│   │   ├── cover-*.tsx        # Cover sections (1-7)
-│   │   ├── archive-*.tsx      # Archive layouts (1-3)
-│   │   ├── about-*.tsx        # About sections (1-3)
-│   │   ├── pricing-*.tsx      # Pricing sections (1-2)
-│   │   ├── process-*.tsx      # Process sections (1)
-│   │   ├── sidebar-*.tsx      # Sidebar sections (1)
-│   │   └── README.md          # Blocks documentation
 │   ├── components/            # React components
 │   │   ├── navbar/           # Main navigation
 │   │   ├── navbar-2/         # Alternate navigation
@@ -369,7 +357,7 @@ speedwell/
 │   │   └── profiles/
 │   ├── videos/               # Video assets
 │   ├── search-index.json     # FlexSearch index
-│   └── speedwell.jpg         # Featured image
+│   └── screenshot.jpg        # Featured image
 ├── _fonts/                   # Font source files (managed by Studio)
 │   ├── barlow/              # Barlow font family
 │   │   ├── barlow-regular.ttf
@@ -417,20 +405,14 @@ speedwell/
 - **`npm run audit`** - Audit codebase with Gallop Canon
 - **`npm run audit:strict`** - Strict audit mode
 - **`npm run audit:json`** - Output audit results as JSON
-- **`npm run generate:ai-rules`** - Generate AI rules for code editors
 
 ### Content & Assets
 
-- **`npm run images`** - Process images from `public/originals/` to responsive variants
-- **`npm run images:reset`** - Delete processed images and regenerate all
 - **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_scripts/generate-blog-metadata.md)
 - **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
-- **`npm run favicon`** - Generate favicon files from `public/originals/favicon.png` → [docs](./_scripts/generate-favicon.md)
-- **`npm run featured-image`** - Screenshot homepage for social preview → [docs](./_scripts/generate-featured-image.md)
 - **`npm run blocks`** - Generate blocks catalog with screenshots
 - **`npm run blocks:screenshots`** - Force regenerate all block screenshots
 - **`npm run blocks:sort`** - Sort blocks in catalog
-- **`npm run blocks:lite`** - Convert pro blocks → [docs](./_scripts/convert-pro-blocks.md)
 - **`npm run layouts`** - Generate layouts catalog from app route groups
 - **`npm run layouts:screenshots`** - Force regenerate all layout screenshots
 - **`npm run layouts:sort`** - Sort layouts in catalog
@@ -449,7 +431,6 @@ speedwell/
 - **`npm run update:major`** - Update to latest major versions
 - **`npm run update:interactive`** - Interactively choose updates
 - **`npm run update:doctor`** - Update and test changes incrementally
-- **`npm run update:canon`** - Update Gallop Canon package
 
 ### Maintenance
 
