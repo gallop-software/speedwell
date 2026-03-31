@@ -53,7 +53,7 @@ We recommend the **Gallop AI Editor** for the best experience with Gallop templa
 | **Template browser** | Built-in marketplace | Download ZIP from GitHub |
 | **Media manager** | Built-in Studio with CDN sync | Manual file management |
 | **Font manager** | Built-in Studio with WOFF2 font generation | No support |
-| **SEO Audit** | Analyze SEO & Sturctured Data | No support |
+| **SEO Audit** | Analyze SEO & Structured Data | No support |
 | **Git** | Better Git UI with modal diff viewer | Default Git UI |
 | **Node.js** | Built-in installer and version manager | Install Node.js separately |
 
