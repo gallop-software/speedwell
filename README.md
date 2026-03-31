@@ -135,6 +135,7 @@ VS Code is a good choice if you prefer to work without AI assistance. You'll nee
 
 1. Install [VS Code](https://code.visualstudio.com)
 2. Install [Node.js](https://nodejs.org) (version 20 or higher)
+3. Install [Git](https://git-scm.com)
 
 #### Step 2: Download This Template
 
