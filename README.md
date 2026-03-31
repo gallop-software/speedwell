@@ -15,6 +15,8 @@ An artistic website template for creatives and small businesses who want to buil
 
 Just chat with AI inside your code editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and AI writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our [Gallop community](https://gallop-software.slack.com/). Go live in minutes.
 
+[![Watch: Design your site by chatting with AI](https://vumbnail.com/1177753208.jpg)](https://vimeo.com/1177753208)
+
 ---
 
 ## Features
