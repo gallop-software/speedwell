@@ -50,14 +50,16 @@ We recommend the **Gallop AI Editor** for the best experience with Gallop templa
 | **AI setup requirement** | Enter Claude API keys | Install extensions manually |
 | **Template browser** | Built-in marketplace | Download ZIP from GitHub |
 | **Media manager** | Built-in Studio with CDN sync | Manual file management |
-| **Git** | Column UI with modal diff viewer | Built-in Git UI |
+| **Font manager** | Built-in Studio with WOFF2 font generation | No support |
+| **SEO Audit** | Analyze SEO & Sturctured Data | No support |
+| **Git** | Better Git UI with modal diff viewer | Default Git UI |
 | **Node.js** | Built-in installer and version manager | Install Node.js separately |
 
 ---
 
 ### Option A: Gallop AI Editor (Recommended)
 
-The Gallop AI Editor is a desktop app built specifically for AI-powered web development. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, and a template marketplace — all in one window with nothing to configure.
+The Gallop AI Editor is a desktop app built specifically for AI-powered web development for Next.js. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, font manager, SEO & structured data scanner, and a template marketplace — all in one window with nothing to configure.
 
 [![Download Gallop AI Editor](https://img.shields.io/badge/Download_Gallop_AI_Editor-166534?style=for-the-badge)](https://gallop.software/)
 
