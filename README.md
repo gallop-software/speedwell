@@ -306,6 +306,11 @@ speedwell/
 │   │   │   ├── layout.tsx
 │   │   │   ├── page.tsx       # Home page
 │   │   │   ├── _blocks/       # Home page blocks
+│   │   │   │   ├── hero.tsx
+│   │   │   │   ├── services.tsx
+│   │   │   │   ├── highlights.tsx
+│   │   │   │   ├── spotlight.tsx
+│   │   │   │   └── archive.tsx
 │   │   │   ├── testimonials/
 │   │   │   │   ├── page.tsx
 │   │   │   │   └── _blocks/
