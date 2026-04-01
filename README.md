@@ -292,32 +292,38 @@ speedwell/
 ├── src/
 │   ├── app/                    # Next.js App Router
 │   │   ├── (default)/         # Default layout route group
-│   │   │   ├── layout.tsx     # Default navbar layout
-│   │   │   ├── category/      # Category pages
-│   │   │   └── .../           # Other page routes
+│   │   │   ├── layout.tsx
+│   │   │   ├── furniture/
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── _blocks/  # Co-located page blocks
+│   │   │   ├── contact/
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── _blocks/
+│   │   │   ├── category/
+│   │   │   │   └── [slug]/
+│   │   │   └── .../           # Other routes with _blocks/
 │   │   ├── (hero)/            # Hero layout route group
-│   │   │   ├── layout.tsx     # Hero navbar layout
+│   │   │   ├── layout.tsx
 │   │   │   ├── page.tsx       # Home page
-│   │   │   ├── testimonials/  # Testimonials page
-│   │   │   └── .../           # Other hero pages
-│   │   ├── (post)/            # Blog post route group
-│   │   │   ├── layout.tsx     # Post layout with gradient
+│   │   │   ├── _blocks/       # Home page blocks
+│   │   │   ├── testimonials/
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── _blocks/
+│   │   │   └── .../
+│   │   ├── (post)/            # Blog post layout group
+│   │   │   ├── layout.tsx
 │   │   │   └── post/[slug]/   # Dynamic blog posts
-│   │   ├── (demo)/            # Demo/preview route group
-│   │   │   └── block/         # Block preview routes
 │   │   ├── (one-page-site)/   # Single-page layout group
 │   │   ├── (alternate)/       # Alternate navbar group
 │   │   ├── (hero-dark)/       # Hero dark layout group
 │   │   ├── (color-navbar)/    # Colored navbar group
 │   │   ├── api/               # API routes
-│   │   ├── sitemap_index.xml/ # Sitemap generation
-│   │   ├── global-error.tsx    # Error boundary
+│   │   ├── global-error.tsx   # Error boundary
 │   │   ├── global-not-found.tsx # 404 page
 │   │   ├── layout.tsx         # Root layout
 │   │   ├── metadata.tsx       # Site metadata
 │   │   ├── robots.ts          # Robots.txt config
 │   │   ├── sitemap.ts         # Sitemap config
-│   │   ├── README.md          # Layouts documentation
 │   │   └── *.png, *.ico       # App icons and favicon
 │   ├── blog/                  # Blog post content (TSX files)
 │   ├── components/            # React components
@@ -326,12 +332,15 @@ speedwell/
 │   │   ├── navbar-3/         # Third navigation variant
 │   │   ├── blog/             # Blog components
 │   │   ├── search/           # Search components
+│   │   ├── footer/           # Footer components
+│   │   ├── footer-2/         # Alternate footer
+│   │   ├── form/             # Form components
 │   │   ├── lightbox/         # Lightbox gallery
+│   │   ├── sidebar-stack/    # Sidebar stack layout
 │   │   ├── page-wrapper.tsx  # Page wrapper with structured data
 │   │   ├── accordion.tsx
 │   │   ├── button.tsx
 │   │   ├── card-*.tsx
-│   │   ├── footer.tsx
 │   │   ├── gallery.tsx
 │   │   ├── heading.tsx
 │   │   ├── image.tsx
@@ -351,21 +360,13 @@ speedwell/
 │   ├── utils/                # Helper functions
 │   └── state.ts              # Global state management
 ├── public/
-│   ├── blocks/               # Block preview screenshots
-│   ├── originals/            # Source images (not deployed)
-│   │   ├── portfolio/
-│   │   └── profiles/
+│   ├── favicon.png           # Favicon
 │   ├── images/               # Processed images
-│   │   ├── portfolio/
-│   │   └── profiles/
-│   ├── videos/               # Video assets
-│   ├── search-index.json     # FlexSearch index
-│   └── screenshot.jpg        # Featured image
+│   │   └── screenshot-*.jpg # Responsive screenshots
+│   ├── screenshot.jpg        # Featured image
+│   └── search-index.json    # FlexSearch index
 ├── _fonts/                   # Font source files (managed by Studio)
 │   ├── barlow/              # Barlow font family
-│   │   ├── barlow-regular.ttf
-│   │   ├── barlow-regular.woff2
-│   │   └── ...
 │   ├── montserrat/          # Montserrat font family
 │   ├── opensans/            # Open Sans font family
 │   ├── poppins/             # Poppins font family
