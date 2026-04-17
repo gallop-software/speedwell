@@ -34,73 +34,8 @@ const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const LARGE_SIZE = 1400 // Large image size on longest side
 
-// Preferred category order (edit this to reorder categories)
-const CATEGORY_ORDER = [
-  'hero',
-  'banner',
-  'overview',
-  'intro',
-  'features',
-  'spotlight',
-  'profile',
-  'project',
-  'phase',
-  'philosophy',
-  'process',
-  'approach',
-  'sustainability',
-  'excellence',
-  'budget',
-  'quality',
-  'partnership',
-  'benefits',
-  'methodology',
-  'portfolio',
-  'story',
-  'highlights',
-  'services',
-  'gallery',
-  'featured',
-  'call-to-action',
-  'testimonial',
-  'about',
-  'contact-info',
-  'contact-form',
-  'booking',
-  'consultation',
-  'reservation',
-  'subscribe',
-  'openings',
-  'application',
-  'showcase',
-  'blog',
-  'vendor',
-  'menu',
-  'ingredients',
-  'hours',
-  'partners',
-]
-
-// Helper function to sort categories by preferred order
 function sortCategories(categories) {
-  return categories.sort((a, b) => {
-    const indexA = CATEGORY_ORDER.indexOf(a)
-    const indexB = CATEGORY_ORDER.indexOf(b)
-
-    // If both in preferred order, use that order
-    if (indexA !== -1 && indexB !== -1) {
-      return indexA - indexB
-    }
-
-    // If only A is in preferred order, A comes first
-    if (indexA !== -1) return -1
-
-    // If only B is in preferred order, B comes first
-    if (indexB !== -1) return 1
-
-    // If neither in preferred order, sort alphabetically
-    return a.localeCompare(b)
-  })
+  return categories.sort((a, b) => a.localeCompare(b))
 }
 
 // Helper function to get full category display name
@@ -374,11 +309,6 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
     const { order: layoutOrder, tiers: layoutTiers } = await parseLayoutOrder()
     console.log(`Loaded layout order: ${layoutOrder.length} pages\n`)
 
-    // Build layout order index for sorting
-    const layoutOrderIndex = new Map(
-      layoutOrder.map((prefix, i) => [prefix, i])
-    )
-
     // Parse all block files, derive tier from layout
     const allBlocksMap = new Map()
     for (const blockFile of blockFiles) {
@@ -409,7 +339,6 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
     }
     const sortedCategories = sortCategories([...allCategories])
 
-    // For each category, collect blocks and sort by layout order
     for (const category of sortedCategories) {
       const categoryBlocks = []
       for (const block of allBlocksMap.values()) {
@@ -421,17 +350,9 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
       categoryBlocks.sort((a, b) => {
         const prefixA = getRoutePrefix(a.slug)
         const prefixB = getRoutePrefix(b.slug)
-        const indexA = layoutOrderIndex.has(prefixA)
-          ? layoutOrderIndex.get(prefixA)
-          : Infinity
-        const indexB = layoutOrderIndex.has(prefixB)
-          ? layoutOrderIndex.get(prefixB)
-          : Infinity
 
-        // Primary: layout order position
-        if (indexA !== indexB) return indexA - indexB
+        if (prefixA !== prefixB) return prefixA.localeCompare(prefixB)
 
-        // Secondary: natural sort on block name (for numbered variants)
         return a.name.localeCompare(b.name, undefined, {
           numeric: true,
           sensitivity: 'base',
@@ -650,13 +571,11 @@ function generateReadme(blocks) {
 }
 
 // Run the script
-let mode = 'smart' // Default: only capture missing images
+let mode = 'skip'
 let filterBlock = null
 
 if (process.argv.includes('--screenshots')) {
-  mode = 'force' // Force overwrite all images
-} else if (process.argv.includes('--skip')) {
-  mode = 'skip' // Skip all screenshots
+  mode = 'force'
 }
 
 // Parse --block=name argument to filter to a single block
