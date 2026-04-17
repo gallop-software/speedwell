@@ -25,7 +25,7 @@ const __dirname = dirname(__filename)
 
 const APP_DIR = join(__dirname, '../src/app')
 const OUTPUT_DIR = join(__dirname, '../public/layouts')
-const README_PATH = join(__dirname, '../src/app/README.md')
+const README_PATH = join(__dirname, '../src/app/LAYOUTS.md')
 const NAVBAR_CONFIG_PATH = join(__dirname, '../src/components/navbar/config.ts')
 const BASE_URL = 'https://speedwell.gallop.software'
 const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
@@ -632,14 +632,14 @@ async function generateLayoutsCatalog(mode = 'smart') {
       console.log(`Total captured: ${layoutsToCapture.length}\n`)
     }
 
-    // Generate README
-    console.log('Generating README...')
+    // Generate LAYOUTS.md
+    console.log('Generating LAYOUTS.md...')
     const readme = generateReadme(layouts)
     await writeFile(README_PATH, readme, 'utf8')
-    console.log(`✓ README saved to ${README_PATH}\n`)
+    console.log(`✓ LAYOUTS.md saved to ${README_PATH}\n`)
 
     console.log('=== Layouts Catalog Generation Complete ===')
-    console.log(`\nView README at: ${README_PATH}`)
+    console.log(`\nView LAYOUTS.md at: ${README_PATH}`)
   } catch (error) {
     console.error('Fatal error:', error)
     process.exit(1)
@@ -682,12 +682,10 @@ function generateReadme(layouts) {
 }
 
 // Run the script
-let mode = 'smart' // Default: only capture missing images
+let mode = 'skip'
 
 if (process.argv.includes('--screenshots')) {
-  mode = 'force' // Force overwrite all images
-} else if (process.argv.includes('--skip')) {
-  mode = 'skip' // Skip all screenshots
+  mode = 'force'
 }
 
 generateLayoutsCatalog(mode)

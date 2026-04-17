@@ -137,9 +137,9 @@ function routeToUrlSlug(blocksDir) {
     .join('/')
 }
 
-const LAYOUTS_README_PATH = join(APP_DIR, 'README.md')
+const LAYOUTS_README_PATH = join(APP_DIR, 'LAYOUTS.md')
 
-// Parse layout order and tiers from src/app/README.md (single source of truth)
+// Parse layout order and tiers from src/app/LAYOUTS.md (single source of truth)
 async function parseLayoutOrder() {
   let readme
   try {
@@ -370,7 +370,7 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
 
     console.log(`Found ${blockFiles.length} block files\n`)
 
-    // Parse layout order and tiers from src/app/README.md
+    // Parse layout order and tiers from src/app/LAYOUTS.md
     const { order: layoutOrder, tiers: layoutTiers } = await parseLayoutOrder()
     console.log(`Loaded layout order: ${layoutOrder.length} pages\n`)
 
