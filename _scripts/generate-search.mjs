@@ -6,18 +6,6 @@ import { slugifyWithCounter } from '@sindresorhus/slugify'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// Get post slugs from src/blog/*.tsx
-function getPostSlugs() {
-  const blogDir = path.resolve(__dirname, '../src/blog')
-  if (!fs.existsSync(blogDir)) {
-    console.warn('Blog directory not found: src/blog')
-    return []
-  }
-
-  const files = fs.readdirSync(blogDir).filter((file) => file.endsWith('.tsx'))
-  return files.map((file) => `post/${file.replace(/\.tsx$/, '')}`)
-}
-
 // Get category slugs from _data/_blog.json
 function getCategorySlugs() {
   const blogJsonPath = path.resolve(__dirname, '../_data/_blog.json')
@@ -234,19 +222,18 @@ async function crawlAndGenerateIndex() {
 
   const baseDir = path.resolve(__dirname, '../src/app')
 
-  // Get static pages
+  // Get static pages (post folders are picked up by getSlugPaths since
+  // they're now real pages at src/app/(post)/post/<slug>/page.tsx)
   const staticPaths = getSlugPaths(baseDir)
 
-  // Get dynamic route slugs
-  const postSlugs = getPostSlugs()
+  // Get dynamic category slugs from _blog.json
   const categorySlugs = getCategorySlugs()
 
   // Combine all paths
-  const slugPaths = [...staticPaths, ...postSlugs, ...categorySlugs]
+  const slugPaths = [...staticPaths, ...categorySlugs]
   const baseUrl = 'http://localhost:3000'
 
   console.log(`Found ${staticPaths.length} static pages`)
-  console.log(`Found ${postSlugs.length} blog posts`)
   console.log(`Found ${categorySlugs.length} categories`)
   console.log(`Total: ${slugPaths.length} pages to crawl\n`)
 
