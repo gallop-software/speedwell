@@ -32,6 +32,7 @@ const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const SCREENSHOT_WIDTH = 1920
 const SCREENSHOT_HEIGHT = 2400 // Tall screenshot for layouts
 const LARGE_SIZE = 1400 // Large image size on longest side
+const COLLECTION_PAGE_LIMIT = 3
 
 // Parse navbar config to derive layout ordering
 async function parseNavbarOrder() {
@@ -130,9 +131,10 @@ function parseLayoutName(folderName, isHomePage = false) {
 
   const name = folderName
   const slug = name
+  const basename = name.split('/').pop()
 
   // Convert to display name (e.g., "layout-1" -> "Layout 1")
-  const displayName = name
+  const displayName = basename
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
@@ -259,7 +261,41 @@ async function findLayoutPages() {
                 isHomePage: false,
               })
             } catch {
-              // page.tsx doesn't exist, skip
+              // No page.tsx here — treat as a "collection" folder and look one level deeper
+              const collectionDir = join(routeGroupPath, item.name)
+              let subEntries = []
+              try {
+                subEntries = await readdir(collectionDir, {
+                  withFileTypes: true,
+                })
+              } catch {
+                subEntries = []
+              }
+              let added = 0
+              for (const sub of subEntries) {
+                if (added >= COLLECTION_PAGE_LIMIT) break
+                if (!sub.isDirectory()) continue
+                if (
+                  sub.name.startsWith('(') ||
+                  sub.name.startsWith('[') ||
+                  sub.name.startsWith('_')
+                )
+                  continue
+                if (EXCLUDED_FOLDERS.includes(sub.name)) continue
+                const subPagePath = join(collectionDir, sub.name, 'page.tsx')
+                try {
+                  await stat(subPagePath)
+                  layouts.push({
+                    folderName: `${item.name}/${sub.name}`,
+                    routeGroup: entry.name,
+                    pagePath: subPagePath,
+                    isHomePage: false,
+                  })
+                  added++
+                } catch {
+                  // no page.tsx, skip
+                }
+              }
             }
           }
         }
@@ -409,6 +445,7 @@ async function captureScreenshot(browser, slug, outputDir) {
 
     // Save large image (1400px)
     const largeImagePath = join(outputDir, `${slug}.jpg`)
+    await mkdir(dirname(largeImagePath), { recursive: true })
     await sharp(screenshotBuffer)
       .resize(large.w, large.h, { fit: 'inside' })
       .jpeg({ quality: 90 })
@@ -438,10 +475,10 @@ async function cleanupOrphanedScreenshots(currentLayoutSlugs, outputDir) {
   const orphanedSlugs = []
   let deletedCount = 0
 
-  // Read all files in the output directory
+  // Read all files in the output directory (recursive so nested collection folders are included)
   let screenshotFiles = []
   try {
-    screenshotFiles = await readdir(outputDir)
+    screenshotFiles = await readdir(outputDir, { recursive: true })
   } catch {
     // Output directory doesn't exist yet
     return { orphanedSlugs, deletedCount }
