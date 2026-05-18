@@ -8,83 +8,86 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const ROOT_DIR = path.resolve(__dirname, '..')
 
-const POSTS_DIR = path.join(ROOT_DIR, 'src/blog')
+const POSTS_DIR = path.join(ROOT_DIR, 'src/app/(post)/post')
 const OUTPUT_FILE = path.join(ROOT_DIR, '_data/_blog.json')
 
 function extractMetadata(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8')
 
-    // Extract the TITLE constant (plain title)
-    const titleMatch =
-      content.match(/const TITLE\s*=\s*"((?:[^"\\]|\\.)*)"/) ||
-      content.match(/const TITLE\s*=\s*'((?:[^'\\]|\\.)*)'/) ||
-      content.match(/const TITLE\s*=\s*`((?:[^`\\]|\\.)*)`/)
-    const plainTitle = titleMatch ? titleMatch[1].replace(/\\(.)/g, '$1') : null
-
-    // Find the metadata export block - match until the end of the object
+    // Match `const metadata: PageMetadata = { … }` (folder-per-post shape)
     const metadataMatch = content.match(
-      /export const metadata = ({[\s\S]*?^})/m
+      /^const metadata[^=]*=\s*({[\s\S]*?^})/m
     )
 
     if (!metadataMatch) {
-      console.warn(`No metadata export found in ${path.basename(filePath)}`)
+      console.warn(`No metadata declaration found in ${filePath}`)
       return null
     }
 
-    // Use Function constructor to safely evaluate the object literal
     const metadataCode = `return ${metadataMatch[1]}`
-    const metadata = new Function(metadataCode)()
-
-    // Use plain TITLE if available, otherwise fall back to metadata.title
-    if (plainTitle) {
-      metadata.title = plainTitle
-    }
-
-    return metadata
+    return new Function(metadataCode)()
   } catch (error) {
-    console.error(
-      `Failed to extract metadata from ${path.basename(filePath)}:`,
-      error.message
-    )
+    console.error(`Failed to extract metadata from ${filePath}:`, error.message)
     return null
   }
+}
+
+// Posts keep `const TITLE = '...'` in content.tsx as the plain card title.
+// The SEO `metadata.title` (in page.tsx) is the full "Title | Subtitle" form;
+// _blog.json should store the plain version so blog cards render the short name.
+function extractPlainTitle(contentPath) {
+  if (!fs.existsSync(contentPath)) return null
+  const content = fs.readFileSync(contentPath, 'utf8')
+  const match =
+    content.match(/const TITLE\s*=\s*"((?:[^"\\]|\\.)*)"/) ||
+    content.match(/const TITLE\s*=\s*'((?:[^'\\]|\\.)*)'/) ||
+    content.match(/const TITLE\s*=\s*`((?:[^`\\]|\\.)*)`/)
+  return match ? match[1].replace(/\\(.)/g, '$1') : null
 }
 
 async function generateBlogMetadata() {
   console.log('🔍 Scanning posts directory...')
 
-  // Ensure _data directory exists
   const dataDir = path.dirname(OUTPUT_FILE)
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true })
   }
 
   if (!fs.existsSync(POSTS_DIR)) {
-    console.log(`📁 No blog directory found at ${POSTS_DIR}`)
+    console.log(`📁 No posts directory found at ${POSTS_DIR}`)
     console.log(`📝 Creating empty _blog.json`)
     fs.writeFileSync(OUTPUT_FILE, '[]', 'utf8')
     console.log(`✅ Generated empty blog metadata: ${OUTPUT_FILE}`)
     return
   }
 
-  const files = fs.readdirSync(POSTS_DIR)
-  const tsxFiles = files.filter((file) => file.endsWith('.tsx'))
+  const entries = fs.readdirSync(POSTS_DIR, { withFileTypes: true })
+  const slugs = entries
+    .filter(
+      (entry) =>
+        entry.isDirectory() &&
+        !entry.name.startsWith('[') &&
+        !entry.name.startsWith('_') &&
+        fs.existsSync(path.join(POSTS_DIR, entry.name, 'page.tsx'))
+    )
+    .map((entry) => entry.name)
 
-  console.log(`📝 Found ${tsxFiles.length} post files`)
+  console.log(`📝 Found ${slugs.length} post folders`)
 
   const posts = []
 
-  for (const file of tsxFiles) {
-    const slug = file.replace('.tsx', '')
-    const filePath = path.join(POSTS_DIR, file)
+  for (const slug of slugs) {
+    const filePath = path.join(POSTS_DIR, slug, 'page.tsx')
+    const contentPath = path.join(POSTS_DIR, slug, 'content.tsx')
     const metadata = await extractMetadata(filePath)
+    const plainTitle = extractPlainTitle(contentPath)
 
     if (metadata) {
       posts.push({
         slug,
         metadata: {
-          title: metadata.title || '',
+          title: plainTitle || metadata.title || '',
           description: metadata.description || '',
           date: metadata.date || '',
           categories: metadata.categories || [],
@@ -95,14 +98,12 @@ async function generateBlogMetadata() {
     }
   }
 
-  // Sort by date (newest first)
   posts.sort((a, b) => {
     const dateA = new Date(a.metadata.date)
     const dateB = new Date(b.metadata.date)
     return dateB.getTime() - dateA.getTime()
   })
 
-  // Write to file
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(posts, null, 2), 'utf8')
 
   console.log(`✅ Generated blog metadata: ${OUTPUT_FILE}`)

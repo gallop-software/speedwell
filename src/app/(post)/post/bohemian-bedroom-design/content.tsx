@@ -1,0 +1,88 @@
+import Link from 'next/link'
+import { Image } from '@/components/image'
+import { PageHeader } from '@/components/page-header'
+import { P } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
+
+const TITLE = 'Bohemian Bedroom Design'
+
+function Details() {
+  return (
+    <>
+      <Image
+        src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+        alt="Bohemian bedroom with layered textiles and eclectic decor"
+        size="large"
+        wrap={true}
+      />
+
+      <P>
+        This bedroom transformation embraces bohemian style with layers of
+        global textiles, vintage finds, and an eclectic mix of patterns and
+        textures. A low-profile platform bed dressed in handwoven textiles
+        serves as the centerpiece, surrounded by Moroccan rugs, macramé wall
+        hangings, and collected art from travels. The rich color palette
+        includes terracotta, mustard, and deep teal against a warm white
+        backdrop.
+      </P>
+
+      <P>
+        Rattan furniture pieces, floor cushions, and poufs create flexible
+        seating areas perfect for reading or meditation. We incorporated
+        abundant plants in hanging planters and vintage ceramic pots to bring
+        life and organic form. For other bedroom transformations, explore our{' '}
+        <Link
+          href="/post/modern-nursery-design"
+          prefetch={true}
+        >
+          Modern Nursery Design
+        </Link>{' '}
+        or the serene{' '}
+        <Link
+          href="/post/guest-suite-makeover"
+          prefetch={true}
+        >
+          Guest Suite Makeover
+        </Link>
+        . String lights and lanterns provide ambient lighting, while layered
+        window treatments filter natural light beautifully. The space celebrates
+        personal expression and cultural appreciation through thoughtfully
+        curated objects that tell a story.
+      </P>
+
+      <P>
+        While bohemian style embraces eclecticism, the most successful bedrooms
+        balance visual richness with restful comfort. Layering textures and
+        patterns requires a discerning eye to avoid overwhelming the senses. For
+        a different approach to creating a serene sleeping sanctuary, explore
+        our{' '}
+        <Link
+          href="/post/luxury-master-suite"
+          prefetch={true}
+        >
+          Luxury Master Suite
+        </Link>{' '}
+        project, which achieves tranquility through refined simplicity and
+        premium materials.
+      </P>
+    </>
+  )
+}
+
+export function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
+    </>
+  )
+}

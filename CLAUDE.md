@@ -6,7 +6,7 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 
 | File | Regenerate With | Triggered By |
 |---|---|---|
-| `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/blog/ |
+| `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/app/(post)/post/<slug>/ |
 | `src/app/BLOCKS.md` | `npm run blocks` | Block additions (tier/order preserved) |
 | `src/app/LAYOUTS.md` | `npm run layouts` | Layout additions |
 | `public/search-index.json` | `npm run search` | Content changes |
@@ -39,7 +39,6 @@ src/
 │   └── {route}/
 │       ├── page.tsx
 │       └── _blocks/  # Co-located page-specific blocks
-├── blog/         # Blog content (archive content type)
 ├── components/   # Reusable UI primitives
 ├── hooks/        # Custom React hooks
 ├── styles/       # CSS, Tailwind, fonts
@@ -75,6 +74,13 @@ src/app/
 - Import with relative paths: `import Hero from './_blocks/hero'`
 - Example: `src/app/(default)/furniture/_blocks/hero.tsx`
 
+**Posts:**
+- Each post is a folder under `src/app/(post)/post/<slug>/` with two files:
+  - `page.tsx` — route + `const metadata: PageMetadata = {...}` + `PageWrapper` wrapping `<Content />` imported from `./content`
+  - `content.tsx` — owns the post body (`TITLE`, `Details`, exported `Content` for the page route, exported `BlogContent` for the sidebar/index card)
+- The blog index (`src/components/blog/blog-client.tsx`) dynamic-imports `./content` to render the in-sidebar preview
+- `npm run blog` extracts the metadata block from each post's `page.tsx` into `_data/_blog.json`
+
 **Components:**
 - Simple components: Single file in `src/components/`
 - Complex components: Folder with `index.tsx`
@@ -87,7 +93,7 @@ src/app/
 - Follow existing folder conventions within a zone
 - Reuse existing folders when possible
 - Create new route groups in `src/app/` when new layouts are needed
-- Create new archive content folders (like `blog/`, `portfolio/`) in `/src`
+- Create new archive content folders (like `portfolio/`) in `/src`
 - Create dotfiles/directories at project root (`.github/`, `.cursor/`, etc.)
 - Ask for confirmation if the correct zone is ambiguous
 
@@ -176,7 +182,7 @@ Available state: `playVideo`, `offsetTop`, `windowHeight`, `lastOffsetTop`, `isS
 - Use the color prop on typography components (Heading, Paragraph, Label, Span, Accent)
 - Use props (fontSize, margin, fontWeight, textAlign) instead of className when a component prop exists
 - Import icons from @iconify/icons-heroicons/ or @iconify/icons-lucide/
-- Run npm run blog after editing blog posts in src/blog/
+- Run npm run blog after adding/editing posts in src/app/(post)/post/<slug>/
 
 ## Do NOT
 
