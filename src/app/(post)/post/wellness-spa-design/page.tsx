@@ -3,7 +3,7 @@ import {
   generatePageMetadata,
   type PageMetadata,
 } from '@/utils/page-helpers'
-import { Content } from './preview'
+import { Content } from './content'
 
 const metadata: PageMetadata = {
   title: 'Wellness Spa Design | Holistic Health Spa Interior',

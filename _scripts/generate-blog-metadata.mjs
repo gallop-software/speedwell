@@ -33,12 +33,12 @@ function extractMetadata(filePath) {
   }
 }
 
-// Posts keep `const TITLE = '...'` in preview.tsx as the plain card title.
+// Posts keep `const TITLE = '...'` in content.tsx as the plain card title.
 // The SEO `metadata.title` (in page.tsx) is the full "Title | Subtitle" form;
 // _blog.json should store the plain version so blog cards render the short name.
-function extractPlainTitle(previewPath) {
-  if (!fs.existsSync(previewPath)) return null
-  const content = fs.readFileSync(previewPath, 'utf8')
+function extractPlainTitle(contentPath) {
+  if (!fs.existsSync(contentPath)) return null
+  const content = fs.readFileSync(contentPath, 'utf8')
   const match =
     content.match(/const TITLE\s*=\s*"((?:[^"\\]|\\.)*)"/) ||
     content.match(/const TITLE\s*=\s*'((?:[^'\\]|\\.)*)'/) ||
@@ -79,9 +79,9 @@ async function generateBlogMetadata() {
 
   for (const slug of slugs) {
     const filePath = path.join(POSTS_DIR, slug, 'page.tsx')
-    const previewPath = path.join(POSTS_DIR, slug, 'preview.tsx')
+    const contentPath = path.join(POSTS_DIR, slug, 'content.tsx')
     const metadata = await extractMetadata(filePath)
-    const plainTitle = extractPlainTitle(previewPath)
+    const plainTitle = extractPlainTitle(contentPath)
 
     if (metadata) {
       posts.push({

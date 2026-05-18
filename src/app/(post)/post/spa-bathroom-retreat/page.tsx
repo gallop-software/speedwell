@@ -3,7 +3,7 @@ import {
   generatePageMetadata,
   type PageMetadata,
 } from '@/utils/page-helpers'
-import { Content } from './preview'
+import { Content } from './content'
 
 const metadata: PageMetadata = {
   title: 'Spa Bathroom Retreat | Luxury Bathroom Interior Design',

@@ -46,7 +46,7 @@ const blogContentLoader: ContentLoader = async (
   }
   try {
     const postModule = await import(
-      `../../app/(post)/post/${componentId}/preview.tsx`
+      `../../app/(post)/post/${componentId}/content.tsx`
     )
     const Component = postModule.BlogContent || postModule.default
     return <Component />

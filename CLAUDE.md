@@ -76,9 +76,9 @@ src/app/
 
 **Posts:**
 - Each post is a folder under `src/app/(post)/post/<slug>/` with two files:
-  - `page.tsx` — route + `const metadata: PageMetadata = {...}` + `PageWrapper` wrapping `<Content />` imported from `./preview`
-  - `preview.tsx` — owns the post body (`TITLE`, `Details`, exported `Content` for the page route, exported `BlogContent` for the sidebar/index card)
-- The blog index (`src/components/blog/blog-client.tsx`) dynamic-imports `./preview` to render the in-sidebar preview
+  - `page.tsx` — route + `const metadata: PageMetadata = {...}` + `PageWrapper` wrapping `<Content />` imported from `./content`
+  - `content.tsx` — owns the post body (`TITLE`, `Details`, exported `Content` for the page route, exported `BlogContent` for the sidebar/index card)
+- The blog index (`src/components/blog/blog-client.tsx`) dynamic-imports `./content` to render the in-sidebar preview
 - `npm run blog` extracts the metadata block from each post's `page.tsx` into `_data/_blog.json`
 
 **Components:**
