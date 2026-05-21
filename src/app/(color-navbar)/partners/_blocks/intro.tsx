@@ -6,7 +6,7 @@ import { BackgroundGeometry2 } from '@/components/background-geometry-2'
 export default function Intro() {
   return (
     <>
-      <Section className="relative py-30">
+      <Section className="relative py-30 overflow-hidden">
         <BackgroundGeometry2>designers</BackgroundGeometry2>
         <div className="relative">
           <Heading
