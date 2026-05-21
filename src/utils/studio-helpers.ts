@@ -69,7 +69,15 @@ function getStudioLookupKey(src: string): string {
 function getThumbnailPath(originalPath: string, size: ImageSize): string {
   const ext = originalPath.match(/\.\w+$/)?.[0] || '.jpg'
   const base = originalPath.replace(/\.\w+$/, '')
-  const outputExt = ext.toLowerCase() === '.png' ? '.png' : '.jpg'
+  const lowerExt = ext.toLowerCase()
+  // Studio CLI preserves the source extension on disk/CDN; mirror that here.
+  // .png stays .png, .jpeg stays .jpeg, everything else collapses to .jpg.
+  const outputExt =
+    lowerExt === '.png'
+      ? '.png'
+      : lowerExt === '.jpeg'
+        ? '.jpeg'
+        : '.jpg'
   const suffix = SIZE_MAP[size].suffix
   return `/images${base}${suffix}${outputExt}`
 }
