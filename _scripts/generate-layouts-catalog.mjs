@@ -34,6 +34,11 @@ const SCREENSHOT_HEIGHT = 2400 // Tall screenshot for layouts
 const LARGE_SIZE = 1400 // Large image size on longest side
 const COLLECTION_PAGE_LIMIT = 3
 
+// Map collection folder names to friendly display labels
+const COLLECTION_LABEL_MAP = {
+  post: 'Blog',
+}
+
 // Parse navbar config to derive layout ordering
 async function parseNavbarOrder() {
   const configText = await readFile(NAVBAR_CONFIG_PATH, 'utf8')
@@ -290,6 +295,8 @@ async function findLayoutPages() {
                     routeGroup: entry.name,
                     pagePath: subPagePath,
                     isHomePage: false,
+                    collectionName: item.name,
+                    collectionIndex: added + 1,
                   })
                   added++
                 } catch {
@@ -526,10 +533,23 @@ async function generateLayoutsCatalog(mode = 'smart') {
     // Parse all layout files
     const layouts = []
     for (const layoutPage of layoutPages) {
-      const { name, slug, displayName } = parseLayoutName(
+      const parsed = parseLayoutName(
         layoutPage.folderName,
         layoutPage.isHomePage
       )
+      const { name, slug } = parsed
+      let { displayName } = parsed
+
+      // Collection items get a numbered label based on their parent folder
+      if (layoutPage.collectionName) {
+        const label =
+          COLLECTION_LABEL_MAP[layoutPage.collectionName] ??
+          layoutPage.collectionName
+            .split('-')
+            .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(' ')
+        displayName = `${label} ${layoutPage.collectionIndex}`
+      }
 
       // layout-2 and up are pro, everything else is free
       const tier = /^layout-\d+$/.test(slug) ? 'pro' : 'free'
