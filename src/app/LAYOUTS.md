@@ -274,9 +274,9 @@ A collection of 25 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Art Deco Restoration
+#### Blog 1
 
-<img src="https://speedwell-cdn.gallop.software/layouts/post/art-deco-restoration.jpg" alt="Art Deco Restoration" width="350">
+<img src="https://speedwell-cdn.gallop.software/layouts/post/art-deco-restoration.jpg" alt="Blog 1" width="350">
 
 **Slug:** `post/art-deco-restoration`  
 **Path:** `(post)/post/art-deco-restoration/page.tsx`  
@@ -286,9 +286,9 @@ A collection of 25 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Basement Entertainment Space
+#### Blog 2
 
-<img src="https://speedwell-cdn.gallop.software/layouts/post/basement-entertainment-space.jpg" alt="Basement Entertainment Space" width="350">
+<img src="https://speedwell-cdn.gallop.software/layouts/post/basement-entertainment-space.jpg" alt="Blog 2" width="350">
 
 **Slug:** `post/basement-entertainment-space`  
 **Path:** `(post)/post/basement-entertainment-space/page.tsx`  
@@ -298,9 +298,9 @@ A collection of 25 pre-built page layouts for the Speedwell template.
 
 ---
 
-#### Bohemian Bedroom Design
+#### Blog 3
 
-<img src="https://speedwell-cdn.gallop.software/layouts/post/bohemian-bedroom-design.jpg" alt="Bohemian Bedroom Design" width="350">
+<img src="https://speedwell-cdn.gallop.software/layouts/post/bohemian-bedroom-design.jpg" alt="Blog 3" width="350">
 
 **Slug:** `post/bohemian-bedroom-design`  
 **Path:** `(post)/post/bohemian-bedroom-design/page.tsx`  
