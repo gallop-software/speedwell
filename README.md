@@ -419,12 +419,8 @@ speedwell/
 
 - **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_scripts/generate-blog-metadata.md)
 - **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
-- **`npm run blocks`** - Generate blocks catalog with screenshots
+- **`npm run blocks`** - Regenerate the demo block index (`_block-index.ts`)
 - **`npm run blocks:screenshots`** - Force regenerate all block screenshots
-- **`npm run blocks:sort`** - Sort blocks in catalog
-- **`npm run layouts`** - Generate layouts catalog from app route groups
-- **`npm run layouts:screenshots`** - Force regenerate all layout screenshots
-- **`npm run layouts:sort`** - Sort layouts in catalog
 
 ### Environment
 
