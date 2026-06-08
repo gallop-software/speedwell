@@ -20,13 +20,8 @@ const PACKAGE_JSON_PATH = path.join(__dirname, '../package.json')
 const SCRIPTS_TO_REMOVE = [
   'blocks',
   'blocks:screenshots',
-  'blocks:sort',
-  'blocks:lite',
   'prepare-lite',
   'prepare-pro',
-  'layouts',
-  'layouts:screenshots',
-  'layouts:sort',
 ]
 
 // Files to delete from _scripts/
@@ -35,8 +30,6 @@ const FILES_TO_DELETE = [
   path.join(__dirname, 'generate-blocks-catalog.md'),
   path.join(__dirname, 'prepare-lite.mjs'),
   path.join(__dirname, 'prepare-lite.md'),
-  path.join(__dirname, 'generate-layouts-catalog.mjs'),
-  path.join(__dirname, 'generate-layouts-catalog.md'),
   path.join(__dirname, 'prepare-pro.mjs'),
   path.join(__dirname, 'prepare-pro.md'),
 ]

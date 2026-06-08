@@ -24,26 +24,19 @@ node _scripts/prepare-pro.mjs
 
 The following npm scripts are removed:
 
-- `blocks` - Generate blocks catalog
+- `blocks` - Generate the demo block index and screenshots
 - `blocks:screenshots` - Generate block screenshots
-- `blocks:sort` - Sort blocks in catalog
-- `blocks:lite` - Convert pro blocks for lite version
 - `prepare-lite` - Prepare lite distribution
 - `prepare-pro` - This script (removes itself)
-- `layouts` - Generate layouts catalog
-- `layouts:screenshots` - Generate layout screenshots
-- `layouts:sort` - Sort layouts in catalog
 
 ## Files Deleted from \_scripts/
 
 The following files are deleted:
 
-- `generate-blocks-catalog.mjs` - Blocks catalog generator
-- `generate-blocks-catalog.md` - Blocks catalog documentation
+- `generate-blocks-catalog.mjs` - Block index / screenshot generator
+- `generate-blocks-catalog.md` - Block index documentation
 - `prepare-lite.mjs` - Lite preparation script
 - `prepare-lite.md` - Lite preparation documentation
-- `generate-layouts-catalog.mjs` - Layouts catalog generator
-- `generate-layouts-catalog.md` - Layouts catalog documentation
 - `prepare-pro.mjs` - This script (deletes itself)
 - `prepare-pro.md` - This documentation (deletes itself)
 
@@ -56,14 +49,10 @@ The following files are deleted:
 
   ✅ Removed script: blocks
   ✅ Removed script: blocks:screenshots
-  ✅ Removed script: blocks:sort
   ✅ Removed script: prepare-lite
   ✅ Removed script: prepare-pro
-  ✅ Removed script: layouts
-  ✅ Removed script: layouts:screenshots
-  ✅ Removed script: layouts:sort
 
-  Removed 8 script(s) from package.json
+  Removed 4 script(s) from package.json
 
 🗑️  Deleting dev-only script files...
 
@@ -71,8 +60,6 @@ The following files are deleted:
   ✅ Deleted generate-blocks-catalog.md
   ✅ Deleted prepare-lite.mjs
   ✅ Deleted prepare-lite.md
-  ✅ Deleted generate-layouts-catalog.mjs
-  ✅ Deleted generate-layouts-catalog.md
   ✅ Deleted prepare-pro.mjs
   ✅ Deleted prepare-pro.md
 

@@ -16,7 +16,6 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const README_PATH = path.join(__dirname, '../src/app/BLOCKS.md')
 const README_FILE_PATH = path.join(__dirname, '../README.md')
 const APP_DIR = path.join(__dirname, '../src/app')
 const HOOKS_DIR = path.join(__dirname, '../src/hooks')
@@ -44,24 +43,47 @@ const LAYOUT_IMPORT_PATTERNS = [
 
 const LAYOUT_USAGE_PATTERNS = [/        <IframeHeight \/>\n/]
 
-// Parse README to find Pro blocks
+// Route prefixes that are Pro. Every block under these routes is a Pro block.
+// A block's tier is inherited from its layout, so this is the single source of truth.
+const PRO_LAYOUTS = [
+  'layout-1',
+  'layout-2',
+  'layout-3',
+  'layout-4',
+  'layout-5',
+  'layout-6',
+  'layout-7',
+]
+
+// Convert a block slug to its display name (e.g. "layout-1/hero" -> "Layout 1 / Hero")
+function toDisplayName(slug) {
+  return slug
+    .split('/')
+    .map((part) =>
+      part
+        .split('-')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ')
+    )
+    .join(' / ')
+}
+
+// Find Pro blocks by scanning _blocks/ dirs under the hardcoded Pro layout routes
 async function findProBlocks() {
-  const readmeContent = await fs.readFile(README_PATH, 'utf-8')
+  const blocksDirs = await findBlocksDirs(APP_DIR)
   const proBlocks = []
 
-  // Match pattern: block name followed by slug and tier
-  const blockPattern =
-    /####\s+([^\n]+)\n[\s\S]*?\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Pro|Free)/gi
+  for (const blocksDir of blocksDirs) {
+    const urlSlug = routeToUrlSlug(blocksDir)
+    const prefix = urlSlug.includes('/') ? urlSlug.split('/')[0] : urlSlug
+    if (!PRO_LAYOUTS.includes(prefix)) continue
 
-  let match
-  while ((match = blockPattern.exec(readmeContent)) !== null) {
-    const [, blockName, slug, tier] = match
-    if (tier === 'Pro') {
-      proBlocks.push({
-        name: blockName.trim(),
-        slug: slug.trim(),
-        fileName: `${slug.trim()}.tsx`,
-      })
+    const files = (await fs.readdir(blocksDir)).filter((f) =>
+      f.endsWith('.tsx')
+    )
+    for (const file of files) {
+      const slug = `${urlSlug}/${file.replace('.tsx', '')}`
+      proBlocks.push({ name: toDisplayName(slug), slug, fileName: file })
     }
   }
 

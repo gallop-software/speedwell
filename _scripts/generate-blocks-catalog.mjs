@@ -1,13 +1,12 @@
 import puppeteer from 'puppeteer'
 import {
   readdir,
-  readFile,
   writeFile,
   mkdir,
   unlink,
   access,
 } from 'fs/promises'
-import { join, dirname, relative } from 'path'
+import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { exec } from 'child_process'
@@ -25,27 +24,12 @@ const __dirname = dirname(__filename)
 const SRC_DIR = join(__dirname, '../src')
 const APP_DIR = join(SRC_DIR, 'app')
 const OUTPUT_DIR = join(__dirname, '../public/blocks')
-const README_PATH = join(APP_DIR, 'BLOCKS.md')
 const BLOCK_INDEX_PATH = join(
   APP_DIR,
   '(demo)/block/[[...slug]]/_block-index.ts'
 )
 const BASE_URL = 'https://speedwell.gallop.software'
-const CDN_URL = process.env.CLOUDFLARE_R2_PUBLIC_URL || ''
 const LARGE_SIZE = 1400 // Large image size on longest side
-
-function sortCategories(categories) {
-  return categories.sort((a, b) => a.localeCompare(b))
-}
-
-// Helper function to get full category display name
-function getCategoryDisplayName(category) {
-  // Convert category slug to display name (e.g., "call-to-action" -> "Call To Action")
-  return category
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-}
 
 // Helper function to recursively find all _blocks/ directories under src/app/
 async function findBlocksDirs(dir) {
@@ -72,37 +56,6 @@ function routeToUrlSlug(blocksDir) {
     .join('/')
 }
 
-const LAYOUTS_README_PATH = join(APP_DIR, 'LAYOUTS.md')
-
-// Parse layout order and tiers from src/app/LAYOUTS.md (single source of truth)
-async function parseLayoutOrder() {
-  let readme
-  try {
-    readme = await readFile(LAYOUTS_README_PATH, 'utf8')
-  } catch {
-    console.error('Layout file not found. Run `npm run layouts` first.')
-    process.exit(1)
-  }
-
-  const layoutRegex =
-    /\*\*Slug:\*\*\s+`([^`]+)`[\s\S]*?\*\*Tier:\*\*\s+(Free|Pro)/g
-  const order = []
-  const tiers = new Map()
-  let match
-  while ((match = layoutRegex.exec(readme)) !== null) {
-    const prefix = match[1] === 'index' ? '' : match[1]
-    order.push(prefix)
-    tiers.set(prefix, match[2].toLowerCase())
-  }
-  return { order, tiers }
-}
-
-// Extract route prefix from a block slug (e.g. "furniture/hero" -> "furniture", "hero" -> "")
-function getRoutePrefix(slug) {
-  const lastSlash = slug.lastIndexOf('/')
-  return lastSlash === -1 ? '' : slug.substring(0, lastSlash)
-}
-
 // Collect all block files from all _blocks/ directories
 async function collectAllBlocks() {
   const blocksDirs = await findBlocksDirs(APP_DIR)
@@ -126,24 +79,6 @@ async function collectAllBlocks() {
   }
 
   return allFiles
-}
-
-// Helper function to convert filename to display name and slug
-function parseBlockName(filename, slug) {
-  const name = filename.replace('.tsx', '')
-
-  // Convert to display name (e.g., "furniture/hero" -> "Furniture Hero")
-  const displayName = slug
-    .split('/')
-    .map((part) =>
-      part
-        .split('-')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ')
-    )
-    .join(' / ')
-
-  return { name, slug, displayName }
 }
 
 async function captureScreenshot(browser, slug, outputDir) {
@@ -305,62 +240,7 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
 
     console.log(`Found ${blockFiles.length} block files\n`)
 
-    // Parse layout order and tiers from src/app/LAYOUTS.md
-    const { order: layoutOrder, tiers: layoutTiers } = await parseLayoutOrder()
-    console.log(`Loaded layout order: ${layoutOrder.length} pages\n`)
-
-    // Parse all block files, derive tier from layout
-    const allBlocksMap = new Map()
-    for (const blockFile of blockFiles) {
-      const { name, slug, displayName } = parseBlockName(
-        blockFile.filename,
-        blockFile.slug
-      )
-      const routePrefix = getRoutePrefix(slug)
-      const tier = layoutTiers.get(routePrefix) || 'free'
-
-      allBlocksMap.set(displayName, {
-        name,
-        slug,
-        displayName,
-        tier,
-        filename: blockFile.filename,
-        blocksDir: blockFile.blocksDir,
-      })
-    }
-
-    // Sort blocks by layout order within each category
-    const blocks = []
-
-    // Get all categories and sort them by preferred order
-    const allCategories = new Set()
-    for (const block of allBlocksMap.values()) {
-      allCategories.add(block.name.replace(/-\d+$/, ''))
-    }
-    const sortedCategories = sortCategories([...allCategories])
-
-    for (const category of sortedCategories) {
-      const categoryBlocks = []
-      for (const block of allBlocksMap.values()) {
-        if (block.name.replace(/-\d+$/, '') === category) {
-          categoryBlocks.push(block)
-        }
-      }
-
-      categoryBlocks.sort((a, b) => {
-        const prefixA = getRoutePrefix(a.slug)
-        const prefixB = getRoutePrefix(b.slug)
-
-        if (prefixA !== prefixB) return prefixA.localeCompare(prefixB)
-
-        return a.name.localeCompare(b.name, undefined, {
-          numeric: true,
-          sensitivity: 'base',
-        })
-      })
-
-      blocks.push(...categoryBlocks)
-    }
+    const blocks = blockFiles.map((b) => ({ ...b }))
 
     // Check for orphaned screenshots (skip when filtering to single block)
     if (!filterBlock) {
@@ -379,7 +259,7 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
           console.log(`Deleted ${deletedCount} orphaned screenshot files`)
           console.log('\nRunning npm run images to update processed images...')
           try {
-            const { stdout, stderr } = await execAsync('npm run images', {
+            const { stdout } = await execAsync('npm run images', {
               cwd: join(__dirname, '..'),
             })
             if (stdout) console.log(stdout)
@@ -405,8 +285,6 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
         const exists = await imageExists(block.slug, OUTPUT_DIR)
         if (!exists) {
           blocksToCapture.push(block)
-        } else {
-          block.hasScreenshot = true
         }
       }
 
@@ -420,7 +298,6 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
     } else {
       // Skip mode: don't capture any
       console.log('Skipping screenshot capture\n')
-      blocks.forEach((block) => (block.hasScreenshot = true))
     }
 
     // Capture screenshots if needed
@@ -443,10 +320,8 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
 
         if (success) {
           successCount++
-          block.hasScreenshot = true
         } else {
           errorCount++
-          block.hasScreenshot = false
         }
       }
 
@@ -458,13 +333,8 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
       console.log(`Total captured: ${blocksToCapture.length}\n`)
     }
 
-    // Generate README and block index (skip when filtering to single block)
+    // Generate block index (skip when filtering to single block)
     if (!filterBlock) {
-      console.log('Generating README...')
-      const readme = generateReadme(blocks)
-      await writeFile(README_PATH, readme, 'utf8')
-      console.log(`✓ README saved to ${README_PATH}\n`)
-
       console.log('Generating block index...')
       await generateBlockIndex(blockFiles)
     }
@@ -510,64 +380,6 @@ async function generateBlockIndex(blockFiles) {
   console.log(
     `✓ Block index saved to ${BLOCK_INDEX_PATH} with ${entries.length} entries\n`
   )
-}
-
-function generateReadme(blocks) {
-  const freeBlocks = blocks.filter((b) => b.tier === 'free')
-  const proBlocks = blocks.filter((b) => b.tier === 'pro')
-
-  let readme = `# Speedwell Blocks\n\n`
-  readme += `A collection of ${blocks.length} pre-built UI blocks for the Speedwell template.\n\n`
-  readme += `## Overview\n\n`
-  readme += `- **Total Blocks:** ${blocks.length}\n`
-  readme += `- **Free Blocks:** ${freeBlocks.length}\n`
-  readme += `- **Pro Blocks:** ${proBlocks.length}\n\n`
-
-  // Group blocks by category
-  const categories = {}
-  blocks.forEach((block) => {
-    const category = block.name.replace(/-\d+$/, '')
-    if (!categories[category]) {
-      categories[category] = []
-    }
-    categories[category].push(block)
-  })
-
-  readme += `## Categories\n\n`
-  sortCategories(Object.keys(categories)).forEach((category) => {
-    readme += `- **${getCategoryDisplayName(category)}:** ${categories[category].length} blocks\n`
-  })
-  readme += `\n`
-
-  readme += `## Blocks\n\n`
-
-  // Group blocks by category while preserving order within each category
-  const blocksByCategory = {}
-  blocks.forEach((block) => {
-    const category = block.name.replace(/-\d+$/, '')
-    if (!blocksByCategory[category]) {
-      blocksByCategory[category] = []
-    }
-    blocksByCategory[category].push(block)
-  })
-
-  // Output blocks grouped by category (categories sorted by preferred order)
-  sortCategories(Object.keys(blocksByCategory)).forEach((category) => {
-    readme += `### ${getCategoryDisplayName(category)}\n\n`
-
-    blocksByCategory[category].forEach((block) => {
-      readme += `#### ${block.displayName}\n\n`
-      if (block.hasScreenshot) {
-        readme += `<img src="${CDN_URL}/blocks/${block.slug}.jpg" alt="${block.displayName}" width="350">\n\n`
-      }
-      readme += `**Slug:** \`${block.slug}\`  \n`
-      readme += `**Path:** \`${relative(APP_DIR, join(block.blocksDir, block.filename))}\`  \n`
-      readme += `**Tier:** ${block.tier.charAt(0).toUpperCase() + block.tier.slice(1)}\n\n`
-      readme += `---\n\n`
-    })
-  })
-
-  return readme
 }
 
 // Run the script
