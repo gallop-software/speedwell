@@ -31,6 +31,24 @@ const BLOCK_INDEX_PATH = join(
 const BASE_URL = 'https://speedwell.gallop.software'
 const LARGE_SIZE = 1400 // Large image size on longest side
 
+// Route prefixes that are Pro. Screenshots are captured for Pro blocks only.
+// Source of truth: PRO_LAYOUTS in prepare-lite.mjs — keep these in sync.
+const PRO_LAYOUTS = [
+  'layout-1',
+  'layout-2',
+  'layout-3',
+  'layout-4',
+  'layout-5',
+  'layout-6',
+  'layout-7',
+]
+
+// A block is Pro if the first segment of its slug is a Pro layout route.
+function isProBlock(slug) {
+  const prefix = slug.includes('/') ? slug.split('/')[0] : slug
+  return PRO_LAYOUTS.includes(prefix)
+}
+
 // Helper function to recursively find all _blocks/ directories under src/app/
 async function findBlocksDirs(dir) {
   const entries = await readdir(dir, { withFileTypes: true })
@@ -235,12 +253,22 @@ async function generateBlocksCatalog(mode = 'smart', filterBlock = null) {
         console.error(`Error: Block "${filterBlock}" not found`)
         process.exit(1)
       }
+      if (!isProBlock(filterBlock)) {
+        console.error(
+          `Error: "${filterBlock}" is not a Pro block — screenshots are only captured for Pro blocks (${PRO_LAYOUTS.join(', ')})`
+        )
+        process.exit(1)
+      }
       console.log(`Filtering to single block: ${filterBlock}\n`)
     }
 
     console.log(`Found ${blockFiles.length} block files\n`)
 
-    const blocks = blockFiles.map((b) => ({ ...b }))
+    // Screenshots are captured for Pro blocks only (the block index below still covers all blocks).
+    const blocks = blockFiles.filter((b) => isProBlock(b.slug)).map((b) => ({ ...b }))
+    console.log(
+      `${blocks.length} Pro blocks eligible for screenshots\n`
+    )
 
     // Check for orphaned screenshots (skip when filtering to single block)
     if (!filterBlock) {

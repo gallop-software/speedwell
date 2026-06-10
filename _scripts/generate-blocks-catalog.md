@@ -21,8 +21,8 @@ npm run blocks:screenshots
 
 1. **Scans block files** - Recursively finds every `.tsx` file in `_blocks/` directories under `src/app/`, deduplicating shared blocks by slug.
 2. **Generates the block index** - Writes `src/app/(demo)/block/[[...slug]]/_block-index.ts`, a map of demo slugs to dynamic block imports consumed by the demo block-preview route (`generateStaticParams` + dynamic import).
-3. **Captures screenshots** - Takes screenshots of block previews from `BASE_URL/block/<slug>`, resizes to 1400px on the longest side, and saves to `public/blocks/<slug>.jpg`.
-4. **Cleans up orphans** - Deletes `public/blocks/*.jpg` screenshots that no longer have a matching block file.
+3. **Captures screenshots (Pro blocks only)** - For blocks under a Pro layout route (`PRO_LAYOUTS`: `layout-1`–`layout-7`), takes screenshots of block previews from `BASE_URL/block/<slug>`, resizes to 1400px on the longest side, and saves to `public/blocks/<slug>.jpg`. Free blocks are never screenshotted.
+4. **Cleans up orphans** - Deletes `public/blocks/*.jpg` screenshots that don't correspond to a current Pro block (including any leftover free-block screenshots).
 
 ## Commands
 
@@ -30,17 +30,17 @@ npm run blocks:screenshots
 
 **Mode:** Smart (default)
 
-- Regenerates `_block-index.ts`
-- Only captures screenshots for blocks that don't have images yet
+- Regenerates `_block-index.ts` (all blocks)
+- Only captures screenshots for Pro blocks that don't have images yet
 - **Use this** for regular updates after adding/removing blocks
 
 ### `npm run blocks:screenshots`
 
 **Mode:** Force
 
-- Regenerates `_block-index.ts`
-- Regenerates ALL screenshots (overwrites existing)
-- **Use this** when block designs have changed or images appear corrupted
+- Regenerates `_block-index.ts` (all blocks)
+- Regenerates ALL Pro block screenshots (overwrites existing)
+- **Use this** when Pro block designs have changed or images appear corrupted
 
 ## Output
 
@@ -59,21 +59,23 @@ export const blockSlugs = Object.keys(blockImports)
 
 ### Screenshots (`public/blocks/`)
 
-JPEG images sized to 1400px on longest side, mirroring the block slug path:
+JPEG images sized to 1400px on longest side, mirroring the block slug path. Only Pro blocks
+(`layout-1`–`layout-7`) are screenshotted:
 
 ```
 public/blocks/
-├── before-after/about.jpg
 ├── layout-1/hero.jpg
+├── layout-2/cover.jpg
 └── ...
 ```
 
 ## Notes on Tiers
 
-Block tiers (Free/Pro) are **not** stored here. A block's tier is inherited from its
-layout/route. The list of Pro layout routes is hardcoded as `PRO_LAYOUTS` in
-`prepare-lite.mjs`, which is the single source of truth used to swap Pro blocks for the
-`ProBlock` placeholder in the lite distribution.
+A block's tier is inherited from its layout/route. The list of Pro layout routes is the
+single source of truth in `PRO_LAYOUTS` (`prepare-lite.mjs`) and is mirrored as a `PRO_LAYOUTS`
+constant in `generate-blocks-catalog.mjs` to scope screenshots to Pro blocks — **keep the two
+lists in sync**. Free blocks are never screenshotted (they render inline; only Pro blocks use
+the `ProBlock` placeholder backed by a CDN image).
 
 ## Single-block mode
 
@@ -82,6 +84,7 @@ node _scripts/generate-blocks-catalog.mjs --block=layout-1/hero
 ```
 
 Captures a screenshot for a single block only; skips index regeneration and orphan cleanup.
+The block must be a Pro block, or the script exits with an error.
 
 ## Prerequisites
 
