@@ -24,8 +24,6 @@ export default {
     'src/tools/**',
     // Lightbox has dynamic exports
     'src/components/lightbox/**',
-    // lite-only component, intentionally unused in pro version
-    'src/components/pro-block.tsx',
   ],
 
   // Dependencies used by config files or build tools (not direct imports)

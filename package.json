@@ -1,6 +1,6 @@
 {
   "name": "speedwell",
-  "version": "1.1.80",
+  "version": "1.1.81",
   "private": true,
   "description": "A Next.js template for small businesses featuring high-quality feminine design. Build and deploy a professional small business website with speed and get highly ranked on Google. Manage content and images with AI using Gallop software. No CMS required.",
   "homepage": "https://speedwell.gallop.software",
@@ -42,9 +42,6 @@
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
-    "blocks:screenshots": "node _scripts/generate-blocks-catalog.mjs --screenshots",
-    "prepare-lite": "node _scripts/prepare-lite.mjs",
-    "prepare-pro": "node _scripts/prepare-pro.mjs",
     "env": "./_scripts/push-env-to-vercel.sh",
     "env:prod": "./_scripts/push-env-to-vercel.sh production",
     "env:prev": "./_scripts/push-env-to-vercel.sh preview",
@@ -92,7 +89,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-highlight-words": "^0.20.1",
-    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "^16.2.6",
     "knip": "^5.88.1",
@@ -100,8 +96,6 @@
     "prettier": "^3.8.3",
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "puppeteer": "^24.43.1",
-    "sharp": "^0.34.5",
     "tailwindcss": "^4.3.0",
     "typescript": "^5"
   }

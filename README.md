@@ -6,7 +6,7 @@ An artistic website template for creatives and small businesses who want to buil
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
-**📦 Repository:** [github.com/gallop-software/speedwell-pro](https://github.com/gallop-software/speedwell-pro)  
+**📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
 **🏷️ Category:** Small Business Template
 
 ---
@@ -193,7 +193,7 @@ If you're comfortable with Git:
 
 #### Step 1: Create Your Repository
 
-[![Speedwell Pro](https://img.shields.io/badge/Speedwell_Pro-6366F1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell-pro/generate)
+[![Speedwell](https://img.shields.io/badge/Speedwell-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
 
 #### Step 2: Clone Your Repository
 
@@ -216,15 +216,11 @@ Open [http://localhost:3000](http://localhost:3000) to view your site. Press `Ct
 
 #### Step 3: Deploy to Vercel
 
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?demo-title=Speedwell&demo-description=An%20artistic%20website%20template%20for%20creatives%20and%20small%20businesses%20who%20want%20to%20build%20at%20the%20speed%20of%20thought%20with%20AI%2C%20look%20more%20professional%20than%20the%20competition%2C%20and%20rank%20%231%20on%20Google.&demo-url=https%3A%2F%2Fspeedwell.gallop.software&demo-image=https%3A%2F%2Fspeedwell.gallop.software%2Fimages%2Fscreenshot-md.jpg&from=templates&project-name=speedwell-pro&repository-name=speedwell-pro&repository-url=https%3A%2F%2Fgithub.com%2Fgallop-software%2Fspeedwell-pro)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?demo-title=Speedwell&demo-description=An%20artistic%20website%20template%20for%20creatives%20and%20small%20businesses%20who%20want%20to%20build%20at%20the%20speed%20of%20thought%20with%20AI%2C%20look%20more%20professional%20than%20the%20competition%2C%20and%20rank%20%231%20on%20Google.&demo-url=https%3A%2F%2Fspeedwell.gallop.software&demo-image=https%3A%2F%2Fspeedwell.gallop.software%2Fimages%2Fscreenshot-md.jpg&from=templates&project-name=speedwell&repository-name=speedwell&repository-url=https%3A%2F%2Fgithub.com%2Fgallop-software%2Fspeedwell)
 
 Select your repository, and Vercel will automatically deploy whenever you push changes.
 
 Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
-
-### Speedwell Pro
-
-Want access to all 117 blocks including premium designs? [Purchase Speedwell Pro](https://gallop.software/code/speedwell/blocks#pricing) and clone from the Pro repository, which includes all Pro blocks ready to use.
 
 ---
 
@@ -420,7 +416,6 @@ speedwell/
 - **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_scripts/generate-blog-metadata.md)
 - **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
 - **`npm run blocks`** - Regenerate the demo block index (`_block-index.ts`)
-- **`npm run blocks:screenshots`** - Force regenerate all block screenshots
 
 ### Environment
 
@@ -497,7 +492,7 @@ Build-time tools for content and asset generation:
 ## Support & Community
 
 - **Documentation:** [gallop.software](https://gallop.software)
-- **Issues:** [GitHub Issues](https://github.com/gallop-software/speedwell-pro/issues)
+- **Issues:** [GitHub Issues](https://github.com/gallop-software/speedwell/issues)
 - **Slack:** [Join Community](https://join.slack.com/t/gallop-software/shared_invite/zt-358q3rdrp-H6kKvKzpR2qgB5xJviAOcw)
 - **Professional Services:** [Web Plant Media, LLC](https://webplant.media)
 

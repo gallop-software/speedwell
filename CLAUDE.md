@@ -9,7 +9,6 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 | `_data/_blog.json` | `npm run blog` | Adding/editing posts in src/app/(post)/post/<slug>/ |
 | `src/app/(demo)/block/[[...slug]]/_block-index.ts` | `npm run blocks` | Block additions/removals |
 | `public/search-index.json` | `npm run search` | Content changes |
-| `public/blocks/*.jpg` | `npm run blocks:screenshots` | Block visual changes |
 
 ## Build Commands
 
