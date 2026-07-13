@@ -10,6 +10,9 @@ on:
 
 jobs:
   release:
+    # Only run in the canonical repo. Template/forked copies inherit this file
+    # but this guard makes every job a no-op there — no tags or releases.
+    if: github.repository == 'gallop-software/speedwell'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -73,7 +76,7 @@ jobs:
           # Build a zip that extracts to a top-level speedwell/ folder
           mkdir -p "$REPO_NAME-folder/$REPO_NAME"
           shopt -s dotglob nullglob
-          rsync -a --exclude='.git' --exclude='node_modules' --exclude="$REPO_NAME-folder" ./ "$REPO_NAME-folder/$REPO_NAME/"
+          rsync -a --exclude='.git' --exclude='.github' --exclude='node_modules' --exclude="$REPO_NAME-folder" ./ "$REPO_NAME-folder/$REPO_NAME/"
           shopt -u dotglob nullglob
           (cd "$REPO_NAME-folder" && zip -r "../$REPO_NAME.zip" "$REPO_NAME")
 
