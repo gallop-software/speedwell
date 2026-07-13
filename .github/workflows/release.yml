@@ -1,12 +1,12 @@
 # Release on version bump
-# When dev is pushed with a package.json version change, mirror dev -> main,
-# tag the release, and publish a GitHub Release with a downloadable zip.
+# When main is pushed with a package.json version change (e.g. after merging
+# dev -> main), tag the release and publish a GitHub Release with a zip.
 name: Release
 
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   release:
@@ -14,10 +14,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout dev branch
+      - name: Checkout main branch
         uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: main
           fetch-depth: 0
 
       - name: Check for version bump
@@ -42,7 +42,7 @@ jobs:
         if: steps.version-check.outputs.should_release == 'true'
         id: commits
         run: |
-          # Find the previous version bump commit on the dev branch
+          # Find the previous version bump commit
           PREV_BUMP=$(git log --format=%H -2 -G'"version":' -- package.json | tail -1)
           if [ -z "$PREV_BUMP" ]; then
             COMMITS=$(git log --oneline --no-decorate | head -20)
@@ -53,10 +53,6 @@ jobs:
           echo "commits<<EOF" >> $GITHUB_OUTPUT
           echo "$COMMITS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Update main to match dev
-        if: steps.version-check.outputs.should_release == 'true'
-        run: git push --force origin HEAD:main
 
       - name: Create tag
         if: steps.version-check.outputs.should_release == 'true'
