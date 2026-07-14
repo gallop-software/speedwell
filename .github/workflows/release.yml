@@ -1,26 +1,26 @@
 # Release on version bump
-# When main is pushed with a package.json version change (e.g. after merging
-# dev -> main), tag the release and publish a GitHub Release with a zip.
+# When dev is pushed with a package.json version change, mirror dev -> main,
+# tag the release, and publish a GitHub Release with a downloadable zip.
 name: Release
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   release:
     # Only run in the canonical repo. Template/forked copies inherit this file
-    # but this guard makes every job a no-op there — no tags or releases.
+    # but this guard makes every job a no-op there — no mirror, tags, or releases.
     if: github.repository == 'gallop-software/speedwell'
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout main branch
+      - name: Checkout dev branch
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: dev
           fetch-depth: 0
 
       - name: Check for version bump
@@ -56,6 +56,10 @@ jobs:
           echo "commits<<EOF" >> $GITHUB_OUTPUT
           echo "$COMMITS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Update main to match dev
+        if: steps.version-check.outputs.should_release == 'true'
+        run: git push --force origin HEAD:main
 
       - name: Create tag
         if: steps.version-check.outputs.should_release == 'true'
