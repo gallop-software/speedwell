@@ -5,8 +5,7 @@ import { Section } from '@/components/section'
 import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { getSlug } from '@/tools/get-slug'
 import { getTitle } from '@/tools/get-title'
-import fs from 'fs'
-import path from 'path'
+import blogData from '@/data/_blog.json'
 
 interface PageProps {
   params: Promise<{
@@ -43,33 +42,25 @@ export default async function Page({ params }: PageProps) {
   const { slug } = await params
   const category = slug ? decodeURIComponent(slug) : ''
 
-  // Load and filter posts from static JSON file
-  let allPosts: any[] = []
-  try {
-    const metadataPath = path.join(process.cwd(), '_data/_blog.json')
-    if (fs.existsSync(metadataPath)) {
-      const fileContent = fs.readFileSync(metadataPath, 'utf8')
-      const posts = JSON.parse(fileContent)
+  // Blog metadata is bundled at build time via the @/data/* alias (-> ./_data/*).
+  // Reading it from disk at runtime does not work on Cloudflare Workers.
+  const posts = blogData as any[]
 
-      // Filter by category on server
-      allPosts = category
-        ? posts.filter((post: any) =>
-            toCategoryArray(post.metadata.categories)
-              .map(getSlug)
-              .includes(getSlug(category))
-          )
-        : posts
-
-      // Sort by date desc (newest first)
-      allPosts.sort(
-        (a: any, b: any) =>
-          new Date(b.metadata.date || '').getTime() -
-          new Date(a.metadata.date || '').getTime()
+  // Filter by category on server
+  let allPosts: any[] = category
+    ? posts.filter((post: any) =>
+        toCategoryArray(post.metadata.categories)
+          .map(getSlug)
+          .includes(getSlug(category))
       )
-    }
-  } catch (error) {
-    console.error('Failed to read blog metadata:', error)
-  }
+    : posts
+
+  // Sort by date desc (newest first; copy to avoid mutating the imported array)
+  allPosts = [...allPosts].sort(
+    (a: any, b: any) =>
+      new Date(b.metadata.date || '').getTime() -
+      new Date(a.metadata.date || '').getTime()
+  )
 
   const metadata: PageMetadata = {
     title: getTitle(category)
