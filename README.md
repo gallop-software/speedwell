@@ -228,15 +228,16 @@ Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gallop-software/speedwell)
 
-Or deploy from your machine — fill in `.env.production`, then run one command that ships your code **and** pushes your Mailgun secrets together:
+Deploying from your machine instead? Secrets are set once with `wrangler` (the Cloudflare analog of `npm run vars` for Vercel), separately from deploys — so Git-connected builds on Cloudflare pick them up automatically:
 
 ```bash
-npm run cf:setup     # scaffolds .env.production and .dev.vars
+npm run cf:setup     # scaffolds .env.production
 # edit .env.production with your values
-npm run cf:deploy    # builds, deploys, and uploads secrets via --secrets-file
+npm run cf:secrets   # push MAILGUN_* to the Worker's secret store (run once, or when they change)
+npm run cf:deploy    # build + deploy the code
 ```
 
-Local Worker preview (uses `.dev.vars`): `npm run cf:preview`. Custom domains are configured in the Cloudflare dashboard under your Worker's **Settings → Domains & Routes**.
+Because secrets live in Cloudflare (not the repo), you only run `cf:secrets` when values change — every subsequent deploy, CLI or Git-connected, reuses them. `NEXT_PUBLIC_PRODUCTION_URL` is build-time; for Git-connected builds set it as a **Build variable** in your Worker's build settings. Local Worker preview: `npm run cf:preview`. Custom domains: Worker **Settings → Domains & Routes**.
 
 ---
 
