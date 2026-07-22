@@ -53,12 +53,16 @@ npm run vars:pull
 ## How Pull Works
 
 1. Links to your Vercel project (if not already linked) and validates your token
-2. Fetches all **production** variables (decrypted) via the Vercel API
-3. **Backs up** the current `.env.production` to `.env.production-{timestamp}`
+2. **Backs up** the current `.env.production` to `.env.production-{timestamp}`
    (e.g. `.env.production-20260721-210530`) — nothing is overwritten in place
-4. Writes all production variables into `.env.production` as `KEY="value"`
+3. Fetches the list of your **own** production variables from the Vercel API
+   (this list excludes Vercel-injected system vars like `VERCEL_*`)
+4. Pulls the decrypted values via the Vercel CLI (`vercel env pull`)
+5. Writes only your own production variables into `.env.production` as `KEY="value"`
 
-> Note: Vercel variables marked **sensitive** cannot be decrypted via the API and are skipped on pull.
+> Note: only variables you defined are written. Vercel's built-in system variables
+> (`VERCEL_*`, `VERCEL_GIT_*`, `TURBO_*`, etc.) are filtered out. Variables marked
+> **sensitive** cannot be decrypted and are skipped.
 
 ## First Run
 

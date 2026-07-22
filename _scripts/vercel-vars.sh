@@ -37,10 +37,6 @@ if [ "$DIRECTION" = "push" ] && [ ! -f "$ENV_FILE" ]; then
   echo "Error: environment file not found: $ENV_FILE" >&2
   exit 1
 fi
-if [ "$DIRECTION" = "pull" ] && ! command -v jq >/dev/null 2>&1; then
-  echo "Error: 'jq' is required for pull. Install with: brew install jq" >&2
-  exit 1
-fi
 
 # --- ensure project is linked (creates .vercel/project.json)
 if [ ! -f ".vercel/project.json" ]; then
@@ -132,18 +128,8 @@ fi
 # PULL — download production vars from Vercel into .env.production
 # ============================================================================
 if [ "$DIRECTION" = "pull" ]; then
-  PULL_URL="${API_BASE}/v9/projects/${PROJECT_ID}/env?decrypt=true${TEAM_QS}"
-
-  echo "Pulling production variables from Vercel (projectId: $PROJECT_ID${ORG_ID:+, orgId: $ORG_ID})"
-
-  http_code="$(curl -sS -o /tmp/vercel_pull.$$ -w '%{http_code}' \
-    -H "Authorization: Bearer $VERCEL_TOKEN" \
-    "$PULL_URL")"
-
-  if ! [[ "$http_code" =~ ^2 ]]; then
-    echo "Failed to fetch env vars (HTTP $http_code). Response:" >&2
-    cat /tmp/vercel_pull.$$ >&2 || true
-    rm -f /tmp/vercel_pull.$$
+  if ! command -v jq >/dev/null 2>&1; then
+    echo "Error: 'jq' is required for pull. Install with: brew install jq" >&2
     exit 1
   fi
 
@@ -155,18 +141,48 @@ if [ "$DIRECTION" = "pull" ]; then
     echo "Backed up existing $ENV_FILE to $BACKUP_FILE"
   fi
 
-  # --- write all production vars into .env.production (KEY="value")
-  tmpout="$(mktemp)"
-  jq -r '
-    .envs[]
-    | select(.target != null and (.target | index("production")))
-    | select(.value != null)
-    | "\(.key)=\"\(.value | gsub("\\\\"; "\\\\") | gsub("\""; "\\\""))\""
-  ' /tmp/vercel_pull.$$ > "$tmpout"
+  echo "Pulling production variables from Vercel into $ENV_FILE"
 
-  count="$(wc -l < "$tmpout" | tr -d '[:space:]')"
-  mv "$tmpout" "$ENV_FILE"
-  rm -f /tmp/vercel_pull.$$
+  # --- allowlist: the project's OWN production var keys (the API omits
+  #     Vercel-injected system vars like VERCEL_*, which `env pull` would add)
+  LIST_URL="${API_BASE}/v9/projects/${PROJECT_ID}/env?${TEAM_QS#&}"
+  list_code="$(curl -sS -o /tmp/vercel_list.$$ -w '%{http_code}' \
+    -H "Authorization: Bearer $VERCEL_TOKEN" "$LIST_URL")"
+  if ! [[ "$list_code" =~ ^2 ]]; then
+    echo "Failed to list env vars (HTTP $list_code). Response:" >&2
+    cat /tmp/vercel_list.$$ >&2 || true
+    rm -f /tmp/vercel_list.$$
+    exit 1
+  fi
+  allowed_keys="$(jq -r '
+    .envs[]
+    | select(.type != "system")
+    | select(.target != null and (.target | index("production")))
+    | .key
+  ' /tmp/vercel_list.$$ | sort -u)"
+  rm -f /tmp/vercel_list.$$
+
+  # --- pull decrypted values via the CLI (handles decryption)
+  tmp_pull="$(mktemp)"
+  "$VERCEL_BIN" env pull "$tmp_pull" \
+    --environment=production \
+    --token "$VERCEL_TOKEN" \
+    --yes
+
+  # --- write only the project's own vars into .env.production
+  : > "$ENV_FILE"
+  count=0
+  while IFS= read -r line || [ -n "$line" ]; do
+    case "$line" in
+      ''|\#*) continue ;;                 # skip blanks + comments (e.g. Vercel header)
+    esac
+    key="${line%%=*}"
+    if grep -qxF "$key" <<< "$allowed_keys"; then
+      printf '%s\n' "$line" >> "$ENV_FILE"
+      count=$((count + 1))
+    fi
+  done < "$tmp_pull"
+  rm -f "$tmp_pull"
 
   echo "Wrote $count production variable(s) to $ENV_FILE"
   echo "Done."
