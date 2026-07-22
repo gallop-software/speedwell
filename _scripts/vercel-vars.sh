@@ -1,13 +1,29 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Push env vars from .env.production to Vercel using REST API upsert (encrypted)
+# Sync env vars between .env.production and Vercel using the REST API.
+#
+# Direction:
+#   push  (default) — upsert vars FROM .env.production TO Vercel (encrypted),
+#                     targeting production AND preview by default
+#   pull            — download production vars FROM Vercel TO .env.production
+#                     (the existing .env.production is backed up to
+#                      .env.production-{timestamp} first)
+#
 # Usage:
-#   npm run env
-#   npm run env:prod
-#   npm run env:prev
+#   npm run vars               # push to production + preview
+#   npm run vars:push          # push to production + preview
+#   npm run vars:pull          # pull production vars into .env.production
+#   ./_scripts/vercel-vars.sh push "production"   # override targets
+#   ./_scripts/vercel-vars.sh pull
 
-TARGETS_CSV="${1:-production}"           # development,preview,production (comma-separated)
+# --- parse direction (first positional arg), default to push
+DIRECTION="push"
+case "${1:-}" in
+  push|pull) DIRECTION="$1"; shift ;;
+esac
+
+TARGETS_CSV="${1:-production,preview}"    # development,preview,production (comma-separated, push only)
 ENV_FILE=".env.production"
 VERCEL_BIN="${VERCEL_BIN:-vercel}"
 ENV_TYPE="encrypted"                     # store as encrypted secrets
@@ -17,8 +33,12 @@ if ! command -v "$VERCEL_BIN" >/dev/null 2>&1; then
   echo "Error: Vercel CLI not found. Install with: npm i -g vercel" >&2
   exit 1
 fi
-if [ ! -f "$ENV_FILE" ]; then
+if [ "$DIRECTION" = "push" ] && [ ! -f "$ENV_FILE" ]; then
   echo "Error: environment file not found: $ENV_FILE" >&2
+  exit 1
+fi
+if [ "$DIRECTION" = "pull" ] && ! command -v jq >/dev/null 2>&1; then
+  echo "Error: 'jq' is required for pull. Install with: brew install jq" >&2
   exit 1
 fi
 
@@ -107,6 +127,55 @@ if [ -z "${STORED_TOKEN:-}" ]; then
   fi
   echo "Token validated and saved to .vercel/project.json"
 fi
+
+# ============================================================================
+# PULL — download production vars from Vercel into .env.production
+# ============================================================================
+if [ "$DIRECTION" = "pull" ]; then
+  PULL_URL="${API_BASE}/v9/projects/${PROJECT_ID}/env?decrypt=true${TEAM_QS}"
+
+  echo "Pulling production variables from Vercel (projectId: $PROJECT_ID${ORG_ID:+, orgId: $ORG_ID})"
+
+  http_code="$(curl -sS -o /tmp/vercel_pull.$$ -w '%{http_code}' \
+    -H "Authorization: Bearer $VERCEL_TOKEN" \
+    "$PULL_URL")"
+
+  if ! [[ "$http_code" =~ ^2 ]]; then
+    echo "Failed to fetch env vars (HTTP $http_code). Response:" >&2
+    cat /tmp/vercel_pull.$$ >&2 || true
+    rm -f /tmp/vercel_pull.$$
+    exit 1
+  fi
+
+  # --- back up the existing .env.production before overwriting it
+  if [ -f "$ENV_FILE" ]; then
+    TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
+    BACKUP_FILE="${ENV_FILE}-${TIMESTAMP}"
+    cp "$ENV_FILE" "$BACKUP_FILE"
+    echo "Backed up existing $ENV_FILE to $BACKUP_FILE"
+  fi
+
+  # --- write all production vars into .env.production (KEY="value")
+  tmpout="$(mktemp)"
+  jq -r '
+    .envs[]
+    | select(.target != null and (.target | index("production")))
+    | select(.value != null)
+    | "\(.key)=\"\(.value | gsub("\\\\"; "\\\\") | gsub("\""; "\\\""))\""
+  ' /tmp/vercel_pull.$$ > "$tmpout"
+
+  count="$(wc -l < "$tmpout" | tr -d '[:space:]')"
+  mv "$tmpout" "$ENV_FILE"
+  rm -f /tmp/vercel_pull.$$
+
+  echo "Wrote $count production variable(s) to $ENV_FILE"
+  echo "Done."
+  exit 0
+fi
+
+# ============================================================================
+# PUSH — upsert vars from .env.production to Vercel (encrypted)
+# ============================================================================
 
 # --- prepare targets JSON
 IFS=',' read -r -a TARGETS <<< "$TARGETS_CSV"

@@ -419,9 +419,9 @@ speedwell/
 
 ### Environment
 
-- **`npm run env`** - Push `.env.production` to Vercel → [docs](./_scripts/push-env-to-vercel.md)
-- **`npm run env:prod`** - Push to production environment
-- **`npm run env:prev`** - Push to preview environment
+- **`npm run vars`** - Push `.env.production` to Vercel (production + preview) → [docs](./_scripts/vercel-vars.md)
+- **`npm run vars:push`** - Push to production + preview environments
+- **`npm run vars:pull`** - Pull production vars from Vercel into `.env.production` (backs up the existing file)
 
 ### Package Management
 
