@@ -222,6 +222,22 @@ Select your repository, and Vercel will automatically deploy whenever you push c
 
 Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
 
+#### Alternative: Deploy to Cloudflare Workers
+
+Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. Click the button and Cloudflare walks you through connecting GitHub and entering your Mailgun values — no dashboard hunting, no CLI:
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gallop-software/speedwell)
+
+Or deploy from your machine — fill in `.env.production`, then run one command that ships your code **and** pushes your Mailgun secrets together:
+
+```bash
+npm run cf:setup     # scaffolds .env.production and .dev.vars
+# edit .env.production with your values
+npm run cf:deploy    # builds, deploys, and uploads secrets via --secrets-file
+```
+
+Local Worker preview (uses `.dev.vars`): `npm run cf:preview`. Custom domains are configured in the Cloudflare dashboard under your Worker's **Settings → Domains & Routes**.
+
 ---
 
 ## About Gallop Templates
