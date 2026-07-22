@@ -233,7 +233,7 @@ Deploying from your machine instead? Secrets are set once with `wrangler` (the C
 ```bash
 npm run cf:setup     # scaffolds .env.production
 # edit .env.production with your values
-wrangler login       # authenticate wrangler with your Cloudflare account (one time)
+npx wrangler login   # authenticate with your Cloudflare account (one time; wrangler ships as a dev dependency)
 npm run cf:secrets   # push all .env.production values to the Worker's secret store (run once, or when they change)
 npm run cf:deploy    # build + deploy the code
 ```
@@ -241,9 +241,10 @@ npm run cf:deploy    # build + deploy the code
 **How `cf:secrets` knows where to push:** it targets your authenticated Cloudflare
 account plus the Worker named in `wrangler.jsonc` (`"speedwell"`) — no URL involved.
 
-- **Authenticate first.** Run `wrangler login` (OAuth, cached in `~/.wrangler`) or set
+- **Authenticate first.** Run `npx wrangler login` (OAuth, cached in `~/.wrangler`) or set
   a `CLOUDFLARE_API_TOKEN` env var. If your account can't be inferred, also set
-  `CLOUDFLARE_ACCOUNT_ID`. Without auth, `cf:secrets` and `cf:deploy` can't reach Cloudflare.
+  `CLOUDFLARE_ACCOUNT_ID`. Wrangler ships as a dev dependency, so `npx` runs the local
+  copy — no global install needed. Without auth, `cf:secrets` and `cf:deploy` can't reach Cloudflare.
 - **The Worker must already exist.** `cf:secrets` doesn't create it — deploy once first
   (`npm run cf:deploy` or the first Git-connected build), then push secrets.
 - **Names must match.** The `name` in `wrangler.jsonc` must equal the Worker's actual name
