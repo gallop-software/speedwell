@@ -233,7 +233,7 @@ Deploying from your machine instead? Secrets are set once with `wrangler` (the C
 ```bash
 npm run cf:setup     # scaffolds .env.production
 # edit .env.production with your values
-npm run cf:secrets   # push MAILGUN_* to the Worker's secret store (run once, or when they change)
+npm run cf:secrets   # push all .env.production values to the Worker's secret store (run once, or when they change)
 npm run cf:deploy    # build + deploy the code
 ```
 
