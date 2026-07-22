@@ -92,6 +92,7 @@ src/app/
 - Create new route groups in `src/app/` when new layouts are needed
 - Create new archive content folders (like `portfolio/`) in `/src`
 - Create dotfiles/directories at project root (`.github/`, `.cursor/`, etc.)
+- Import generated `_data/*.json` in runtime code via the `@/data/*` alias (bundled at build time)
 - Ask for confirmation if the correct zone is ambiguous
 
 ### DO NOT — What AI Is Forbidden To Do
@@ -103,7 +104,8 @@ src/app/
 - Reorganize or move folders without explicit instruction
 - Invent new organizational conventions
 - Create placeholder or speculative files
-- Import from `_scripts/` or `_data/` in runtime code
+- Import from `_scripts/` in runtime code (Node-only deps: `fs`, `jsdom`, etc.)
+- Read `_data/*.json` from disk at runtime (`fs.readFileSync` + `process.cwd()`) — there is no filesystem on edge/Workers runtimes, so it silently returns empty; import via `@/data/*` instead
 - Manually edit files in `_data/` (generated only)
 
 ## Enforced Patterns (ESLint)
@@ -195,6 +197,7 @@ Available state: `playVideo`, `offsetTop`, `windowHeight`, `lastOffsetTop`, `isS
 - Use gray-*, white, black, slate-* — always map to a semantic token
 - Put text color in className when component has a color prop
 - Manually construct image URLs when a _data/_studio.json metadata entry exists
+- Read _data/*.json with fs at runtime - import via @/data/* (no filesystem on Workers)
 - Manually edit files in _data/ (generated only)
 
 ## Post-Edit Verification
