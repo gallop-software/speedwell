@@ -71,47 +71,61 @@ Available for Mac and Windows.
 3. Launch the Gallop AI Editor
 4. If prompted, the editor will walk you through installing Node.js automatically — just follow the on-screen steps
 
-#### Step 2: Open This Template
+#### Step 2: Create Your Project
 
-**From the built-in template marketplace:**
+Open the **New Project** modal. It has three tabs — **Gallop Templates**, **Git Repositories**, and **Local** — and you want the first one.
 
-1. Click the **Templates** tab in the sidebar
-2. Find **Speedwell** and click **Clone**
-3. Choose a folder on your computer (like your Desktop)
-4. The editor will download and set up the project for you
+1. On the **Gallop Templates** tab, select **Speedwell** from the gallery
+2. Name your new repository, and pick which GitHub account or organization owns it
+3. Choose whether it's public or private
+4. Pick the folder on your computer where it should live
+5. Click create
 
-**Or from a ZIP download:**
+The editor then does everything else in one pass:
 
-1. Click the green **Code** button at the top of this GitHub page, then click **Download ZIP**
-2. Unzip the folder somewhere easy to find (like your Desktop)
-3. In the Gallop AI Editor, click **Open Project** and select the unzipped `speedwell` folder
+- **Creates your own repository on GitHub** from the template — a clean repo that belongs to you, with no shared history tying it back to the original
+- **Clones it to your machine** in the folder you picked, with a progress bar
+- **Opens it as a project**, ready to run
 
-#### Step 3: Start the Dev Server
+Because the repository is created here, **your GitHub repo already exists** by the time you reach [Put Your Site Online](#put-your-site-online) — there's nothing to set up on GitHub when it's time to deploy.
 
-Getting your site running locally takes three clicks — **Install**, **Start**, **Preview** — with no typed commands. All of them live in the **Terminal** tab at the bottom of the editor.
+> **Why this is one click:** you're already signed in to GitHub inside the editor, so it can create the repository on your behalf without asking you for anything.
 
-1. Click the **Terminal** tab at the bottom of the editor
-2. Click **Install** and wait for it to finish — this downloads everything the project needs. It takes a minute or two the first time.
-3. Click **Start** — your site is now running at [http://localhost:3000](http://localhost:3000)
-4. Click **Preview** to open your running site and watch it update as you make changes
-5. Click **Stop** when you're finished for the day
+#### Step 3: Start Your Site
 
-Here's what each button does, and the command it saves you from typing:
+Click the **play icon** in the left rail (or press `Cmd+1`) to open the **Start Website** view. It's a terminal with a toolbar across the top — two clicks and your site is live locally.
+
+1. Click **Install** and wait for it to finish. This downloads everything the project needs, and takes a minute or two the first time.
+2. Click **Start Website**. Your site is now running at [http://localhost:3000](http://localhost:3000).
+3. Click the **globe icon** in the top-right title bar to open your site in a browser. Hover it and it tells you the port it's running on.
+
+Here's the full toolbar, and the command each button saves you from typing:
 
 | Button | What it does | Equivalent command |
 |---|---|---|
-| **Install** | Downloads the project's dependencies. Run once after cloning, then again any time dependencies change. | `npm install` |
-| **Start** | Starts the development server on port 3000 with hot reload — save a file and the browser updates itself. | `npm run dev` |
-| **Preview** | Opens your running site so you can see your changes. | visiting `localhost:3000` |
-| **Stop** | Shuts the development server down and frees up port 3000. | `Ctrl+C` |
+| **Install** / **Reinstall** | Downloads the project's dependencies. Reads **Reinstall** once they're already installed. | `npm install` |
+| **Start Website** | Starts the development server with hot reload — save a file and the browser updates itself. | `npm run dev` |
+| **Stop** | Shuts the server down and frees up the port. Replaces **Start Website** while the site is running. | `Ctrl+C` |
+| **Refresh Cache** | Clears Next.js's build cache and restarts the server. Only appears while running. | delete `.next`, restart |
+| **Clear** | Wipes the terminal output. Doesn't touch the server. | `clear` |
 
-**Leave the server running while you work.** You only need **Start** once per session — the site refreshes on its own every time you or the AI saves a file.
+The play icon in the left rail turns **green with a dot** while your site is running, so you can tell at a glance from any view.
 
-**If something looks stuck** — a change won't appear, or the site won't load — click **Stop**, then **Start**. A clean restart resolves most issues. If **Start** fails complaining that the port is in use, an older server is still running: **Stop** clears it.
+**Leave the server running while you work.** You only need **Start Website** once per session — the site refreshes on its own every time you or the AI saves a file.
+
+**If something looks stuck** — a change won't appear, or the site won't load — try **Refresh Cache** first, and **Stop** then **Start Website** if that doesn't do it.
 
 #### Step 4: Chat with AI
 
-Click the **AI Chat** panel (or press `Cmd+E` on Mac / `Ctrl+E` on Windows) to open the AI assistant. Now just ask:
+Press `Cmd+J` to show the AI panel on the right. Click the **+** in its header and you'll get a picker with three cards:
+
+| Card | What it is |
+|---|---|
+| **AI Chat** | The built-in assistant. Message bubbles, plan mode, and an Insert target for screenshots. Start here. |
+| **Claude Code** | The full Claude Code terminal experience, running inside the panel. |
+| **Terminal** | A plain shell, for when you want to run something yourself. |
+
+Pick **AI Chat**, then just ask:
 
 ```
 I'm new to this. Help me customize this website for my business.
@@ -135,7 +149,101 @@ Add a new page called Services
 Optimize the SEO on my homepage
 ```
 
-**Tip:** Press `Cmd+Ctrl+3` (Mac) to take a screenshot of your running site and attach it to the chat. The AI can see exactly what you see and suggest changes visually.
+**Tip:** Press `Cmd+Shift+S` to take a screenshot of your running site and attach it to the chat. The AI can see exactly what you see and suggest changes visually.
+
+---
+
+## Working in the Editor
+
+Everything below is how you actually build your site day to day. The left rail switches between views; each has a keyboard shortcut.
+
+| Icon | View | Shortcut | What it's for |
+|---|---|---|---|
+| ▶ | **Start Website** | `Cmd+1` | Run your site locally. Install, Start, Stop, Refresh Cache — see [Step 3](#step-3-start-your-site). Turns green while running. |
+| ⑂ | **Source Control** | `Cmd+2` | Commit, branch, and merge visually. The badge shows how many files changed. |
+| `<>` | **Editor** | `Cmd+3` | The code editor, with autocomplete and go-to-definition. `Cmd+B` toggles the file explorer. |
+| 🖼 | **Studio** | `Cmd+4` | Your images and fonts — see below. |
+| 🌐 | **SEO** | `Cmd+5` | Scan any page for SEO and structured-data problems. |
+| 🚀 | **Publish** | `Cmd+6` | Connect Cloudflare, Vercel, and Mailgun so AI can deploy for you. |
+
+`Cmd+K` cycles forward through views if you'd rather not remember numbers.
+
+### The AI Panel
+
+The AI panel lives on the right and is where most of your work happens.
+
+- `Cmd+J` shows and hides it. Hiding does **not** stop what's running — a long AI task keeps going while the panel is closed.
+- `Cmd+I` expands it to fill the window, for when you're reading a long answer.
+- `Cmd+T` opens a new tab; `Cmd+Shift+[` and `Cmd+Shift+]` cycle between them. You can drag tabs to reorder them.
+- Every tab has a `×`. Close the last one and you're back at the AI Chat / Claude Code / Terminal picker.
+
+**Agent mode vs Plan mode** — press `Cmd+.` to switch the active AI Chat tab between them.
+
+| Mode | Behavior | Use it when |
+|---|---|---|
+| **Agent** | AI edits your files directly. | You trust the change — most of the time. |
+| **Plan** | AI describes what it intends to do and waits for your approval. | The change is large or you want to learn what it's doing. |
+
+Two slash commands are worth knowing: `/new` starts a fresh conversation, and `/compact` summarizes a long one so you can keep going without losing the thread.
+
+**Which AI you're using** is set in the panel's settings gear: **Gallop AI** (prepaid balance, nothing to configure), **Your API Key** (bring your own Anthropic key), or **Subscription** (your existing Claude login). Sessions pick up the setting when they start, so change it *before* opening a chat tab.
+
+### Showing AI What You See
+
+Describing a visual bug is hard. Show it instead.
+
+- `Cmd+Shift+S` — drag a box around any part of your running site. The capture opens in an annotator where you can draw arrows and boxes, then **Insert** it straight into a chat tab.
+- `Cmd+Shift+G` — opens the code file behind whatever page your browser is showing. No hunting through folders to find which file draws a page.
+- `Cmd+Shift+L` — drops the file you're editing into the chat as a reference, so you can say "fix the spacing here" without explaining where "here" is.
+
+### Studio: Images and Fonts
+
+`Cmd+4` opens Studio, which manages everything in your `public/` folder.
+
+- Drop in images and it generates thumbnails and blur placeholders automatically
+- Crop and edit without leaving the editor
+- Push assets to a CDN so they load fast worldwide
+- Drop in a font and it converts to WOFF2, the format browsers load fastest
+
+Studio keeps its records in `_data/_studio.json`. That file is generated — let Studio manage it.
+
+### SEO
+
+`Cmd+5` runs three checks on any page: on-page SEO (titles and descriptions, with a rating on whether each is too short or too long), a comparison of what search engines see versus what loads in the browser, and validation of your structured data.
+
+Ask AI to fix what it finds:
+
+```
+Run the SEO report on my homepage and fix everything it flags
+```
+
+### Source Control
+
+`Cmd+2` gives you Git without the command line — stage individual lines, review diffs side by side, and browse history. If you'd rather not think about Git at all, don't: ask AI to "commit my changes and push them."
+
+### Keyboard Shortcuts
+
+| Shortcut | Action |
+|---|---|
+| `Cmd+1`–`Cmd+6` | Switch views |
+| `Cmd+K` | Cycle views forward |
+| `Cmd+J` | Show/hide the AI panel |
+| `Cmd+I` | Expand/collapse the AI panel |
+| `Cmd+.` | Toggle agent ↔ plan mode |
+| `Cmd+T` | New tab |
+| `Cmd+W` | Close tab |
+| `Cmd+Shift+[` / `]` | Cycle tabs |
+| `Cmd+B` | Toggle file explorer |
+| `Cmd+P` | Quick Open — jump to any file by name |
+| `Cmd+F` | Find |
+| `Cmd+Shift+F` | Find in all files |
+| `Cmd+S` | Save |
+| `Cmd+Shift+S` | Screenshot |
+| `Cmd+Shift+G` | Open the route file for your browser's page |
+| `Cmd+Shift+L` | Send the current file to chat |
+| `Cmd+Shift+N` | New window |
+
+On Windows, use `Ctrl` wherever this says `Cmd`.
 
 ---
 
@@ -149,50 +257,35 @@ Connect with other Gallop users on Slack. Share your progress, swap AI prompting
 
 ## Put Your Site Online
 
-When you're ready to share your site with the world, you'll need a free [GitHub](https://github.com) account to store your code, plus a free hosting account — either [Vercel](https://vercel.com) or [Cloudflare](https://cloudflare.com).
+Your code is already on GitHub — you're signed in inside the editor, and your repository was created when you started the project. All that's left is a free hosting account: either [Vercel](https://vercel.com) or [Cloudflare](https://cloudflare.com).
 
 ### The Easy Way: Let AI Deploy It
 
-In the Gallop AI Editor, connect your hosting account first. The editor puts the credentials into your terminal and AI chat, so the assistant can deploy on your behalf without you ever copying a token into a file.
+Press `Cmd+6` (the rocket icon) to open the **Publish** view. It has a tab for each service you might need:
+
+| Tab | What it's for |
+|---|---|
+| **Cloudflare** | Deploy to Cloudflare Workers |
+| **Vercel** | Deploy to Vercel |
+| **Mailgun** | Sends the email from your contact form |
+
+Each tab links straight to the page where you generate the token, with the right permissions preselected — you paste it in, click **Connect** to verify it, then **Save**.
+
+From then on the editor injects those credentials into your terminal and AI chat automatically, so the assistant can deploy on your behalf and **you never paste a token into a project file**.
+
+> **Important:** credentials are handed to a session when it starts. After saving a new token, open a **new** chat or terminal tab — an existing one won't see it.
 
 Then just ask:
 
 ```
-Help me create a GitHub account, push this project to GitHub, and deploy it
+Push my latest changes to GitHub and deploy this site
 ```
 
 The AI will walk you through every step. When you're done, your site will be live with a URL you can share.
 
-Already know which host you want? Skip ahead to the ready-made prompts for [Vercel](#step-3-deploy-to-vercel) or [Cloudflare](#alternative-deploy-to-cloudflare-workers).
+Already know which host you want? Use the ready-made prompt for [Vercel](#deploy-to-vercel) or [Cloudflare](#deploy-to-cloudflare-workers).
 
-### For Technical Users
-
-If you're comfortable with Git:
-
-#### Step 1: Create Your Repository
-
-[![Speedwell](https://img.shields.io/badge/Speedwell-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gallop-software/speedwell/generate)
-
-#### Step 2: Clone Your Repository
-
-Ask your AI assistant:
-
-```
-Help me clone my new GitHub repository and run it locally
-```
-
-Or run these commands in your terminal:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-cd YOUR-REPO-NAME
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view your site. Press `Ctrl+C` to stop the server. When ready to test production, run `npm run build` then `npm start`.
-
-#### Step 3: Deploy to Vercel
+### Deploy to Vercel
 
 Connect your Vercel account in the Gallop AI Editor, then paste this into the AI chat:
 
@@ -209,26 +302,17 @@ Please:
 Never commit .env.production — it holds real secrets.
 ```
 
-Prefer to do it yourself? Import your repository at [vercel.com/new](https://vercel.com/new). Vercel detects Next.js automatically and redeploys on every push. Add the values from `.env.production.sample` under **Settings → Environment Variables**.
+Vercel redeploys automatically every time you push, so from here on your changes go live by asking the AI to push them.
+
+**Environment variables, without the busywork.** The Vercel tab in the Publish view can push and pull your `.env` files against your Vercel project directly. Change a value locally, push it up; pull production values down to check them. It shows you a full diff before anything is written, and backs up your local file before a pull.
 
 Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
 
-#### Alternative: Deploy to Cloudflare Workers
+### Deploy to Cloudflare Workers
 
 Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. See it live: **[speedwell-cloudflare.gallop.software](https://speedwell-cloudflare.gallop.software/)** — the same template, deployed exactly the way this section describes.
 
-There are two ways to get there. Pick one:
-
-| Approach | Best for |
-|---|---|
-| **Let AI do it** (below) | Gallop AI Editor users — connect Cloudflare once, then paste a prompt |
-| **Manual CLI** | You want to run each step yourself |
-
-##### Let AI Deploy It For You (Gallop AI Editor)
-
-This is the easiest path. You connect your Cloudflare account once, and your AI assistant handles the entire deployment — building, creating the Worker, and uploading secrets.
-
-**Step 1 — Connect Cloudflare in the Gallop AI Editor.** Once connected, the editor puts your Cloudflare credentials (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) into the terminal environment and makes them available to the AI chat. Wrangler reads those variables automatically, which means **nobody has to run `npx wrangler login`, and no token is ever pasted into a file.**
+**Step 1 — Connect Cloudflare in the Publish view** (`Cmd+6`). Once saved, the editor puts your Cloudflare credentials (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) into the terminal environment and makes them available to the AI chat. Wrangler reads those variables automatically, which means **nobody has to run `npx wrangler login`, and no token is ever pasted into a file.**
 
 **Step 2 — Paste this prompt into the AI chat:**
 
@@ -269,7 +353,9 @@ My contact form isn't sending email on Cloudflare — check my secrets are set c
 
 **If a prompt fails,** paste the error back into the chat. The most common causes are a Cloudflare account that isn't connected yet (so wrangler has no credentials) and running `cf:secrets` before the Worker exists — the AI can diagnose both from the error text.
 
-The rest of this section is the detailed version — what files Cloudflare needs, which ones you create, and what to change when you rename things. **You do not need any of it if you used the prompts above**, but it's what your AI assistant is relying on, and it's worth skimming if something goes wrong.
+#### Reference: How the Cloudflare Deployment Works
+
+Everything below is **reference material for your AI assistant** — what files Cloudflare needs, which ones get created, and what has to change when you rename things. You don't need to read or run any of it yourself; the prompts above cover the whole process. It's here so the AI has accurate ground truth, and so you have something to point at if a deploy goes wrong.
 
 ##### The Three Kinds of Cloudflare Files
 
@@ -304,15 +390,18 @@ Both are covered by the `.env*` and `.dev.vars*` rules in `.gitignore`, so they 
 
 All three are already gitignored. `.open-next/` does not exist until you build, which is why `cf:deploy` and `cf:preview` always run the build first.
 
-##### Deploy From Your Machine
+##### The Deployment Sequence
+
+This is what the AI runs on your behalf, in this order:
 
 ```bash
 npm run cf:setup     # scaffolds .env.production
-# edit .env.production with your values
-npx wrangler login   # one time — SKIP THIS if CLOUDFLARE_API_TOKEN is already set (Gallop AI Editor sets it for you)
+# fill in .env.production with your values
 npm run cf:deploy    # build + deploy — creates the Worker on first run
 npm run cf:secrets   # push .env.production to the Worker's secret store (after the Worker exists)
 ```
+
+No `wrangler login` step is needed: connecting Cloudflare in the editor already put `CLOUDFLARE_API_TOKEN` in the environment, and wrangler picks it up automatically.
 
 Order matters: `cf:secrets` cannot create a Worker, so deploy once first. After that, secrets and code are independent — you only re-run `cf:secrets` when a value changes, and every later deploy reuses them.
 
@@ -381,10 +470,10 @@ The [Gallop AI Editor](https://gallop.software/) is a desktop code editor built 
 
 **Key highlights:**
 
-- **Claude AI built in** — Chat with Claude to write code, debug issues, and learn as you go. Supports Opus 4.6, Sonnet 4.6, and Haiku 4.5 models
+- **Claude AI built in** — Chat with Claude to write code, debug issues, and learn as you go, with the latest Claude models available out of the box
 - **Agent and Plan modes** — Agent mode lets AI apply changes automatically. Plan mode shows you what AI wants to do before it does it, so you stay in control
-- **Screenshot capture** — Press `Cmd+Ctrl+3` to screenshot your running site and share it with AI for visual feedback
-- **Built-in template marketplace** — Browse and clone Gallop templates without leaving the editor
+- **Screenshot capture** — Press `Cmd+Shift+S` to screenshot your running site and share it with AI for visual feedback
+- **Built-in template marketplace** — Browse Gallop templates and start one in a single click: your own GitHub repository created and cloned locally without leaving the editor
 - **Visual Git** — Stage, commit, and merge with a 3-column visual interface. No command line required
 - **Studio media manager** — Manage images, fonts, and assets with thumbnail previews and CDN sync
 - **Node.js manager** — Install and switch Node.js versions without touching the terminal
@@ -403,9 +492,8 @@ Think of Canon as training wheels that never come off. AI stays within proven pa
 
 **Canon Commands:**
 
-- `npm run check` - Run lint, TypeScript, and unused checks together
-- `npm run generate:ai-rules` - Regenerate AI rules from Canon
-- `npm run update:canon` - Update to latest Canon version
+- `npm run check` - Run lint and TypeScript checks together
+- `npm run audit` - Audit the project against Canon's architecture patterns
 
 ### Built for SEO and AI Discoverability
 
