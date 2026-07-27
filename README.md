@@ -228,7 +228,7 @@ Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gallop-software/speedwell)
 
-Deploying from your machine instead? Secrets are set once with `wrangler` (the Cloudflare analog of `npm run vars` for Vercel), separately from deploys — so Git-connected builds on Cloudflare pick them up automatically:
+Deploying from your machine instead? Secrets are set once with `wrangler`, separately from deploys — so Git-connected builds on Cloudflare pick them up automatically:
 
 ```bash
 npm run cf:setup     # scaffolds .env.production
@@ -447,12 +447,6 @@ speedwell/
 - **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_scripts/generate-blog-metadata.md)
 - **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
 - **`npm run blocks`** - Regenerate the demo block index (`_block-index.ts`)
-
-### Environment
-
-- **`npm run vars`** - Push `.env.production` to Vercel (production + preview) → [docs](./_scripts/vercel-vars.md)
-- **`npm run vars:push`** - Push to production + preview environments
-- **`npm run vars:pull`** - Pull production vars from Vercel into `.env.production` (backs up the existing file)
 
 ### Package Management
 
