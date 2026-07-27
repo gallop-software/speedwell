@@ -5,6 +5,7 @@
 An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
+**☁️ Cloudflare Demo:** [speedwell-cloudflare.gallop.software](https://speedwell-cloudflare.gallop.software/)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
 **📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
 **🏷️ Category:** Small Business Template
@@ -224,34 +225,162 @@ Congratulations! Your site is now live to the world. Share your new URL and star
 
 #### Alternative: Deploy to Cloudflare Workers
 
-Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. Click the button and Cloudflare walks you through connecting GitHub and entering your Mailgun values — no dashboard hunting, no CLI:
+Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. See it live: **[speedwell-cloudflare.gallop.software](https://speedwell-cloudflare.gallop.software/)** — the same template, deployed exactly the way this section describes.
+
+There are three ways to get there. Pick one:
+
+| Approach | Best for |
+|---|---|
+| **Let AI do it** (below) | Gallop AI Editor users — connect Cloudflare once, then paste a prompt |
+| **One-click button** | No terminal at all; Cloudflare walks you through connecting GitHub |
+| **Manual CLI** | You want to run each step yourself |
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gallop-software/speedwell)
 
-Deploying from your machine instead? Secrets are set once with `wrangler`, separately from deploys — so Git-connected builds on Cloudflare pick them up automatically:
+##### Let AI Deploy It For You (Gallop AI Editor)
+
+This is the easiest path. You connect your Cloudflare account once, and your AI assistant handles the entire deployment — building, creating the Worker, and uploading secrets.
+
+**Step 1 — Connect Cloudflare in the Gallop AI Editor.** Once connected, the editor puts your Cloudflare credentials (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) into the terminal environment and makes them available to the AI chat. Wrangler reads those variables automatically, which means **nobody has to run `npx wrangler login`, and no token is ever pasted into a file.**
+
+**Step 2 — Paste this prompt into the AI chat:**
+
+```
+Deploy this site to Cloudflare Workers. My Cloudflare account is already
+connected, so CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are in the
+terminal environment — do not run `wrangler login`.
+
+Please:
+1. Run `npm run cf:setup` to create .env.production from the sample
+2. Ask me for my production URL and Mailgun values, then fill in .env.production
+3. Run `npm run cf:deploy` to build and create the Worker
+4. Run `npm run cf:secrets` to upload the secrets
+5. Tell me the live URL when it's done
+
+Never commit .env.production — it holds real secrets.
+```
+
+The AI will pause at step 2 to collect your values. Everything else runs unattended. First deploy takes a few minutes.
+
+**Step 3 — Follow-up prompts** for anything after the first deploy:
+
+```
+Deploy my latest changes to Cloudflare
+```
+
+```
+I changed my Mailgun API key in .env.production — push the updated secrets to Cloudflare
+```
+
+```
+Rename my Cloudflare Worker to my-business-site and redeploy
+```
+
+```
+My contact form isn't sending email on Cloudflare — check my secrets are set correctly
+```
+
+**If a prompt fails,** paste the error back into the chat. The most common causes are a Cloudflare account that isn't connected yet (so wrangler has no credentials) and running `cf:secrets` before the Worker exists — the AI can diagnose both from the error text.
+
+The rest of this section is the detailed version — what files Cloudflare needs, which ones you create, and what to change when you rename things. **You do not need any of it if you used the prompts above**, but it's what your AI assistant is relying on, and it's worth skimming if something goes wrong.
+
+##### The Three Kinds of Cloudflare Files
+
+Speedwell ships Cloudflare-ready. **If you forked or generated this repo, every config file already exists — you do not create any of them.** The only file you add by hand is `.env.production`.
+
+**1. Config files — already in the repo, keep them**
+
+| File | What it does for Cloudflare |
+|---|---|
+| `wrangler.jsonc` | The Worker manifest. Names the Worker, points at the build output, declares bindings and the `nodejs_compat` flag. Wrangler reads this on every command. |
+| `open-next.config.ts` | Tells the OpenNext adapter how to convert the Next.js build into a Worker. Ships minimal — ISR/R2 caching is commented out and off. |
+| `next.config.mjs` | Its last line calls `initOpenNextCloudflareForDev()`, which makes Cloudflare bindings available during `npm run dev`. It is a no-op in production builds, so **this does not break Vercel**. |
+| `package.json` | Holds the `cf:*` scripts plus `@opennextjs/cloudflare` and `wrangler` as devDependencies. |
+| `.env.production.sample` | Placeholder copy of the secrets you'll need. Safe to commit — it contains no real values. |
+
+**2. Files you create — never committed**
+
+| File | How to create it | Why |
+|---|---|---|
+| `.env.production` | `npm run cf:setup` (copies the sample) | Real secret values. `npm run cf:secrets` reads this file and uploads its contents to Cloudflare's secret store. |
+| `.dev.vars` | Created automatically by `npm run cf:preview` | Local-preview copy of your secrets, the format the Workers runtime expects. |
+
+Both are covered by the `.env*` and `.dev.vars*` rules in `.gitignore`, so they stay out of Git automatically. **Never commit either one.**
+
+**3. Build output — generated, never commit**
+
+| Path | Created by |
+|---|---|
+| `.open-next/` | `npm run cf:build` — contains `worker.js` and the static `assets/` that `wrangler.jsonc` points at |
+| `.wrangler/` | Wrangler's local state and cache |
+| `cloudflare-env.d.ts` | `npm run cf:typegen` — TypeScript types for your bindings |
+
+All three are already gitignored. `.open-next/` does not exist until you build, which is why `cf:deploy` and `cf:preview` always run the build first.
+
+##### Deploy From Your Machine
 
 ```bash
 npm run cf:setup     # scaffolds .env.production
 # edit .env.production with your values
-npx wrangler login   # authenticate with your Cloudflare account (one time; wrangler ships as a dev dependency)
-npm run cf:secrets   # push all .env.production values to the Worker's secret store (run once, or when they change)
-npm run cf:deploy    # build + deploy the code
+npx wrangler login   # one time — SKIP THIS if CLOUDFLARE_API_TOKEN is already set (Gallop AI Editor sets it for you)
+npm run cf:deploy    # build + deploy — creates the Worker on first run
+npm run cf:secrets   # push .env.production to the Worker's secret store (after the Worker exists)
 ```
 
-**How `cf:secrets` knows where to push:** it targets your authenticated Cloudflare
-account plus the Worker named in `wrangler.jsonc` (`"speedwell"`) — no URL involved.
+Order matters: `cf:secrets` cannot create a Worker, so deploy once first. After that, secrets and code are independent — you only re-run `cf:secrets` when a value changes, and every later deploy reuses them.
 
-- **Authenticate first.** Run `npx wrangler login` (OAuth, cached in `~/.wrangler`) or set
-  a `CLOUDFLARE_API_TOKEN` env var. If your account can't be inferred, also set
-  `CLOUDFLARE_ACCOUNT_ID`. Wrangler ships as a dev dependency, so `npx` runs the local
-  copy — no global install needed. Without auth, `cf:secrets` and `cf:deploy` can't reach Cloudflare.
-- **The Worker must already exist.** `cf:secrets` doesn't create it — deploy once first
-  (`npm run cf:deploy` or the first Git-connected build), then push secrets.
-- **Names must match.** The `name` in `wrangler.jsonc` must equal the Worker's actual name
-  in your Cloudflare dashboard. If your Git deploy created it under a different name, update
-  `wrangler.jsonc` to match — otherwise `cf:secrets` pushes to the wrong (or a nonexistent) Worker.
+**How `cf:secrets` finds the right Worker:** it runs `wrangler secret bulk .env.production`, which targets your authenticated Cloudflare account plus the Worker named in `wrangler.jsonc` — no URL involved. It uploads *every* key in the file, `NEXT_PUBLIC_PRODUCTION_URL` included; that one is harmless as a secret but has no effect, because `NEXT_PUBLIC_*` values are inlined at build time rather than read at runtime.
 
-Because secrets live in Cloudflare (not the repo), you only run `cf:secrets` when values change — every subsequent deploy, CLI or Git-connected, reuses them. `NEXT_PUBLIC_PRODUCTION_URL` is build-time; for Git-connected builds set it as a **Build variable** in your Worker's build settings. Local Worker preview: `npm run cf:preview`. Custom domains: Worker **Settings → Domains & Routes**.
+- **Authenticate first.** Either set `CLOUDFLARE_API_TOKEN` in your environment (what the Gallop AI Editor does for you when you connect Cloudflare) or run `npx wrangler login` for OAuth, cached in `~/.wrangler`. If your account can't be inferred from the token, also set `CLOUDFLARE_ACCOUNT_ID`. Wrangler ships as a dev dependency, so `npx` runs the local copy — no global install needed. Without auth, `cf:secrets` and `cf:deploy` can't reach Cloudflare.
+- **Names must match.** The `name` in `wrangler.jsonc` must equal the Worker's actual name in your dashboard. If a Git-connected deploy created it under a different name, update `wrangler.jsonc` to match — otherwise `cf:secrets` pushes to a nonexistent Worker.
+
+##### Renaming the Worker
+
+`wrangler.jsonc` ships with the Worker named `speedwell`. If you rename it, **two values must change together**:
+
+```jsonc
+{
+  "name": "your-site-name",           // ← 1. the Worker name
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "your-site-name"     // ← 2. must be identical to "name"
+    }
+  ]
+}
+```
+
+`WORKER_SELF_REFERENCE` is how the Worker calls itself, which OpenNext relies on. If the two strings drift apart, the deploy succeeds and the site fails at runtime — a confusing failure worth avoiding.
+
+##### Git-Connected Builds
+
+If you connect the repo in the Cloudflare dashboard instead of deploying from your machine:
+
+- **Build command:** `npm run cf:build`
+- **Deploy command:** `npx opennextjs-cloudflare deploy` (the same command `npm run cf:deploy` uses)
+- **Build variables:** set `NEXT_PUBLIC_PRODUCTION_URL` here. Anything prefixed `NEXT_PUBLIC_` is inlined into the JavaScript at build time, so it must exist as a *build* variable — a runtime secret is too late.
+- **Secrets:** `MAILGUN_*` values are read at runtime, so `npm run cf:secrets` (or the dashboard's secret UI) covers them. They do not belong in build variables.
+
+Custom domains live under the Worker's **Settings → Domains & Routes**.
+
+##### Workers Runtime Constraints
+
+Workers is not Node.js, and two limits shape how you write code for it:
+
+- **There is no filesystem.** `fs.readFileSync(process.cwd() + '/_data/...')` does not throw on Workers — it silently returns empty, so your content vanishes with no error. Always import generated JSON through the `@/data/*` alias so it is bundled at build time. This is an enforced Canon rule; see `CLAUDE.md`.
+- **`nodejs_compat` is required.** The flag in `wrangler.jsonc` provides the Node APIs Next.js expects. Removing it breaks the build.
+
+##### Quick Reference
+
+| Command | What it does |
+|---|---|
+| `npm run cf:setup` | Scaffold `.env.production` from the sample |
+| `npm run cf:build` | Regenerate blog data, then build the Worker into `.open-next/` |
+| `npm run cf:preview` | Build and run the real Workers runtime locally |
+| `npm run cf:deploy` | Build and deploy to Cloudflare |
+| `npm run cf:upload` | Build and upload a new Worker version without making it live (staged rollouts) |
+| `npm run cf:secrets` | Push `.env.production` to the Worker's secret store |
+| `npm run cf:typegen` | Regenerate `cloudflare-env.d.ts` from your bindings |
 
 ---
 
