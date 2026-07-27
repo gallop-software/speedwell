@@ -40,29 +40,25 @@ Just chat with AI inside your code editor using our Gallop templates, and you wi
 
 ## Getting Started
 
-New to this? No problem. You'll have AI guiding you the entire way. Choose your editor below and follow the steps.
+New to this? No problem. You'll have AI guiding you the entire way.
 
-### Choose Your Editor
-
-We recommend the **Gallop AI Editor** for the best experience with Gallop templates — whether you're a beginner or an advanced Next.js developer who wants AI-assisted development. It was purpose-built for this workflow and requires zero configuration. VS Code is also a fine choice if you prefer to work without AI assistance.
-
-| | Gallop AI Editor | VS Code |
-|---|---|---|
-| **Best for** | Non-programmers, junior programmers, advanced programmers | Advanced programmers |
-| **AI built in** | Yes — Claude AI ready to go | No (optional extensions available) |
-| **AI setup requirement** | Enter Claude API keys | Install extensions manually |
-| **Template browser** | Built-in marketplace | Download ZIP from GitHub |
-| **Media manager** | Built-in Studio with CDN sync | Manual file management |
-| **Font manager** | Built-in Studio with WOFF2 font generation | No support |
-| **SEO Audit** | Analyze SEO & Structured Data | No support |
-| **Git** | Better Git UI with modal diff viewer | Default Git UI |
-| **Node.js** | Built-in installer and version manager | Install Node.js separately |
-
----
-
-### Option A: Gallop AI Editor (Recommended)
+### The Gallop AI Editor
 
 The Gallop AI Editor is a desktop app built specifically for AI-powered web development for Next.js. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, font manager, SEO & structured data scanner, and a template marketplace — all in one window with nothing to configure.
+
+It was purpose-built for this workflow, whether you're a complete beginner or an advanced Next.js developer who wants AI-assisted development:
+
+| | What you get |
+|---|---|
+| **Best for** | Non-programmers, junior programmers, advanced programmers |
+| **AI built in** | Claude AI ready to go — just enter your API key |
+| **Template browser** | Built-in marketplace |
+| **Media manager** | Built-in Studio with CDN sync |
+| **Font manager** | Built-in Studio with WOFF2 font generation |
+| **SEO Audit** | Analyze SEO & Structured Data |
+| **Git** | Git UI with modal diff viewer |
+| **Node.js** | Built-in installer and version manager |
+| **Deployment** | Connect Vercel or Cloudflare, then let AI deploy for you |
 
 [![Download Gallop AI Editor](https://img.shields.io/badge/Download_Gallop_AI_Editor-166534?style=for-the-badge)](https://gallop.software/)
 
@@ -92,9 +88,26 @@ Available for Mac and Windows.
 
 #### Step 3: Start the Dev Server
 
+Getting your site running locally takes three clicks — **Install**, **Start**, **Preview** — with no typed commands. All of them live in the **Terminal** tab at the bottom of the editor.
+
 1. Click the **Terminal** tab at the bottom of the editor
-2. Click **Install** to install dependencies, then click **Start** to run the dev server
-3. Open [http://localhost:3000](http://localhost:3000) in your browser to see your site
+2. Click **Install** and wait for it to finish — this downloads everything the project needs. It takes a minute or two the first time.
+3. Click **Start** — your site is now running at [http://localhost:3000](http://localhost:3000)
+4. Click **Preview** to open your running site and watch it update as you make changes
+5. Click **Stop** when you're finished for the day
+
+Here's what each button does, and the command it saves you from typing:
+
+| Button | What it does | Equivalent command |
+|---|---|---|
+| **Install** | Downloads the project's dependencies. Run once after cloning, then again any time dependencies change. | `npm install` |
+| **Start** | Starts the development server on port 3000 with hot reload — save a file and the browser updates itself. | `npm run dev` |
+| **Preview** | Opens your running site so you can see your changes. | visiting `localhost:3000` |
+| **Stop** | Shuts the development server down and frees up port 3000. | `Ctrl+C` |
+
+**Leave the server running while you work.** You only need **Start** once per session — the site refreshes on its own every time you or the AI saves a file.
+
+**If something looks stuck** — a change won't appear, or the site won't load — click **Stop**, then **Start**. A clean restart resolves most issues. If **Start** fails complaining that the port is in use, an older server is still running: **Stop** clears it.
 
 #### Step 4: Chat with AI
 
@@ -126,46 +139,6 @@ Optimize the SEO on my homepage
 
 ---
 
-### Option B: VS Code
-
-VS Code is a good choice if you prefer to work without AI assistance. You'll need to install a few things manually.
-
-[![Download VS Code](https://img.shields.io/badge/Download_VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com)
-
-#### Step 1: Install Prerequisites
-
-1. Install [VS Code](https://code.visualstudio.com)
-2. Install [Node.js](https://nodejs.org) (version 20 or higher)
-3. Install [Git](https://git-scm.com)
-
-#### Step 2: Download This Template
-
-Click the green **Code** button at the top of this GitHub page, then click **Download ZIP**. Unzip the folder somewhere easy to find (like your Desktop).
-
-#### Step 3: Open in VS Code
-
-1. Open VS Code
-2. Click **File → Open Folder**
-3. Select the unzipped `speedwell` folder
-4. Click **Open**
-
-#### Step 4: Install and Run
-
-Open the terminal in VS Code (`Ctrl+`` ` on Mac/Windows) and run:
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to see your site. Press `Ctrl+C` to stop the server.
-
-#### Step 5: Start Building
-
-Edit files directly in VS Code. Refer to the [Project Structure](#project-structure) and [Available Scripts](#available-scripts) sections below for guidance.
-
----
-
 ### Join the Community
 
 Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
@@ -176,17 +149,21 @@ Connect with other Gallop users on Slack. Share your progress, swap AI prompting
 
 ## Put Your Site Online
 
-When you're ready to share your site with the world, you'll need a free [GitHub](https://github.com) account to store your code and a free [Vercel](https://vercel.com) account to host your site.
+When you're ready to share your site with the world, you'll need a free [GitHub](https://github.com) account to store your code, plus a free hosting account — either [Vercel](https://vercel.com) or [Cloudflare](https://cloudflare.com).
 
-### The Easy Way
+### The Easy Way: Let AI Deploy It
 
-Just ask your AI assistant:
+In the Gallop AI Editor, connect your hosting account first. The editor puts the credentials into your terminal and AI chat, so the assistant can deploy on your behalf without you ever copying a token into a file.
+
+Then just ask:
 
 ```
-Help me create a GitHub account, push this project to GitHub, and deploy to Vercel
+Help me create a GitHub account, push this project to GitHub, and deploy it
 ```
 
 The AI will walk you through every step. When you're done, your site will be live with a URL you can share.
+
+Already know which host you want? Skip ahead to the ready-made prompts for [Vercel](#step-3-deploy-to-vercel) or [Cloudflare](#alternative-deploy-to-cloudflare-workers).
 
 ### For Technical Users
 
@@ -217,9 +194,22 @@ Open [http://localhost:3000](http://localhost:3000) to view your site. Press `Ct
 
 #### Step 3: Deploy to Vercel
 
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with_Vercel-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?demo-title=Speedwell&demo-description=An%20artistic%20website%20template%20for%20creatives%20and%20small%20businesses%20who%20want%20to%20build%20at%20the%20speed%20of%20thought%20with%20AI%2C%20look%20more%20professional%20than%20the%20competition%2C%20and%20rank%20%231%20on%20Google.&demo-url=https%3A%2F%2Fspeedwell.gallop.software&demo-image=https%3A%2F%2Fspeedwell.gallop.software%2Fimages%2Fscreenshot-md.jpg&from=templates&project-name=speedwell&repository-name=speedwell&repository-url=https%3A%2F%2Fgithub.com%2Fgallop-software%2Fspeedwell)
+Connect your Vercel account in the Gallop AI Editor, then paste this into the AI chat:
 
-Select your repository, and Vercel will automatically deploy whenever you push changes.
+```
+Deploy this site to Vercel. My Vercel account is already connected.
+
+Please:
+1. Push my latest changes to GitHub
+2. Link this project to Vercel and deploy it to production
+3. Ask me for my Mailgun values, then add them as environment variables
+   (see .env.production.sample for the full list)
+4. Tell me the live URL when it's done
+
+Never commit .env.production — it holds real secrets.
+```
+
+Prefer to do it yourself? Import your repository at [vercel.com/new](https://vercel.com/new). Vercel detects Next.js automatically and redeploys on every push. Add the values from `.env.production.sample` under **Settings → Environment Variables**.
 
 Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
 
@@ -227,15 +217,12 @@ Congratulations! Your site is now live to the world. Share your new URL and star
 
 Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. See it live: **[speedwell-cloudflare.gallop.software](https://speedwell-cloudflare.gallop.software/)** — the same template, deployed exactly the way this section describes.
 
-There are three ways to get there. Pick one:
+There are two ways to get there. Pick one:
 
 | Approach | Best for |
 |---|---|
 | **Let AI do it** (below) | Gallop AI Editor users — connect Cloudflare once, then paste a prompt |
-| **One-click button** | No terminal at all; Cloudflare walks you through connecting GitHub |
 | **Manual CLI** | You want to run each step yourself |
-
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gallop-software/speedwell)
 
 ##### Let AI Deploy It For You (Gallop AI Editor)
 
