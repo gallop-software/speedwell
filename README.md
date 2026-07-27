@@ -121,9 +121,16 @@ Press `Cmd+J` to show the AI panel on the right. Click the **+** in its header a
 
 | Card | What it is |
 |---|---|
-| **AI Chat** | The built-in assistant. Message bubbles, plan mode, and an Insert target for screenshots. Start here. |
-| **Claude Code** | The full Claude Code terminal experience, running inside the panel. |
+| **AI Chat** | Gallop's own chat interface — message bubbles, plan mode, and the target for screenshots you insert. Start here. |
+| **Claude Code** | Claude Code itself, running as a terminal inside the panel. |
 | **Terminal** | A plain shell, for when you want to run something yourself. |
+
+**Both AI options are Claude Code.** Gallop's AI Chat runs Claude Code under the hood and puts a friendlier interface on top of it; the Claude Code card gives you the same engine as its normal terminal interface. Same capabilities, same access to your project — pick whichever you find easier to read.
+
+- **New to this?** Use **AI Chat**. Answers render as formatted text, file changes are easier to follow, and screenshots insert straight into the conversation.
+- **Already use Claude Code?** Use the **Claude Code** card. Everything works the way you're used to, including slash commands and your existing habits.
+
+You can run both at once in separate tabs — they're independent sessions.
 
 Pick **AI Chat**, then just ask:
 
@@ -177,14 +184,14 @@ The AI panel lives on the right and is where most of your work happens.
 - `Cmd+T` opens a new tab; `Cmd+Shift+[` and `Cmd+Shift+]` cycle between them. You can drag tabs to reorder them.
 - Every tab has a `×`. Close the last one and you're back at the AI Chat / Claude Code / Terminal picker.
 
-**Agent mode vs Plan mode** — press `Cmd+.` to switch the active AI Chat tab between them.
+**Agent mode vs Plan mode** — on an AI Chat tab, press `Cmd+.` to switch between them. (Claude Code tabs have their own mode controls, so `Cmd+.` doesn't apply there.)
 
 | Mode | Behavior | Use it when |
 |---|---|---|
 | **Agent** | AI edits your files directly. | You trust the change — most of the time. |
 | **Plan** | AI describes what it intends to do and waits for your approval. | The change is large or you want to learn what it's doing. |
 
-Two slash commands are worth knowing: `/new` starts a fresh conversation, and `/compact` summarizes a long one so you can keep going without losing the thread.
+Two AI Chat slash commands are worth knowing: `/new` starts a fresh conversation, and `/compact` summarizes a long one so you can keep going without losing the thread.
 
 **Which AI you're using** is set in the panel's settings gear: **Gallop AI** (prepaid balance, nothing to configure), **Your API Key** (bring your own Anthropic key), or **Subscription** (your existing Claude login). Sessions pick up the setting when they start, so change it *before* opening a chat tab.
 
@@ -249,8 +256,9 @@ On Windows, use `Ctrl` wherever this says `Cmd`.
 
 ### Join the Community
 
-Connect with other Gallop users on Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
+Connect with other Gallop users on Discord or Slack. Share your progress, swap AI prompting tips, and see how non-programmers are building websites that once required a seasoned software engineer.
 
+[![Join Discord](https://img.shields.io/badge/Join_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/jJw8xrhFj)
 [![Join Slack](https://img.shields.io/badge/Join_Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://gallop-software.slack.com/)
 
 ---
@@ -722,6 +730,7 @@ Build-time tools for content and asset generation:
 
 - **Documentation:** [gallop.software](https://gallop.software)
 - **Issues:** [GitHub Issues](https://github.com/gallop-software/speedwell/issues)
+- **Discord:** [Join Community](https://discord.gg/jJw8xrhFj)
 - **Slack:** [Join Community](https://join.slack.com/t/gallop-software/shared_invite/zt-358q3rdrp-H6kKvKzpR2qgB5xJviAOcw)
 - **Professional Services:** [Web Plant Media, LLC](https://webplant.media)
 
