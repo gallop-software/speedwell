@@ -14,7 +14,7 @@ An artistic website template for creatives and small businesses who want to buil
 
 ## Why Use Gallop Templates?
 
-Just chat with AI inside your code editor using our Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and AI writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and cute custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our [Gallop community](https://gallop-software.slack.com/). Go live in minutes.
+Just chat with AI inside our Gallop AI Editor using Gallop templates, and you will never want to design a site with WordPress again. Simply describe what you want, and AI writes the code. No CMS, no page builders, no endless options fields, and no design limitations. Just type and watch. Build fun and creative custom layouts, add smooth animations, configure your SEO and AI discoverability instantly, expand endlessly, and get prompting tips from our [Gallop community](https://gallop-software.slack.com/). Go live in minutes.
 
 [![Watch: Design your site by chatting with AI](https://img.shields.io/badge/Watch:_Design_your_site_by_chatting_with_AI-166534?style=for-the-badge)](https://gallop.software/#learn-more)
 
@@ -44,15 +44,15 @@ New to this? No problem. You'll have AI guiding you the entire way.
 
 ### The Gallop AI Editor
 
-The Gallop AI Editor is a desktop app built specifically for AI-powered web development for Next.js. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, font manager, SEO & structured data scanner, and a template marketplace — all in one window with nothing to configure.
+The [Gallop AI Editor](https://gallop.software/) is a desktop app built specifically for AI-powered web development for Next.js. It includes everything you need — code editor, AI assistant, Git, terminal, media manager, font manager, SEO & structured data scanner, and a gallery of open-source templates — all in one window with nothing to configure.
 
 It was purpose-built for this workflow, whether you're a complete beginner or an advanced Next.js developer who wants AI-assisted development:
 
 | | What you get |
 |---|---|
 | **Best for** | Non-programmers, junior programmers, advanced programmers |
-| **AI built in** | Claude AI ready to go — just enter your API key |
-| **Template browser** | Built-in marketplace |
+| **AI built in** | Claude ready to go — use Gallop AI with no setup, your Claude Max or Pro plan, or your own API key |
+| **Template gallery** | Built in, and every template is free and open source |
 | **Media manager** | Built-in Studio with CDN sync |
 | **Font manager** | Built-in Studio with WOFF2 font generation |
 | **SEO Audit** | Analyze SEO & Structured Data |
@@ -193,7 +193,15 @@ The AI panel lives on the right and is where most of your work happens.
 
 Two AI Chat slash commands are worth knowing: `/new` starts a fresh conversation, and `/compact` summarizes a long one so you can keep going without losing the thread.
 
-**Which AI you're using** is set in the panel's settings gear: **Gallop AI** (prepaid balance, nothing to configure), **Your API Key** (bring your own Anthropic key), or **Subscription** (your existing Claude login). Sessions pick up the setting when they start, so change it *before* opening a chat tab.
+**How you pay for AI** is set in the panel's settings gear. There are three options, and none of them require you to have an API key:
+
+| Option | What it uses | Good for |
+|---|---|---|
+| **Gallop AI** | Our proxy, billed from a prepaid balance | Getting started — nothing to sign up for or configure |
+| **Subscription** | Your existing **Claude Max or Pro** plan | You already pay Anthropic monthly and want to use that |
+| **Your API Key** | Your own Anthropic API key | You'd rather be billed by Anthropic per request |
+
+Sessions pick up this setting when they start, so change it *before* opening a chat tab.
 
 ### Showing AI What You See
 
@@ -216,12 +224,24 @@ Studio keeps its records in `_data/_studio.json`. That file is generated — let
 
 ### SEO
 
-`Cmd+5` runs three checks on any page: on-page SEO (titles and descriptions, with a rating on whether each is too short or too long), a comparison of what search engines see versus what loads in the browser, and validation of your structured data.
+`Cmd+5` opens the SEO view. You run a report yourself — the AI can't trigger one for you:
 
-Ask AI to fix what it finds:
+1. Type or paste the URL you want to check (your local site works: `http://localhost:3000`)
+2. Pick a report from the dropdown
+3. Click **Analyze**
+
+| Report | What it tells you |
+|---|---|
+| **Analyze On-Page SEO** | Titles and descriptions, each rated from "Missing" through "Too long" so you can see what to tighten |
+| **HTML vs DOM** | What search engines receive versus what loads in the browser — catches content that only appears after JavaScript runs |
+| **Analyze Structured Data** | Whether the JSON-LD that search engines and AI assistants read is valid |
+
+Each report opens in its own tab, so you can check several pages side by side.
+
+Once you have the results, hand them to AI: screenshot the report with `Cmd+Shift+S` and insert it into a chat, or paste the details in. Then ask for what you want:
 
 ```
-Run the SEO report on my homepage and fix everything it flags
+Here's the SEO report for my homepage. Fix everything it flags.
 ```
 
 ### Source Control
@@ -265,7 +285,7 @@ Connect with other Gallop users on Discord or Slack. Share your progress, swap A
 
 ## Put Your Site Online
 
-Your code is already on GitHub — you're signed in inside the editor, and your repository was created when you started the project. All that's left is a free hosting account: either [Vercel](https://vercel.com) or [Cloudflare](https://cloudflare.com).
+Your code is already on GitHub — you're signed in inside the editor, and your repository was created when you started the project. All that's left is a hosting account: either [Vercel](https://vercel.com/pricing) or [Cloudflare](https://www.cloudflare.com/plans/developer-platform/). Check their current plans before you pick — pricing and what each tier allows change over time.
 
 ### The Easy Way: Let AI Deploy It
 
@@ -474,14 +494,14 @@ Speedwell is part of the [Gallop](https://gallop.software) template ecosystem. G
 
 ### Gallop AI Editor
 
-The [Gallop AI Editor](https://gallop.software/) is a desktop code editor built specifically for AI-powered web development. It combines a full code editor, Claude AI assistant, visual Git interface, integrated terminal, media manager, and template marketplace into one app. Everything is preconfigured to work with Gallop templates out of the box — no extensions, no plugins, no setup.
+The [Gallop AI Editor](https://gallop.software/) is a desktop code editor built specifically for AI-powered web development. It combines a full code editor, Claude AI assistant, visual Git interface, integrated terminal, media manager, and template gallery into one app. Everything is preconfigured to work with Gallop templates out of the box — no extensions, no plugins, no setup.
 
 **Key highlights:**
 
 - **Claude AI built in** — Chat with Claude to write code, debug issues, and learn as you go, with the latest Claude models available out of the box
 - **Agent and Plan modes** — Agent mode lets AI apply changes automatically. Plan mode shows you what AI wants to do before it does it, so you stay in control
 - **Screenshot capture** — Press `Cmd+Shift+S` to screenshot your running site and share it with AI for visual feedback
-- **Built-in template marketplace** — Browse Gallop templates and start one in a single click: your own GitHub repository created and cloned locally without leaving the editor
+- **Built-in template gallery** — Browse the Gallop templates, all free and open source, and start one in a single click: your own GitHub repository created and cloned locally without leaving the editor
 - **Visual Git** — Stage, commit, and merge with a 3-column visual interface. No command line required
 - **Studio media manager** — Manage images, fonts, and assets with thumbnail previews and CDN sync
 - **Node.js manager** — Install and switch Node.js versions without touching the terminal
