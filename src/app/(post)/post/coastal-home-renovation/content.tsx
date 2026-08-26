@@ -1,0 +1,86 @@
+import Link from 'next/link'
+import { Image } from '@/components/image'
+import { PageHeader } from '@/components/page-header'
+import { P } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
+
+const TITLE = 'Coastal Home Renovation'
+
+function Details() {
+  return (
+    <>
+      <Image
+        src="/portfolio/pexels-burst-545012.jpg"
+        alt="Renovated coastal home with ocean-inspired design"
+        size="large"
+        wrap={true}
+      />
+
+      <P>
+        This stunning coastal residence received a complete interior makeover
+        that celebrates its beachfront location. We embraced a fresh, airy
+        aesthetic with a soft color palette of whites, blues, and natural
+        textures. The renovation included opening up the main living areas to
+        capture ocean views, installing custom built-in cabinetry for seamless
+        storage, and selecting durable yet elegant materials that can withstand
+        the coastal climate.
+      </P>
+
+      <P>
+        Shiplap walls, whitewashed oak floors, and linen furnishings create a
+        relaxed sophistication perfect for seaside living. Our design
+        incorporated sustainable materials and energy-efficient systems while
+        maintaining the home's timeless appeal. For similar relaxed aesthetics,
+        explore our{' '}
+        <Link
+          href="/post/coastal-cottage-refresh"
+          prefetch={true}
+        >
+          Coastal Cottage Refresh
+        </Link>{' '}
+        or see how we approached a{' '}
+        <Link
+          href="/post/scandinavian-apartment"
+          prefetch={true}
+        >
+          Scandinavian Apartment
+        </Link>{' '}
+        with the same light and airy philosophy.
+      </P>
+
+      <P>
+        Coastal design principles translate beautifully to modern urban spaces
+        that crave the same sense of openness and natural light. The emphasis on
+        clean lines, neutral palettes, and uncluttered spaces creates
+        environments that feel both serene and contemporary. To see how we
+        achieve similar airiness in city settings, explore our{' '}
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
+          Modern Loft Transformation
+        </Link>{' '}
+        project, where industrial architecture meets light-filled living through
+        thoughtful design.
+      </P>
+    </>
+  )
+}
+
+export function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
+    </>
+  )
+}

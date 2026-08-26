@@ -1,0 +1,87 @@
+import Link from 'next/link'
+import { Image } from '@/components/image'
+import { PageHeader } from '@/components/page-header'
+import { P } from '@/components/paragraph'
+import { Heading } from '@/components/heading'
+
+const TITLE = 'Industrial Office Conversion'
+
+function Details() {
+  return (
+    <>
+      <Image
+        src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+        alt="Industrial office space with exposed brick and modern furnishings"
+        size="large"
+        wrap={true}
+      />
+
+      <P>
+        A former warehouse space was transformed into a stunning creative office
+        environment that celebrates its industrial heritage while providing
+        modern workplace functionality. We preserved exposed brick walls,
+        original wood beams, and concrete floors, complementing them with
+        contemporary furnishings and state-of-the-art technology. Large factory
+        windows flood the space with natural light, while new HVAC systems and
+        acoustic treatments ensure comfort.
+      </P>
+
+      <P>
+        The open-plan workspace includes flexible collaboration areas, phone
+        booths for privacy, and a central kitchen that serves as the social
+        hub—similar to the transformation in our{' '}
+        <Link
+          href="/post/modern-loft-transformation"
+          prefetch={true}
+        >
+          modern loft transformation
+        </Link>
+        . Industrial-style pendant lighting, metal accents, and reclaimed wood
+        furniture reinforce the aesthetic. We incorporated biophilic design
+        elements with living plant walls and natural materials to balance the
+        hard industrial surfaces, an approach that also influenced our{' '}
+        <Link
+          href="/post/creative-coworking-space"
+          prefetch={true}
+        >
+          creative coworking space
+        </Link>{' '}
+        project.
+      </P>
+
+      <P>
+        Adaptive reuse projects like this warehouse conversion demonstrate how
+        existing structures can be reimagined for modern work styles while
+        retaining the character that makes each space unique. Companies seeking
+        to create inspiring environments for their teams can find additional
+        inspiration in our{' '}
+        <Link
+          href="/post/tech-startup-headquarters"
+          prefetch={true}
+        >
+          tech startup headquarters
+        </Link>{' '}
+        project, where we designed a space that fosters innovation and
+        collaboration.
+      </P>
+    </>
+  )
+}
+
+export function Content() {
+  return (
+    <>
+      <PageHeader>{TITLE}</PageHeader>
+      <Details />
+    </>
+  )
+}
+
+export function BlogContent() {
+  return (
+    <>
+      <Heading as="h2">{TITLE}</Heading>
+      <Details />
+    </>
+  )
+}
