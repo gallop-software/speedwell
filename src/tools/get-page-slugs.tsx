@@ -1,9 +1,10 @@
-import { readdirSync, statSync, existsSync } from 'fs'
+import { readdirSync, readFileSync, existsSync } from 'fs'
 import path from 'path'
 
 type PageSlugItem = {
   slug: string
-  modified: string
+  /** The page's metadata.modifiedDate, when it has one. */
+  modified?: string | undefined
   uri: string
 }
 
@@ -12,6 +13,17 @@ const EXCLUDED_FOLDERS = [
   'api',
   'post', // Posts are handled separately
 ]
+
+/**
+ * The page's own metadata.modifiedDate. File modification times are not used:
+ * they reflect when the build machine wrote the file, so they differed between
+ * Vercel and Cloudflare and changed on every checkout.
+ */
+function modifiedDate(pagePath: string): string | undefined {
+  return readFileSync(pagePath, 'utf8').match(
+    /\bmodifiedDate:\s*['"]([^'"]+)['"]/
+  )?.[1]
+}
 
 export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
   const appDir = path.join(process.cwd(), 'src/app')
@@ -23,10 +35,9 @@ export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
     // Check for home page (page.tsx directly in route group)
     const homePagePath = path.join(routeGroupPath, 'page.tsx')
     if (existsSync(homePagePath)) {
-      const stats = statSync(homePagePath)
       out.push({
         slug: '',
-        modified: stats.mtime.toISOString(),
+        modified: modifiedDate(homePagePath),
         uri: '/',
       })
     }
@@ -39,10 +50,9 @@ export async function getPageSlugs(): Promise<{ pageSlugs: PageSlugItem[] }> {
 
       const pagePath = path.join(routeGroupPath, entry.name, 'page.tsx')
       if (existsSync(pagePath)) {
-        const stats = statSync(pagePath)
         out.push({
           slug: entry.name,
-          modified: stats.mtime.toISOString(),
+          modified: modifiedDate(pagePath),
           uri: '/' + entry.name,
         })
       }

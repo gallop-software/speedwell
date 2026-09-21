@@ -43,7 +43,7 @@
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
     "cf:setup": "cp -n .env.production.sample .env.production 2>/dev/null; echo 'Edit .env.production, then run: npm run cf:secrets (push secrets) and deploy'",
-    "cf:build": "npm run blog && opennextjs-cloudflare build",
+    "cf:build": "npm run blog && NEXT_PUBLIC_PRODUCTION_URL=https://speedwell-cloudflare.gallop.software opennextjs-cloudflare build",
     "cf:preview": "cp .env.production .dev.vars 2>/dev/null; npm run cf:build && opennextjs-cloudflare preview",
     "cf:deploy": "npm run cf:build && opennextjs-cloudflare deploy",
     "cf:upload": "npm run cf:build && opennextjs-cloudflare upload",

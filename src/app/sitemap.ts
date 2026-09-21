@@ -16,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const pages = pageSlugs.map((item) => ({
     url: baseURL + item.uri,
-    lastModified: new Date(item.modified),
+    ...(item.modified && { lastModified: new Date(item.modified) }),
     changeFrequency: 'weekly' as const,
   }))
 
