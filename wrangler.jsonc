@@ -14,6 +14,15 @@
       "service": "speedwell"
     }
   ],
+  // Cloudflare Email Service, used for form mail when EMAIL_DOMAIN is set. The
+  // sending domain must be onboarded under Compute > Email Service > Email
+  // Sending. In `npm run dev` the binding is simulated and no mail leaves the
+  // machine; add "remote": true to send for real (needs a Cloudflare login).
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
+  ],
   "images": {
     "binding": "IMAGES"
   },

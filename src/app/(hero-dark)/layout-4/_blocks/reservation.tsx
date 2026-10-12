@@ -1,7 +1,13 @@
 import { Section } from '@/components/section'
 import { Columns, Column } from '@/components/columns'
 import { Heading } from '@/components/heading'
-import { Form, FormInput, FormTextArea, FormButton } from '@/components/form'
+import {
+  Form,
+  FormInput,
+  FormTextArea,
+  FormButton,
+  FormProtection,
+} from '@/components/form'
 import { Image } from '@/components/image'
 import { Accent } from '@/components/accent'
 import { Paragraph } from '@/components/paragraph'
@@ -105,6 +111,7 @@ export default function Reservation() {
               rows={2}
               label="Special Requests"
             />
+            <FormProtection />
             <FormButton
               name="submit"
               label="Request Reservation"

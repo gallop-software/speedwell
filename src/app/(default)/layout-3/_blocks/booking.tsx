@@ -9,6 +9,7 @@ import {
   FormButton,
   DatePickerInput,
   TimePickerInput,
+  FormProtection,
 } from '@/components/form'
 import { Grid } from '@/components/grid'
 
@@ -96,6 +97,7 @@ export default function Booking() {
             required
             className="bg-accent/5!"
           />
+          <FormProtection />
           <div className="flex justify-center mt-8">
             <FormButton
               name="submit"

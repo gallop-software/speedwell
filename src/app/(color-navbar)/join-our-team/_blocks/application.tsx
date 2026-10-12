@@ -10,6 +10,7 @@ import {
   FormCheckboxGroup,
   FormButton,
   FormName,
+  FormProtection,
 } from '@/components/form'
 
 export default function Application() {
@@ -185,6 +186,7 @@ export default function Application() {
           placeholder="Relationship"
           label="Reference 2 Relationship"
         />
+        <FormProtection />
         <FormButton
           name="submit"
           label="Submit Application"

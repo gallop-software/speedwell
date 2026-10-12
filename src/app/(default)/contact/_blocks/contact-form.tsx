@@ -1,7 +1,13 @@
 import { Section } from '@/components/section'
 import { Columns, Column } from '@/components/columns'
 import { Heading } from '@/components/heading'
-import { Form, FormInput, FormTextArea, FormButton } from '@/components/form'
+import {
+  Form,
+  FormInput,
+  FormTextArea,
+  FormButton,
+  FormProtection,
+} from '@/components/form'
 import { Image } from '@/components/image'
 import { Accent } from '@/components/accent'
 
@@ -49,6 +55,7 @@ export default function ContactForm() {
               label="Message"
               required
             />
+            <FormProtection />
             <FormButton
               name="submit"
               label="Send Message"

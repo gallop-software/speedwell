@@ -1,16 +1,18 @@
+import { sendEmail, type EmailAttachment } from '@/utils/send-email'
 import { studioUrl } from '@/utils/studio-helpers'
 import { NextResponse } from 'next/server'
 
 export const runtime = 'nodejs'
 
-function encodeFormData(data: Record<string, any>) {
-  const fd = new FormData()
-  for (const [k, v] of Object.entries(data)) {
-    if (Array.isArray(v)) for (const item of v) fd.append(k, item as any)
-    else if (v !== undefined && v !== null) fd.append(k, v as any)
-  }
-  return fd
-}
+// Fields the form posts that are not part of the message
+const TURNSTILE_FIELD = 'cf-turnstile-response'
+const HONEYPOT_FIELD = 'companyWebsite'
+const HIDDEN_FIELDS = ['emailSubject', TURNSTILE_FIELD, HONEYPOT_FIELD]
+
+const MAX_FIELDS = 30
+const MAX_VALUE_LENGTH = 5000
+const MAX_FILES = 5
+const MAX_FILES_BYTES = 4 * 1024 * 1024
 
 function escapeHtml(s: string) {
   return s
@@ -38,12 +40,19 @@ function renderValueCell(v: unknown): string {
   return escapeHtml(JSON.stringify(v))
 }
 
+// Email clients need an absolute URL; locally served images resolve to a path
+function emailImageUrl(src: string): string {
+  const url = studioUrl(src)
+  if (url.startsWith('/')) {
+    return `${process.env.NEXT_PUBLIC_PRODUCTION_URL}${url}`
+  }
+  return url
+}
+
 function renderEmailHtml(payload: Record<string, any>) {
   const rows: string[] = []
 
   for (const [key, val] of Object.entries(payload)) {
-    if (key === 'emailSubject') continue
-
     // files
     if (key === 'files') {
       if (Array.isArray(val) && val.length) {
@@ -53,10 +62,6 @@ function renderEmailHtml(payload: Record<string, any>) {
         const label = escapeHtml(val[0]?.label ?? key)
         rows.push(
           `<p class="row"><strong class="key">${label}:</strong><span class="val">${fileNames}</span></p>`
-        )
-      } else {
-        rows.push(
-          `<p class="row"><strong class="key">${escapeHtml(key)}:</strong><span class="val"></span></p>`
         )
       }
       continue
@@ -89,13 +94,12 @@ function renderEmailHtml(payload: Record<string, any>) {
       .row{margin:0 0 20px 0;line-height:1.45;font-size: 1.2rem;}
       .key{font-weight:700;margin-right:.35rem;display:inline-block}
       .val{display:inline}
-      .multiline{white-space:pre-wrap;background:#f7f7f7;border-radius:6px;padding:8px;display:inline-block}
     </style>
     </head>
     <body>
       <div class="container">
         <div class="content">
-          <img class="logo" src="${studioUrl('/images/logo.png')}" alt="Logo" />
+          <img class="logo" src="${emailImageUrl('/images/logo.png')}" alt="Logo" />
           ${rows.join('')}
         </div>
       </div>
@@ -103,14 +107,87 @@ function renderEmailHtml(payload: Record<string, any>) {
     </html>`
 }
 
+function fieldValue(payload: Record<string, any>, key: string): string {
+  const value = payload[key]?.value
+  return typeof value === 'string' ? value.trim() : ''
+}
+
+function reject(message: string, status = 400) {
+  return NextResponse.json({ message }, { status })
+}
+
+/** Returns a message for the visitor when the submission is not acceptable. */
+function validate(payload: Record<string, any>): string | null {
+  const keys = Object.keys(payload)
+  if (!keys.length || keys.length > MAX_FIELDS) return 'Invalid submission.'
+
+  for (const [key, val] of Object.entries(payload)) {
+    if (key === 'files') continue
+    const value = val?.value
+    const text = Array.isArray(value) ? value.join(', ') : value
+    if (typeof text !== 'string' || text.length > MAX_VALUE_LENGTH) {
+      return 'Invalid submission.'
+    }
+  }
+
+  const email = fieldValue(payload, 'email')
+  const phone = fieldValue(payload, 'phone')
+
+  if (!email && !phone) {
+    return 'Please enter a phone number or an email address so we can reach you.'
+  }
+  // Also keeps line breaks out of the Reply-To header
+  if (email && !/^[^\s@<>"',;]+@[^\s@<>"',;]+\.[^\s@<>"',;]+$/.test(email)) {
+    return 'Please enter a valid email address.'
+  }
+  return null
+}
+
+async function verifyTurnstile(token: string, ip: string | null) {
+  const secret = process.env.TURNSTILE_SECRET_KEY
+  if (!secret) {
+    // No widget configured (local development); the honeypot still applies
+    return true
+  }
+  if (!token) return false
+
+  const body = new URLSearchParams({ secret, response: token })
+  if (ip) body.set('remoteip', ip)
+
+  const resp = await fetch(
+    'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+    { method: 'POST', body }
+  )
+  const result = (await resp.json().catch(() => ({}))) as { success?: boolean }
+  return result.success === true
+}
+
 export async function POST(req: Request) {
   const payload = (await req.json().catch(() => ({}))) as Record<string, any>
 
-  const emailSubjectValue = payload.emailSubject?.value
-    ? String(payload.emailSubject.value)
-    : 'Form Submission'
+  // Bots fill the hidden field. Answer as if it worked and send nothing.
+  if (fieldValue(payload, HONEYPOT_FIELD)) {
+    return NextResponse.json({ message: 'Message sent. Thank you.' })
+  }
+
+  const invalid = validate(payload)
+  if (invalid) return reject(invalid)
+
+  const verified = await verifyTurnstile(
+    fieldValue(payload, TURNSTILE_FIELD),
+    // Cloudflare's header, then the one Vercel sets
+    req.headers.get('cf-connecting-ip') ||
+      req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      null
+  )
+  if (!verified) {
+    return reject('Verification failed. Please reload the page and try again.')
+  }
+
+  const emailSubjectValue =
+    fieldValue(payload, 'emailSubject') || 'Form Submission'
   const displayPayload = { ...payload }
-  delete (displayPayload as any).emailSubject
+  for (const key of HIDDEN_FIELDS) delete displayPayload[key]
 
   const html = renderEmailHtml(displayPayload)
 
@@ -120,62 +197,45 @@ export async function POST(req: Request) {
     ''
   )
 
-  const first =
-    payload.firstName?.value ||
-    payload.firstname?.value ||
-    payload.name?.value ||
-    ''
-  const last = payload.lastName?.value || payload.lastname?.value || ''
-  const email = payload.email?.value || payload.contactEmail?.value || undefined
-  const displayName = [first, last].filter(Boolean).join(' ') || first || email
+  const first = fieldValue(payload, 'firstName') || fieldValue(payload, 'name')
+  const last = fieldValue(payload, 'lastName')
+  const email = fieldValue(payload, 'email')
+  // The name goes into the subject and Reply-To headers
+  const displayName = [first, last]
+    .filter(Boolean)
+    .join(' ')
+    .replace(/[\r\n"<>]/g, ' ')
+    .slice(0, 100)
 
   const subject = displayName
     ? `${displayName}: ${emailSubjectValue} ${productionUrlClean}`
     : `${emailSubjectValue} ${productionUrlClean}`
 
-  const body: Record<string, any> = {
-    from: `${process.env.MAILGUN_FROM_NAME} <contact@${process.env.MAILGUN_DOMAIN_NAME}>`,
-    to: isDevelopment
-      ? `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`
-      : `${process.env.MAILGUN_FROM_NAME} <${process.env.MAILGUN_SMTP_MAIL}>`,
-    ...(!isDevelopment && {
-      bcc: [
-        `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`,
-        ...(email ? [`${displayName} <${email}>`] : []),
-      ],
-    }),
-    ...(email ? { 'h:Reply-To': `${displayName} <${email}>` } : {}),
-    subject,
-    html,
-  }
-
   // Attach files from base64 (client already encodes)
   const files = Array.isArray(payload.files) ? payload.files : []
-  if (files.length) {
-    body.attachment = files.map((file: any) => {
-      const buffer = Buffer.from(file.base64.split(',')[1], 'base64')
-      return new File([buffer], file.name, { type: file.type })
-    })
-  }
-
-  const resp = await fetch(
-    `https://api.mailgun.net/v3/${process.env.MAILGUN_DOMAIN_NAME}/messages`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${Buffer.from(`api:${process.env.MAILGUN_API_KEY}`).toString('base64')}`,
-      },
-      body: encodeFormData(body),
-    }
+  if (files.length > MAX_FILES) return reject('Too many attachments.')
+  const attachments: EmailAttachment[] = files.map((file: any) => ({
+    content: String(file.base64).split(',')[1] || '',
+    filename: String(file.name || 'attachment'),
+    type: String(file.type || 'application/octet-stream'),
+  }))
+  const attachmentBytes = attachments.reduce(
+    (total, file) => total + file.content.length * 0.75,
+    0
   )
-
-  const text = await resp.text()
-  let ok = false
-  try {
-    ok = text !== 'Forbidden' && Boolean(JSON.parse(text).id)
-  } catch {
-    ok = false
+  if (attachmentBytes > MAX_FILES_BYTES) {
+    return reject('Attachments are too large.')
   }
+
+  const ok = await sendEmail({
+    subject,
+    html,
+    ...(email && {
+      replyTo: { email, ...(displayName && { name: displayName }) },
+    }),
+    attachments,
+    devOnly: isDevelopment,
+  })
 
   return NextResponse.json(
     { message: ok ? 'Message sent. Thank you.' : 'An error occurred.' },

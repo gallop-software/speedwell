@@ -13,6 +13,7 @@ import { FormName, FormFirstName, FormLastName } from './form-name'
 import { FormButton, type FormButtonProps } from './form-button'
 import { DatePickerInput } from './date-picker'
 import { TimePickerInput } from './time-picker'
+import { FormProtection } from './form-protection'
 
 // ============================================================================
 // Main Form Component
@@ -52,9 +53,7 @@ function Form({
     let submitMessage = ''
 
     const submitter = (e.nativeEvent as SubmitEvent)?.submitter as
-      | HTMLButtonElement
-      | HTMLInputElement
-      | null
+      HTMLButtonElement | HTMLInputElement | null
 
     const buttonMessage = submitter?.getAttribute?.('data-message') || null
     const hasButtonMessage = Boolean(buttonMessage)
@@ -115,7 +114,7 @@ function Form({
       obj[key] = { value: val, label }
     }
 
-    const api = '/api/submit-form/'
+    const api = '/api/submit-form'
     const response = await fetch(api, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -131,8 +130,14 @@ function Form({
         })
       form.dispatchEvent(new Event('form-cleared', { bubbles: true }))
     } else {
-      submitMessage = 'An error occurred.'
+      const result = (await response.json().catch(() => null)) as {
+        message?: string
+      } | null
+      submitMessage = result?.message || 'An error occurred.'
     }
+
+    // A Turnstile token can be used once, so get a fresh one for a retry
+    ;(window as any).turnstile?.reset()
 
     setIsLoading(false)
     setStatus(submitMessage)
@@ -190,6 +195,7 @@ export {
   FormName,
   FormFirstName,
   FormLastName,
+  FormProtection,
   DatePickerInput,
   TimePickerInput,
 }

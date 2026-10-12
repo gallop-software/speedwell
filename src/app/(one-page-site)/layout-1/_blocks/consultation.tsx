@@ -8,6 +8,7 @@ import {
   FormName,
   FormRadioGroup,
   FormCheckboxGroup,
+  FormProtection,
 } from '@/components/form'
 
 export default function Consultation() {
@@ -100,6 +101,7 @@ export default function Consultation() {
             label="Message"
             required
           />
+          <FormProtection />
           <FormButton
             name="submit"
             label="Send Message"

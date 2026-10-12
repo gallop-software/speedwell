@@ -3,7 +3,7 @@ import { Heading } from '@/components/heading'
 import { Paragraph } from '@/components/paragraph'
 import { Accent } from '@/components/accent'
 import { Grid } from '@/components/grid'
-import { Form, FormInput, FormButton } from '@/components/form'
+import { Form, FormInput, FormButton, FormProtection } from '@/components/form'
 import { Icon } from '@/components/icon'
 import headphonesIcon from '@iconify/icons-lucide/headphones'
 import clsx from 'clsx'
@@ -107,6 +107,7 @@ export default function Subscribe() {
             required
             className="flex-1"
           />
+          <FormProtection />
           <FormButton
             name="submit"
             label="Subscribe"

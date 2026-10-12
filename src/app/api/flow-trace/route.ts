@@ -1,28 +1,12 @@
 import { NextResponse } from 'next/server'
 import { DateTime, Duration } from 'luxon'
+import { sendEmail } from '@/utils/send-email'
 import { studioUrl } from '@/utils/studio-helpers'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 const zone = 'America/Chicago'
-
-/* --------------------------------------------------------
- * Utility: Form Data Encoding
- * ------------------------------------------------------ */
-function encodeFormData(data: Record<string, any>) {
-  const fd = new FormData()
-
-  for (const [k, v] of Object.entries(data)) {
-    if (Array.isArray(v)) {
-      for (const item of v) fd.append(k, item as any)
-    } else if (v !== undefined && v !== null) {
-      fd.append(k, v as any)
-    }
-  }
-
-  return fd
-}
 
 /* --------------------------------------------------------
  * Utility: Duration (ms → human-readable)
@@ -342,7 +326,6 @@ export async function POST(req: Request) {
       totalDuration,
     })
 
-    const isDevelopment = true
     const productionUrlClean = process.env.NEXT_PUBLIC_PRODUCTION_URL?.replace(
       /^https?:\/\//,
       ''
@@ -350,46 +333,11 @@ export async function POST(req: Request) {
 
     const subject = `[FlowTrace] ${productionUrlClean || 'Site'} — ${timeNow}`
 
-    const mailBody: Record<string, any> = {
-      from: `${process.env.MAILGUN_FROM_NAME} <contact@${process.env.MAILGUN_DOMAIN_NAME}>`,
-      to: isDevelopment
-        ? `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`
-        : `${process.env.MAILGUN_FROM_NAME} <${process.env.MAILGUN_SMTP_MAIL}>`,
-      ...(!isDevelopment
-        ? {
-            bcc: [
-              `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`,
-            ],
-          }
-        : {}),
+    const ok = await sendEmail({
       subject,
       html: emailHtml,
-    }
-
-    const resp = await fetch(
-      `https://api.mailgun.net/v3/${process.env.MAILGUN_DOMAIN_NAME}/messages`,
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${Buffer.from(
-            `api:${process.env.MAILGUN_API_KEY}`
-          ).toString('base64')}`,
-        },
-        body: encodeFormData(mailBody),
-      }
-    )
-
-    const data = await resp.text()
-
-    const ok =
-      data !== 'Forbidden' &&
-      (() => {
-        try {
-          return JSON.parse(data).id
-        } catch {
-          return null
-        }
-      })()
+      devOnly: true,
+    })
 
     return NextResponse.json(
       { message: ok ? 'FlowTrace sent.' : 'An error occurred.' },

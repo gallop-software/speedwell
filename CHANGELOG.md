@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-12
+
+- Contact forms send through Cloudflare Email Service on Cloudflare (when `EMAIL_DOMAIN` is set) and through Mailgun on Vercel, from one form and one API route
+- Add form spam protection: Turnstile, a honeypot field, input validation and attachment limits
+- Form mail no longer sends a copy to the visitor; they are the Reply-To, and the developer is copied openly
+- `npm run cf:build` builds from `.env.production` whatever other env files are on disk, and fails if the bundle does not match it; the site URL is no longer hardcoded
+- `npm run cf:preview` sends form mail only to the developer and turns Turnstile off
+
 ## 2025-04-28
 
 - Update template to Tailwind CSS v4.1.4

@@ -28,6 +28,7 @@ Just chat with AI inside our Gallop AI Editor using Gallop templates, and you wi
 - 📝 **TSX-powered content** - No CMS required
 - 🖼️ **Image processing** with automatic optimization
 - 🔍 **Built-in search** powered by FlexSearch
+- ✉️ **Contact forms** that send through Cloudflare Email Service or Mailgun, with Turnstile spam protection
 - 📱 **Fully responsive** and mobile-optimized
 - ⚡ **Lightning-fast** performance
 - 🎭 **Framer Motion** animations
@@ -295,7 +296,7 @@ Press `Cmd+6` (the rocket icon) to open the **Publish** view. It has a tab for e
 |---|---|
 | **Cloudflare** | Deploy to Cloudflare Workers |
 | **Vercel** | Deploy to Vercel |
-| **Mailgun** | Sends the email from your contact form |
+| **Mailgun** | Sends the email from your contact form on Vercel (Cloudflare deployments use Cloudflare's own Email Service) |
 
 Each tab links straight to the page where you generate the token, with the right permissions preselected — you paste it in, click **Connect** to verify it, then **Save**.
 
@@ -324,7 +325,8 @@ Please:
 1. Push my latest changes to GitHub
 2. Link this project to Vercel and deploy it to production
 3. Ask me for my Mailgun values, then add them as environment variables
-   (see .env.production.sample for the full list)
+   (the "Vercel (Mailgun)" block in .env.production.sample; leave
+   EMAIL_DOMAIN empty)
 4. Tell me the live URL when it's done
 
 Never commit .env.production — it holds real secrets.
@@ -351,10 +353,14 @@ terminal environment — do not run `wrangler login`.
 
 Please:
 1. Run `npm run cf:setup` to create .env.production from the sample
-2. Ask me for my production URL and Mailgun values, then fill in .env.production
+2. Ask me for my production URL and form email values (the "Cloudflare"
+   block in .env.production.sample), then fill in .env.production
 3. Run `npm run cf:deploy` to build and create the Worker
 4. Run `npm run cf:secrets` to upload the secrets
 5. Tell me the live URL when it's done
+
+Form email is sent from the domain in EMAIL_DOMAIN. Tell me if it still
+needs onboarding in Cloudflare (Compute > Email Service > Email Sending).
 
 Never commit .env.production — it holds real secrets.
 ```
@@ -368,7 +374,7 @@ Deploy my latest changes to Cloudflare
 ```
 
 ```
-I changed my Mailgun API key in .env.production — push the updated secrets to Cloudflare
+I changed the form email address in .env.production — redeploy and push the updated secrets to Cloudflare
 ```
 
 ```
@@ -393,18 +399,19 @@ Speedwell ships Cloudflare-ready. **If you forked or generated this repo, every 
 
 | File | What it does for Cloudflare |
 |---|---|
-| `wrangler.jsonc` | The Worker manifest. Names the Worker, points at the build output, declares bindings and the `nodejs_compat` flag. Wrangler reads this on every command. |
+| `wrangler.jsonc` | The Worker manifest. Names the Worker, points at the build output, declares bindings (including `EMAIL` for form mail) and the `nodejs_compat` flag. Wrangler reads this on every command. |
 | `open-next.config.ts` | Tells the OpenNext adapter how to convert the Next.js build into a Worker. Ships minimal — ISR/R2 caching is commented out and off. |
 | `next.config.mjs` | Its last line calls `initOpenNextCloudflareForDev()`, which makes Cloudflare bindings available during `npm run dev`. It is a no-op in production builds, so **this does not break Vercel**. |
 | `package.json` | Holds the `cf:*` scripts plus `@opennextjs/cloudflare` and `wrangler` as devDependencies. |
+| `_scripts/production-env.mjs` | Runs the Cloudflare build with `.env.production` as the only source of live settings, checks the result, and writes `.dev.vars` for local previews. |
 | `.env.production.sample` | Placeholder copy of the secrets you'll need. Safe to commit — it contains no real values. |
 
 **2. Files you create — never committed**
 
 | File | How to create it | Why |
 |---|---|---|
-| `.env.production` | `npm run cf:setup` (copies the sample) | Real secret values. `npm run cf:secrets` reads this file and uploads its contents to Cloudflare's secret store. |
-| `.dev.vars` | Created automatically by `npm run cf:preview` | Local-preview copy of your secrets, the format the Workers runtime expects. |
+| `.env.production` | `npm run cf:setup` (copies the sample) | Real secret values. `npm run cf:build` builds from this file, and `npm run cf:secrets` uploads its contents to Cloudflare's secret store. |
+| `.dev.vars` | Rewritten by every `npm run cf:preview` | Local-preview copy of your secrets, the format the Workers runtime expects — with form mail redirected to the developer address and Turnstile off, so a preview can never reach your client. Do not edit it. |
 
 Both are covered by the `.env*` and `.dev.vars*` rules in `.gitignore`, so they stay out of Git automatically. **Never commit either one.**
 
@@ -438,6 +445,30 @@ Order matters: `cf:secrets` cannot create a Worker, so deploy once first. After 
 - **Authenticate first.** Either set `CLOUDFLARE_API_TOKEN` in your environment (what the Gallop AI Editor does for you when you connect Cloudflare) or run `npx wrangler login` for OAuth, cached in `~/.wrangler`. If your account can't be inferred from the token, also set `CLOUDFLARE_ACCOUNT_ID`. Wrangler ships as a dev dependency, so `npx` runs the local copy — no global install needed. Without auth, `cf:secrets` and `cf:deploy` can't reach Cloudflare.
 - **Names must match.** The `name` in `wrangler.jsonc` must equal the Worker's actual name in your dashboard. If a Git-connected deploy created it under a different name, update `wrangler.jsonc` to match — otherwise `cf:secrets` pushes to a nonexistent Worker.
 
+##### `.env.production` Is the Only Source of Live Settings
+
+Next.js and OpenNext both read `.env.local` during a production build, *ahead of* `.env.production` — so a local file can quietly put development values (a `localhost` URL, the developer's address as the form recipient) into a live site. `npm run cf:build` prevents that: it loads `.env.production` into the process environment, where it beats every env file, then compares the built bundle against the file and **fails the build if they differ**. On success it prints the site URL, mail provider, form recipient and whether Turnstile is on — read that summary before deploying.
+
+To build for another hostname without editing the file, set `SITE_URL`:
+
+```bash
+SITE_URL=https://staging.yourdomain.com npm run cf:deploy
+```
+
+##### Form Email
+
+One form component and one API route serve both hosts. The provider is chosen by configuration (`src/utils/send-email.ts`):
+
+| Host | Provider | Used when | Settings |
+|---|---|---|---|
+| Cloudflare | [Email Service](https://developers.cloudflare.com/email-service/), through the `EMAIL` binding in `wrangler.jsonc` | `EMAIL_DOMAIN` is set | `EMAIL_DOMAIN`, `EMAIL_FROM_NAME`, `EMAIL_TO`, `EMAIL_DEV_TO`, `EMAIL_DEV_NAME` |
+| Vercel | Mailgun | `EMAIL_DOMAIN` is empty | `MAILGUN_*` |
+
+- **Onboard the sending domain first.** In the Cloudflare dashboard, go to **Compute → Email Service → Email Sending** and add the domain you put in `EMAIL_DOMAIN` (a subdomain such as `cf.yourdomain.com` keeps it apart from your normal mail). Cloudflare adds the DNS records. Until this is done, sends fail.
+- **Who gets the mail.** The site owner (`EMAIL_TO`) with the developer copied (`EMAIL_DEV_TO`). In development, only the developer. The visitor never gets a copy — a bot could otherwise use the form to mail any address — and is set as Reply-To instead.
+- **In `npm run dev` the binding is simulated:** the message is logged and written under `.wrangler/`, and nothing leaves your machine. Add `"remote": true` to the `send_email` entry in `wrangler.jsonc` to send for real from dev; that needs a Cloudflare login, so it is off by default.
+- **Spam protection.** Every form includes `<FormProtection />`: a hidden honeypot field, plus the [Turnstile](https://developers.cloudflare.com/turnstile/) widget when `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are set. Turnstile works on either host. Add `<FormProtection />` to any new form you build.
+
 ##### Renaming the Worker
 
 `wrangler.jsonc` ships with the Worker named `speedwell`. If you rename it, **two values must change together**:
@@ -462,8 +493,8 @@ If you connect the repo in the Cloudflare dashboard instead of deploying from yo
 
 - **Build command:** `npm run cf:build`
 - **Deploy command:** `npx opennextjs-cloudflare deploy` (the same command `npm run cf:deploy` uses)
-- **Build variables:** set `NEXT_PUBLIC_PRODUCTION_URL` here. Anything prefixed `NEXT_PUBLIC_` is inlined into the JavaScript at build time, so it must exist as a *build* variable — a runtime secret is too late.
-- **Secrets:** `MAILGUN_*` values are read at runtime, so `npm run cf:secrets` (or the dashboard's secret UI) covers them. They do not belong in build variables.
+- **Build variables:** set `NEXT_PUBLIC_PRODUCTION_URL` here (and `NEXT_PUBLIC_TURNSTILE_SITE_KEY` if you use Turnstile). Anything prefixed `NEXT_PUBLIC_` is inlined into the JavaScript at build time, so it must exist as a *build* variable — a runtime secret is too late. There is no `.env.production` in a Git-connected build, so `cf:build` uses the build variables as they are and stops if `NEXT_PUBLIC_PRODUCTION_URL` is missing.
+- **Secrets:** `EMAIL_*` and `TURNSTILE_SECRET_KEY` are read at runtime, so `npm run cf:secrets` (or the dashboard's secret UI) covers them. They do not belong in build variables.
 
 Custom domains live under the Worker's **Settings → Domains & Routes**.
 
@@ -479,8 +510,8 @@ Workers is not Node.js, and two limits shape how you write code for it:
 | Command | What it does |
 |---|---|
 | `npm run cf:setup` | Scaffold `.env.production` from the sample |
-| `npm run cf:build` | Regenerate blog data, then build the Worker into `.open-next/` |
-| `npm run cf:preview` | Build and run the real Workers runtime locally |
+| `npm run cf:build` | Regenerate blog data, build the Worker into `.open-next/` from `.env.production`, and verify the result |
+| `npm run cf:preview` | Build and run the real Workers runtime locally, with form mail sent only to the developer |
 | `npm run cf:deploy` | Build and deploy to Cloudflare |
 | `npm run cf:upload` | Build and upload a new Worker version without making it live (staged rollouts) |
 | `npm run cf:secrets` | Push `.env.production` to the Worker's secret store |

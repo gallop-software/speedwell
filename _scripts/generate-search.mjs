@@ -231,7 +231,7 @@ async function crawlAndGenerateIndex() {
 
   // Combine all paths
   const slugPaths = [...staticPaths, ...categorySlugs]
-  const baseUrl = 'http://localhost:3000'
+  const baseUrl = process.env.SEARCH_BASE_URL || 'http://localhost:3000'
 
   console.log(`Found ${staticPaths.length} static pages`)
   console.log(`Found ${categorySlugs.length} categories`)
