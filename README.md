@@ -760,7 +760,7 @@ Tools for building and developing the site:
 - **PostCSS** `8.5.15` - CSS transformations
 - **Knip** `5.88.1` - Unused file and export detection
 - **Wrangler** `4.162.0` - Cloudflare CLI, used by the `cf:*` scripts
-- **Gallop Canon** `2.35.0` - ESLint rules and architecture audit CLI
+- **Gallop Canon** `2.36.0` - ESLint rules and architecture audit CLI
 
 ### Scripts & Processing
 

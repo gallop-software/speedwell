@@ -29,4 +29,15 @@ export default [
       ],
     },
   },
+  {
+    // _studio.json is a reference, never imported: this holds for all site
+    // code, not only blocks and components
+    files: ['src/**/*.ts', 'src/**/*.tsx'],
+    plugins: {
+      gallop,
+    },
+    rules: {
+      'gallop/no-studio-data-import': 'error',
+    },
+  },
 ]
