@@ -12,11 +12,12 @@ export default function Project3() {
       <Columns reverseColumns={true}>
         <Column className="aspect-auto relative">
           <Image
-            src="/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571468-lg.jpg"
+            width={1400}
+            height={935}
             alt="Non reprehenderit laboris"
             className="object-cover"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>
@@ -49,36 +50,52 @@ export default function Project3() {
         className="mt-20"
       >
         <GalleryItem
-          src="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571460-lg.jpg"
+          width={1400}
+          height={900}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
         />
         <GalleryItem
-          src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571453-lg.jpg"
+          width={1400}
+          height={935}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
         />
         <GalleryItem
-          src="/portfolio/pexels-dropshado-2251247.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-dropshado-2251247-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-dropshado-2251247.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034-lg.jpg"
+          width={1400}
+          height={935}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
         />
         <GalleryItem
-          src="/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825527-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
         />
         <GalleryItem
-          src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245-lg.jpg"
+          width={1400}
+          height={1400}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
         />
       </Gallery>
     </Section>

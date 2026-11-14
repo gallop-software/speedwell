@@ -27,9 +27,10 @@ export default function Methodology() {
         your audience.
       </Paragraph>
       <Image
-        src="/layout-1/pexels-thirdman-5257578.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-thirdman-5257578-lg.jpg"
+        width={1400}
+        height={933}
         alt="Collaborative creative process and strategy sessions"
-        size="large"
         className="my-8"
       />
       <Paragraph>

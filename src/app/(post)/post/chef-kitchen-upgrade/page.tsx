@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     "Serious cook's kitchen featuring professional-grade appliances, abundant prep space, and restaurant-quality functionality for home.",
   date: '2025-04-05',
   slug: 'chef-kitchen-upgrade',
-  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-lg.jpg',
+    width: 1400,
+    height: 2097,
+  },
   categories: ['Kitchen Design', 'Professional', 'Gourmet'],
   alternates: {
     canonical: '/post/chef-kitchen-upgrade',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Professional chef kitchen with restaurant-grade appliances and functionality',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Chef kitchen with professional appliances and large island',
     },
   },

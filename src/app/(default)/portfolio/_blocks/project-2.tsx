@@ -12,10 +12,11 @@ export default function Project2() {
       <Columns reverseColumns={false}>
         <Column className="aspect-auto relative">
           <Image
-            src="/portfolio/pexels-pixabay-276724.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-276724-lg.jpg"
+            width={1400}
+            height={788}
             alt="Magna nostrud deserunt"
             className="object-cover"
-            size="large"
           />
         </Column>
         <Column>
@@ -48,36 +49,52 @@ export default function Project2() {
         className="mt-20"
       >
         <GalleryItem
-          src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3356416-lg.jpg"
+          width={1400}
+          height={1759}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3356416.jpg"
         />
         <GalleryItem
-          src="/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
         />
         <GalleryItem
-          src="/portfolio/jvdm/pexels-jvdm-1454804.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/jvdm/pexels-jvdm-1454804-lg.jpg"
+          width={1400}
+          height={879}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/jvdm/pexels-jvdm-1454804.jpg"
         />
         <GalleryItem
-          src="/portfolio/pexels-clickerhappy-584399.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-clickerhappy-584399-lg.jpg"
+          width={1400}
+          height={926}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-clickerhappy-584399.jpg"
         />
         <GalleryItem
-          src="/portfolio/pexels-burst-545012.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012.jpg"
         />
         <GalleryItem
-          src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696-lg.jpg"
+          width={1400}
+          height={2100}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
         />
         <GalleryItem
-          src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3797991-lg.jpg"
+          width={1400}
+          height={1050}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3797991.jpg"
         />
         <GalleryItem
-          src="/portfolio/pexels-mikhail-nilov-6707628.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-mikhail-nilov-6707628-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-mikhail-nilov-6707628.jpg"
         />
       </Gallery>
     </Section>

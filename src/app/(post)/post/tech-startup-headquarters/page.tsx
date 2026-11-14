@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Elegant rebrand for historic boutique hotel blending classic sophistication with modern luxury across all guest touchpoints and digital platforms.',
   date: '2024-08-12',
   slug: 'tech-startup-headquarters',
-  featuredImage: '/layout-1/pexels-cottonbro-5379175.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-cottonbro-5379175-lg.jpg',
+    width: 1400,
+    height: 2100,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
     canonical: '/post/tech-startup-headquarters',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Sophisticated rebrand honoring heritage while attracting modern luxury travelers',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Boutique hotel brand identity',
     },
   },

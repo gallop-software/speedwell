@@ -42,17 +42,19 @@ export default function Features() {
           </Column>
           <Column className="aspect-[6.75/6] relative">
             <Image
-              src="/images/layout-2/pexels-goumbik-577195.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-2/pexels-goumbik-577195-lg.jpg"
+              width={1400}
+              height={927}
               alt="Product feature demonstration"
               className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-              size="large"
             />
             <Image
-              src="/images/layout-2/pexels-pixabay-38568.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-2/pexels-pixabay-38568-lg.jpg"
+              width={1400}
+              height={930}
               alt="Product interface showcase"
               className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
               rounded="rounded-b-none rounded-t-full"
-              size="large"
             />
           </Column>
         </Columns>
@@ -76,17 +78,19 @@ export default function Features() {
           </Column>
           <Column className="aspect-15/14 relative">
             <Image
-              src="/images/layout-2/pexels-mikhail-nilov-8284731.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-2/pexels-mikhail-nilov-8284731-lg.jpg"
+              width={1400}
+              height={935}
               alt="Team collaboration features"
               className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-              size="large"
             />
             <Image
-              src="/images/layout-2/pexels-ranamatloob567-35203646.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-2/pexels-ranamatloob567-35203646-lg.jpg"
+              width={1400}
+              height={1000}
               alt="Collaborative workspace"
               className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
               rounded="rounded-r-none rounded-l-full"
-              size="large"
             />
           </Column>
         </Columns>

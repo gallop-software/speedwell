@@ -64,10 +64,11 @@ export default function ContactForm() {
         </Column>
         <Column className="aspect-[8/9] relative">
           <Image
-            src="/portfolio/pexels-pixabay-269218.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269218-lg.jpg"
+            width={1400}
+            height={788}
             alt="Beautiful interior design space"
             className="object-cover absolute inset-0 w-full h-full"
-            size="large"
             lazy={false}
           />
           <Accent

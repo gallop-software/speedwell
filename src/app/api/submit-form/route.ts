@@ -1,5 +1,4 @@
 import { sendEmail, type EmailAttachment } from '@/utils/send-email'
-import { studioUrl } from '@/utils/studio-helpers'
 import { NextResponse } from 'next/server'
 
 export const runtime = 'nodejs'
@@ -40,14 +39,8 @@ function renderValueCell(v: unknown): string {
   return escapeHtml(JSON.stringify(v))
 }
 
-// Email clients need an absolute URL; locally served images resolve to a path
-function emailImageUrl(src: string): string {
-  const url = studioUrl(src)
-  if (url.startsWith('/')) {
-    return `${process.env.NEXT_PUBLIC_PRODUCTION_URL}${url}`
-  }
-  return url
-}
+// Logo shown at the top of the email (URL from _data/_studio.json)
+const LOGO_URL = 'https://speedwell-cdn.gallop.software/images/logo.png'
 
 function renderEmailHtml(payload: Record<string, any>) {
   const rows: string[] = []
@@ -99,7 +92,7 @@ function renderEmailHtml(payload: Record<string, any>) {
     <body>
       <div class="container">
         <div class="content">
-          <img class="logo" src="${emailImageUrl('/images/logo.png')}" alt="Logo" />
+          <img class="logo" src="${LOGO_URL}" alt="Logo" />
           ${rows.join('')}
         </div>
       </div>

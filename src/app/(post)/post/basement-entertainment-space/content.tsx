@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3797991-lg.jpg"
+        width={1400}
+        height={1050}
         alt="Basement entertainment space with home theater and game room"
-        size="large"
         wrap={true}
       />
 

@@ -43,17 +43,19 @@ export default function Portfolio() {
           </Column>
           <Column className="aspect-[7/6] relative">
             <Image
-              src="/layout-1/pexels-diva-plavalaguna-6937932.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-diva-plavalaguna-6937932-lg.jpg"
+              width={1400}
+              height={933}
               alt="Tech startup brand identity showcase"
               className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-              size="large"
             />
             <Image
-              src="/layout-1/pexels-pixabay-221185.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-pixabay-221185-lg.jpg"
+              width={1400}
+              height={933}
               alt="Brand guidelines and visual system"
               className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
               rounded="rounded-b-none rounded-t-full"
-              size="large"
             />
           </Column>
         </Columns>
@@ -86,17 +88,19 @@ export default function Portfolio() {
           </Column>
           <Column className="aspect-[5/7] relative">
             <Image
-              src="/layout-1/pexels-shattha-pilabut-38930-135620.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-shattha-pilabut-38930-135620-lg.jpg"
+              width={1400}
+              height={966}
               alt="Luxury retail brand identity"
               className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-              size="large"
             />
             <Image
-              src="/layout-1/pexels-ekrulila-27467420.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-ekrulila-27467420-lg.jpg"
+              width={1400}
+              height={2100}
               alt="Packaging and retail design"
               className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
               rounded="rounded-b-none rounded-t-full"
-              size="large"
             />
           </Column>
         </Columns>
@@ -106,36 +110,52 @@ export default function Portfolio() {
           className="mt-20"
         >
           <GalleryItem
-            src="/layout-1/pexels-cottonbro-9745332.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-cottonbro-9745332-lg.jpg"
+            width={1400}
+            height={2099}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-cottonbro-9745332.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-rachel-claire-5490970.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-rachel-claire-5490970-lg.jpg"
+            width={1400}
+            height={933}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-rachel-claire-5490970.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-alesiakozik-7797453.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-alesiakozik-7797453-lg.jpg"
+            width={1400}
+            height={2100}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-alesiakozik-7797453.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-leeloothefirst-7598022.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-leeloothefirst-7598022-lg.jpg"
+            width={1400}
+            height={935}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-leeloothefirst-7598022.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-divinetechygirl-1181311.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-divinetechygirl-1181311-lg.jpg"
+            width={1400}
+            height={935}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-divinetechygirl-1181311.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-mareklevak-2265482.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-mareklevak-2265482-lg.jpg"
+            width={1400}
+            height={933}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-mareklevak-2265482.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-tranmautritam-326518.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-tranmautritam-326518-lg.jpg"
+            width={1400}
+            height={933}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-tranmautritam-326518.jpg"
           />
           <GalleryItem
-            src="/layout-1/pexels-goumbik-669610.jpg"
-            size="large"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-goumbik-669610-lg.jpg"
+            width={1400}
+            height={927}
+            href="https://speedwell-cdn.gallop.software/images/layout-1/pexels-goumbik-669610.jpg"
           />
         </Gallery>
       </div>

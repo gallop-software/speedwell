@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989-lg.jpg"
+        width={1400}
+        height={2097}
         alt="Bohemian bedroom with layered textiles and eclectic decor"
-        size="large"
         wrap={true}
       />
 

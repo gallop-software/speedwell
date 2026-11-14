@@ -10,7 +10,12 @@ import { LightboxHandler } from '@/components/lightbox/lightbox-handler'
 interface MasonryFilterItem {
   id: number
   category: string
+  /** Image URL, with the width and height of that file */
   image: string
+  width: number
+  height: number
+  /** URL of the full-size image, opened in the lightbox */
+  full: string
   alt: string
 }
 
@@ -94,10 +99,10 @@ export function MasonryFilter({
             >
               <Image
                 src={item.image}
+                width={item.width}
+                height={item.height}
                 alt={item.alt}
-                size="large"
-                href={item.image}
-                mediaLink
+                href={item.full}
                 className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-102"
               />
             </motion.div>

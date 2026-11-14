@@ -12,10 +12,11 @@ export default function Overview() {
       <Columns gap="gap-10 lg:gap-20">
         <Column>
           <Image
-            src="/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825527-lg.jpg"
+            width={1400}
+            height={933}
             alt="Interior space showcasing professional color coordination"
             className="w-full object-cover"
-            size="large"
           />
         </Column>
         <Column>

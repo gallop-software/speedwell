@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Warm restaurant brand identity celebrating local agriculture with hand-lettered typography, seasonal design, and community-focused visual storytelling.',
   date: '2024-09-05',
   slug: 'urban-coffee-house',
-  featuredImage: '/layout-1/pexels-enginakyurt-1435894.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-enginakyurt-1435894-lg.jpg',
+    width: 1400,
+    height: 934,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Hospitality'],
   alternates: {
     canonical: '/post/urban-coffee-house',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Community-focused restaurant brand celebrating local farmers and seasonal ingredients',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Farm-to-table restaurant branding',
     },
   },

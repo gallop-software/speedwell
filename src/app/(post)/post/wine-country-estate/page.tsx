@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     "Sophisticated wine country home featuring rustic elegance, chef's kitchen, custom wine cellar, and seamless indoor-outdoor living.",
   date: '2025-01-19',
   slug: 'wine-country-estate',
-  featuredImage: '/portfolio/pexels-alex-qian-1180283-2343465.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-alex-qian-1180283-2343465-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Residential', 'Luxury', 'Rustic'],
   alternates: {
     canonical: '/post/wine-country-estate',
@@ -21,7 +22,9 @@ const metadata: PageMetadata = {
     title: 'Wine Country Estate | Rustic Elegant Interior Design',
     description: 'Wine country estate with rustic elegance and vineyard views',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Wine country estate with exposed beams and vineyard views',
     },
   },

@@ -34,20 +34,22 @@ export default function Hero() {
             <Column className="relative -mx-6 flex items-center flex-row-reverse h-full  max-xl:order-1">
               <Image
                 className="w-2/3 h-full relative object-cover object-center"
-                src="/layout-1/pexels-anna-nekrashevich-7552446.jpg"
+                src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-anna-nekrashevich-7552446-lg.jpg"
+                width={1400}
+                height={2100}
                 alt="Labore voluptate enim aliquip eiusmod occaecat"
                 rounded="rounded-none"
-                size="large"
                 lazy={false}
               />
               <div className="absolute h-auto top-30 bottom-30 w-3/7 left-0">
                 <Image
                   className="width-full h-full object-cover object-top"
                   aspect="aspect-none"
-                  src="/layout-1/pexels-ron-lach-8760891.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-ron-lach-8760891-lg.jpg"
+                  width={1400}
+                  height={2100}
                   alt="Labore voluptate enim aliquip eiusmod occaecat"
                   rounded="rounded-none"
-                  size="large"
                   lazy={false}
                 />
               </div>

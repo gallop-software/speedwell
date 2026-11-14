@@ -10,8 +10,6 @@ export interface CardLinkData {
   alt: string
   width?: number | undefined
   height?: number | undefined
-  /** Image size variant to use from metadata - defaults to 'large' */
-  size?: 'small' | 'medium' | 'large' | 'full'
 }
 
 interface Card1Props {
@@ -22,8 +20,6 @@ interface Card1Props {
   alt: string
   width?: number
   height?: number
-  /** Image size variant to use from metadata - defaults to 'large' */
-  size?: 'small' | 'medium' | 'large' | 'full'
   /** Whether this is an external link that should open in a new tab */
   external?: boolean
 }
@@ -36,7 +32,6 @@ export function Card1({
   alt,
   width,
   height,
-  size = 'large',
   external = false,
 }: Card1Props) {
   return (
@@ -58,7 +53,6 @@ export function Card1({
           alt={alt}
           width={width}
           height={height}
-          size={size}
           className="absolute inset-0 w-full h-full object-cover"
           rounded=""
         />

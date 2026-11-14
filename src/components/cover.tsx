@@ -4,7 +4,10 @@ import { Container } from '@/components/container'
 import { Parallax, type ParallaxSpeed } from '@/components/parallax'
 
 interface CoverProps {
+  /** Background image URL, with the width and height of that file */
   imageSrc?: string
+  imageWidth?: number
+  imageHeight?: number
   imageAlt?: string
   imageClassName?: string
   children?: React.ReactNode
@@ -19,6 +22,8 @@ interface CoverProps {
 
 export function Cover({
   imageSrc,
+  imageWidth,
+  imageHeight,
   imageAlt,
   imageClassName,
   children,
@@ -53,7 +58,8 @@ export function Cover({
             >
               <Image
                 src={imageSrc}
-                size="full"
+                width={imageWidth}
+                height={imageHeight}
                 alt={imageAlt || ''}
                 rounded="rounded-none"
                 className={clsx('object-center', imageClassName)}
@@ -62,7 +68,8 @@ export function Cover({
           ) : (
             <Image
               src={imageSrc}
-              size="full"
+              width={imageWidth}
+              height={imageHeight}
               alt={imageAlt || ''}
               className={clsx(
                 'object-cover object-center absolute inset-0 w-full h-full',

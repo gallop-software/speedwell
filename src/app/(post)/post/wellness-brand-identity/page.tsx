@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Serene brand identity for wellness studio featuring soft palettes, organic shapes, and mindful design that creates calm, welcoming experiences.',
   date: '2024-10-22',
   slug: 'wellness-brand-identity',
-  featuredImage: '/layout-1/pexels-diva-plavalaguna-6937932.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-diva-plavalaguna-6937932-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Wellness'],
   alternates: {
     canonical: '/post/wellness-brand-identity',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Mindful brand identity creating serene experiences for wellness seekers',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Wellness studio brand materials',
     },
   },

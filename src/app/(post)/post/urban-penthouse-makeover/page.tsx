@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Sophisticated penthouse renovation featuring open-plan living, city views, and contemporary design with smart home integration.',
   date: '2024-12-05',
   slug: 'urban-penthouse-makeover',
-  featuredImage: '/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5824901-lg.jpg',
+    width: 1400,
+    height: 2100,
+  },
   categories: ['Residential', 'Luxury', 'Contemporary'],
   alternates: {
     canonical: '/post/urban-penthouse-makeover',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Sophisticated downtown penthouse with panoramic city views and contemporary design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Urban penthouse with city views and contemporary design',
     },
   },

@@ -9,7 +9,9 @@ export default function CallToAction() {
   return (
     <Cover
       className="py-30 lg:py-50"
-      imageSrc="/portfolio/pexels-burst-545012.jpg"
+      imageSrc="https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012.jpg"
+      imageWidth={2560}
+      imageHeight={1706}
       imageAlt="Qui sunt magna"
       overlayColor="bg-accent5/90"
       height="h-auto"

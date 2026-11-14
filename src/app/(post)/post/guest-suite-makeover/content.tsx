@@ -12,20 +12,28 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
         />
       </Gallery>
 

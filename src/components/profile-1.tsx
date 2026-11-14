@@ -5,6 +5,8 @@ import { Image } from '@/components/image'
 interface Profile1Props {
   /** Image source URL for the testimonial author */
   img: string
+  width?: number
+  height?: number
   /** Name or citation for the testimonial author */
   cite: string
   /** Testimonial content - should be Paragraph components */
@@ -17,6 +19,8 @@ interface Profile1Props {
 
 export function Profile1({
   img,
+  width,
+  height,
   cite,
   children,
   aspect = 'aspect-[3/4]',
@@ -29,7 +33,8 @@ export function Profile1({
         alt={cite}
         rounded={rounded}
         wrap={false}
-        size="large"
+        width={width}
+        height={height}
         aspect={aspect}
         className={clsx(
           aspect,

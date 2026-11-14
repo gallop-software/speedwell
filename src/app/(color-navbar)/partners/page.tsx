@@ -20,7 +20,11 @@ const metadata: PageMetadata = {
   description:
     'We collaborate with exceptional craftsmen, artisans, and suppliers to bring your interior design vision to life. Meet the trusted partners who help us deliver outstanding results.',
   slug: 'partners',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1668860-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   focusKeyword: 'interior design partners',
   readingTimeMinutes: 3,
   publishDate: '2025-10-13T00:00:00Z',
@@ -33,7 +37,9 @@ const metadata: PageMetadata = {
     description:
       'We collaborate with exceptional craftsmen, artisans, and suppliers to bring your interior design vision to life.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Interior design partner showcase',
     },
   },

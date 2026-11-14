@@ -9,8 +9,10 @@ export interface VideoBackgroundProps {
   videoId: string
   /** Vimeo hash for private/unlisted videos */
   videoHash?: string
-  /** Poster image to show while video loads */
+  /** Poster image URL to show while video loads, with that file's width and height */
   posterImage?: string
+  posterWidth?: number
+  posterHeight?: number
   /** Gradient overlay classes */
   gradientOverlay?: string
   /** Additional className for the container */
@@ -21,6 +23,8 @@ export function VideoBackground({
   videoId,
   videoHash,
   posterImage,
+  posterWidth,
+  posterHeight,
   gradientOverlay = 'bg-gradient-to-br from-purple-900/40 via-overlay/60 to-overlay/80',
   className,
 }: VideoBackgroundProps) {
@@ -41,6 +45,8 @@ export function VideoBackground({
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src={posterImage}
+            width={posterWidth}
+            height={posterHeight}
             alt=""
             className="w-full h-full object-cover"
           />

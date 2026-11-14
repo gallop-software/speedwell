@@ -14,52 +14,76 @@ const menuCategories = [
     id: 'main-dishes',
     name: 'Main Dishes',
     number: '01.',
-    image: '/images/layout-4/pexels-jonathanborba-2878738.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/pexels-jonathanborba-2878738-lg.jpg',
+    width: 1400,
+    height: 2100,
     items: [
       {
         name: 'Grilled Ribeye Steak',
         description: 'Prime 12oz ribeye with herb butter, roasted garlic mash',
         price: '$42',
-        image: '/images/layout-4/ribeye.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/ribeye-lg.jpg',
+        width: 1400,
+        height: 933,
       },
       {
         name: 'Pan-Seared Salmon',
         description: 'Atlantic salmon with lemon dill sauce and asparagus',
         price: '$34',
-        image: '/images/layout-4/salmon.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/salmon-lg.jpg',
+        width: 1400,
+        height: 934,
       },
       {
         name: 'Braised Short Ribs',
         description:
           'Slow-cooked beef ribs in red wine reduction, creamy polenta',
         price: '$38',
-        image: '/images/layout-4/short-ribs.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/short-ribs-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
       {
         name: 'Herb Roasted Chicken',
         description:
           'Free-range chicken with thyme jus and seasonal vegetables',
         price: '$28',
-        image: '/images/layout-4/herb-roasted-chicken.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/herb-roasted-chicken-lg.jpg',
+        width: 1400,
+        height: 1050,
       },
       {
         name: 'Lobster Linguine',
         description:
           'Fresh Maine lobster tossed in garlic butter and white wine',
         price: '$48',
-        image: '/images/layout-4/lobster-linguine.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/lobster-linguine-lg.jpg',
+        width: 1400,
+        height: 1867,
       },
       {
         name: 'Lamb Rack',
         description: 'New Zealand lamb with mint pesto and rosemary potatoes',
         price: '$45',
-        image: '/images/layout-4/lamb-rack.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/lamb-rack-lg.jpg',
+        width: 1400,
+        height: 2097,
       },
       {
         name: 'Duck Confit',
         description: 'Crispy duck leg with cherry gastrique and wild rice',
         price: '$36',
-        image: '/images/layout-4/duck-confit.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/duck-confit-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
     ],
   },
@@ -67,45 +91,66 @@ const menuCategories = [
     id: 'starters',
     name: 'Starters',
     number: '02.',
-    image: '/images/layout-4/burratta-caprese.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/burratta-caprese-lg.jpg',
+    width: 1400,
+    height: 934,
     items: [
       {
         name: 'Burrata Caprese',
         description: 'Creamy burrata with heirloom tomatoes and aged balsamic',
         price: '$16',
-        image: '/images/layout-4/burratta-caprese.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/burratta-caprese-lg.jpg',
+        width: 1400,
+        height: 934,
       },
       {
         name: 'Tuna Tartare',
         description: 'Sushi-grade ahi with avocado, sesame, and wonton crisps',
         price: '$19',
-        image: '/images/layout-4/tuna-tartare.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/tuna-tartare-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
       {
         name: 'French Onion Soup',
         description:
           'Caramelized onions in rich beef broth with gruyère crouton',
         price: '$12',
-        image: '/images/layout-4/french-onion-soup.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/french-onion-soup-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
       {
         name: 'Crispy Calamari',
         description: 'Lightly fried squid with marinara and lemon aioli',
         price: '$15',
-        image: '/images/layout-4/calamari.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/calamari-lg.jpg',
+        width: 1400,
+        height: 933,
       },
       {
         name: 'Beef Carpaccio',
         description:
           'Thinly sliced raw beef with arugula, capers, and parmesan',
         price: '$18',
-        image: '/images/layout-4/beef-carpaccio.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/beef-carpaccio-lg.jpg',
+        width: 1400,
+        height: 1868,
       },
       {
         name: 'Oysters Rockefeller',
         description: 'Baked oysters with spinach, herbs, and breadcrumb gratin',
         price: '$22',
-        image: '/images/layout-4/oysters.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/oysters-lg.jpg',
+        width: 1400,
+        height: 2097,
       },
     ],
   },
@@ -113,43 +158,64 @@ const menuCategories = [
     id: 'desserts',
     name: 'Desserts',
     number: '03.',
-    image: '/images/layout-4/chocolate-lava-cake.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/chocolate-lava-cake-lg.jpg',
+    width: 1400,
+    height: 933,
     items: [
       {
         name: 'Crème Brûlée',
         description: 'Classic vanilla custard with caramelized sugar crust',
         price: '$11',
-        image: '/images/layout-4/creme-brulee.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/creme-brulee-lg.jpg',
+        width: 1400,
+        height: 1050,
       },
       {
         name: 'Chocolate Lava Cake',
         description: 'Warm molten chocolate cake with vanilla bean ice cream',
         price: '$13',
-        image: '/images/layout-4/chocolate-lava-cake.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/chocolate-lava-cake-lg.jpg',
+        width: 1400,
+        height: 933,
       },
       {
         name: 'Tiramisu',
         description: 'Espresso-soaked ladyfingers with mascarpone cream',
         price: '$12',
-        image: '/images/layout-4/tiramisu.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/tiramisu-lg.jpg',
+        width: 1400,
+        height: 2099,
       },
       {
         name: 'New York Cheesecake',
         description: 'Creamy cheesecake with fresh berry compote',
         price: '$11',
-        image: '/images/layout-4/new-york-cheesecake.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/new-york-cheesecake-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
       {
         name: 'Apple Tarte Tatin',
         description: 'Caramelized apple tart with crème fraîche',
         price: '$12',
-        image: '/images/layout-4/apple-tarte.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/apple-tarte-lg.jpg',
+        width: 1400,
+        height: 933,
       },
       {
         name: 'Panna Cotta',
         description: 'Silky Italian cream dessert with seasonal fruit coulis',
         price: '$10',
-        image: '/images/layout-4/panna-cotta.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/panna-cotta-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
     ],
   },
@@ -157,43 +223,64 @@ const menuCategories = [
     id: 'drinks',
     name: 'Drinks',
     number: '04.',
-    image: '/images/layout-4/espresso-martini.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/espresso-martini-lg.jpg',
+    width: 1400,
+    height: 1750,
     items: [
       {
         name: 'Classic Old Fashioned',
         description: 'Bourbon, bitters, sugar, and orange peel',
         price: '$14',
-        image: '/images/layout-4/old-fashioned.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/old-fashioned-lg.jpg',
+        width: 1400,
+        height: 1973,
       },
       {
         name: 'Espresso Martini',
         description: 'Vodka, fresh espresso, and coffee liqueur',
         price: '$15',
-        image: '/images/layout-4/espresso-martini.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/espresso-martini-lg.jpg',
+        width: 1400,
+        height: 1750,
       },
       {
         name: 'Napa Valley Cabernet',
         description: '2019 reserve, bold with notes of blackberry and oak',
         price: '$18',
-        image: '/images/layout-4/cabernet.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/cabernet-lg.jpg',
+        width: 1400,
+        height: 1375,
       },
       {
         name: 'French 75',
         description: 'Gin, champagne, lemon juice, and simple syrup',
         price: '$16',
-        image: '/images/layout-4/french-75.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/french-75-lg.jpg',
+        width: 1400,
+        height: 2489,
       },
       {
         name: 'Craft Lemonade',
         description: 'Fresh-squeezed with lavender and mint',
         price: '$6',
-        image: '/images/layout-4/lemonade.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/lemonade-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
       {
         name: 'Cappuccino',
         description: 'Double shot espresso with steamed milk foam',
         price: '$5',
-        image: '/images/layout-4/cappucino-image.jpg',
+        image:
+          'https://speedwell-cdn.gallop.software/images/layout-4/cappucino-image-lg.jpg',
+        width: 1400,
+        height: 2100,
       },
     ],
   },
@@ -214,6 +301,8 @@ export default function Ingredients() {
           >
             <Image
               src={category.image}
+              width={category.width}
+              height={category.height}
               alt={category.name}
               className="absolute inset-0 w-full h-full object-cover"
               rounded="rounded-none"
@@ -259,6 +348,8 @@ export default function Ingredients() {
                     <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden">
                       <Image
                         src={item.image}
+                        width={item.width}
+                        height={item.height}
                         alt={item.name}
                         className="w-full h-full object-cover"
                         rounded="rounded-none"

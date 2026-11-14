@@ -14,10 +14,11 @@ export default function Overview() {
       <Columns>
         <Column>
           <Image
-            src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080721-lg.jpg"
+            width={1400}
+            height={933}
             alt="Quis consequat cillum"
             className="object-cover"
-            size="large"
           />
         </Column>
         <Column>
@@ -40,17 +41,19 @@ export default function Overview() {
       >
         <Column className="aspect-[29/28] relative">
           <Image
-            src="/portfolio/pexels-pixabay-269252.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269252-lg.jpg"
+            width={1400}
+            height={1107}
             alt="Nostrud ipsum magna"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-            size="large"
           />
           <Image
-            src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1669799-lg.jpg"
+            width={1400}
+            height={935}
             alt="Eiusmod enim sint"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>
@@ -76,11 +79,12 @@ export default function Overview() {
       <Columns className="mt-20">
         <Column className="relative">
           <Image
-            src="/portfolio/pexels-pixabay-259962.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-259962-lg.jpg"
+            width={1400}
+            height={930}
             alt="Id ullamco ex"
             className="object-cover"
             rounded="rounded-r-full"
-            size="large"
           />
         </Column>
         <Column>

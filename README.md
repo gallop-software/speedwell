@@ -221,6 +221,8 @@ Describing a visual bug is hard. Show it instead.
 
 Studio keeps its records in `_data/_studio.json`. That file is generated — let Studio manage it.
 
+The site never reads that file while it runs. It is a reference: each image in the code is written with its own full URL, width and height, copied from the file, so pages load nothing they don't show. Your AI assistant does the lookup for you, and `npm run images` checks that every URL and size in the code still matches the library. [How `_studio.json` is used](./_scripts/check-images.md) explains the file and where each image is written.
+
 ### SEO
 
 `Cmd+5` opens the SEO view. You run a report yourself — the AI can't trigger one for you:
@@ -514,7 +516,7 @@ Think of Canon as training wheels that never come off. AI stays within proven pa
 
 **Canon Commands:**
 
-- `npm run check` - Run lint and TypeScript checks together
+- `npm run check` - Run lint, TypeScript and image checks together
 - `npm run audit` - Audit the project against Canon's architecture patterns
 
 ### Built for SEO and AI Discoverability
@@ -676,7 +678,7 @@ speedwell/
 - **`npm run ts`** - TypeScript type checking without emitting
 - **`npm run prettier`** - Format all files with Prettier
 - **`npm run unused`** - Find unused files with knip
-- **`npm run check`** - Run lint and TypeScript together
+- **`npm run check`** - Run lint, TypeScript and the image check together
 
 ### Gallop Canon
 
@@ -689,6 +691,7 @@ speedwell/
 - **`npm run blog`** - Generate blog post metadata to `_data/_blog.json` → [docs](./_scripts/generate-blog-metadata.md)
 - **`npm run search`** - Build FlexSearch index for site search → [docs](./_scripts/generate-search.md)
 - **`npm run blocks`** - Regenerate the demo block index (`_block-index.ts`)
+- **`npm run images`** - Check every image URL, width and height in `src/` against `_data/_studio.json` → [docs](./_scripts/check-images.md)
 
 ### Cloudflare Deployment
 

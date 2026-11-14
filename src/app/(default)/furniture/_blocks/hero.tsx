@@ -17,9 +17,10 @@ export default function Hero() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+                src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1669799-lg.jpg"
+                width={1400}
+                height={935}
                 alt="Beautifully curated furniture selection for elegant interior design"
-                size="large"
                 rounded="rounded-none"
                 lazy={false}
               />

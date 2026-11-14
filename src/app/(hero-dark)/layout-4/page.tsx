@@ -38,7 +38,11 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   alternates: {
     canonical: '/layout-4',
   },
@@ -52,7 +56,9 @@ const metadata: PageMetadata = {
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Full-width carousel layout design',
     },
   },
@@ -63,7 +69,7 @@ const metadata: PageMetadata = {
     title: 'Layout 4 | Full-Width Carousel Presentation Style',
     description:
       'Experience our full-width carousel presentation style. Perfect for showcasing featured content and creating engaging visual narratives.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
   structuredData: [
     {

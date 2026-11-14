@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-cottonbro-5379175.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-cottonbro-5379175-lg.jpg"
+        width={1400}
+        height={2100}
         alt="Luxury boutique hotel brand identity with elegant design"
-        size="large"
         wrap={true}
       />
 

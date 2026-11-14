@@ -37,7 +37,11 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 8,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2026-01-06T01:00:00Z',
-  featuredImage: '/images/layout-6/pexels-roman-odintsov-5837002.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-6/pexels-roman-odintsov-5837002-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   alternates: {
     canonical: '/layout-6',
   },
@@ -51,7 +55,9 @@ const metadata: PageMetadata = {
     description:
       'Discover Veloria Botanical Elixir, a premium non-alcoholic beverage crafted from 12 rare botanicals. Six generations of Scottish Highland craftsmanship in every bottle.',
     image: {
-      url: '/images/layout-6/pexels-roman-odintsov-5837002.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/layout-6/pexels-roman-odintsov-5837002-lg.jpg',
+      width: 1400,
+      height: 933,
       alt: 'Veloria Botanical Elixir premium non-alcoholic beverage',
     },
   },
@@ -62,7 +68,6 @@ const metadata: PageMetadata = {
     title: 'Veloria Botanical Elixir | Premium Craft Spirit',
     description:
       'Discover Veloria Botanical Elixir, a premium craft spirit distilled from 12 rare botanicals.',
-    image: '/images/layout-6/hero-bg.jpg',
   },
   structuredData: [
     {

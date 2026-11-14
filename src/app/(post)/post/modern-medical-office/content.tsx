@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-pixabay-221185.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-pixabay-221185-lg.jpg"
+        width={1400}
+        height={933}
         alt="Modern tech startup brand identity with bold colors and dynamic design"
-        size="large"
         wrap={true}
       />
 

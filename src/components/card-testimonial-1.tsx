@@ -5,6 +5,8 @@ import { Image } from '@/components/image'
 interface CardTestimonial1Props {
   /** Image source URL for the testimonial author */
   img: string
+  width?: number
+  height?: number
   /** Name or citation for the testimonial author */
   cite: string
   /** Testimonial content - should be Paragraph components */
@@ -13,6 +15,8 @@ interface CardTestimonial1Props {
 
 export function CardTestimonial1({
   img,
+  width,
+  height,
   cite,
   children,
 }: CardTestimonial1Props) {
@@ -27,7 +31,8 @@ export function CardTestimonial1({
           src={img}
           alt={cite}
           wrap={false}
-          size="small"
+          width={width}
+          height={height}
           className="h-32 w-32 object-cover object-center"
           rounded="rounded-full"
         />

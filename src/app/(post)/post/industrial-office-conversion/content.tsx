@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571453-lg.jpg"
+        width={1400}
+        height={935}
         alt="Industrial office space with exposed brick and modern furnishings"
-        size="large"
         wrap={true}
       />
 

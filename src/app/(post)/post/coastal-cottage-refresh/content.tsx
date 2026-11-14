@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/pexels-pixabay-259962.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-259962-lg.jpg"
+        width={1400}
+        height={930}
         alt="Coastal cottage interior with bright, airy design"
-        size="large"
         wrap={true}
       />
 

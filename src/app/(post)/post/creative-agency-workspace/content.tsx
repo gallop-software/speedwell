@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-cottonbro-4154192.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-cottonbro-4154192-lg.jpg"
+        width={1400}
+        height={2100}
         alt="Natural organic skincare brand identity with minimalist packaging"
-        size="large"
         wrap={true}
       />
 

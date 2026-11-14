@@ -13,10 +13,11 @@ export default function Hero() {
 
       {/* Background image */}
       <Image
-        src="/images/layout-6/pexels-roman-odintsov-5837002.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-roman-odintsov-5837002.jpg"
+        width={2560}
+        height={1707}
         alt="Premium botanical beverage"
         className="absolute inset-0 w-full h-full object-cover"
-        size="full"
         rounded="rounded-none"
       />
 

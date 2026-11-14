@@ -14,7 +14,9 @@ export default function About() {
       >
         <CardTestimonial2
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-dxaxoxfz-17555273-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Jordan Anderson"
         >
           <Heading as="h3">Jordan Anderson</Heading>
@@ -34,7 +36,9 @@ export default function About() {
         </CardTestimonial2>
         <CardTestimonial2
           aspect="aspect-[1/1]"
-          img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-ekaterina-bolovtsova-5393594-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Casey Williams"
         >
           <Heading as="h3">Casey Williams</Heading>
@@ -54,7 +58,9 @@ export default function About() {
         </CardTestimonial2>
         <CardTestimonial2
           aspect="aspect-[1/1]"
-          img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-italo-melo-881954-2379005-lg.jpg"
+          width={1400}
+          height={1750}
           cite="Ryan Martinez"
         >
           <Heading as="h3">Ryan Martinez</Heading>
@@ -71,7 +77,9 @@ export default function About() {
           </Paragraph>
         </CardTestimonial2>
         <CardTestimonial2
-          img="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-maide-arslan-128712163-31750448-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Alex Foster"
         >
           <Heading as="h3">Alex Foster</Heading>
@@ -90,7 +98,9 @@ export default function About() {
         </CardTestimonial2>
         <CardTestimonial2
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-retamozo-gonzalo-454802313-26926485-lg.jpg"
+          width={1400}
+          height={1750}
           cite="Marcus Park"
         >
           <Heading as="h3">Marcus Park</Heading>

@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245-lg.jpg"
+        width={1400}
+        height={1400}
         alt="Modern nursery with soft colors and thoughtful design"
-        size="large"
         wrap={true}
       />
 

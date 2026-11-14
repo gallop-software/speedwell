@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Bold brewery brand featuring custom illustrations, vibrant label designs, and cohesive identity system that stands out in craft beer market.',
   date: '2024-07-18',
   slug: 'luxury-fitness-studio',
-  featuredImage: '/layout-1/pexels-elevate-1267700.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-elevate-1267700-lg.jpg',
+    width: 1400,
+    height: 2096,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
     canonical: '/post/luxury-fitness-studio',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Distinctive brewery brand with custom illustrations and bold packaging',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Craft brewery brand labels',
     },
   },

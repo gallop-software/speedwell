@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Authentic midcentury modern home renovation preserving original architecture with updated finishes and period-appropriate furnishings.',
   date: '2024-10-03',
   slug: 'midcentury-modern-refresh',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571462-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   categories: ['Residential', 'Midcentury Modern', 'Renovation'],
   alternates: {
     canonical: '/post/midcentury-modern-refresh',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       '1960s home renovation with authentic midcentury modern design and furnishings',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Midcentury modern living room with period furnishings',
     },
   },

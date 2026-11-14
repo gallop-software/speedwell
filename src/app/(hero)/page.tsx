@@ -53,7 +53,9 @@ const metadata: PageMetadata = {
     description:
       'Build stunning websites faster with Speedwell. A premium Next.js template featuring 100+ blocks, TypeScript, Tailwind CSS, and built-in SEO optimization.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Speedwell Next.js Template Preview',
     },
   },
@@ -64,7 +66,7 @@ const metadata: PageMetadata = {
     title: 'Speedwell | Premium Next.js Website Template',
     description:
       'Build stunning websites faster with 100+ customizable blocks, TypeScript, Tailwind CSS, and built-in SEO optimization.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
   category: 'Web Development',
   applicationName: 'Speedwell',

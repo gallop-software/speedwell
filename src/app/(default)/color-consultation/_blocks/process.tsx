@@ -26,11 +26,12 @@ export default function Process() {
         </Column>
         <Column>
           <Image
-            src="/portfolio/pexels-pixabay-279719.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-279719-lg.jpg"
+            width={1400}
+            height={875}
             alt="Modern interior with expertly selected color palette"
             className="w-full object-cover"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
       </Columns>

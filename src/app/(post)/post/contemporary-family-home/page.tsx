@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Open-plan family home renovation featuring contemporary design, custom millwork, and smart home integration for comfortable modern living.',
   date: '2024-11-10',
   slug: 'contemporary-family-home',
-  featuredImage: '/portfolio/falling4utah/pexels-falling4utah-1080696.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696-lg.jpg',
+    width: 1400,
+    height: 2100,
+  },
   categories: ['Residential', 'Contemporary', 'Family Home'],
   alternates: {
     canonical: '/post/contemporary-family-home',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Open-plan contemporary home with custom millwork and smart home features',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Contemporary family home with open-plan living spaces',
     },
   },

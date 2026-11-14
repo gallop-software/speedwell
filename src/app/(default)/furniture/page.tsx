@@ -39,7 +39,11 @@ const metadata: PageMetadata = {
     'furniture specification',
   ],
   slug: 'furniture',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1669799-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   focusKeyword: 'furniture selection services',
   readingTimeMinutes: 4,
   publishDate: '2024-07-10T11:00:00Z',
@@ -57,7 +61,9 @@ const metadata: PageMetadata = {
     description:
       'Expert furniture selection that curates perfect pieces for your space. Quality furnishings combining style, comfort, and durability for beautiful interiors.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Beautifully curated interior furniture selection',
     },
   },
@@ -66,7 +72,7 @@ const metadata: PageMetadata = {
     title: 'Furniture Selection Services | Curated Interior Furnishings',
     description:
       'Expert furniture selection services. Curate perfect pieces combining style, comfort, and durability for cohesive, beautiful interiors.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
 }
 

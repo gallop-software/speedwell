@@ -18,7 +18,9 @@ export default function About() {
       />
       <Swiper layout="carousel">
         <Profile2
-          img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-moose-photos-170195-1587009-sm.jpg"
+          width={300}
+          height={450}
           bgColor="bg-body2/40"
           cite="Sarah Mitchell"
           contact={[
@@ -48,7 +50,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-nkhajotia-1516680.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-nkhajotia-1516680-sm.jpg"
+          width={300}
+          height={450}
           bgColor="bg-body2/50"
           cite="Michael Chen"
           contact={[
@@ -78,7 +82,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-retamozo-gonzalo-454802313-26926485-sm.jpg"
+          width={300}
+          height={375}
           bgColor="bg-body2/60"
           cite="Robert Rodriguez"
           contact={[
@@ -108,7 +114,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-skildring-12871464.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-skildring-12871464-sm.jpg"
+          width={300}
+          height={436}
           bgColor="bg-body2/70"
           cite="David Thompson"
           contact={[
@@ -138,7 +146,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-anna-nekrashevich-6801642-sm.jpg"
+          width={300}
+          height={450}
           bgColor="bg-body2/40"
           cite="Ryan Anderson"
           contact={[
@@ -168,7 +178,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-dxaxoxfz-17555273-sm.jpg"
+          width={300}
+          height={450}
           bgColor="bg-body2/50"
           cite="Lucas Martinez"
           contact={[
@@ -198,7 +210,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-ekaterina-bolovtsova-5393594-sm.jpg"
+          width={300}
+          height={450}
           bgColor="bg-body2/60"
           cite="Amanda Foster"
           contact={[
@@ -228,7 +242,9 @@ export default function About() {
         </Profile2>
 
         <Profile2
-          img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-italo-melo-881954-2379005-sm.jpg"
+          width={300}
+          height={375}
           bgColor="bg-body2/70"
           cite="Robert Taylor"
           contact={[

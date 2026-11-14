@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/pexels-pixabay-269218.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269218-lg.jpg"
+        width={1400}
+        height={788}
         alt="Spa-like bathroom retreat with luxurious fixtures and calming design"
-        size="large"
         wrap={true}
       />
 

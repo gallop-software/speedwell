@@ -28,10 +28,11 @@ export default function Hero() {
             <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
               <Image
                 rounded="rounded-none"
-                src="/portfolio/charlotte-may/pexels-charlotte-may-5825527.jpg"
+                src="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825527-lg.jpg"
+                width={1400}
+                height={933}
                 alt="Fugiat cillum sit in adipiscing eiusmod"
                 className="w-full h-full object-cover"
-                size="large"
                 lazy={false}
               />
             </div>

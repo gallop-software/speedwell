@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034-lg.jpg"
+        width={1400}
+        height={935}
         alt="Transitional townhouse blending traditional and contemporary design"
-        size="large"
         wrap={true}
       />
 

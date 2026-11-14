@@ -13,17 +13,19 @@ export default function Overview() {
       <Columns gap="gap-10 lg:gap-20">
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/portfolio/pexels-pixabay-279719.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-279719-lg.jpg"
+            width={1400}
+            height={875}
             alt="Modern residential interior with stylish design elements"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
           />
           <Image
-            src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989-lg.jpg"
+            width={1400}
+            height={2097}
             alt="Contemporary living space with elegant furnishings"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

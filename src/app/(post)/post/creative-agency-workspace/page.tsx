@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Minimalist rebrand for organic skincare line featuring botanical elements, sustainable packaging, and sophisticated visual identity for clean beauty market.',
   date: '2024-10-20',
   slug: 'creative-agency-workspace',
-  featuredImage: '/layout-1/pexels-cottonbro-4154192.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-cottonbro-4154192-lg.jpg',
+    width: 1400,
+    height: 2100,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
     canonical: '/post/creative-agency-workspace',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Sustainable rebrand for organic skincare with minimalist design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Organic skincare brand packaging',
     },
   },

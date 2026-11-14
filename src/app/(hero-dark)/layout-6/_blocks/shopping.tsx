@@ -30,10 +30,11 @@ export default function Shopping() {
             <div className="absolute inset-0 bg-accent/5 blur-3xl rounded-full scale-150"></div>
 
             <Image
-              src="/images/layout-6/pexels-roman-odintsov-5837002.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-roman-odintsov-5837002-lg.jpg"
+              width={1400}
+              height={933}
               alt="Veloria Botanical Elixir bottle"
               className="relative z-10 max-w-2xl mx-auto w-full shadow-2xl"
-              size="large"
             />
           </div>
         </Column>

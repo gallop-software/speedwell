@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Bold brand identity for innovative SaaS startup featuring vibrant gradients, custom iconography, and scalable design system for growth.',
   date: '2024-11-15',
   slug: 'modern-medical-office',
-  featuredImage: '/layout-1/pexels-pixabay-221185.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-pixabay-221185-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Digital Branding'],
   alternates: {
     canonical: '/post/modern-medical-office',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Energetic brand identity for tech startup with bold visuals and scalable system',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Tech startup brand identity',
     },
   },

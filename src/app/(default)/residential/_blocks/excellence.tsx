@@ -13,17 +13,19 @@ export default function Excellence() {
       >
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707-lg.jpg"
+            width={1400}
+            height={933}
             alt="Cozy living space with warm and inviting atmosphere"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
           />
           <Image
-            src="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5824901-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Modern bathroom with spa-like features"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

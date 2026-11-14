@@ -15,7 +15,9 @@ export default function Hero() {
       <VideoBackground
         videoId="1151997268"
         videoHash="ec0ec60a5d"
-        posterImage="/images/layout-7/video-image.png"
+        posterImage="https://speedwell-cdn.gallop.software/images/layout-7/video-image-lg.png"
+        posterWidth={1400}
+        posterHeight={788}
         gradientOverlay="bg-gradient-to-br from-purple-900/40 via-overlay/60 to-overlay/80"
       />
 

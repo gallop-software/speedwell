@@ -17,7 +17,10 @@ const testimonials = [
     author: 'Michael Torres',
     title: 'Regular Listener',
     rating: 5,
-    image: '/images/profiles/pexels-linkedin-2182970.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/profiles/pexels-linkedin-2182970-lg.jpg',
+    width: 1400,
+    height: 2100,
     platform: 'Apple Podcasts',
     featured: false,
   },
@@ -27,7 +30,10 @@ const testimonials = [
     author: 'Jennifer Kim',
     title: 'Subscriber since 2023',
     rating: 5,
-    image: '/images/profiles/pexels-maide-arslan-128712163-31750448.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/profiles/pexels-maide-arslan-128712163-31750448-lg.jpg',
+    width: 1400,
+    height: 2100,
     platform: 'Spotify',
     featured: true,
   },
@@ -37,7 +43,10 @@ const testimonials = [
     author: 'David Okonkwo',
     title: 'Apple Podcasts Reviewer',
     rating: 5,
-    image: '/images/profiles/pexels-moose-photos-170195-1587009.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/profiles/pexels-moose-photos-170195-1587009-lg.jpg',
+    width: 1400,
+    height: 2100,
     platform: 'Apple Podcasts',
     featured: false,
   },
@@ -125,6 +134,8 @@ export default function Testimonial() {
                   <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                     <Image
                       src={testimonial.image}
+                      width={testimonial.width}
+                      height={testimonial.height}
                       alt={testimonial.author}
                       className="w-full h-full object-cover"
                     />

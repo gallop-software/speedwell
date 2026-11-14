@@ -1,20 +1,15 @@
-import { getStudioImage } from '@/utils/studio-helpers'
-
 export const baseURL =
   process.env.NEXT_PUBLIC_PRODUCTION_URL || 'http://localhost:3000'
 
-const logoImageData = getStudioImage('/banner.jpg', 'large')
-
-const businessImageData = getStudioImage(
-  '/images/pexels-helenalopes-1996337.jpg',
-  'large'
-)
-
+// Default social-share image: URL, width and height from _data/_studio.json
 export const defaultOGImage = {
-  url: logoImageData?.url || '',
-  width: logoImageData?.width || 0,
-  height: logoImageData?.height || 0,
+  url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+  width: 1400,
+  height: 840,
 }
+
+// Image of the business for schema.org; empty until one is chosen
+const businessImage = ''
 
 export const defaultSEOConfig = {
   creator: 'Speedwell',
@@ -42,8 +37,8 @@ export const defaultStructuredData = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud.',
     url: 'https://speedwell.gallop.software',
-    logo: logoImageData?.url || '',
-    image: businessImageData?.url || '',
+    logo: defaultOGImage.url,
+    image: businessImage,
     telephone: '+1-555-0123',
     email: 'info@speedwell.gallop.software',
     address: {
@@ -218,7 +213,7 @@ export const defaultStructuredData = [
     '@type': 'Organization',
     name: 'Speedwell',
     url: 'https://speedwell.gallop.software',
-    logo: logoImageData?.url || '',
+    logo: defaultOGImage.url,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
@@ -244,8 +239,8 @@ export const defaultStructuredData = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud.',
     url: 'https://speedwell.gallop.software',
-    logo: logoImageData?.url || '',
-    image: businessImageData?.url || '',
+    logo: defaultOGImage.url,
+    image: businessImage,
     telephone: '+1-555-0123',
     email: 'info@speedwell.gallop.software',
     address: {

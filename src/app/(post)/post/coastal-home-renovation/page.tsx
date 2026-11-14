@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Complete renovation of a beachfront home featuring airy coastal design, custom built-ins, and seamless indoor-outdoor living spaces with ocean views.',
   date: '2025-04-15',
   slug: 'coastal-home-renovation',
-  featuredImage: '/portfolio/pexels-burst-545012.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Residential', 'Coastal Design', 'Renovation'],
   alternates: {
     canonical: '/post/coastal-home-renovation',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Fresh, airy beachfront home renovation with ocean views and coastal-inspired interiors',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Coastal living room with ocean views and light airy design',
     },
   },

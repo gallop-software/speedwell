@@ -4,7 +4,9 @@ import { Accent } from '@/components/accent'
 export default function Banner() {
   return (
     <Cover
-      imageSrc="/portfolio/pexels-clickerhappy-584399.jpg"
+      imageSrc="https://speedwell-cdn.gallop.software/images/portfolio/pexels-clickerhappy-584399.jpg"
+      imageWidth={2560}
+      imageHeight={1693}
       imageAlt="Beautiful interior design space"
       imageClassName=""
     >

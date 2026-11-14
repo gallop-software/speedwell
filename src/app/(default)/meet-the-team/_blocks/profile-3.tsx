@@ -15,11 +15,12 @@ export default function Profile3() {
       >
         <Column>
           <Image
-            src="/images/profiles/pexels-linkedin-2182970.jpg"
+            src="https://speedwell-cdn.gallop.software/images/profiles/pexels-linkedin-2182970-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Robert Rodriguez - Residential Design Lead"
             className="w-full object-cover max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

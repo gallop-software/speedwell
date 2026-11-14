@@ -1,7 +1,6 @@
 import React from 'react'
 import { clsx } from 'clsx'
 import { Container } from '@/components/container'
-import { studioUrl } from '@/utils/studio-helpers'
 
 interface SectionProps {
   children: React.ReactNode
@@ -32,7 +31,7 @@ export function Section({
       {imageSrc && (
         <>
           <img
-            src={studioUrl(imageSrc, 'full')}
+            src={imageSrc}
             alt={imageAlt || ''}
             className={clsx(
               'object-cover object-center absolute inset-0 w-full h-full -z-[2]',

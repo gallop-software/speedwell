@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/pexels-pixabay-276724.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-276724-lg.jpg"
+        width={1400}
+        height={788}
         alt="Home library and study with built-in bookshelves"
-        size="large"
         wrap={true}
       />
 

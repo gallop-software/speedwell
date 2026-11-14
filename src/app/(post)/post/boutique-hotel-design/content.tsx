@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-5570224-lg.jpg"
+        width={1400}
+        height={2100}
         alt="Boutique hotel interior with elegant design details"
-        size="large"
         wrap={true}
       />
 

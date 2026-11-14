@@ -15,11 +15,12 @@ export default function Phase3() {
       >
         <Column>
           <Image
-            src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-lg.jpg"
+            width={1400}
+            height={2097}
             alt="Professional installation and styling"
             className="w-full object-cover max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

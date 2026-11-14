@@ -12,12 +12,16 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080721-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
         />
       </Gallery>
 

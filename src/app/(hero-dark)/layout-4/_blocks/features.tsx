@@ -13,21 +13,30 @@ const features = [
     title: 'Master Chefs',
     description:
       'Award-winning culinary artists with decades of experience across Michelin-starred kitchens worldwide',
-    image: '/images/layout-4/pexels-metin-mutlu-3305420-8585881.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/pexels-metin-mutlu-3305420-8585881-lg.jpg',
+    width: 1400,
+    height: 933,
   },
   {
     numeral: 'II',
     title: 'Farm to Table',
     description:
       'Partnering with local farms and artisans to bring you the freshest seasonal ingredients at their peak',
-    image: '/images/layout-4/pexels-minchephoto-7491887.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/pexels-minchephoto-7491887-lg.jpg',
+    width: 1400,
+    height: 933,
   },
   {
     numeral: 'III',
     title: 'Artisan Approach',
     description:
       'Every dish is meticulously crafted with passion, precision, and an unwavering commitment to excellence',
-    image: '/images/layout-4/pexels-valeriya-9266842.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-4/pexels-valeriya-9266842-lg.jpg',
+    width: 1400,
+    height: 2100,
   },
 ]
 
@@ -78,6 +87,8 @@ export default function Features() {
             {/* Background Image */}
             <Image
               src={feature.image}
+              width={feature.width}
+              height={feature.height}
               alt={feature.title}
               className="absolute inset-0 w-full h-full object-cover"
               rounded="rounded-none"

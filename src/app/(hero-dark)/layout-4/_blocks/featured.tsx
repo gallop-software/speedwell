@@ -13,10 +13,11 @@ export default function Featured() {
     >
       <div className="absolute inset-0 w-full -z-1">
         <Image
-          src="/images/layout-4/pexels-jonathanborba-2878738.jpg"
+          src="https://speedwell-cdn.gallop.software/images/layout-4/pexels-jonathanborba-2878738.jpg"
+          width={2560}
+          height={3840}
           alt="Signature dish"
           className="w-full h-full object-cover"
-          size="full"
         />
       </div>
       <Heading

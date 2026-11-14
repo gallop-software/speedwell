@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/fotoaibe/pexels-fotoaibe-1571462.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571462-lg.jpg"
+        width={1400}
+        height={935}
         alt="Midcentury modern home with clean lines and retro furnishings"
-        size="large"
         wrap={true}
       />
 

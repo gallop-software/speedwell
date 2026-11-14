@@ -12,20 +12,28 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1668860-lg.jpg"
+          width={1400}
+          height={935}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
         />
         <GalleryItem
-          src="/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825398-lg.jpg"
+          width={1400}
+          height={2100}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
         />
         <GalleryItem
-          src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696-lg.jpg"
+          width={1400}
+          height={2100}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
         />
       </Gallery>
 

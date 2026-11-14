@@ -2,6 +2,9 @@
 
 ## 2026-11-14
 
+- Images are written out in full: every image in the code carries its own URL, width and height from `_data/_studio.json`, and nothing is looked up at runtime. The `size` and `mediaLink` props, `src/utils/studio-helpers.ts` and the studio table in the browser bundle are gone
+- `npm run images` checks every image URL and size in `src/` against `_data/_studio.json`, and is part of `npm run check`
+- `featuredImage` and `openGraph.image` in page metadata are `{ url, width, height }`
 - The template deploys to Cloudflare Workers only; Vercel support is removed, along with `@vercel/analytics` and the `revalidate` settings that existed for Vercel's ISR
 - Contact forms send through Cloudflare Email Service only; the Mailgun path and its `MAILGUN_*` settings are removed, and `EMAIL_DOMAIN` is now required
 

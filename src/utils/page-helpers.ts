@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { baseURL, defaultOGImage, defaultSEOConfig } from '@/app/metadata'
-import { getStudioImage } from '@/utils/studio-helpers'
 
 export interface PageMetadata {
   title?: string
   description?: string
   keywords?: string[]
   slug?: string
-  featuredImage?: string
+  /** URL, width and height of the image file, from _data/_studio.json */
+  featuredImage?: { url: string; width: number; height: number }
   focusKeyword?: string | string[]
   readingTimeMinutes?: number
   date?: string
@@ -26,8 +26,11 @@ export interface PageMetadata {
     siteName?: string
     title?: string
     description?: string
+    /** URL, width and height of the image file, from _data/_studio.json */
     image?: {
       url: string
+      width: number
+      height: number
       alt?: string
     }
   }
@@ -47,13 +50,7 @@ export function generatePageMetadata(
   metadata: PageMetadata,
   slug?: string[]
 ): Metadata {
-  const openGraphImageData = metadata?.openGraph?.image
-    ? getStudioImage(metadata.openGraph.image.url, 'large')
-    : null
-
-  const twitterImageData = metadata?.twitter?.image
-    ? getStudioImage(metadata.twitter.image, 'large')
-    : null
+  const openGraphImage = metadata?.openGraph?.image
 
   return {
     title: metadata?.title || 'Page',
@@ -90,19 +87,16 @@ export function generatePageMetadata(
         metadata?.openGraph?.description ||
         metadata?.description ||
         'A page on our website',
-      images:
-        metadata?.openGraph?.image && openGraphImageData
-          ? [
-              {
-                url: openGraphImageData.url,
-                width: openGraphImageData.width,
-                height: openGraphImageData.height,
-                ...(metadata.openGraph.image.alt && {
-                  alt: metadata.openGraph.image.alt,
-                }),
-              },
-            ]
-          : [defaultOGImage],
+      images: openGraphImage
+        ? [
+            {
+              url: openGraphImage.url,
+              width: openGraphImage.width,
+              height: openGraphImage.height,
+              ...(openGraphImage.alt && { alt: openGraphImage.alt }),
+            },
+          ]
+        : [defaultOGImage],
     },
     twitter: {
       card: metadata?.twitter?.card || 'summary_large_image',
@@ -118,10 +112,7 @@ export function generatePageMetadata(
         metadata?.openGraph?.description ||
         metadata?.description ||
         'A page on our website',
-      images:
-        metadata?.twitter?.image && twitterImageData
-          ? [twitterImageData.url]
-          : undefined,
+      images: metadata?.twitter?.image ? [metadata.twitter.image] : undefined,
     },
   }
 }

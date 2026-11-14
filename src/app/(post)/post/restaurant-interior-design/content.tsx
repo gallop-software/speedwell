@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571452-lg.jpg"
+        width={1400}
+        height={935}
         alt="Restaurant interior with inviting atmosphere and stylish design"
-        size="large"
         wrap={true}
       />
 

@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-enginakyurt-1435894.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-enginakyurt-1435894-lg.jpg"
+        width={1400}
+        height={934}
         alt="Farm-to-table restaurant brand identity with rustic design elements"
-        size="large"
         wrap={true}
       />
 

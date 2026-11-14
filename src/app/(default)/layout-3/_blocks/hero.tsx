@@ -41,7 +41,9 @@ export default function Hero() {
       innerAlign="navbar"
     >
       <Image
-        src="/layout-3/pexels-plann-2999237-4549411.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-3/pexels-plann-2999237-4549411-lg.jpg"
+        width={1400}
+        height={933}
         alt="Photography hero background"
         className="absolute inset-0 w-full h-full object-cover"
         rounded="rounded-none"

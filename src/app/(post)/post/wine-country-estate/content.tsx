@@ -12,16 +12,22 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/portfolio/pexels-alex-qian-1180283-2343465.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-alex-qian-1180283-2343465-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-alex-qian-1180283-2343465.jpg"
         />
         <GalleryItem
-          src="/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080721-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080721.jpg"
         />
         <GalleryItem
-          src="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1643384-lg.jpg"
+          width={1400}
+          height={934}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
         />
       </Gallery>
 

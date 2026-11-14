@@ -14,11 +14,12 @@ export default function Phase() {
       >
         <Column>
           <Image
-            src="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777-lg.jpg"
+            width={1400}
+            height={2097}
             alt="Detailed project planning and scheduling"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

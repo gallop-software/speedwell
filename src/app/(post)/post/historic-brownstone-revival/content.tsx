@@ -10,8 +10,9 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
-        size="large"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1643384-lg.jpg"
+        width={1400}
+        height={934}
         wrap={true}
         alt="Historic brownstone interior with restored architectural details"
       />

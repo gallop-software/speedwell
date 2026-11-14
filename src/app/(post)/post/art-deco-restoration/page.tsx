@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Meticulous Art Deco apartment restoration featuring geometric details, period furnishings, and glamorous 1920s design with modern amenities.',
   date: '2024-03-25',
   slug: 'art-deco-restoration',
-  featuredImage: '/portfolio/pexels-pixabay-269252.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269252-lg.jpg',
+    width: 1400,
+    height: 1107,
+  },
   categories: ['Restoration', 'Art Deco', 'Historic'],
   alternates: {
     canonical: '/post/art-deco-restoration',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Glamorous Art Deco restoration with period details and modern convenience',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Art Deco interior with geometric patterns and luxurious finishes',
     },
   },

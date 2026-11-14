@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Environmentally conscious home featuring sustainable materials, energy-efficient systems, and healthy living spaces with minimal carbon footprint.',
   date: '2024-08-30',
   slug: 'sustainable-green-home',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1668860-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   categories: ['Residential', 'Sustainable', 'Contemporary'],
   alternates: {
     canonical: '/post/sustainable-green-home',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Eco-friendly home with sustainable materials and energy-efficient design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Sustainable home interior with natural materials',
     },
   },

@@ -28,11 +28,12 @@ export default function Story() {
             {/* Main product image */}
             <div className="relative z-10">
               <Image
-                src="/images/layout-6/pexels-daka-12360528.jpg"
+                src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-daka-12360528-lg.jpg"
+                width={1400}
+                height={1960}
                 alt="Veloria Botanical Elixir bottle"
                 className="w-full object-cover"
                 rounded="rounded-sm"
-                size="large"
               />
             </div>
             {/* Decorative frame */}

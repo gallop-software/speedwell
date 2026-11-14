@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Tranquil boutique spa featuring treatment rooms, meditation lounge, and holistic design creating a sanctuary for rejuvenation and self-care.',
   date: '2025-01-30',
   slug: 'wellness-spa-design',
-  featuredImage: '/portfolio/falling4utah/pexels-falling4utah-1080721.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080721-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Commercial', 'Wellness', 'Spa Design'],
   alternates: {
     canonical: '/post/wellness-spa-design',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Boutique wellness spa with treatment rooms and holistic design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Wellness spa with tranquil treatment rooms',
     },
   },

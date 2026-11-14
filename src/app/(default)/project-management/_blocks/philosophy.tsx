@@ -10,17 +10,19 @@ export default function Philosophy() {
       <Columns>
         <Column className="aspect-4/5 relative">
           <Image
-            src="/portfolio/pexels-pixabay-269218.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269218-lg.jpg"
+            width={1400}
+            height={788}
             alt="Quality craftsmanship and attention to detail"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
           />
           <Image
-            src="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-5570224-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Professional contractor coordination"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column className="py-0 lg:py-10">

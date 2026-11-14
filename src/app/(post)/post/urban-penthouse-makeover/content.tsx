@@ -12,12 +12,16 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5824901-lg.jpg"
+          width={1400}
+          height={2100}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
         />
       </Gallery>
 

@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746-lg.jpg"
+        width={1400}
+        height={2097}
         alt="Minimalist kitchen with sleek cabinets and clean design"
-        size="large"
         wrap={true}
       />
 

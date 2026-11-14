@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-diva-plavalaguna-6937932.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-diva-plavalaguna-6937932-lg.jpg"
+        width={1400}
+        height={933}
         alt="Modern wellness studio brand identity with calming design elements"
-        size="large"
         wrap={true}
       />
 

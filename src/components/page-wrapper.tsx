@@ -1,6 +1,5 @@
 import Script from 'next/script'
 import { defaultStructuredData } from '@/app/metadata'
-import { studioUrl } from '@/utils/studio-helpers'
 import type { ReactNode } from 'react'
 import type { PageMetadata } from '@/utils/page-helpers'
 
@@ -9,31 +8,11 @@ interface PageWrapperProps {
   metadata?: PageMetadata
 }
 
-// Process structured data to resolve image URLs via studioUrl
-function processStructuredData(data: unknown): unknown {
-  if (Array.isArray(data)) {
-    return data.map(processStructuredData)
-  }
-  if (data && typeof data === 'object') {
-    const result: Record<string, unknown> = {}
-    for (const [key, value] of Object.entries(data)) {
-      if (key === 'image' && typeof value === 'string') {
-        result[key] = studioUrl(value, 'large')
-      } else {
-        result[key] = processStructuredData(value)
-      }
-    }
-    return result
-  }
-  return data
-}
-
 export function PageWrapper({ children, metadata }: PageWrapperProps) {
-  const rawStructuredData = {
+  const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [...defaultStructuredData, ...(metadata?.structuredData || [])],
   }
-  const structuredData = processStructuredData(rawStructuredData)
 
   return (
     <>

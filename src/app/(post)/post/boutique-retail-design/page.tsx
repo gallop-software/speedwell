@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Complete brand identity for specialty coffee roaster featuring sustainable packaging design, custom illustrations, and authentic visual storytelling.',
   date: '2024-12-10',
   slug: 'boutique-retail-design',
-  featuredImage: '/layout-1/pexels-blanca-isela-2156722885-35240180.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-blanca-isela-2156722885-35240180-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Packaging Design'],
   alternates: {
     canonical: '/post/boutique-retail-design',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Sustainable brand identity and packaging design for artisan coffee roaster',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Artisan coffee brand packaging',
     },
   },

@@ -12,16 +12,22 @@ function Details() {
     <>
       <Gallery>
         <GalleryItem
-          src="/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707-lg.jpg"
+          width={1400}
+          height={933}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707.jpg"
         />
         <GalleryItem
-          src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245-lg.jpg"
+          width={1400}
+          height={1400}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
         />
         <GalleryItem
-          src="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
-          size="large"
+          src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746-lg.jpg"
+          width={1400}
+          height={2097}
+          href="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
         />
       </Gallery>
 

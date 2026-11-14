@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import React, { Children, isValidElement } from 'react'
-import imageMeta from '@/../_data/_studio.json'
 import { LightboxWrapper } from '@/components/lightbox-wrapper'
 
 export interface GalleryProps {
@@ -11,27 +10,6 @@ export interface GalleryProps {
   align?: 'none' | 'wide' | 'content'
 }
 
-type ImageSize = 'small' | 'medium' | 'large' | 'full'
-
-interface Dimensions {
-  w: number
-  h: number
-}
-
-type MetaEntry = {
-  o?: Dimensions // original dimensions {w, h}
-  sm?: Dimensions // small thumbnail
-  md?: Dimensions // medium thumbnail
-  lg?: Dimensions // large thumbnail
-  f?: Dimensions // full size
-  c?: number // CDN index
-}
-
-interface FullMeta {
-  _cdns?: string[]
-  [key: string]: MetaEntry | string[] | undefined
-}
-
 type GalleryItemProps = {
   src: string
   href?: string
@@ -40,74 +18,6 @@ type GalleryItemProps = {
   className?: string
   width?: number
   height?: number
-  size?: ImageSize
-}
-
-// Map size prop to meta key
-const SIZE_KEY_MAP: Record<ImageSize, 'sm' | 'md' | 'lg' | 'f'> = {
-  small: 'sm',
-  medium: 'md',
-  large: 'lg',
-  full: 'f',
-}
-
-// Normalize src to get the meta lookup key (strip /images prefix and any size suffix)
-function getMetaLookupKey(src: string): string {
-  let key = src.startsWith('/') ? src : `/${src}`
-
-  // Strip /images prefix if present
-  if (key.startsWith('/images/')) {
-    key = key.slice(7) // Remove '/images'
-  }
-
-  // Strip size suffix if present (e.g., -sm, -md, -lg)
-  key = key.replace(/-(sm|md|lg)\.(jpg|jpeg|png|webp)$/i, '.$2')
-
-  return key
-}
-
-const getDimsFromMetadata = (
-  src: string,
-  size: ImageSize = 'large'
-): { width: number; height: number } => {
-  const metaData = imageMeta as FullMeta
-
-  // Normalize src to get lookup key (strips /images prefix and size suffixes)
-  const lookupKey = getMetaLookupKey(src)
-
-  // Get entry from meta (exclude special keys)
-  if (lookupKey.startsWith('_')) return { width: 1000, height: 1000 }
-  const value = metaData[lookupKey]
-  if (!value || Array.isArray(value)) return { width: 1000, height: 1000 }
-  const entry = value as MetaEntry
-
-  // Try requested size first
-  const sizeKey = SIZE_KEY_MAP[size]
-  const dims = entry[sizeKey]
-  if (dims) {
-    return { width: dims.w, height: dims.h }
-  }
-
-  // Fallback to any available size
-  const fallbackOrder: Array<'lg' | 'md' | 'f' | 'sm' | 'o'> = [
-    'lg',
-    'md',
-    'f',
-    'sm',
-    'o',
-  ]
-  for (const key of fallbackOrder) {
-    const fallbackDims = entry[key as keyof MetaEntry] as Dimensions | undefined
-    if (
-      fallbackDims &&
-      typeof fallbackDims === 'object' &&
-      'w' in fallbackDims
-    ) {
-      return { width: fallbackDims.w, height: fallbackDims.h }
-    }
-  }
-
-  return { width: 1000, height: 1000 } // fallback
 }
 
 const getGridGalleryClass = (items: { width: number; height: number }[]) => {
@@ -205,9 +115,10 @@ export function Gallery({
   }
 
   const dims = items.map((child) => {
-    const { src, width, height, size } = child.props
-    if (width && height) return { width, height }
-    return getDimsFromMetadata(src, size)
+    // Rows are sized from each item's width and height; an item without them
+    // is laid out as a square
+    const { width, height } = child.props
+    return width && height ? { width, height } : { width: 1000, height: 1000 }
   })
 
   const sizes = computeRowSizes(n, columns)

@@ -13,7 +13,9 @@ export default function About() {
       <Grid cols="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-moose-photos-170195-1587009-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Sarah Mitchell"
         >
           <Heading
@@ -47,7 +49,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-nkhajotia-1516680.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-nkhajotia-1516680-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Michael Chen"
         >
           <Heading
@@ -81,7 +85,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-retamozo-gonzalo-454802313-26926485-lg.jpg"
+          width={1400}
+          height={1750}
           cite="Robert Rodriguez"
         >
           <Heading
@@ -115,7 +121,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-skildring-12871464.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-skildring-12871464-lg.jpg"
+          width={1400}
+          height={2035}
           cite="David Thompson"
         >
           <Heading
@@ -149,7 +157,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-anna-nekrashevich-6801642-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Ryan Anderson"
         >
           <Heading
@@ -183,7 +193,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-dxaxoxfz-17555273.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-dxaxoxfz-17555273-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Lucas Martinez"
         >
           <Heading
@@ -217,7 +229,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-ekaterina-bolovtsova-5393594-lg.jpg"
+          width={1400}
+          height={2100}
           cite="Amanda Foster"
         >
           <Heading
@@ -251,7 +265,9 @@ export default function About() {
 
         <Profile1
           aspect="aspect-[4/5]"
-          img="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-italo-melo-881954-2379005-lg.jpg"
+          width={1400}
+          height={1750}
           cite="Robert Taylor"
         >
           <Heading

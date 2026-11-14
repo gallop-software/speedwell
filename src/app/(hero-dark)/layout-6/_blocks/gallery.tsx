@@ -19,10 +19,11 @@ export default function Gallery() {
         {/* Image 1 - Tall */}
         <div className="relative aspect-auto row-span-2 overflow-hidden group">
           <Image
-            src="/images/layout-6/pexels-ertabbt-150087708-14210586.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-ertabbt-150087708-14210586-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Veloria served in a crystal glass"
             className="w-full h-full object-cover transition-transform duration-700 scale-104 group-hover:scale-105"
-            size="large"
             rounded="rounded-none"
           />
           <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
@@ -31,10 +32,11 @@ export default function Gallery() {
         {/* Image 2 */}
         <div className="relative aspect-square overflow-hidden group">
           <Image
-            src="/images/layout-6/pexels-nano-erdozain-120534369-28180071.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-nano-erdozain-120534369-28180071-md.jpg"
+            width={700}
+            height={467}
             alt="Botanical ingredients"
             className="w-full h-full object-cover transition-transform duration-700 scale-104 group-hover:scale-105"
-            size="medium"
             rounded="rounded-none"
           />
           <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
@@ -43,10 +45,11 @@ export default function Gallery() {
         {/* Image 3 */}
         <div className="relative aspect-square overflow-hidden group">
           <Image
-            src="/images/layout-6/pexels-larissafarber-34190188.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-larissafarber-34190188-md.jpg"
+            width={700}
+            height={1052}
             alt="Botanical crafting process"
             className="w-full h-full object-cover transition-transform duration-700 scale-104 group-hover:scale-105"
-            size="medium"
             rounded="rounded-none"
           />
           <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
@@ -55,10 +58,11 @@ export default function Gallery() {
         {/* Image 4 */}
         <div className="relative aspect-square overflow-hidden group">
           <Image
-            src="/images/layout-6/pexels-yankrukov-5480235.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-yankrukov-5480235-md.jpg"
+            width={700}
+            height={1050}
             alt="Evening refreshment setting"
             className="w-full h-full object-cover transition-transform duration-700 scale-104 group-hover:scale-105"
-            size="medium"
             rounded="rounded-none"
           />
           <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>
@@ -67,10 +71,11 @@ export default function Gallery() {
         {/* Image 5 */}
         <div className="relative aspect-square overflow-hidden group">
           <Image
-            src="/images/layout-6/pexels-daka-12360528.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-6/pexels-daka-12360528-md.jpg"
+            width={700}
+            height={980}
             alt="Veloria Botanical Elixir bottle"
             className="w-full h-full object-cover transition-transform duration-700 scale-104   group-hover:scale-105"
-            size="medium"
             rounded="rounded-none"
           />
           <div className="absolute inset-0 bg-overlay/20 group-hover:bg-overlay/10 transition-colors duration-500"></div>

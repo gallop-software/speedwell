@@ -17,9 +17,10 @@ function Demo1() {
   return (
     <div className="space-y-6">
       <Image
-        src="/portfolio/pexels-pixabay-161758.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-161758-md.jpg"
+        width={700}
+        height={467}
         alt="Modern interior"
-        size="medium"
         className="w-full"
       />
       <Heading as="h2">The Art of Interior Design</Heading>
@@ -86,9 +87,10 @@ function Demo2() {
   return (
     <div className="space-y-6">
       <Image
-        src="/portfolio/pexels-burst-545012.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012-md.jpg"
+        width={700}
+        height={467}
         alt="Modern living room"
-        size="medium"
         className="w-full"
       />
       <Heading as="h2">Modern Interior Style</Heading>
@@ -138,9 +140,10 @@ function Demo3() {
   return (
     <div className="space-y-6">
       <Image
-        src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1669799-md.jpg"
+        width={700}
+        height={467}
         alt="Colorful interior"
-        size="medium"
         className="w-full"
       />
       <Heading as="h2">Color Theory in Design</Heading>
@@ -196,9 +199,10 @@ function Demo4() {
   return (
     <div className="space-y-6">
       <Image
-        src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3797991-md.jpg"
+        width={700}
+        height={525}
         alt="Floor plan"
-        size="medium"
         className="w-full"
       />
       <Heading as="h2">Space Planning Fundamentals</Heading>
@@ -255,9 +259,10 @@ function Demo5() {
   return (
     <div className="space-y-6">
       <Image
-        src="/portfolio/pexels-pixabay-276724.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-276724-md.jpg"
+        width={700}
+        height={394}
         alt="Minimalist room"
-        size="medium"
         className="w-full"
       />
       <Heading as="h2">Minimalist Design Philosophy</Heading>
@@ -305,9 +310,10 @@ function Demo6() {
   return (
     <div className="space-y-6">
       <Image
-        src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-md.jpg"
+        width={700}
+        height={1049}
         alt="Bohemian interior"
-        size="medium"
         className="w-full"
       />
       <Heading as="h2">Bohemian Style Guide</Heading>
@@ -385,54 +391,60 @@ export default function Sidebar() {
               >
                 {/* Column 1 - Top */}
                 <Image
-                  src="/images/layout-3/pexels-olly-774909.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-3/pexels-olly-774909-lg.jpg"
+                  width={1400}
+                  height={2100}
                   alt="Portrait photography"
-                  size="large"
                   aspect="aspect-4/5"
                   className="object-cover"
                 />
 
                 {/* Column 2 - Top (offset down) */}
                 <Image
-                  src="/images/layout-3/pexels-pixabay-462162.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-3/pexels-pixabay-462162-lg.jpg"
+                  width={1400}
+                  height={786}
                   alt="Landscape and nature photography"
-                  size="large"
                   aspect="aspect-4/5"
                   className="object-cover relative top-8"
                 />
 
                 {/* Column 3 - Top */}
                 <Image
-                  src="/images/layout-3/pexels-forgottenluix-2922450.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-3/pexels-forgottenluix-2922450-lg.jpg"
+                  width={1400}
+                  height={2100}
                   alt="Fashion photography"
-                  size="large"
                   aspect="aspect-4/5"
                   className="object-cover"
                 />
 
                 {/* Column 1 - Bottom */}
                 <Image
-                  src="/images/layout-3/pexels-2149489342-35218938.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-3/pexels-2149489342-35218938-lg.jpg"
+                  width={1400}
+                  height={933}
                   alt="Abstract photography"
-                  size="large"
                   aspect="aspect-4/5"
                   className="object-cover"
                 />
 
                 {/* Column 2 - Bottom (offset down) */}
                 <Image
-                  src="/layout-1/pexels-shattha-pilabut-38930-135620.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-shattha-pilabut-38930-135620-lg.jpg"
+                  width={1400}
+                  height={966}
                   alt="Commercial photography"
-                  size="large"
                   aspect="aspect-4/5"
                   className="object-cover relative top-8"
                 />
 
                 {/* Column 3 - Bottom */}
                 <Image
-                  src="/images/layout-3/pexels-jonaorle-4029925.jpg"
+                  src="https://speedwell-cdn.gallop.software/images/layout-3/pexels-jonaorle-4029925-lg.jpg"
+                  width={1400}
+                  height={2100}
                   alt="Creative photography"
-                  size="large"
                   aspect="aspect-4/5"
                   className="object-cover"
                 />

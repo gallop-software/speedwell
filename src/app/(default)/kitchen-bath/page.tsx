@@ -39,7 +39,11 @@ const metadata: PageMetadata = {
     'kitchen renovation services',
   ],
   slug: 'kitchen-bath',
-  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   focusKeyword: 'kitchen and bath design',
   readingTimeMinutes: 4,
   publishDate: '2024-02-10T09:00:00Z',
@@ -57,7 +61,9 @@ const metadata: PageMetadata = {
     description:
       'Expert kitchen and bathroom design services that blend beauty with functionality. Create stunning spaces that elevate your daily routines with our custom remodeling solutions.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Beautiful modern kitchen with custom cabinetry and contemporary design',
     },
   },
@@ -66,7 +72,7 @@ const metadata: PageMetadata = {
     title: 'Kitchen & Bath Design Services | Custom Remodeling Experts',
     description:
       'Transform your kitchen and bathroom with expert design services. Beautiful, functional spaces combining luxury and innovation for modern living.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
 }
 

@@ -15,11 +15,12 @@ export default function Profile4() {
       >
         <Column>
           <Image
-            src="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
+            src="https://speedwell-cdn.gallop.software/images/profiles/pexels-maide-arslan-128712163-31750448-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Christopher Thompson - Color and Materials Specialist"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

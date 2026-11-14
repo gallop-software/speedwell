@@ -13,37 +13,42 @@ export default function Vendor2() {
       >
         <Card3
           id="1"
-          image="/portfolio/kseniachernaya/pexels-kseniachernaya-6021777.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-6021777-lg.jpg"
+          width={1400}
+          height={2097}
           alt="Evergreen Upholstery Co."
-          size="large"
           href="#"
         />
         <Card3
           id="2"
-          image="/portfolio/charlotte-may/pexels-charlotte-may-5825398.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5825398-lg.jpg"
+          width={1400}
+          height={2100}
           alt="Monarch Furniture Studio"
-          size="large"
           href="#"
         />
         <Card3
           id="3"
-          image="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746-lg.jpg"
+          width={1400}
+          height={2097}
           alt="Heritage Seating"
-          size="large"
           href="#"
         />
         <Card3
           id="4"
-          image="/portfolio/fotoaibe/pexels-fotoaibe-1571453.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571453-lg.jpg"
+          width={1400}
+          height={935}
           alt="Luxe Leather Works"
-          size="large"
           href="#"
         />
         <Card3
           id="5"
-          image="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696-lg.jpg"
+          width={1400}
+          height={2100}
           alt="Bespoke Sofas Ltd."
-          size="large"
           href="#"
         />
       </Grid>
@@ -55,44 +60,50 @@ export default function Vendor2() {
       >
         <Card3
           id="6"
-          image="/portfolio/charlotte-may/pexels-charlotte-may-5824901.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/charlotte-may/pexels-charlotte-may-5824901-lg.jpg"
+          width={1400}
+          height={2100}
           alt="Lumière Atelier"
-          size="large"
           href="#"
         />
         <Card3
           id="7"
-          image="/portfolio/jonathanborba/pexels-jonathanborba-5570224.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-5570224-lg.jpg"
+          width={1400}
+          height={2100}
           alt="Radiant Designs"
-          size="large"
           href="#"
         />
         <Card3
           id="8"
-          image="/portfolio/jvdm/pexels-jvdm-1454804.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/jvdm/pexels-jvdm-1454804-lg.jpg"
+          width={1400}
+          height={879}
           alt="Chandelier House"
-          size="large"
           href="#"
         />
         <Card3
           id="9"
-          image="/portfolio/kseniachernaya/pexels-kseniachernaya-5806989.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-5806989-lg.jpg"
+          width={1400}
+          height={2097}
           alt="Edison & Co."
-          size="large"
           href="#"
         />
         <Card3
           id="10"
-          image="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-lg.jpg"
+          width={1400}
+          height={2097}
           alt="Ambient Lighting Studio"
-          size="large"
           href="#"
         />
         <Card3
           id="11"
-          image="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245-lg.jpg"
+          width={1400}
+          height={1400}
           alt="Sconce & Shade"
-          size="large"
           href="#"
         />
       </Grid>
@@ -104,44 +115,50 @@ export default function Vendor2() {
       >
         <Card3
           id="12"
-          image="/portfolio/pexels-mikhail-nilov-6707628.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/pexels-mikhail-nilov-6707628-lg.jpg"
+          width={1400}
+          height={933}
           alt="Stone & Terra"
-          size="large"
           href="#"
         />
         <Card3
           id="13"
-          image="/portfolio/pexels-clickerhappy-584399.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/pexels-clickerhappy-584399-lg.jpg"
+          width={1400}
+          height={926}
           alt="Mosaic Masters"
-          size="large"
           href="#"
         />
         <Card3
           id="14"
-          image="/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1643384-lg.jpg"
+          width={1400}
+          height={934}
           alt="Hardwood Heritage"
-          size="large"
           href="#"
         />
         <Card3
           id="15"
-          image="/portfolio/pexels-pixabay-279719.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-279719-lg.jpg"
+          width={1400}
+          height={875}
           alt="Marble & Granite Co."
-          size="large"
           href="#"
         />
         <Card3
           id="16"
-          image="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1669799-lg.jpg"
+          width={1400}
+          height={935}
           alt="Reclaimed Wood Floors"
-          size="large"
           href="#"
         />
         <Card3
           id="17"
-          image="/portfolio/pexels-pixabay-269218.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269218-lg.jpg"
+          width={1400}
+          height={788}
           alt="Porcelain & Ceramic Studio"
-          size="large"
           href="#"
         />
       </Grid>
@@ -153,37 +170,42 @@ export default function Vendor2() {
       >
         <Card3
           id="18"
-          image="/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337-lg.jpg"
+          width={1400}
+          height={2097}
           alt="Silk Road Fabrics"
-          size="large"
           href="#"
         />
         <Card3
           id="19"
-          image="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3356416-lg.jpg"
+          width={1400}
+          height={1759}
           alt="Velvet & Linen Co."
-          size="large"
           href="#"
         />
         <Card3
           id="20"
-          image="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3797991-lg.jpg"
+          width={1400}
+          height={1050}
           alt="Custom Drapery House"
-          size="large"
           href="#"
         />
         <Card3
           id="21"
-          image="/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571460-lg.jpg"
+          width={1400}
+          height={900}
           alt="Woven Wonders"
-          size="large"
           href="#"
         />
         <Card3
           id="22"
-          image="/portfolio/fotoaibe/pexels-fotoaibe-1571468.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571468-lg.jpg"
+          width={1400}
+          height={935}
           alt="Artisan Rugs & Carpets"
-          size="large"
           href="#"
         />
       </Grid>
@@ -196,16 +218,18 @@ export default function Vendor2() {
       >
         <Card3
           id="23"
-          image="/portfolio/pexels-dropshado-2251247.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/pexels-dropshado-2251247-lg.jpg"
+          width={1400}
+          height={933}
           alt="Ironwork & Metalcraft"
-          size="large"
           href="#"
         />
         <Card3
           id="24"
-          image="/portfolio/pexels-pixabay-276724.jpg"
+          image="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-276724-lg.jpg"
+          width={1400}
+          height={788}
           alt="Glass & Mirror Studio"
-          size="large"
           href="#"
         />
       </Grid>

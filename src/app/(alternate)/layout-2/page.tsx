@@ -32,7 +32,11 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   alternates: {
     canonical: '/layout-2',
   },
@@ -46,7 +50,9 @@ const metadata: PageMetadata = {
     description:
       'Explore the second navbar style with a clean, modern design. Features a centered logo layout with balanced navigation links on either side.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Navbar style 2 preview',
     },
   },
@@ -57,7 +63,7 @@ const metadata: PageMetadata = {
     title: 'Navbar Style 2 | Alternate Navigation Layout',
     description:
       'Explore the second navbar style with a clean, modern design. Features a centered logo layout with balanced navigation links on either side.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
   structuredData: [
     {

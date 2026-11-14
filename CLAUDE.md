@@ -25,7 +25,8 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 | `npm run search` | Regenerate search index |
 | `npm run lint` | ESLint check (run after edits) |
 | `npm run ts` | TypeScript check |
-| `npm run check` | lint + ts combined |
+| `npm run images` | Check every image URL, width and height in src/ against `_data/_studio.json` |
+| `npm run check` | lint + ts + images combined |
 | `npm run prettier` | Format code |
 
 The site deploys to Cloudflare Workers only. Runtime code must work without a filesystem, and form mail goes through the `EMAIL` binding (`src/utils/send-email.ts`).
@@ -136,6 +137,8 @@ These patterns are enforced by `@gallop.software/canon/eslint`. Violations will 
 - **025: No Components in Blocks** — `gallop/no-component-in-blocks` — Exported component functions must be in components folder; non-exported content components are allowed in blocks
 - **026: List Components** — `gallop/prefer-list-components` — Use List/Li, not raw ul/li tags
 - **027: Luxon for Dates** — `gallop/no-native-date` — Use Luxon DateTime, not native JavaScript Date
+- **028: Custom Image Component** — `gallop/no-next-image` — Use the Image component, not next/image
+- **029: Studio Data Is a Reference** — `gallop/no-studio-data-import` — Never import `_studio.json`; write image URLs and dimensions in the code
 
 ## Documentation Patterns
 
@@ -174,7 +177,43 @@ All colors use semantic tokens defined in `src/styles/tailwind.css` `@theme`:
 - `Column`
 - `Button` - props: `href`, `variant`, `icon`, `iconPlacement`, `margin`, `dark` (dark prop flips light/dark variant class sets (render-time boolean, not CSS dark mode))
 - `Icon` (Iconify icon wrapper. Always include sizing class (w-5 h-5))
-- `Image` - props: `size` (Always use size prop ('small'|'medium'|'large'|'full'). Uses getStudioImage() from src/utils/studio-helpers.ts)
+- `Image` - props: `src`, `width`, `height`, `alt`, `href`, `caption`, `rounded`, `aspect` (Write the full URL, width and height from `_data/_studio.json` — see Adding an Image. An `href` to an image file opens the lightbox)
+
+## Adding an Image
+
+Images are not looked up at runtime. Every image in the code carries its own full URL, width and height, copied from `_data/_studio.json`, which lists each image and the size of each file:
+
+```json
+"/flowers.png": {
+  "o":  { "w": 1200, "h": 1445 },
+  "f":  { "w": 1200, "h": 1445 },
+  "sm": { "w": 300,  "h": 361 },
+  "md": { "w": 700,  "h": 843 },
+  "c": 0
+}
+```
+
+1. Find the entry by the image's path.
+2. Pick a size that exists in the entry: `sm` (300 wide), `md` (700), `lg` (1400) or `f` (full, up to 2560). This image has no `lg`.
+3. Build the URL: the `_cdns` entry that `c` points at, then `/images`, then the path with the size's suffix (`-sm`, `-md`, `-lg`, none for full). Thumbnails keep `.png` and `.jpeg`; every other format becomes `.jpg`.
+4. Write that URL with that size's `w` and `h`:
+
+```tsx
+<Image
+  src="https://speedwell-cdn.gallop.software/images/flowers-md.png"
+  width={700}
+  height={843}
+  alt="Flowers"
+/>
+```
+
+- **Lightbox**: add `href` with the full-size URL. `GalleryItem` takes the same props.
+- **Backgrounds**: `Cover` takes `imageSrc`, `imageWidth`, `imageHeight`; `Section` takes `imageSrc` only.
+- **Cards, profiles and testimonials** take `image` or `img` with `width` and `height`.
+- **Page metadata**: `featuredImage` and `openGraph.image` are `{ url, width, height }`; `twitter.image` and schema.org `image` are the URL.
+- Width and height describe the file. To show an image smaller, keep the file's shape (a 700×414 logo shown at `width={200} height={118}`) or size it with classes.
+- Run `npm run images` after adding or changing images. It fails on a URL that is not in the library and on a width or height that does not match the file.
+- Full reference: `_scripts/check-images.md`.
 
 ## State Management
 
@@ -202,7 +241,8 @@ Available state: `playVideo`, `offsetTop`, `windowHeight`, `lastOffsetTop`, `isS
 - Use deep relative imports (`../../`) - use `@/` alias imports
 - Use gray-*, white, black, slate-* — always map to a semantic token
 - Put text color in className when component has a color prop
-- Manually construct image URLs when a _data/_studio.json metadata entry exists
+- Import `_data/_studio.json` or look images up at runtime - write the URL, width and height in the code
+- Guess an image's URL or dimensions - copy them from `_data/_studio.json`
 - Read _data/*.json with fs at runtime - import via @/data/* (no filesystem on Workers)
 - Manually edit files in _data/ (generated only)
 

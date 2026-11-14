@@ -15,11 +15,12 @@ export default function Budget() {
       >
         <Column>
           <Image
-            src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Budget management and financial control"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

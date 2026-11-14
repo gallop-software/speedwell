@@ -37,7 +37,6 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 10,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2026-01-06T01:00:00Z',
-  featuredImage: '/images/layout-7/hero-bg.jpg',
   alternates: {
     canonical: '/layout-7',
   },
@@ -50,10 +49,6 @@ const metadata: PageMetadata = {
     title: 'The Mindshift Podcast | Conversations That Change Perspectives',
     description:
       'Join host Sarah Chen for intimate conversations with thought leaders, innovators, and everyday people making extraordinary impacts. New episodes every Wednesday.',
-    image: {
-      url: '/images/layout-7/hero-bg.jpg',
-      alt: 'The Mindshift Podcast with Sarah Chen',
-    },
   },
   twitter: {
     card: 'summary_large_image',
@@ -62,7 +57,6 @@ const metadata: PageMetadata = {
     title: 'The Mindshift Podcast | Conversations That Change Perspectives',
     description:
       'Join host Sarah Chen for intimate conversations with thought leaders, innovators, and everyday people making extraordinary impacts. New episodes every Wednesday.',
-    image: '/images/layout-7/hero-bg.jpg',
   },
   structuredData: [
     {

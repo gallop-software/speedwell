@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-mareklevak-2265482.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-mareklevak-2265482-lg.jpg"
+        width={1400}
+        height={933}
         alt="Modern coworking space brand identity with creative design"
-        size="large"
         wrap={true}
       />
 

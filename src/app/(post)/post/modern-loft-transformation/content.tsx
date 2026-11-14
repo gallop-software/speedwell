@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/pexels-pixabay-161758.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-161758-lg.jpg"
+        width={1400}
+        height={933}
         alt="Modern loft transformation with open floor plan and industrial touches"
-        size="large"
         wrap={true}
       />
 

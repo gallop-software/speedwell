@@ -13,6 +13,8 @@ interface ContactLink {
 interface Profile2Props {
   /** Image source URL for the profile */
   img: string
+  width?: number
+  height?: number
   /** Name or citation for the profile */
   cite: string
   /** Profile content - should be Heading and Paragraph components */
@@ -29,6 +31,8 @@ interface Profile2Props {
 
 export function Profile2({
   img,
+  width,
+  height,
   cite,
   children,
   contact,
@@ -50,7 +54,8 @@ export function Profile2({
         alt={cite}
         rounded="rounded-full"
         wrap={false}
-        size="small"
+        width={width}
+        height={height}
         aspect="aspect-square"
         className="w-40 h-40 object-cover mb-6"
       />

@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server'
 import { DateTime, Duration } from 'luxon'
 import { sendEmail } from '@/utils/send-email'
-import { studioUrl } from '@/utils/studio-helpers'
 
 export const runtime = 'nodejs'
+
+// Logo shown at the top of the email (URL from _data/_studio.json)
+const LOGO_URL = 'https://speedwell-cdn.gallop.software/images/logo-md.png'
 export const dynamic = 'force-dynamic'
 
 const zone = 'America/Chicago'
@@ -249,7 +251,7 @@ function renderEmailHtml(args: {
     <body>
     <div class="container">
         <div class="content">
-        <img src="${studioUrl('/images/logo.png', 'medium')}" alt="Logo" class="logo" />
+        <img src="${LOGO_URL}" alt="Logo" class="logo" />
         <h2 style="font-size:1.25rem;margin:0 0 6px">
             ${element?.href ? 'Click - ' + element?.href : 'Click'} - ${element?.innerText || element?.id || ''}
         </h2>

@@ -10,8 +10,10 @@ interface CardTestimonial3Props {
   title: string
   review: string
   rating?: number
-  /** Optional profile headshot image URL */
+  /** Optional profile headshot image URL, with the width and height of that file */
   image?: string
+  width?: number
+  height?: number
 }
 
 export function CardTestimonial3({
@@ -20,6 +22,8 @@ export function CardTestimonial3({
   review,
   rating = 5,
   image,
+  width,
+  height,
 }: CardTestimonial3Props) {
   return (
     <div className="bg-body rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
@@ -50,7 +54,8 @@ export function CardTestimonial3({
           <Image
             src={image}
             alt={name}
-            size="small"
+            width={width}
+            height={height}
             aspect="aspect-square"
             rounded="rounded-full"
             className="w-14 h-14 shrink-0 object-cover"

@@ -39,7 +39,11 @@ const metadata: PageMetadata = {
     'business interior design',
   ],
   slug: 'commercial',
-  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   focusKeyword: 'commercial interior design',
   readingTimeMinutes: 5,
   publishDate: '2024-05-20T09:30:00Z',
@@ -57,7 +61,9 @@ const metadata: PageMetadata = {
     description:
       'Expert commercial interior design for offices, retail, restaurants, and hospitality spaces. Create inspiring environments that elevate your brand and drive business success.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Modern commercial interior design with sophisticated style',
     },
   },
@@ -66,7 +72,7 @@ const metadata: PageMetadata = {
     title: 'Commercial Interior Design Services | Office & Retail Spaces',
     description:
       'Transform your commercial space with expert design. Create inspiring work environments and engaging experiences that elevate your brand.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
 }
 

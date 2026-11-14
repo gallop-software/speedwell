@@ -7,7 +7,7 @@ import { Quote } from '@/components/quote'
 export default function Testimonial() {
   return (
     <Section
-      imageSrc="/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
+      imageSrc="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg"
       imageAlt="Clients sharing their design experience testimonials"
       overlayColor="bg-body/90"
       className="py-30"
@@ -19,7 +19,9 @@ export default function Testimonial() {
       />
       <Swiper>
         <CardTestimonial1
-          img="/images/profiles/pexels-nkhajotia-1516680.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-nkhajotia-1516680-sm.jpg"
+          width={300}
+          height={450}
           cite="James Mitchell"
         >
           <Quote>
@@ -34,7 +36,9 @@ export default function Testimonial() {
           </Quote>
         </CardTestimonial1>
         <CardTestimonial1
-          img="/images/profiles/pexels-retamozo-gonzalo-454802313-26926485.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-retamozo-gonzalo-454802313-26926485-sm.jpg"
+          width={300}
+          height={375}
           cite="Michael Chen"
         >
           <Quote>
@@ -48,7 +52,9 @@ export default function Testimonial() {
           </Quote>
         </CardTestimonial1>
         <CardTestimonial1
-          img="/images/profiles/pexels-skildring-12871464.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-skildring-12871464-sm.jpg"
+          width={300}
+          height={436}
           cite="Robert Rodriguez"
         >
           <Quote>
@@ -63,7 +69,9 @@ export default function Testimonial() {
           </Quote>
         </CardTestimonial1>
         <CardTestimonial1
-          img="/images/profiles/pexels-anna-nekrashevich-6801642.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-anna-nekrashevich-6801642-sm.jpg"
+          width={300}
+          height={450}
           cite="David Thompson"
         >
           <Quote>

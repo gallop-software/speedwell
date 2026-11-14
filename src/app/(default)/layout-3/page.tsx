@@ -36,7 +36,11 @@ const metadata: PageMetadata = {
   readingTimeMinutes: 12,
   publishDate: '2019-10-23T06:12:20Z',
   modifiedDate: '2025-09-28T01:00:00Z',
-  featuredImage: '/portfolio/pexels-leah-newhouse-50725-6480707.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-leah-newhouse-50725-6480707-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   alternates: {
     canonical: '/layout-3',
   },
@@ -50,7 +54,9 @@ const metadata: PageMetadata = {
     description:
       'Discover our multi-column content distribution design. Ideal for organizing and presenting diverse content in a structured format.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Multi-column layout design',
     },
   },
@@ -61,7 +67,7 @@ const metadata: PageMetadata = {
     title: 'Layout 3 | Multi-Column Content Distribution Design',
     description:
       'Discover our multi-column content distribution design. Ideal for organizing and presenting diverse content in a structured format.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
   structuredData: [
     {

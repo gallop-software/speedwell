@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-elevate-1267700.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-elevate-1267700-lg.jpg"
+        width={1400}
+        height={2096}
         alt="Craft brewery brand identity with bold labels and packaging"
-        size="large"
         wrap={true}
       />
 

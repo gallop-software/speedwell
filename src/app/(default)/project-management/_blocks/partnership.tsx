@@ -15,11 +15,12 @@ export default function Partnership() {
       >
         <Column>
           <Image
-            src="/portfolio/jonathanborba/pexels-jonathanborba-3255245.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/jonathanborba/pexels-jonathanborba-3255245-lg.jpg"
+            width={1400}
+            height={1400}
             alt="Client communication and support"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

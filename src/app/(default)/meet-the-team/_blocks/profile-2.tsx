@@ -15,11 +15,12 @@ export default function Profile2() {
       >
         <Column className="relative">
           <Image
-            src="/images/profiles/pexels-ekaterina-bolovtsova-5393594.jpg"
+            src="https://speedwell-cdn.gallop.software/images/profiles/pexels-ekaterina-bolovtsova-5393594-lg.jpg"
+            width={1400}
+            height={2100}
             alt="Emily Chen - Senior Commercial Designer"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

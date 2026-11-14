@@ -15,11 +15,12 @@ export default function Quality() {
       >
         <Column>
           <Image
-            src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3356416-lg.jpg"
+            width={1400}
+            height={1759}
             alt="Quality assurance and inspection"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Meticulous restoration of a 19th-century brownstone blending original architectural details with modern amenities and contemporary design sensibilities.',
   date: '2024-11-05',
   slug: 'historic-brownstone-revival',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1643384-lg.jpg',
+    width: 1400,
+    height: 934,
+  },
   categories: ['Residential', 'Historic Restoration', 'Victorian'],
   alternates: {
     canonical: '/post/historic-brownstone-revival',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       '19th-century brownstone restoration honoring original details while incorporating modern comfort',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Restored historic brownstone interior with Victorian details',
     },
   },

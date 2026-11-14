@@ -8,7 +8,9 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 export default function CallToAction() {
   return (
     <Cover
-      imageSrc="/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+      imageSrc="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1668860.jpg"
+      imageWidth={2560}
+      imageHeight={1709}
       imageAlt="Anim laboris fugiat sit magna non sit minim"
       overlayColor="bg-accent5/90"
       height="h-auto"

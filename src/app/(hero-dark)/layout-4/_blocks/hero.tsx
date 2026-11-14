@@ -7,8 +7,9 @@ export default function Hero() {
   return (
     <Section className="relative w-full overflow-hidden z-0 bg-body2 pt-navbar h-auto lg:h-screen lg:max-h-[900px] flex items-center justify-center">
       <Image
-        src="/images/layout-4/hero-layout-4.jpg"
-        size="full"
+        src="https://speedwell-cdn.gallop.software/images/layout-4/hero-layout-4.jpg"
+        width={2000}
+        height={1500}
         alt="Layout 4 hero image"
         rounded="rounded-none"
         className="object-cover object-center absolute inset-0 w-full h-full"

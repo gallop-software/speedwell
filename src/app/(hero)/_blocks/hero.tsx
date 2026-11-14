@@ -19,9 +19,10 @@ export default function Hero() {
       <Gradient className="pt-navbar relative rounded-4xl ring-1 ring-contrast-dark/5 ring-inset overflow-hidden m-2">
         <div className="mx-auto max-w-[1600px] relative">
           <Image
-            src="/images/hero-bg.png"
+            src="https://speedwell-cdn.gallop.software/images/hero-bg-lg.png"
+            width={1400}
+            height={1867}
             alt=""
-            size="large"
             className="absolute top-0 left-0 w-[95%] sm:w-[60%] lg:w-[40%] h-auto z-0 opacity-15"
             rounded="rounded-none"
           />
@@ -33,7 +34,7 @@ export default function Hero() {
             <Column className="pt-10">
               <div className="overflow-hidden rounded-t-full relative h-[500px] lg:h-[800px] w-full mx-auto max-w-2xl lg:max-w-none">
                 <Video
-                  src="/videos/hero-op.mp4"
+                  src="https://speedwell-cdn.gallop.software/videos/hero-op.mp4"
                   loop
                   muted
                   playsInline

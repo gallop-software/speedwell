@@ -17,9 +17,10 @@ export default function Hero2() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/images/layout-2/pexels-thirdman-5257759.jpg"
+                src="https://speedwell-cdn.gallop.software/images/layout-2/pexels-thirdman-5257759-lg.jpg"
+                width={1400}
+                height={933}
                 alt="Innovative tech product demonstration"
-                size="large"
                 rounded="rounded-none"
                 lazy={false}
               />

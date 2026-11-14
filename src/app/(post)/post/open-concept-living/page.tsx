@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Whole-home renovation creating flowing open-concept space with defined zones for kitchen, dining, and living areas with indoor-outdoor connection.',
   date: '2024-04-16',
   slug: 'open-concept-living',
-  featuredImage: '/portfolio/houzlook/pexels-houzlook-3356416.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3356416-lg.jpg',
+    width: 1400,
+    height: 1759,
+  },
   categories: ['Residential', 'Renovation', 'Contemporary'],
   alternates: {
     canonical: '/post/open-concept-living',
@@ -21,7 +22,9 @@ const metadata: PageMetadata = {
     title: 'Open Concept Living | Modern Home Renovation Design',
     description: 'Flowing open-concept renovation with connected living spaces',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Open concept living space with kitchen and dining areas',
     },
   },

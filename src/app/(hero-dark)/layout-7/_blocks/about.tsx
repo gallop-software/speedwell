@@ -19,10 +19,11 @@ export default function About() {
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden">
               <Image
-                src="/images/layout-7/pexels-karola-g-6919956.jpg"
+                src="https://speedwell-cdn.gallop.software/images/layout-7/pexels-karola-g-6919956-lg.jpg"
+                width={1400}
+                height={933}
                 alt="Sarah Chen - Host of The Mindshift Podcast"
                 className="w-full object-cover"
-                size="large"
               />
             </div>
             {/* Decorative elements */}
@@ -73,7 +74,10 @@ export default function About() {
           {/* Host info */}
           <div className="flex items-center gap-6">
             <div className="flex-shrink-0">
-              <Span color="text-accent-contrast" className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-bold text-xl">
+              <Span
+                color="text-accent-contrast"
+                className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-bold text-xl"
+              >
                 SC
               </Span>
             </div>

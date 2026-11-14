@@ -5,7 +5,9 @@ import { Accent } from '@/components/accent'
 export default function Banner() {
   return (
     <Cover
-      imageSrc="/portfolio/pexels-pixabay-269218.jpg"
+      imageSrc="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-269218.jpg"
+      imageWidth={2560}
+      imageHeight={1440}
       imageAlt="Timmerman interior design team workspace"
       overlayColor="bg-accent4/90"
       height="h-[400px] md:h-[500px] lg:h-[600px]"

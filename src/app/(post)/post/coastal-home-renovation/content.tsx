@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/pexels-burst-545012.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012-lg.jpg"
+        width={1400}
+        height={933}
         alt="Renovated coastal home with ocean-inspired design"
-        size="large"
         wrap={true}
       />
 

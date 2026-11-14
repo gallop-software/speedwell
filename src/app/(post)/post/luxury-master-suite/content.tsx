@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/fotoaibe/pexels-fotoaibe-1669799.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1669799-lg.jpg"
+        width={1400}
+        height={935}
         alt="Luxury master suite with elegant furnishings and spa-like atmosphere"
-        size="large"
         wrap={true}
       />
 

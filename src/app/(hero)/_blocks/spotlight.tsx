@@ -15,17 +15,19 @@ export default function Spotlight() {
       <Columns reverseColumns={false}>
         <Column className="aspect-[8/9] relative lg:-mb-20">
           <Image
-            src="/portfolio/pexels-pixabay-276724.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-276724-lg.jpg"
+            width={1400}
+            height={788}
             alt="Lorem anim pariatur laborum eiusmod labore"
             className="absolute bottom-0 right-0 z-10 w-[75%] object-cover"
-            size="large"
           />
           <Image
-            src="/portfolio/houzlook/pexels-houzlook-3356416.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3356416-lg.jpg"
+            width={1400}
+            height={1759}
             alt="Duis tempor duis labore duis"
             className="w-[65%] absolute top-0 left-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
-            size="large"
           />
           <Accent
             className="absolute bottom-[35%] left-4 z-30"

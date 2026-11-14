@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-blanca-isela-2156722885-35240180.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-blanca-isela-2156722885-35240180-lg.jpg"
+        width={1400}
+        height={933}
         alt="Artisan coffee brand identity with packaging and logo design"
-        size="large"
         wrap={true}
       />
 

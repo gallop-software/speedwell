@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/portfolio/falling4utah/pexels-falling4utah-1080696.jpg"
+        src="https://speedwell-cdn.gallop.software/images/portfolio/falling4utah/pexels-falling4utah-1080696-lg.jpg"
+        width={1400}
+        height={2100}
         alt="Contemporary family home with modern, functional design"
-        size="large"
         wrap={true}
       />
 

@@ -17,17 +17,19 @@ export default function Sustainability() {
       >
         <Column className="aspect-[4/5] relative">
           <Image
-            src="/portfolio/pexels-pixabay-161758.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-161758-lg.jpg"
+            width={1400}
+            height={933}
             alt="Elegant dining room with sophisticated decor"
             className="absolute bottom-0 left-0 z-10 w-[75%] object-cover"
-            size="large"
           />
           <Image
-            src="/portfolio/kseniachernaya/pexels-kseniachernaya-11112251.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-11112251-lg.jpg"
+            width={1400}
+            height={2097}
             alt="Stylish home office with functional design"
             className="w-[65%] absolute top-0 right-0 object-cover shadow-2xl"
             rounded="rounded-b-none rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

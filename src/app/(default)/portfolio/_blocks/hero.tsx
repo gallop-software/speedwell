@@ -16,10 +16,11 @@ export default function Hero() {
           <Column className="relative -mx-6">
             <Image
               className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-              src="/portfolio/pexels-alex-qian-1180283-2343465.jpg"
+              src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-alex-qian-1180283-2343465-lg.jpg"
+              width={1400}
+              height={933}
               alt="Cupidatat consequat anim adipiscing sint est culpa"
               rounded="rounded-none"
-              size="large"
               lazy={false}
             />
             <Accent className="absolute hidden lg:block -bottom-10 lg:bottom-auto left-6 lg:-top-20 lg:-left-40 transform -rotate-12">

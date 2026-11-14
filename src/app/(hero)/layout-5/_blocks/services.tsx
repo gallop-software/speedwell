@@ -9,42 +9,60 @@ import arrowRightIcon from '@iconify/icons-heroicons/arrow-right-20-solid'
 
 const services = [
   {
-    image: '/images/layout-5/pexels-jeremy-wong-382920-1082024.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-5/pexels-jeremy-wong-382920-1082024-md.jpg',
+    width: 700,
+    height: 467,
     title: 'Wedding Planning',
     description:
       'Complete wedding coordination from engagement to "I do." We handle every detail including venue selection, vendor management, timeline creation, and day-of coordination to ensure your perfect day.',
     accent: 'accent',
   },
   {
-    image: '/images/layout-5/pexels-bohlemedia-1114425.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-5/pexels-bohlemedia-1114425-md.jpg',
+    width: 700,
+    height: 933,
     title: 'Corporate Events',
     description:
       'Professional event planning for conferences, galas, product launches, and corporate celebrations. Strategic planning, brand integration, and flawless execution for memorable business events.',
     accent: 'accent2',
   },
   {
-    image: '/images/layout-5/pexels-jeremy-wong-382920-1035665.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-5/pexels-jeremy-wong-382920-1035665-md.jpg',
+    width: 700,
+    height: 467,
     title: 'Event Design & Styling',
     description:
       'Creative design concepts bringing your vision to life. Custom decor, floral arrangements, lighting design, and styling that creates stunning atmospheres and lasting impressions.',
     accent: 'accent',
   },
   {
-    image: '/images/layout-5/pexels-pavel-danilyuk-6405768.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-5/pexels-pavel-danilyuk-6405768-md.jpg',
+    width: 700,
+    height: 467,
     title: 'Social Celebrations',
     description:
       'Milestone birthdays, anniversaries, engagement parties, and special celebrations. Personalized planning that captures the spirit of your occasion and creates cherished memories.',
     accent: 'accent2',
   },
   {
-    image: '/images/layout-5/pexels-bendix-251808.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-5/pexels-bendix-251808-md.jpg',
+    width: 700,
+    height: 467,
     title: 'Vendor Coordination',
     description:
       'Access to our curated network of premium vendors. We manage all communications, contracts, and coordination to ensure seamless collaboration and exceptional service delivery.',
     accent: 'accent',
   },
   {
-    image: '/images/layout-5/pexels-panditwiguna-2788488.jpg',
+    image:
+      'https://speedwell-cdn.gallop.software/images/layout-5/pexels-panditwiguna-2788488-md.jpg',
+    width: 700,
+    height: 863,
     title: 'Day-of Coordination',
     description:
       'Professional coordination on your event day ensuring flawless execution. We manage timelines, vendors, and logistics so you can relax and enjoy every moment of your celebration.',
@@ -84,9 +102,10 @@ export default function Services() {
             <div className="relative h-auto md:h-48 overflow-hidden">
               <Image
                 src={service.image}
+                width={service.width}
+                height={service.height}
                 alt={service.title}
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                size="medium"
                 rounded="rounded-none"
               />
               <div

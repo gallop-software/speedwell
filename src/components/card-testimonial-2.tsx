@@ -5,6 +5,8 @@ import { Image } from '@/components/image'
 interface CardTestimonial2Props {
   /** Image source URL for the testimonial author */
   img: string
+  width?: number
+  height?: number
   /** Name or citation for the testimonial author */
   cite: string
   /** Testimonial content - should be Paragraph components */
@@ -17,6 +19,8 @@ interface CardTestimonial2Props {
 
 export function CardTestimonial2({
   img,
+  width,
+  height,
   cite,
   children,
   aspect = 'aspect-[3/4]',
@@ -29,7 +33,8 @@ export function CardTestimonial2({
         alt={cite}
         rounded={rounded}
         wrap={false}
-        size="large"
+        width={width}
+        height={height}
         aspect={aspect}
         className={clsx(
           aspect,

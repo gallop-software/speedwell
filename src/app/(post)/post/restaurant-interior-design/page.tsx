@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Sophisticated restaurant featuring custom millwork, varied dining zones, and elevated design that balances ambiance with operational needs.',
   date: '2024-11-28',
   slug: 'restaurant-interior-design',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571452.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571452-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   categories: ['Commercial', 'Hospitality', 'Restaurant'],
   alternates: {
     canonical: '/post/restaurant-interior-design',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Upscale restaurant with sophisticated ambiance and thoughtful design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Upscale restaurant interior with rich materials',
     },
   },

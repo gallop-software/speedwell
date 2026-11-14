@@ -16,11 +16,12 @@ export default function Process() {
       >
         <Column>
           <Image
-            src="/portfolio/pexels-jworks1124-342800.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-jworks1124-342800-lg.jpg"
+            width={1400}
+            height={1093}
             alt="Contemporary residential space with thoughtful design details"
             className="object-cover"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

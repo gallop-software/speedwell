@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Urban townhouse blending historic architecture with contemporary design through transitional style, honoring character while updating for modern living.',
   date: '2024-08-02',
   slug: 'transitional-townhouse',
-  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034-lg.jpg',
+    width: 1400,
+    height: 935,
+  },
   categories: ['Residential', 'Transitional', 'Townhouse'],
   alternates: {
     canonical: '/post/transitional-townhouse',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Historic townhouse with transitional design blending old and new',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Transitional townhouse with classic and contemporary elements',
     },
   },

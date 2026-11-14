@@ -30,7 +30,11 @@ const metadata: PageMetadata = {
   description:
     'Meet the talented interior designers and specialists at Timmerman. Learn about our experienced team dedicated to transforming residential and commercial spaces with creativity and expertise.',
   slug: 'meet-the-team',
-  featuredImage: '/portfolio/pexels-jworks1124-342800.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-jworks1124-342800-lg.jpg',
+    width: 1400,
+    height: 1093,
+  },
   focusKeyword: 'interior design team',
   readingTimeMinutes: 5,
   publishDate: '2024-07-01T10:00:00Z',
@@ -43,7 +47,9 @@ const metadata: PageMetadata = {
     description:
       'Meet our experienced interior designers and specialists at Timmerman. Discover the talented professionals who bring your design vision to life with creativity and expertise.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Timmerman interior design team',
     },
   },

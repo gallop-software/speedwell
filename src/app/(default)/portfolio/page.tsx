@@ -47,7 +47,11 @@ const metadata: PageMetadata = {
     'interior inspiration gallery',
   ],
   slug: 'portfolio',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1643384.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1643384-lg.jpg',
+    width: 1400,
+    height: 934,
+  },
   focusKeyword: 'interior design portfolio',
   readingTimeMinutes: 15,
   publishDate: '2019-10-24T07:42:20Z',
@@ -65,7 +69,9 @@ const metadata: PageMetadata = {
     description:
       'Browse through our extensive portfolio featuring beautifully designed residential and commercial spaces that reflect sophistication, functionality, and timeless style',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Elegant interior design project by Timmerman Interior Design',
     },
   },
@@ -74,7 +80,7 @@ const metadata: PageMetadata = {
     title: 'Interior Design Portfolio - Transform Your Space',
     description:
       'Discover innovative interior design solutions and stunning transformations from our award-winning team. Each project tells a unique story of style and function',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
   structuredData: [
     {

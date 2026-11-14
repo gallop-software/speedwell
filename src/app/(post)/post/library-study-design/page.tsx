@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Classic library study featuring floor-to-ceiling bookcases, leather furnishings, and sophisticated traditional design for reading and contemplation.',
   date: '2025-03-12',
   slug: 'library-study-design',
-  featuredImage: '/portfolio/pexels-pixabay-276724.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/pexels-pixabay-276724-lg.jpg',
+    width: 1400,
+    height: 788,
+  },
   categories: ['Library Design', 'Traditional', 'Home Office'],
   alternates: {
     canonical: '/post/library-study-design',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Traditional library with custom bookcases and leather furnishings',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Library study with floor-to-ceiling bookshelves and reading nook',
     },
   },

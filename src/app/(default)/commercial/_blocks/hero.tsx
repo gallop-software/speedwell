@@ -17,9 +17,10 @@ export default function Hero() {
             <Column className="relative -mx-6">
               <Image
                 className="w-full h-[450px] sm:h-[600px] lg:h-[800px] object-cover"
-                src="/portfolio/pexels-heyho-6794934.jpg"
+                src="https://speedwell-cdn.gallop.software/images/portfolio/pexels-heyho-6794934-lg.jpg"
+                width={1400}
+                height={935}
                 alt="Modern commercial interior design with sophisticated professional style"
-                size="large"
                 rounded="rounded-none"
                 lazy={false}
               />

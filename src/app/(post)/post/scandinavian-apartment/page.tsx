@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Light-filled apartment featuring Scandinavian design principles with natural materials, multi-functional furniture, and minimalist aesthetic.',
   date: '2024-07-20',
   slug: 'scandinavian-apartment',
-  featuredImage: '/portfolio/jvdm/pexels-jvdm-1457844.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/jvdm/pexels-jvdm-1457844-lg.jpg',
+    width: 1400,
+    height: 2100,
+  },
   categories: ['Residential', 'Scandinavian', 'Minimalist'],
   alternates: {
     canonical: '/post/scandinavian-apartment',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Nordic-inspired apartment with natural materials and minimalist design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Scandinavian apartment with white walls and natural wood accents',
     },
   },

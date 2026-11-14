@@ -23,11 +23,12 @@ export default function Reservation() {
         <Column className="aspect-8/9 relative flex items-center">
           <div className="relative w-full">
             <Image
-              src="/images/layout-4/pexels-reneterp-1581384.jpg"
+              src="https://speedwell-cdn.gallop.software/images/layout-4/pexels-reneterp-1581384-lg.jpg"
+              width={1400}
+              height={1867}
               alt="Elegant restaurant interior dining space"
               className="object-cover w-full h-full"
               rounded="rounded-2xl"
-              size="large"
               lazy={false}
             />
             <Accent

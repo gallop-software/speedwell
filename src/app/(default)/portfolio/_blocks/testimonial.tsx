@@ -13,7 +13,9 @@ export default function Testimonial() {
       />
       <Swiper>
         <CardTestimonial1
-          img="/images/profiles/pexels-linkedin-2182970.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-linkedin-2182970-sm.jpg"
+          width={300}
+          height={450}
           cite="Jennifer Martinez"
         >
           <Quote>
@@ -33,7 +35,9 @@ export default function Testimonial() {
           </Quote>
         </CardTestimonial1>
         <CardTestimonial1
-          img="/images/profiles/pexels-maide-arslan-128712163-31750448.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-maide-arslan-128712163-31750448-sm.jpg"
+          width={300}
+          height={450}
           cite="Michael Thompson"
         >
           <Quote>
@@ -57,7 +61,9 @@ export default function Testimonial() {
           </Quote>
         </CardTestimonial1>
         <CardTestimonial1
-          img="/images/profiles/pexels-maide-arslan-128712163-31750456.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-maide-arslan-128712163-31750456-sm.jpg"
+          width={300}
+          height={450}
           cite="Sarah Anderson"
         >
           <Quote>
@@ -76,7 +82,9 @@ export default function Testimonial() {
           </Quote>
         </CardTestimonial1>
         <CardTestimonial1
-          img="/images/profiles/pexels-moose-photos-170195-1587009.jpg"
+          img="https://speedwell-cdn.gallop.software/images/profiles/pexels-moose-photos-170195-1587009-sm.jpg"
+          width={300}
+          height={450}
           cite="David Chen"
         >
           <Quote>

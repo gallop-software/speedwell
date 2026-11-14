@@ -11,10 +11,11 @@ export default function Benefits() {
       <Columns gap="gap-10 lg:gap-20">
         <Column>
           <Image
-            src="/portfolio/houzlook/pexels-houzlook-3797991.jpg"
+            src="https://speedwell-cdn.gallop.software/images/portfolio/houzlook/pexels-houzlook-3797991-lg.jpg"
+            width={1400}
+            height={1050}
             alt="Contemporary living space with harmonious color scheme"
             className="w-full object-cover"
-            size="large"
           />
         </Column>
         <Column>

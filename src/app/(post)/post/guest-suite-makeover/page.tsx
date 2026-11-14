@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Welcoming guest suite featuring hotel-quality amenities, comfortable furnishings, and thoughtful details for the ultimate guest experience.',
   date: '2024-09-22',
   slug: 'guest-suite-makeover',
-  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-4450337.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-4450337-lg.jpg',
+    width: 1400,
+    height: 2097,
+  },
   categories: ['Guest Room', 'Residential', 'Bedroom Design'],
   alternates: {
     canonical: '/post/guest-suite-makeover',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Hotel-style guest suite with thoughtful amenities and welcoming design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Guest suite with comfortable bed and hotel-quality amenities',
     },
   },

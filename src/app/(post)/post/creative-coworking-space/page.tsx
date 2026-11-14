@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Dynamic brand identity for coworking space featuring bold design that fosters creative community and inspires collaboration among professionals.',
   date: '2024-12-03',
   slug: 'creative-coworking-space',
-  featuredImage: '/layout-1/pexels-mareklevak-2265482.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/layout-1/pexels-mareklevak-2265482-lg.jpg',
+    width: 1400,
+    height: 933,
+  },
   categories: ['Portfolio', 'Brand Identity', 'Workspace'],
   alternates: {
     canonical: '/post/creative-coworking-space',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Vibrant brand connecting creative professionals through inspired design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Coworking space brand materials',
     },
   },

@@ -10,9 +10,10 @@ function Details() {
   return (
     <>
       <Image
-        src="/layout-1/pexels-rachel-claire-5490970.jpg"
+        src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-rachel-claire-5490970-lg.jpg"
+        width={1400}
+        height={933}
         alt="Elegant fashion boutique brand identity with sophisticated style"
-        size="large"
         wrap={true}
       />
 

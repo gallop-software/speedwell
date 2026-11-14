@@ -23,7 +23,9 @@ export default function Vendor() {
         <Column>
           <Card3
             id="case-study-1"
-            image="/portfolio/kseniachernaya/pexels-kseniachernaya-3952034.jpg"
+            image="https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3952034-lg.jpg"
+            width={1400}
+            height={935}
             alt="Custom cabinetry by Artisan Woodworks"
             href="#"
           />

@@ -15,11 +15,12 @@ export default function Profile5() {
       >
         <Column>
           <Image
-            src="/images/profiles/pexels-italo-melo-881954-2379005.jpg"
+            src="https://speedwell-cdn.gallop.software/images/profiles/pexels-italo-melo-881954-2379005-lg.jpg"
+            width={1400}
+            height={1750}
             alt="Marcus Foster - Project Manager"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

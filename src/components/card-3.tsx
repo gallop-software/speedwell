@@ -7,8 +7,6 @@ export interface CardLinkData {
   alt: string
   width?: number | undefined
   height?: number | undefined
-  /** Image size variant to use from metadata - defaults to 'large' */
-  size?: 'small' | 'medium' | 'large' | 'full'
 }
 
 interface Card3Props {
@@ -18,19 +16,9 @@ interface Card3Props {
   alt: string
   width?: number | undefined
   height?: number | undefined
-  /** Image size variant to use from metadata - defaults to 'large' */
-  size?: 'small' | 'medium' | 'large' | 'full'
 }
 
-export function Card3({
-  id,
-  image,
-  href,
-  alt,
-  width,
-  height,
-  size = 'large',
-}: Card3Props) {
+export function Card3({ id, image, href, alt, width, height }: Card3Props) {
   return (
     <a
       key={id}
@@ -46,7 +34,6 @@ export function Card3({
           alt={alt}
           width={width}
           height={height}
-          size={size}
           className="shadow-lg"
           rounded="rounded-lg"
         />

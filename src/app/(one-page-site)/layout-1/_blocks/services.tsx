@@ -17,11 +17,12 @@ export default function Services() {
       >
         <Column>
           <Image
-            src="/layout-1/pexels-pavel-danilyuk-6925321-1.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-1/pexels-pavel-danilyuk-6925321-1-lg.jpg"
+            width={1400}
+            height={2097}
             alt="Creative team collaborating on brand strategy"
             className="w-full object-cover shadow-2xl max-w-lg mx-auto"
             rounded="rounded-t-full"
-            size="large"
           />
         </Column>
         <Column>

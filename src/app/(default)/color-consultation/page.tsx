@@ -43,7 +43,11 @@ const metadata: PageMetadata = {
     'color psychology design',
   ],
   slug: 'color-consultation',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571460-lg.jpg',
+    width: 1400,
+    height: 900,
+  },
   focusKeyword: 'color consultation services',
   readingTimeMinutes: 5,
   publishDate: '2024-03-05T10:30:00Z',
@@ -61,7 +65,9 @@ const metadata: PageMetadata = {
     description:
       'Transform your space with expert color consultation services. Our designers help you select the perfect color palette that enhances beauty and reflects your unique style.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Beautiful interior space showcasing professional color coordination and design',
     },
   },
@@ -70,7 +76,7 @@ const metadata: PageMetadata = {
     title: 'Professional Color Consultation Services | Interior Design',
     description:
       'Expert color consultation to transform your space. Choose colors that enhance beauty, reflect personality, and create the perfect ambiance.',
-    image: '/banner.jpg',
+    image: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
   },
 }
 

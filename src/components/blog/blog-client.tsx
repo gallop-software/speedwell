@@ -32,7 +32,7 @@ interface BlogPost {
     title?: string
     date?: string
     categories?: string[]
-    featuredImage?: string
+    featuredImage?: { url: string; width: number; height: number } | null
   }
 }
 
@@ -236,9 +236,10 @@ function BlogClientInner({
                         onClick={(e) => e.preventDefault()}
                       >
                         <Image
-                          src={post.metadata.featuredImage}
+                          src={post.metadata.featuredImage.url}
+                          width={post.metadata.featuredImage.width}
+                          height={post.metadata.featuredImage.height}
                           alt={post.metadata.title || ''}
-                          size="large"
                           className="w-full h-auto block"
                           rounded="rounded-none"
                           onLoad={() => {

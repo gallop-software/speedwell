@@ -1,8 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import {
-  generatePageMetadata,
-  type PageMetadata,
-} from '@/utils/page-helpers'
+import { generatePageMetadata, type PageMetadata } from '@/utils/page-helpers'
 import { Content } from './content'
 
 const metadata: PageMetadata = {
@@ -11,7 +8,11 @@ const metadata: PageMetadata = {
     'Tranquil home yoga studio with bamboo floors, soft lighting, and minimalist design for meditation and daily practice.',
   date: '2024-11-05',
   slug: 'private-yoga-studio',
-  featuredImage: '/portfolio/fotoaibe/pexels-fotoaibe-1571460.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/fotoaibe/pexels-fotoaibe-1571460-lg.jpg',
+    width: 1400,
+    height: 900,
+  },
   categories: ['Wellness', 'Home Gym', 'Minimalist'],
   alternates: {
     canonical: '/post/private-yoga-studio',
@@ -22,7 +23,9 @@ const metadata: PageMetadata = {
     description:
       'Serene home yoga studio with natural materials and calming design',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Private yoga studio with bamboo floors and peaceful ambiance',
     },
   },

@@ -63,9 +63,10 @@ export default function Hero() {
             <div className="absolute top-0 right-0 w-[70%] h-[60%] z-10">
               <Image
                 className="w-full h-full object-cover shadow-2xl"
-                src="/images/layout-5/pexels-mat-brown-150387-1395967.jpg"
+                src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-mat-brown-150387-1395967-lg.jpg"
+                width={1400}
+                height={2100}
                 alt="Elegant wedding ceremony setup with beautiful floral arrangements"
-                size="large"
                 rounded="rounded-lg"
                 lazy={false}
               />
@@ -77,9 +78,10 @@ export default function Hero() {
             <div className="absolute bottom-0 left-0 w-[65%] h-[55%] z-20">
               <Image
                 className="w-full h-full object-cover shadow-2xl"
-                src="/images/layout-5/pexels-thatguycraig000-2306281.jpg"
+                src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-thatguycraig000-2306281-lg.jpg"
+                width={1400}
+                height={933}
                 alt="Beautiful event decoration with elegant table settings"
-                size="large"
                 rounded="rounded-lg"
                 lazy={false}
               />

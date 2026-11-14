@@ -6,7 +6,9 @@ export default function Hero() {
   return (
     <>
       <Cover
-        imageSrc="/portfolio/pexels-burst-545012.jpg"
+        imageSrc="https://speedwell-cdn.gallop.software/images/portfolio/pexels-burst-545012.jpg"
+        imageWidth={2560}
+        imageHeight={1706}
         imageAlt="Professional interior design project management"
         overlayColor="bg-accent4/90"
         height="h-[400px] md:h-[500px] lg:h-[600px]"

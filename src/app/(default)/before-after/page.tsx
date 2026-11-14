@@ -22,7 +22,11 @@ const metadata: PageMetadata = {
   description:
     'Explore stunning before and after transformations by Timmerman. See how our expert interior designers transform residential and commercial spaces with creative vision and meticulous attention to detail.',
   slug: 'before-after',
-  featuredImage: '/portfolio/kseniachernaya/pexels-kseniachernaya-3951746.jpg',
+  featuredImage: {
+    url: 'https://speedwell-cdn.gallop.software/images/portfolio/kseniachernaya/pexels-kseniachernaya-3951746-lg.jpg',
+    width: 1400,
+    height: 2097,
+  },
   focusKeyword: 'before after interior design',
   readingTimeMinutes: 6,
   publishDate: '2024-09-15T00:00:00Z',
@@ -35,7 +39,9 @@ const metadata: PageMetadata = {
     description:
       'Discover remarkable interior design transformations by Timmerman. Browse our before and after gallery showcasing residential and commercial projects that demonstrate our creative expertise.',
     image: {
-      url: '/banner.jpg',
+      url: 'https://speedwell-cdn.gallop.software/images/banner-lg.jpg',
+      width: 1400,
+      height: 840,
       alt: 'Before and after interior design transformation',
     },
   },

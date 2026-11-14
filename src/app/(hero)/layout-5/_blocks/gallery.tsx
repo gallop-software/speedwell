@@ -28,10 +28,11 @@ export default function Gallery() {
         {/* Tall image - spans 2 rows */}
         <div className="md:row-span-2 relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[600px]">
           <Image
-            src="/images/layout-5/pexels-jeremy-wong-382920-1082024.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-jeremy-wong-382920-1082024-lg.jpg"
+            width={1400}
+            height={933}
             alt="Elegant wedding ceremony with floral arch"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -58,10 +59,11 @@ export default function Gallery() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/layout-5/pexels-bohlemedia-1114425.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-bohlemedia-1114425-lg.jpg"
+            width={1400}
+            height={1867}
             alt="Elegant table setting with floral centerpiece"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -88,10 +90,11 @@ export default function Gallery() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/layout-5/pexels-jeremy-wong-382920-1035665.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-jeremy-wong-382920-1035665-lg.jpg"
+            width={1400}
+            height={933}
             alt="Beautiful event venue decoration"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -118,10 +121,11 @@ export default function Gallery() {
         {/* Wide image - spans 2 columns */}
         <div className="md:col-span-2 relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/layout-5/pexels-pavel-danilyuk-6405768.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-pavel-danilyuk-6405768-lg.jpg"
+            width={1400}
+            height={935}
             alt="Corporate event setup"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -148,10 +152,11 @@ export default function Gallery() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/layout-5/pexels-bendix-251808.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-bendix-251808-lg.jpg"
+            width={1400}
+            height={933}
             alt="Event detail shot"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -178,10 +183,11 @@ export default function Gallery() {
         {/* Tall image - spans 2 rows on tablet only */}
         <div className="md:row-span-2 lg:row-span-1 relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[600px] lg:h-[290px]">
           <Image
-            src="/images/layout-5/pexels-panditwiguna-2788488.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-panditwiguna-2788488-lg.jpg"
+            width={1400}
+            height={1726}
             alt="Outdoor event setup"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -208,10 +214,11 @@ export default function Gallery() {
         {/* Regular image */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg h-[400px] md:h-[290px]">
           <Image
-            src="/images/layout-5/pexels-pixabay-265947.jpg"
+            src="https://speedwell-cdn.gallop.software/images/layout-5/pexels-pixabay-265947-lg.jpg"
+            width={1400}
+            height={1050}
             alt="Elegant ballroom setup"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-            size="large"
             rounded="rounded-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-overlay/70 via-overlay/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
