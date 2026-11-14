@@ -17,5 +17,5 @@ const nextConfig = {
 export default nextConfig
 
 // Cloudflare Workers (OpenNext) — enables getCloudflareContext()/bindings during
-// `next dev`. No-op in production builds, so Vercel is unaffected.
+// `next dev`. No-op in production builds.
 import('@opennextjs/cloudflare').then((m) => m.initOpenNextCloudflareForDev())

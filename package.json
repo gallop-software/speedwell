@@ -70,7 +70,6 @@
     "@next/third-parties": "^16.4.6",
     "@opennextjs/cloudflare": "^1.20.17",
     "@sindresorhus/slugify": "^3.0.1",
-    "@vercel/analytics": "^1.6.1",
     "@vimeo/player": "^2.30.4",
     "clsx": "^2.1.1",
     "flexsearch": "^0.8.212",

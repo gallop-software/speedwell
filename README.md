@@ -5,7 +5,6 @@
 An artistic website template for creatives and small businesses who want to build at the speed of thought with AI, look more professional than the competition, and rank #1 on Google.
 
 **🌐 Demo:** [speedwell.gallop.software](https://speedwell.gallop.software)  
-**☁️ Cloudflare Demo:** [speedwell-cloudflare.gallop.software](https://speedwell-cloudflare.gallop.software/)  
 **🎨 Template:** [gallop.software/templates](https://gallop.software/templates)  
 **📦 Repository:** [github.com/gallop-software/speedwell](https://github.com/gallop-software/speedwell)  
 **🏷️ Category:** Small Business Template
@@ -28,14 +27,13 @@ Just chat with AI inside our Gallop AI Editor using Gallop templates, and you wi
 - 📝 **TSX-powered content** - No CMS required
 - 🖼️ **Image processing** with automatic optimization
 - 🔍 **Built-in search** powered by FlexSearch
-- ✉️ **Contact forms** that send through Cloudflare Email Service or Mailgun, with Turnstile spam protection
+- ✉️ **Contact forms** that send through Cloudflare Email Service, with Turnstile spam protection
 - 📱 **Fully responsive** and mobile-optimized
 - ⚡ **Lightning-fast** performance
 - 🎭 **Framer Motion** animations
 - 🎯 **SEO and AI optimized** with structured data
 - 🤖 **AI-friendly** codebase structure
 - 🛡️ **Gallop Canon** - AI guardrails for consistent, reliable code
-- 📊 **Vercel Analytics** integration
 
 ---
 
@@ -59,7 +57,7 @@ It was purpose-built for this workflow, whether you're a complete beginner or an
 | **SEO Audit** | Analyze SEO & Structured Data |
 | **Git** | Git UI with modal diff viewer |
 | **Node.js** | Built-in installer and version manager |
-| **Deployment** | Connect Vercel or Cloudflare, then let AI deploy for you |
+| **Deployment** | Connect Cloudflare, then let AI deploy for you |
 
 [![Download Gallop AI Editor](https://img.shields.io/badge/Download_Gallop_AI_Editor-166534?style=for-the-badge)](https://gallop.software/)
 
@@ -172,7 +170,7 @@ Everything below is how you actually build your site day to day. The left rail s
 | `<>` | **Editor** | `Cmd+3` | The code editor, with autocomplete and go-to-definition. `Cmd+B` toggles the file explorer. |
 | 🖼 | **Studio** | `Cmd+4` | Your images and fonts — see below. |
 | 🌐 | **SEO** | `Cmd+5` | Scan any page for SEO and structured-data problems. |
-| 🚀 | **Publish** | `Cmd+6` | Connect Cloudflare, Vercel, and Mailgun so AI can deploy for you. |
+| 🚀 | **Publish** | `Cmd+6` | Connect Cloudflare so AI can deploy for you. |
 
 `Cmd+K` cycles forward through views if you'd rather not remember numbers.
 
@@ -286,19 +284,13 @@ Connect with other Gallop users on Discord or Slack. Share your progress, swap A
 
 ## Put Your Site Online
 
-Your code is already on GitHub — you're signed in inside the editor, and your repository was created when you started the project. All that's left is a hosting account: either [Vercel](https://vercel.com/pricing) or [Cloudflare](https://www.cloudflare.com/plans/developer-platform/). Check their current plans before you pick — pricing and what each tier allows change over time.
+Your code is already on GitHub — you're signed in inside the editor, and your repository was created when you started the project. All that's left is a [Cloudflare](https://www.cloudflare.com/plans/developer-platform/) account. Check the current plans first — pricing and what each tier allows change over time.
 
 ### The Easy Way: Let AI Deploy It
 
-Press `Cmd+6` (the rocket icon) to open the **Publish** view. It has a tab for each service you might need:
+Press `Cmd+6` (the rocket icon) to open the **Publish** view and choose the **Cloudflare** tab. Cloudflare hosts the site on Workers and sends the email from your contact form through its own Email Service.
 
-| Tab | What it's for |
-|---|---|
-| **Cloudflare** | Deploy to Cloudflare Workers |
-| **Vercel** | Deploy to Vercel |
-| **Mailgun** | Sends the email from your contact form on Vercel (Cloudflare deployments use Cloudflare's own Email Service) |
-
-Each tab links straight to the page where you generate the token, with the right permissions preselected — you paste it in, click **Connect** to verify it, then **Save**.
+The tab links straight to the page where you generate the token, with the right permissions preselected — you paste it in, click **Connect** to verify it, then **Save**.
 
 From then on the editor injects those credentials into your terminal and AI chat automatically, so the assistant can deploy on your behalf and **you never paste a token into a project file**.
 
@@ -312,35 +304,11 @@ Push my latest changes to GitHub and deploy this site
 
 The AI will walk you through every step. When you're done, your site will be live with a URL you can share.
 
-Already know which host you want? Use the ready-made prompt for [Vercel](#deploy-to-vercel) or [Cloudflare](#deploy-to-cloudflare-workers).
-
-### Deploy to Vercel
-
-Connect your Vercel account in the Gallop AI Editor, then paste this into the AI chat:
-
-```
-Deploy this site to Vercel. My Vercel account is already connected.
-
-Please:
-1. Push my latest changes to GitHub
-2. Link this project to Vercel and deploy it to production
-3. Ask me for my Mailgun values, then add them as environment variables
-   (the "Vercel (Mailgun)" block in .env.production.sample; leave
-   EMAIL_DOMAIN empty)
-4. Tell me the live URL when it's done
-
-Never commit .env.production — it holds real secrets.
-```
-
-Vercel redeploys automatically every time you push, so from here on your changes go live by asking the AI to push them.
-
-**Environment variables, without the busywork.** The Vercel tab in the Publish view can push and pull your `.env` files against your Vercel project directly. Change a value locally, push it up; pull production values down to check them. It shows you a full diff before anything is written, and backs up your local file before a pull.
-
-Congratulations! Your site is now live to the world. Share your new URL and start growing your business online. Ready for a custom domain? See [Vercel's domain setup guide](https://vercel.com/docs/projects/domains).
+Want the ready-made prompt? See [Deploy to Cloudflare Workers](#deploy-to-cloudflare-workers).
 
 ### Deploy to Cloudflare Workers
 
-Prefer Cloudflare? Speedwell also runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. See it live: **[speedwell-cloudflare.gallop.software](https://speedwell-cloudflare.gallop.software/)** — the same template, deployed exactly the way this section describes.
+Speedwell runs on Cloudflare Workers via the [OpenNext](https://opennext.js.org/cloudflare) adapter. See it live: **[speedwell.gallop.software](https://speedwell.gallop.software/)** — the same template, deployed exactly the way this section describes.
 
 **Step 1 — Connect Cloudflare in the Publish view** (`Cmd+6`). Once saved, the editor puts your Cloudflare credentials (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) into the terminal environment and makes them available to the AI chat. Wrangler reads those variables automatically, which means **nobody has to run `npx wrangler login`, and no token is ever pasted into a file.**
 
@@ -353,8 +321,8 @@ terminal environment — do not run `wrangler login`.
 
 Please:
 1. Run `npm run cf:setup` to create .env.production from the sample
-2. Ask me for my production URL and form email values (the "Cloudflare"
-   block in .env.production.sample), then fill in .env.production
+2. Ask me for my production URL and form email values (the EMAIL_* block
+   in .env.production.sample), then fill in .env.production
 3. Run `npm run cf:deploy` to build and create the Worker
 4. Run `npm run cf:secrets` to upload the secrets
 5. Tell me the live URL when it's done
@@ -400,9 +368,9 @@ Speedwell ships Cloudflare-ready. **If you forked or generated this repo, every 
 | File | What it does for Cloudflare |
 |---|---|
 | `wrangler.jsonc` | The Worker manifest. Names the Worker, points at the build output, declares bindings (including `EMAIL` for form mail) and the `nodejs_compat` flag. Wrangler reads this on every command. |
-| `open-next.config.ts` | Tells the OpenNext adapter how to convert the Next.js build into a Worker. Ships minimal — ISR/R2 caching is commented out and off. |
-| `next.config.mjs` | Its last line calls `initOpenNextCloudflareForDev()`, which makes Cloudflare bindings available during `npm run dev`. It is a no-op in production builds, so **this does not break Vercel**. |
-| `package.json` | Holds the `cf:*` scripts plus `@opennextjs/cloudflare` and `wrangler` as devDependencies. |
+| `open-next.config.ts` | Tells the OpenNext adapter how to convert the Next.js build into a Worker. Prerendered pages and the sitemap are served read-only from Workers static assets; nothing is regenerated between deploys. |
+| `next.config.mjs` | Its last line calls `initOpenNextCloudflareForDev()`, which makes Cloudflare bindings available during `npm run dev`. It is a no-op in production builds. |
+| `package.json` | Holds the `cf:*` scripts, `@opennextjs/cloudflare` as a dependency and `wrangler` as a dev dependency. |
 | `_scripts/production-env.mjs` | Runs the Cloudflare build with `.env.production` as the only source of live settings, checks the result, and writes `.dev.vars` for local previews. |
 | `.env.production.sample` | Placeholder copy of the secrets you'll need. Safe to commit — it contains no real values. |
 
@@ -447,7 +415,7 @@ Order matters: `cf:secrets` cannot create a Worker, so deploy once first. After 
 
 ##### `.env.production` Is the Only Source of Live Settings
 
-Next.js and OpenNext both read `.env.local` during a production build, *ahead of* `.env.production` — so a local file can quietly put development values (a `localhost` URL, the developer's address as the form recipient) into a live site. `npm run cf:build` prevents that: it loads `.env.production` into the process environment, where it beats every env file, then compares the built bundle against the file and **fails the build if they differ**. On success it prints the site URL, mail provider, form recipient and whether Turnstile is on — read that summary before deploying.
+Next.js and OpenNext both read `.env.local` during a production build, *ahead of* `.env.production` — so a local file can quietly put development values (a `localhost` URL, the developer's address as the form recipient) into a live site. `npm run cf:build` prevents that: it loads `.env.production` into the process environment, where it beats every env file, then compares the built bundle against the file and **fails the build if they differ**. On success it prints the site URL, sending address, form recipient and whether Turnstile is on — read that summary before deploying.
 
 To build for another hostname without editing the file, set `SITE_URL`:
 
@@ -457,17 +425,12 @@ SITE_URL=https://staging.yourdomain.com npm run cf:deploy
 
 ##### Form Email
 
-One form component and one API route serve both hosts. The provider is chosen by configuration (`src/utils/send-email.ts`):
-
-| Host | Provider | Used when | Settings |
-|---|---|---|---|
-| Cloudflare | [Email Service](https://developers.cloudflare.com/email-service/), through the `EMAIL` binding in `wrangler.jsonc` | `EMAIL_DOMAIN` is set | `EMAIL_DOMAIN`, `EMAIL_FROM_NAME`, `EMAIL_TO`, `EMAIL_DEV_TO`, `EMAIL_DEV_NAME` |
-| Vercel | Mailgun | `EMAIL_DOMAIN` is empty | `MAILGUN_*` |
+Form mail goes through Cloudflare [Email Service](https://developers.cloudflare.com/email-service/), using the `EMAIL` binding in `wrangler.jsonc` (`src/utils/send-email.ts`). Its settings are `EMAIL_DOMAIN`, `EMAIL_FROM_NAME`, `EMAIL_TO`, `EMAIL_DEV_TO` and `EMAIL_DEV_NAME`.
 
 - **Onboard the sending domain first.** In the Cloudflare dashboard, go to **Compute → Email Service → Email Sending** and add the domain you put in `EMAIL_DOMAIN` (a subdomain such as `cf.yourdomain.com` keeps it apart from your normal mail). Cloudflare adds the DNS records. Until this is done, sends fail.
 - **Who gets the mail.** The site owner (`EMAIL_TO`) with the developer copied (`EMAIL_DEV_TO`). In development, only the developer. The visitor never gets a copy — a bot could otherwise use the form to mail any address — and is set as Reply-To instead.
 - **In `npm run dev` the binding is simulated:** the message is logged and written under `.wrangler/`, and nothing leaves your machine. Add `"remote": true` to the `send_email` entry in `wrangler.jsonc` to send for real from dev; that needs a Cloudflare login, so it is off by default.
-- **Spam protection.** Every form includes `<FormProtection />`: a hidden honeypot field, plus the [Turnstile](https://developers.cloudflare.com/turnstile/) widget when `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are set. Turnstile works on either host. Add `<FormProtection />` to any new form you build.
+- **Spam protection.** Every form includes `<FormProtection />`: a hidden honeypot field, plus the [Turnstile](https://developers.cloudflare.com/turnstile/) widget when `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are set. Add `<FormProtection />` to any new form you build.
 
 ##### Renaming the Worker
 
@@ -567,7 +530,7 @@ AI mentions are becoming more important than traditional SEO. When someone asks 
 - **Pixel-perfect design** - TailwindCSS integration for rapid development without leaving component files
 - **Automate workflows** - AI-powered scripts for sitewide SEO and AI discoverability improvements, image regeneration, and content updates
 - **Get found online** - Battle-tested foundation with structured data for search engines and AI assistants that recommend businesses
-- **Deploy instantly** - Next.js architecture on Vercel for cheap, fast hosting
+- **Deploy instantly** - Next.js architecture on Cloudflare Workers for cheap, fast hosting
 
 ### Built by Industry Veterans
 
@@ -778,9 +741,8 @@ Every dependency is battle-tested in production and chosen for stability, perfor
 - **React Highlight Words** `0.21.0` - Text highlighting
 - **Iconify Icons** - Icon sets (Heroicons, Lucide, Material Design, Simple Icons)
 - **clsx** `2.1.1` - Conditional className utility
-- **Vercel Analytics** `1.6.1` - Analytics integration
 - **Next Third Parties** `16.2.6` - Third-party script optimization
-- **OpenNext Cloudflare** `1.20.2` - Adapter for deploying to Cloudflare Workers
+- **OpenNext Cloudflare** `1.20.17` - Adapter for deploying to Cloudflare Workers
 
 ### Development
 
@@ -794,8 +756,8 @@ Tools for building and developing the site:
 - **Prettier Plugin Tailwindcss** `0.8.0` - Sort Tailwind classes
 - **PostCSS** `8.5.15` - CSS transformations
 - **Knip** `5.88.1` - Unused file and export detection
-- **Wrangler** `4.113.0` - Cloudflare CLI, used by the `cf:*` scripts
-- **Gallop Canon** `2.34.0` - ESLint rules and architecture audit CLI
+- **Wrangler** `4.162.0` - Cloudflare CLI, used by the `cf:*` scripts
+- **Gallop Canon** `2.35.0` - ESLint rules and architecture audit CLI
 
 ### Scripts & Processing
 

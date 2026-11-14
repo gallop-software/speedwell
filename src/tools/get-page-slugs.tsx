@@ -16,8 +16,8 @@ const EXCLUDED_FOLDERS = [
 
 /**
  * The page's own metadata.modifiedDate. File modification times are not used:
- * they reflect when the build machine wrote the file, so they differed between
- * Vercel and Cloudflare and changed on every checkout.
+ * they reflect when the build machine wrote the file, so they change on every
+ * checkout.
  */
 function modifiedDate(pagePath: string): string | undefined {
   return readFileSync(pagePath, 'utf8').match(

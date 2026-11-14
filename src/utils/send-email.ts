@@ -1,10 +1,8 @@
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 
-// Site mail goes out through one of two providers, chosen by configuration:
-//
-//   Cloudflare Email Service  EMAIL_DOMAIN is set and the Worker has the EMAIL
-//                             binding (send_email in wrangler.jsonc)
-//   Mailgun                   otherwise, when MAILGUN_API_KEY is set (Vercel)
+// Site mail goes out through Cloudflare Email Service: the EMAIL binding
+// (send_email in wrangler.jsonc), from an address on EMAIL_DOMAIN. In
+// `npm run dev` the binding is simulated and no mail leaves the machine.
 
 type EmailAddress = string | { email: string; name?: string }
 
@@ -41,15 +39,14 @@ interface EmailBinding {
   }): Promise<{ messageId: string }>
 }
 
-function getEmailBinding(): EmailBinding | undefined {
-  if (!process.env.EMAIL_DOMAIN) return undefined
-  try {
-    const { env } = getCloudflareContext()
-    return (env as unknown as { EMAIL?: EmailBinding }).EMAIL
-  } catch {
-    // Not running on Cloudflare
-    return undefined
+function getEmailBinding(): EmailBinding {
+  if (!process.env.EMAIL_DOMAIN) throw new Error('EMAIL_DOMAIN is not set')
+  const { env } = getCloudflareContext()
+  const mailer = (env as unknown as { EMAIL?: EmailBinding }).EMAIL
+  if (!mailer) {
+    throw new Error('The Worker has no EMAIL binding (see wrangler.jsonc)')
   }
+  return mailer
 }
 
 async function sendWithCloudflare(
@@ -82,76 +79,16 @@ async function sendWithCloudflare(
   return Boolean(result.messageId)
 }
 
-async function sendWithMailgun({
-  subject,
-  html,
-  replyTo,
-  attachments = [],
-  devOnly,
-}: SendEmailOptions) {
-  const fromName = process.env.MAILGUN_FROM_NAME
-  const devAddress = `${process.env.MAILGUN_DEV_NAME} <${process.env.MAILGUN_DEV_MAIL}>`
-
-  const body = new FormData()
-  body.append(
-    'from',
-    `${fromName} <contact@${process.env.MAILGUN_DOMAIN_NAME}>`
-  )
-  body.append(
-    'to',
-    devOnly ? devAddress : `${fromName} <${process.env.MAILGUN_SMTP_MAIL}>`
-  )
-  if (!devOnly) body.append('cc', devAddress)
-  if (replyTo) {
-    body.append(
-      'h:Reply-To',
-      replyTo.name ? `${replyTo.name} <${replyTo.email}>` : replyTo.email
-    )
-  }
-  body.append('subject', subject)
-  body.append('html', html)
-  for (const file of attachments) {
-    const buffer = Buffer.from(file.content, 'base64')
-    body.append(
-      'attachment',
-      new File([buffer], file.filename, { type: file.type })
-    )
-  }
-
-  const resp = await fetch(
-    `https://api.mailgun.net/v3/${process.env.MAILGUN_DOMAIN_NAME}/messages`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${Buffer.from(`api:${process.env.MAILGUN_API_KEY}`).toString('base64')}`,
-      },
-      body,
-    }
-  )
-
-  const text = await resp.text()
-  try {
-    return text !== 'Forbidden' && Boolean(JSON.parse(text).id)
-  } catch {
-    throw new Error(`Mailgun answered ${resp.status}: ${text.slice(0, 200)}`)
-  }
-}
-
 /**
  * Sends a site email to the owner, with a copy to the developer. The submitter
  * never gets a copy: a bot could otherwise use a form to send mail to any
  * address. Pass them as `replyTo` instead.
  *
- * @returns Whether the provider accepted the message
+ * @returns Whether Cloudflare accepted the message
  */
 export async function sendEmail(options: SendEmailOptions): Promise<boolean> {
   try {
-    const mailer = getEmailBinding()
-    if (mailer) return await sendWithCloudflare(mailer, options)
-    if (process.env.MAILGUN_API_KEY) return await sendWithMailgun(options)
-    throw new Error(
-      'No mail provider is configured: set EMAIL_DOMAIN (Cloudflare) or MAILGUN_API_KEY'
-    )
+    return await sendWithCloudflare(getEmailBinding(), options)
   } catch (error) {
     const { code, message } = error as { code?: string; message?: string }
     console.error('send-email: email not sent', code, message)

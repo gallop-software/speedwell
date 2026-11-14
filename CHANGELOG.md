@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-14
+
+- The template deploys to Cloudflare Workers only; Vercel support is removed, along with `@vercel/analytics` and the `revalidate` settings that existed for Vercel's ISR
+- Contact forms send through Cloudflare Email Service only; the Mailgun path and its `MAILGUN_*` settings are removed, and `EMAIL_DOMAIN` is now required
+
 ## 2026-10-12
 
 - Contact forms send through Cloudflare Email Service on Cloudflare (when `EMAIL_DOMAIN` is set) and through Mailgun on Vercel, from one form and one API route

@@ -10,9 +10,6 @@ import IframeHeight from '@/hooks/use-iframe-height'
 import { baseURL } from './metadata'
 import GoogleAds from '@/hooks/google-ads'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { Analytics } from '@vercel/analytics/react'
-
-export const revalidate = 86400
 
 export const metadata: Metadata = {
   metadataBase: new URL(String(baseURL)),
@@ -62,7 +59,6 @@ export default function RootLayout({
         <div>{children}</div>
         <SmoothScroll />
         <IframeHeight />
-        {process.env.VERCEL === '1' && <Analytics />}
       </body>
       {process.env.NODE_ENV === 'production' &&
         process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (

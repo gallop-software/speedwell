@@ -15,7 +15,11 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 | Command | Purpose |
 |---|---|
 | `npm run dev` | Development server |
-| `npm run build` | Production build (auto-runs npm run blog) |
+| `npm run build` | Local Next.js build (auto-runs npm run blog); `npm run search` crawls it |
+| `npm run cf:build` | Production build for Cloudflare Workers (OpenNext), from `.env.production` |
+| `npm run cf:preview` | Build and run in the Workers runtime locally |
+| `npm run cf:deploy` | Build and deploy to Cloudflare |
+| `npm run cf:secrets` | Push `.env.production` to the Worker's secret store |
 | `npm run blog` | Regenerate blog metadata |
 | `npm run blocks` | Regenerate blocks catalog |
 | `npm run search` | Regenerate search index |
@@ -23,6 +27,8 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 | `npm run ts` | TypeScript check |
 | `npm run check` | lint + ts combined |
 | `npm run prettier` | Format code |
+
+The site deploys to Cloudflare Workers only. Runtime code must work without a filesystem, and form mail goes through the `EMAIL` binding (`src/utils/send-email.ts`).
 
 ## File & Folder Authority
 

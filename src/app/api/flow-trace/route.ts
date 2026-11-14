@@ -300,8 +300,8 @@ export async function POST(req: Request) {
     const { element, context } = body || {}
 
     const ip =
+      req.headers.get('cf-connecting-ip') ||
       req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      (req as any).ip ||
       'unknown'
 
     const ua = req.headers.get('user-agent') || ''

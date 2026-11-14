@@ -29,9 +29,6 @@ yarn-error.log*
 .env*
 !.env*.age
 
-# vercel
-.vercel
-
 # cloudflare (OpenNext + wrangler)
 .open-next
 .wrangler

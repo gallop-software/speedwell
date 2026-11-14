@@ -175,7 +175,7 @@ export async function POST(req: Request) {
 
   const verified = await verifyTurnstile(
     fieldValue(payload, TURNSTILE_FIELD),
-    // Cloudflare's header, then the one Vercel sets
+    // Cloudflare's header; x-forwarded-for covers local development
     req.headers.get('cf-connecting-ip') ||
       req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
       null
