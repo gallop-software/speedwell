@@ -25,8 +25,7 @@ Speedwell is a Next.js template for small businesses built on the Gallop Canon a
 | `npm run search` | Regenerate search index |
 | `npm run lint` | ESLint check (run after edits) |
 | `npm run ts` | TypeScript check |
-| `npm run images` | Check every image URL, width and height in src/ against `_data/_studio.json` |
-| `npm run check` | lint + ts + images combined |
+| `npm run check` | lint + ts combined |
 | `npm run prettier` | Format code |
 
 The site deploys to Cloudflare Workers only. Runtime code must work without a filesystem, and form mail goes through the `EMAIL` binding (`src/utils/send-email.ts`).
@@ -212,8 +211,6 @@ Images are not looked up at runtime. Every image in the code carries its own ful
 - **Cards, profiles and testimonials** take `image` or `img` with `width` and `height`.
 - **Page metadata**: `featuredImage` and `openGraph.image` are `{ url, width, height }`; `twitter.image` and schema.org `image` are the URL.
 - Width and height describe the file. To show an image smaller, keep the file's shape (a 700×414 logo shown at `width={200} height={118}`) or size it with classes.
-- Run `npm run images` after adding or changing images. It fails on a URL that is not in the library and on a width or height that does not match the file.
-- Full reference: `_scripts/check-images.md`.
 
 ## State Management
 

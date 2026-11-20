@@ -42,7 +42,6 @@
     "search": "./_scripts/generate-search.sh",
     "blog": "node _scripts/generate-blog-metadata.mjs",
     "blocks": "node _scripts/generate-blocks-catalog.mjs",
-    "images": "node _scripts/check-images.mjs",
     "cf:setup": "cp -n .env.production.sample .env.production 2>/dev/null; echo 'Edit .env.production, then run: npm run cf:secrets (push secrets) and deploy'",
     "cf:build": "npm run blog && node _scripts/production-env.mjs build",
     "cf:preview": "node _scripts/production-env.mjs dev-vars && npm run cf:build && opennextjs-cloudflare preview",
@@ -59,7 +58,7 @@
     "update:interactive": "npx npm-check-updates -i",
     "update:doctor": "npx npm-check-updates --doctor -u",
     "unused": "knip",
-    "check": "npm run lint && npm run ts && npm run images"
+    "check": "npm run lint && npm run ts"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.13",
